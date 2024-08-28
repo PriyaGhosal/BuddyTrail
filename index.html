@@ -16,7 +16,9 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/icons/airplane.svg" />
+    
     <title>BuddyTrail</title>
+    
   </head>
   <body>
     <button id="theme-toggle" class="theme-toggle">Switch to Dark Mode</button>
@@ -97,6 +99,15 @@
           </div>
         </div>
       </section>
+      <!-- Map Section -->
+    <section class="map-section">
+      <h2>Explore Popular Indian Destinations</h2>
+      <p>Click on the markers to learn more about each destination.</p>
+      <div id="map"></div>
+    </section>
+     <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap" async defer></script>
+    
 
       <section id="contact">
         <div class="form-wrapper">
@@ -117,6 +128,8 @@
         </div>
       </section>
     </main>
+    
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <footer>
       <div class="footer-wrapper">
         <h5>Travelly &copy;</h5>

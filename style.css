@@ -374,6 +374,35 @@ body.dark-mode {
   color: #ffffff;
 }
 
+ /* General styling */
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section styling */
+.map-section {
+  padding: 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Map container styling */
+#map {
+  height: 600px; /* Adjust the height as needed */
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 
   
   /* Extra small devices (phones, 600px and down) */
