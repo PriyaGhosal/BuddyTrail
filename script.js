@@ -360,20 +360,22 @@ function initMap() {
 }
 
 // Toggle dark and bright mode
-const modeToggle = document.getElementById('modeToggle');
-const sunIcon = document.querySelector('.sun-icon');
-const moonIcon = document.createElement('span');
-moonIcon.className = 'moon-icon';
-moonIcon.innerHTML = '🌙';
+document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.createElement('span');
+    moonIcon.className = 'moon-icon';
+    moonIcon.innerHTML = '🌙';
 
-modeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
+    modeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
 
-    if (document.body.classList.contains('dark-mode')) {
-        modeToggle.replaceChild(moonIcon, sunIcon);
-    } else {
-        modeToggle.replaceChild(sunIcon, moonIcon);
-        sunIcon.classList.add('glow');
-    }
+        if (document.body.classList.contains('dark-mode')) {
+            modeToggle.replaceChild(moonIcon, sunIcon);
+        } else {
+            modeToggle.replaceChild(sunIcon, moonIcon);
+            sunIcon.classList.add('glow');
+        }
+    });
 });
