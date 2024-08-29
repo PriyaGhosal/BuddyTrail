@@ -14,3 +14,7 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 
 **JavaScript:** For interactive features like the map and mode toggling.
 
+**Google Maps API:** For displaying the interactive travel map.
+
+**Responsive Design:** The website is fully responsive and works on all devices.
+
