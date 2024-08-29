@@ -11,4 +11,5 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 
 ## Technologies Used
 **HTML/CSS:** For building and styling the website structure.
+**JavaScript:** For interactive features like the map and mode toggling.
 
