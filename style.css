@@ -341,66 +341,74 @@
     }
   }
 
-  /* Default bright mode styles */
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  z-index: 1000; /* Ensure it stays on top */
-}
-
-body.dark-mode .theme-toggle {
-  background-color: #fff;
-  color: #000;
+  /* General styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+    background-color: #121212;
+    color: #ffffff;
 }
 
- /* map styling */
- body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Light mode styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Button styles */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Sun and moon icons */
+.sun-icon {
+    color: #FFD700;
+}
+
+.moon-icon {
+    color: #B0C4DE;
+}
+
+/* Glow effect */
+.sun-icon.glow {
+    color: #FFA500;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
 }
 
 /* Section styling */
 .map-section {
-  padding: 40px;
-  background-color: #f4f4f4;
-  text-align: center;
+    padding: 40px;
+    background-color: inherit;
+    text-align: center;
 }
 
 .map-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 /* Map container styling */
 #map {
-  height: 600px; /* Adjust the height as needed */
-  width: 100%;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    height: 600px; /* Adjust the height as needed */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 
