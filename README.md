@@ -4,3 +4,5 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 **Interactive Travel Map:** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
 **Dark & Bright Mode:** Switch between dark and bright modes for a comfortable browsing experience, day or night.
 **Hotel Finder:** Find the best hotels at affordable rates, handpicked to suit your budget and preferences.
+**Flight Booking:** Book flights at the best prices, with options tailored to your travel needs.
+
