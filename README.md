@@ -10,4 +10,5 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 **Flight Booking:** Book flights at the best prices, with options tailored to your travel needs.
 
 ## Technologies Used
+**HTML/CSS:** For building and styling the website structure.
 
