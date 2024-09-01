@@ -30,6 +30,7 @@
         <ul>
           <li><a href="#locations">Location</a></li>
           <li><a href="#itineraries">Travel Itineraries</a></li>
+          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#benefits">Benefits</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -128,6 +129,33 @@
             </div>
         </div>
     </section>
+    <!-- blogs -->
+    <section id="blog" class="blog-section">
+      <h2>Travel Blog</h2>
+      <p>Discover travel tips, destination guides, cultural insights, and personal travel stories to inspire your next adventure.</p>
+      
+      <div class="blog-list">
+          <!-- Example Blog Post -->
+          <div class="blog-post">
+              <h3>Top 10 Hidden Gems in India</h3>
+              <p>Explore the lesser-known destinations in India that offer breathtaking beauty and unique experiences away from the crowds.</p>
+              <button>Read More</button>
+          </div>
+  
+          <div class="blog-post">
+              <h3>How to Travel on a Budget</h3>
+              <p>Learn practical tips and tricks for making the most of your travel budget without sacrificing the quality of your trip.</p>
+              <button>Read More</button>
+          </div>
+  
+          <div class="blog-post">
+              <h3>A Solo Traveler's Guide to Europe</h3>
+              <p>Get insights into solo travel in Europe, from safety tips to must-visit destinations that are perfect for exploring alone.</p>
+              <button>Read More</button>
+          </div>
+      </div>
+    </section>
+  
       <!-- Map Section -->
     <section class="map-section">
       <h2>Explore Popular Destinations</h2>
@@ -157,6 +185,71 @@
         </div>
       </section>
     </main>
+    <!-- ratings by user -->
+    <section id="reviews" class="reviews-section">
+      <h2>User Reviews and Ratings</h2>
+      <p>Read what others have to say about their experiences with various destinations, hotels, flights, and activities. Share your own reviews and help fellow travelers make informed decisions.</p>
+      
+      <div class="review-form">
+          <h3>Leave a Review</h3>
+          <form>
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="destination">Destination/Service:</label>
+              <input type="text" id="destination" name="destination" required>
+  
+              <label for="rating">Rating:</label>
+              <select id="rating" name="rating">
+                  <option value="5">⭐⭐⭐⭐⭐</option>
+                  <option value="4">⭐⭐⭐⭐</option>
+                  <option value="3">⭐⭐⭐</option>
+                  <option value="2">⭐⭐</option>
+                  <option value="1">⭐</option>
+              </select>
+  
+              <label for="review">Your Review:</label>
+              <textarea id="review" name="review" rows="4" required></textarea>
+  
+              <button type="submit">Submit Review</button>
+          </form>
+      </div>
+      
+      <div class="reviews-list">
+          <h3>What Others Are Saying</h3>
+          <!-- Example Review -->
+          <div class="review">
+              <h4>John Doe - Paris</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p>Amazing experience in Paris! The Eiffel Tower was breathtaking, and the food was incredible. Highly recommend!</p>
+          </div>
+          <div class="review">
+            <h4>Rahul Mehta - Dubai</h4>
+            <p>⭐⭐⭐⭐</p>
+            <p>Dubai is a must-visit destination! The Burj Khalifa and desert safari were highlights of the trip. Just a bit expensive.</p>
+        </div>
+
+        <div class="review">
+            <h4>Emily Johnson - London</h4>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>London's history and architecture are stunning. The Tower of London and Buckingham Palace were fascinating to explore.</p>
+        </div>
+
+        <div class="review">
+            <h4>Michael Lee - Goa</h4>
+            <p>⭐⭐⭐⭐</p>
+            <p>Goa's beaches are beautiful, and the nightlife is vibrant. Great place for a fun and laid-back vacation.</p>
+        </div>
+
+        <div class="review">
+            <h4>Aditi Patel - New York</h4>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>New York City is amazing! Central Park, Times Square, and the Statue of Liberty were all incredible. Highly recommend!</p>
+        </div>
+          
+      </div>
+    </section>
+  
     
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <footer>
