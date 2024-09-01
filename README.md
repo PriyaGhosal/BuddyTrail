@@ -9,7 +9,7 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 
 **Flight Booking:** Book flights at the best prices, with options tailored to your travel needs.
 
-
+Travel Blog: Read tips, guides, and personal stories from seasoned travelers.
 
 Multi-Language Support: View the website in multiple languages, catering to a global audience.
 
