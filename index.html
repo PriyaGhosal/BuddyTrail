@@ -21,8 +21,24 @@
     
   </head>
   <body class="light-mode">
-    
-    
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or', // Add more language codes if needed
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Google Translate Button -->
+    <div class="translate-container">
+      <button class="language-toggle" id="languageToggle">
+          🌐
+      </button>
+      <div id="google_translate_element" style="display: none;"></div>
+    </div>
     <script src="script.js"></script>
     <header class="main-head">
       <nav>

@@ -167,7 +167,7 @@
 
 .content-section p {
   font-size: 1.1em;
-  color: #333333; /* Dark text color */
+  color: #e0e0e0; /* Dark text color */
   margin-bottom: 20px;
 }
 
@@ -420,7 +420,7 @@ body.dark-mode {
 } */ 
 .light-mode {
   background-color: #ffffff; /* Light mode background */
-  color: #333333; /* Light mode text color */
+  color: black; /* Light mode text color */
 }
 
 .dark-mode {
@@ -628,7 +628,7 @@ body.dark-mode {
 }
 
 .dark-mode .review-item {
-  border-color: #444; /* Dark border in dark mode */
+  border-color: black; /* Dark border in dark mode */
 }
 
 .review-item h3 {
@@ -640,7 +640,7 @@ body.dark-mode {
 .review-item p {
   margin: 0 0 10px;
   font-size: 1em;
-  color: #333; /* Darker gray for text */
+  color: black; /* Darker gray for text */
 }
 
 .rating {
