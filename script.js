@@ -379,3 +379,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// discount pop_up
+document.addEventListener('DOMContentLoaded', function() {
+    // Show the popup after a slight delay
+    setTimeout(function() {
+        document.getElementById('dealsPopup').style.display = 'flex';
+    }, 1000); // Adjust the delay as needed (1000 ms = 1 second)
+
+    // Close the popup when the close button is clicked
+    document.getElementById('closePopup').addEventListener('click', function() {
+        document.getElementById('dealsPopup').style.display = 'none';
+    });
+
+    // Close the popup when the user clicks anywhere outside of the popup content
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('dealsPopup')) {
+            document.getElementById('dealsPopup').style.display = 'none';
+        }
+    });
+});
