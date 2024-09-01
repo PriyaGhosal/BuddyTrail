@@ -21,24 +21,37 @@
     
   </head>
   <body class="light-mode">
-    <!-- Google Translate Script -->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or', // Add more language codes if needed
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-      }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- Google Translate Button -->
     <div class="translate-container">
       <button class="language-toggle" id="languageToggle">
           🌐
       </button>
-      <div id="google_translate_element" style="display: none;"></div>
+      <div id="google_translate_element"></div>
     </div>
+
+    <script>
+      // Initialization function
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+      }
+
+      // Toggle button event
+      document.getElementById('languageToggle').addEventListener('click', function() {
+          var translateElement = document.getElementById('google_translate_element');
+          
+          // Toggle visibility
+          if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+              translateElement.style.display = 'block';
+          } else {
+              translateElement.style.display = 'none';
+          }
+      });
+    </script>
+
     <script src="script.js"></script>
     <header class="main-head">
       <nav>

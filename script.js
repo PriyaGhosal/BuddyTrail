@@ -413,3 +413,25 @@ modeToggle.addEventListener('click', () => {
         modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
     }
 });
+// google translator
+document.getElementById('languageToggle').addEventListener('click', function() {
+    var translateElement = document.getElementById('google_translate_element');
+    
+    // Toggle visibility of the Google Translate element
+    if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+        translateElement.style.display = 'block';
+        googleTranslateElementInit(); // Ensure it's initialized
+    } else {
+        translateElement.style.display = 'none';
+    }
+});
+
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+
