@@ -11,7 +11,6 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 
 Travel Blog: Read tips, guides, and personal stories from seasoned travelers.
 
-Multi-Language Support: View the website in multiple languages, catering to a global audience.
 
 User Reviews and Ratings: Read and leave reviews for destinations, hotels, flights, and activities.
 
