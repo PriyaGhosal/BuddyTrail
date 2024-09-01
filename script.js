@@ -398,3 +398,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// adaptive background
+const modeToggle = document.getElementById('modeToggle');
+const body = document.body;
+
+modeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+
+    // Toggle the icon
+    if (body.classList.contains('dark-mode')) {
+        modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
+    } else {
+        modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
+    }
+});
