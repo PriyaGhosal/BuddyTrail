@@ -16,7 +16,7 @@ Multi-Language Support: View the website in multiple languages, catering to a gl
 User Reviews and Ratings: Read and leave reviews for destinations, hotels, flights, and activities.
 
 ## Technologies Used
-
+**HTML/CSS:** For building and styling the website structure.
 
 **JavaScript:** For interactive features like the map and mode toggling.
 
