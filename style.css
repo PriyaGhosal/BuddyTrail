@@ -412,6 +412,56 @@ body.light-mode {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+/* itineraries */
+.itineraries-section {
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+.itineraries-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.itinerary-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.itinerary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
+}
+
+.itinerary h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.itinerary p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.itinerary button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.itinerary button:hover {
+  background-color: #0056b3;
+}
+
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
