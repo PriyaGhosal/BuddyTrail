@@ -760,7 +760,7 @@ body.dark-mode {
 }
 
 .deal-item button:hover {
-  background-color: green;
+  background-color: #218838;
 }
 #deals {
   background-color: #f9f9f9; /* Light background */
