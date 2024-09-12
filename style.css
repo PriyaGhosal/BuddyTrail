@@ -842,12 +842,12 @@ body.dark-mode {
 }
 
 .language-toggle {
-  background: #007bff; /* Blue color for the button */
+  background: blue; /* Blue color for the button */
   border: none;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.5em;
-  color: white;
+  color: pink;
   padding: 10px;
   transition: background-color 0.3s ease;
 }
