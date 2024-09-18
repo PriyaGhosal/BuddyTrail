@@ -764,7 +764,7 @@ body.dark-mode {
 }
 #deals {
   background-color: #f9f9f9; /* Light background */
-  border: 1px solid pink; /* Blue border */
+  border: 1px solid #007bff; /* Blue border */
 }
 
 .dark-mode #deals {
