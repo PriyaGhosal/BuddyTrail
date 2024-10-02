@@ -507,11 +507,13 @@ body.dark-mode {
 .itinerary h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
+    color: black;
 }
 
 .itinerary p {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 15px;
+    color: black;
 }
 
 .itinerary button {
@@ -535,6 +537,7 @@ body.dark-mode {
 .dark-mode #itineraries {
   background-color: #1e1e1e; /* Dark background */
   border: 1px solid #0056b3; /* Darker blue border */
+    color: black;
 }
 
 /* user rating */
@@ -702,18 +705,21 @@ body.dark-mode {
 .deals-section {
   padding: 50px;
   background-color: #f8f9fa;
+    color: black;
 }
 
 .deals-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
   text-align: center;
+    color:black;
 }
 
 .deals-section p {
   font-size: 1.1em;
   text-align: center;
   margin-bottom: 30px;
+    color:black;
 }
 
 .deals-list {
