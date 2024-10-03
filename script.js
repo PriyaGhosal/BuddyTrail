@@ -18,7 +18,7 @@
 // themeToggle.addEventListener('click', () => {
 //     const isDarkMode = bodyElement.classList.toggle('dark-mode');
 //     updateButtonText(isDarkMode);
-    
+
 //     // Save the user's preference in localStorage
 //     localStorage.setItem('theme', isDarkMode ? 'dark' : 'bright');
 // });
@@ -31,7 +31,7 @@
 //     updateButtonText(isDarkMode);
 // }
 
-    
+
 // function initMap() {
 //     // Initialize the map centered around India
 //     var map = new google.maps.Map(document.getElementById('map'), {
@@ -313,38 +313,38 @@
 //             });
 
 
-    
+
 // }
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
-        center: {lat: 20.5937, lng: 78.9629}
+        center: { lat: 20.5937, lng: 78.9629 }
     });
 
     var destinations = [
-        {lat: 28.6139, lng: 77.2090, title: 'Delhi, India', content: '<h3>Delhi</h3><p>Capital of India, known for its rich history and monuments.</p>'},
-        {lat: 19.0760, lng: 72.8777, title: 'Mumbai, India', content: '<h3>Mumbai</h3><p>The financial capital of India, famous for Bollywood.</p>'},
-        {lat: 26.9124, lng: 75.7873, title: 'Jaipur, India', content: '<h3>Jaipur</h3><p>The Pink City, known for its palaces and forts.</p>'},
-        {lat: 15.2993, lng: 74.1240, title: 'Goa, India', content: '<h3>Goa</h3><p>Famous for its beaches, nightlife, and Portuguese heritage.</p>'},
-        {lat: 22.5726, lng: 88.3639, title: 'Kolkata, India', content: '<h3>Kolkata</h3><p>Known for its colonial architecture, art galleries, and cultural festivals.</p>'},
-        {lat: 34.0837, lng: 74.7973, title: 'Jammu & Kashmir, India', content: '<h3>Jammu & Kashmir</h3><p>Famous for its stunning landscapes and beautiful valleys.</p>'},
-        {lat: 10.8505, lng: 76.2711, title: 'Kerala, India', content: '<h3>Kerala</h3><p>Known as "God\'s Own Country," famous for its backwaters and lush greenery.</p>'},
-        {lat: 20.9517, lng: 85.0985, title: 'Odisha, India', content: '<h3>Odisha</h3><p>Known for its ancient temples and cultural heritage.</p>'},
-        {lat: 22.2587, lng: 71.1924, title: 'Gujarat, India', content: '<h3>Gujarat</h3><p>Known for its diverse culture, vibrant festivals, and historical sites.</p>'},
-        {lat: 25.276987, lng: 55.296249, title: 'Dubai, UAE', content: '<h3>Dubai</h3><p>Known for its modern architecture, luxury shopping, and vibrant nightlife.</p>'},
-        {lat: 48.8566, lng: 2.3522, title: 'Paris, France', content: '<h3>Paris</h3><p>The City of Light, famous for its art, fashion, and the iconic Eiffel Tower.</p>'},
-        {lat: 40.7128, lng: -74.0060, title: 'New York, USA', content: '<h3>New York</h3><p>The Big Apple, known for its skyscrapers, Broadway, and Central Park.</p>'},
-        {lat: 51.5074, lng: -0.1278, title: 'London, UK', content: '<h3>London</h3><p>Known for its history, culture, and landmarks like Big Ben and the London Eye.</p>'},
-        {lat: -8.3405, lng: 115.0920, title: 'Bali, Indonesia', content: '<h3>Bali</h3><p>A tropical paradise known for its beaches, temples, and vibrant culture.</p>'},
-        {lat: 1.3521, lng: 103.8198, title: 'Singapore', content: '<h3>Singapore</h3><p>A global financial hub known for its cleanliness, Marina Bay Sands, and the Merlion.</p>'},
-        {lat: -33.8688, lng: 151.2093, title: 'Sydney, Australia', content: '<h3>Sydney</h3><p>Famous for the Sydney Opera House, Harbour Bridge, and beautiful beaches.</p>'},
-        {lat: 35.6762, lng: 139.6503, title: 'Tokyo, Japan', content: '<h3>Tokyo</h3><p>A bustling metropolis known for its skyscrapers, shopping, and cherry blossoms.</p>'}
+        { lat: 28.6139, lng: 77.2090, title: 'Delhi, India', content: '<h3>Delhi</h3><p>Capital of India, known for its rich history and monuments.</p>' },
+        { lat: 19.0760, lng: 72.8777, title: 'Mumbai, India', content: '<h3>Mumbai</h3><p>The financial capital of India, famous for Bollywood.</p>' },
+        { lat: 26.9124, lng: 75.7873, title: 'Jaipur, India', content: '<h3>Jaipur</h3><p>The Pink City, known for its palaces and forts.</p>' },
+        { lat: 15.2993, lng: 74.1240, title: 'Goa, India', content: '<h3>Goa</h3><p>Famous for its beaches, nightlife, and Portuguese heritage.</p>' },
+        { lat: 22.5726, lng: 88.3639, title: 'Kolkata, India', content: '<h3>Kolkata</h3><p>Known for its colonial architecture, art galleries, and cultural festivals.</p>' },
+        { lat: 34.0837, lng: 74.7973, title: 'Jammu & Kashmir, India', content: '<h3>Jammu & Kashmir</h3><p>Famous for its stunning landscapes and beautiful valleys.</p>' },
+        { lat: 10.8505, lng: 76.2711, title: 'Kerala, India', content: '<h3>Kerala</h3><p>Known as "God\'s Own Country," famous for its backwaters and lush greenery.</p>' },
+        { lat: 20.9517, lng: 85.0985, title: 'Odisha, India', content: '<h3>Odisha</h3><p>Known for its ancient temples and cultural heritage.</p>' },
+        { lat: 22.2587, lng: 71.1924, title: 'Gujarat, India', content: '<h3>Gujarat</h3><p>Known for its diverse culture, vibrant festivals, and historical sites.</p>' },
+        { lat: 25.276987, lng: 55.296249, title: 'Dubai, UAE', content: '<h3>Dubai</h3><p>Known for its modern architecture, luxury shopping, and vibrant nightlife.</p>' },
+        { lat: 48.8566, lng: 2.3522, title: 'Paris, France', content: '<h3>Paris</h3><p>The City of Light, famous for its art, fashion, and the iconic Eiffel Tower.</p>' },
+        { lat: 40.7128, lng: -74.0060, title: 'New York, USA', content: '<h3>New York</h3><p>The Big Apple, known for its skyscrapers, Broadway, and Central Park.</p>' },
+        { lat: 51.5074, lng: -0.1278, title: 'London, UK', content: '<h3>London</h3><p>Known for its history, culture, and landmarks like Big Ben and the London Eye.</p>' },
+        { lat: -8.3405, lng: 115.0920, title: 'Bali, Indonesia', content: '<h3>Bali</h3><p>A tropical paradise known for its beaches, temples, and vibrant culture.</p>' },
+        { lat: 1.3521, lng: 103.8198, title: 'Singapore', content: '<h3>Singapore</h3><p>A global financial hub known for its cleanliness, Marina Bay Sands, and the Merlion.</p>' },
+        { lat: -33.8688, lng: 151.2093, title: 'Sydney, Australia', content: '<h3>Sydney</h3><p>Famous for the Sydney Opera House, Harbour Bridge, and beautiful beaches.</p>' },
+        { lat: 35.6762, lng: 139.6503, title: 'Tokyo, Japan', content: '<h3>Tokyo</h3><p>A bustling metropolis known for its skyscrapers, shopping, and cherry blossoms.</p>' }
     ];
 
-    destinations.forEach(function(destination) {
+    destinations.forEach(function (destination) {
         var marker = new google.maps.Marker({
-            position: {lat: destination.lat, lng: destination.lng},
+            position: { lat: destination.lat, lng: destination.lng },
             map: map,
             title: destination.title
         });
@@ -353,46 +353,63 @@ function initMap() {
             content: destination.content
         });
 
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infoWindow.open(map, marker);
         });
     });
 }
 
 // Toggle dark and bright mode
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const modeToggle = document.getElementById('modeToggle');
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.createElement('span');
-    moonIcon.className = 'moon-icon';
-    moonIcon.innerHTML = '🌙';
+    const body = document.body;
 
-    modeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
+    // Function to enable dark mode
+    function enableDarkMode() {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode'); // Ensure light mode class is removed
+        modeToggle.classList.add('dark-theme'); // Update the switch appearance
+    }
 
-        if (document.body.classList.contains('dark-mode')) {
-            modeToggle.replaceChild(moonIcon, sunIcon);
+    // Function to disable dark mode (enable light mode)
+    function enableLightMode() {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode'); // Ensure dark mode class is removed
+        modeToggle.classList.remove('dark-theme'); // Update the switch appearance
+    }
+
+    modeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            enableLightMode(); // Switch to light mode
+            localStorage.removeItem('dark-mode'); // Remove from local storage
         } else {
-            modeToggle.replaceChild(sunIcon, moonIcon);
-            sunIcon.classList.add('glow');
+            enableDarkMode(); // Switch to dark mode
+            localStorage.setItem('dark-mode', 'enabled'); // Save in local storage
         }
     });
+
+    // Check local storage for dark mode preference on load
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        enableDarkMode();
+    } else {
+        enableLightMode(); // Default to light mode if localStorage is empty
+    }
 });
+
 // discount pop_up
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Show the popup after a slight delay
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById('dealsPopup').style.display = 'flex';
     }, 1000); // Adjust the delay as needed (1000 ms = 1 second)
 
     // Close the popup when the close button is clicked
-    document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('closePopup').addEventListener('click', function () {
         document.getElementById('dealsPopup').style.display = 'none';
     });
 
     // Close the popup when the user clicks anywhere outside of the popup content
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (event.target === document.getElementById('dealsPopup')) {
             document.getElementById('dealsPopup').style.display = 'none';
         }
@@ -414,9 +431,9 @@ modeToggle.addEventListener('click', () => {
     }
 });
 // google translator
-document.getElementById('languageToggle').addEventListener('click', function() {
+document.getElementById('languageToggle').addEventListener('click', function () {
     var translateElement = document.getElementById('google_translate_element');
-    
+
     // Toggle visibility of the Google Translate element
     if (translateElement.style.display === 'none' || translateElement.style.display === '') {
         translateElement.style.display = 'block';
@@ -434,4 +451,3 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }
-

@@ -418,17 +418,9 @@ body.dark-mode {
     background-color: #ffffff;
     color: #000000;
 } */ 
-.light-mode {
-  background-color: #ffffff; /* Light mode background */
-  color: black; /* Light mode text color */
-}
 
-.dark-mode {
-  background-color: #121212; /* Dark mode background */
-  color: #e0e0e0; /* Dark mode text color */
-}
 
-/* Button styles */
+/* Button styles
 .mode-toggle {
     position: fixed;
     top: 10px;
@@ -440,22 +432,22 @@ body.dark-mode {
     font-size: 1.5em;
     transition: color 0.3s, transform 0.3s;
     padding: 15px; 
-}
+} */
 
-/* Sun and moon icons */
+/* Sun and moon icons
 .sun-icon {
     color: #FFD700;
 }
 
 .moon-icon {
     color: #B0C4DE;
-}
+} */
 
 /* Glow effect */
-.sun-icon.glow {
+/* .sun-icon.glow {
     color: #FFA500;
     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-}
+} */
 
 /* Section styling */
 .map-section {
@@ -532,10 +524,7 @@ body.dark-mode {
   border: 1px solid #007bff; /* Blue border */
 }
 
-.dark-mode #itineraries {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
-}
+
 
 /* user rating */
 .reviews-section {
@@ -623,13 +612,6 @@ body.dark-mode {
   transition: border-color 0.3s ease;
 }
 
-.light-mode .review-item {
-  border-color: #ccc;
-}
-
-.dark-mode .review-item {
-  border-color: black; /* Dark border in dark mode */
-}
 
 .review-item h3 {
   margin: 0 0 10px;
@@ -767,10 +749,6 @@ body.dark-mode {
   border: 1px solid #007bff; /* Blue border */
 }
 
-.dark-mode #deals {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
-}
 /* recommendations */
 .recommendations-section {
   padding: 50px;
@@ -879,3 +857,66 @@ body.dark-mode {
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   /*@media only screen and (min-width: 1200px) {...}*/
   
+
+
+  /* Theme switcher */
+.mode-toggle {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(116deg, #ffffff, #2d0404);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.mode-toggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px; /* Initial position for light mode */
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  background-image: url('Assets/moon.png'); /* Icon for light mode */
+}
+
+.mode-toggle.dark-theme {
+  background: linear-gradient(92deg, #0a0606, #ffffff); /* Background for dark mode */
+}
+
+.mode-toggle.dark-theme::before {
+  left: 33px; /* Move the toggle to the right for dark mode */
+  background-image: url('Assets/sun.png'); /* Icon for dark mode */
+}
+
+/*   light and dark mode style */
+.light-mode {
+  background-color: #ffffff; /* Light mode background */
+  color: black; /* Light mode text color */
+}
+.dark-mode {
+  background-color: #121212; /* Dark mode background */
+  color: #e0e0e0; /* Dark mode text color */
+}
+.light-mode .review-item {
+  border-color: #ccc;
+}
+
+.dark-mode .review-item {
+  border-color: black; /* Dark border in dark mode */
+}
+.dark-mode #itineraries {
+  background-color: #1e1e1e; /* Dark background */
+  border: 1px solid #0056b3; /* Darker blue border */
+}
+.dark-mode #deals {
+  background-color: #1e1e1e; /* Dark background */
+  border: 1px solid #0056b3; /* Darker blue border */
+}
