@@ -54,10 +54,6 @@
     transition: background 0.6s ease-in-out;
   }
   
-  button:hover {
-    background: #2a3c53;
-  }
-  
   /**** MAIN PAGE  ****/
   
   .main-head {
