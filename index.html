@@ -21,6 +21,8 @@
     
   </head>
   <body class="light-mode">
+    <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
+
     <!-- Google Translate Button -->
     <div class="translate-container">
       <button class="language-toggle" id="languageToggle">
@@ -356,6 +358,27 @@
       <button onclick="window.location.href='#deals'">Check Out Deals</button>
     </div>
   </div>
+  <script>
+    // script.js
+window.onscroll = function() {
+    toggleScrollTopButton();
+};
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollTopButton() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block"; // Show button after scrolling down
+    } else {
+        scrollTopBtn.style.display = "none"; // Hide button when at the top
+    }
+}
+
+scrollTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+};
+
+  </script>
 
   </body>
 </html>

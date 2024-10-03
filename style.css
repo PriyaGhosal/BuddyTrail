@@ -13,6 +13,23 @@
   body {
     font-family: "Poppins", sans-serif;
   }
+  .scroll-top-btn {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 80px; /* Adjust this value to move the button left */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.scroll-top-btn:hover {
+    background-color: #007bff;
+}
   
   h1 {
     font-size: 2.6rem;
