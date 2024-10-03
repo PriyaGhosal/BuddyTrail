@@ -129,7 +129,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .main-head ul li {
@@ -873,6 +873,22 @@ body.dark-mode {
   display: none; /* Initially hidden */
 }
 
+
+
+.navhover {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block; 
+  padding: 10px 15px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navhover:hover {
+  background-color: #3498db; /* Adds a blue background on hover */
+  color: white; /* Changes text color on hover */
+}
 
 
   
