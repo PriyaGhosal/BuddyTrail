@@ -1,46 +1,54 @@
-# BuddyTrail
-Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're planning a family vacation or a trip with friends, BuddyTrail helps you discover and explore amazing destinations, find the best hotels, and book affordable flights with ease.
+# 🏞️ BuddyTrail
+
+Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether you're planning a family vacation 👨‍👩‍👧‍👦 or a trip with friends 👫, BuddyTrail helps you discover and explore amazing destinations 🏖️🏰, find the best hotels 🏨, and book affordable flights 💺 with ease.
 
 
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/akhandpratap18/awesome-github-profile-readme" alt="Stars Badge"/></a>
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/akhandpratap18/awesome-github-profile-readme" alt="Forks Badge"/></a>
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/akhandpratap18/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/akhandpratap18/awesome-github-profile-readme" alt="Issues Badge"/></a>
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/akhandpratap18/awesome-github-profile-readme?color=2b9348"></a>
-<a href="https://github.com/akhandpratap18/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/akhandpratap18/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+<div align="center">
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/akhandpratap18/awesome-github-profile-readme" alt="Stars Badge"/></a>
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/akhandpratap18/awesome-github-profile-readme" alt="Forks Badge"/></a>
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/akhandpratap18/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/akhandpratap18/awesome-github-profile-readme" alt="Issues Badge"/></a>
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/akhandpratap18/awesome-github-profile-readme?color=2b9348"></a>
+  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/akhandpratap18/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+</div>
+
 
 ![image](https://github.com/user-attachments/assets/4e53b040-41de-43d0-91bd-5c31bf5b9959)
 ![image](https://github.com/user-attachments/assets/1a2ec256-1099-44a0-b810-7f40b544ec3a)
 
 
-## <span style="color:#3498db;">Features</span>
+## 🚀 Features
 
-**<span style="color:#e74c3c;">Interactive Travel Map:</span>** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
+**🗺️ Interactive Travel Map:** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
 
-**<span style="color:#f39c12;">Dark & Bright Mode:</span>** Switch between dark and bright modes for a comfortable browsing experience, day or night.
+**🌙🌞 Dark & Bright Mode:** Switch between dark and bright modes for a comfortable browsing experience, day or night.
 
-**<span style="color:#2ecc71;">Hotel Finder:</span>** Find the best hotels at affordable rates, handpicked to suit your budget and preferences.
+**🏨 Hotel Finder:** Find the best hotels at affordable rates, handpicked to suit your budget and preferences.
 
-**<span style="color:#9b59b6;">Flight Booking:</span>** Book flights at the best prices, with options tailored to your travel needs.
+**✈️ Flight Booking:** Book flights at the best prices, with options tailored to your travel needs.
 
-<span style="color:#1abc9c;">Travel Blog:</span> Read tips, guides, and personal stories from seasoned travelers.
+**📝 Travel Blog:** Read tips, guides, and personal stories from seasoned travelers.
 
-<span style="color:#e67e22;">Multi-Language Support:</span> View the website in multiple languages, catering to a global audience.
+**🌐 Multi-Language Support:** View the website in multiple languages, catering to a global audience.
 
-<span style="color:#95a5a6;">User Reviews and Ratings:</span> Read and leave reviews for destinations, hotels, flights, and activities.
+**⭐ User Reviews and Ratings:** Read and leave reviews for destinations, hotels, flights, and activities.
 
 
-## Technologies Used
-**HTML/CSS:** For building and styling the website structure.
 
-**JavaScript:** For interactive features like the map and mode toggling.
+## 🛠️ Technologies Used
 
-**Google Maps API:** For displaying the interactive travel map.
+**📝 HTML/CSS:** For building and styling the website structure.
 
-**Responsive Design:** The website is fully responsive and works on all devices.
+**⚙️ JavaScript:** For interactive features like the map and mode toggling.
 
-## Welcome Constributors!!
-Join the list. We are waiting :octocat:<br />
+**🗺️ Google Maps API:** For displaying the interactive travel map.
+
+**📱 Responsive Design:** The website is fully responsive and works on all devices.
+
+
+## 🎉 Welcome Contributors!! 👨‍💻👋
+
+Join the list. **We are waiting** :octocat:<br />
 Here's how you can contribute to the repository:
 
 1. **Fork the repository** to your own GitHub account.
