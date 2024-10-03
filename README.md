@@ -38,7 +38,7 @@ User Reviews and Ratings: Read and leave reviews for destinations, hotels, fligh
 **Responsive Design:** The website is fully responsive and works on all devices.
 
 ## Welcome Constributors!!
-Join the list. We are waiting:grin:
+Join the list. We are waiting :octocat:<br />
 Here's how you can contribute to the repository:
 
 1. **Fork the repository** to your own GitHub account.
