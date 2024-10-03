@@ -5,12 +5,11 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
 <br />
 
 <div align="center">
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/akhandpratap18/awesome-github-profile-readme" alt="Stars Badge"/></a>
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/akhandpratap18/awesome-github-profile-readme" alt="Forks Badge"/></a>
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/akhandpratap18/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/akhandpratap18/awesome-github-profile-readme" alt="Issues Badge"/></a>
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/akhandpratap18/awesome-github-profile-readme?color=2b9348"></a>
-  <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/akhandpratap18/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/PriyaGhosal/awesome-github-profile-readme" alt="Stars Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/PriyaGhosal/awesome-github-profile-readme" alt="Forks Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/PriyaGhosal/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/PriyaGhosal/awesome-github-profile-readme" alt="Issues Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/PriyaGhosal/awesome-github-profile-readme?color=2b9348"></a>
 </div>
 
 <br />
