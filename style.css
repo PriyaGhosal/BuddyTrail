@@ -202,6 +202,10 @@
     -webkit-text-fill-color: transparent;
   }
   
+  .dark-mode .locations-head h3 {
+    -webkit-text-fill-color: white;
+  }
+
   .cloud {
     position: absolute;
     top: 0%;
