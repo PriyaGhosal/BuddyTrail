@@ -685,9 +685,9 @@ body.dark-mode {
 /* Close Button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5em;
+  top: 40px;
+  right: 40px;
+  font-size: 5em;
   cursor: pointer;
   color: #333;
 }
