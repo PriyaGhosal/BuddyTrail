@@ -890,7 +890,29 @@ body.dark-mode {
   color: white; /* Changes text color on hover */
 }
 
+#social-icons  {
+  display: inline-block;
+  font-size: 24px; /* Adjust the size as needed */
+  padding: 7px 9px 7px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.twitter:hover
+{
+  background-color: #1e97e3; /* Twitter's official blue color */
+  transform: scale(1.1); 
+}
+
+.instagram:hover {
+  background-color: #E1306C; /* Instagram's official pinkish color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+.youtube:hover {
+  background-color: #FF0000; /* YouTube's official red color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
