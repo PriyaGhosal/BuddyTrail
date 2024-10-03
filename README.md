@@ -5,12 +5,13 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
 <br />
 
 <div align="center">
-  <a href="https://github.com/BuddyTrail/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/BuddyTrail/awesome-github-profile-readme" alt="Stars Badge"/></a>
-  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/PriyaGhosal/awesome-github-profile-readme" alt="Forks Badge"/></a>
-  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/PriyaGhosal/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
-  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/PriyaGhosal/awesome-github-profile-readme" alt="Issues Badge"/></a>
-  <a href="https://github.com/PriyaGhosal/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/PriyaGhosal/awesome-github-profile-readme?color=2b9348"></a>
+  <a href="https://github.com/PriyaGhosal/BuddyTrail/stargazers"><img src="https://img.shields.io/github/stars/PriyaGhosal/BuddyTrail" alt="Stars Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/BuddyTrail/network/members"><img src="https://img.shields.io/github/forks/PriyaGhosal/BuddyTrail" alt="Forks Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/BuddyTrail/pulls"><img src="https://img.shields.io/github/issues-pr/PriyaGhosal/BuddyTrail" alt="Pull Requests Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/BuddyTrail/issues"><img src="https://img.shields.io/github/issues/PriyaGhosal/BuddyTrail" alt="Issues Badge"/></a>
+  <a href="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/PriyaGhosal/BuddyTrail?color=2b9348"></a>
 </div>
+
 
 <br />
 
