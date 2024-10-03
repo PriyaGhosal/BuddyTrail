@@ -2,6 +2,7 @@
 
 Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether you're planning a family vacation 👨‍👩‍👧‍👦 or a trip with friends 👫, BuddyTrail helps you discover and explore amazing destinations 🏖️🏰, find the best hotels 🏨, and book affordable flights 💺 with ease.
 
+<br />
 
 <div align="center">
   <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/akhandpratap18/awesome-github-profile-readme" alt="Stars Badge"/></a>
@@ -12,10 +13,12 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
   <a href="https://github.com/akhandpratap18/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/akhandpratap18/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
 </div>
 
+<br />
 
 ![image](https://github.com/user-attachments/assets/4e53b040-41de-43d0-91bd-5c31bf5b9959)
 ![image](https://github.com/user-attachments/assets/1a2ec256-1099-44a0-b810-7f40b544ec3a)
 
+<br />
 
 ## 🚀 Features
 
@@ -33,7 +36,7 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
 
 **⭐ User Reviews and Ratings:** Read and leave reviews for destinations, hotels, flights, and activities.
 
-
+<br />
 
 ## 🛠️ Technologies Used
 
@@ -45,6 +48,7 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
 
 **📱 Responsive Design:** The website is fully responsive and works on all devices.
 
+<br />
 
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
