@@ -505,6 +505,7 @@ body.dark-mode {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(33% - 40px);
   max-width: calc(33% - 40px);
+  text-align: center;
 }
 
 .itinerary h3 {
@@ -514,7 +515,8 @@ body.dark-mode {
 }
 
 .itinerary p {
-  font-size: 1em;
+  font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 15px;
   color: #003366;
 }
@@ -716,7 +718,7 @@ body.dark-mode {
 }
 
 .deals-section p {
-  font-size: 1.1em;
+  font-size: 2em;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -745,7 +747,7 @@ body.dark-mode {
 }
 
 .deal-item p {
-  font-size: 1em;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #090f15;
 }
