@@ -267,6 +267,12 @@
     min-height: 45vh;
     margin: 2rem 5rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+  }
+
+  .card:hover{
+    scale: 1.02;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.205), 0px 20px 20px rgba(0, 0, 0, 0.205);
   }
   
   .cards img {
@@ -485,6 +491,7 @@ body.dark-mode {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  color: #003366;
 }
 
 .itinerary {
@@ -499,11 +506,13 @@ body.dark-mode {
 .itinerary h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
+  color: #090f15;
 }
 
 .itinerary p {
   font-size: 1em;
   margin-bottom: 15px;
+  color: #003366;
 }
 
 .itinerary button {
@@ -712,16 +721,19 @@ body.dark-mode {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
+  color: #090f15;
 }
 
 .deal-item h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
+  color: #090f15;
 }
 
 .deal-item p {
   font-size: 1em;
   margin-bottom: 15px;
+  color: #090f15;
 }
 
 .deal-item .discount {
