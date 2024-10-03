@@ -13,20 +13,22 @@ Welcome to **BuddyTrail** – your ultimate travel companion! Whether you're pla
 ![image](https://github.com/user-attachments/assets/1a2ec256-1099-44a0-b810-7f40b544ec3a)
 
 
-## Features
-**Interactive Travel Map:** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
+## <span style="color:#3498db;">Features</span>
 
-**Dark & Bright Mode:** Switch between dark and bright modes for a comfortable browsing experience, day or night.
+**<span style="color:#e74c3c;">Interactive Travel Map:</span>** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
 
-**Hotel Finder:** Find the best hotels at affordable rates, handpicked to suit your budget and preferences.
+**<span style="color:#f39c12;">Dark & Bright Mode:</span>** Switch between dark and bright modes for a comfortable browsing experience, day or night.
 
-**Flight Booking:** Book flights at the best prices, with options tailored to your travel needs.
+**<span style="color:#2ecc71;">Hotel Finder:</span>** Find the best hotels at affordable rates, handpicked to suit your budget and preferences.
 
-Travel Blog: Read tips, guides, and personal stories from seasoned travelers.
+**<span style="color:#9b59b6;">Flight Booking:</span>** Book flights at the best prices, with options tailored to your travel needs.
 
-Multi-Language Support: View the website in multiple languages, catering to a global audience.
+<span style="color:#1abc9c;">Travel Blog:</span> Read tips, guides, and personal stories from seasoned travelers.
 
-User Reviews and Ratings: Read and leave reviews for destinations, hotels, flights, and activities.
+<span style="color:#e67e22;">Multi-Language Support:</span> View the website in multiple languages, catering to a global audience.
+
+<span style="color:#95a5a6;">User Reviews and Ratings:</span> Read and leave reviews for destinations, hotels, flights, and activities.
+
 
 ## Technologies Used
 **HTML/CSS:** For building and styling the website structure.
