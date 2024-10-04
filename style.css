@@ -87,7 +87,7 @@
   }
   
   #logo {
-    flex: 2 1 40rem;
+    flex: 0 1 40rem;
     font-family: "Pattaya", sans-serif;
     font-weight: 400;
   }
@@ -872,17 +872,17 @@ body.dark-mode {
 
 
   /* Theme switcher */
-.mode-toggle {
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-  border-radius: 30px;
-  background: linear-gradient(116deg, #ffffff, #2d0404);
-  position: relative;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-  vertical-align: middle;
-  margin-left: 10px;
+  .mode-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background: linear-gradient(116deg, #ffffff, #2d0404);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    vertical-align: middle;
+    margin-right: 15px;
 }
 
 .mode-toggle::before {
