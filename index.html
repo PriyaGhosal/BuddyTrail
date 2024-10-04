@@ -16,60 +16,72 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/icons/airplane.svg" />
-    
+
     <title>BuddyTrail</title>
-    
   </head>
   <body class="light-mode">
+ 
     <!-- Google Translate Button -->
     <div class="translate-container">
-      <button class="language-toggle" id="languageToggle">
-          🌐
-      </button>
+      <button class="language-toggle" id="languageToggle">🌐</button>
       <div id="google_translate_element"></div>
     </div>
 
     <script>
       // Initialization function
       function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages:
+              'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          'google_translate_element'
+        );
       }
 
       // Toggle button event
-      document.getElementById('languageToggle').addEventListener('click', function() {
-          var translateElement = document.getElementById('google_translate_element');
-          
+      document
+        .getElementById('languageToggle')
+        .addEventListener('click', function () {
+          var translateElement = document.getElementById(
+            'google_translate_element'
+          );
+
           // Toggle visibility
-          if (translateElement.style.display === 'none' || translateElement.style.display === '') {
-              translateElement.style.display = 'block';
+          if (
+            translateElement.style.display === 'none' ||
+            translateElement.style.display === ''
+          ) {
+            translateElement.style.display = 'block';
           } else {
-              translateElement.style.display = 'none';
+            translateElement.style.display = 'none';
           }
-      });
+        });
     </script>
 
     <script src="script.js"></script>
+
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-       
+
         <ul>
-          <li><a href="#locations">Location</a></li>
-          <li><a href="#itineraries">Travel Itineraries</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#locations" class="navhover">Location</a></li>
+          <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
         </ul>
-          <!-- Toggle Button -->
+
+        <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
           <span class="sun-icon glow">☀️</span>
         </button>
       </nav>
     </header>
+
     <main>
       <section class="hero">
         <h2>Travel Beyond Limits</h2>
@@ -77,7 +89,7 @@
           Connect, Explore, and Discover Together. <br />
           BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
         </h3>
-        <button><a href="book.html ">Book now</a></button>
+        <button id="btn"><a href="book.html">Book now</a></button>
       </section>
 
       <section id="locations">
@@ -91,11 +103,12 @@
           <img src="/img/cloud.png" class="moving-cloud-2 cloud" />
         </header>
       </section>
+
       <section id="benefits">
         <header class="benefits-head">
-          <h2>The Perfect travel</h2>
+          <h2>The Perfect Travel</h2>
           <h3>
-            we cover everything from picking the perfect hotel, <br />to flight
+            We cover everything from picking the perfect hotel, <br />to flight
             and destination
           </h3>
         </header>
@@ -128,16 +141,15 @@
             </div>
             <h4>Fly</h4>
             <p>
-              Fly to your dream destination without breaking the bank! We
-              offers the best flight deals, combining comfort and
-              affordability for perfect journey. Book now and take off for
-              less!
+              Fly to your dream destination without breaking the bank! We offer
+              the best flight deals, combining comfort and affordability for the
+              perfect journey. Book now and take off for less!
             </p>
           </div>
         </div>
       </section>
-      <!-- deals -->
-      <section id="deals" class="deals-section">
+      
+            <section id="deals" class="deals-section">
         <h2>Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
     
@@ -183,32 +195,29 @@
             </div>
         </div>
       </section>
-    
-      <!-- travel itineraries -->
-      <section id="itineraries" class="itineraries-section">
-        <h2>Travel Itineraries</h2>
-        <p>Plan your trips effortlessly with our curated travel itineraries tailored for different types of adventures. Whether you're planning a family vacation, a solo adventure, or a romantic getaway, we’ve got you covered!</p>
-        
-        <div class="itinerary-list">
-            <div class="itinerary">
-                <h3>Family Vacation</h3>
-                <p>Explore the best family-friendly destinations with day-by-day guides that include must-see attractions and activities for all ages.</p>
-                <button>View Itinerary</button>
-            </div>
-            <div class="itinerary">
-                <h3>Solo Adventure</h3>
-                <p>Embark on a solo journey with our handpicked itineraries, offering exciting experiences and peaceful retreats just for you.</p>
-                <button>View Itinerary</button>
-            </div>
-            <div class="itinerary">
-                <h3>Romantic Getaway</h3>
-                <p>Plan the perfect romantic escape with itineraries that include serene locations, romantic dinners, and memorable experiences.</p>
-                <button>View Itinerary</button>
-            </div>
+
+      <section id="itineraries">
+        <header class="itineraries-head">
+          <h2>Your Travel Itinerary Awaits!</h2>
+          <h3>Customize your journey with unique itineraries designed just for you!</h3>
+        </header>
+        <div class="itinerary-cards">
+          <div class="itinerary-card">
+            <h4>Beach Getaway</h4>
+            <p>Experience relaxation and fun at the world's most beautiful beaches!</p>
+          </div>
+          <div class="itinerary-card">
+            <h4>Mountain Adventure</h4>
+            <p>Explore breathtaking mountain trails and stunning landscapes!</p>
+          </div>
+          <div class="itinerary-card">
+            <h4>Cultural Immersion</h4>
+            <p>Discover vibrant cultures and historical landmarks!</p>
+          </div>
         </div>
-    </section>
-    <!-- recommendations -->
-    <section id="recommendations" class="recommendations-section">
+      </section>
+      
+          <section id="recommendations" class="recommendations-section">
       <h2>Personalized Recommendations</h2>
       <p>We’ve picked these destinations, hotels, and activities just for you, based on your preferences.</p>
       
@@ -265,36 +274,40 @@
         </div>
       </section>
     </main>
-    <!-- ratings by user -->
-    <section id="reviews" class="reviews-section">
-      <h2>User Reviews and Ratings</h2>
-      <p>Read what others have to say about their experiences with various destinations, hotels, flights, and activities. Share your own reviews and help fellow travelers make informed decisions.</p>
-      
-      <div class="review-form">
+
+      <section id="reviews" class="reviews-section">
+        <h2>User Reviews and Ratings</h2>
+        <p>
+          Read what others have to say about their experiences with various
+          destinations, hotels, flights, and activities. Share your own reviews
+          and help fellow travelers make informed decisions.
+        </p>
+
+        <div class="review-form">
           <h3>Leave a Review</h3>
           <form>
-              <label for="name">Your Name:</label>
-              <input type="text" id="name" name="name" required>
-  
-              <label for="destination">Destination/Service:</label>
-              <input type="text" id="destination" name="destination" required>
-  
-              <label for="rating">Rating:</label>
-              <select id="rating" name="rating">
-                  <option value="5">⭐⭐⭐⭐⭐</option>
-                  <option value="4">⭐⭐⭐⭐</option>
-                  <option value="3">⭐⭐⭐</option>
-                  <option value="2">⭐⭐</option>
-                  <option value="1">⭐</option>
-              </select>
-  
-              <label for="review">Your Review:</label>
-              <textarea id="review" name="review" rows="4" required></textarea>
-  
-              <button type="submit">Submit Review</button>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="destination">Destination/Service:</label>
+            <input type="text" id="destination" name="destination" required />
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+                    <button type="submit">Submit Review</button>
           </form>
-      </div>
-      
+        </div>
+ 
       <div class="reviews-list">
           <h3>What Others Are Saying</h3>
           <!-- Example Review -->
