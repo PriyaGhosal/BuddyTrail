@@ -21,6 +21,8 @@
     
   </head>
   <body class="light-mode">
+    <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
+
     <!-- Google Translate Button -->
     <div class="translate-container">
       <button class="language-toggle" id="languageToggle">
@@ -56,12 +58,12 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul>
-          <li><a href="#locations">Location</a></li>
-          <li><a href="#itineraries">Travel Itineraries</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul >
+          <li><a href="#locations" class='navhover '>Location</a></li>
+          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
+          <li><a href="#reviews" class='navhover'>Reviews</a></li>
+          <li><a href="#benefits" class='navhover'>Benefits</a></li>
+          <li><a href="#contact" class='navhover'>Contact</a></li>
         </ul>
           <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
@@ -76,7 +78,7 @@
           Connect, Explore, and Discover Together. <br />
           BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
         </h3>
-        <button><a href="book.html ">Book now</a></button>
+        <button id="btn"><a href="book.html ">Book now</a></button>
       </section>
 
       <section id="locations">
@@ -206,6 +208,45 @@
             </div>
         </div>
     </section>
+    <!-- Cab or Auto Booking -->
+<section id="cab-booking" class="cab-booking-section">
+  <h2 style="font-size: 3em; font-weight: normal; margin-left: 40px;">Book a Cab or Auto</h2>
+  <p style="margin-left:40px; font-size:1.5em;">Book a cab or auto with ease</p>
+
+  <form action="/book-cab" method="POST" style="margin-left: 40px;">
+    <label style="font-size: 1.5em;"
+    for="pickup-location">Pickup Location:</label>
+    <input style="height: 29px;width:200px;"
+    type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required><br><br>
+
+    <label style="font-size: 1.5em;"
+     for="drop-location">Drop Location:</label>
+    <input style="height: 29px;width:200px;"
+    type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required><br><br>
+
+    <label style="font-size: 1.5em;"
+    for="vehicle-type">Vehicle Type:</label>
+    <select id="vehicle-type" name="vehicle-type" required>
+      <option value="cab">Cab</option>
+      <option value="auto">Auto</option>
+    </select><br><br>
+
+    <label style="font-size: 1.5em;"
+     for="travel-date">Travel Date:</label>
+    <input style="height: 29px;width:200px;"
+    type="date" id="travel-date" name="travel-date" required><br><br>
+
+    <label style="font-size: 1.5em;"
+    for="travel-time">Travel Time:</label>
+    <input style="height: 29px;width:200px;"
+    type="time" id="travel-time" name="travel-time" required><br><br>
+
+    <input style="background-color:#007bff; color:white;border:none;border-radius: 5px;height:30px;cursor: pointer;"
+    type="submit" value="Book Now">
+  </form>
+</section>
+
+  
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
       <h2>Personalized Recommendations</h2>
@@ -289,6 +330,10 @@
   
               <label for="review">Your Review:</label>
               <textarea id="review" name="review" rows="4" required></textarea>
+              <label for="complaint">Complaint (if any):</label>
+      <textarea id="complaint" name="complaint" rows="3" placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+      
+      
   
               <button type="submit">Submit Review</button>
           </form>
@@ -336,13 +381,13 @@
         <h5>BuddyTrail &copy;</h5>
         <ul>
           <li>
-            <a href="#"><img src="icons/twitter.svg" /></a>
+            <a href="#" class="twitter" id="social-icons"><img src="icons/twitter.svg" /></a>
           </li>
           <li>
-            <a href="#"><img src="icons/instagram.svg" /></a>
+            <a href="#" class="instagram " id="social-icons"><img src="icons/instagram.svg" /></a>
           </li>
           <li>
-            <a href="#"><img src="icons/youtube.svg" /></a>
+            <a href="#" class="youtube " id="social-icons"><img src="icons/youtube.svg" /></a>
           </li>
         </ul>
       </div>
@@ -356,6 +401,27 @@
       <button onclick="window.location.href='#deals'">Check Out Deals</button>
     </div>
   </div>
+  <script>
+    // script.js
+window.onscroll = function() {
+    toggleScrollTopButton();
+};
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollTopButton() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block"; // Show button after scrolling down
+    } else {
+        scrollTopBtn.style.display = "none"; // Hide button when at the top
+    }
+}
+
+scrollTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+};
+
+  </script>
 
   </body>
 </html>

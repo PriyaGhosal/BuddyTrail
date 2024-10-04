@@ -13,6 +13,23 @@
   body {
     font-family: "Poppins", sans-serif;
   }
+  .scroll-top-btn {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 80px; /* Adjust this value to move the button left */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.scroll-top-btn:hover {
+    background-color: #007bff;
+}
   
   h1 {
     font-size: 2.6rem;
@@ -52,10 +69,6 @@
     font-size: 1.8rem;
     cursor: pointer;
     transition: background 0.6s ease-in-out;
-  }
-  
-  button:hover {
-    background: #2a3c53;
   }
   
   /**** MAIN PAGE  ****/
@@ -129,7 +142,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .main-head ul li {
@@ -206,6 +219,10 @@
     -webkit-text-fill-color: transparent;
   }
   
+  .dark-mode .locations-head h3 {
+    -webkit-text-fill-color: white;
+  }
+
   .cloud {
     position: absolute;
     top: 0%;
@@ -513,6 +530,7 @@ body.dark-mode {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(33% - 40px);
   max-width: calc(33% - 40px);
+  text-align: center;
 }
 
 .itinerary h3 {
@@ -522,7 +540,8 @@ body.dark-mode {
 }
 
 .itinerary p {
-  font-size: 2em;
+  font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 15px;
   color: #003366;
 }
@@ -679,10 +698,11 @@ body.dark-mode {
 .popup {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
+  overflow: auto;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
@@ -692,11 +712,13 @@ body.dark-mode {
 /* Popup Content */
 .popup-content {
   background-color: #fff;
+  margin: 15%auto;
   padding: 20px;
+  border: 1px solid #888;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
-  text-align: center;
+  position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -704,10 +726,16 @@ body.dark-mode {
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 1.5em;
+  right: 10px;
+  font-size: 28px;
   cursor: pointer;
-  color: #333;
+  color: #aaa;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
 }
 
 /* Button to check deals */
@@ -738,7 +766,7 @@ body.dark-mode {
 }
 
 .deals-section p {
-  font-size: 1.1em;
+  font-size: 2em;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -767,7 +795,7 @@ body.dark-mode {
 }
 
 .deal-item p {
-  font-size: 1em;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #090f15;
 }
@@ -893,6 +921,44 @@ body.dark-mode {
 
 
 
+.navhover {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block; 
+  padding: 10px 15px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navhover:hover {
+  background-color: #3498db; /* Adds a blue background on hover */
+  color: white; /* Changes text color on hover */
+}
+
+#social-icons  {
+  display: inline-block;
+  font-size: 24px; /* Adjust the size as needed */
+  padding: 7px 9px 7px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.twitter:hover
+{
+  background-color: #1e97e3; /* Twitter's official blue color */
+  transform: scale(1.1); 
+}
+
+.instagram:hover {
+  background-color: #E1306C; /* Instagram's official pinkish color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+.youtube:hover {
+  background-color: #FF0000; /* YouTube's official red color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
