@@ -1,120 +1,120 @@
 /**** GLOBAL STYLES ****/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  h1 {
-    font-size: 2.6rem;
-  }
-  
-  h2 {
-    font-size: 4.8rem;
-  }
-  h3 {
-    font-size: 3rem;
-    font-weight: normal;
-  }
-  
-  h4,
-  h5 {
-    font-size: 2.8rem;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  li,
-  button,
-  label,
-  input,
-  p {
-    font-size: 2rem;
-  }
-  
-  button {
-    padding: 2rem 6rem;
-    background: #4c6e97;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: background 0.6s ease-in-out;
-  }
-  
-  button:hover {
-    background: #2a3c53;
-  }
-  
-  /**** MAIN PAGE  ****/
-  
-  .main-head {
-    background: #131c27;
-    color: white;
-    position: sticky;
-    top: 0%;
-    z-index: 5;
-  }
-  
-  nav {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    padding: 2rem;
-    min-height: 10vh;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  nav ul {
-    display: flex;
-    flex: 1 1 40rem;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-  }
-  
-  #logo {
-    flex: 2 1 40rem;
-    font-family: "Pattaya", sans-serif;
-    font-weight: 400;
-  }
-  
-  .hero {
-    min-height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-      url("/img/landing-page.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero button {
-    border-radius: 1rem;
-  }
-  
-  .hero h3 {
-    padding: 5rem;
-  }
-  /* Header Styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
+}
+
+button:hover {
+  background: #2a3c53;
+}
+
+/**** MAIN PAGE  ****/
+
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0%;
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero button {
+  border-radius: 1rem;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+/* Header Styles */
 .main-head {
   padding: 15px;
   background-color: #007bff; /* Header background */
@@ -171,246 +171,246 @@
   margin-bottom: 20px;
 }
 
-  
-  /**** LOCATIONS PAGE ****/
-  
-  #locations {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-      url("/img/new-york-page.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+/**** LOCATIONS PAGE ****/
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/new-york-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#090f15, #42231e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+/**** ANIMATION ****/
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
   }
-  
-  .locations-head {
-    width: 90%;
-    margin: auto;
+  to {
+    transform: translate(0%, 0%);
   }
-  
-  .locations-head h2 {
-    padding: 1rem 0rem;
-    text-decoration: underline;
-    text-decoration-thickness: 0.5rem;
+}
+
+/**** BENEFITS SECTION ****/
+
+.benefits-head {
+  background: #343c44;
+  min-height: 30vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 45vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  scale: 1.02;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.205),
+    0px 20px 20px rgba(0, 0, 0, 0.205);
+}
+
+.cards img {
+  max-width: 20%;
+  margin: 0.5rem;
+}
+.card h4,
+.card p {
+  padding: 1rem;
+  line-height: 2;
+}
+
+.card-icon {
+  background: #2a3c53;
+  padding: 2rem;
+}
+
+/**** CONTACT PAGE ****/
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/contact-mountain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  width: 60%;
+  color: white;
+  border-radius: 2rem;
+}
+
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+
+.name-form,
+.email-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+
+/**** FOOTER ****/
+
+footer {
+  color: white;
+  background-color: rgba(19, 28, 39, 1);
+}
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+footer h5 {
+  flex: 1 1 40rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**** MEDIA QUERY ****/
+
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
   }
-  
-  .locations-head h3 {
-    padding: 4rem 0rem;
-    background: linear-gradient(#090f15, #42231e);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+  nav ul {
+    text-align: center;
   }
-  
+  #logo {
+    padding: 1.8rem;
+    text-align: center;
+  }
+
   .cloud {
-    position: absolute;
-    top: 0%;
-    right: 0%;
+    height: 40rem;
+    pointer-events: none;
   }
-  
-  .moving-cloud-1 {
-    animation: cloudAnimation 3s infinite alternate ease-in-out;
-  }
-  
-  .moving-cloud-2 {
-    top: 20%;
-    z-index: -1;
-    opacity: 0.5;
-    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
-  }
-  
-  /**** ANIMATION ****/
-  
-  @keyframes cloudAnimation {
-    from {
-      transform: translate(10%, -10%);
-    }
-    to {
-      transform: translate(0%, 0%);
-    }
-  }
-  
-  /**** BENEFITS SECTION ****/
-  
-  .benefits-head {
-    background: #343c44;
-    min-height: 30vh;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-  }
-  
-  .benefits-head h3 {
-    padding: 1rem;
-  }
-  
-  .cards {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    min-height: 70vh;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    text-align: center;
-    flex: 1 1 25rem;
-    min-height: 45vh;
-    margin: 2rem 5rem;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s;
-  }
-
-  .card:hover{
-    scale: 1.02;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.205), 0px 20px 20px rgba(0, 0, 0, 0.205);
-  }
-  
-  .cards img {
-    max-width: 20%;
-    margin: 0.5rem;
-  }
-  .card h4,
-  .card p {
-    padding: 1rem;
-    line-height: 2;
-  }
-  
-  .card-icon {
-    background: #2a3c53;
-    padding: 2rem;
-  }
-  
-  /**** CONTACT PAGE ****/
-  
-  #contact {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-      url("/img/contact-mountain.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .form-wrapper {
+  .locations-head h3 {
     background: rgba(19, 28, 39, 0.8);
-    width: 60%;
-    color: white;
-    border-radius: 2rem;
-  }
-  
-  .form-head {
-    text-align: center;
-    padding: 4rem;
-  }
-  
-  .name-form,
-  .email-form {
-    padding: 3rem;
-    text-align: center;
-  }
-  
-  .form-wrapper label {
-    margin: 0rem 3rem;
-  }
-  
-  .form-wrapper button {
-    width: 100%;
+    -webkit-text-fill-color: white;
     padding: 2rem;
-    margin-top: 8rem;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-  }
-  
-  .form-wrapper input {
-    padding: 1rem 3rem;
-  }
-  
-  /**** FOOTER ****/
-  
-  footer {
-    color: white;
-    background-color: rgba(19, 28, 39, 1);
-  }
-  .footer-wrapper {
-    display: flex;
-    padding: 2rem;
-    width: 90%;
-    margin: auto;
-    align-items: center;
-    min-height: 10vh;
-    flex-wrap: wrap;
-  }
-  footer h5 {
-    flex: 1 1 40rem;
-  }
-  
-  footer ul {
-    display: flex;
-    list-style: none;
-    flex: 1 1 40rem;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /**** MEDIA QUERY ****/
-  
-  @media screen and (max-width: 932px) {
-    html {
-      font-size: 45%;
-    }
-  
-    nav ul {
-      text-align: center;
-    }
-    #logo {
-      padding: 1.8rem;
-      text-align: center;
-    }
-  
-    .cloud {
-      height: 40rem;
-      pointer-events: none;
-    }
-    .locations-head h3 {
-      background: rgba(19, 28, 39, 0.8);
-      -webkit-text-fill-color: white;
-      padding: 2rem;
-      text-align: start;
-    }
-  
-    .form-wrapper {
-      width: 100%;
-    }
-  
-    footer {
-      text-align: center;
-    }
-  
-    footer h5 {
-      padding-bottom: 3rem;
-    }
+    text-align: start;
   }
 
-  /* General styling */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-    transition: background-color 0.3s ease, color 0.3s ease;
+  .form-wrapper {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h5 {
+    padding-bottom: 3rem;
+  }
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark mode styles
@@ -423,7 +423,7 @@ body.dark-mode {
 /* body.light-mode {
     background-color: #ffffff;
     color: #000000;
-} */ 
+} */
 .light-mode {
   background-color: #ffffff; /* Light mode background */
   color: black; /* Light mode text color */
@@ -436,52 +436,52 @@ body.dark-mode {
 
 /* Button styles */
 .mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    font-size: 1.5em;
-    transition: color 0.3s, transform 0.3s;
-    padding: 15px; 
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5em;
+  transition: color 0.3s, transform 0.3s;
+  padding: 15px;
 }
 
 /* Sun and moon icons */
 .sun-icon {
-    color: #FFD700;
+  color: #ffd700;
 }
 
 .moon-icon {
-    color: #B0C4DE;
+  color: #b0c4de;
 }
 
 /* Glow effect */
 .sun-icon.glow {
-    color: #FFA500;
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+  color: #ffa500;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
 }
 
 /* Section styling */
 .map-section {
-    padding: 40px;
-    background-color: inherit;
-    text-align: center;
+  padding: 40px;
+  background-color: inherit;
+  text-align: center;
 }
 
 .map-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 /* Map container styling */
 #map {
-    height: 600px; /* Adjust the height as needed */
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 600px; /* Adjust the height as needed */
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* itineraries */
@@ -524,7 +524,7 @@ body.dark-mode {
 }
 
 .itinerary button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -576,7 +576,9 @@ body.dark-mode {
   font-weight: bold;
 }
 
-.review-form input, .review-form select, .review-form textarea {
+.review-form input,
+.review-form select,
+.review-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -585,7 +587,7 @@ body.dark-mode {
 }
 
 .review-form button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -694,7 +696,7 @@ body.dark-mode {
 
 /* Button to check deals */
 .popup-content button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -873,21 +875,42 @@ body.dark-mode {
   display: none; /* Initially hidden */
 }
 
+/* Gallery Styling */
+.gallery-section {
+  padding: 20px;
+  text-align: center;
+}
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-  
-  /* Extra small devices (phones, 600px and down) */
-  /*@media only screen and (max-width: 600px) {...}*/
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  /*@media only screen and (min-width: 600px) {...}*/
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  /*@media only screen and (min-width: 768px) {...}*/
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  /*@media only screen and (min-width: 992px) {...}*/
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  /*@media only screen and (min-width: 1200px) {...}*/
-  
+.gallery-item {
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {...}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
