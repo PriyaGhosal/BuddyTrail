@@ -941,6 +941,56 @@ body.dark-mode {
   background-color: #FF0000; /* YouTube's official red color */
   transform: scale(1.1); /* Slightly enlarges the icon */
 }
+
+/* FAQ Section Styles */
+#faq {
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#faq h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333; /* Darker color for title */
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2); /* Shadow on hover */
+}
+
+.faq-question {
+  padding: 15px;
+  background-color: #007BFF; /* Bootstrap primary color */
+  color: #fff; /* White text */
+  cursor: pointer;
+  margin: 0;
+  font-size: 1.2em; /* Slightly larger font */
+}
+
+.faq-answer {
+  display: none; /* Hidden by default */
+  padding: 15px;
+  background-color: #fff; /* White background for answers */
+  color: #555; /* Dark grey text */
+  font-size: 1.1em; /* Slightly larger font for answers */
+  font-family: 'Arial', sans-serif; /* Clean and readable font */
+  line-height: 1.6; /* Increased line height for better readability */
+  border-top: 1px solid #ddd; /* Light top border for separation */
+}
+
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/

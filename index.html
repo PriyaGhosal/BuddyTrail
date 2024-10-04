@@ -8,7 +8,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,18 +58,19 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
-          <li><a href="#locations" class='navhover '>Location</a></li>
-          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
-          <li><a href="#reviews" class='navhover'>Reviews</a></li>
-          <li><a href="#benefits" class='navhover'>Benefits</a></li>
-          <li><a href="#contact" class='navhover'>Contact</a></li>
+        <ul class="nav-links">
+            <li><a href="#locations" class='navhover'>Location</a></li>
+            <li><a href="#itineraries" class='navhover'>Travel Itineraries</a></li>
+            <li><a href="#reviews" class='navhover'>Reviews</a></li>
+            <li><a href="#benefits" class='navhover'>Benefits</a></li>
+            <li><a href="#contact" class='navhover'>Contact</a></li>
+            <li><a href="#faq" class='navhover'>FAQ</a></li> <!-- Added FAQ Section -->
         </ul>
-          <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow">☀️</span>
+            <span class="sun-icon glow">☀️</span>
         </button>
-      </nav>
+    </nav>
+    
     </header>
     <main>
       <section class="hero">
@@ -373,6 +374,69 @@
           
       </div>
     </section>
+    <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3 class="faq-question">1. What services does BuddyTrail provide?</h3>
+        <div class="faq-answer">
+            <p>BuddyTrail offers personalized travel itineraries, destination recommendations, and travel tips to help you plan your perfect trip.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">2. How do I create a travel itinerary?</h3>
+        <div class="faq-answer">
+            <p>You can create a travel itinerary by selecting your destination, travel dates, and preferences on our website, and we will generate a custom itinerary for you.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">3. Can I modify my travel itinerary after it has been created?</h3>
+        <div class="faq-answer">
+            <p>Yes, you can modify your travel itinerary at any time by accessing your account and making changes to your travel plans.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">4. What payment methods do you accept?</h3>
+        <div class="faq-answer">
+            <p>We accept various payment methods, including credit/debit cards and online payment platforms like PayPal.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">5. Is there a cancellation policy?</h3>
+        <div class="faq-answer">
+            <p>Yes, our cancellation policy allows you to cancel your trip within a specified period before your scheduled departure for a full refund.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">6. How can I contact customer support?</h3>
+        <div class="faq-answer">
+            <p>You can contact our customer support team via the 'Contact' section on our website or by emailing support@buddytrail.com.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">7. Do you offer travel insurance?</h3>
+        <div class="faq-answer">
+            <p>Yes, we offer travel insurance options that you can include when booking your trip.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">8. How do I provide feedback about my trip?</h3>
+        <div class="faq-answer">
+            <p>You can provide feedback about your trip through our website's feedback form available in the 'Reviews' section.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">9. Are there any hidden fees?</h3>
+        <div class="faq-answer">
+            <p>No, BuddyTrail is transparent about all costs, and we will inform you of any fees upfront before you make a payment.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">10. Can I book accommodations through BuddyTrail?</h3>
+        <div class="faq-answer">
+            <p>Yes, we provide options to book accommodations directly through our platform as part of your travel itinerary.</p>
+        </div>
+    </div>
+</section>
   
     
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
@@ -401,6 +465,8 @@
       <button onclick="window.location.href='#deals'">Check Out Deals</button>
     </div>
   </div>
+  
+
   <script>
     // script.js
 window.onscroll = function() {
@@ -420,6 +486,24 @@ function toggleScrollTopButton() {
 scrollTopBtn.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 };
+const questions = document.querySelectorAll('.faq-question');
+
+// Loop through each question and add an event listener
+questions.forEach(question => {
+    question.addEventListener('click', () => {
+        // Toggle the display of the answer
+        const answer = question.nextElementSibling;
+        const isVisible = answer.style.display === 'block';
+        answer.style.display = isVisible ? 'none' : 'block';
+
+        // Optional: Toggle active class for visual indication
+        questions.forEach(q => {
+            if (q !== question) {
+                q.nextElementSibling.style.display = 'none'; // Hide other answers
+            }
+        });
+    });
+});
 
   </script>
 

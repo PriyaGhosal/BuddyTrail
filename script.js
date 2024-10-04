@@ -435,3 +435,8 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
+
+    // Select all questions
+   
+
+
