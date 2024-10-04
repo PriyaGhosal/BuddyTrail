@@ -661,10 +661,11 @@ body.dark-mode {
 .popup {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
+  overflow: auto;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
@@ -674,11 +675,13 @@ body.dark-mode {
 /* Popup Content */
 .popup-content {
   background-color: #fff;
+  margin: 15%auto;
   padding: 20px;
+  border: 1px solid #888;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
-  text-align: center;
+  position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -686,10 +689,16 @@ body.dark-mode {
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 1.5em;
+  right: 10px;
+  font-size: 28px;
   cursor: pointer;
-  color: #333;
+  color: #aaa;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
 }
 
 /* Button to check deals */
