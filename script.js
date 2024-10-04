@@ -316,6 +316,7 @@
     
 // }
 
+let sidebarOpen = false;
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
@@ -435,3 +436,56 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const navbar = document.querySelector(".navbar");
+
+  if (!sidebar) {
+    console.error("Sidebar element not found.");
+    return;
+  }
+
+  if (!navbar) {
+    console.error("Navbar element not found.");
+    return;
+  }
+
+  sidebarOpen = !sidebarOpen;
+  if (sidebarOpen) {
+    sidebar.classList.add("show");
+    sidebar.style.width = "250px";
+    navbar.style.display = "none";
+    document.querySelector(".hamburger").style.display = "none";
+  } else {
+    sidebar.style.width = "0";
+    navbar.style.display = "block";
+    document.querySelector(".hamburger").style.display = "block";
+    sidebar.classList.remove("show");
+  }
+}
+
+const sidebarLinks = document.querySelectorAll("#sidebar a");
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebarOpen = false;
+    document.getElementById("sidebar").style.width = "0";
+    document.querySelector(".hamburger").style.display = "block";
+  });
+});
+function checkScreenSize() {
+  const sidebar = document.getElementById("sidebar");
+  if (window.innerWidth > 500) {
+    sidebar.style.width = "0";
+    sidebarOpen = false;
+    document.querySelector(".navbar").style.display = "block";
+    document.querySelector(".hamburger").style.display = "none";
+  } else {
+    document.querySelector(".hamburger").style.display = "block";
+  }
+}
+
+window.addEventListener("resize", checkScreenSize);
+window.addEventListener("load", checkScreenSize);
+
+checkScreenSize();
