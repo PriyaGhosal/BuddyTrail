@@ -38,16 +38,12 @@ Project maintainers are committed to protecting the privacy and confidentiality 
 ## Guidelines for Enforcement
 In cases of violations of this Code of Conduct, project maintainers will follow these steps to determine consequences:
 
-1. Correction  
-   The individual will receive a written notice explaining the violation. No further action will be taken if the behavior improves.
+1. Correction: The individual will receive a written notice explaining the violation. No further action will be taken if the behavior improves.
 
-2. Warning  
-   If a violation occurs again, a warning will be issued. Further violations may lead to more serious consequences.
+2. Warning: If a violation occurs again, a warning will be issued. Further violations may lead to more serious consequences.
 
-3. Temporary Ban  
-   If violations continue, the individual may be temporarily banned from the community, with a clear explanation of how long the ban will last.
+3. Temporary Ban: If violations continue, the individual may be temporarily banned from the community, with a clear explanation of how long the ban will last.
 
-4. Permanent Ban  
-   For repeated offenses or severe violations, the individual may be permanently removed from the community.
+4. Permanent Ban: For repeated offenses or severe violations, the individual may be permanently removed from the community.
 
 By following this Code of Conduct, we aim to create a supportive, respectful, and inclusive environment where everyone can contribute and collaborate freely.
