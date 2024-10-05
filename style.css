@@ -505,18 +505,22 @@ body.dark-mode {
 .itineraries-section {
   padding: 50px;
   background-color: #f4f4f4;
+  text-align: center;
 }
 
 .itineraries-section h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .itinerary-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 20px;
   color: #003366;
+  margin-top: 20px;
 }
 
 .itinerary {
@@ -530,7 +534,7 @@ body.dark-mode {
 }
 
 .itinerary h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 10px;
   color: #090f15;
 }
@@ -550,10 +554,24 @@ body.dark-mode {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 15px;
 }
 
 .itinerary button:hover {
   background-color: #0056b3;
+}
+@media(max-width: 768px){
+  .itinerary{
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px){
+  .itinerary{
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 #itineraries {
   background-color: #f9f9f9; /* Light background */
@@ -684,7 +702,7 @@ body.dark-mode {
   left: 0;
   top: 0;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
@@ -694,7 +712,7 @@ body.dark-mode {
 /* Popup Content */
 .popup-content {
   background-color: #fff;
-  margin: 15%auto;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
@@ -709,14 +727,23 @@ body.dark-mode {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 50%;
+  font-size: 4rem;
   cursor: pointer;
   color: #aaa;
+  transition: all 0.4s ease-in;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  color: black;
+  background-color: #ea1010;
+  color: #fff;
   text-decoration: none;
 }
 
