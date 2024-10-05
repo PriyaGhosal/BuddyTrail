@@ -684,7 +684,7 @@ body.dark-mode {
   left: 0;
   top: 0;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
@@ -694,7 +694,7 @@ body.dark-mode {
 /* Popup Content */
 .popup-content {
   background-color: #fff;
-  margin: 15%auto;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
@@ -709,14 +709,23 @@ body.dark-mode {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 50%;
+  font-size: 4rem;
   cursor: pointer;
   color: #aaa;
+  transition: all 0.4s ease-in;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  color: black;
+  background-color: #ea1010;
+  color: #fff;
   text-decoration: none;
 }
 
