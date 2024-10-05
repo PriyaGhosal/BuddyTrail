@@ -359,79 +359,73 @@ function initMap() {
     });
 }
 
-// Toggle dark and bright mode
 document.addEventListener('DOMContentLoaded', function() {
+    // Mode Toggle
     const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
     const sunIcon = document.querySelector('.sun-icon');
     const moonIcon = document.createElement('span');
     moonIcon.className = 'moon-icon';
     moonIcon.innerHTML = '🌙';
 
     modeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
 
-        if (document.body.classList.contains('dark-mode')) {
+        if (body.classList.contains('dark-mode')) {
             modeToggle.replaceChild(moonIcon, sunIcon);
         } else {
             modeToggle.replaceChild(sunIcon, moonIcon);
             sunIcon.classList.add('glow');
         }
     });
-});
-// discount pop_up
-document.addEventListener('DOMContentLoaded', function() {
-    // Show the popup after a slight delay
-    setTimeout(function() {
-        document.getElementById('dealsPopup').style.display = 'flex';
-    }, 1000); // Adjust the delay as needed (1000 ms = 1 second)
 
-    // Close the popup when the close button is clicked
-    document.getElementById('closePopup').addEventListener('click', function() {
-        document.getElementById('dealsPopup').style.display = 'none';
+    // Contact Form Submission and Thank You Popup
+    const contactForm = document.getElementById('contactForm');
+    const thankYouPopup = document.getElementById('thankYouPopup');
+    const closePopup = document.getElementById('closePopup');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the form from navigating to a new page
+
+        // Show the Thank You popup
+        thankYouPopup.style.display = 'flex';
+
+        // Optionally, clear the form fields
+        contactForm.reset();
     });
 
-    // Close the popup when the user clicks anywhere outside of the popup content
+    // Close the popup when the 'x' button is clicked
+    closePopup.addEventListener('click', function() {
+        thankYouPopup.style.display = 'none';
+    });
+
+    // Close the popup if the user clicks outside of the popup content
     window.addEventListener('click', function(event) {
-        if (event.target === document.getElementById('dealsPopup')) {
-            document.getElementById('dealsPopup').style.display = 'none';
+        if (event.target === thankYouPopup) {
+            thankYouPopup.style.display = 'none';
         }
     });
-});
-// adaptive background
-const modeToggle = document.getElementById('modeToggle');
-const body = document.body;
 
-modeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
+    // Google Translator Toggle
+    document.getElementById('languageToggle').addEventListener('click', function() {
+        var translateElement = document.getElementById('google_translate_element');
+        
+        // Toggle visibility of the Google Translate element
+        if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+            translateElement.style.display = 'block';
+            googleTranslateElementInit(); // Ensure it's initialized
+        } else {
+            translateElement.style.display = 'none';
+        }
+    });
 
-    // Toggle the icon
-    if (body.classList.contains('dark-mode')) {
-        modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
-    } else {
-        modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
+    // Initialize Google Translate
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
     }
 });
-// google translator
-document.getElementById('languageToggle').addEventListener('click', function() {
-    var translateElement = document.getElementById('google_translate_element');
-    
-    // Toggle visibility of the Google Translate element
-    if (translateElement.style.display === 'none' || translateElement.style.display === '') {
-        translateElement.style.display = 'block';
-        googleTranslateElementInit(); // Ensure it's initialized
-    } else {
-        translateElement.style.display = 'none';
-    }
-});
-
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-
