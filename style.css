@@ -684,6 +684,17 @@ body.dark-mode {
   border-color: black; /* Dark border in dark mode */
 }
 
+.cab-booking-section input, .cab-booking-section select {
+  width: 100%;
+  font-weight: 600;
+  padding: 20px;
+  height: 20px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .review-item h3 {
   margin: 0 0 10px;
   font-size: 1.2em;

@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+    />
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="icon" href="/icons/airplane.svg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>BuddyTrail</title>
   </head>
   <body class="light-mode">
-    <button id="scrollTopBtn" class="scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Google Translate Button -->
     <div class="translate-container">
@@ -261,73 +271,125 @@
           </div>
         </div>
       </section>
+
       <!-- Cab or Auto Booking -->
-      <section id="cab-booking" class="cab-booking-section">
-        <h2 style="font-size: 3em; font-weight: normal; margin-left: 40px">
+      <section
+        id="cab-booking"
+        class="cab-booking-section"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 10px;
+        "
+      >
+        <h2
+          style="
+            font-size: 3em;
+            font-weight: 700;
+            margin-left: 40px;
+            margin-top: 10px;
+          "
+        >
           Book a Cab or Auto
         </h2>
-        <p style="margin-left: 40px; font-size: 1.5em">
+        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 10px">
           Book a cab or auto with ease
         </p>
 
-        <form action="/book-cab" method="POST" style="margin-left: 40px">
-          <label style="font-size: 1.5em" for="pickup-location"
-            >Pickup Location:</label
-          >
-          <input
-            style="height: 29px; width: 200px"
-            type="text"
-            id="pickup-location"
-            name="pickup-location"
-            placeholder="Enter pickup location"
-            required /><br /><br />
+        <form
+          action="/book-cab"
+          method="POST"
+          style="
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          "
+        >
+          <div>
+            <label style="font-size: 1.5em" for="pickup-location"
+              >Pickup Location:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="text"
+              id="pickup-location"
+              name="pickup-location"
+              placeholder="Enter pickup location"
+              required
+            /><br /><br />
+          </div>
+          <div>
+            <label style="font-size: 1.5em" for="drop-location"
+              >Drop Location:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="text"
+              id="drop-location"
+              name="drop-location"
+              placeholder="Enter drop location"
+              required
+            /><br /><br />
+          </div>
+          <div style="display: flex">
+            <label style="font-size: 1.5em" for="vehicle-type"
+              >Vehicle Type:</label
+            >
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="cab">Cab</option>
+              <option value="auto">Auto</option></select
+            ><br /><br />
+          </div>
 
-          <label style="font-size: 1.5em" for="drop-location"
-            >Drop Location:</label
-          >
-          <input
-            style="height: 29px; width: 200px"
-            type="text"
-            id="drop-location"
-            name="drop-location"
-            placeholder="Enter drop location"
-            required /><br /><br />
+          <div>
+            <label style="font-size: 1.5em" for="travel-date"
+              >Travel Date:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="date"
+              id="travel-date"
+              name="travel-date"
+              required
+            /><br /><br />
+          </div>
 
-          <label style="font-size: 1.5em" for="vehicle-type"
-            >Vehicle Type:</label
-          >
-          <select id="vehicle-type" name="vehicle-type" required>
-            <option value="cab">Cab</option>
-            <option value="auto">Auto</option></select
-          ><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-date">Travel Date:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="date"
-            id="travel-date"
-            name="travel-date"
-            required /><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-time">Travel Time:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="time"
-            id="travel-time"
-            name="travel-time"
-            required /><br /><br />
-
-          <input
+          <div>
+            <label style="font-size: 1.5em" for="travel-time"
+              >Travel Time:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="time"
+              id="travel-time"
+              name="travel-time"
+              required
+            /><br /><br />
+          </div>
+          <button
             style="
               background-color: #007bff;
               color: white;
               border: none;
+              width: 200px;
               border-radius: 5px;
-              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
               cursor: pointer;
+              align-self: center;
+              padding: 10px;
+              margin-bottom: 20px;
             "
             type="submit"
-            value="Book Now" />
+          >
+            Book now
+          </button>
         </form>
       </section>
 
@@ -386,7 +448,8 @@
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
         async
-        defer></script>
+        defer
+      ></script>
 
       <section id="contact">
         <div class="form-wrapper">
@@ -416,8 +479,8 @@
         and help fellow travelers make informed decisions.
       </p>
 
-      <div class="review-form" style="margin-top: 20px;">
-        <h1 style="margin-bottom: 10px;">Leave a Review</h1>
+      <div class="review-form" style="margin-top: 20px">
+        <h1 style="margin-bottom: 10px">Leave a Review</h1>
         <form>
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required />
@@ -441,7 +504,8 @@
             id="complaint"
             name="complaint"
             rows="3"
-            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
+          ></textarea>
 
           <button type="submit">Submit Review</button>
         </form>
@@ -529,7 +593,8 @@
           out on our limited-time discounts. Plan your trip now!
         </p>
         <button
-          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
+          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'"
+        >
           Check Out Deals
         </button>
       </div>
