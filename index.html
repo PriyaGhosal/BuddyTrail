@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-       <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"/>
-    <link rel="icon" href="/icons/airplane.svg"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" href="/icons/airplane.svg" />
 
     <title>BuddyTrail</title>
   </head>
@@ -388,24 +387,36 @@
         async
         defer></script>
 
+        <!-- Contact Form -->
       <section id="contact">
         <div class="form-wrapper">
           <header class="form-head">
-            <h2>Contact US</h2>
+            <h2>Contact Us</h2>
           </header>
-          <form action="https://formspree.io/f/mqkvkayy" method="POST">
+          <form id="contactForm">
             <div class="name-form">
-              <label for="name">Name : </label>
-              <input id="name" type="text" name="name" required />
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
             </div>
             <div class="email-form">
-              <label for="email">Email :</label>
-              <input id="email" type="email" name="email" required />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
             </div>
             <button type="submit">Submit</button>
           </form>
         </div>
       </section>
+
+      <!-- Thank You Popup Modal -->
+      <div id="thankYouPopup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <h2>Thank You!</h2>
+          <p>Your message has been sent successfully. We will get back to you soon.</p>
+        </div>
+      </div>
+
+        
     </main>
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
@@ -500,13 +511,23 @@
     <footer>
       <div class="footer-wrapper">
         <h5>BuddyTrail &copy;</h5>
-<div class="social-icons">
-  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-  <a href="#"><i class="fa-brands fa-youtube"></i></a>
-  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-</div>
-
+        <ul>
+          <li>
+            <a href="#" class="twitter" id="social-icons"
+              ><img src="icons/twitter.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="instagram" id="social-icons"
+              ><img src="icons/instagram.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="youtube" id="social-icons"
+              ><img src="icons/youtube.svg"
+            /></a>
+          </li>
+        </ul>
       </div>
     </footer>
     <!-- Deals and Offers Popup -->
