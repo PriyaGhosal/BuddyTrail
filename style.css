@@ -103,6 +103,14 @@
     flex: 2 1 40rem;
     font-family: "Pattaya", sans-serif;
     font-weight: 400;
+    img {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      height: 80px;
+      width: 80px;
+
+    }
   }
   
   .hero {
