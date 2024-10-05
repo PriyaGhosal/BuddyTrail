@@ -80,31 +80,72 @@
     top: 0%;
     z-index: 5;
   }
-  
-  nav {
+/* General Navbar Styles */
+nav {
     display: flex;
-    width: 90%;
-    margin: auto;
-    padding: 2rem;
-    min-height: 10vh;
     align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  nav ul {
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa; 
+}
+
+/* Logo Styles */
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar List Styles */
+.navbar {
     display: flex;
-    flex: 1 1 40rem;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-  }
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Item Styles */
+.navbar li {
+    margin: 0 15px; 
+}
+
+.navbar a {
+    text-decoration: none; 
+    font-size: 1rem;
+    color: #333; 
+    transition: color 0.3s; 
+}
+
+.navbar a:hover {
+    color: #007bff; 
+}
+
+/* Toggle Button Styles */
+.mode-toggle {
+    background: none; 
+    border: none;
+    font-size: 1.5rem; 
+    cursor: pointer; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
   
-  #logo {
-    flex: 2 1 40rem;
-    font-family: "Pattaya", sans-serif;
-    font-weight: 400;
-  }
-  
+ 
   .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
