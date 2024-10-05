@@ -505,18 +505,22 @@ body.dark-mode {
 .itineraries-section {
   padding: 50px;
   background-color: #f4f4f4;
+  text-align: center;
 }
 
 .itineraries-section h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .itinerary-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 20px;
   color: #003366;
+  margin-top: 20px;
 }
 
 .itinerary {
@@ -530,7 +534,7 @@ body.dark-mode {
 }
 
 .itinerary h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 10px;
   color: #090f15;
 }
@@ -550,10 +554,24 @@ body.dark-mode {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 15px;
 }
 
 .itinerary button:hover {
   background-color: #0056b3;
+}
+@media(max-width: 768px){
+  .itinerary{
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px){
+  .itinerary{
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 #itineraries {
   background-color: #f9f9f9; /* Light background */
