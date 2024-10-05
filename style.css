@@ -72,25 +72,6 @@
   }
   
   /**** MAIN PAGE  ****/
-
-
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    white-space: nowrap; 
-    padding: 10px 15px; /* Adjust padding for spacing */
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-around; /* Distribute space between items */
-  }
-  
-  nav ul li {
-    margin: 0 15px; /* Adjust space between list items */
-  }
-  
   
   .main-head {
     background: #131c27;
@@ -117,7 +98,13 @@
     align-items: center;
     list-style: none;
   }
-   
+  
+  #logo {
+    flex: 2 1 40rem;
+    font-family: "Pattaya", sans-serif;
+    font-weight: 400;
+  }
+  
   .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
@@ -141,38 +128,26 @@
     padding: 5rem;
   }
   /* Header Styles */
-
-  #logo {
-    text-align: center;
-    font-family: 'cursive';
-    font-weight: bold;
-    color: white;
-    margin: 0 auto;
-    width: 100%;
-    line-height: 2.8;
-    
-  }
-  
 .main-head {
   padding: 15px;
-  background-color: #007bff;
+  background-color: #007bff; /* Header background */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .main-head ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
 .main-head ul li {
-    display: inline;
+  display: inline;
 }
-
 
 .main-head ul li a {
   color: white;
