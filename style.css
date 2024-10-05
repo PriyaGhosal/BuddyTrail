@@ -363,7 +363,7 @@
   }
   .footer-wrapper {
     display: flex;
-    padding: 5rem;
+    padding: 2rem;
     width: 90%;
     margin: auto;
     align-items: center;
@@ -929,6 +929,7 @@ body.dark-mode {
 }
 
 
+
 .navhover {
   text-decoration: none;
   color: black;
@@ -944,27 +945,91 @@ body.dark-mode {
   color: white; /* Changes text color on hover */
 }
 
-.social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background-color: transparent;
-  border: 0.2rem solid #b74b4b;
-  font-size: 2rem;
-  border-radius: 50%;
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.3s ease;
-  color: #b74b4b;
+#social-icons  {
+  display: inline-block;
+  font-size: 24px; /* Adjust the size as needed */
+  padding: 7px 9px 7px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: black;
-  transform: scale(1.3) translateY(-5px);
-  background-color: #b74b4b;
-  box-shadow: 0 0 25px #b74b4b;
+.twitter:hover
+{
+  background-color: #1e97e3; /* Twitter's official blue color */
+  transform: scale(1.1); 
 }
+
+.instagram:hover {
+  background-color: #E1306C; /* Instagram's official pinkish color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+.youtube:hover {
+  background-color: #FF0000; /* YouTube's official red color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+/* Popup container - still hidden by default */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly darker background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup content - styled for blue-white theme */
+.popup-content {
+  background-color: #ffffff; /* White background */
+  border: 2px solid #007bff; /* Blue border */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  text-align: center;
+  width: 350px; /* Adjust the width to make it more rectangle */
+  position: relative;
+}
+
+/* Close button style */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #007bff; /* Blue color for the close button */
+}
+
+.close-btn:hover {
+  color: #ff0000; /* Red hover effect */
+}
+
+/* Popup heading */
+.popup-content h2 {
+  color: #007bff; /* Blue color for the title */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Popup message paragraph */
+.popup-content p {
+  color: #333333; /* Dark gray for readability */
+  font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: white;
+}
+
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
