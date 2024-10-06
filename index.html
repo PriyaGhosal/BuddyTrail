@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+    />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-       <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"/>
-    <link rel="icon" href="/icons/airplane.svg"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/icons/airplane.svg" />
 
     <title>BuddyTrail</title>
   </head>
@@ -23,7 +24,9 @@
 
     <!-- Google Translate Button -->
     <div class="translate-container">
-      <button class="language-toggle" id="languageToggle">🌐</button>
+      <button class="language-toggle" id="languageToggle">
+          🌐
+      </button>
       <div id="google_translate_element"></div>
     </div>
 
@@ -66,13 +69,21 @@
       <nav>
         <h1 id="logo">BuddyTrail</h1>
         <ul>
-          <li><a href="#locations" class="navhover">Location</a></li>
+          <li>
+            <a href="#locations" class="navhover">Location</a>
+          </li>
           <li>
             <a href="#itineraries " class="navhover">Travel Itineraries</a>
           </li>
-          <li><a href="#reviews" class="navhover">Reviews</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li>
+            <a href="#reviews" class="navhover">Reviews</a>
+          </li>
+          <li>
+            <a href="#benefits" class="navhover">Benefits</a>
+          </li>
+          <li>
+            <a href="#contact" class="navhover">Contact</a>
+          </li>
         </ul>
         <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
@@ -101,9 +112,10 @@
           <img src="/img/cloud.png" class="moving-cloud-2 cloud" />
         </header>
       </section>
+
       <section id="benefits">
         <header class="benefits-head">
-          <h2>The Perfect travel</h2>
+          <h2 class="benefits-heading">The Perfect travel</h2>
           <h3>
             we cover everything from picking the perfect hotel, <br />to flight
             and destination
@@ -280,7 +292,8 @@
             id="pickup-location"
             name="pickup-location"
             placeholder="Enter pickup location"
-            required /><br /><br />
+            required
+          /><br /><br />
 
           <label style="font-size: 1.5em" for="drop-location"
             >Drop Location:</label
@@ -291,7 +304,8 @@
             id="drop-location"
             name="drop-location"
             placeholder="Enter drop location"
-            required /><br /><br />
+            required
+          /><br /><br />
 
           <label style="font-size: 1.5em" for="vehicle-type"
             >Vehicle Type:</label
@@ -307,7 +321,8 @@
             type="date"
             id="travel-date"
             name="travel-date"
-            required /><br /><br />
+            required
+          /><br /><br />
 
           <label style="font-size: 1.5em" for="travel-time">Travel Time:</label>
           <input
@@ -315,7 +330,8 @@
             type="time"
             id="travel-time"
             name="travel-time"
-            required /><br /><br />
+            required
+          /><br /><br />
 
           <input
             style="
@@ -327,7 +343,8 @@
               cursor: pointer;
             "
             type="submit"
-            value="Book Now" />
+            value="Book Now"
+          />
         </form>
       </section>
 
@@ -386,7 +403,8 @@
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
         async
-        defer></script>
+        defer
+      ></script>
 
       <section id="contact">
         <div class="form-wrapper">
@@ -441,7 +459,8 @@
             id="complaint"
             name="complaint"
             rows="3"
-            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
+          ></textarea>
 
           <button type="submit">Submit Review</button>
         </form>
@@ -500,13 +519,23 @@
     <footer>
       <div class="footer-wrapper">
         <h5>BuddyTrail &copy;</h5>
-<div class="social-icons">
-  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-  <a href="#"><i class="fa-brands fa-youtube"></i></a>
-  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-</div>
-
+        <ul>
+          <li>
+            <a href="#" class="twitter" id="social-icons"
+              ><img src="icons/twitter.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="instagram" id="social-icons"
+              ><img src="icons/instagram.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="youtube" id="social-icons"
+              ><img src="icons/youtube.svg"
+            /></a>
+          </li>
+        </ul>
       </div>
     </footer>
     <!-- Deals and Offers Popup -->
@@ -518,14 +547,13 @@
           Get the best deals on flights, hotels, and travel packages. Don't miss
           out on our limited-time discounts. Plan your trip now!
         </p>
-        <button
-          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
-          Check Out Deals
-        </button>
+        <button onclick="window.location.href='#deals'">Check Out Deals</button>
       </div>
     </div>
     <script>
       // script.js
+
+
       window.onscroll = function () {
         toggleScrollTopButton();
       };
@@ -546,6 +574,7 @@
       scrollTopBtn.onclick = function () {
         window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
       };
+
     </script>
   </body>
 </html>
