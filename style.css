@@ -155,6 +155,12 @@
   font-weight: bold;
 }
 
+.main-head ul li a:hover {
+  color: #f54d05;
+  cursor: pointer;
+  background-color: #bbff00;
+}
+
 .mode-toggle {
   background: none;
   border: none;
@@ -319,6 +325,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+ 
+  button:hover{
+    color: red;
+    cursor: pointer;
+    background-color: yellow;
+  }
+  button a:hover{
+    color: red;
+  }
+  section button:hover{
+    color: red;
+    cursor: pointer;
+    background-color: yellow;
+
+  }
+  input:hover{
+    color: red;
+    cursor: pointer;
+    background-color: yellow;
   }
   
   .form-wrapper {
