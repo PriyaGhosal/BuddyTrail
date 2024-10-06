@@ -60,7 +60,44 @@
   p {
     font-size: 2rem;
   }
+
+  hove effect in the button
+  #btn:hover { 
+    background-color: #45a049; /* Change background color on hover */
+  } 
+
+  #btn a:hover {
+    color: #f1f1f1; /* Change text color on hover */
+  } */
   
+  #btn {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#btn a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect for the button */
+#btn:hover {
+    background-color: #45a049; /* Change background color smoothly */
+    transform: scale(1.05); /* Slightly increase the size for a smooth effect */
+}
+
+/* Hover effect for the anchor text */
+#btn a:hover {
+    color: #f1f1f1; /* Smooth transition for text color */
+}
+
+
   button {
     padding: 2rem 6rem;
     background: #4c6e97;
