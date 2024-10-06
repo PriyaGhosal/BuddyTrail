@@ -965,6 +965,71 @@ body.dark-mode {
   background-color: #b74b4b;
   box-shadow: 0 0 25px #b74b4b;
 }
+.vehicle-container 
+{
+  display: flex;
+  margin-left: 270px; /* Space out the vehicles evenly */
+  align-items: flex-end; /* Align items to the bottom */
+} 
+
+
+.vehicle {
+  text-align: center; /* Center-align text and elements in each vehicle */
+  margin: 0 10px;
+}
+
+.vehicle_img {
+  max-width: 300px; /* Set a max width for images */
+  max-height: 200px;
+   /* Maintain aspect ratio */
+  display: block; /* Ensures the image takes up full width in its container */
+  margin-bottom: 20px; /* Space between image and label */
+  border-color: #131c27;
+  border-width: 20px;
+  border-radius: 20%;
+  transition: transform 0.3s ease;
+}
+.vehicle_img:hover{
+  transform:scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.booknow{
+  height: 80px;
+  width: 250px;
+  color: black;
+  background-color: pink;
+  font-weight: 600;
+  font-size: 25px;
+  border: 2px solid grey;
+  border-radius: 20%;
+  transition: transform 0.3s ease;
+}
+.booknow:hover{
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: palevioletred;
+}
+label[for="pickup"]
+{
+    font-weight: bold;
+    font-size: 18px; 
+}
+label[for="drop"]
+{
+    font-weight: bold;
+    font-size: 18px; 
+}
+label[for="distance"]
+{
+    font-weight: bold;
+    font-size: 18px; 
+}
+.fare-display {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
   
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
