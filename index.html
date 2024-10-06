@@ -80,6 +80,19 @@
         </button>
       </nav>
     </header>
+    <div id="progress-bar"></div>
+    <!-- funcioning of progress bar -->
+    <script>
+      window.addEventListener('scroll', function() {
+          // Calculate the scroll progress
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+          // Update the width of the progress bar
+          document.getElementById('progress-bar').style.width = scrollPercent + '%';
+      });
+  </script>
     <main>
       <section class="hero">
         <h2>Travel Beyond Limits</h2>
