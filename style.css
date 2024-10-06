@@ -957,3 +957,195 @@ body.dark-mode {
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   /*@media only screen and (min-width: 1200px) {...}*/
   
+
+  .footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px 100px;
+    background-color: white;
+    color: black;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-description {
+    flex: 1;
+    max-width: 400px;
+}
+.footer-description h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: black;
+}
+.footer-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+.footer-list h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: bold;
+}
+.footer-list ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-list ul li {
+    margin-bottom: 10px;
+}
+.footer-list ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.footer-list ul li a:hover {
+    color: black;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons li {
+    list-style: none;
+}
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.social-icons i{
+  font-size: 20px;
+}
+.social-icons{
+  margin-top: 20px;
+}
+
+.social-icons a i:hover {
+    color: #BDBDBD;
+    transform: scale(1.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-list,
+    .footer-description {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer p {
+        padding: 10px 0;
+    }
+}
+.copyright{
+    color:black;
+    background-color: #EBEDF3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+
+.dark-mode .copyright{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .social-icons a:hover .fa-github{
+  color:white;
+}
+
+.social-icons a:hover .fa-github{
+  color:black;
+}
+
+.social-icons a:hover .fa-instagram{
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text; 
+  color: transparent; 
+  border-radius: 20%;
+  transform: scale(1.5); 
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover .fa-x-twitter{
+  color:black;
+}
+
+.dark-mode .social-icons a:hover .fa-x-twitter{
+  color:white;
+}
+
+.social-icons a:hover .fa-facebook{
+  color: #0077B5;
+}
+
+.social-icons a:hover .fa-linkedin{
+  color:#3e57bc;
+}
+
+.dark-mode .footer-container{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .footer-description>h3{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .footer-description>p{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .footer-list>h3{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .footer-list{
+  color: white;
+  background-color: black;
+}
+
+.dark-mode .footer-list>ul{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .social-icons .fab{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .social-icons .fa-brands{
+  color:white;
+  background-color:black;
+}
+
+.dark-mode .footer-list a{
+  color:white;
+  background-color: black;
+}
+
+.dark-mode .footer-list a:hover{
+  color:grey;
+}
