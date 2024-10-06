@@ -86,7 +86,7 @@
     width: 90%;
     margin: auto;
     padding: 2rem;
-    min-height: 10vh;
+    height: 75px;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -122,6 +122,10 @@
   
   .hero button {
     border-radius: 1rem;
+  }
+
+  .hero button:hover{
+    background-color: #131c27;
   }
   
   .hero h3 {
