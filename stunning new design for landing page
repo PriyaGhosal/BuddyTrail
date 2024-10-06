@@ -1,0 +1,186 @@
+<style>
+.travel-hero {
+  background-color: #f5f5f5;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 1117px;
+  width: 100%;
+  align-items: center;
+  padding: 48px 80px 311px;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1539px;
+  gap: 40px 100px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex-grow: 1;
+  width: 170px;
+  font: 400 48px/1 "Arsenal SC", sans-serif;
+}
+
+.logo-highlight {
+  color: #ffbc75;
+}
+
+.nav-menu {
+  align-self: start;
+  display: flex;
+  margin-top: 4px;
+  gap: 28px;
+  font: 600 24px/1 Lato, sans-serif;
+}
+
+.nav-item {
+  display: flex;
+  gap: 11px;
+  white-space: nowrap;
+}
+
+.nav-icon {
+  aspect-ratio: 1.6;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  margin: auto 0;
+}
+
+.nav-icon-large {
+  aspect-ratio: 1;
+  width: 24px;
+}
+
+.hero-title {
+  position: relative;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 316px;
+  font: 400 90px/1 Lobster, sans-serif;
+}
+
+.hero-subtitle {
+  position: relative;
+  font: 400 32px/1 Poppins, sans-serif;
+}
+
+.hero-description {
+  position: relative;
+  text-align: center;
+  margin-top: 43px;
+  font: 300 24px/28px Poppins, sans-serif;
+}
+
+.cta-button {
+  position: relative;
+  border-radius: 50px;
+  background-color: #fff;
+  width: 375px;
+  max-width: 100%;
+  color: #985005;
+  text-align: center;
+  margin: 62px 0 -62px;
+  padding: 23px 68px;
+  font: 400 24px/1 "Hedvig Letters Serif", -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 0 20px 100px;
+  }
+
+  .header-container {
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .nav-menu {
+    max-width: 100%;
+  }
+
+  .nav-item {
+    white-space: initial;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .cta-button {
+    margin: 40px 0 10px;
+    padding: 0 20px;
+  }
+}
+</style>
+
+<section class="travel-hero">
+  <div class="hero-content">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a7f95f2b5af832e17b5bbc1dfd1ce97680edda06faf8cc200931a7d39a9a4d6?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="hero-background" />
+    <header class="header-container">
+      <h1 class="logo">Buddy <span class="logo-highlight">Trail</span></h1>
+      <nav class="nav-menu">
+        <a href="#itineraries" class="nav-item">
+          <span>ITINERARIES</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07781ee5a4568196d2c92273d1423b1b0dd63d5698138d241c7b234889446c5d?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="nav-icon" />
+        </a>
+        <a href="#reviews" class="nav-item">
+          <span>REVIEWS</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07781ee5a4568196d2c92273d1423b1b0dd63d5698138d241c7b234889446c5d?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="nav-icon" />
+        </a>
+        <a href="#benefits" class="nav-item">
+          <span>BENEFITS</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e0b3db2a1d500bc0e8e024ccf260f0982f2dcf3133198e33b04bb2ab1db5ddd6?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="nav-icon nav-icon-large" />
+        </a>
+        <a href="#contact" class="nav-item">
+          <span>CONTACT US</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07781ee5a4568196d2c92273d1423b1b0dd63d5698138d241c7b234889446c5d?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="nav-icon" />
+        </a>
+        <a href="#location" class="nav-item">
+          <span>SET LOCATION</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a977b9c0edadf8ecc5794928696341bd00420662d7f1cd2db3c823de6a7836fd?placeholderIfAbsent=true&apiKey=fa22c26009ce45f18ff293ca0a4356fa" alt="" class="nav-icon nav-icon-large" />
+        </a>
+      </nav>
+    </header>
+    <h2 class="hero-title">Travel Beyond Limits</h2>
+    <p class="hero-subtitle">Discover. Explore. Experience.</p>
+    <p class="hero-description">
+      Welcome to BuddyTrail – where your journey begins with the perfect travel companion. Whether you're seeking adventure, relaxation, or cultural experiences, we are here to help you make the most of every trip.
+    </p>
+    <a href="#explore" class="cta-button">Explore Destinations</a>
+  </div>
+</section>
