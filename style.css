@@ -202,6 +202,7 @@ nav ul {
   align-items: center;
   position: relative;
   overflow: hidden;
+  scroll-margin-top:15vh;
 }
 
 .locations-head {
@@ -272,6 +273,9 @@ nav ul {
 .benefits-head h3 {
   padding: 1rem;
 }
+#benefits{
+  scroll-margin-top:15vh;
+}
 
 .cards {
   width: 90%;
@@ -324,6 +328,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-margin-top:15vh;
 }
 
 .form-wrapper {
@@ -511,6 +516,7 @@ body.dark-mode {
   padding: 50px;
   background-color: #f4f4f4;
   text-align: center;
+  scroll-margin-top:15vh;
 }
 
 .itineraries-section h2 {
@@ -592,6 +598,7 @@ body.dark-mode {
 .reviews-section {
   padding: 50px;
   background-color: #f4f4f4;
+  scroll-margin-top:15vh;
 }
 
 .reviews-section h2 {
