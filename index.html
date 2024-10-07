@@ -27,46 +27,45 @@
     <title>BuddyTrail</title>
     <style>
       .chatbot-container {
-          position: fixed;
-          bottom: 20px; /* Adjust as needed */
-          right: 20px; /* Adjust as needed */
-          z-index: 1000; /* Ensure it appears above other elements */
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other elements */
       }
 
       .chatbot-button {
-          background-color: #007bff; /* Change to your preferred color */
-          border: none;
-          border-radius: 50%;
-          padding: 5px; /* Smaller padding */
-          cursor: pointer;
-          position: relative;
-          width: 50px; /* Adjusted size */
-          height: 50px; /* Adjusted size */
+        background-color: #007bff; /* Change to your preferred color */
+        border: none;
+        border-radius: 50%;
+        padding: 5px; /* Smaller padding */
+        cursor: pointer;
+        position: relative;
+        width: 50px; /* Adjusted size */
+        height: 50px; /* Adjusted size */
       }
 
       .chatbot-button img {
-          width: 30px; /* Adjusted image size */
-          height: 30px; /* Adjusted image size */
+        width: 30px; /* Adjusted image size */
+        height: 30px; /* Adjusted image size */
       }
 
       .tooltip-text {
-          display: none; /* Hide by default */
-          position: absolute;
-          bottom: 100%; /* Position above the button */
-          right: 50%;
-          transform: translateX(50%);
-          background-color: #333; /* Background color for tooltip */
-          color: #fff; /* Tooltip text color */
-          padding: 5px;
-          border-radius: 5px;
-          white-space: nowrap; /* Prevent text from wrapping */
+        display: none; /* Hide by default */
+        position: absolute;
+        bottom: 100%; /* Position above the button */
+        right: 50%;
+        transform: translateX(50%);
+        background-color: #333; /* Background color for tooltip */
+        color: #fff; /* Tooltip text color */
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap; /* Prevent text from wrapping */
       }
 
       .chatbot-button:hover .tooltip-text {
-          display: block; /* Show on hover */
+        display: block; /* Show on hover */
       }
-      </style>
-
+    </style>
   </head>
   <body class="light-mode">
     <button id="scrollTopBtn" class="scroll-top-btn">
@@ -117,15 +116,17 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
-          <li><a href="#home" class='navhover '>Home</a></li>
-          <li><a href="#locations" class='navhover '>Location</a></li>
-          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
-          <li><a href="#reviews" class='navhover'>Reviews</a></li>
-          <li><a href="#benefits" class='navhover'>Benefits</a></li>
-          <li><a href="#contact" class='navhover'>Contact</a></li>
-          <li><a href="signUp.html" class='navhover'>Sign In</a></li>
-
+        <ul>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="#About" class="navhover">About</a></li>
+          <li><a href="#locations" class="navhover">Location</a></li>
+          <li>
+            <a href="#itineraries " class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li><a href="signUp.html" class="navhover">Sign In</a></li>
         </ul>
         <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
@@ -136,16 +137,20 @@
     <div id="progress-bar"></div>
     <!-- funcioning of progress bar -->
     <script>
-      window.addEventListener('scroll', function() {
-          // Calculate the scroll progress
-          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          const scrollPercent = (scrollTop / scrollHeight) * 100;
-  
-          // Update the width of the progress bar
-          document.getElementById('progress-bar').style.width = scrollPercent + '%';
+      window.addEventListener("scroll", function () {
+        // Calculate the scroll progress
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+        // Update the width of the progress bar
+        document.getElementById("progress-bar").style.width =
+          scrollPercent + "%";
       });
-  </script>
+    </script>
     <main>
       <section class="hero">
         <h2>Travel Beyond Limits</h2>
@@ -155,6 +160,83 @@
         </h3>
         <button id="btn"><a href="book.html ">Book now</a></button>
       </section>
+      <section id="About">
+        <h1>About BuddyTrail - Your Ultimate Travel Companion</h1>
+        <p>
+          Welcome to <strong>BuddyTrail</strong>, the all-in-one travel platform
+          that turns your dream vacations into reality! 🌍✈ Whether you're
+          planning a fun family getaway 👨‍👩‍👧‍👦, an exciting trip with friends 👫, or
+          even a solo adventure, BuddyTrail is here to guide you every step of
+          the way. Discover new destinations 🏖🏰, find the best hotels 🏨, and
+          book budget-friendly flights 💺 without the hassle.
+        </p>
+      
+        <h2>Why Choose BuddyTrail?</h2>
+        <p>
+          BuddyTrail isn't just another travel site. It's designed to give you
+          the most personalized, stress-free travel experience possible, making
+          sure every detail is taken care of. Here's what makes us different:
+        </p>
+      
+        <ul>
+          <li>
+            🌍 <strong>Explore the World with an Interactive Travel Map:</strong>
+            Want to see the world at your fingertips? Our dynamic map lets you
+            discover the top travel destinations, both within India and
+            globally, with just a click. Find out more about each location,
+            including the best activities, top-rated attractions, and hidden
+            gems you won't want to miss.
+          </li>
+          <li>
+            🏨 <strong>Find Hotels that Fit Your Style & Budget:</strong>
+            Finding the perfect place to stay has never been easier! Our hotel finder
+            matches you with a wide selection of handpicked hotels that suit
+            your style and budget, from luxury resorts to budget-friendly stays.
+          </li>
+          <li>
+            ✈ <strong>Book Flights at the Best Prices:</strong>
+            With BuddyTrail, you can find and book flights at unbeatable prices,
+            tailored to your travel dates and preferences.
+          </li>
+          <li>
+            📝 <strong>Get Expert Tips from Seasoned Travelers:</strong>
+            Our travel blog is packed with insider tips, guides, and stories from
+            seasoned travelers.
+          </li>
+          <li>
+            ⭐ <strong>Read & Leave Reviews to Guide Fellow Travelers:</strong>
+            Travel smarter by reading user reviews and ratings for destinations,
+            hotels, flights, and activities.
+          </li>
+          <li>
+            🌐 <strong>Multi-Language Support for Global Travelers:</strong>
+            We offer multi-language support to make sure everyone feels at home.
+          </li>
+          <li>
+            🌙🌞 <strong>Dark & Bright Modes for Comfortable Browsing:</strong>
+            BuddyTrail lets you switch between dark and bright modes with ease.
+          </li>
+          <li>
+            📱 <strong>Seamless Experience Across Devices:</strong>
+            BuddyTrail is designed to be fully responsive, so you can plan and book your trips from any device.
+          </li>
+        </ul>
+      
+        <p>Join a Community of Travelers!</p>
+        <p>
+          Become part of the BuddyTrail community and connect with fellow
+          travelers! Share your experiences, get inspired by others, and enjoy a
+          personalized travel experience like never before.
+        </p>
+      
+        <p>
+          <strong>
+            Start your journey today with BuddyTrail, and turn your travel
+            dreams into memories that last a lifetime!
+          </strong>
+        </p>
+      </section>
+      
 
       <section id="locations">
         <header class="locations-head">
@@ -619,17 +701,16 @@
     <a href="chatbot.html">
       <div class="fixed bottom-0 right-2 chatbot-container">
         <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot">
+          <img class="h-20" src="chatbot.gif" alt="chatbot" />
           <span class="tooltip-text">
-            Welcome to Buddytrail! <br>
-            How can I help You? ^_^ 
+            Welcome to Buddytrail! <br />
+            How can I help You? ^_^
           </span>
         </button>
       </div>
     </a>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-
 
     <footer>
       <div class="footer-wrapper">
