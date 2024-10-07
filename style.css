@@ -969,7 +969,6 @@ body.dark-mode {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .twitter:hover {
   background-color: #1e97e3; /* Twitter's official blue color */
   transform: scale(1.1);
@@ -999,4 +998,3 @@ body.dark-mode {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
-
