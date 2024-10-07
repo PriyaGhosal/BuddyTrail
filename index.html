@@ -429,7 +429,7 @@
 
       <div class="review-form">
         <h3>Leave a Review</h3>
-        <form>
+        <form id="reviewForm">
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required />
 
@@ -437,16 +437,18 @@
           <input type="text" id="destination" name="destination" required />
 
           <label for="rating">Rating:</label>
-          <select id="rating" name="rating">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
+          <div class="star-rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+          <input type="hidden" id="rating" name="rating" required />
 
           <label for="review">Your Review:</label>
           <textarea id="review" name="review" rows="4" required></textarea>
+
           <label for="complaint">Complaint (if any):</label>
           <textarea
             id="complaint"
@@ -567,6 +569,50 @@
       scrollTopBtn.onclick = function () {
         window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
       };
+
+      // Star rating functionality
+      const starContainer = document.querySelector('.star-rating');
+      const stars = starContainer.querySelectorAll('.star');
+      const ratingInput = document.getElementById('rating');
+
+      starContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('star')) {
+          const rating = e.target.dataset.rating;
+          ratingInput.value = rating;
+          updateStars(rating);
+        }
+      });
+
+      starContainer.addEventListener('mouseover', (e) => {
+        if (e.target.classList.contains('star')) {
+          const rating = e.target.dataset.rating;
+          updateStars(rating);
+        }
+      });
+
+      starContainer.addEventListener('mouseout', () => {
+        updateStars(ratingInput.value);
+      });
+
+      function updateStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add('active');
+          } else {
+            star.classList.remove('active');
+          }
+        });
+      }
+
+      // Form submission (you can integrate this with your existing form handling)
+      document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to your server
+        console.log('Form submitted with rating:', ratingInput.value);
+        // Reset form and stars after submission
+        this.reset();
+        updateStars(0);
+      });
     </script>
   </body>
 </html>
