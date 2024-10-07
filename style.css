@@ -866,14 +866,14 @@ body.dark-mode {
 }
 
 .recommendations-section h2 {
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: 20px;
   text-align: center;
   color: #0056b3; /* Dark blue for headings */
 }
 
 .recommendations-section p {
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-align: center;
   margin-bottom: 30px;
   color: black; /* Darker gray for text */
@@ -891,19 +891,19 @@ body.dark-mode {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 300px;
+  max-width: 30%;
   text-align: center;
-  border: 2px solid #0056b3; /* Blue border */
+  /* border: 2px solid #0056b3; Blue border */
 }
 
 .recommendation-item h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 15px;
   color: #0056b3; /* Dark blue for headings */
 }
 
 .recommendation-item p {
-  font-size: 1em;
+  font-size: 1.5em;
   margin-bottom: 20px;
   color: black; /* Darker gray for text */
 }
