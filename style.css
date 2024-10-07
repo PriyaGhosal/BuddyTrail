@@ -72,9 +72,9 @@ button {
   cursor: pointer;
   transition: background 0.6s ease-in-out;
 }
-#btn:hover{
-  background-color: rgb(1, 20, 27); 
-  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue; 
+#btn:hover {
+  background-color: rgb(1, 20, 27);
+  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
 /**** MAIN PAGE  ****/
 
@@ -187,6 +187,62 @@ nav ul {
   font-size: 1.1em;
   color: #e0e0e0; /* Dark text color */
   margin-bottom: 20px;
+}
+/* About Section Styling */
+#About {
+  padding: 60px;
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#About h1 {
+  font-size: 3.5em;
+  color: #007bff; /* Blue color for the main heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#About h2 {
+  font-size: 3em;
+  color: #0056b3; /* Dark blue color for subheadings */
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+#About p {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #444; /* Slightly darker grey for paragraph text */
+}
+
+#About p strong {
+  color: #007bff; /* Blue highlight for important text */
+}
+
+#About ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+#About ul li {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#About ul li::before {
+  content: "✔"; /* Checkmark symbol as bullet point */
+  margin-right: 10px;
+  color: #28a745; /* Green checkmark */
+  font-size: 1.5em;
 }
 
 /**** LOCATIONS PAGE ****/
@@ -687,7 +743,8 @@ body.dark-mode {
   border-color: black; /* Dark border in dark mode */
 }
 
-.cab-booking-section input, .cab-booking-section select {
+.cab-booking-section input,
+.cab-booking-section select {
   width: 100%;
   font-weight: 600;
   padding: 20px;
