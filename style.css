@@ -832,6 +832,12 @@ body.dark-mode {
   max-width: 300px;
   text-align: center;
   color: #090f15;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.deal-item:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .deal-item h3 {
