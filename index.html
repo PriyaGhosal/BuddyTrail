@@ -24,6 +24,48 @@
 
 
     <title>BuddyTrail</title>
+    <style>
+      .chatbot-container {
+          position: fixed;
+          bottom: 20px; /* Adjust as needed */
+          right: 20px; /* Adjust as needed */
+          z-index: 1000; /* Ensure it appears above other elements */
+      }
+
+      .chatbot-button {
+          background-color: #007bff; /* Change to your preferred color */
+          border: none;
+          border-radius: 50%;
+          padding: 5px; /* Smaller padding */
+          cursor: pointer;
+          position: relative;
+          width: 50px; /* Adjusted size */
+          height: 50px; /* Adjusted size */
+      }
+
+      .chatbot-button img {
+          width: 30px; /* Adjusted image size */
+          height: 30px; /* Adjusted image size */
+      }
+
+      .tooltip-text {
+          display: none; /* Hide by default */
+          position: absolute;
+          bottom: 100%; /* Position above the button */
+          right: 50%;
+          transform: translateX(50%);
+          background-color: #333; /* Background color for tooltip */
+          color: #fff; /* Tooltip text color */
+          padding: 5px;
+          border-radius: 5px;
+          white-space: nowrap; /* Prevent text from wrapping */
+      }
+
+      .chatbot-button:hover .tooltip-text {
+          display: block; /* Show on hover */
+      }
+      </style>
+
   </head>
   <body class="light-mode">
     <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
@@ -502,6 +544,18 @@
         </div>
       </div>
     </section>
+
+    <a href="chatbot.html">
+      <div class="fixed bottom-0 right-2 chatbot-container">
+        <button class="chatbot-button group">
+          <img class="h-20" src="chatbot.gif" alt="chatbot">
+          <span class="tooltip-text">
+            Welcome to Buddytrail! <br>
+            How can I help You? ^_^ 
+          </span>
+        </button>
+      </div>
+    </a>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
       <div class="footer-container">
