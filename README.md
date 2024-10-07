@@ -15,8 +15,11 @@ Welcome to **BuddyTrail** – your ultimate travel companion! 🌍✈️ Whether
 
 <br />
 
-![image](https://github.com/user-attachments/assets/4e53b040-41de-43d0-91bd-5c31bf5b9959)
-![image](https://github.com/user-attachments/assets/1a2ec256-1099-44a0-b810-7f40b544ec3a)
+# 📸 Website Preview
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182935.png" alt = "image">
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20183005.png" alt = "image">
+
 
 <br />
 
