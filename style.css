@@ -1001,3 +1001,119 @@ body.dark-mode {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
+.cab-booking-section{
+  background: url("img/cab-book.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+.cab{
+  background-color: #5edbf5c3;
+  border: 2px solid blue;
+  border-radius: 7px;
+  padding: 0 15px;
+}
+.itinerary:nth-child(1){
+  background: url("img/family-bg.jpg");
+  background-color: rgba(255, 68, 0, 0.715);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -0.3;
+}
+.itinerary:nth-child(1):hover{
+  background-image: linear-gradient(to bottom right,rgba(232, 100, 19, 0.825),rgba(255, 255, 255, 0.781));
+}
+.itinerary:nth-child(1) p{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.itinerary:nth-child(1) h3{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.itinerary:nth-child(2){
+  background: url("img/solo-bg.jpg");
+  background-color: #0f18217e;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.itinerary:nth-child(2):hover{
+  background-image: linear-gradient(to bottom right,rgba(165, 42, 42, 0.826),rgba(255, 255, 0, 0.853));
+}
+.itinerary:nth-child(2) h3,.itinerary:nth-child(2) p{
+  color: rgb(0, 8, 255);
+  font-weight: bold;
+  position: relative;
+  z-index: 40;
+}
+.itinerary:nth-child(3){
+  background: url("img/romantic-bg.jpg");
+  background-color: #0f1821b0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.itinerary:nth-child(3):hover{
+  background-image: linear-gradient(to bottom right,aqua,rgba(255, 255, 0, 0.853));
+}
+.itinerary:nth-child(3) h3,.itinerary:nth-child(3) p{
+  color: brown;
+  font-weight: bold;
+  position: relative;
+  z-index: 40;
+}
+.recommendation-item:nth-child(1){
+  background: url("img/goa-resort.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: linear-gradient(to bottom right,rgba(105, 144, 242, 0.312),rgba(255, 255, 255, 0.29)); */
+}
+.recommendation-item:nth-child(1):hover{
+  background-image: linear-gradient(to bottom right,orange,yellow);
+}
+.recommendation-item:nth-child(1) h3,.recommendation-item:nth-child(1) p{
+  color: blueviolet;
+  font-weight: bold;
+  position: relative;
+  z-index: 40;
+}
+.recommendation-item:nth-child(2){
+  background: url("img/Rajasthan.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: linear-gradient(to bottom right,rgba(105, 144, 242, 0.312),rgba(255, 255, 255, 0.29)); */
+}
+.recommendation-item:nth-child(2):hover{
+  background-image: linear-gradient(to bottom right,brown,rgb(251, 217, 148));
+}
+.recommendation-item:nth-child(2) h3,.recommendation-item:nth-child(2) p{
+  color: black;
+  font-weight: bold;
+  position: relative;
+  z-index: 40;
+}
+.recommendation-item:nth-child(3){
+  background: url("img/Himachal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: linear-gradient(to bottom right,rgba(105, 144, 242, 0.312),rgba(255, 255, 255, 0.29)); */
+}
+.recommendation-item:nth-child(3):hover{
+  background-image: linear-gradient(to bottom right,rgb(53, 178, 53),rgb(41, 123, 238));
+}
+.recommendation-item:nth-child(3) h3,.recommendation-item:nth-child(3) p{
+  color: rgb(216, 43, 101);
+  font-weight: bold;
+  position: relative;
+  z-index: 40;
+}
