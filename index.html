@@ -287,125 +287,91 @@
       </section>
 
       <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 10px">
-          Book a cab or auto with ease
-        </p>
+      <section id="cab-booking" class="cab-booking-section">
+        <h2>Book a Cab or Auto</h2>
+        <p>Book a cab or auto with ease</p>
 
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          "
-        >
-          <div>
-            <label style="font-size: 1.5em" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            /><br /><br />
-          </div>
-          <div>
-            <label style="font-size: 1.5em" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            /><br /><br />
-          </div>
-          <div style="display: flex">
-            <label style="font-size: 1.5em" for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select id="vehicle-type" name="vehicle-type" required>
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option></select
-            ><br /><br />
-          </div>
+        <form id="cab-booking-form">
+          <label for="pickup-location">Pickup Location:</label>
+          <input
+            type="text"
+            id="pickup-location"
+            name="pickup-location"
+            placeholder="Enter pickup location"
+            required
+          />
 
-          <div>
-            <label style="font-size: 1.5em" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
+          <label for="drop-location">Drop Location:</label>
+          <input
+            type="text"
+            id="drop-location"
+            name="drop-location"
+            placeholder="Enter drop location"
+            required
+          />
 
-          <div>
-            <label style="font-size: 1.5em" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
+          <label for="vehicle-type">Vehicle Type:</label>
+          <select id="vehicle-type" name="vehicle-type" required>
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+          </select>
+
+          <label for="travel-date">Travel Date:</label>
+          <input type="date" id="travel-date" name="travel-date" required />
+
+          <label for="travel-time">Travel Time:</label>
+          <input type="time" id="travel-time" name="travel-time" required />
+
+          <input type="submit" value="Book Now" />
         </form>
+
+        <div id="form-message" class="form-message"></div>
       </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Load stored data from localStorage if exists
+          const storedData = localStorage.getItem("cabBookingData");
+          if (storedData) {
+            const formData = JSON.parse(storedData);
+            document.getElementById("pickup-location").value =
+              formData.pickupLocation;
+            document.getElementById("drop-location").value =
+              formData.dropLocation;
+            document.getElementById("vehicle-type").value =
+              formData.vehicleType;
+            document.getElementById("travel-date").value = formData.travelDate;
+            document.getElementById("travel-time").value = formData.travelTime;
+          }
+
+          // Form submission handler
+          document
+            .getElementById("cab-booking-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent form submission
+
+              // Capture form data
+              const formData = {
+                pickupLocation:
+                  document.getElementById("pickup-location").value,
+                dropLocation: document.getElementById("drop-location").value,
+                vehicleType: document.getElementById("vehicle-type").value,
+                travelDate: document.getElementById("travel-date").value,
+                travelTime: document.getElementById("travel-time").value,
+              };
+
+              // Store data in localStorage
+              localStorage.setItem("cabBookingData", JSON.stringify(formData));
+
+              // Display success message
+              document.getElementById("form-message").innerText =
+                "Cab booked successfully!";
+
+              // Clear form
+              document.getElementById("cab-booking-form").reset();
+            });
+        });
+      </script>
 
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
