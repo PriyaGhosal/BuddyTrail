@@ -383,8 +383,12 @@ footer ul {
   display: flex;
   list-style: none;
   flex: 1 1 40rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+
+footer ul li{
+  margin: 0 30px;
 }
 
 /**** MEDIA QUERY ****/
