@@ -5,20 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+    />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="icon" href="/icons/airplane.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>BuddyTrail</title>
+    <style>
+      .chatbot-container {
+          position: fixed;
+          bottom: 20px; /* Adjust as needed */
+          right: 20px; /* Adjust as needed */
+          z-index: 1000; /* Ensure it appears above other elements */
+      }
+
+      .chatbot-button {
+          background-color: #007bff; /* Change to your preferred color */
+          border: none;
+          border-radius: 50%;
+          padding: 5px; /* Smaller padding */
+          cursor: pointer;
+          position: relative;
+          width: 50px; /* Adjusted size */
+          height: 50px; /* Adjusted size */
+      }
+
+      .chatbot-button img {
+          width: 30px; /* Adjusted image size */
+          height: 30px; /* Adjusted image size */
+      }
+
+      .tooltip-text {
+          display: none; /* Hide by default */
+          position: absolute;
+          bottom: 100%; /* Position above the button */
+          right: 50%;
+          transform: translateX(50%);
+          background-color: #333; /* Background color for tooltip */
+          color: #fff; /* Tooltip text color */
+          padding: 5px;
+          border-radius: 5px;
+          white-space: nowrap; /* Prevent text from wrapping */
+      }
+
+      .chatbot-button:hover .tooltip-text {
+          display: block; /* Show on hover */
+      }
+      </style>
+
   </head>
   <body class="light-mode">
-    <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Google Translate Button -->
     <div class="translate-container">
@@ -64,14 +117,15 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul>
-          <li><a href="#locations" class="navhover">Location</a></li>
-          <li>
-            <a href="#itineraries " class="navhover">Travel Itineraries</a>
-          </li>
-          <li><a href="#reviews" class="navhover">Reviews</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="#contact" class="navhover">Contact</a></li>
+        <ul >
+          <li><a href="#home" class='navhover '>Home</a></li>
+          <li><a href="#locations" class='navhover '>Location</a></li>
+          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
+          <li><a href="#reviews" class='navhover'>Reviews</a></li>
+          <li><a href="#benefits" class='navhover'>Benefits</a></li>
+          <li><a href="#contact" class='navhover'>Contact</a></li>
+          <li><a href="signUp.html" class='navhover'>Sign In</a></li>
+
         </ul>
         <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
@@ -79,6 +133,19 @@
         </button>
       </nav>
     </header>
+    <div id="progress-bar"></div>
+    <!-- funcioning of progress bar -->
+    <script>
+      window.addEventListener('scroll', function() {
+          // Calculate the scroll progress
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+          // Update the width of the progress bar
+          document.getElementById('progress-bar').style.width = scrollPercent + '%';
+      });
+  </script>
     <main>
       <section class="hero">
         <h2>Travel Beyond Limits</h2>
@@ -260,73 +327,125 @@
           </div>
         </div>
       </section>
+
       <!-- Cab or Auto Booking -->
-      <section id="cab-booking" class="cab-booking-section">
-        <h2 style="font-size: 3em; font-weight: normal; margin-left: 40px">
+      <section
+        id="cab-booking"
+        class="cab-booking-section"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 10px;
+        "
+      >
+        <h2
+          style="
+            font-size: 3em;
+            font-weight: 700;
+            margin-left: 40px;
+            margin-top: 10px;
+          "
+        >
           Book a Cab or Auto
         </h2>
-        <p style="margin-left: 40px; font-size: 1.5em">
+        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 10px">
           Book a cab or auto with ease
         </p>
 
-        <form action="/book-cab" method="POST" style="margin-left: 40px">
-          <label style="font-size: 1.5em" for="pickup-location"
-            >Pickup Location:</label
-          >
-          <input
-            style="height: 29px; width: 200px"
-            type="text"
-            id="pickup-location"
-            name="pickup-location"
-            placeholder="Enter pickup location"
-            required /><br /><br />
+        <form
+          action="/book-cab"
+          method="POST"
+          style="
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          "
+        >
+          <div>
+            <label style="font-size: 1.5em" for="pickup-location"
+              >Pickup Location:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="text"
+              id="pickup-location"
+              name="pickup-location"
+              placeholder="Enter pickup location"
+              required
+            /><br /><br />
+          </div>
+          <div>
+            <label style="font-size: 1.5em" for="drop-location"
+              >Drop Location:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="text"
+              id="drop-location"
+              name="drop-location"
+              placeholder="Enter drop location"
+              required
+            /><br /><br />
+          </div>
+          <div style="display: flex">
+            <label style="font-size: 1.5em" for="vehicle-type"
+              >Vehicle Type:</label
+            >
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="cab">Cab</option>
+              <option value="auto">Auto</option></select
+            ><br /><br />
+          </div>
 
-          <label style="font-size: 1.5em" for="drop-location"
-            >Drop Location:</label
-          >
-          <input
-            style="height: 29px; width: 200px"
-            type="text"
-            id="drop-location"
-            name="drop-location"
-            placeholder="Enter drop location"
-            required /><br /><br />
+          <div>
+            <label style="font-size: 1.5em" for="travel-date"
+              >Travel Date:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="date"
+              id="travel-date"
+              name="travel-date"
+              required
+            /><br /><br />
+          </div>
 
-          <label style="font-size: 1.5em" for="vehicle-type"
-            >Vehicle Type:</label
-          >
-          <select id="vehicle-type" name="vehicle-type" required>
-            <option value="cab">Cab</option>
-            <option value="auto">Auto</option></select
-          ><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-date">Travel Date:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="date"
-            id="travel-date"
-            name="travel-date"
-            required /><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-time">Travel Time:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="time"
-            id="travel-time"
-            name="travel-time"
-            required /><br /><br />
-
-          <input
+          <div>
+            <label style="font-size: 1.5em" for="travel-time"
+              >Travel Time:</label
+            >
+            <input
+              style="height: 29px; width: 200px"
+              type="time"
+              id="travel-time"
+              name="travel-time"
+              required
+            /><br /><br />
+          </div>
+          <button
             style="
               background-color: #007bff;
               color: white;
               border: none;
+              width: 200px;
               border-radius: 5px;
-              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
               cursor: pointer;
+              align-self: center;
+              padding: 10px;
+              margin-bottom: 20px;
             "
             type="submit"
-            value="Book Now" />
+          >
+            Book now
+          </button>
         </form>
       </section>
 
@@ -385,7 +504,8 @@
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
         async
-        defer></script>
+        defer
+      ></script>
 
       <section id="contact">
         <div class="form-wrapper">
@@ -415,8 +535,8 @@
         and help fellow travelers make informed decisions.
       </p>
 
-      <div class="review-form">
-        <h3>Leave a Review</h3>
+      <div class="review-form" style="margin-top: 20px">
+        <h1 style="margin-bottom: 10px">Leave a Review</h1>
         <form>
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required />
@@ -440,7 +560,8 @@
             id="complaint"
             name="complaint"
             rows="3"
-            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
+          ></textarea>
 
           <button type="submit">Submit Review</button>
         </form>
@@ -495,7 +616,21 @@
       </div>
     </section>
 
+    <a href="chatbot.html">
+      <div class="fixed bottom-0 right-2 chatbot-container">
+        <button class="chatbot-button group">
+          <img class="h-20" src="chatbot.gif" alt="chatbot">
+          <span class="tooltip-text">
+            Welcome to Buddytrail! <br>
+            How can I help You? ^_^ 
+          </span>
+        </button>
+      </div>
+    </a>
+
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+
     <footer>
       <div class="footer-wrapper">
         <h5>BuddyTrail &copy;</h5>
@@ -528,7 +663,8 @@
           out on our limited-time discounts. Plan your trip now!
         </p>
         <button
-          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
+          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'"
+        >
           Check Out Deals
         </button>
       </div>
