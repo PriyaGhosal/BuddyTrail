@@ -132,6 +132,13 @@ nav ul {
   font-weight: 400;
 }
 
+.bluebtn:hover {
+  background: #007bff;
+  color: white;
+  font-weight:500;
+  z-index: 1;
+}
+
 .hero {
   min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
