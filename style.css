@@ -60,7 +60,9 @@
   p {
     font-size: 2rem;
   }
-  
+  #ratings_p1{
+    font-size: 1rem;
+  }
   button {
     padding: 2rem 6rem;
     background: #4c6e97;
