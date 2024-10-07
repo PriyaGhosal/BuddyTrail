@@ -8,6 +8,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -544,15 +545,27 @@
           <label for="destination">Destination/Service:</label>
           <input type="text" id="destination" name="destination" required />
 
-          <label for="rating">Rating:</label>
-          <select id="rating" name="rating">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
-
+          <div class="container">
+            <div class="rating-wrap">
+              <h2>Ratings:</h2>
+              <div class="center">
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full"></label>
+                  <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                  <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                  <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                  <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                  <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                  <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                  <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                  <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                  <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                </fieldset>
+                <span id="rating-value"></span>
+              </div>
+            </div>
+          </div>
+          <script src="star-rating.js"></script>
           <label for="review">Your Review:</label>
           <textarea id="review" name="review" rows="4" required></textarea>
           <label for="complaint">Complaint (if any):</label>
