@@ -50,6 +50,11 @@ h5 {
   font-size: 2.8rem;
 }
 
+#logo-web{
+  height: 50px;
+  width: 70px;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -135,7 +140,7 @@ nav ul {
 /* Header Styles */
 .main-head {
   padding: 15px;
-  background-color: #007bff; /* Header background */
+  background-color: #2C3E50;/* Header background */
   color: white;
   display: flex;
   justify-content: space-between;
