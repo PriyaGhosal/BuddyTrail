@@ -966,6 +966,102 @@ body.dark-mode {
   box-shadow: 0 0 25px #b74b4b;
 }
   
+/* General styles for the booking section */
+.cab-booking-section {
+  background-color: #f7f7f7;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the heading */
+.cab-booking-section h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styling the paragraph description */
+.cab-booking-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Form layout */
+.cab-booking-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.cab-booking-section label {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* Inputs and select fields */
+.cab-booking-section input[type="text"],
+.cab-booking-section input[type="date"],
+.cab-booking-section input[type="time"],
+.cab-booking-section select {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+/* Input focus effects */
+.cab-booking-section input:focus,
+.cab-booking-section select:focus {
+  border: 1px solid #007bff;
+  outline: none;
+}
+
+/* Submit button */
+.cab-booking-section input[type="submit"] {
+  width: 150px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effects */
+.cab-booking-section input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  .cab-booking-section {
+    padding: 20px;
+  }
+  
+  .cab-booking-section h2 {
+    font-size: 2em;
+  }
+
+  .cab-booking-section input[type="submit"] {
+    width: 100%;
+  }
+}
+
+
   /* Extra small devices (phones, 600px and down) */
   /*@media only screen and (max-width: 600px) {...}*/
   

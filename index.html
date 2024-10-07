@@ -263,73 +263,44 @@
       </section>
       <!-- Cab or Auto Booking -->
       <section id="cab-booking" class="cab-booking-section">
-        <h2 style="font-size: 3em; font-weight: normal; margin-left: 40px">
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em">
-          Book a cab or auto with ease
-        </p>
-
-        <form action="/book-cab" method="POST" style="margin-left: 40px">
-          <label style="font-size: 1.5em" for="pickup-location"
-            >Pickup Location:</label
-          >
+        <h2>Book a Cab or Auto</h2>
+        <p>Book a cab or auto with ease</p>
+      
+        <form action="/book-cab" method="POST">
+          <label for="pickup-location">Pickup Location:</label>
           <input
-            style="height: 29px; width: 200px"
             type="text"
             id="pickup-location"
             name="pickup-location"
             placeholder="Enter pickup location"
-            required /><br /><br />
-
-          <label style="font-size: 1.5em" for="drop-location"
-            >Drop Location:</label
-          >
+            required
+          />
+      
+          <label for="drop-location">Drop Location:</label>
           <input
-            style="height: 29px; width: 200px"
             type="text"
             id="drop-location"
             name="drop-location"
             placeholder="Enter drop location"
-            required /><br /><br />
-
-          <label style="font-size: 1.5em" for="vehicle-type"
-            >Vehicle Type:</label
-          >
+            required
+          />
+      
+          <label for="vehicle-type">Vehicle Type:</label>
           <select id="vehicle-type" name="vehicle-type" required>
             <option value="cab">Cab</option>
-            <option value="auto">Auto</option></select
-          ><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-date">Travel Date:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="date"
-            id="travel-date"
-            name="travel-date"
-            required /><br /><br />
-
-          <label style="font-size: 1.5em" for="travel-time">Travel Time:</label>
-          <input
-            style="height: 29px; width: 200px"
-            type="time"
-            id="travel-time"
-            name="travel-time"
-            required /><br /><br />
-
-          <input
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              border-radius: 5px;
-              height: 30px;
-              cursor: pointer;
-            "
-            type="submit"
-            value="Book Now" />
+            <option value="auto">Auto</option>
+          </select>
+      
+          <label for="travel-date">Travel Date:</label>
+          <input type="date" id="travel-date" name="travel-date" required />
+      
+          <label for="travel-time">Travel Time:</label>
+          <input type="time" id="travel-time" name="travel-time" required />
+      
+          <input type="submit" value="Book Now" />
         </form>
       </section>
+      
 
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
