@@ -73,8 +73,9 @@ button {
   transition: background 0.6s ease-in-out;
 }
 #btn:hover{
-  background-color: rgb(1, 20, 27); 
+  background-color: #007bff; 
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue; 
+  font-weight: 500;
 }
 /**** MAIN PAGE  ****/
 
