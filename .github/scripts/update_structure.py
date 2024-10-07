@@ -18,11 +18,11 @@ def get_repo_structure(path='.', prefix=''):
     return structure
 
 def update_structure_file(structure):
-    with open('repo_structure.txt', 'w') as f:
+    with open('project_structure.txt', 'w') as f:
         f.write('\n'.join(structure))
 
 def update_readme(structure):
-    with open('Repo-structure.md', 'r') as f: # updated file name
+    with open('project-structure.md', 'r') as f: # updated file name
         content = f.read()
 
     start_marker = '<!-- START_STRUCTURE -->'
@@ -38,7 +38,7 @@ def update_readme(structure):
             content[end_index:]
         )
         
-        with open('Repo-structure.md', 'w') as f:
+        with open('project-structure.md', 'w') as f:
             f.write(new_content)
         print("Repo-structure.md updated with new structure.")
     else:
@@ -51,7 +51,7 @@ def main():
     current_structure = get_repo_structure()
 
     try:
-        contents = repo.get_contents("repo_structure.txt")
+        contents = repo.get_contents("project_structure.txt")
         existing_structure = contents.decoded_content.decode().split('\n')
     except github.GithubException:
         existing_structure = None
