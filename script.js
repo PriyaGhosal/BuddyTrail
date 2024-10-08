@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
         document.body.classList.toggle('light-mode');
-
+        
         if (document.body.classList.contains('dark-mode')) {
             modeToggle.replaceChild(moonIcon, sunIcon);
         } else {
@@ -379,6 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 // discount pop_up
 document.addEventListener('DOMContentLoaded', function() {
     // Show the popup after a slight delay
@@ -398,21 +399,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 // adaptive background
-const modeToggle = document.getElementById('modeToggle');
-const body = document.body;
+// const modeToggle = document.getElementById('modeToggle');
+// const body = document.body;
 
-modeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
+// modeToggle.addEventListener('click', () => {
+//     body.classList.toggle('dark-mode');
+//     body.classList.toggle('light-mode');
 
-    // Toggle the icon
-    if (body.classList.contains('dark-mode')) {
-        modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
-    } else {
-        modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
-    }
-});
+//     // Toggle the icon
+//     if (body.classList.contains('dark-mode')) {
+//         modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
+//     } else {
+//         modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
+//     }
+// });
+
 // google translator
 document.getElementById('languageToggle').addEventListener('click', function() {
     var translateElement = document.getElementById('google_translate_element');
