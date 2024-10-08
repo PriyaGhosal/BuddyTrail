@@ -361,10 +361,17 @@ A heartfelt thank you to the following individuals for their valuable contributi
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/yashksaini-coder">
-                    <img src="https://avatars.githubusercontent.com/u/115717039?v=4" width="100;" alt="yashksaini-coder"/>
+                <a href="https://github.com/shashankgoud18">
+                    <img src="https://avatars.githubusercontent.com/u/142642917?v=4" width="100;" alt="shashankgoud18"/>
                     <br />
-                    <sub><b>Yash Kumar Saini</b></sub>
+                    <sub><b>Shashank Goud</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/samarth-6">
+                    <img src="https://avatars.githubusercontent.com/u/123616579?v=4" width="100;" alt="samarth-6"/>
+                    <br />
+                    <sub><b>Samarth Mishra</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -395,6 +402,15 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>RahulScripted</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/anuragbansall">
+                    <img src="https://avatars.githubusercontent.com/u/137208377?v=4" width="100;" alt="anuragbansall"/>
+                    <br />
+                    <sub><b>Anurag Bansal</b></sub>
+                </a>
+            </td>
             <td align="center">
                 <a href="https://github.com/Antima2004">
                     <img src="https://avatars.githubusercontent.com/u/114092138?v=4" width="100;" alt="Antima2004"/>
@@ -402,8 +418,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Antima Mishra</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/ananyag309">
                     <img src="https://avatars.githubusercontent.com/u/145869907?v=4" width="100;" alt="ananyag309"/>
