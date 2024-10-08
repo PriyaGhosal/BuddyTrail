@@ -37,7 +37,11 @@
 </div>
 <br>
 
-<img src='./img/banner.png'>
+# 📸 Website Preview
+
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182935.png" alt = "image">
+<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20183005.png" alt = "image">
 
 <br>
 
