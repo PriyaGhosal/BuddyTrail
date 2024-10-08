@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 .main-head {
-    background: #131c27; /* Dark background for the header */
+    background: blue; /* Dark background for the header */
     color: white;
     position: sticky;
     top: 0;
@@ -136,4 +136,32 @@ body {
 
 .signUp-link a:hover {
     text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+.dark-mode .login-box {
+    background-color: black; /* Dark background for the signup box */
+    color: #f5f5f5; /* Light text color inside the signup box */
+    box-shadow: 0 8px 30px rgba(244, 237, 237, 0.555); /* Adjusted shadow */
+}
+
+.dark-mode .login-box h2{
+    color:white;
+}
+
+.dark-mode label {
+    color: #f0f0f0; 
+}
+
+.dark-mode input {
+    background-color: #333; /* Dark input fields */
+    color: #fff; /* Light text color */
+    border: 1px solid #555; /* Darker border */
+}
+
+.dark-mode input::placeholder {
+    color: #bbb; /* Lighter placeholder text */
+}
+
+.dark-mode .signUp-link a{
+    color: aliceblue;
 }
