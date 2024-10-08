@@ -154,6 +154,7 @@ nav ul a:hover:after{
   justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 .hero button {
@@ -166,14 +167,20 @@ nav ul a:hover:after{
 /* Header Styles */
 .main-head {
   padding: 15px;
-  background-color: #2C3E50;/* Header background */
+  background-color: #2C3E50; /* Header background */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Ensure it can be positioned */
+ 
 }
 
-.main-head ul {
+#logo-web {
+  height: 50px; /* Adjust logo size as needed */
+}
+
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -181,11 +188,11 @@ nav ul a:hover:after{
   gap: 20px;
 }
 
-.main-head ul li {
+.nav-list li {
   display: inline;
 }
 
-.main-head ul li a {
+.nav-list li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -198,6 +205,42 @@ nav ul a:hover:after{
   font-size: 1.5em;
   color: white;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Hide the navigation links initially */
+    flex-direction: column; /* Stack vertically */
+    position: absolute; /* Position absolutely */
+    top: 75px; /* Below the header */
+    left: 0; /* Align to the left */
+    background-color: #2C3E50; /* Match header background */
+    width: 100%; /* Full width */
+    padding: 15px 0; /* Add padding */
+    z-index: 1000;
+  }
+
+  .nav-list.active {
+    display: flex; /* Show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show hamburger icon on smaller screens */
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    z-index: 1001; /* Ensure it appears on top */
+  }
+}
+
+/* Hide the menu toggle on larger screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}
+
 
 /* Section Styles */
 .content-section {
@@ -598,6 +641,25 @@ body.dark-mode {
 .sun-icon.glow {
   color: #ffa500;
   text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .mode-toggle {
+    font-size: 1.2em;  /* Reduce icon size */
+    padding: 10px;     /* Reduce padding */
+    top: 5px;          /* Adjust top position */
+    right: 5px;        /* Adjust right position */
+  }
+}
+
+@media (max-width: 480px) {
+  .mode-toggle {
+    font-size: 1em;    /* Further reduce icon size */
+    padding: 8px;      /* Further reduce padding */
+    top: 5px;
+    right: 5px;
+  }
 }
 
 /* Section styling */
@@ -1120,7 +1182,7 @@ justify-content: center;
 
 /* deals */
 .deals-section { 
-  padding: 90px 50px;    /* modified padding */
+  padding: 90px 50px;
   background-color: #f8f9fa;
 }
 
@@ -1141,30 +1203,30 @@ justify-content: center;
   justify-content: center;
   padding: 40px 0;
   margin: 0 auto;
-  display: grid;  
-  grid-template-columns: repeat(3, 300px); /* Three equal columns */
-  grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
-  gap: 30px; /* Space between grid items */
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* Default for larger screens */
+  gap: 30px;
 }
+
 .deal-item {
   background-color: #fff;
-  padding: 25px 30px;    /* added padding left and right*/
+  padding: 25px 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
   color: #090f15;
-  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover tranform animation*/
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1);
 }
 
-/* added hover effect */
 .deal-item:hover {
   transform: translateY(-10px); 
   cursor: pointer;
 }
+
 .deal-item h3 {
   font-size: 1.5em;
-  font-weight: 600;  /* made heading bold */
+  font-weight: 600;
   margin-bottom: 15px;
   color: #090f15;
 }
@@ -1196,15 +1258,30 @@ justify-content: center;
 .deal-item button:hover {
   background-color: #218838;
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .deals-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .deals-list {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
+
 #deals {
-  background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
+  background-color: #f9f9f9; 
+  border: 1px solid #007bff; 
 }
 
 .dark-mode #deals {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
+  background-color: #1e1e1e; 
+  border: 1px solid #0056b3; 
 }
+
 /* recommendations */
 .recommendations-section {
   padding: 50px;
