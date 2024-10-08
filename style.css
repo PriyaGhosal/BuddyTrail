@@ -120,9 +120,13 @@ button {
 
 nav {
   display: flex;
-  width: 100%;
+  width: 90%;
   align-items: center;
-  justify-content: space-between; /* Distributes space between logo and menu items */
+  border:solid 2px white;
+  justify-content: center; 
+  border-radius: 50px; 
+  background-color: transparent; /* Sets the background color to white */
+  padding: 10px; 
 }
 
 nav ul {
@@ -513,9 +517,14 @@ footer {
   html {
     font-size: 45%;
   }
+  nav {
+    width: 100%;
+    border: none;
+  }
 
   nav ul {
     text-align: center;
+    width: 85%;
   }
   #logo {
     padding: 1.8rem;
