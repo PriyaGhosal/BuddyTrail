@@ -1,0 +1,1505 @@
+/**** GLOBAL STYLES ****/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: whitesmoke; 
+  z-index: 9999; 
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%; 
+  background: #2C3E50;; 
+  transition: width 0.2s ease; 
+}
+
+.scroll-top-btn {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 80px; /* Adjust this value to move the button left */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.scroll-top-btn:hover {
+  background-color: #2c445e;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+#logo-web{
+  height: 50px;
+  width: 70px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
+}
+#btn:hover {
+  background-color: rgb(1, 20, 27);
+  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
+}
+/**** MAIN PAGE  ****/
+
+
+/* Header Styles */
+.main-head {
+  position: fixed; /* Fixed position at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  z-index: 5; /* Ensure it stays above other elements */
+  padding: 15px;
+  background-color: transparent; /* Set background to transparent */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; /* Distributes space between logo and menu items */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around; /* Space around the menu items */
+  align-items: center;
+  list-style: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  gap: 20px; /* Space between menu items */
+}
+
+
+#logo {
+  font-family: "Pattaya", sans-serif;
+  font-weight: 500;
+}
+
+.mode-toggle {
+  display: inline-block;
+  margin-left: 20px; /* Space between menu items and toggle button */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  color: white; /* Text color */
+  font-size: 1.5em; /* Increase font size */
+  padding: 0; /* Remove padding */
+  align-self: center; /* Center align the button vertically */
+}
+
+.main-head ul li {
+  display: inline;
+}
+
+.main-head ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Optional: Add a class to change background on scroll */
+.sticky {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background on scroll */
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero button {
+  border-radius: 1rem;
+ 
+    padding: 1.5rem 4rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.6s ease-in-out;
+
+}
+
+.hero h3 {
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.7px;
+  padding: 5rem;
+}
+
+
+/* Section Styles */
+.content-section {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content-section h2 {
+  font-size: 2em;
+  color: #007bff; /* Blue color for headings */
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 1.1em;
+  color: #e0e0e0; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+/**** LOCATIONS PAGE ****/
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/new-york-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#090f15, #42231e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode .locations-head h3 {
+  -webkit-text-fill-color: white;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+/**** ANIMATION ****/
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/**** BENEFITS SECTION ****/
+
+.benefits-head {
+  background: #343c44;
+  min-height: 30vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 45vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  scale: 1.02;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.205),
+    0px 20px 20px rgba(0, 0, 0, 0.205);
+}
+
+.cards img {
+  max-width: 20%;
+  margin: 0.5rem;
+}
+.card h4,
+.card p {
+  padding: 1rem;
+  line-height: 2;
+}
+
+.card-icon {
+  background: #2a3c53;
+  padding: 2rem;
+}
+
+/**** CONTACT PAGE ****/
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/contact-mountain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  width: 60%;
+  color: white;
+  border-radius: 2rem;
+}
+
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+
+.name-form,
+.email-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+
+/**** FOOTER ****/
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #343a40, #212529);
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f39c12;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* for facebook */
+.social-icons .fa-facebook-f {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-facebook-f:hover{
+  color:#4267B2;
+  transform:scale(1.1);
+}
+
+/* for twitter */
+.social-icons .fa-x-twitter {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-x-twitter:hover{
+  color:black;
+  transform:scale(1.1);
+}
+/* for instagram */
+.social-icons .fa-instagram {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-instagram:hover{
+  color:#c32aa3;
+  transform:scale(1.1);
+}
+
+/* for instagram */
+.social-icons .fa-linkedin-in{
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-linkedin-in:hover{
+    color:#0a66c2;
+    transform:scale(1.1);
+  }
+/**** MEDIA QUERY ****/
+
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+  #logo {
+    padding: 1.8rem;
+    text-align: center;
+  }
+
+  .cloud {
+    height: 40rem;
+    pointer-events: none;
+  }
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: white;
+    padding: 2rem;
+    text-align: start;
+  }
+
+  .form-wrapper {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h5 {
+    padding-bottom: 3rem;
+  }
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Light mode styles */
+/* body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+} */
+.light-mode {
+  background-color: #ffffff; /* Light mode background */
+  color: black; /* Light mode text color */
+}
+
+.dark-mode {
+  background-color: #121212; /* Dark mode background */
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+/* Button styles */
+.mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5em;
+  transition: color 0.3s, transform 0.3s;
+  padding: 15px;
+}
+
+/* Sun and moon icons */
+.sun-icon {
+  color: #ffd700;
+}
+
+.moon-icon {
+  color: #b0c4de;
+}
+
+/* Glow effect */
+.sun-icon.glow {
+  color: #ffa500;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+/* Section styling */
+.map-section {
+  padding: 40px;
+  background-color: inherit;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Map container styling */
+#map {
+  height: 600px; /* Adjust the height as needed */
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* itineraries */
+.itineraries-section {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.itineraries-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.itinerary-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  color: #003366;
+  margin-top: 20px;
+}
+
+.itinerary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
+  text-align: center;
+}
+
+.itinerary h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #090f15;
+}
+
+.itinerary p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.itinerary button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+.itinerary button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .itinerary {
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .itinerary {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+#itineraries {
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #007bff; /* Blue border */
+}
+
+.dark-mode #itineraries {
+  background-color: #1e1e1e; /* Dark background */
+  border: 1px solid #0056b3; /* Darker blue border */
+}
+
+
+/* user rating */
+.reviews-section {
+  padding: 50px;
+  background-color: #F0F8FF;
+ 
+}
+.revieww{
+  display: flex;
+justify-content: center;
+
+}
+
+.review-p{
+  font-size:small;
+  color:#543db0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.reviews-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.review-form {
+  background: #CCE9F9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width:40vw;
+  align-items: center;
+  justify-items: center;
+}
+
+.form{
+  margin-top: 10px;
+  width:30vw;
+}
+.review-form h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  font-weight: 600;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.review-form button {
+  background-color: #F7D160;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color:black;
+  font-size:14px;
+  
+}
+
+.form-button{
+  text-align: center;
+  
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-title {
+  font-size: 2.5em;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.reviewer-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviewer-info {
+  flex-grow: 1;
+}
+
+.reviewer-name {
+  font-size: 1.3em;
+  margin: 0;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.reviewer-location {
+  font-size: 0.95em;
+  color: #7f8c8d;
+  margin: 5px 0 0;
+  font-style: italic;
+}
+
+.review-rating {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.star-rating {
+  color: #f1c40f;
+  font-size: 1.4em;
+  letter-spacing: 3px;
+}
+
+.review-text {
+  padding: 20px;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #444;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 0 0 15px 15px;
+}
+
+@media (max-width: 768px) {
+  .reviews-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .reviews-title {
+    font-size: 2em;
+  }
+  
+  .review-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container {
+    padding: 20px 10px;
+  }
+  
+  .review-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .reviewer-avatar {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .reviewer-info {
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.review-card {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.review-card:nth-child(1) { animation-delay: 0.1s; }
+.review-card:nth-child(2) { animation-delay: 0.2s; }
+.review-card:nth-child(3) { animation-delay: 0.3s; }
+.review-card:nth-child(4) { animation-delay: 0.4s; }
+.review-card:nth-child(5) { animation-delay: 0.5s; }
+
+.review-item {
+  padding: 20px;
+  border: 1px solid #ccc; /* Light border in light mode */
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.light-mode .review-item {
+  border-color: #ccc;
+}
+
+/* Dark Mode Styles for Reviews Section */
+.dark-mode .reviews-section {
+  background-color: #121212; /* Dark background */
+  color: white; /* White text */
+}
+
+.dark-mode .review {
+  background-color: #1e1e1e; /* Dark background for review cards */
+  color: white; /* White text for review content */
+  border: 1px solid #333; /* Darker border */
+}
+
+.dark-mode .review h4 {
+  color: #ffa500; /* Optional: Highlight the reviewer's name */
+}
+
+.dark-mode .review p {
+  color: white; /* White text for review paragraphs */
+}
+
+/* Adjusting rating stars color in dark mode */
+.dark-mode .rating {
+  color: #ffcc00; /* Bright yellow stars for dark mode */
+}
+
+/* Dark Mode Styles for Review Form */
+.review-form {
+  background-color: #121212; /* Dark background for the review form */
+  color: white; /* White text color */
+  padding: 20px; /* Padding for inner spacing */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow for depth */
+}
+
+.review-form h1 {
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.review-form label {
+  margin-top: 10px; /* Space above labels */
+  display: block; /* Makes the label block-level for better spacing */
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside fields */
+  background-color: #1e1e1e; /* Dark background for inputs */
+  color: white; /* White text */
+  border: 1px solid #333; /* Dark border */
+  border-radius: 4px; /* Slightly rounded corners */
+  margin-bottom: 10px; /* Space between fields */
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+}
+
+.review-form button {
+  background-color: #333; /* Dark button background */
+  color: white; /* White button text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding inside button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.review-form button:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+.cab-booking-section input,
+.cab-booking-section select {
+  width: 100%;
+  font-weight: 600;
+  padding: 20px;
+  height: 20px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.review-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #007bff; /* Blue color for headings */
+}
+
+.review-item p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  color: black; /* Darker gray for text */
+}
+
+.rating {
+  color: #ffcc00; /* Star rating color */
+  font-size: 1.2em;
+}
+
+/* Popup Background */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 50%;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: all 0.4s ease-in;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: #ea1010;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Button to check deals */
+.popup-content button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+
+/* deals */
+.deals-section { 
+  padding: 90px 50px;    /* modified padding */
+  background-color: #f8f9fa;
+}
+
+.deals-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.deals-section p {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.deals-list {
+  max-width: 80%;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 0 auto;
+  display: grid;  
+  grid-template-columns: repeat(3, 300px); /* Three equal columns */
+  grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
+  gap: 30px; /* Space between grid items */
+}
+.deal-item {
+  background-color: #fff;
+  padding: 25px 30px;    /* added padding left and right*/
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  color: #090f15;
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover tranform animation*/
+}
+
+/* added hover effect */
+.deal-item:hover {
+  transform: translateY(-10px); 
+  cursor: pointer;
+}
+.deal-item h3 {
+  font-size: 1.5em;
+  font-weight: 600;  /* made heading bold */
+  margin-bottom: 15px;
+  color: #090f15;
+}
+
+.deal-item p {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #090f15;
+}
+
+.deal-item .discount {
+  color: red;
+  font-weight: bold;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.deal-item button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.deal-item button:hover {
+  background-color: #218838;
+}
+#deals {
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #007bff; /* Blue border */
+}
+
+.dark-mode #deals {
+  background-color: #1e1e1e; /* Dark background */
+  border: 1px solid #0056b3; /* Darker blue border */
+}
+/* recommendations */
+.recommendations-section {
+  padding: 50px;
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+.recommendations-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0056b3; /* Dark blue for headings */
+}
+
+.recommendations-section p {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: black; /* Darker gray for text */
+}
+
+.recommendation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.recommendation-item {
+  background-color: #fff; /* White background for items */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 30%;
+  text-align: center;
+  /* border: 2px solid #0056b3; Blue border */
+}
+
+.recommendation-item h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #0056b3; /* Dark blue for headings */
+}
+
+.recommendation-item p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: black; /* Darker gray for text */
+}
+
+.recommendation-item button {
+  background-color: #0056b3; /* Dark blue for buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recommendation-item button:hover {
+  background-color: #003d80; /* Darker blue on hover */
+}
+/* Positioning and Styling for Google Translate Button */
+.translate-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.language-toggle {
+  background: #007bff; /* Blue color for the button */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hide Google Translate Element by Default */
+#google_translate_element {
+  display: none; /* Initially hidden */
+}
+
+.navhover {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 15px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navhover:hover {
+  border: 1px solid #3498db;
+  color: white; /* Changes text color on hover */
+}
+
+#social-icons {
+  display: inline-block;
+  font-size: 24px; /* Adjust the size as needed */
+  padding: 7px 9px 7px; /* Adds padding around the text */
+  border-radius: 20px; /* Creates rounded corners */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.twitter:hover {
+  background-color: #1e97e3; /* Twitter's official blue color */
+  transform: scale(1.1);
+}
+
+.instagram:hover {
+  background-color: #e1306c; /* Instagram's official pinkish color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+.youtube:hover {
+  background-color: #ff0000; /* YouTube's official red color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {...}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
+
+
+/*For contact page*/
+/* Section Styling */
+.contact-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Heading and Title */
+.subheading {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3b82f6;
+}
+
+.title {
+  font-weight: bold;
+  color: #111827;
+  font-size: 5rem;
+}
+
+.wr{
+  font-weight:600;
+  color: black;
+}
+.description {
+  color: #4b5563;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Text Container */
+.text-container {
+  padding-right: 1.5rem;
+}
+
+/* Info Text */
+.info-text {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* Info List */
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.info-text-content {
+  margin-left: 1rem;
+}
+
+.info-title {
+  font-weight: 600;
+  color: #000e2b;
+}
+
+.info-description {
+  color:whitesmoke;
+}
+
+/* Form Styling */
+.form-container {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.submit-button-container {
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
