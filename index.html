@@ -155,6 +155,11 @@
     </style>
   </head>
   <body class="light-mode">
+
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+  </div>
+    
     <button id="scrollTopBtn" class="scroll-top-btn">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -896,6 +901,23 @@
         document.getElementById('confirmationPopup').style.display = 'none';
       }
     </script>
+ <!-- Adding scroll progressBar-->
+ <script>
+
+  window.onscroll = function() {
+    updateProgressBar();
+  };
+  
+  
+  function updateProgressBar() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+      document.getElementById("progressBar").style.width = scrollPercent + "%";
+  }
+  
+  </script>
     <style>
       .popup {
         position: fixed;
