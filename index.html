@@ -528,16 +528,16 @@
     </main>
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
-      <h2>User Reviews and Ratings</h2>
-      <p>
-        Read what others have to say about their experiences with various
-        destinations, hotels, flights, and activities. Share your own reviews
-        and help fellow travelers make informed decisions.
-      </p>
+      <!-- <div class="reviews_h2"><h2> Reviews & Ratings</h2></div> -->
 
-      <div class="review-form" style="margin-top: 20px">
-        <h1 style="margin-bottom: 10px">Leave a Review</h1>
-        <form>
+    
+
+      <div class="review-form">
+        <h3 class="review-h3">Rate your experience</h3>
+        <p>Read what others have to say about their experiences with various
+          destinations, hotels, flights, and activities. Share your own reviews
+          and help fellow travelers make informed decisions.</p>
+        <form class="form">
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required />
 
@@ -563,7 +563,9 @@
             placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
           ></textarea>
 
-          <button type="submit">Submit Review</button>
+          <div class="review-form-button">
+            <button type="submit">Send</button>
+          </div>
         </form>
       </div>
 
