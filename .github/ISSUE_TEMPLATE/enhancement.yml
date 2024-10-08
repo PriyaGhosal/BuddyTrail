@@ -1,0 +1,32 @@
+name: "✨ Code Change Request"
+description: "Request a code change or feature enhancement"
+title: "CODE CHANGE:"
+labels: ["Enhancement", "Code Change"]
+body:
+  - type: checkboxes
+    attributes:
+      label: "Is there an existing issue for this?"
+      description: "Please search to see if an issue already exists for the code change you are requesting."
+      options:
+        - label: "I have searched the existing issues"
+          required: true
+  - type: textarea
+    attributes:
+      label: "Describe the code change"
+      description: "A concise description of the code change or feature enhancement you are requesting."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "Proposed solution"
+      description: "Describe your proposed solution or implementation details."
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: "Record"
+      options:
+        - label: "I agree to follow this project's Code of Conduct"
+          required: true
+        - label: "I'm a GSSOC'24 contributor"
+        - label: "I want to work on this issue"
