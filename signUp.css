@@ -12,13 +12,13 @@ body {
 }
 
 /* Header Styles */
-.main-head {
-    background: #131c27; /* Dark background for the header */
+/* .main-head {
+    background: #131c27; 
     color: white;
     position: sticky;
     top: 0;
     z-index: 5;
-}
+} */
 
 
 .container {

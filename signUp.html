@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="signUp.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
@@ -71,6 +71,37 @@
       </div>
       </div>
     </div>
+
+
+    <script>
+      // Toggle Dark Mode
+const modeToggle = document.getElementById('modeToggle');
+const body = document.body;
+
+modeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const sunIcon = modeToggle.querySelector('.sun-icon');
+  
+  if (body.classList.contains('dark-mode')) {
+    sunIcon.textContent = '🌙'; // Change icon to moon
+  } else {
+    sunIcon.textContent = '☀️'; // Change icon to sun
+  }
+});
+
+// Toggle Mobile Menu
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('mobile');
+});
+
+    </script>
+
+
+
 
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>

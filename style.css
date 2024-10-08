@@ -76,39 +76,7 @@ button {
   background-color: rgb(1, 20, 27);
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
-/**** MAIN PAGE  ****/
 
-.main-head {
-  background: #131c27;
-  color: white;
-  position: sticky;
-  top: 0%;
-  z-index: 5;
-}
-
-nav {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 2rem;
-  min-height: 10vh;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav ul {
-  display: flex;
-  flex: 1 1 40rem;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
-
-#logo {
-  flex: 2 1 40rem;
-  font-family: "Pattaya", sans-serif;
-  font-weight: 400;
-}
 
 .hero {
   min-height: 90vh;
@@ -131,41 +99,6 @@ nav ul {
 
 .hero h3 {
   padding: 5rem;
-}
-/* Header Styles */
-.main-head {
-  padding: 15px;
-  background-color: #007bff; /* Header background */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-head ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.main-head ul li {
-  display: inline;
-}
-
-.main-head ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.mode-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  color: white;
 }
 
 /* Section Styles */
@@ -1071,3 +1004,118 @@ body.dark-mode {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
+
+
+
+
+.main-head {
+  background: linear-gradient( #2193b0,#5dcde6,#0da0c8); /* Gradient Background */
+  color: #fff;
+  padding: 15px 30px;
+ 
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+#logo {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Pattaya", sans-serif;
+  color: #e61091;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 20px;
+}
+
+#logo:hover {
+  transform: scale(1.1); /* Logo hover animation */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.navhover {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects for Nav Links */
+.navhover:hover {
+  color: #fff;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+
+.navhover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.navhover:hover::after {
+  background-color: #fff; /* Underline animation on hover */
+  transform: scaleX(1);
+}
+
+.mode-toggle {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+  transform: rotate(180deg); /* Rotation on hover */
+}
+
+/* Add subtle animations */
+.navhover {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.navhover:hover {
+  color: #ff7e5f; /* Hover color change */
+  transform: translateY(-3px);
+}
+
+.navhover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #feb47b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navhover:hover::before {
+  transform: scaleX(1);
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
