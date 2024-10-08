@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="/icons/airplane.svg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
@@ -411,6 +415,15 @@
       </section>
 
       <!-- Cab or Auto Booking -->
+      <section id="cab-booking" class="cab-booking-section">
+        <form action="/book-cab" method="POST">
+          <h2>BOOK NOW</h2>
+          <br>
+      
+          <!-- Pickup Location -->
+          <div class="form-group">
+            <label for="pickup-location">Pickup Location</label>
+            <input
       <section
         id="cab-booking"
         class="cab-booking-section"
@@ -457,6 +470,14 @@
               id="pickup-location"
               name="pickup-location"
               placeholder="Enter pickup location"
+              required />
+          </div>
+      
+          <!-- Drop Location -->
+          <div class="form-group">
+            <label for="drop-location">Drop Location</label>
+            <input
+
               required
             /><br /><br />
           </div>
@@ -470,6 +491,40 @@
               id="drop-location"
               name="drop-location"
               placeholder="Enter drop location"
+              required />
+          </div>
+      
+          <!-- Vehicle Type -->
+          <div class="form-group">
+            <label for="vehicle-type">Vehicle Type</label>
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="cab">Cab</option>
+              <option value="auto">Auto</option>
+            </select>
+          </div>
+      
+          <!-- Travel Date -->
+          <div class="form-group">
+            <label for="travel-date">Travel Date</label>
+            <input
+              type="date"
+              id="travel-date"
+              name="travel-date"
+              required />
+          </div>
+      
+          <!-- Travel Time -->
+          <div class="form-group">
+            <label for="travel-time">Travel Time</label>
+            <input
+              type="time"
+              id="travel-time"
+              name="travel-time"
+              required />
+          </div>
+      
+          <!-- Submit Button -->
+          <input type="submit" value="Book Now" class="btn-book" />
               required
             /><br /><br />
           </div>
@@ -530,6 +585,7 @@
           </button>
         </form>
       </section>
+      <hr style="color: #007bff;">
 
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
@@ -661,51 +717,93 @@
       </div>
       </div>
 
-      <div class="reviews-list">
-        <h3>What Others Are Saying</h3>
-        <!-- Example Review -->
-        <div class="review">
-          <h4>John Doe - Paris</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            Amazing experience in Paris! The Eiffel Tower was breathtaking, and
-            the food was incredible. Highly recommend!
-          </p>
-        </div>
-        <div class="review">
-          <h4>Rahul Mehta - Dubai</h4>
-          <p>⭐⭐⭐⭐</p>
-          <p>
-            Dubai is a must-visit destination! The Burj Khalifa and desert
-            safari were highlights of the trip. Just a bit expensive.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Emily Johnson - London</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            London's history and architecture are stunning. The Tower of London
-            and Buckingham Palace were fascinating to explore.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Michael Lee - Goa</h4>
-          <p>⭐⭐⭐⭐</p>
-          <p>
-            Goa's beaches are beautiful, and the nightlife is vibrant. Great
-            place for a fun and laid-back vacation.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Aditi Patel - New York</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            New York City is amazing! Central Park, Times Square, and the Statue
-            of Liberty were all incredible. Highly recommend!
-          </p>
+      <div class="reviews-container">
+        <h2 class="reviews-title">What Others Are Saying</h2>
+        <div class="reviews-list">
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=1" alt="John Doe" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">John Doe</h3>
+                <p class="reviewer-location">Paris</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              Amazing experience in Paris! The Eiffel Tower was breathtaking, and
+              the food was incredible. Highly recommend!
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=2" alt="Rahul Mehta" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Rahul Mehta</h3>
+                <p class="reviewer-location">Dubai</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+            </div>
+            <p class="review-text">
+              Dubai is a must-visit destination! The Burj Khalifa and desert
+              safari were highlights of the trip. Just a bit expensive.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=3" alt="Emily Johnson" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Emily Johnson</h3>
+                <p class="reviewer-location">London</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              London's history and architecture are stunning. The Tower of London
+              and Buckingham Palace were fascinating to explore.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=4" alt="Michael Lee" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Michael Lee</h3>
+                <p class="reviewer-location">Goa</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+            </div>
+            <p class="review-text">
+              Goa's beaches are beautiful, and the nightlife is vibrant. Great
+              place for a fun and laid-back vacation.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=5" alt="Aditi Patel" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Aditi Patel</h3>
+                <p class="reviewer-location">New York</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              New York City is amazing! Central Park, Times Square, and the Statue
+              of Liberty were all incredible. Highly recommend!
+            </p>
+          </div>
         </div>
       </div>
     </section>
