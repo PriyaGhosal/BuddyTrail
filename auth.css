@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #dce1e6); /* Light gradient for background */
+  color: #333;
+}
+
+.main-head {
+  background-color: #131c27;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* Center the form container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.login-box, .signup-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Form Title */
+.login-box h2, .signup-box h2 {
+  font-size: 2rem;
+  color: #012e49;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Input fields */
+.input-field {
+  margin-bottom: 1.5rem;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+  border-color: #4a8ae4;
+}
+
+.input-field input::placeholder {
+  color: #ccc;
+  font-size: 1.5rem;
+}
+
+/* Submit Button */
+.input-field button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a8ae4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-field button:hover {
+  background-color: #357ae8;
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.google-btn img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Sign Up/Sign In links */
+.signUp-link, .signin-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signUp-link a, .signin-link a {
+  color: #4a8ae4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signUp-link a:hover, .signin-link a:hover {
+  text-decoration: underline;
+}

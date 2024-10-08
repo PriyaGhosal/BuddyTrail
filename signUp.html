@@ -3,20 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="signUp.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="auth.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
+        <ul>
           <li><a href="#home" class='navhover '>Home</a></li>
           <li><a href="#locations" class='navhover '>Location</a></li>
           <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
@@ -24,9 +20,7 @@
           <li><a href="#benefits" class='navhover'>Benefits</a></li>
           <li><a href="#contact" class='navhover'>Contact</a></li>
           <li><a href="signUp.html" class='navhover'>Sign In</a></li>
-
         </ul>
-        <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
           <span class="sun-icon glow">☀️</span>
         </button>
@@ -36,7 +30,30 @@
     <div class="container">
       <div class="signup-box">
         <h2>Create Account</h2>
-        <!-- Google Signup Option -->
+
+        <form id="signupForm" action="book.html" method="POST">
+          <div class="input-field">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="input-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="input-field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          </div>
+          <div class="input-field">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter your password again" required />
+          </div>
+          <div class="input-field">
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+
+        <!-- Google Signup Option below form -->
         <div class="google-signup">
           <a class="google-btn">
             <img src="img/googleLogo.png" alt="Google Logo" />
@@ -44,34 +61,6 @@
           </a>
         </div>
 
-        <p>Or sign up using your email:</p>
-
-        <form id="signupForm" action="book.html" method="POST">
-          <div class="input-field">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="input-field">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="input-field">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-          <div class="input-field">
-            <label for="confirm-password">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              required
-            />
-          </div>
-          <div class="input-field">
-            <button type="submit">Sign Up</button>
-          </div>
-        </form>
         <div class="signin-link">
           <p>Already have an account? <a href="login.html">Sign in</a></p>
         </div>

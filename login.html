@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="auth.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +23,6 @@
                 <li><a href="#contact" class='navhover'>Contact</a></li>
                 <li><a href="signIn.html" class='navhover'>Sign In</a></li>
             </ul>
-            <!-- Toggle Button -->
             <button class="mode-toggle" id="modeToggle">
                 <span class="sun-icon glow">☀️</span>
             </button>
@@ -32,7 +32,22 @@
     <div class="container">
         <div class="login-box">
             <h2>Login</h2>
-            <!-- Google Login Option -->
+
+            <form id="loginForm" action="book.html" method="POST">
+                <div class="input-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="input-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                </div>
+                <div class="input-field">
+                    <button type="submit">Continue</button>
+                </div>
+            </form>
+
+            <!-- Google Login Option below form -->
             <div class="google-login">
                 <a class="google-btn">
                     <img src="img/googleLogo.png" alt="Google Logo" />
@@ -40,29 +55,12 @@
                 </a>
             </div>
 
-            <p>Or login using your email:</p>
-
-            <form id="loginForm" action="book.html" method="POST">
-                <div class="input-field">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div class="input-field">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required />
-                </div>
-                <div class="input-field">
-                    <button type="submit">Continue</button>
-                </div>
-            </form>
-
             <div class="signUp-link">
                 <p>Don't have an account? <a href="signUp.html">Sign up</a></p>
             </div>
         </div>
     </div>
 
-    <!-- Include Firebase SDKs before your custom script -->
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
     <script src="firebase.js"></script>
