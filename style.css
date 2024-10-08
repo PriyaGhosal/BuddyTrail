@@ -116,32 +116,7 @@ nav ul {
   padding: 0; /* Remove default padding */
   gap: 20px; /* Space between menu items */
 }
-nav ul a{
-  position: relative;
-  text-decoration:none;
-  letter-spacing:0.5px;
-  color:#a0a0a0;
 
-}
-nav ul a:after
-{
-  content: "";
-  position: absolute;
-  background-color: white;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.
-}
-nav ul a:hover{
-  color: #ffffff;
-
-}
-nav ul a:hover:after{
-  width: 100%;
-
-}
 
 #logo {
   font-family: "Pattaya", sans-serif;
