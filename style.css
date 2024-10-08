@@ -77,64 +77,77 @@ button {
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
 /**** MAIN PAGE  ****/
-.main-head {
-  height: 10%;
-  width: 100%;
-  background:rgba(0, 0, 0, 0.574); /* Header background */
-  color: white;
-  border: 2px solid rgb(255, 255, 255);
-  margin: 10px 0 10px 0;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  z-index: 9999;
-  position:fixed;
-}
 
-#logo {
-  height: 100%;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Pattaya", sans-serif;
-  font-weight: 400;
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0%;
+  z-index: 5;
 }
 
 nav {
   display: flex;
-  width: 70%;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
   min-height: 10vh;
   align-items: center;
+  flex-wrap: wrap;
+}
 
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero button {
+  border-radius: 1rem;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+/* Header Styles */
+.main-head {
+  padding: 15px;
+  background-color: #007bff; /* Header background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-head ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 20px;
-}
-
-
-
-@media screen and (max-width:1150px) {
-  .main-head nav ul li a {
-  font-size: 12px;
-  }
-}
-
-@media screen and (max-width:910px) {
-  .main-head nav ul li a {
-  font-size: 8px;
-  }
 }
 
 .main-head ul li {
@@ -149,17 +162,11 @@ nav {
 
 .mode-toggle {
   background: none;
-  width: 10%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: none;
   cursor: pointer;
   font-size: 1.5em;
   color: white;
 }
-
 
 /* Section Styles */
 .content-section {
