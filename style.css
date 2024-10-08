@@ -22,15 +22,15 @@ body {
   left: 0;
   width: 100%;
   height: 7px;
-  background-color: whitesmoke; 
-  z-index: 9999; 
+  background-color: whitesmoke;
+  z-index: 9999;
 }
 
 #progressBar {
   height: 100%;
-  width: 0%; 
-  background: #2C3E50;; 
-  transition: width 0.2s ease; 
+  width: 0%;
+  background: #2c3e50;
+  transition: width 0.2s ease;
 }
 
 .scroll-top-btn {
@@ -68,7 +68,7 @@ h5 {
   font-size: 2.8rem;
 }
 
-#logo-web{
+#logo-web {
   height: 50px;
   width: 70px;
 }
@@ -100,7 +100,6 @@ button {
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
 /**** MAIN PAGE  ****/
-
 
 /* Header Styles */
 .main-head {
@@ -134,7 +133,6 @@ nav ul {
   padding: 0; /* Remove default padding */
   gap: 20px; /* Space between menu items */
 }
-
 
 #logo {
   font-family: "Pattaya", sans-serif;
@@ -185,15 +183,14 @@ nav ul {
 
 .hero button {
   border-radius: 1rem;
- 
-    padding: 1.5rem 4rem;
-    background: #4c6e97;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: background 0.6s ease-in-out;
 
+  padding: 1.5rem 4rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
 }
 
 .hero h3 {
@@ -202,7 +199,6 @@ nav ul {
   letter-spacing: 0.7px;
   padding: 5rem;
 }
-
 
 /* Section Styles */
 .content-section {
@@ -223,6 +219,104 @@ nav ul {
   font-size: 1.1em;
   color: #e0e0e0; /* Dark text color */
   margin-bottom: 20px;
+}
+#About {
+  padding: 60px;
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#About h1 {
+  font-size: 3.5em;
+  color: #007bff; /* Blue color for the main heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#About h2 {
+  font-size: 3em;
+  color: #0056b3; /* Dark blue color for subheadings */
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+#About p {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #444; /* Slightly darker grey for paragraph text */
+}
+
+#About p strong {
+  color: #007bff; /* Blue highlight for important text */
+}
+
+#About ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+#About ul li {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#About ul li::before {
+  content: "✔"; /* Checkmark symbol as bullet point */
+  margin-right: 10px;
+  color: #28a745; /* Green checkmark */
+  font-size: 1.5em;
+}
+/* Light mode for #About */
+.light-mode #About {
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+}
+
+/* Dark mode for #About */
+.dark-mode #About {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+
+.light-mode #About h1 {
+  color: #007bff; /* Blue color for the main heading in light mode */
+}
+
+.dark-mode #About h1 {
+  color: #ffa500; /* Orange color for the main heading in dark mode */
+}
+
+.light-mode #About h2 {
+  color: #0056b3; /* Dark blue subheading in light mode */
+}
+
+.dark-mode #About h2 {
+  color: #ffd700; /* Bright yellow subheading in dark mode */
+}
+
+.light-mode #About p {
+  color: #444; /* Slightly darker grey for paragraph text in light mode */
+}
+
+.dark-mode #About p {
+  color: #d3d3d3; /* Lighter grey for paragraph text in dark mode */
+}
+
+.light-mode #About p strong {
+  color: #007bff; /* Blue highlight for important text in light mode */
+}
+
+.dark-mode #About p strong {
+  color: #ffcc00; /* Yellow highlight for important text in dark mode */
 }
 
 /**** LOCATIONS PAGE ****/
@@ -400,113 +494,113 @@ nav ul {
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #343a40, #212529);
-    color: #ffffff;
-    padding: 40px 0;
-    text-align: center;
+  background: linear-gradient(135deg, #343a40, #212529);
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
 }
 
 .footer-column h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #f39c12;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f39c12;
 }
 
-.footer-column p, .footer-column ul {
-    font-size: 14px;
-    line-height: 1.5;
+.footer-column p,
+.footer-column ul {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-column ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-    color: #f39c12;
-    text-decoration: underline;
+  color: #f39c12;
+  text-decoration: underline;
 }
 
 .social-icons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social-icons a {
-    margin: 0 10px;
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s;
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #f39c12;
+  color: #f39c12;
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
+  margin-top: 20px;
+  font-size: 14px;
 }
-
 
 /* for facebook */
 .social-icons .fa-facebook-f {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-facebook-f:hover{
-  color:#4267B2;
-  transform:scale(1.1);
+.social-icons .fa-facebook-f:hover {
+  color: #4267b2;
+  transform: scale(1.1);
 }
 
 /* for twitter */
 .social-icons .fa-x-twitter {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-x-twitter:hover{
-  color:black;
-  transform:scale(1.1);
+.social-icons .fa-x-twitter:hover {
+  color: black;
+  transform: scale(1.1);
 }
 /* for instagram */
 .social-icons .fa-instagram {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-instagram:hover{
-  color:#c32aa3;
-  transform:scale(1.1);
+.social-icons .fa-instagram:hover {
+  color: #c32aa3;
+  transform: scale(1.1);
 }
 
 /* for instagram */
-.social-icons .fa-linkedin-in{
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-linkedin-in:hover{
-    color:#0a66c2;
-    transform:scale(1.1);
-  }
+.social-icons .fa-linkedin-in {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-linkedin-in:hover {
+  color: #0a66c2;
+  transform: scale(1.1);
+}
 /**** MEDIA QUERY ****/
 
 @media screen and (max-width: 932px) {
@@ -708,22 +802,19 @@ body.dark-mode {
   border: 1px solid #0056b3; /* Darker blue border */
 }
 
-
 /* user rating */
 .reviews-section {
   padding: 50px;
-  background-color: #F0F8FF;
- 
+  background-color: #f0f8ff;
 }
-.revieww{
+.revieww {
   display: flex;
-justify-content: center;
-
+  justify-content: center;
 }
 
-.review-p{
-  font-size:small;
-  color:#543db0;
+.review-p {
+  font-size: small;
+  color: #543db0;
   font-style: italic;
   font-weight: 500;
 }
@@ -734,21 +825,21 @@ justify-content: center;
 }
 
 .review-form {
-  background: #CCE9F9;
+  background: #cce9f9;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width:40vw;
+  width: 40vw;
   align-items: center;
   justify-items: center;
 }
 
-.form{
+.form {
   margin-top: 10px;
-  width:30vw;
+  width: 30vw;
 }
 .review-form h3 {
   font-size: 1.5em;
@@ -775,20 +866,18 @@ justify-content: center;
 }
 
 .review-form button {
-  background-color: #F7D160;
+  background-color: #f7d160;
   padding: 10px 30px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
-  color:black;
-  font-size:14px;
-  
+  color: black;
+  font-size: 14px;
 }
 
-.form-button{
+.form-button {
   text-align: center;
-  
 }
 
 .reviews-container {
@@ -892,11 +981,11 @@ justify-content: center;
   .reviews-list {
     grid-template-columns: 1fr;
   }
-  
+
   .reviews-title {
     font-size: 2em;
   }
-  
+
   .review-card {
     max-width: 400px;
     margin: 0 auto;
@@ -907,17 +996,17 @@ justify-content: center;
   .reviews-container {
     padding: 20px 10px;
   }
-  
+
   .review-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .reviewer-avatar {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  
+
   .reviewer-info {
     text-align: center;
   }
@@ -925,8 +1014,14 @@ justify-content: center;
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .review-card {
@@ -934,11 +1029,21 @@ justify-content: center;
   opacity: 0;
 }
 
-.review-card:nth-child(1) { animation-delay: 0.1s; }
-.review-card:nth-child(2) { animation-delay: 0.2s; }
-.review-card:nth-child(3) { animation-delay: 0.3s; }
-.review-card:nth-child(4) { animation-delay: 0.4s; }
-.review-card:nth-child(5) { animation-delay: 0.5s; }
+.review-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.review-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.review-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.review-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.review-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 .review-item {
   padding: 20px;
@@ -1122,10 +1227,9 @@ justify-content: center;
   background-color: #0056b3;
 }
 
-
 /* deals */
-.deals-section { 
-  padding: 90px 50px;    /* modified padding */
+.deals-section {
+  padding: 90px 50px; /* modified padding */
   background-color: #f8f9fa;
 }
 
@@ -1146,30 +1250,30 @@ justify-content: center;
   justify-content: center;
   padding: 40px 0;
   margin: 0 auto;
-  display: grid;  
+  display: grid;
   grid-template-columns: repeat(3, 300px); /* Three equal columns */
   grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
   gap: 30px; /* Space between grid items */
 }
 .deal-item {
   background-color: #fff;
-  padding: 25px 30px;    /* added padding left and right*/
+  padding: 25px 30px; /* added padding left and right*/
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
   color: #090f15;
-  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover tranform animation*/
+  transition: transform 0.4s cubic-bezier(0.3, 0.1, 0.25, 1); /* for smooth hover tranform animation*/
 }
 
 /* added hover effect */
 .deal-item:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   cursor: pointer;
 }
 .deal-item h3 {
   font-size: 1.5em;
-  font-weight: 600;  /* made heading bold */
+  font-weight: 600; /* made heading bold */
   margin-bottom: 15px;
   color: #090f15;
 }
@@ -1353,7 +1457,6 @@ justify-content: center;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
 
-
 /*For contact page*/
 /* Section Styling */
 .contact-heading {
@@ -1362,7 +1465,6 @@ justify-content: center;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 
 .container {
   max-width: 1280px;
@@ -1383,8 +1485,8 @@ justify-content: center;
   font-size: 5rem;
 }
 
-.wr{
-  font-weight:600;
+.wr {
+  font-weight: 600;
   color: black;
 }
 .description {
@@ -1450,7 +1552,7 @@ justify-content: center;
 }
 
 .info-description {
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 /* Form Styling */
@@ -1500,6 +1602,6 @@ justify-content: center;
 /* Responsive Design */
 @media (max-width: 768px) {
   .grid-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
