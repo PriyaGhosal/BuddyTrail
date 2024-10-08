@@ -769,27 +769,39 @@
 
 
     <footer>
-      <div class="footer-wrapper">
-        <h5>BuddyTrail &copy;</h5>
-        <ul>
-          <li>
-            <a href="#" class="twitter" id="social-icons"
-              ><img src="icons/twitter.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="instagram" id="social-icons"
-              ><img src="icons/instagram.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="#" class="youtube" id="social-icons"
-              ><img src="icons/youtube.svg"
-            /></a>
-          </li>
-        </ul>
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p>We are a team of passionate developers creating amazing web experiences.</p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Email: info@example.com</p>
+              <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+      </div>
+  </footer>
     <!-- Deals and Offers Popup -->
     <div id="dealsPopup" class="popup">
       <div class="popup-content">
@@ -806,6 +818,9 @@
         </button>
       </div>
     </div>
+    <!-- this script is for twitter icon  starts -->
+ <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+ <!-- this script is for twitter icon  ends -->
     <script>
       // script.js
       window.onscroll = function () {

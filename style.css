@@ -393,35 +393,115 @@ nav ul a:hover:after{
 
 /**** FOOTER ****/
 
+/* Footer Styles */
 footer {
-  color: white;
-  background-color: rgba(19, 28, 39, 1);
-}
-.footer-wrapper {
-  display: flex;
-  padding: 2rem;
-  width: 90%;
-  margin: auto;
-  align-items: center;
-  min-height: 10vh;
-  flex-wrap: wrap;
-}
-footer h5 {
-  flex: 1 1 40rem;
+    background: linear-gradient(135deg, #343a40, #212529);
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
 }
 
-footer ul {
-  display: flex;
-  list-style: none;
-  flex: 1 1 40rem;
-  justify-content: flex-start;
-  align-items: center;
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-footer ul li{
-  margin: 0 30px;
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
 }
 
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f39c12;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* for facebook */
+.social-icons .fa-facebook-f {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-facebook-f:hover{
+  color:#4267B2;
+  transform:scale(1.1);
+}
+
+/* for twitter */
+.social-icons .fa-x-twitter {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-x-twitter:hover{
+  color:black;
+  transform:scale(1.1);
+}
+/* for instagram */
+.social-icons .fa-instagram {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-instagram:hover{
+  color:#c32aa3;
+  transform:scale(1.1);
+}
+
+/* for instagram */
+.social-icons .fa-linkedin-in{
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-linkedin-in:hover{
+    color:#0a66c2;
+    transform:scale(1.1);
+  }
 /**** MEDIA QUERY ****/
 
 @media screen and (max-width: 932px) {
