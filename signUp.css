@@ -89,7 +89,7 @@ body {
 .input-field label {
     display: block; 
     margin-bottom: 0.4rem; 
-    font-weight: bold; 
+    font-weight: 600; 
     font-size: medium;
 }
 
@@ -127,9 +127,29 @@ body {
 .signin-link a {
     color: #3066dc; /* Match the link color with the theme */
     text-decoration: none; /* Remove underline from the link */
-    font-weight: 100; /* Make the link text bold */
+    font-weight: 300; /* Make the link text bold */
 }
 
 .signin-link a:hover {
     text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+.req{
+    color: red;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 55%;
+}
+
+.input-field {
+    position: relative;
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
 }
