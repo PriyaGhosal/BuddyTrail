@@ -70,7 +70,7 @@ button {
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: background 0.6s ease-in-out;
+  transition: background-0.6s ease-in-out;
 }
 #btn:hover{
   background-color: rgb(1, 20, 27); 
@@ -88,12 +88,15 @@ button {
 
 nav {
   display: flex;
-  width: 90%;
+  width:65%;
   margin: auto;
-  padding: 2rem;
+  padding: 0.5rem;
   min-height: 10vh;
   align-items: center;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.5); /* Translucent background */
+  border-radius: 50px; /* Circular appearance */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
 }
 
 nav ul {
@@ -105,7 +108,9 @@ nav ul {
 }
 
 #logo {
-  flex: 2 1 40rem;
+  flex: 2 1 50rem;
+  padding-left: 4px;
+  text-align: center;
   font-family: "Pattaya", sans-serif;
   font-weight: 400;
 }
@@ -135,7 +140,7 @@ nav ul {
 /* Header Styles */
 .main-head {
   padding: 15px;
-  background-color: #007bff; /* Header background */
+   /* Header background */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -393,9 +398,13 @@ footer ul {
   html {
     font-size: 45%;
   }
-
+  nav {
+    width: 100%;
+  }
   nav ul {
+    
     text-align: center;
+    
   }
   #logo {
     padding: 1.8rem;
