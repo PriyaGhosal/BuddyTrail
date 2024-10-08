@@ -1,5 +1,3 @@
-<!-- START_STRUCTURE -->
-```
 ├── Code_of_Conduct.md
 ├── README.md
 ├── RatingStyle.css
@@ -34,5 +32,3 @@
 ├── signUp.html
 ├── star-rating.js
 └── style.css
-```
-<!-- END_STRUCTURE -->
