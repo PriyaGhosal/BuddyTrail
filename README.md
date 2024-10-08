@@ -94,4 +94,14 @@ Here's how you can contribute to the repository:
 
 7. **Create a pull request** from your GitHub repository.
 </br>
+
+
+# Big thanks to all the contributors! 🎉
+
+
+<a href="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PriyaGhosal/BuddyTrail" />
+</a>
+
+
 # Thanks for reading!!!
