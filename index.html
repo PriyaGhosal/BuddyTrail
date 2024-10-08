@@ -212,15 +212,15 @@
         <h1 id="logo">BuddyTrail</h1>
         </div>
         <ul>
-          <li><a href="#home" class="navhover">Home</a></li>
-          <li><a href="#locations" class="navhover">Location</a></li>
+          <li><a href="#home" class="navhover linkh" >Home</a></li>
+          <li><a href="#locations" class="navhover linkh">Location</a></li>
           <li>
-            <a href="#itineraries " class="navhover">Travel Itineraries</a>
+            <a href="#itineraries" class="navhover linkh">Travel Itineraries</a>
           </li>
-          <li><a href="#reviews" class="navhover">Reviews</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="#contact" class="navhover">Contact</a></li>
-          <li><a href="signUp.html" class="navhover">Sign In</a></li>
+          <li><a href="#reviews" class="navhover linkh">Reviews</a></li>
+          <li><a href="#benefits" class="navhover linkh">Benefits</a></li>
+          <li><a href="#contact" class="navhover linkh">Contact</a></li>
+          <li><a href="signUp.html" class="navhover linkh">Sign In</a></li>
         </ul>
         <!-- Toggle Button -->
         <div>
@@ -248,7 +248,7 @@
       });
     </script>
     <main>
-      <section class="hero">
+      <section id="home" class="hero">
         <h2>Travel Beyond Limits</h2>
         <h3>
           Connect, Explore, and Discover Together. <br />
@@ -978,6 +978,40 @@
   }
   
   </script>
+   <script>
+
+    // Highlight link associated with the section
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const sectionIds = ['home', 'locations', 'itineraries', 'reviews', 'benefits', 'contact'];
+
+        const navLinks = document.querySelectorAll('.linkh');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const id = entry.target.id;
+                const navLink = document.querySelector(`a[href="#${id}"]`);
+                console.log(`Observing section: ${id}, Found navLink: ${navLink}`);
+                if (entry.isIntersecting && navLink) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLink.classList.add('active');
+                    console.log(id);
+                }
+            });
+        }, {
+            threshold: 0.4,
+        });
+
+        sectionIds.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                observer.observe(section);
+            }
+        });
+    });
+</script>
+
+
     <style>
       .popup {
         position: fixed;

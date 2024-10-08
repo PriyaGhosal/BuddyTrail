@@ -1308,12 +1308,26 @@ justify-content: center;
   padding: 10px 15px; /* Adds padding around the text */
   border-radius: 20px; /* Creates rounded corners */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  margin: 0 15px; /* Margin for spacing */
 }
 
+/* Hover state for nav links */
 .navhover:hover {
-  border: 1px solid #3498db;
-  color: white; /* Changes text color on hover */
+   /* Changes text color on hover */
+  border: 1px solid #3498db; /* Border on hover */
 }
+
+/* Active class for the current section */
+.navhover.active {
+  color: #3498db;
+  border: 1px solid #3498db;
+   /* Color for active link */
+  font-weight: bold; /* Bold text for active link */
+}
+.reviews-section {
+  min-height: 100vh; /* Ensure the section takes at least full viewport height */
+}
+
 
 #social-icons {
   display: inline-block;
