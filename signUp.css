@@ -13,7 +13,6 @@ body {
 
 /* Header Styles */
 .main-head {
-    background: blue; 
     color: white;
     position: sticky;
     top: 0;
@@ -25,11 +24,11 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    height: 100vh; 
+    min-height: 600px; 
 }
 
 .signup-box {
-    position: fixed;
+    position: relative;
     top: 24%;
     margin-top: 0px;
     background: #fff; /* Clean white background for contrast */
@@ -37,7 +36,7 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
     padding: 2.5rem; /* Increased padding for better spacing */
     width: 100%; 
-    max-width: 450px; /* Slightly larger width */
+    max-width: 400px; /* Slightly larger width */
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
@@ -83,13 +82,14 @@ body {
 }
 
 .input-field {
-    margin-bottom: 1.2rem; 
+    margin-bottom: 1.1rem; 
 }
 
 .input-field label {
     display: block; 
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.4rem; 
     font-weight: bold; 
+    font-size: medium;
 }
 
 .input-field input {
@@ -102,8 +102,8 @@ body {
 
 .input-field button {
     width: 100%; 
-    margin-top: 5px;
-    padding: 15px; /* Increased padding for a larger button */
+    margin-top: 4px;
+    padding: 10px; /* Increased padding for a larger button */
     border: none;
     border-radius: 8px; /* More rounded button */
     background-color: #4a8ae4; /* Bright teal background */

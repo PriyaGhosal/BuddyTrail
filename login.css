@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 .main-head {
-    background: blue; /* Dark background for the header */
+    background: #2C3E50; /* Dark background for the header */
     color: white;
     position: sticky;
     top: 0;
