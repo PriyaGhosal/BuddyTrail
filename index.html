@@ -8,6 +8,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +27,87 @@
 
     <title>BuddyTrail</title>
     <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-between; /* Space between elements */
+    gap: 20px; /* Optional gap between form and rating section */
+    height: auto; /* Adjust height if necessary */
+}
+.form-section {
+    width: 70%; /* Adjust width as needed */
+}
+.rating-wrap {
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.center {
+    width: auto;
+    display: inline-flex; /* Align stars and rating count in a row */
+    align-items: center;
+    gap: 10px; /* Add some space between the stars and the count */
+}
+
+
+#rating-value {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold;
+    color: black; /* Optional: change the color to match the theme */
+}
+
+.rating {
+    border: none;
+    float:right;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before {
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating > label {
+    color: #ddd; /* Empty stars initially */
+    float: right;
+    cursor: pointer;
+}
+
+/* Filled stars on hover and selection */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label {
+    color: #ddd; /* Keep stars empty until interaction */
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label {
+    color: rgb(230, 166, 17); /* Green for filled stars */
+}
+
+.rating > label:hover ~ label,
+.rating > label:hover {
+    color:rgb(230, 166, 17); /* Green hover effect */
+}
       .chatbot-container {
           position: fixed;
           bottom: 20px; /* Adjust as needed */
@@ -553,15 +635,37 @@
           <label for="destination">Destination/Service:</label>
           <input type="text" id="destination" name="destination" required />
 
-          <label for="rating">Rating:</label>
-          <select id="rating" name="rating">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
+          <div class="container">
+            <div class="rating-wrap">
+              <h2>Ratings:</h2>
+              <div class="center">
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full"></label>
+                  <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                  <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                  <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                  <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                  <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                  <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                  <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                  <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                  <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                </fieldset>
+                <span id="rating-value"></span>
+              </div>
+            </div>
+          </div>
+          <script>
+            let star = document.querySelectorAll('input');
+let showValue = document.querySelector('#rating-value');
 
+for(let i = 0; i < star.length; i++) {
+    star[i].addEventListener('click', function() {
+        let selectedRating = this.value;
+        showValue.innerHTML = selectedRating; // Only show the rating value
+    });
+}
+          </script>
           <label for="review">Your Review:</label>
           <textarea id="review" name="review" rows="4" required></textarea>
           <label for="complaint">Complaint (if any):</label>
