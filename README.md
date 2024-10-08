@@ -104,4 +104,4 @@ Here's how you can contribute to the repository:
 </a>
 
 
-# Thanks for reading!!!
+# Thanks for reading!!
