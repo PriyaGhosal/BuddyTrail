@@ -912,26 +912,7 @@
         }
       });
 
-      window.onscroll = function () {
-        toggleScrollTopButton();
-      };
 
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-      function toggleScrollTopButton() {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          scrollTopBtn.style.display = "block"; // Show button after scrolling down
-        } else {
-          scrollTopBtn.style.display = "none"; // Hide button when at the top
-        }
-      }
-
-      scrollTopBtn.onclick = function () {
-        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-      };
     </script>
     <!-- Add this at the end of the body, just before the closing </body> tag -->
     <script>
@@ -964,19 +945,39 @@
  <!-- Adding scroll progressBar-->
  <script>
 
-  window.onscroll = function() {
-    updateProgressBar();
-  };
   
-  
-  function updateProgressBar() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPercent = (scrollTop / scrollHeight) * 100;
-  
-      document.getElementById("progressBar").style.width = scrollPercent + "%";
+  window.onscroll = function () {
+  updateProgressBar();   // Update the progress bar
+  toggleScrollTopButton(); // Toggle visibility of the "Back to Top" button
+};
+
+// Function to update the scroll progress bar
+function updateProgressBar() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrollPercent = (scrollTop / scrollHeight) * 100;
+  document.getElementById("progressBar").style.width = scrollPercent + "%";
+}
+
+// Function to toggle the "Back to Top" button
+function toggleScrollTopButton() {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (
+    document.body.scrollTop > 100 || 
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollTopBtn.style.display = "block"; // Show button after scrolling down
+  } else {
+    scrollTopBtn.style.display = "none"; // Hide button when at the top
   }
-  
+}
+
+// Smooth scroll to top when "Back to Top" button is clicked
+document.getElementById("scrollTopBtn").onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
   </script>
     <style>
       .popup {
