@@ -48,25 +48,34 @@
 
         <form id="signupForm" action="book.html" method="POST">
           <div class="input-field">
-            <label for="name">Full Name:</label>
+            <label for="name">Full Name<span class="req">*</span></label>
             <input type="text" id="name" name="name" required />
           </div>
           <div class="input-field">
-            <label for="email">Email:</label>
+            <label for="email">Email<span class="req">*</span></label>
             <input type="email" id="email" name="email" required />
           </div>
           <div class="input-field">
-            <label for="password">Password:</label>
+            <label for="password">Password<span class="req">*</span></label>
             <input type="password" id="password" name="password" required />
+            <span class="toggle-password" onclick="togglePassword('password')">
+              <!-- Eye SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
           </div>
           <div class="input-field">
-            <label for="confirm-password">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              required
-            />
+            <label for="confirm-password">Confirm Password<span class="req">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required />
+            <span class="toggle-password" onclick="togglePassword('confirm-password')">
+              <!-- Eye SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
           </div>
           <div class="input-field">
             <button type="submit">Sign Up</button>

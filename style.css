@@ -15,6 +15,24 @@ html {
 body {
   font-family: "Poppins", sans-serif;
 }
+
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: whitesmoke; 
+  z-index: 9999; 
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%; 
+  background: #2C3E50;; 
+  transition: width 0.2s ease; 
+}
+
 .scroll-top-btn {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from the bottom of the viewport */
@@ -83,66 +101,75 @@ button {
 }
 /**** MAIN PAGE  ****/
 
+
+/* Header Styles */
 .main-head {
-  background: #131c27;
+  position: fixed; /* Fixed position at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  z-index: 5; /* Ensure it stays above other elements */
+  padding: 15px;
+  background-color: transparent; /* Set background to transparent */
   color: white;
-  position: sticky;
-  top: 0%;
-  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
 }
 
 nav {
   display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 2rem;
-  min-height: 10vh;
+  width: 100%;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Distributes space between logo and menu items */
 }
 
 nav ul {
   display: flex;
-  flex: 1 1 40rem;
-  justify-content: space-around;
+  justify-content: space-around; /* Space around the menu items */
   align-items: center;
   list-style: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  gap: 20px; /* Space between menu items */
 }
-nav ul a{
-  position: relative;
-  text-decoration:none;
-  letter-spacing:0.5px;
-  color:#a0a0a0;
 
-}
-nav ul a:after
-{
-  content: "";
-  position: absolute;
-  background-color: white;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.
-}
-nav ul a:hover{
-  color: #ffffff;
-
-}
-nav ul a:hover:after{
-  width: 100%;
-
-}
 
 #logo {
-  flex: 2 1 40rem;
   font-family: "Pattaya", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+.mode-toggle {
+  display: inline-block;
+  margin-left: 20px; /* Space between menu items and toggle button */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  color: white; /* Text color */
+  font-size: 1.5em; /* Increase font size */
+  padding: 0; /* Remove padding */
+  align-self: center; /* Center align the button vertically */
+}
+
+.main-head ul li {
+  display: inline;
+}
+
+.main-head ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Optional: Add a class to change background on scroll */
+.sticky {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background on scroll */
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
     url("/img/landing-page.jpg");
   background-repeat: no-repeat;
@@ -158,46 +185,24 @@ nav ul a:hover:after{
 
 .hero button {
   border-radius: 1rem;
+ 
+    padding: 1.5rem 4rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.6s ease-in-out;
+
 }
 
 .hero h3 {
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.7px;
   padding: 5rem;
 }
-/* Header Styles */
-.main-head {
-  padding: 15px;
-  background-color: #2C3E50;/* Header background */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.main-head ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.main-head ul li {
-  display: inline;
-}
-
-.main-head ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.mode-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  color: white;
-}
 
 /* Section Styles */
 .content-section {
@@ -1390,10 +1395,10 @@ justify-content: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-/* .navhover:hover { */
-  /* background-color: #3498db; Adds a blue background on hover */
-  /* color: white; Changes text color on hover */
-/* } */
+.navhover:hover {
+  border: 1px solid #3498db;
+  color: white; /* Changes text color on hover */
+}
 
 #social-icons {
   display: inline-block;
@@ -1432,3 +1437,154 @@ justify-content: center;
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
+
+
+/*For contact page*/
+/* Section Styling */
+.contact-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Heading and Title */
+.subheading {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3b82f6;
+}
+
+.title {
+  font-weight: bold;
+  color: #111827;
+  font-size: 5rem;
+}
+
+.wr{
+  font-weight:600;
+  color: black;
+}
+.description {
+  color: #4b5563;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Text Container */
+.text-container {
+  padding-right: 1.5rem;
+}
+
+/* Info Text */
+.info-text {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* Info List */
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.info-text-content {
+  margin-left: 1rem;
+}
+
+.info-title {
+  font-weight: 600;
+  color: #000e2b;
+}
+
+.info-description {
+  color:whitesmoke;
+}
+
+/* Form Styling */
+.form-container {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.submit-button-container {
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
