@@ -27,6 +27,121 @@
 
     <title>BuddyTrail</title>
     <style>
+
+      .cab-booking-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Form Styling */
+.cab-booking-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 500px;
+}
+
+/* Form Hover Effect */
+.cab-booking-form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: #0056b3;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus State */
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styling */
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .cab-booking-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  input,
+  select {
+    font-size: 0.9em;
+  }
+
+  .submit-btn {
+    font-size: 1em;
+  }
+}
+
       * {
     margin: 0;
     padding: 0;
@@ -412,125 +527,42 @@
       </section>
 
       <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 10px">
-          Book a cab or auto with ease
-        </p>
-
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-          "
-        >
-          <div>
-            <label style="font-size: 1.5em" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            /><br /><br />
-          </div>
-          <div>
-            <label style="font-size: 1.5em" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            /><br /><br />
-          </div>
-          <div style="display: flex">
-            <label style="font-size: 1.5em; margin-top: 7px;" for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select id="vehicle-type" name="vehicle-type" style="width: 150px;" required >
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option></select
-            ><br /><br />
-          </div>
-
-          <div>
-            <label style="font-size: 1.5em" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div>
-            <label style="font-size: 1.5em" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-        </form>
-      </section>
+     <section id="cab-booking" class="cab-booking-section">
+    <h2>Book a Cab or Auto</h2>
+    <p>Book a cab or auto with ease</p>
+  
+    <form action="/book-cab" method="POST" class="cab-booking-form">
+      <div class="form-group">
+        <label for="pickup-location">Pickup Location:</label>
+        <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="drop-location">Drop Location:</label>
+        <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="vehicle-type">Vehicle Type:</label>
+        <select id="vehicle-type" name="vehicle-type" required>
+          <option value="cab">Cab</option>
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="travel-date">Travel Date:</label>
+        <input type="date" id="travel-date" name="travel-date" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="travel-time">Travel Time:</label>
+        <input type="time" id="travel-time" name="travel-time" required />
+      </div>
+  
+      <button type="submit" class="submit-btn">Book now</button>
+    </form>
+  </section>
 
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
