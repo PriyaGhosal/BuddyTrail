@@ -72,6 +72,7 @@ button {
   cursor: pointer;
   transition: background 0.6s ease-in-out;
 }
+
 #btn:hover{
   background-color: rgb(1, 20, 27); 
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue; 
@@ -368,7 +369,9 @@ footer {
 }
 .footer-wrapper {
   display: flex;
+
   padding: 2rem;
+
   width: 90%;
   margin: auto;
   align-items: center;
@@ -535,6 +538,7 @@ body.dark-mode {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(33% - 40px);
   max-width: calc(33% - 40px);
+
   text-align: center;
 }
 
@@ -814,8 +818,10 @@ body.dark-mode {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
+
   text-align: center;
   color: #090f15;
+
 }
 
 .deal-item h3 {
@@ -896,6 +902,7 @@ body.dark-mode {
   border: 2px solid #0056b3; /* Blue border */
 }
 
+
 .recommendation-item h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -972,6 +979,7 @@ body.dark-mode {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+
 .twitter:hover {
   background-color: #1e97e3; /* Twitter's official blue color */
   transform: scale(1.1);
@@ -985,6 +993,7 @@ body.dark-mode {
 .youtube:hover {
   background-color: #ff0000; /* YouTube's official red color */
   transform: scale(1.1); /* Slightly enlarges the icon */
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -1001,3 +1010,72 @@ body.dark-mode {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
+
+.cab-booking-section {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cab-booking-section h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.cab-booking-section p {
+  font-size: 1.3em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input,
+select {
+  width: calc(100% - 20px);
+  height: 40px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-message {
+  color: green;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
