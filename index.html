@@ -147,6 +147,11 @@
       .chatbot-button:hover .tooltip-text {
         display: block; /* Show on hover */
       }
+      .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
     </style>
   </head>
   <body class="light-mode">
@@ -197,8 +202,10 @@
     <script src="script.js"></script>
     <header class="main-head">
       <nav>
-        <img src="img\logo.png" id="logo-web">
+        <div class="logo" >
+          <img src="img\logo.png" id="logo-web">
         <h1 id="logo">BuddyTrail</h1>
+        </div>
         <ul>
           <li><a href="#home" class="navhover">Home</a></li>
           <li><a href="#locations" class="navhover">Location</a></li>
