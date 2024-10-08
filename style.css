@@ -83,63 +83,7 @@ button {
 }
 /**** MAIN PAGE  ****/
 
-.main-head {
-  background: #131c27;
-  color: white;
-  position: sticky;
-  top: 0%;
-  z-index: 5;
-}
 
-nav {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 2rem;
-  min-height: 10vh;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav ul {
-  display: flex;
-  flex: 1 1 40rem;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
-nav ul a{
-  position: relative;
-  text-decoration:none;
-  letter-spacing:0.5px;
-  color:#a0a0a0;
-
-}
-nav ul a:after
-{
-  content: "";
-  position: absolute;
-  background-color: white;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.
-}
-nav ul a:hover{
-  color: #ffffff;
-
-}
-nav ul a:hover:after{
-  width: 100%;
-
-}
-
-#logo {
-  flex: 2 1 40rem;
-  font-family: "Pattaya", sans-serif;
-  font-weight: 400;
-}
 
 .hero {
   min-height: 90vh;
@@ -165,20 +109,63 @@ nav ul a:hover:after{
 }
 /* Header Styles */
 .main-head {
-  padding: 15px;
-  background-color: #2C3E50;/* Header background */
+  height: 10%;
+  width: 100%;
+  background:rgba(0, 0, 0, 0.574); /* Header background */
   color: white;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 10px 0 10px 0;
+  border-radius: 50px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: left;
   align-items: center;
+  z-index: 9999;
+  position:fixed;
+}
+
+#logo {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  width: 70%;
+  min-height: 10vh;
+  align-items: center;
+
 }
 
 .main-head ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 20px;
+}
+
+
+
+@media screen and (max-width:1150px) {
+  .main-head nav ul li a {
+  font-size: 12px;
+  }
+}
+
+@media screen and (max-width:910px) {
+  .main-head nav ul li a {
+  font-size: 8px;
+  }
 }
 
 .main-head ul li {
@@ -193,12 +180,38 @@ nav ul a:hover:after{
 
 .mode-toggle {
   background: none;
+  width: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   cursor: pointer;
   font-size: 1.5em;
   color: white;
 }
 
+
+/* Section Styles */
+.content-section {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content-section h2 {
+  font-size: 2em;
+  color: #007bff; /* Blue color for headings */
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 1.1em;
+  color: #e0e0e0; /* Dark text color */
+  margin-bottom: 20px;
+}
 /* Section Styles */
 .content-section {
   padding: 40px;
