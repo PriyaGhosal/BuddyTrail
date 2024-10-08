@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="/icons/airplane.svg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
@@ -411,6 +415,15 @@
       </section>
 
       <!-- Cab or Auto Booking -->
+      <section id="cab-booking" class="cab-booking-section">
+        <form action="/book-cab" method="POST">
+          <h2>BOOK NOW</h2>
+          <br>
+      
+          <!-- Pickup Location -->
+          <div class="form-group">
+            <label for="pickup-location">Pickup Location</label>
+            <input
       <section
         id="cab-booking"
         class="cab-booking-section"
@@ -457,6 +470,14 @@
               id="pickup-location"
               name="pickup-location"
               placeholder="Enter pickup location"
+              required />
+          </div>
+      
+          <!-- Drop Location -->
+          <div class="form-group">
+            <label for="drop-location">Drop Location</label>
+            <input
+
               required
             /><br /><br />
           </div>
@@ -470,6 +491,40 @@
               id="drop-location"
               name="drop-location"
               placeholder="Enter drop location"
+              required />
+          </div>
+      
+          <!-- Vehicle Type -->
+          <div class="form-group">
+            <label for="vehicle-type">Vehicle Type</label>
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="cab">Cab</option>
+              <option value="auto">Auto</option>
+            </select>
+          </div>
+      
+          <!-- Travel Date -->
+          <div class="form-group">
+            <label for="travel-date">Travel Date</label>
+            <input
+              type="date"
+              id="travel-date"
+              name="travel-date"
+              required />
+          </div>
+      
+          <!-- Travel Time -->
+          <div class="form-group">
+            <label for="travel-time">Travel Time</label>
+            <input
+              type="time"
+              id="travel-time"
+              name="travel-time"
+              required />
+          </div>
+      
+          <!-- Submit Button -->
+          <input type="submit" value="Book Now" class="btn-book" />
               required
             /><br /><br />
           </div>
@@ -530,6 +585,7 @@
           </button>
         </form>
       </section>
+      <hr style="color: #007bff;">
 
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
