@@ -814,12 +814,9 @@ for(let i = 0; i < star.length; i++) {
         <span class="close-btn" id="closePopup">&times;</span>
         <h2>Exclusive Deals and Offers!</h2>
         <p>
-          Get the best deals on flights, hotels, and travel packages. Don't miss
-          out on our limited-time discounts. Plan your trip now!
+          Get the best deals on flights, hotels, and travel packages. Don't miss out on our limited-time discounts. Plan your trip now!
         </p>
-        <button
-          onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'"
-        >
+        <button onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
           Check Out Deals
         </button>
       </div>
@@ -876,38 +873,91 @@ for(let i = 0; i < star.length; i++) {
       }
     </script>
     <style>
+
       .popup {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8); 
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1000;
+        backdrop-filter: blur(5px); 
       }
-
+    
       .popup-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px; 
         text-align: center;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+        max-width: 500px; 
+        width: 90%; 
+        animation: fadeIn 0.3s ease; 
       }
-
+  
       .popup-content h2 {
         margin-top: 0;
+        font-size: 3rem; 
+        color: #2c3e50;
+        font-weight: bold; 
       }
-
+      .popup-content p {
+        margin: 15px 0;
+        color: #34495e; 
+        line-height: 1.6; 
+        font-size: 1.4rem; 
+      }
+    
+      /* Button Styles */
       .popup-content button {
-        margin-top: 10px;
-        padding: 5px 10px;
-        background-color: #007bff;
+        margin-top: 20px; 
+        padding: 12px 20px; 
+        background-color: #3498db;
         color: white;
         border: none;
-        border-radius: 3px;
+        border-radius: 5px; 
         cursor: pointer;
+        font-size: 1.2rem; 
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); 
+      }
+    
+      .popup-content button:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+      }
+    
+      /* Close Button Styles */
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 3rem;
+        color: #95a5a6; /* Lighter color for the close button */
+        cursor: pointer;
+        transition: color 0.2s ease; /* Smooth color transition */
+      }
+    
+      /* Close Button Hover Effects */
+      .close-btn:hover {
+        color: white;
+        background-color: red;
+      }
+    
+      /* Fade-in Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </body>
