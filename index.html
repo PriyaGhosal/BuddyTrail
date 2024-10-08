@@ -528,43 +528,46 @@
     </main>
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
-      <h2>User Reviews and Ratings</h2>
-      <p>
-        Read what others have to say about their experiences with various
-        destinations, hotels, flights, and activities. Share your own reviews
-        and help fellow travelers make informed decisions.
-      </p>
-
-      <div class="review-form" style="margin-top: 20px">
-        <h1 style="margin-bottom: 10px">Leave a Review</h1>
-        <form>
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="destination">Destination/Service:</label>
-          <input type="text" id="destination" name="destination" required />
-
-          <label for="rating">Rating:</label>
-          <select id="rating" name="rating">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
-
-          <label for="review">Your Review:</label>
-          <textarea id="review" name="review" rows="4" required></textarea>
-          <label for="complaint">Complaint (if any):</label>
-          <textarea
-            id="complaint"
-            name="complaint"
-            rows="3"
-            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
-          ></textarea>
-
-          <button type="submit">Submit Review</button>
-        </form>
+      <div class="revieww">
+      <div class="review-form">
+        <h2>Rate your experience</h2>
+        <p class="review-p"> 
+          Read what others have to say about their experiences with various
+          destinations, hotels, flights, and activities. Share your own reviews
+          and help fellow travelers make informed decisions.
+        </p>
+  
+        <div  style="margin-top: 20px">
+          <form class="form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+  
+            <label for="destination">Destination/Service:</label>
+            <input type="text" id="destination" name="destination" required />
+  
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+  
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            <label for="complaint">Complaint (if any):</label>
+            <textarea
+              id="complaint"
+              name="complaint"
+              rows="3"
+              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
+            ></textarea>
+  
+<div class="form-button">            <button type="submit">Send</button>
+</div>          </form>
+        </div>
+      </div>
       </div>
 
       <div class="reviews-list">

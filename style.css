@@ -588,25 +588,48 @@ body.dark-mode {
   border: 1px solid #0056b3; /* Darker blue border */
 }
 
+
 /* user rating */
 .reviews-section {
   padding: 50px;
-  background-color: #f4f4f4;
+  background-color: #F0F8FF;
+ 
+}
+.revieww{
+  display: flex;
+justify-content: center;
+
+}
+
+.review-p{
+  font-size:small;
+  color:#543db0;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .reviews-section h2 {
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: 20px;
 }
 
 .review-form {
-  background: white;
-  padding: 20px;
+  background: #CCE9F9;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width:40vw;
+  align-items: center;
+  justify-items: center;
 }
 
+.form{
+  margin-top: 10px;
+  width:30vw;
+}
 .review-form h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -632,17 +655,20 @@ body.dark-mode {
 }
 
 .review-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+  background-color: #F7D160;
+  padding: 10px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
+  color:black;
+  font-size:14px;
+  
 }
 
-.review-form button:hover {
-  background-color: #0056b3;
+.form-button{
+  text-align: center;
+  
 }
 
 .reviews-list {
