@@ -108,6 +108,32 @@ nav ul {
   align-items: center;
   list-style: none;
 }
+nav ul a{
+  position: relative;
+  text-decoration:none;
+  letter-spacing:0.5px;
+  color:#a0a0a0;
+
+}
+nav ul a:after
+{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.
+}
+nav ul a:hover{
+  color: #ffffff;
+
+}
+nav ul a:hover:after{
+  width: 100%;
+
+}
 
 #logo {
   flex: 2 1 40rem;
@@ -1160,10 +1186,10 @@ body.dark-mode {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-.navhover:hover {
-  background-color: #3498db; /* Adds a blue background on hover */
-  color: white; /* Changes text color on hover */
-}
+/* .navhover:hover { */
+  /* background-color: #3498db; Adds a blue background on hover */
+  /* color: white; Changes text color on hover */
+/* } */
 
 #social-icons {
   display: inline-block;
