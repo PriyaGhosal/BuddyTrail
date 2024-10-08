@@ -451,7 +451,7 @@
         >
           Book a Cab or Auto
         </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 10px">
+        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
           Book a cab or auto with ease
         </p>
 
@@ -467,47 +467,54 @@
           "
         >
           <div>
-            <label style="font-size: 1.5em" for="pickup-location"
+            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
               >Pickup Location:</label
             >
             <input
-              style="height: 29px; width: 200px"
+              style="height: 29px; width: 200px; padding: 5px;"
               type="text"
               id="pickup-location"
               name="pickup-location"
               placeholder="Enter pickup location"
               required
-            /><br /><br />
+            />
           </div>
-          <div>
-            <label style="font-size: 1.5em" for="drop-location"
+          <div style = "margin-bottom: 20px;">
+            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
               >Drop Location:</label
             >
             <input
-              style="height: 29px; width: 200px"
+              style="height: 29px; width: 200px; padding: 5px;"
               type="text"
               id="drop-location"
               name="drop-location"
               placeholder="Enter drop location"
               required
-            /><br /><br />
+            />
           </div>
-          <div style="display: flex">
-            <label style="font-size: 1.5em; margin-top: 7px;" for="vehicle-type"
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <label 
+            style="font-size: 1.5em; margin-right: 35px;" 
+            for="vehicle-type"
               >Vehicle Type:</label
             >
-            <select id="vehicle-type" name="vehicle-type" style="width: 150px;" required >
+            <select 
+            id="vehicle-type" 
+            name="vehicle-type" 
+            style="width: 150px; height: 29px; padding: 5px;" 
+            required 
+            >
               <option value="cab">Cab</option>
               <option value="auto">Auto</option></select
             ><br /><br />
           </div>
 
-          <div>
-            <label style="font-size: 1.5em" for="travel-date"
+          <div style="margin-bottom: 20px;">
+            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
               >Travel Date:</label
             >
             <input
-              style="height: 29px; width: 200px"
+              style="height: 29px; width: 200px; padding: 5px;"
               type="date"
               id="travel-date"
               name="travel-date"
@@ -515,18 +522,19 @@
             /><br /><br />
           </div>
 
-          <div>
-            <label style="font-size: 1.5em" for="travel-time"
+          <div style="margin-bottom: 20px;">
+            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
               >Travel Time:</label
             >
             <input
-              style="height: 29px; width: 200px"
+              style="height: 29px; width: 200px; padding: 5px;"
               type="time"
               id="travel-time"
               name="travel-time"
               required
             /><br /><br />
           </div>
+
           <button
             style="
               background-color: #007bff;
