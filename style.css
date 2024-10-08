@@ -90,7 +90,7 @@ nav {
   display: flex;
   width: 90%;
   margin: auto;
-  padding: 2rem;
+  padding: 0.5rem;
   min-height: 10vh;
   align-items: center;
   flex-wrap: wrap;
@@ -105,9 +105,9 @@ nav ul {
 }
 
 #logo {
-  flex: 2 1 40rem;
+  flex: 1 0 20rem;
   font-family: "Pattaya", sans-serif;
-  font-weight: 400;
+  font-weight: 50;
 }
 
 .hero {
@@ -151,13 +151,13 @@ nav ul {
 }
 
 .main-head ul li {
-  display: inline;
+  display:inline-block;
 }
 
 .main-head ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight:lighter;
 }
 
 .mode-toggle {
