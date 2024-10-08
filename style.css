@@ -3,7 +3,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 10;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -375,16 +375,13 @@ footer {
   min-height: 10vh;
   flex-wrap: wrap;
 }
-footer h5 {
-  flex: 1 1 40rem;
-}
+
 
 footer ul {
   display: flex;
   list-style: none;
-  flex: 1 1 40rem;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  gap: 30px;
 }
 
 /**** MEDIA QUERY ****/
@@ -424,6 +421,14 @@ footer ul {
   footer h5 {
     padding-bottom: 3rem;
   }
+}
+
+h6{
+  font-family: "Poppins", sans-serif;
+  color: yellow;
+  padding-top: 0.5rem;
+  font-size: 20px;
+  padding-left: 300px;
 }
 
 /* General styling */
