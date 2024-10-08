@@ -508,7 +508,13 @@ footer {
     transform:scale(1.1);
   }
 /**** MEDIA QUERY ****/
-
+.social-icons .fa-instagram {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-discord:hover{
+  color: #7289DA;
+  transform:scale(1.1);
+}
 @media screen and (max-width: 932px) {
   html {
     font-size: 45%;
