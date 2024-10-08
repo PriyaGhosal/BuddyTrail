@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="signUp.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      :root {
+          --deep-teal: #003d4d;
+          --soft-gold: #d9c79e;
+      }
+    
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif; /* Use a common font */
+      }
+    
+      .main-head {
+          background-color: black; /* Changed to black */
+          padding: 20px;
+      }
+    
+      nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+    
+      nav h1 {
+          color: white; /* Logo color */
+          margin: 0;
+      }
+    
+      nav ul {
+          list-style-type: none; /* Remove bullet points */
+          display: flex; /* Display items in a row */
+          gap: 10px; /* Space between items */
+          padding: 0; /* Remove default padding */
+          margin-right: 50px; /* Remove default margin */
+      }
+    
+      nav a {
+          color: white; /* Changed font color to white for navigation links */
+          text-decoration: none; /* Remove underline */
+          transition: color 0.3s; /* Smooth transition for color change */
+      }
+    
+      nav a:hover {
+          color: var(--soft-gold); /* Optional hover color */
+      }
+    
+      .signup-box {
+          padding: 20px; /* Reduced padding */
+          margin: 20px auto; /* Center the box */
+          background-color: white; /* Background color */
+          border-radius: 8px; /* Rounded corners */
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+          max-width: 400px; /* Set a maximum width */
+      }
+    </style>
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
@@ -16,15 +71,16 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
-          <li><a href="#home" class='navhover '>Home</a></li>
-          <li><a href="#locations" class='navhover '>Location</a></li>
-          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
-          <li><a href="#reviews" class='navhover'>Reviews</a></li>
-          <li><a href="#benefits" class='navhover'>Benefits</a></li>
-          <li><a href="#contact" class='navhover'>Contact</a></li>
-          <li><a href="signUp.html" class='navhover'>Sign In</a></li>
-
+        <ul>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="#locations" class="navhover">Location</a></li>
+          <li>
+            <a href="#itineraries " class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li><a href="signUp.html" class="navhover">Sign In</a></li>
         </ul>
         <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">

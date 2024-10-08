@@ -19,6 +19,32 @@ body {
     z-index: 5;
 }
 
+.main-head {
+    background-color: var(--deep-teal); /* Or any background color you prefer */
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center vertically */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Display items in a row */
+    gap: 20px; /* Space between items */
+}
+
+nav a {
+    color: black; /* Font color set to black */
+    text-decoration: none; /* Remove underline */
+}
+
+nav a:hover {
+    color: var(--soft-gold); /* Change hover color if desired */
+}
+
 
 .container {
     display: flex;
