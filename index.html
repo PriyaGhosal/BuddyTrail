@@ -8,6 +8,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +27,87 @@
 
     <title>BuddyTrail</title>
     <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-between; /* Space between elements */
+    gap: 20px; /* Optional gap between form and rating section */
+    height: auto; /* Adjust height if necessary */
+}
+.form-section {
+    width: 70%; /* Adjust width as needed */
+}
+.rating-wrap {
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.center {
+    width: auto;
+    display: inline-flex; /* Align stars and rating count in a row */
+    align-items: center;
+    gap: 10px; /* Add some space between the stars and the count */
+}
+
+
+#rating-value {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold;
+    color: black; /* Optional: change the color to match the theme */
+}
+
+.rating {
+    border: none;
+    float:right;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before {
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating > label {
+    color: #ddd; /* Empty stars initially */
+    float: right;
+    cursor: pointer;
+}
+
+/* Filled stars on hover and selection */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label {
+    color: #ddd; /* Keep stars empty until interaction */
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label {
+    color: rgb(230, 166, 17); /* Green for filled stars */
+}
+
+.rating > label:hover ~ label,
+.rating > label:hover {
+    color:rgb(230, 166, 17); /* Green hover effect */
+}
       .chatbot-container {
           position: fixed;
           bottom: 20px; /* Adjust as needed */
@@ -65,103 +147,6 @@
       .chatbot-button:hover .tooltip-text {
           display: block; /* Show on hover */
       }
-  /* Pop up new styling */
-  .popup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Darker background for more focus */
-  z-index: 1000;
-  animation: fadeInBackground 0.5s ease-in-out;
-}
-
-.popup-box {
-  background: linear-gradient(160deg, #007bff, #ffffff); /* Gradient background */
-  padding: 2.5rem;
-  border-radius: 15px;
-  text-align: center;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Deep shadow for depth */
-  animation: popupSlideIn 0.5s ease-out;
-  color: white;
-}
-
-.popup-heading {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif; /* Modern font */
-  color: #fff;
-}
-
-.popup-text {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
-  color: #f0f0f0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.popup-action-btn {
-  background-color: #ffffff;
-  color:#007bff;
-  padding: 0.9rem 1.7rem;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.2);
-}
-
-.popup-action-btn:hover {
-  background-color: 007bff;
-  color: rgb(0, 0, 0);
-  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.4);
-}
-
-.popup-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.popup-close-btn:hover {
-  color: #ffffff;
-}
-
-/* Keyframes for animations */
-@keyframes fadeInBackground {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-}
-
-@keyframes popupSlideIn {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
       </style>
 
   </head>
@@ -322,8 +307,8 @@
             <h3>Flight to Dubai</h3>
             <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
             <p>
-              <strong>Price:</strong> ₹25,000
-              <span class="discount">₹20,000</span>
+              <strong>Price:</strong> ₹20,000
+              <span class="discount">₹25,000 </span>
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
           </div>
@@ -336,8 +321,8 @@
               luxury at an affordable price!
             </p>
             <p>
-              <strong>Price:</strong> ₹15,000
-              <span class="discount">₹10,500</span> per night
+              <strong>Price:</strong> ₹10,500 
+              <span class="discount"> ₹15,000</span> per night
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
           </div>
@@ -350,8 +335,8 @@
               3-night package. All-inclusive deal!
             </p>
             <p>
-              <strong>Price:</strong> ₹50,000
-              <span class="discount">₹40,000</span>
+              <strong>Price:</strong> ₹40,000 
+              <span class="discount">₹50,000</span>
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
           </div>
@@ -364,8 +349,8 @@
               package for couples!
             </p>
             <p>
-              <strong>Price:</strong> ₹1,50,000
-              <span class="discount">₹1,20,000</span> per couple
+              <strong>Price:</strong> ₹1,20,000
+              <span class="discount"> ₹1,50,000</span> per couple
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
           </div>
@@ -378,8 +363,8 @@
               trekking, and more. Discount available for groups!
             </p>
             <p>
-              <strong>Price:</strong> ₹60,000
-              <span class="discount">₹48,000</span> per person
+              <strong>Price:</strong> ₹48,000  
+              <span class="discount">₹60,000</span> per person
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
           </div>
@@ -458,7 +443,7 @@
             margin-left: 40px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
           "
         >
@@ -489,10 +474,10 @@
             /><br /><br />
           </div>
           <div style="display: flex">
-            <label style="font-size: 1.5em" for="vehicle-type"
+            <label style="font-size: 1.5em; margin-top: 7px;" for="vehicle-type"
               >Vehicle Type:</label
             >
-            <select id="vehicle-type" name="vehicle-type" required>
+            <select id="vehicle-type" name="vehicle-type" style="width: 150px;" required >
               <option value="cab">Cab</option>
               <option value="auto">Auto</option></select
             ><br /><br />
@@ -609,7 +594,7 @@
           <header class="form-head">
             <h2>Contact US</h2>
           </header>
-          <form action="https://formspree.io/f/mqkvkayy" method="POST">
+          <form id="contactForm" action="https://formspree.io/f/mqkvkayy" method="POST">
             <div class="name-form">
               <label for="name">Name : </label>
               <input id="name" type="text" name="name" required />
@@ -622,6 +607,15 @@
           </form>
         </div>
       </section>
+
+      <!-- Add this custom popup HTML -->
+      <div id="confirmationPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+          <h2>Thank You!</h2>
+          <p>Your message has been sent successfully. We will get back to you soon.</p>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
     </main>
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
@@ -641,15 +635,37 @@
           <label for="destination">Destination/Service:</label>
           <input type="text" id="destination" name="destination" required />
 
-          <label for="rating">Rating:</label>
-          <select id="rating" name="rating">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
+          <div class="container">
+            <div class="rating-wrap">
+              <h2>Ratings:</h2>
+              <div class="center">
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full"></label>
+                  <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                  <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                  <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                  <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                  <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                  <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                  <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                  <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                  <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                </fieldset>
+                <span id="rating-value"></span>
+              </div>
+            </div>
+          </div>
+          <script>
+            let star = document.querySelectorAll('input');
+let showValue = document.querySelector('#rating-value');
 
+for(let i = 0; i < star.length; i++) {
+    star[i].addEventListener('click', function() {
+        let selectedRating = this.value;
+        showValue.innerHTML = selectedRating; // Only show the rating value
+    });
+}
+          </script>
           <label for="review">Your Review:</label>
           <textarea id="review" name="review" rows="4" required></textarea>
           <label for="complaint">Complaint (if any):</label>
@@ -664,51 +680,93 @@
         </form>
       </div>
 
-      <div class="reviews-list">
-        <h3>What Others Are Saying</h3>
-        <!-- Example Review -->
-        <div class="review">
-          <h4>John Doe - Paris</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            Amazing experience in Paris! The Eiffel Tower was breathtaking, and
-            the food was incredible. Highly recommend!
-          </p>
-        </div>
-        <div class="review">
-          <h4>Rahul Mehta - Dubai</h4>
-          <p>⭐⭐⭐⭐</p>
-          <p>
-            Dubai is a must-visit destination! The Burj Khalifa and desert
-            safari were highlights of the trip. Just a bit expensive.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Emily Johnson - London</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            London's history and architecture are stunning. The Tower of London
-            and Buckingham Palace were fascinating to explore.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Michael Lee - Goa</h4>
-          <p>⭐⭐⭐⭐</p>
-          <p>
-            Goa's beaches are beautiful, and the nightlife is vibrant. Great
-            place for a fun and laid-back vacation.
-          </p>
-        </div>
-
-        <div class="review">
-          <h4>Aditi Patel - New York</h4>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>
-            New York City is amazing! Central Park, Times Square, and the Statue
-            of Liberty were all incredible. Highly recommend!
-          </p>
+      <div class="reviews-container">
+        <h2 class="reviews-title">What Others Are Saying</h2>
+        <div class="reviews-list">
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=1" alt="John Doe" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">John Doe</h3>
+                <p class="reviewer-location">Paris</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              Amazing experience in Paris! The Eiffel Tower was breathtaking, and
+              the food was incredible. Highly recommend!
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=2" alt="Rahul Mehta" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Rahul Mehta</h3>
+                <p class="reviewer-location">Dubai</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+            </div>
+            <p class="review-text">
+              Dubai is a must-visit destination! The Burj Khalifa and desert
+              safari were highlights of the trip. Just a bit expensive.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=3" alt="Emily Johnson" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Emily Johnson</h3>
+                <p class="reviewer-location">London</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              London's history and architecture are stunning. The Tower of London
+              and Buckingham Palace were fascinating to explore.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=4" alt="Michael Lee" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Michael Lee</h3>
+                <p class="reviewer-location">Goa</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+            </div>
+            <p class="review-text">
+              Goa's beaches are beautiful, and the nightlife is vibrant. Great
+              place for a fun and laid-back vacation.
+            </p>
+          </div>
+      
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/100?img=5" alt="Aditi Patel" class="reviewer-avatar">
+              <div class="reviewer-info">
+                <h3 class="reviewer-name">Aditi Patel</h3>
+                <p class="reviewer-location">New York</p>
+              </div>
+            </div>
+            <div class="review-rating">
+              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              New York City is amazing! Central Park, Times Square, and the Statue
+              of Liberty were all incredible. Highly recommend!
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -751,20 +809,91 @@
       </div>
     </footer>
     <!-- Deals and Offers Popup -->
-    <div id="exclusive-deals-popup" class="popup-container">
-      <div class="popup-box">
-        <span class="popup-close-btn" id="close-popup-btn">&times;</span>
-        <h2 class="popup-heading">Exclusive Deals and Offers!</h2>
-        <p class="popup-text">
-          Get the best deals on flights, hotels, and travel packages. Don't miss
-          out on our limited-time discounts. Plan your trip now!
-        </p>
-        <button class="popup-action-btn" id="view-deals-btn">
-          Check Out Deals
-        </button>
-      </div>
-    </div>
-    
+    <<div id="dealsPopup" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+">
+  <div style="
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      padding: 32px;
+      width: 100%;
+      max-width: 450px;
+      transform: scale(0.9);
+      opacity: 0;
+      animation: fadeIn 0.4s ease-in-out forwards;
+  ">
+    <span id="closePopup" style="
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 28px;
+        color: #4a4a4a;
+        cursor: pointer;
+        transition: color 0.2s;
+    " onmouseover="this.style.color='#2d2d2d'" onmouseout="this.style.color='#4a4a4a'">&times;</span>
+    <h2 style="
+        font-size: 28px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 16px;
+        text-align: center;
+    ">Exclusive Deals and Offers!</h2>
+    <p style="
+        color: #555555;
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;
+    ">
+      Get the best deals on flights, hotels, and travel packages. Don't miss out on our limited-time discounts. Plan your trip now!
+    </p>
+    <button style="
+        background-color: #1d72b8; /* Primary color */
+        color: white;
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.2s;
+        outline: none;
+        display: block;
+        margin: 0 auto; /* Center the button */
+    " 
+    onmouseover="this.style.backgroundColor='#155a8a'; this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.backgroundColor='#1d72b8'; this.style.transform='scale(1)'"
+    onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
+      Check Out Deals
+    </button>
+  </div>
+</div>
+
+<style>
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+</style>
+
+
+  
     <script>
       // script.js
       window.onscroll = function () {
@@ -788,5 +917,68 @@
         window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
       };
     </script>
+    <!-- Add this at the end of the body, just before the closing </body> tag -->
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Submit the form data using fetch
+        fetch(this.action, {
+          method: 'POST',
+          body: new FormData(this),
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          // Show the confirmation popup
+          document.getElementById('confirmationPopup').style.display = 'block';
+          // Reset the form
+          this.reset();
+        }).catch(error => {
+          console.error('Error:', error);
+          // Still show the confirmation popup even if there's an error
+          document.getElementById('confirmationPopup').style.display = 'block';
+        });
+      });
+
+      function closePopup() {
+        document.getElementById('confirmationPopup').style.display = 'none';
+      }
+    </script>
+    <style>
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .popup-content h2 {
+        margin-top: 0;
+      }
+
+      .popup-content button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
   </body>
 </html>
