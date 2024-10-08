@@ -8,7 +8,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="RatingStyle.css">
+    <link rel="stylesheet" href="RatingStyle.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,127 +28,125 @@
     <title>BuddyTrail</title>
     <style>
       * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-.container {
-    display: flex;
-    align-items: flex-start; /* Align items at the start of the container */
-    justify-content: space-between; /* Space between elements */
-    gap: 20px; /* Optional gap between form and rating section */
-    height: auto; /* Adjust height if necessary */
-}
-.form-section {
-    width: 70%; /* Adjust width as needed */
-}
-.rating-wrap {
-    width: 30%; /* Adjust width as needed */
-    text-align: left;
-}
+      .container {
+        display: flex;
+        align-items: flex-start; /* Align items at the start of the container */
+        justify-content: space-between; /* Space between elements */
+        gap: 20px; /* Optional gap between form and rating section */
+        height: auto; /* Adjust height if necessary */
+      }
+      .form-section {
+        width: 70%; /* Adjust width as needed */
+      }
+      .rating-wrap {
+        width: 30%; /* Adjust width as needed */
+        text-align: left;
+      }
 
-.center {
-    width: auto;
-    display: inline-flex; /* Align stars and rating count in a row */
-    align-items: center;
-    gap: 10px; /* Add some space between the stars and the count */
-}
+      .center {
+        width: auto;
+        display: inline-flex; /* Align stars and rating count in a row */
+        align-items: center;
+        gap: 10px; /* Add some space between the stars and the count */
+      }
 
+      #rating-value {
+        font-size: 1.2rem; /* Adjust font size */
+        font-weight: bold;
+        color: black; /* Optional: change the color to match the theme */
+      }
 
-#rating-value {
-    font-size: 1.2rem; /* Adjust font size */
-    font-weight: bold;
-    color: black; /* Optional: change the color to match the theme */
-}
+      .rating {
+        border: none;
+        float: right;
+      }
 
-.rating {
-    border: none;
-    float:right;
-}
+      .rating > input {
+        display: none;
+      }
 
-.rating > input {
-    display: none;
-}
+      .rating > label:before {
+        content: "\f005";
+        font-family: FontAwesome;
+        margin: 5px;
+        font-size: 1.5rem;
+        display: inline-block;
+        cursor: pointer;
+      }
 
-.rating > label:before {
-    content: '\f005';
-    font-family: FontAwesome;
-    margin: 5px;
-    font-size: 1.5rem;
-    display: inline-block;
-    cursor: pointer;
-}
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+        cursor: pointer;
+      }
 
-.rating > .half:before {
-    content: '\f089';
-    position: absolute;
-    cursor: pointer;
-}
+      .rating > label {
+        color: #ddd; /* Empty stars initially */
+        float: right;
+        cursor: pointer;
+      }
 
-.rating > label {
-    color: #ddd; /* Empty stars initially */
-    float: right;
-    cursor: pointer;
-}
+      /* Filled stars on hover and selection */
+      .rating > input:checked ~ label,
+      .rating:not(:checked) > label {
+        color: #ddd; /* Keep stars empty until interaction */
+      }
 
-/* Filled stars on hover and selection */
-.rating > input:checked ~ label,
-.rating:not(:checked) > label {
-    color: #ddd; /* Keep stars empty until interaction */
-}
+      .rating > input:checked ~ label,
+      .rating > input:checked ~ label:hover,
+      .rating > input:checked ~ label:hover ~ label {
+        color: rgb(230, 166, 17); /* Green for filled stars */
+      }
 
-.rating > input:checked ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
-}
-
-.rating > label:hover ~ label,
-.rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
-}
+      .rating > label:hover ~ label,
+      .rating > label:hover {
+        color: rgb(230, 166, 17); /* Green hover effect */
+      }
       .chatbot-container {
-          position: fixed;
-          bottom: 20px; /* Adjust as needed */
-          right: 20px; /* Adjust as needed */
-          z-index: 1000; /* Ensure it appears above other elements */
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other elements */
       }
 
       .chatbot-button {
-          background-color: #007bff; /* Change to your preferred color */
-          border: none;
-          border-radius: 50%;
-          padding: 5px; /* Smaller padding */
-          cursor: pointer;
-          position: relative;
-          width: 50px; /* Adjusted size */
-          height: 50px; /* Adjusted size */
+        background-color: #007bff; /* Change to your preferred color */
+        border: none;
+        border-radius: 50%;
+        padding: 5px; /* Smaller padding */
+        cursor: pointer;
+        position: relative;
+        width: 50px; /* Adjusted size */
+        height: 50px; /* Adjusted size */
       }
 
       .chatbot-button img {
-          width: 30px; /* Adjusted image size */
-          height: 30px; /* Adjusted image size */
+        width: 30px; /* Adjusted image size */
+        height: 30px; /* Adjusted image size */
       }
 
       .tooltip-text {
-          display: none; /* Hide by default */
-          position: absolute;
-          bottom: 100%; /* Position above the button */
-          right: 200%;
-          transform: translateX(50%);
-          background-color: #333; /* Background color for tooltip */
-          color: #fff; /* Tooltip text color */
-          padding: 5px;
-          border-radius: 5px;
-          white-space: nowrap; /* Prevent text from wrapping */
+        display: none; /* Hide by default */
+        position: absolute;
+        bottom: 100%; /* Position above the button */
+        right: 200%;
+        transform: translateX(50%);
+        background-color: #333; /* Background color for tooltip */
+        color: #fff; /* Tooltip text color */
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap; /* Prevent text from wrapping */
       }
 
       .chatbot-button:hover .tooltip-text {
-          display: block; /* Show on hover */
+        display: block; /* Show on hover */
       }
-      </style>
-
+    </style>
   </head>
   <body class="light-mode">
     <button id="scrollTopBtn" class="scroll-top-btn">
@@ -161,6 +159,7 @@
       <div id="google_translate_element"></div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       // Initialization function
       function googleTranslateElementInit() {
@@ -193,22 +192,43 @@
             translateElement.style.display = "none";
           }
         });
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+        $("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
     </script>
 
     <script src="script.js"></script>
     <header class="main-head">
       <nav>
-        <img src="img\logo.png" id="logo-web">
+        <img src="img\logo.png" id="logo-web" />
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
-          <li><a href="#home" class='navhover '>Home</a></li>
-          <li><a href="#locations" class='navhover '>Location</a></li>
-          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
-          <li><a href="#reviews" class='navhover'>Reviews</a></li>
-          <li><a href="#benefits" class='navhover'>Benefits</a></li>
-          <li><a href="#contact" class='navhover'>Contact</a></li>
-          <li><a href="signUp.html" class='navhover'>Sign In</a></li>
-
+        <ul>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="#locations" class="navhover">Location</a></li>
+          <li>
+            <a href="#itineraries " class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li><a href="signUp.html" class="navhover">Sign In</a></li>
         </ul>
         <!-- Toggle Button -->
         <button class="mode-toggle" id="modeToggle">
@@ -219,18 +239,22 @@
     <div id="progress-bar"></div>
     <!-- funcioning of progress bar -->
     <script>
-      window.addEventListener('scroll', function() {
-          // Calculate the scroll progress
-          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          const scrollPercent = (scrollTop / scrollHeight) * 100;
-  
-          // Update the width of the progress bar
-          document.getElementById('progress-bar').style.width = scrollPercent + '%';
+      window.addEventListener("scroll", function () {
+        // Calculate the scroll progress
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+        // Update the width of the progress bar
+        document.getElementById("progress-bar").style.width =
+          scrollPercent + "%";
       });
-  </script>
+    </script>
     <main>
-      <section class="hero">
+      <section class="hero" id="home">
         <h2>Travel Beyond Limits</h2>
         <h3>
           Connect, Explore, and Discover Together. <br />
@@ -322,7 +346,7 @@
               luxury at an affordable price!
             </p>
             <p>
-              <strong>Price:</strong> ₹10,500 
+              <strong>Price:</strong> ₹10,500
               <span class="discount"> ₹15,000</span> per night
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
@@ -336,7 +360,7 @@
               3-night package. All-inclusive deal!
             </p>
             <p>
-              <strong>Price:</strong> ₹40,000 
+              <strong>Price:</strong> ₹40,000
               <span class="discount">₹50,000</span>
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
@@ -364,7 +388,7 @@
               trekking, and more. Discount available for groups!
             </p>
             <p>
-              <strong>Price:</strong> ₹48,000  
+              <strong>Price:</strong> ₹48,000
               <span class="discount">₹60,000</span> per person
             </p>
             <button onclick="window.location.href='#book-now'">Book Now</button>
@@ -475,10 +499,15 @@
             /><br /><br />
           </div>
           <div style="display: flex">
-            <label style="font-size: 1.5em; margin-top: 7px;" for="vehicle-type"
+            <label style="font-size: 1.5em; margin-top: 7px" for="vehicle-type"
               >Vehicle Type:</label
             >
-            <select id="vehicle-type" name="vehicle-type" style="width: 150px;" required >
+            <select
+              id="vehicle-type"
+              name="vehicle-type"
+              style="width: 150px"
+              required
+            >
               <option value="cab">Cab</option>
               <option value="auto">Auto</option></select
             ><br /><br />
@@ -595,7 +624,11 @@
           <header class="form-head">
             <h2>Contact US</h2>
           </header>
-          <form id="contactForm" action="https://formspree.io/f/mqkvkayy" method="POST">
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/mqkvkayy"
+            method="POST"
+          >
             <div class="name-form">
               <label for="name">Name : </label>
               <input id="name" type="text" name="name" required />
@@ -610,10 +643,13 @@
       </section>
 
       <!-- Add this custom popup HTML -->
-      <div id="confirmationPopup" class="popup" style="display: none;">
+      <div id="confirmationPopup" class="popup" style="display: none">
         <div class="popup-content">
           <h2>Thank You!</h2>
-          <p>Your message has been sent successfully. We will get back to you soon.</p>
+          <p>
+            Your message has been sent successfully. We will get back to you
+            soon.
+          </p>
           <button onclick="closePopup()">Close</button>
         </div>
       </div>
@@ -621,45 +657,45 @@
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
       <div class="revieww">
-      <div class="review-form">
-        <h2>Rate your experience</h2>
-        <p class="review-p"> 
-          Read what others have to say about their experiences with various
-          destinations, hotels, flights, and activities. Share your own reviews
-          and help fellow travelers make informed decisions.
-        </p>
-  
-        <div  style="margin-top: 20px">
-          <form class="form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
-  
-            <label for="destination">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required />
-  
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>
-  
-            <label for="review">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
-            <label for="complaint">Complaint (if any):</label>
-            <textarea
-              id="complaint"
-              name="complaint"
-              rows="3"
-              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
-            ></textarea>
-  
-<div class="form-button">            <button type="submit">Send</button>
-</div>          </form>
+        <div class="review-form">
+          <h2>Rate your experience</h2>
+          <p class="review-p">
+            Read what others have to say about their experiences with various
+            destinations, hotels, flights, and activities. Share your own
+            reviews and help fellow travelers make informed decisions.
+          </p>
+
+          <div style="margin-top: 20px">
+            <form class="form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="destination">Destination/Service:</label>
+              <input type="text" id="destination" name="destination" required />
+
+              <label for="rating">Rating:</label>
+              <select id="rating" name="rating">
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+              </select>
+
+              <label for="review">Your Review:</label>
+              <textarea id="review" name="review" rows="4" required></textarea>
+              <label for="complaint">Complaint (if any):</label>
+              <textarea
+                id="complaint"
+                name="complaint"
+                rows="3"
+                placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"
+              ></textarea>
+
+              <div class="form-button"><button type="submit">Send</button></div>
+            </form>
+          </div>
         </div>
-      </div>
       </div>
 
       <div class="reviews-container">
@@ -667,86 +703,116 @@
         <div class="reviews-list">
           <div class="review-card">
             <div class="review-header">
-              <img src="https://i.pravatar.cc/100?img=1" alt="John Doe" class="reviewer-avatar">
+              <img
+                src="https://i.pravatar.cc/100?img=1"
+                alt="John Doe"
+                class="reviewer-avatar"
+              />
               <div class="reviewer-info">
                 <h3 class="reviewer-name">John Doe</h3>
                 <p class="reviewer-location">Paris</p>
               </div>
             </div>
             <div class="review-rating">
-              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="star-rating" aria-label="5 out of 5 stars"
+                >★★★★★</span
+              >
             </div>
             <p class="review-text">
-              Amazing experience in Paris! The Eiffel Tower was breathtaking, and
-              the food was incredible. Highly recommend!
+              Amazing experience in Paris! The Eiffel Tower was breathtaking,
+              and the food was incredible. Highly recommend!
             </p>
           </div>
-      
+
           <div class="review-card">
             <div class="review-header">
-              <img src="https://i.pravatar.cc/100?img=2" alt="Rahul Mehta" class="reviewer-avatar">
+              <img
+                src="https://i.pravatar.cc/100?img=2"
+                alt="Rahul Mehta"
+                class="reviewer-avatar"
+              />
               <div class="reviewer-info">
                 <h3 class="reviewer-name">Rahul Mehta</h3>
                 <p class="reviewer-location">Dubai</p>
               </div>
             </div>
             <div class="review-rating">
-              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+              <span class="star-rating" aria-label="4 out of 5 stars"
+                >★★★★☆</span
+              >
             </div>
             <p class="review-text">
               Dubai is a must-visit destination! The Burj Khalifa and desert
               safari were highlights of the trip. Just a bit expensive.
             </p>
           </div>
-      
+
           <div class="review-card">
             <div class="review-header">
-              <img src="https://i.pravatar.cc/100?img=3" alt="Emily Johnson" class="reviewer-avatar">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Emily Johnson"
+                class="reviewer-avatar"
+              />
               <div class="reviewer-info">
                 <h3 class="reviewer-name">Emily Johnson</h3>
                 <p class="reviewer-location">London</p>
               </div>
             </div>
             <div class="review-rating">
-              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="star-rating" aria-label="5 out of 5 stars"
+                >★★★★★</span
+              >
             </div>
             <p class="review-text">
-              London's history and architecture are stunning. The Tower of London
-              and Buckingham Palace were fascinating to explore.
+              London's history and architecture are stunning. The Tower of
+              London and Buckingham Palace were fascinating to explore.
             </p>
           </div>
-      
+
           <div class="review-card">
             <div class="review-header">
-              <img src="https://i.pravatar.cc/100?img=4" alt="Michael Lee" class="reviewer-avatar">
+              <img
+                src="https://i.pravatar.cc/100?img=4"
+                alt="Michael Lee"
+                class="reviewer-avatar"
+              />
               <div class="reviewer-info">
                 <h3 class="reviewer-name">Michael Lee</h3>
                 <p class="reviewer-location">Goa</p>
               </div>
             </div>
             <div class="review-rating">
-              <span class="star-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+              <span class="star-rating" aria-label="4 out of 5 stars"
+                >★★★★☆</span
+              >
             </div>
             <p class="review-text">
               Goa's beaches are beautiful, and the nightlife is vibrant. Great
               place for a fun and laid-back vacation.
             </p>
           </div>
-      
+
           <div class="review-card">
             <div class="review-header">
-              <img src="https://i.pravatar.cc/100?img=5" alt="Aditi Patel" class="reviewer-avatar">
+              <img
+                src="https://i.pravatar.cc/100?img=5"
+                alt="Aditi Patel"
+                class="reviewer-avatar"
+              />
               <div class="reviewer-info">
                 <h3 class="reviewer-name">Aditi Patel</h3>
                 <p class="reviewer-location">New York</p>
               </div>
             </div>
             <div class="review-rating">
-              <span class="star-rating" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="star-rating" aria-label="5 out of 5 stars"
+                >★★★★★</span
+              >
             </div>
             <p class="review-text">
-              New York City is amazing! Central Park, Times Square, and the Statue
-              of Liberty were all incredible. Highly recommend!
+              New York City is amazing! Central Park, Times Square, and the
+              Statue of Liberty were all incredible. Highly recommend!
             </p>
           </div>
         </div>
@@ -756,10 +822,10 @@
     <a href="chatbot.html">
       <div class="fixed bottom-0 right-2 chatbot-container">
         <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot">
+          <img class="h-20" src="chatbot.gif" alt="chatbot" />
           <span class="tooltip-text">
-            Welcome to Buddytrail! <br>
-            How can I help You? ^_^ 
+            Welcome to Buddytrail! <br />
+            How can I help You? ^_^
           </span>
         </button>
       </div>
@@ -767,41 +833,43 @@
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-
     <footer>
       <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>We are a team of passionate developers creating amazing web experiences.</p>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We are a team of passionate developers creating amazing web
+            experiences.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
+        </div>
       </div>
       <div class="footer-bottom">
-          <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+        <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
       </div>
-  </footer>
+    </footer>
     <!-- Deals and Offers Popup -->
     <div id="dealsPopup" class="popup">
       <div class="popup-content">
@@ -819,8 +887,11 @@
       </div>
     </div>
     <!-- this script is for twitter icon  starts -->
- <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
- <!-- this script is for twitter icon  ends -->
+    <script
+      src="https://kit.fontawesome.com/856f4a44d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script is for twitter icon  ends -->
     <script>
       // script.js
       window.onscroll = function () {
@@ -846,30 +917,36 @@
     </script>
     <!-- Add this at the end of the body, just before the closing </body> tag -->
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Submit the form data using fetch
-        fetch(this.action, {
-          method: 'POST',
-          body: new FormData(this),
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          // Show the confirmation popup
-          document.getElementById('confirmationPopup').style.display = 'block';
-          // Reset the form
-          this.reset();
-        }).catch(error => {
-          console.error('Error:', error);
-          // Still show the confirmation popup even if there's an error
-          document.getElementById('confirmationPopup').style.display = 'block';
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Submit the form data using fetch
+          fetch(this.action, {
+            method: "POST",
+            body: new FormData(this),
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              // Show the confirmation popup
+              document.getElementById("confirmationPopup").style.display =
+                "block";
+              // Reset the form
+              this.reset();
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              // Still show the confirmation popup even if there's an error
+              document.getElementById("confirmationPopup").style.display =
+                "block";
+            });
         });
-      });
 
       function closePopup() {
-        document.getElementById('confirmationPopup').style.display = 'none';
+        document.getElementById("confirmationPopup").style.display = "none";
       }
     </script>
     <style>
