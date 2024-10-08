@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-between; /* Space between elements */
+    gap: 20px; /* Optional gap between form and rating section */
+    height: auto; /* Adjust height if necessary */
+}
+.form-section {
+    width: 70%; /* Adjust width as needed */
+}
+.rating-wrap {
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.center {
+    width: auto;
+    display: inline-flex; /* Align stars and rating count in a row */
+    align-items: center;
+    gap: 10px; /* Add some space between the stars and the count */
+}
+
+
+#rating-value {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold;
+    color: black; /* Optional: change the color to match the theme */
+}
+
+.rating {
+    border: none;
+    float:right;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before {
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating > label {
+    color: #ddd; /* Empty stars initially */
+    float: right;
+    cursor: pointer;
+}
+
+/* Filled stars on hover and selection */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label {
+    color: #ddd; /* Keep stars empty until interaction */
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label {
+    color: rgb(230, 166, 17); /* Green for filled stars */
+}
+
+.rating > label:hover ~ label,
+.rating > label:hover {
+    color:rgb(230, 166, 17); /* Green hover effect */
+}
