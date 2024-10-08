@@ -1388,9 +1388,9 @@ justify-content: center;
   color: black;
 }
 .description {
-  color: #4b5563;
+  color: #000000;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 /* Contact Container */
@@ -1423,10 +1423,17 @@ justify-content: center;
 .info-list {
   list-style: none;
   padding: 0;
+
+  background-color: #94949453;
+  border-radius: 10px;
+  padding: 10px 0 10px 20px;
+
 }
 
 .info-item {
   display: flex;
+  justify-content: start;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 
