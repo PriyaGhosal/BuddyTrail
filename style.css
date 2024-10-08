@@ -78,6 +78,44 @@ button {
 }
 
 
+/* main */
+/* Header Styles */
+/* .main-head {
+  padding: 15px;
+  background-color: #2C3E50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-head ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-head ul li {
+  display: inline;
+}
+
+.main-head ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+} */
+ /* end */
+
 .hero {
   min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
