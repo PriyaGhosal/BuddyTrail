@@ -109,46 +109,50 @@
     color:rgb(230, 166, 17); /* Green hover effect */
 }
       .chatbot-container {
-          position: fixed;
-          bottom: 20px; /* Adjust as needed */
-          right: 20px; /* Adjust as needed */
-          z-index: 1000; /* Ensure it appears above other elements */
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other elements */
       }
 
       .chatbot-button {
-          background-color: #007bff; /* Change to your preferred color */
-          border: none;
-          border-radius: 50%;
-          padding: 5px; /* Smaller padding */
-          cursor: pointer;
-          position: relative;
-          width: 50px; /* Adjusted size */
-          height: 50px; /* Adjusted size */
+        background-color: #007bff; /* Change to your preferred color */
+        border: none;
+        border-radius: 50%;
+        padding: 5px; /* Smaller padding */
+        cursor: pointer;
+        position: relative;
+        width: 50px; /* Adjusted size */
+        height: 50px; /* Adjusted size */
       }
 
       .chatbot-button img {
-          width: 30px; /* Adjusted image size */
-          height: 30px; /* Adjusted image size */
+        width: 30px; /* Adjusted image size */
+        height: 30px; /* Adjusted image size */
       }
 
       .tooltip-text {
-          display: none; /* Hide by default */
-          position: absolute;
-          bottom: 100%; /* Position above the button */
-          right: 200%;
-          transform: translateX(50%);
-          background-color: #333; /* Background color for tooltip */
-          color: #fff; /* Tooltip text color */
-          padding: 5px;
-          border-radius: 5px;
-          white-space: nowrap; /* Prevent text from wrapping */
+        display: none; /* Hide by default */
+        position: absolute;
+        bottom: 100%; /* Position above the button */
+        right: 50%;
+        transform: translateX(50%);
+        background-color: #333; /* Background color for tooltip */
+        color: #fff; /* Tooltip text color */
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap; /* Prevent text from wrapping */
       }
 
       .chatbot-button:hover .tooltip-text {
-          display: block; /* Show on hover */
+        display: block; /* Show on hover */
       }
-      </style>
-
+      .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    </style>
   </head>
   <body class="light-mode">
     <button id="scrollTopBtn" class="scroll-top-btn">
@@ -198,37 +202,46 @@
     <script src="script.js"></script>
     <header class="main-head">
       <nav>
-        <img src="img\logo.png" id="logo-web">
+        <div class="logo" >
+          <img src="img\logo.png" id="logo-web">
         <h1 id="logo">BuddyTrail</h1>
-        <ul >
-          <li><a href="#home" class='navhover '>Home</a></li>
-          <li><a href="#locations" class='navhover '>Location</a></li>
-          <li><a href="#itineraries " class='navhover'>Travel Itineraries</a></li>
-          <li><a href="#reviews" class='navhover'>Reviews</a></li>
-          <li><a href="#benefits" class='navhover'>Benefits</a></li>
-          <li><a href="#contact" class='navhover'>Contact</a></li>
-          <li><a href="signUp.html" class='navhover'>Sign In</a></li>
-
+        </div>
+        <ul>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="#locations" class="navhover">Location</a></li>
+          <li>
+            <a href="#itineraries " class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li><a href="signUp.html" class="navhover">Sign In</a></li>
         </ul>
         <!-- Toggle Button -->
-        <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow">☀️</span>
-        </button>
+        <div>
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow">☀️</span>
+          </button>
+        </div>
       </nav>
     </header>
     <div id="progress-bar"></div>
     <!-- funcioning of progress bar -->
     <script>
-      window.addEventListener('scroll', function() {
-          // Calculate the scroll progress
-          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          const scrollPercent = (scrollTop / scrollHeight) * 100;
-  
-          // Update the width of the progress bar
-          document.getElementById('progress-bar').style.width = scrollPercent + '%';
+      window.addEventListener("scroll", function () {
+        // Calculate the scroll progress
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+        // Update the width of the progress bar
+        document.getElementById("progress-bar").style.width =
+          scrollPercent + "%";
       });
-  </script>
+    </script>
     <main>
       <section class="hero">
         <h2>Travel Beyond Limits</h2>
@@ -756,17 +769,16 @@
     <a href="chatbot.html">
       <div class="fixed bottom-0 right-2 chatbot-container">
         <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot">
+          <img class="h-20" src="chatbot.gif" alt="chatbot" />
           <span class="tooltip-text">
-            Welcome to Buddytrail! <br>
-            How can I help You? ^_^ 
+            Welcome to Buddytrail! <br />
+            How can I help You? ^_^
           </span>
         </button>
       </div>
     </a>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-
 
     <footer>
       <div class="footer-container">
@@ -823,6 +835,18 @@
  <!-- this script is for twitter icon  ends -->
     <script>
       // script.js
+
+      // change the color of navbar while  scrolling to make it visible
+
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".main-head");
+        if (window.scrollY > 0) {
+          navbar.classList.add("sticky"); // Add class when scrolled
+        } else {
+          navbar.classList.remove("sticky"); // Remove class when at the top
+        }
+      });
+
       window.onscroll = function () {
         toggleScrollTopButton();
       };
