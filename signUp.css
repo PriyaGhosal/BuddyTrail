@@ -11,7 +11,12 @@ body {
     color: #333; /* Dark text for readability */
 }
 
-
+.main-head {
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
 
 .container {
     display: flex;
