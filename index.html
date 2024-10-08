@@ -430,134 +430,47 @@
       </section>
 
       <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
-
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-          "
-        >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option></select
-            ><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
+      <section id="cab-booking" class="cab-booking-section" style="display: flex; flex-direction: column; align-items: center; margin-top: 20px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);">
+        <h2 class="section-title" style="font-size: 3.5em; font-weight: 700; margin: 10px 0 15px; color: #007bff;">Book a Cab or Auto</h2>
+        <p class="section-description" style="font-size: 1.8em; color: #6c757d; margin-bottom: 30px;">Book a cab or auto with ease</p>
+      
+        <form action="/book-cab" method="POST" class="booking-form" style="display: flex; flex-direction: column; width: 100%; max-width: 500px;">
+          <fieldset style="border: none; padding: 0;">
+            <legend style="font-size: 2.5em; margin-bottom: 10px; color: #343a40;">Booking Details</legend>
+      
+            <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column;">
+              <label for="pickup-location" style="font-size: 1.6em; margin-bottom: 5px; color: #343a40;">Pickup Location:</label>
+              <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required style="height: 40px; padding: 8px; border: 2px solid #007bff; border-radius: 4px; font-size: 1em; transition: border-color 0.3s; outline: none;" onfocus="this.style.borderColor='#0056b3';" onblur="this.style.borderColor='#007bff';"/>
+            </div>
+      
+            <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column;">
+              <label for="drop-location" style="font-size: 1.6em; margin-bottom: 5px; color: #343a40;">Drop Location:</label>
+              <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required style="height: 40px; padding: 8px; border: 2px solid #007bff; border-radius: 4px; font-size: 1em; transition: border-color 0.3s; outline: none;" onfocus="this.style.borderColor='#0056b3';" onblur="this.style.borderColor='#007bff';"/>
+            </div>
+      
+            <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column;">
+              <label for="vehicle-type" style="font-size: 1.6em; margin-bottom: 5px; color: #343a40;">Vehicle Type:</label>
+              <select id="vehicle-type" name="vehicle-type" required style="height: 40px; padding: 8px; border: 2px solid #007bff; border-radius: 4px; font-size: 1em; transition: border-color 0.3s; outline: none;" onfocus="this.style.borderColor='#0056b3';" onblur="this.style.borderColor='#007bff';">
+                <option value="cab">Cab</option>
+                <option value="auto">Auto</option>
+              </select>
+            </div>
+      
+            <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column;">
+              <label for="travel-date" style="font-size: 1.6em; margin-bottom: 5px; color: #343a40;">Travel Date:</label>
+              <input type="date" id="travel-date" name="travel-date" required style="height: 40px; padding: 8px; border: 2px solid #007bff; border-radius: 4px; font-size: 1em; transition: border-color 0.3s; outline: none;" onfocus="this.style.borderColor='#0056b3';" onblur="this.style.borderColor='#007bff';"/>
+            </div>
+      
+            <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column;">
+              <label for="travel-time" style="font-size: 1.6em; margin-bottom: 5px; color: #343a40;">Travel Time:</label>
+              <input type="time" id="travel-time" name="travel-time" required style="height: 40px; padding: 8px; border: 2px solid #007bff; border-radius: 4px; font-size: 1em; transition: border-color 0.3s; outline: none;" onfocus="this.style.borderColor='#0056b3';" onblur="this.style.borderColor='#007bff';"/>
+            </div>
+      
+            <button type="submit" class="submit-button" style="background-color: #007bff; color: white; border: none; width: 100%; border-radius: 4px; padding: 10px; cursor: pointer; font-size: 1.1em; transition: background-color 0.3s;">Book now</button>
+          </fieldset>
         </form>
       </section>
-
+      
       <!-- recommendations -->
       <section id="recommendations" class="recommendations-section">
         <h2>Personalized Recommendations</h2>
