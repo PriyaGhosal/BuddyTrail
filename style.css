@@ -391,6 +391,91 @@ nav ul a:hover:after{
   padding: 1rem 3rem;
 }
 
+/* Cab Booking Section Styles */
+.cab-booking-section  {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh; /* Minimum height to fill the viewport */
+  padding: 20px; /* Padding around the section */
+  background-color: rgba(255, 255, 255, 0.738); /* Translucent background for section */
+}
+
+.booking-container {
+  width: 100%;
+  max-width: 500px; /* Set a max width for the container */
+  text-align: center; /* Centering the text */
+  padding: 20px; /* Add padding inside the container */
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 10px 0; /* Margin adjustment */
+  color: #333; /* Heading color */
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #666; /* Paragraph color */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+label {
+  font-size: 1.2em;
+  color: #333; /* Label color */
+}
+
+input,
+select {
+  height: 35px;
+  width: 100%; /* Full width */
+  padding: 5px;
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  transition: border 0.3s; /* Smooth transition */
+}
+
+input:focus {
+  border: 1px solid #007bff; /* Border color on focus */
+}
+
+/* Button Styles */
+.book-btn {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.2em; /* Button text size */
+  width: 100%; /* Full width */
+  max-width: 300px; /* Max width for button */
+  margin-top: 10px; /* Margin above button */
+}
+
+.book-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 /**** FOOTER ****/
 
 /* Footer Styles */
