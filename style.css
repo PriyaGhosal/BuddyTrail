@@ -1009,7 +1009,7 @@ body.dark-mode {
 
 
 .main-head {
-  background: crimson; /* Gradient Background */
+  background: linear-gradient( #2193b0,#5dcde6,#0da0c8); /* Gradient Background */
   color: #fff;
   padding: 15px 30px;
  
@@ -1026,7 +1026,7 @@ nav {
   font-size: 40px;
   font-weight: bold;
   font-family: "Pattaya", sans-serif;
-  color: #fdf5f9;
+  color: #e61091;
   transition: transform 0.3s ease-in-out;
   margin-left: 20px;
 }
