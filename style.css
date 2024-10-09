@@ -520,9 +520,9 @@ input:focus {
 
 
 /**** FOOTER ****/
-
+footer
 /* Footer Styles */
-footer {
+ {
     background: linear-gradient(135deg, #343a40, #212529);
     color: #ffffff;
     padding: 40px 0;
