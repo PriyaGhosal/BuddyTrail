@@ -448,10 +448,3 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
-//Functionality for 'Book-Now' button in travel packages
-document.querySelectorAll('.book-now-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const packageName = this.getAttribute('data-package');
-        window.location.href = `./packages/${packageName}`;
-    });
-});
