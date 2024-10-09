@@ -154,12 +154,21 @@ nav {
 }
 
 .mode-toggle {
-  margin-left: 20px;
-  background: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   border: none;
-  color: white;
-  font-size: 1.5em;
+  background-color:white;
+  cursor: pointer;
+  padding: 5px;
+  
 }
+.mode-toggle img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+  
+}
+
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
@@ -716,6 +725,7 @@ body.dark-mode {
 /* Sun and moon icons */
 .sun-icon {
   color: #ffd700;
+  size: 20px;
 }
 
 .moon-icon {
