@@ -207,161 +207,6 @@
       .getElementById("languageToggle")
       .addEventListener("click", function () {
         var translateElement = document.getElementById(
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="RatingStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/icons/airplane.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <title>BuddyTrail</title>
-    <style>
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    display: flex;
-    align-items: flex-start; /* Align items at the start of the container */
-    justify-content: space-between; /* Space between elements */
-    gap: 20px; /* Optional gap between form and rating section */
-    height: auto; /* Adjust height if necessary */
-}
-.form-section {
-    width: 70%; /* Adjust width as needed */
-}
-.rating-wrap {
-    width: 30%; /* Adjust width as needed */
-    text-align: left;
-}
-
-.center {
-    width: auto;
-    display: inline-flex; /* Align stars and rating count in a row */
-    align-items: center;
-    gap: 10px; /* Add some space between the stars and the count */
-}
-
-
-#rating-value {
-    font-size: 1.2rem; /* Adjust font size */
-    font-weight: bold;
-    color: black; /* Optional: change the color to match the theme */
-}
-
-.rating {
-    border: none;
-    float:right;
-}
-
-.rating > input {
-    display: none;
-}
-
-.rating > label:before {
-    content: '\f005';
-    font-family: FontAwesome;
-    margin: 5px;
-    font-size: 1.5rem;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.rating > .half:before {
-    content: '\f089';
-    position: absolute;
-    cursor: pointer;
-}
-
-.rating > label {
-    color: #ddd; /* Empty stars initially */
-    float: right;
-    cursor: pointer;
-}
-
-/* Filled stars on hover and selection */
-.rating > input:checked ~ label,
-.rating:not(:checked) > label {
-    color: #ddd; /* Keep stars empty until interaction */
-}
-
-.rating > input:checked ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
-}
-
-.rating > label:hover ~ label,
-.rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
-}
-      .chatbot-container {
-        position: fixed;
-        bottom: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
-        z-index: 1000; /* Ensure it appears above other elements */
-      }
-
-      .chatbot-button {
-        background-color: #007bff; /* Change to your preferred color */
-        border: none;
-        border-radius: 50%;
-        padding: 5px; /* Smaller padding */
-        cursor: pointer;
-        position: relative;
-        width: 50px; /* Adjusted size */
-        height: 50px; /* Adjusted size */
-      }
-
-      .chatbot-button img {
-        width: 30px; /* Adjusted image size */
-        height: 30px; /* Adjusted image size */
-      }
-
-      .tooltip-text {
-        display: none; /* Hide by default */
-        position: absolute;
-        bottom: 100%; /* Position above the button */
-        right: 50%;
-        transform: translateX(50%);
-        background-color: #333; /* Background color for tooltip */
-        color: #fff; /* Tooltip text color */
-        padding: 5px;
-        border-radius: 5px;
-        white-space: nowrap; /* Prevent text from wrapping */
-      }
-
-      .chatbot-button:hover .tooltip-text {
-        display: block; /* Show on hover */
-      }
-      .logo{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-    </style>
-  </head>
   <body class="light-mode">
 
     <div id="progressBarContainer">
@@ -677,169 +522,45 @@
       </div>
     </section>
 
-    <!-- Cab or Auto Booking -->
-    <section id="cab-booking" class="cab-booking-section light-mode">
-      <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
-        <p>Book a cab or auto with ease</p>
-        <form action="/book-cab" method="POST">
-          <div class="form-group">
-            <label for="pickup-location">Pickup Location:</label>
-            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
-          </div>
-          <div class="form-group">
-            <label for="drop-location">Drop Location:</label>
-            <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
-          </div>
-          <div class="form-group">
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-=======
-      </section>
+    <section id="cab-booking" class="cab-booking-section">
+  <h2>Book a Cab or Auto</h2>
+  <p>Book a cab or auto with ease</p>
 
-      <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
+  <form action="/book-cab" method="POST">
+    <label for="pickup-location">Pickup Location:</label>
+    <input
+      type="text"
+      id="pickup-location"
+      name="pickup-location"
+      placeholder="Enter pickup location"
+      required
+    />
 
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-          "
-        >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
+    <label for="drop-location">Drop Location:</label>
+    <input
+      type="text"
+      id="drop-location"
+      name="drop-location"
+      placeholder="Enter drop location"
+      required
+    />
 
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
+    <label for="vehicle-type">Vehicle Type:</label>
+    <select id="vehicle-type" name="vehicle-type" required>
+      <option value="cab">Cab</option>
+      <option value="auto">Auto</option>
+    </select>
 
-          <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
-            <input type="date" id="travel-date" name="travel-date" required />
-          </div>
-          <div class="form-group">
-            <label for="travel-time">Travel Time:</label>
-            <input type="time" id="travel-time" name="travel-time" required />
-          </div>
-          <button class="book-btn" type="submit">Book now</button>
+    <label for="travel-date">Travel Date:</label>
+    <input type="date" id="travel-date" name="travel-date" required />
 
+    <label for="travel-time">Travel Time:</label>
+    <input type="time" id="travel-time" name="travel-time" required />
 
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
+    <input type="submit" value="Book Now" />
+  </form>
+</section>
 
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-
-        </form>
-      </div>
-    </section>
-    
 
 
     <!-- recommendations -->
