@@ -888,7 +888,8 @@ justify-content: center;
 .review-form input,
 .review-form select,
 .review-form textarea {
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   font-weight: 600;
   padding: 10px;
   font-size: 15px;
