@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -826,17 +826,22 @@
             <label for="destination">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
 
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>
+            <label>Rating:</label>
+            <div class="rating-container">
+              <div class="star-buttons">
+                <button type="button" class="star-btn" data-rating="5">☆</button>
+                <button type="button" class="star-btn" data-rating="4">☆</button>
+                <button type="button" class="star-btn" data-rating="3">☆</button>
+                <button type="button" class="star-btn" data-rating="2">☆</button>
+                <button type="button" class="star-btn" data-rating="1">☆</button>
+              </div>
+              <input type="hidden" id="rating" name="rating" required>
+              <div id="rating-value">0</div>
+            </div>
 
             <label for="review">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
+
             <label for="complaint">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
