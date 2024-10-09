@@ -150,6 +150,7 @@ A heartfelt thank you to the following individuals for their valuable contributi
             <td align="center">
                 <a href="https://github.com/yashksaini-coder">
                     <img src="https://avatars.githubusercontent.com/u/115717039?v=4" width="100;" alt="yashksaini-coder"/>
+
                     <br />
                     <sub><b>Yash Kumar Saini</b></sub>
                 </a>
@@ -159,13 +160,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <img src="https://avatars.githubusercontent.com/u/176757208?v=4" width="100;" alt="akhandpratap18"/>
                     <br />
                     <sub><b>Akhand Pratap Singh</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/yashksaini-coder">
-                    <img src="https://avatars.githubusercontent.com/u/115717039?v=4" width="100;" alt="yashksaini-coder"/>
-                    <br />
-                    <sub><b>Yash Kumar Saini</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -321,13 +315,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/swamimalode07">
-                    <img src="https://avatars.githubusercontent.com/u/139348491?v=4" width="100;" alt="swamimalode07"/>
-                    <br />
-                    <sub><b>Swami Malode</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Ananya-vastare">
                     <img src="https://avatars.githubusercontent.com/u/116643029?v=4" width="100;" alt="Ananya-vastare"/>
                     <br />
@@ -351,10 +338,10 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/yashksaini-coder">
-                    <img src="https://avatars.githubusercontent.com/u/115717039?v=4" width="100;" alt="yashksaini-coder"/>
+                <a href="https://github.com/sadafhukkeri">
+                    <img src="https://avatars.githubusercontent.com/u/157600170?v=4" width="100;" alt="sadafhukkeri"/>
                     <br />
-                    <sub><b>Yash Kumar Saini</b></sub>
+                    <sub><b>sadafhukkeri</b></sub>
                 </a>
             </td>
 		</tr>
@@ -528,6 +515,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Ahina Gangopadhyay</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Raj-Aditya-27">
                     <img src="https://avatars.githubusercontent.com/u/138434890?v=4" width="100;" alt="Raj-Aditya-27"/>
