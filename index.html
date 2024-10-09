@@ -288,52 +288,58 @@
       <header class="locations-head">
         <h2>The Perfect Travel Experience!</h2>
 
-      // Toggle button event
-      document
-        .getElementById("languageToggle")
-        .addEventListener("click", function () {
-          var translateElement = document.getElementById(
-            "google_translate_element"
-          );
-
-          // Toggle visibility
-          if (
-            translateElement.style.display === "none" ||
-            translateElement.style.display === ""
-          ) {
-            translateElement.style.display = "block";
-          } else {
-            translateElement.style.display = "none";
-          }
-        });
+    
     </script>
 
     <script src="script.js"></script>
     <header class="main-head">
-      <nav>
-        <div class="logo" >
-          <img src="img\logo.png" id="logo-web">
-        <h1 id="logo">BuddyTrail</h1>
-        </div>
-        <ul>
-          <li><a href="#home" class="navhover">Home</a></li>
-          <li><a href="#locations" class="navhover">Location</a></li>
-          <li>
-            <a href="#itineraries " class="navhover">Travel Itineraries</a>
-          </li>
-          <li><a href="#reviews" class="navhover">Reviews</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="#contact" class="navhover">Contact</a></li>
-          <li><a href="signUp.html" class="navhover">Sign In</a></li>
-        </ul>
-        <!-- Toggle Button -->
-        <div>
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow">☀️</span>
-          </button>
-        </div>
-      </nav>
-    </header>
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo">BuddyTrail</h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="#locations" class="navhover">Location</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="#benefits" class="navhover">Benefits</a></li>
+      <li><a href="#contact" class="navhover">Contact</a></li>
+      <li><a href="signUp.html" class="navhover">Sign In</a></li>
+    </ul>
+
+    <!-- Toggle Button -->
+    <button class="mode-toggle" id="modeToggle">
+      <span class="sun-icon glow">☀️</span>
+    </button>
+  </nav>
+</header>
+
+<!-- JS to handle hamburger and close button -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+    const closeBtn = document.getElementById("closeBtn");
+
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      navList.classList.remove("active");
+    });
+  });
+</script>
+
+
+
     <div id="progress-bar"></div>
     <!-- funcioning of progress bar -->
     <script>
