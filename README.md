@@ -222,6 +222,15 @@ A heartfelt thank you to the following individuals for their valuable contributi
             <td align="center">
                 <a href="https://github.com/Abankita">
                     <img src="https://avatars.githubusercontent.com/u/138569378?v=4" width="100;" alt="Abankita"/>
+
+                    <br />
+                    <sub><b>Abankita Behera </b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/T-Rahul-prabhu-38">
+                    <img src="https://avatars.githubusercontent.com/u/167653990?v=4" width="100;" alt="T-Rahul-prabhu-38"/>
+
                     <br />
                     <sub><b>Abankita Behera </b></sub>
                 </a>
@@ -360,6 +369,15 @@ A heartfelt thank you to the following individuals for their valuable contributi
             </td>
 		</tr>
 		<tr>
+
+            <td align="center">
+                <a href="https://github.com/Nimit1775">
+                    <img src="https://avatars.githubusercontent.com/u/74372261?v=4" width="100;" alt="Nimit1775"/>
+                    <br />
+                    <sub><b>nimit sodhani</b></sub>
+                </a>
+            </td>
+
             <td align="center">
                 <a href="https://github.com/shashankgoud18">
                     <img src="https://avatars.githubusercontent.com/u/142642917?v=4" width="100;" alt="shashankgoud18"/>
@@ -395,6 +413,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Sarin Sanyal</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/srishti023">
                     <img src="https://avatars.githubusercontent.com/u/137069939?v=4" width="100;" alt="srishti023"/>
@@ -439,6 +459,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Geetartha Bordoloi</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/RahulScripted">
                     <img src="https://avatars.githubusercontent.com/u/181909739?v=4" width="100;" alt="RahulScripted"/>
