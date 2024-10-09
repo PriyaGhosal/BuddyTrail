@@ -555,6 +555,15 @@ footer {
     line-height: 1.5;
 }
 
+.footer-column a {
+  font-size: 16px;
+  line-height: 2;
+}
+#footer-contact-us{
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-column ul {
     list-style: none;
     padding: 0;
