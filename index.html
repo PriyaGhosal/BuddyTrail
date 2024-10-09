@@ -153,6 +153,7 @@
         align-items: center;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="light-mode">
 
@@ -191,6 +192,26 @@
           translateElement.style.display = "none";
         }
       }
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+  $     ("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
   </script>
 
   <script src="script.js"></script>
