@@ -153,3 +153,33 @@ body {
     width: 20px;
     height: 20px;
 }
+/* Navbar styles */
+nav {
+    background-color: #131c27; /* Change this to your desired background color */
+    border-radius: 12px; /* Add rounded corners to the navbar */
+    padding: 10px 20px; /* Add padding to space out items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+nav h1#logo {
+    color: white; /* Change logo color to black for visibility */
+    margin-right: 20px; /* Add space between logo and navigation links */
+    font-size: 1.5rem; /* Adjust font size for the logo */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Add space between items */
+}
+
+nav a {
+    color: black; /* Set the link text color to black */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 500; /* Adjust font weight */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #4a8ae4; /* Change link color on hover for better UX */
+}
