@@ -529,9 +529,9 @@ input:focus {
 
 
 /**** FOOTER ****/
-
+footer
 /* Footer Styles */
-footer {
+ {
     background: linear-gradient(135deg, #343a40, #212529);
     color: #ffffff;
     padding: 40px 0;
@@ -1595,13 +1595,13 @@ justify-content: center;
 
 .title {
   font-weight: bold;
-  color: #111827;
+  color: #a9a9a9;
   font-size: 5rem;
 }
 
 .wr{
   font-weight:600;
-  color: black;
+  color: #a9a9a9;
 }
 .description {
   color: #4b5563;
@@ -1662,7 +1662,7 @@ justify-content: center;
 
 .info-title {
   font-weight: 600;
-  color: #000e2b;
+  color: #a9a9a9;
 }
 
 .info-description {
