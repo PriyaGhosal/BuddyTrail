@@ -441,8 +441,14 @@
     <header class="main-head">
   <nav>
     <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo">BuddyTrail</h1>
+      <a href="#" id="logoLink">
+        <img src="img/logo.png" id="logo-web">
+      </a>
+      <div class="textlink">
+        <a href="#" id="TextLink">
+      <h1 id="logo">BuddyTrail</h1> 
+    </a>
+    </div>
     </div>
 
     <!-- Hamburger button for mobile -->
@@ -451,7 +457,7 @@
     <ul id="nav-list">
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="#" class="navhover" id="homeLink">Home</a></li> <!-- Updated href to # -->
       <li><a href="#locations" class="navhover">Location</a></li>
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
@@ -467,19 +473,43 @@
   </nav>
 </header>
 
-<!-- JS to handle hamburger and close button -->
+<!-- JS to handle hamburger, close button, and scrolling -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navList = document.getElementById("nav-list");
     const closeBtn = document.getElementById("closeBtn");
+    const homeLink = document.getElementById("homeLink");
+    const logoLink = document.getElementById("logoLink"); // Select the logo link
 
+    // Toggle the navigation list on hamburger click
     hamburger.addEventListener("click", function () {
       navList.classList.toggle("active");
     });
 
+    // Close the navigation list on close button click
     closeBtn.addEventListener("click", function () {
       navList.classList.remove("active");
+    });
+
+    // Smooth scroll to top when Home link is clicked
+    homeLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.scrollTo({
+        top: 0, // Scroll to the top of the page
+        behavior: "smooth" // Smooth scroll animation
+      });
+      navList.classList.remove("active"); // Close the nav if it's open
+    });
+
+    // Smooth scroll to top when logo is clicked
+    logoLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.scrollTo({
+        top: 0, // Scroll to the top of the page
+        behavior: "smooth" // Smooth scroll animation
+      });
+      navList.classList.remove("active"); // Close the nav if it's open
     });
   });
 </script>
