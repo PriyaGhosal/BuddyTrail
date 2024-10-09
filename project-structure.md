@@ -27,11 +27,10 @@
 │   └── new-york-page.png
 ├── index.html
 ├── login.css
-├── login.html
+├── login.js
 ├── project-structure.md
 ├── project_structure.txt
 ├── script.js
-├── signUp.css
 ├── signUp.html
 ├── star-rating.js
 └── style.css
