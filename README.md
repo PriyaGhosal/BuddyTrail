@@ -133,7 +133,7 @@ You can find the project structure in the [Project Structure](project-structure.
  <h3>Thank you for contributing to our repository</h3>
 
 
-![Contributors](https://contrib.rocks/image?repo=PriyaGhosal/BuddyTrail)
+![Contributors](https://contrib.rocks/image?repo=PriyaGhosal/BuddyTrail&v=1)
 
 </div>
 
