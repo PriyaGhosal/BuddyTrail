@@ -85,54 +85,24 @@
 
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
-Join the list. **We are waiting** :octocat:<br />
+Join the list. **We are waiting** <br/>
 Here's how you can contribute to the repository:
 
-1. **[Fork](https://github.com/PriyaGhosal/BuddyTrail/fork) the repository** to your own GitHub account.
-   
-2. **Clone the repository** to your local machine:
-   
-    ```bash
-    git clone https://github.com/PriyalGhosal/BuddyTrail.git
-    ```
-    
-3. **Navigate into the directory**:
-   
-    ```bash
-    cd BuddyTrail
-    ```
-    
-4. **Install dependencies** (if applicable):
-   
-    ```bash
-    npm install
-    ```
-    
-5. **Create a new branch** for your changes:
-   
-    ```bash
-    git checkout -b <your-branch-name>
-    ```
-    
-6. **Make your changes**, commit, and push:
-   
-    ```bash
-    git add .
-    git commit -m "Your message here"
-    git push origin <your-branch-name>
-    ```
+1. **Fork the repository.**
+2. **Create a new feature branch.**
+3. **Commit your changes.**
+4. **Push to the branch.**
+5. **Open a Pull Request.**
 
-7. **Submit a pull request:**
-   - Go to the original repository on GitHub.
-   - Click on the "Pull Requests" tab.
-   - Click the "New Pull Request" button.
-   - Select your feature branch and submit the pull request.
+We welcome all contributions to improve **BuddyTrail**! If you would like to contribute, please follow the [Contributing.md](./Contributing.md) for more details on how to get started.
 
-8. **Wait for review and feedback.**
-   - Address any comments or requested changes.
-   - Once approved, your feature will be merged into the main branch.
+To maintain quality and consistency, please adhere to the following guidelines:
+1. **Code Style**: Follow the coding style used throughout the project. Clean, readable code with comments is always appreciated.
+2. **Commits**: Write meaningful commit messages.
+3. **Pull Requests**: Make sure PRs are focused, well-explained, and reference any issues they address.
+4. **Testing**: Ensure that your changes are well-tested locally and don’t break existing functionality.
 
-<br>
+
 
 ## Project-strucutre 📁
 
