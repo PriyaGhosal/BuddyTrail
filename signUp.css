@@ -153,3 +153,21 @@ body {
     width: 20px;
     height: 20px;
 }
+
+#home-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4a8ae4; /* Bright teal background */
+    color: white; 
+    font-size: 1.7rem; /* Larger font size */
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;/* Added smooth transitions */
+    padding: 10px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 8px; /* More rounded button */
+}
+
+#home-btn:hover {
+    background-color: #012e49; 
+}
