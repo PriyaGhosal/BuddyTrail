@@ -33,22 +33,34 @@ body {
   transition: width 0.2s ease; 
 }
 
-.scroll-top-btn {
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Distance from the bottom of the viewport */
-  right: 80px; /* Adjust this value to move the button left */
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 17px;
-  cursor: pointer;
-  border-radius: 50%;
-  display: none; /* Initially hidden */
-  z-index: 1000; /* Ensure it appears above other content */
+.scroll-container {
+  position: fixed;
+  bottom: 90px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
-.scroll-top-btn:hover {
-  background-color: #2c445e;
+.scroll-button {
+  background-color: #007bff; /* Change to your preferred color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px; /* Smaller padding */
+  cursor: pointer;
+  position: relative;
+  width: 50px; /* Adjusted size */
+  height: 50px; /* Adjusted size */
+}
+
+.tooltip-text-scroll{
+  position: absolute;
+  bottom: 10%; /* Position above the button */
+  right: 50%;
+  transform: translateX(50%);
+  color: #fff; /* Tooltip text color */
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 h1 {

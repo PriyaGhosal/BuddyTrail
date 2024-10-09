@@ -160,9 +160,7 @@
       <div id="progressBar"></div>
   </div>
     
-    <button id="scrollTopBtn" class="scroll-top-btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    
 
     <!-- Google Translate Button -->
     <div class="translate-container">
@@ -842,6 +840,14 @@
         </button>
       </div>
     </a>
+      <div class="fixed bottom-0 right-2 scroll-container" id="scrolltothetop">
+        <button class="scroll-button group">
+          <span class="tooltip-text-scroll">
+            <i class="fa-solid fa-arrow-up"></i>
+          </span>
+        </button>
+      </div>
+    </a>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -916,7 +922,7 @@
         toggleScrollTopButton();
       };
 
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      const scrollTopBtn = document.getElementById("scrolltothetop");
 
       function toggleScrollTopButton() {
         if (
