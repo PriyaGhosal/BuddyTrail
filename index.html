@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -153,6 +153,7 @@
         align-items: center;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="light-mode">
 
@@ -191,8 +192,30 @@
           translateElement.style.display = "none";
         }
       }
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+  $     ("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
   </script>
 
+  <script src="script.js"></script>
+ 
   <div id="progress-bar"></div>
   <!-- funcioning of progress bar -->
   <script>
@@ -220,6 +243,10 @@
       <header class="locations-head">
         <h2>The Perfect Travel Experience!</h2>
 
+    
+    </script>
+
+    <script src="script.js"></script>
     <header class="main-head">
   <nav>
     <div class="logo">
@@ -244,7 +271,7 @@
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow">☀️</span>
+      <span class="sun-icon glow"><img src="day-mode.png"></span>
     </button>
   </nav>
 </header>
@@ -358,7 +385,7 @@
             <strong>Price:</strong> ₹20,000
             <span class="discount">₹25,000 </span>
           </p>
-          <button class="book-now-btn" data-package="dubai.html">Book Now</button>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
         </div>
 
         <!-- Deal 2: Hotel Offer -->
@@ -372,7 +399,7 @@
             <strong>Price:</strong> ₹10,500
             <span class="discount"> ₹15,000</span> per night
           </p>
-          <button class="book-now-btn" data-package="goa.html">Book Now</button>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
         </div>
 
         <!-- Deal 3: Travel Package -->
@@ -386,7 +413,7 @@
             <strong>Price:</strong> ₹40,000
             <span class="discount">₹50,000</span>
           </p>
-          <button class="book-now-btn" data-package="kerala.html">Book Now</button>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
         </div>
 
         <!-- Deal 4: International Trip -->
@@ -400,7 +427,7 @@
             <strong>Price:</strong> ₹1,20,000
             <span class="discount"> ₹1,50,000</span> per couple
           </p>
-          <button class="book-now-btn" data-package="paris.html">Book Now</button>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
         </div>
 
         <!-- Deal 5: Adventure Trip -->
@@ -414,7 +441,7 @@
             <strong>Price:</strong> ₹48,000
             <span class="discount">₹60,000</span> per person
           </p>
-          <button class="book-now-btn" data-package="bali.html">Book Now</button>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
         </div>
       </div>
     </section>
@@ -570,33 +597,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
       async defer></script>
 
-    <section id="contact">
-      <div class="form-wrapper">
-        <header class="form-head">
-          <h2>Contact US</h2>
-        </header>
-        <form id="contactForm" action="https://formspree.io/f/mqkvkayy" method="POST">
-          <div class="name-form">
-            <label for="name">Name : </label>
-            <input id="name" type="text" name="name" required />
-          </div>
-
-          <div class="email-form">
-            <label for="email">Email :</label>
-            <input id="email" type="email" name="email" required />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-
-        </div>
-      </section>
+    
 
       <!-- Map Section -->
-      <section class="map-section">
-        <h2>Explore Popular Destinations</h2>
-        <p>Click on the markers to learn more about each destination.</p>
-        <div id="map"></div>
-      </section>
+    
       <!-- Google Maps JavaScript API -->
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
@@ -712,22 +716,17 @@
             <label for="destination">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
 
-            <label>Rating:</label>
-            <div class="rating-container">
-              <div class="star-buttons">
-                <button type="button" class="star-btn" data-rating="5">☆</button>
-                <button type="button" class="star-btn" data-rating="4">☆</button>
-                <button type="button" class="star-btn" data-rating="3">☆</button>
-                <button type="button" class="star-btn" data-rating="2">☆</button>
-                <button type="button" class="star-btn" data-rating="1">☆</button>
-              </div>
-              <input type="hidden" id="rating" name="rating" required>
-              <div id="rating-value">0</div>
-            </div>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
 
             <label for="review">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
-
             <label for="complaint">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
@@ -774,8 +773,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        <h3>About Us</h3>
-        <p>We are a team of passionate developers creating amazing web experiences.</p>
+        
 
     <footer>
       <div class="footer-container">
@@ -806,20 +804,8 @@
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +123 456 7890</p>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
+     
+  
     </div>
 
     <div class="footer-bottom">
@@ -1011,7 +997,8 @@
     line-height: 1.5;
   }
     </style>
-    <script src="script.js"></script>
+  </script>
+ 
 </body>
 
 </html>
