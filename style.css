@@ -71,6 +71,8 @@ h5 {
 #logo-web{
   height: 50px;
   width: 70px;
+  margin-right: -405px;
+  margin-left: 87px;
 }
 
 a {
@@ -109,7 +111,8 @@ button {
   left: 0; /* Align to the left */
   right: 0; /* Align to the right */
   z-index: 5; /* Ensure it stays above other elements */
-  padding: 15px;
+  padding: 10px;
+  margin-right: 40px;
   background-color: transparent; /* Set background to transparent */
   color: white;
   display: flex;
@@ -139,6 +142,8 @@ nav ul {
 #logo {
   font-family: "Pattaya", sans-serif;
   font-weight: 500;
+  margin-left: -250px;
+  
 }
 
 .mode-toggle {
@@ -172,6 +177,19 @@ nav ul {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
     url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero2 {
+  min-height: 100vh;
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
