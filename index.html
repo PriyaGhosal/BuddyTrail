@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -193,8 +193,6 @@
       }
   </script>
 
-  <script src="script.js"></script>
- 
   <div id="progress-bar"></div>
   <!-- funcioning of progress bar -->
   <script>
@@ -222,10 +220,6 @@
       <header class="locations-head">
         <h2>The Perfect Travel Experience!</h2>
 
-    
-    </script>
-
-    <script src="script.js"></script>
     <header class="main-head">
   <nav>
     <div class="logo">
@@ -364,7 +358,7 @@
             <strong>Price:</strong> ₹20,000
             <span class="discount">₹25,000 </span>
           </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+          <button class="book-now-btn" data-package="dubai.html">Book Now</button>
         </div>
 
         <!-- Deal 2: Hotel Offer -->
@@ -378,7 +372,7 @@
             <strong>Price:</strong> ₹10,500
             <span class="discount"> ₹15,000</span> per night
           </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+          <button class="book-now-btn" data-package="goa.html">Book Now</button>
         </div>
 
         <!-- Deal 3: Travel Package -->
@@ -392,7 +386,7 @@
             <strong>Price:</strong> ₹40,000
             <span class="discount">₹50,000</span>
           </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+          <button class="book-now-btn" data-package="kerala.html">Book Now</button>
         </div>
 
         <!-- Deal 4: International Trip -->
@@ -406,7 +400,7 @@
             <strong>Price:</strong> ₹1,20,000
             <span class="discount"> ₹1,50,000</span> per couple
           </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+          <button class="book-now-btn" data-package="paris.html">Book Now</button>
         </div>
 
         <!-- Deal 5: Adventure Trip -->
@@ -420,7 +414,7 @@
             <strong>Price:</strong> ₹48,000
             <span class="discount">₹60,000</span> per person
           </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+          <button class="book-now-btn" data-package="bali.html">Book Now</button>
         </div>
       </div>
     </section>
@@ -718,17 +712,22 @@
             <label for="destination">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
 
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>
+            <label>Rating:</label>
+            <div class="rating-container">
+              <div class="star-buttons">
+                <button type="button" class="star-btn" data-rating="5">☆</button>
+                <button type="button" class="star-btn" data-rating="4">☆</button>
+                <button type="button" class="star-btn" data-rating="3">☆</button>
+                <button type="button" class="star-btn" data-rating="2">☆</button>
+                <button type="button" class="star-btn" data-rating="1">☆</button>
+              </div>
+              <input type="hidden" id="rating" name="rating" required>
+              <div id="rating-value">0</div>
+            </div>
 
             <label for="review">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
+
             <label for="complaint">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
@@ -1012,8 +1011,7 @@
     line-height: 1.5;
   }
     </style>
-  </script>
- 
+    <script src="script.js"></script>
 </body>
 
 </html>
