@@ -1659,3 +1659,38 @@ justify-content: center;
       grid-template-columns: 1fr;
   }
 }
+
+/* Scroll to top button */
+.scroll-container {
+  position: fixed;
+  bottom: 80px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.scroll-button {
+  background-color: #007bff; /* Change to your preferred color */
+  border: none;
+  border-radius: 50%;
+  padding: 5px; /* Smaller padding */
+  cursor: pointer;
+  position: relative;
+  width: 50px; /* Adjusted size */
+  height: 50px; /* Adjusted size */
+}
+
+.scroll-button img {
+  width: 30px; /* Adjusted image size */
+  height: 30px; /* Adjusted image size */
+}
+
+.tooltip-text-scroll {
+  position: absolute;
+  bottom: 10%; /* Position above the button */
+  right: 50%;
+  transform: translateX(50%);
+  color: #fff; /* Tooltip text color */
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
