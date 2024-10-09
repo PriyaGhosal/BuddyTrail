@@ -11,6 +11,11 @@ body {
     color: #333; /* Dark text for readability */
 }
 
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 /* Header Styles */
 .main-head {
     color: white;
@@ -33,7 +38,7 @@ nav {
 nav ul {
     list-style-type: none; /* Remove bullet points */
     display: flex; /* Display items in a row */
-    gap: 20px; /* Space between items */
+    gap: 10px; /* Space between items */
 }
 
 nav a {
@@ -47,6 +52,8 @@ nav a:hover {
 
 
 .container {
+
+    margin-top:10px;
     display: flex;
     justify-content: center; 
     align-items: center;

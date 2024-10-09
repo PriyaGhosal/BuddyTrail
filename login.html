@@ -8,12 +8,22 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="login.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+    </style>
 </head>
 
 <body>
     <header class="main-head">
         <nav>
-            <h1 id="logo">BuddyTrail</h1>
+            <div class="logo" >
+                <img src="img\logo.png" id="logo-web">
+              <h1 id="logo">BuddyTrail</h1>
+              </div>
             <ul>
                 <li><a href="#locations" class='navhover'>Location</a></li>
                 <li><a href="#itineraries" class='navhover'>Travel Itineraries</a></li>
