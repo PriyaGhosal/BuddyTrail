@@ -997,7 +997,7 @@ justify-content: center;
 .review-form input,
 .review-form select,
 .review-form textarea {
-  width: 100%; /* Full width */
+  max-width: 100%; /* Full width */
   padding: 10px; /* Padding inside fields */
   background-color: #1e1e1e; /* Dark background for inputs */
   color: white; /* White text */
