@@ -1,213 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
-  <meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="RatingStyle.css">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" href="/icons/airplane.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <title>BuddyTrail</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .container {
-      display: flex;
-      align-items: flex-start;
-      /* Align items at the start of the container */
-      justify-content: space-between;
-      /* Space between elements */
-      gap: 20px;
-      /* Optional gap between form and rating section */
-      height: auto;
-      /* Adjust height if necessary */
-    }
-
-    .form-section {
-      width: 70%;
-      /* Adjust width as needed */
-    }
-
-    .rating-wrap {
-      width: 30%;
-      /* Adjust width as needed */
-      text-align: left;
-    }
-
-    .center {
-      width: auto;
-      display: inline-flex;
-      /* Align stars and rating count in a row */
-      align-items: center;
-      gap: 10px;
-      /* Add some space between the stars and the count */
-    }
-
-
-    #rating-value {
-      font-size: 1.2rem;
-      /* Adjust font size */
-      font-weight: bold;
-      color: black;
-      /* Optional: change the color to match the theme */
-    }
-
-    .rating {
-      border: none;
-      float: right;
-    }
-
-    .rating>input {
-      display: none;
-    }
-
-    .rating>label:before {
-      content: '\f005';
-      font-family: FontAwesome;
-      margin: 5px;
-      font-size: 1.5rem;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .rating>.half:before {
-      content: '\f089';
-      position: absolute;
-      cursor: pointer;
-    }
-
-    .rating>label {
-      color: #ddd;
-      /* Empty stars initially */
-      float: right;
-      cursor: pointer;
-    }
-
-    /* Filled stars on hover and selection */
-    .rating>input:checked~label,
-    .rating:not(:checked)>label {
-      color: #ddd;
-      /* Keep stars empty until interaction */
-    }
-
-    .rating>input:checked~label,
-    .rating>input:checked~label:hover,
-    .rating>input:checked~label:hover~label {
-      color: rgb(230, 166, 17);
-      /* Green for filled stars */
-    }
-
-    .rating>label:hover~label,
-    .rating>label:hover {
-      color: rgb(230, 166, 17);
-      /* Green hover effect */
-    }
-
-    .chatbot-container {
-      position: fixed;
-      bottom: 20px;
-      /* Adjust as needed */
-      right: 20px;
-      /* Adjust as needed */
-      z-index: 1000;
-      /* Ensure it appears above other elements */
-    }
-
-    .chatbot-button {
-      background-color: #007bff;
-      /* Change to your preferred color */
-      border: none;
-      border-radius: 50%;
-      padding: 5px;
-      /* Smaller padding */
-      cursor: pointer;
-      position: relative;
-      width: 50px;
-      /* Adjusted size */
-      height: 50px;
-      /* Adjusted size */
-    }
-
-    .chatbot-button img {
-      width: 30px;
-      /* Adjusted image size */
-      height: 30px;
-      /* Adjusted image size */
-    }
-
-    .tooltip-text {
-      display: none;
-      /* Hide by default */
-      position: absolute;
-      bottom: 100%;
-      /* Position above the button */
-      right: 200%;
-      transform: translateX(50%);
-      background-color: #333;
-      /* Background color for tooltip */
-      color: #fff;
-      /* Tooltip text color */
-      padding: 5px;
-      border-radius: 5px;
-      white-space: nowrap;
-      /* Prevent text from wrapping */
-    }
-
-    .chatbot-button:hover .tooltip-text {
-      display: block;
-      /* Show on hover */
-    }
-  </style>
-
-</head>
-
-<body class="light-mode">
-  <button id="scrollTopBtn" class="scroll-top-btn">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- Google Translate Button -->
-  <div class="translate-container">
-    <button class="language-toggle" id="languageToggle">🌐</button>
-    <div id="google_translate_element"></div>
-  </div>
-
-  <script>
-    // Initialization function
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages:
-            "en,es,fr,de,it,pt,ja,zh-CN,hi,bn,ml,te,ta,gu,kn,or",
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        "google_translate_element"
-      );
-    }
-
-    // Toggle button event
-    document
-      .getElementById("languageToggle")
-      .addEventListener("click", function () {
-        var translateElement = document.getElementById(
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -367,10 +159,6 @@
     <div id="progressBarContainer">
       <div id="progressBar"></div>
   </div>
-    
-    <button id="scrollTopBtn" class="scroll-top-btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
 
     <!-- Google Translate Button -->
     <div class="translate-container">
@@ -402,7 +190,7 @@
         } else {
           translateElement.style.display = "none";
         }
-      });
+      }
   </script>
 
   <script src="script.js"></script>
@@ -457,7 +245,7 @@
       <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="#benefits" class="navhover">Benefits</a></li>
       <li><a href="#contact" class="navhover">Contact</a></li>
-      <li><a href="signUp.html" class="navhover">Sign In</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
     </ul>
 
     <!-- Toggle Button -->
@@ -681,48 +469,16 @@
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
         <h2>Book a Cab or Auto</h2>
-        <p>Book a cab or auto with ease</p>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location">Pickup Location:</label>
+            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
           </div>
           <div class="form-group">
-            <label for="drop-location">Drop Location:</label>
+            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
           </div>
-          <div class="form-group">
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-=======
-      </section>
-
-      <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
-
+        
         <form
           action="/book-cab"
           method="POST"
@@ -734,111 +490,34 @@
             flex-direction: column;
           "
         >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
-
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
+          
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
+            <strong>Vehicle Type</strong>
+          </label>
+          
+          <select 
+          id="vehicle-type" 
+          name="vehicle-type" 
+          style="width: 150px; height: 29px; padding: 5px;" 
+          required >
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+          </select>
+        </div>
 
           <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
+            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time">Travel Time:</label>
+            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
 
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-
-        </form>
-      </div>
-    </section>
+        </section>
+          
     
 
 
@@ -1082,7 +761,13 @@
         </button>
       </div>
     </a>
-
+      <div class="fixed bottom-0 right-2 scroll-container">
+        <button class="scroll-button group" id="scrollTopBtn">
+          <span class="tooltip-text-scroll">
+            <i class="fa-solid fa-arrow-up"></i>
+          </span>
+        </button>
+      </div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -1122,17 +807,6 @@
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
-
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
       <div class="footer-column">
         <h3>Contact Us</h3>
         <p>Email: info@example.com</p>
@@ -1170,24 +844,7 @@
   <!-- this script is for twitter icon  starts -->
   <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
   <!-- this script is for twitter icon  ends -->
-  <script>
-    // script.js
-    window.onscroll = function () {
-      toggleScrollTopButton();
-    };
-
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    function toggleScrollTopButton() {
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        scrollTopBtn.style.display = "block"; // Show button after scrolling down
-      } else {
-        scrollTopBtn.style.display = "none"; // Hide button when at the top
-
-    <!-- this script is for twitter icon  starts -->
+  <!-- this script is for twitter icon  starts -->
  <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
  <!-- this script is for twitter icon  ends -->
     <script>
@@ -1221,7 +878,6 @@
         }
 
       }
-    }
 
     scrollTopBtn.onclick = function () {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
@@ -1297,83 +953,67 @@
   }
   
   </script>
-    <style>
+     <style>
       .popup {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(24, 23, 24, 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1000;
       }
-
-
+  
+      .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+  
+      .popup-content h2 {
+        margin-top: 0;
+      }
+  
+      .popup-content button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+  
+      .custom-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 400px;
+        padding: 20px;
+        background-color: rgba(51, 51, 51, 0.8); /* Adds translucency */
+        color: #fff;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+  
+  .custom-alert p {
+    margin: 0;
+    line-height: 1.5;
+  }
+    </style>
   </script>
-  <style>
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(24, 23, 24, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .popup-content {
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      text-align: center;
-    }
-
-    .popup-content h2 {
-      margin-top: 0;
-    }
-
-    .popup-content button {
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    .custom-alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 400px;
-  padding: 20px;
-  background-color: rgba(51, 51, 51, 0.8); /* Adds translucency */
-  color: #fff;
-  font-size: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  z-index: 1000;
-  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.custom-alert p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-    
-  </style>
+ 
 </body>
 
 </html>

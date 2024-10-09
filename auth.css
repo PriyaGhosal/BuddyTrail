@@ -74,7 +74,7 @@ form.sign-in-form {
   height: 55px;
   border-radius: 55px;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 15% 70% 15%;
   padding: 0 0.4rem;
   position: relative;
 }
@@ -102,6 +102,10 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.password-toggle {
+  cursor: pointer;
+}
+
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
@@ -120,8 +124,8 @@ form.sign-in-form {
   align-items: center;
   margin: 0 0.45rem;
   color: #333;
-  /* border-radius: 50%;
-  border: 1px solid #333; */
+  border-radius: 50%;
+  border: 1px solid #333;
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
@@ -150,6 +154,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #161618;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -183,6 +188,7 @@ form.sign-in-form {
 .panel {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: space-around;
   text-align: center;
   z-index: 6;
@@ -190,7 +196,7 @@ form.sign-in-form {
 
 .left-panel {
   pointer-events: all;
-  padding: 4rem 17% 2rem 12%;
+  padding: 3rem 17% 2rem 12%;
 }
 
 .right-panel {
@@ -199,7 +205,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: #ffffff;
+  color: #fff;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -229,8 +235,6 @@ form.sign-in-form {
 .right-panel .content {
   transform: translateX(800px);
 }
-
-/* ANIMATION */
 
 .container.sign-up-mode:before {
   transform: translate(100%, -50%);
@@ -268,6 +272,44 @@ form.sign-in-form {
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
+
+.homeBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.homeBtn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.password-strength {
+  display: flex;
+  margin-top: 5px;
+  height: 5px;
+  width: 200px;
+}
+
+.password-strength div {
+  height: 100%;
+  width: 33.33%;
+  margin-right: 3px;
+  background-color: #ddd;
+  transition: background-color 0.3s;
+}
+
+.password-strength .weak { background-color: #ff4757; }
+.password-strength .medium { background-color: #ffa502; }
+.password-strength .strong { background-color: #23ad5c; }
 
 @media (max-width: 870px) {
   .container {
@@ -372,7 +414,7 @@ form.sign-in-form {
   }
 }
 
-@media (max-width: 570px) {
+@media  (max-width: 570px) {
   form {
     padding: 0 1.5rem;
   }
@@ -398,8 +440,6 @@ form.sign-in-form {
   }
 }
 
-
-
 .homeBtn {
   position: absolute;
   top: 20px;
@@ -412,4 +452,3 @@ form.sign-in-form {
   transition: 0.3s;
   text-decoration: none;
 }
-
