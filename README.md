@@ -37,6 +37,9 @@
 </div>
 <br>
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 ### This project is now OFFICIALLY accepted for
 
 <div align="center">
@@ -45,6 +48,9 @@
 
 <br>
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 # 📸 Website Preview
 
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
@@ -52,6 +58,9 @@
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20183005.png" alt = "image">
 
 <br>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🚀 Features
 
@@ -69,7 +78,10 @@
 
 **⭐ User Reviews and Ratings:** Read and leave reviews for destinations, hotels, flights, and activities.
 
-<br />
+<br/>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🛠️ Technologies Used
 
@@ -82,6 +94,9 @@
 **📱 Responsive Design:** The website is fully responsive and works on all devices.
 
 <br />
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
@@ -102,12 +117,15 @@ To maintain quality and consistency, please adhere to the following guidelines:
 3. **Pull Requests**: Make sure PRs are focused, well-explained, and reference any issues they address.
 4. **Testing**: Ensure that your changes are well-tested locally and don’t break existing functionality.
 
-
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Project-strucutre 📁
 
 You can find the project structure in the [Project Structure](project-structure.md) file. It contains the details of the project structure and the files present in the project. It will help you to understand the project structure better. 🗂️
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 <div>
   <h2 align = "center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35">Our Contributors</h2>
@@ -144,6 +162,9 @@ You can find the project structure in the [Project Structure](project-structure.
     </a>
 </div>
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 ## 👥 Team
 
 | ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
@@ -153,7 +174,13 @@ You can find the project structure in the [Project Structure](project-structure.
 
 For any inquiries or feedback, please contact. Happy Contributing 🫡
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 ## ⭐️ Support the Project
 If you find this project helpful, please consider giving it a ⭐ on GitHub! Your support helps to grow the project and reach more contributors.
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 # Thanks for reading!!!
