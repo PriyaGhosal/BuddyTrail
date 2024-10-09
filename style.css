@@ -1530,16 +1530,16 @@ justify-content: center;
 
 .title {
   font-weight: bold;
-  color: #A9A9A9;
+  color: #111827;
   font-size: 5rem;
 }
 
 .wr{
   font-weight:600;
-  color: #a9a9a9;
+  color: black;
 }
 .description {
-  color: white;
+  color: #4b5563;
   margin-top: 1rem;
   font-size: 1.25rem;
 }
@@ -1589,7 +1589,6 @@ justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   color: white;
-  margin-top: 1rem;
 }
 
 .info-text-content {
@@ -1598,7 +1597,7 @@ justify-content: center;
 
 .info-title {
   font-weight: 600;
-  color: #a9a9a9;
+  color: #000e2b;
 }
 
 .info-description {
