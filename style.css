@@ -154,12 +154,21 @@ nav {
 }
 
 .mode-toggle {
-  margin-left: 20px;
-  background: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   border: none;
-  color: white;
-  font-size: 1.5em;
+  background-color:white;
+  cursor: pointer;
+  padding: 5px;
+  
 }
+.mode-toggle img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+  
+}
+
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
@@ -285,13 +294,13 @@ nav {
 
 .locations-head h2 {
   padding: 1rem 0rem;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 0.5rem;
 }
 
 .locations-head h3 {
   padding: 4rem 0rem;
-  background: linear-gradient(#090f15, #42231e);
+  background: linear-gradient(#1d71c4, #f9f9f9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -459,7 +468,7 @@ h2 {
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0; /* Margin adjustment */
-  color: #333; /* Heading color */
+  color: #ffffff; /* Heading color */
 }
 
 p {
@@ -520,9 +529,9 @@ input:focus {
 
 
 /**** FOOTER ****/
-
+footer
 /* Footer Styles */
-footer {
+ {
     background: linear-gradient(135deg, #343a40, #212529);
     color: #ffffff;
     padding: 40px 0;
@@ -716,6 +725,7 @@ body.dark-mode {
 /* Sun and moon icons */
 .sun-icon {
   color: #ffd700;
+  size: 20px;
 }
 
 .moon-icon {
@@ -1201,7 +1211,7 @@ justify-content: center;
 .popup-content {
   background-color: #fff;
   margin: 15% auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #888;
   border-radius: 10px;
   width: 100%;
@@ -1209,7 +1219,6 @@ justify-content: center;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Close Button */
 .close-btn {
   position: absolute;
@@ -1234,6 +1243,52 @@ justify-content: center;
   color: #fff;
   text-decoration: none;
 }
+
+.popup {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);  /* Background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  background: white;
+  padding: 40px; /* Increased padding around content */
+  padding-top: 60px; /* Extra top padding to account for close button */
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #ff4c4c;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.close-btn:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+
 
 /* Button to check deals */
 .popup-content button {
@@ -1496,7 +1551,11 @@ justify-content: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
-/*@media only screen and (max-width: 600px) {...}*/
+@media only screen and (max-width: 600px) {
+  .recommendation-item{
+    max-width: 100%;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media only screen and (min-width: 600px) {...}*/

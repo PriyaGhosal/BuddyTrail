@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sunIcon = document.querySelector('.sun-icon');
     const moonIcon = document.createElement('span');
     moonIcon.className = 'moon-icon';
-    moonIcon.innerHTML = '🌙';
+    moonIcon.innerHTML = '<img src="crescent-moon.png">';
 
     const currentTheme = localStorage.getItem('theme');
 
@@ -421,9 +421,9 @@ modeToggle.addEventListener('click', () => {
 
     // Toggle the icon
     if (body.classList.contains('dark-mode')) {
-        modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
+        modeToggle.innerHTML = '<span class="sun-icon"><img src="crescent-moon.png"></span>';
     } else {
-        modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
+        modeToggle.innerHTML = '<span class="sun-icon glow"><img src="day-mode.png"></span>';
     }
 });
 // google translator
