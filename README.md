@@ -169,17 +169,17 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/01-aniket-maity">
+                    <img src="https://avatars.githubusercontent.com/u/142742057?v=4" width="100;" alt="01-aniket-maity"/>
+                    <br />
+                    <sub><b>Aniket Maity</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Aradhya-005">
                     <img src="https://avatars.githubusercontent.com/u/129872752?v=4" width="100;" alt="Aradhya-005"/>
                     <br />
                     <sub><b>Aradhya  Yadav</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/devarsheecodess">
-                    <img src="https://avatars.githubusercontent.com/u/114805934?v=4" width="100;" alt="devarsheecodess"/>
-                    <br />
-                    <sub><b>Devarshee Gaunekar</b></sub>
                 </a>
             </td>
 		</tr>
@@ -192,17 +192,10 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Aarnachauhan">
-                    <img src="https://avatars.githubusercontent.com/u/175851904?v=4" width="100;" alt="Aarnachauhan"/>
+                <a href="https://github.com/devarsheecodess">
+                    <img src="https://avatars.githubusercontent.com/u/114805934?v=4" width="100;" alt="devarsheecodess"/>
                     <br />
-                    <sub><b>Aarna chauhan</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/PATILYASHH">
-                    <img src="https://avatars.githubusercontent.com/u/149749700?v=4" width="100;" alt="PATILYASHH"/>
-                    <br />
-                    <sub><b>Yash patil</b></sub>
+                    <sub><b>Devarshee Gaunekar</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -220,14 +213,35 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Aarnachauhan">
+                    <img src="https://avatars.githubusercontent.com/u/175851904?v=4" width="100;" alt="Aarnachauhan"/>
+                    <br />
+                    <sub><b>Aarna chauhan</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/PATILYASHH">
+                    <img src="https://avatars.githubusercontent.com/u/149749700?v=4" width="100;" alt="PATILYASHH"/>
+                    <br />
+                    <sub><b>Yash patil</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Abankita">
+                    <img src="https://avatars.githubusercontent.com/u/138569378?v=4" width="100;" alt="Abankita"/>
+                    <br />
+                    <sub><b>Abankita Behera </b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Aditi2k5">
                     <img src="https://avatars.githubusercontent.com/u/146500979?v=4" width="100;" alt="Aditi2k5"/>
                     <br />
                     <sub><b>Aditi Prabakaran</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/riyaaryan2004">
                     <img src="https://avatars.githubusercontent.com/u/145834658?v=4" width="100;" alt="riyaaryan2004"/>
@@ -243,12 +257,21 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Ishika-Gupta06">
+                    <img src="https://avatars.githubusercontent.com/u/118624573?v=4" width="100;" alt="Ishika-Gupta06"/>
+                    <br />
+                    <sub><b>Ishika Gupta</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/hritika2409">
                     <img src="https://avatars.githubusercontent.com/u/117531823?v=4" width="100;" alt="hritika2409"/>
                     <br />
                     <sub><b>Hritika Sharan</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/hgjajoo">
                     <img src="https://avatars.githubusercontent.com/u/63530396?v=4" width="100;" alt="hgjajoo"/>
@@ -264,19 +287,17 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/poorvikaa08">
-                    <img src="https://avatars.githubusercontent.com/u/152640996?v=4" width="100;" alt="poorvikaa08"/>
-                    <br />
-                    <sub><b>Poorvika</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/anuragverma108">
                     <img src="https://avatars.githubusercontent.com/u/129655645?v=4" width="100;" alt="anuragverma108"/>
                     <br />
                     <sub><b>Anurag Verma</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/poorvikaa08">
+                    <img src="https://avatars.githubusercontent.com/u/152640996?v=4" width="100;" alt="poorvikaa08"/>
+                    <br />
+                    <sub><b>Poorvika</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -293,6 +314,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>sadafhukkeri</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/dwivedishrey">
                     <img src="https://avatars.githubusercontent.com/u/97790062?v=4" width="100;" alt="dwivedishrey"/>
@@ -314,71 +337,11 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Ananya Ravikiran Vastare</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
-                <a href="https://github.com/tarunkumar2005">
-                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
+                <a href="https://github.com/Risheendra183">
+                    <img src="https://avatars.githubusercontent.com/u/146363721?v=4" width="100;" alt="Risheendra183"/>
                     <br />
-                    <sub><b>Tarun kumar</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/srishti023">
-                    <img src="https://avatars.githubusercontent.com/u/137069939?v=4" width="100;" alt="srishti023"/>
-                    <br />
-                    <sub><b>Srishti Choudhary</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/sarinsanyal">
-                    <img src="https://avatars.githubusercontent.com/u/171278391?v=4" width="100;" alt="sarinsanyal"/>
-                    <br />
-                    <sub><b>Sarin Sanyal</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/ruchikakengal">
-                    <img src="https://avatars.githubusercontent.com/u/177725578?v=4" width="100;" alt="ruchikakengal"/>
-                    <br />
-                    <sub><b>Ruchika Kengal</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Krishnamverma951">
-                    <img src="https://avatars.githubusercontent.com/u/166730422?v=4" width="100;" alt="Krishnamverma951"/>
-                    <br />
-                    <sub><b>Krishnam Verma</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/ShrishtiSingh26">
-                    <img src="https://avatars.githubusercontent.com/u/142707684?v=4" width="100;" alt="ShrishtiSingh26"/>
-                    <br />
-                    <sub><b>Shrishti</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/shashankgoud18">
-                    <img src="https://avatars.githubusercontent.com/u/142642917?v=4" width="100;" alt="shashankgoud18"/>
-                    <br />
-                    <sub><b>Shashank Goud</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/samarth-6">
-                    <img src="https://avatars.githubusercontent.com/u/123616579?v=4" width="100;" alt="samarth-6"/>
-                    <br />
-                    <sub><b>Samarth Mishra</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/SagnikGos">
-                    <img src="https://avatars.githubusercontent.com/u/177692306?v=4" width="100;" alt="SagnikGos"/>
-                    <br />
-                    <sub><b>SagnikGos</b></sub>
+                    <sub><b>Risheendra183</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -389,10 +352,70 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Risheendra183">
-                    <img src="https://avatars.githubusercontent.com/u/146363721?v=4" width="100;" alt="Risheendra183"/>
+                <a href="https://github.com/SagnikGos">
+                    <img src="https://avatars.githubusercontent.com/u/177692306?v=4" width="100;" alt="SagnikGos"/>
                     <br />
-                    <sub><b>Risheendra183</b></sub>
+                    <sub><b>SagnikGos</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/samarth-6">
+                    <img src="https://avatars.githubusercontent.com/u/123616579?v=4" width="100;" alt="samarth-6"/>
+                    <br />
+                    <sub><b>Samarth Mishra</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/shashankgoud18">
+                    <img src="https://avatars.githubusercontent.com/u/142642917?v=4" width="100;" alt="shashankgoud18"/>
+                    <br />
+                    <sub><b>Shashank Goud</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/ShrishtiSingh26">
+                    <img src="https://avatars.githubusercontent.com/u/142707684?v=4" width="100;" alt="ShrishtiSingh26"/>
+                    <br />
+                    <sub><b>Shrishti</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Krishnamverma951">
+                    <img src="https://avatars.githubusercontent.com/u/166730422?v=4" width="100;" alt="Krishnamverma951"/>
+                    <br />
+                    <sub><b>Krishnam Verma</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/ruchikakengal">
+                    <img src="https://avatars.githubusercontent.com/u/177725578?v=4" width="100;" alt="ruchikakengal"/>
+                    <br />
+                    <sub><b>Ruchika Kengal</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/sarinsanyal">
+                    <img src="https://avatars.githubusercontent.com/u/171278391?v=4" width="100;" alt="sarinsanyal"/>
+                    <br />
+                    <sub><b>Sarin Sanyal</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/srishti023">
+                    <img src="https://avatars.githubusercontent.com/u/137069939?v=4" width="100;" alt="srishti023"/>
+                    <br />
+                    <sub><b>Srishti Choudhary</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/tarunkumar2005">
+                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
+                    <br />
+                    <sub><b>Tarun kumar</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -402,8 +425,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Neeru </b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/kushal7201">
                     <img src="https://avatars.githubusercontent.com/u/86069454?v=4" width="100;" alt="kushal7201"/>
@@ -425,6 +446,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Geetartha Bordoloi</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/RahulScripted">
                     <img src="https://avatars.githubusercontent.com/u/181909739?v=4" width="100;" alt="RahulScripted"/>
@@ -446,8 +469,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Antima Mishra</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/ananyag309">
                     <img src="https://avatars.githubusercontent.com/u/145869907?v=4" width="100;" alt="ananyag309"/>
