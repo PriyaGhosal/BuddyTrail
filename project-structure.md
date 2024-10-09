@@ -1,5 +1,6 @@
 <!-- START_STRUCTURE -->
 ```
+├── BuddyTrail
 ├── Code_of_Conduct.md
 ├── README.md
 ├── RatingStyle.css
