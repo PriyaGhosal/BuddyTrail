@@ -3,9 +3,6 @@
 ├── Code_of_Conduct.md
 ├── README.md
 ├── RatingStyle.css
-├── auth.css
-├── auth.html
-├── auth.js
 ├── book.html
 ├── boy.png
 ├── chatbot.gif
@@ -29,9 +26,14 @@
 │   ├── logo2.png
 │   └── new-york-page.png
 ├── index.html
+├── login.css
+├── login.html
+├── login.js
 ├── project-structure.md
 ├── project_structure.txt
 ├── script.js
+├── signUp.css
+├── signUp.html
 ├── star-rating.js
 └── style.css
 ```
