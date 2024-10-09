@@ -184,6 +184,6 @@ You can find the project structure in the [Project Structure](project-structure.
 For any inquiries or feedback, please contact. Happy Contributing 🫡
 
 ## ⭐️ Support the Project
-If you find this project helpful, please consider giving it a star on GitHub! Your support helps to grow the project and reach more contributors.
+If you find this project helpful, please consider giving it a ⭐ on GitHub! Your support helps to grow the project and reach more contributors.
 
 # Thanks for reading!!!
