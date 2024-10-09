@@ -153,6 +153,7 @@
         align-items: center;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
       /* Circle styles */
       .circle {
@@ -227,6 +228,26 @@
           translateElement.style.display = "none";
         }
       }
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+  $     ("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
   </script>
 
   <script src="script.js"></script>
@@ -286,7 +307,7 @@
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow">☀️</span>
+      <span class="sun-icon glow"><img src="day-mode.png"></span>
     </button>
   </nav>
 </header>
@@ -505,47 +526,16 @@
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
         <h2>Book a Cab or Auto</h2>
-        <p>Book a cab or auto with ease</p>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location">Pickup Location:</label>
+            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
           </div>
           <div class="form-group">
-            <label for="drop-location">Drop Location:</label>
+            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
           </div>
-          <div class="form-group">
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-      </section>
-
-      <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
-
+        
         <form
           action="/book-cab"
           method="POST"
@@ -557,111 +547,34 @@
             flex-direction: column;
           "
         >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
-
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
+          
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
+            <strong>Vehicle Type</strong>
+          </label>
+          
+          <select 
+          id="vehicle-type" 
+          name="vehicle-type" 
+          style="width: 150px; height: 29px; padding: 5px;" 
+          required >
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+          </select>
+        </div>
 
           <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
+            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time">Travel Time:</label>
+            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
 
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-
-        </form>
-      </div>
-    </section>
+        </section>
+          
     
 
 
@@ -720,33 +633,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
       async defer></script>
 
-    <section id="contact">
-      <div class="form-wrapper">
-        <header class="form-head">
-          <h2>Contact US</h2>
-        </header>
-        <form id="contactForm" action="https://formspree.io/f/mqkvkayy" method="POST">
-          <div class="name-form">
-            <label for="name">Name : </label>
-            <input id="name" type="text" name="name" required />
-          </div>
-
-          <div class="email-form">
-            <label for="email">Email :</label>
-            <input id="email" type="email" name="email" required />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-
-        </div>
-      </section>
+    
 
       <!-- Map Section -->
-      <section class="map-section">
-        <h2>Explore Popular Destinations</h2>
-        <p>Click on the markers to learn more about each destination.</p>
-        <div id="map"></div>
-      </section>
+    
       <!-- Google Maps JavaScript API -->
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
@@ -919,8 +809,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        <h3>About Us</h3>
-        <p>We are a team of passionate developers creating amazing web experiences.</p>
+        
 
     <footer>
       <div class="footer-container">
@@ -951,20 +840,8 @@
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +123 456 7890</p>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
+     
+  
     </div>
 
     <div class="footer-bottom">
