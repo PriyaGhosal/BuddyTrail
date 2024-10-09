@@ -38,7 +38,7 @@ body {
   bottom: 20px; /* Distance from the bottom of the viewport */
   right: 80px; /* Adjust this value to move the button left */
   background-color: #007bff;
-  color: white;
+  color:snow;
   border: none;
   padding: 10px 17px;
   cursor: pointer;
@@ -73,11 +73,6 @@ h5 {
   width: 70px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
 li,
 button,
 label,
@@ -105,18 +100,25 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right:0;
   z-index: 5;
   padding: 15px;
   background-color: transparent;
-  color: white;
+  color: rgb(0, 0, 0);
+  background-color: snow;
+  box-shadow: 1px 1px 4px 1px rgb(128, 128, 128);
   display: flex;
   justify-content: center; /* Keep header centered */
   align-items: center;
   transition: background-color 0.3s ease;
+  height: 60px;
 }
 
 nav {
+  position: fixed;
+  left: 5%;
+  color: rgb(0, 0, 0);
+  background-color: snow;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,18 +132,37 @@ nav {
   align-items: center;
 }
 
+.logo:hover{
+  filter: drop-shadow(2px 2px 0px rgb(2, 144, 210));
+}
+
 #nav-list {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+#nav-list li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
 #nav-list li a {
-  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-weight:600;
+}
+
+#nav-list li a:hover{
+  color: rgb(14, 163, 238);
+  border-radius: 5px;
+  border-bottom: 2px solid #0a1827;
 }
 
 .hamburger {
@@ -153,12 +174,13 @@ nav {
   cursor: pointer;
 }
 
-.mode-toggle {
-  margin-left: 20px;
-  background: none;
-  border: none;
-  color: white;
+header .mode-toggle {
+  border-radius: 10px;
+  border: 1px solid rgb(242, 255, 0);
+  padding: 5px;
+  background-color: #000000;
   font-size: 1.5em;
+  margin-right:5vw;
 }
 
 /* Responsive Styles for smaller screens */
@@ -223,7 +245,6 @@ nav {
 
 .hero button {
   border-radius: 1rem;
- 
     padding: 1.5rem 4rem;
     background: #4c6e97;
     border: none;
@@ -1449,21 +1470,6 @@ justify-content: center;
 /* Hide Google Translate Element by Default */
 #google_translate_element {
   display: none; /* Initially hidden */
-}
-
-.navhover {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  display: inline-block;
-  padding: 10px 15px; /* Adds padding around the text */
-  border-radius: 20px; /* Creates rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-}
-
-.navhover:hover {
-  border: 1px solid #3498db;
-  color: white; /* Changes text color on hover */
 }
 
 #social-icons {
