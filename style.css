@@ -100,73 +100,111 @@ button {
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
 /**** MAIN PAGE  ****/
-
-
 /* Header Styles */
 .main-head {
-  position: fixed; /* Fixed position at the top */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  right: 0; /* Align to the right */
-  z-index: 5; /* Ensure it stays above other elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
   padding: 15px;
-  background-color: transparent; /* Set background to transparent */
+  background-color: transparent;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Keep header centered */
   align-items: center;
-  transition: background-color 0.3s ease; /* Smooth transition for background change */
+  transition: background-color 0.3s ease;
 }
 
 nav {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: space-between; /* Distributes space between logo and menu items */
+  justify-content: space-between;
+  max-width: 1200px; /* Limit the width for better centering */
+  width: 100%; /* Ensure nav takes full width */
+  margin: 0 auto; /* Center the nav */
 }
 
-nav ul {
+.logo {
   display: flex;
-  justify-content: space-around; /* Space around the menu items */
   align-items: center;
+}
+
+#nav-list {
+  display: flex;
+  gap: 20px;
   list-style: none;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  gap: 20px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
 }
 
-
-#logo {
-  font-family: "Pattaya", sans-serif;
-  font-weight: 500;
-}
-
-.mode-toggle {
-  display: inline-block;
-  margin-left: 20px; /* Space between menu items and toggle button */
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-  cursor: pointer; /* Change cursor to pointer */
-  color: white; /* Text color */
-  font-size: 1.5em; /* Increase font size */
-  padding: 0; /* Remove padding */
-  align-self: center; /* Center align the button vertically */
-}
-
-.main-head ul li {
-  display: inline;
-}
-
-.main-head ul li a {
+#nav-list li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Optional: Add a class to change background on scroll */
-.sticky {
-  background-color: rgba(0, 0, 0, 0.9); /* Dark background on scroll */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
 }
+
+.mode-toggle {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+  }
+
+  #nav-list {
+    display: none; /* Hide menu initially */
+    position: absolute;
+    top: 100%; /* Position dropdown below header */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  #nav-list.active {
+    display: flex; /* Show menu when active */
+  }
+
+  /* Close button styles */
+  .dropdown-close-btn  {
+    display: block; /* Visible only in the dropdown menu */
+    align-self: flex-end;
+    margin-right: 20px;
+    color: white;
+    font-size: 2em;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+/* Hide the close button on larger screens (revised) */
+@media (min-width: 769px) {
+  /* Hide the close button by setting its display to none and removing it from the DOM */
+  .dropdown-close-btn {
+    display: none;
+    /* Remove the close button from the DOM */
+    display: none !important;
+  }
+}
+
 
 .hero {
   min-height: 100vh;
@@ -1208,9 +1246,9 @@ justify-content: center;
 }
 
 
-/* deals */
+/* Deals */
 .deals-section { 
-  padding: 90px 50px;    /* modified padding */
+  padding: 90px 20px; /* Adjusted padding for smaller screens */
   background-color: #f8f9fa;
 }
 
@@ -1227,34 +1265,35 @@ justify-content: center;
 }
 
 .deals-list {
-  max-width: 80%;
+  max-width: 90%; /* Increased max-width for better responsiveness */
   justify-content: center;
   padding: 40px 0;
   margin: 0 auto;
   display: grid;  
-  grid-template-columns: repeat(3, 300px); /* Three equal columns */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
   grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
   gap: 30px; /* Space between grid items */
 }
+
 .deal-item {
   background-color: #fff;
-  padding: 25px 30px;    /* added padding left and right*/
+  padding: 25px 30px; /* Added padding left and right */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
   text-align: center;
   color: #090f15;
-  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover tranform animation*/
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover transform animation */
 }
 
-/* added hover effect */
+/* Added hover effect */
 .deal-item:hover {
   transform: translateY(-10px); 
   cursor: pointer;
 }
+
 .deal-item h3 {
   font-size: 1.5em;
-  font-weight: 600;  /* made heading bold */
+  font-weight: 600; /* Made heading bold */
   margin-bottom: 15px;
   color: #090f15;
 }
@@ -1286,6 +1325,7 @@ justify-content: center;
 .deal-item button:hover {
   background-color: #218838;
 }
+
 #deals {
   background-color: #f9f9f9; /* Light background */
   border: 1px solid #007bff; /* Blue border */
@@ -1295,6 +1335,32 @@ justify-content: center;
   background-color: #1e1e1e; /* Dark background */
   border: 1px solid #0056b3; /* Darker blue border */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .deals-section {
+    padding: 60px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .deals-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .deals-list {
+    grid-template-columns: 1fr; /* One column on very small screens */
+  }
+
+  .deal-item {
+    padding: 20px; /* Reduce padding inside deal items */
+  }
+
+  .deals-section h2, .deals-section p {
+    font-size: 1.5em; /* Reduce font size for smaller screens */
+  }
+}
+
 /* recommendations */
 .recommendations-section {
   padding: 50px;
