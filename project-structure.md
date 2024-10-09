@@ -29,6 +29,7 @@
 ├── login.css
 ├── login.html
 ├── project-structure.md
+├── project_structure.txt
 ├── script.js
 ├── signUp.css
 ├── signUp.html
