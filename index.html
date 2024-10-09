@@ -153,6 +153,7 @@
         align-items: center;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="light-mode">
 
@@ -191,6 +192,26 @@
           translateElement.style.display = "none";
         }
       }
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+  $     ("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
   </script>
 
   <script src="script.js"></script>
@@ -469,47 +490,16 @@
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
         <h2>Book a Cab or Auto</h2>
-        <p>Book a cab or auto with ease</p>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location">Pickup Location:</label>
+            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
           </div>
           <div class="form-group">
-            <label for="drop-location">Drop Location:</label>
+            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
           </div>
-          <div class="form-group">
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-      </section>
-
-      <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
-
+        
         <form
           action="/book-cab"
           method="POST"
@@ -521,111 +511,34 @@
             flex-direction: column;
           "
         >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
-
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
+          
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
+            <strong>Vehicle Type</strong>
+          </label>
+          
+          <select 
+          id="vehicle-type" 
+          name="vehicle-type" 
+          style="width: 150px; height: 29px; padding: 5px;" 
+          required >
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+          </select>
+        </div>
 
           <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
+            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time">Travel Time:</label>
+            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
 
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-
-        </form>
-      </div>
-    </section>
+        </section>
+          
     
 
 
