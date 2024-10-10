@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyTrail Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="/icons/airplane.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+
+.main-head nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .main-head nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-head nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        .main-head nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .main-head nav ul li a:hover,
+        .main-head nav ul li a.active {
+            color: #007bff;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .main-head nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 20px;
+            }
+
+            .main-head nav ul.active {
+                display: flex;
+            }
+
+            .main-head nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 25px;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00e5ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.blog-post:hover::before {
+    transform: scaleX(1);
+}
+
+.blog-post h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.blog-post:hover h2 {
+    color: #007bff;
+}
+
+.blog-post .meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.blog-post .content {
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.blog-post .read-more:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post {
+        width: 100%;
+    }
+}
+
+/* Add this for a staggered animation effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-post {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.blog-post:nth-child(1) { animation-delay: 0.1s; }
+.blog-post:nth-child(2) { animation-delay: 0.2s; }
+.blog-post:nth-child(3) { animation-delay: 0.3s; }
+.blog-post:nth-child(4) { animation-delay: 0.4s; }
+.blog-post:nth-child(5) { animation-delay: 0.5s; }
+.blog-post:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="light-mode">
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
+                <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul id="nav-list">
+                <li><a href="index.html" class="navhover">Home</a></li>
+                <li><a href="index.html#locations" class="navhover">Location</a></li>
+                <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+                <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+                <li><a href="index.html#contact" class="navhover">Contact</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+                <li><a href="#" class="navhover active">Blog</a></li>
+            </ul>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow">☀️</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+           
+            <h3>Discover Travel Tips, Stories, and Inspiration</h3>
+            <h3>Welcome to the BuddyTrail Blog, your go-to destination for all things travel! Whether you're an experienced adventurer or just starting to explore the world, we've got you covered with expert tips, inspiring travel stories, and practical advice. From hidden gems and must-visit destinations to budget-friendly itineraries and solo travel hacks, our blog is designed to fuel your wanderlust and make your journeys unforgettable. Dive into our latest posts, discover new cultures, and get inspired to embark on your next adventure with BuddyTrail!</h3>
+        </section>
+
+        <div class="blog-container">
+            <article class="blog-post">
+                <h2>10 Must-Visit Destinations for 2024</h2>
+                <div class="meta">Posted on May 15, 2024 by Travel Expert</div>
+                <div class="content">
+                    <p>As we enter 2024, the world of travel continues to evolve, offering new and exciting destinations for adventurers and relaxation-seekers alike. From hidden gems to reimagined classics, here are our top 10 must-visit destinations for 2024...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>Sustainable Travel: How to Reduce Your Carbon Footprint</h2>
+                <div class="meta">Posted on May 10, 2024 by Eco-Travel Enthusiast</div>
+                <div class="content">
+                    <p>As awareness of climate change grows, many travelers are looking for ways to explore the world while minimizing their environmental impact. In this guide, we'll explore practical tips and strategies for sustainable travel...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>Budget-Friendly Travel Hacks Every Adventurer Should Know</h2>
+                <div class="meta">Posted on May 5, 2024 by Frugal Traveler</div>
+                <div class="content">
+                    <p>Traveling doesn't have to break the bank. With a little creativity and planning, you can explore the world without emptying your wallet. Here are some tried-and-true budget-friendly travel hacks that every adventurer should know...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>The Art of Solo Travel: Embracing Independence</h2>
+                <div class="meta">Posted on April 30, 2024 by Solo Adventurer</div>
+                <div class="content">
+                    <p>Solo travel can be one of the most rewarding and transformative experiences. It offers unique opportunities for self-discovery, personal growth, and unparalleled freedom. In this post, we'll explore the joys and challenges of solo travel...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>Culinary Journeys: Exploring the World Through Food</h2>
+                <div class="meta">Posted on April 25, 2024 by Foodie Explorer</div>
+                <div class="content">
+                    <p>One of the best ways to experience a new culture is through its cuisine. From street food to fine dining, every dish tells a story. Join us on a mouthwatering journey as we explore some of the world's most exciting culinary destinations...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>Off the Beaten Path: Hidden Gems Around the World</h2>
+                <div class="meta">Posted on April 20, 2024 by Adventure Seeker</div>
+                <div class="content">
+                    <p>While popular tourist destinations have their charm, there's something special about discovering hidden gems. In this post, we'll take you on a journey to some of the world's best-kept secrets, from secluded beaches to charming villages...</p>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We are a team of passionate travelers creating amazing experiences for adventurers worldwide.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#locations">Locations</a></li>
+                    <li><a href="index.html#itineraries">Itineraries</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@buddytrail.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Add any additional JavaScript for the blog page here
+        // Add this for mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
