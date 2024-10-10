@@ -1754,3 +1754,68 @@ justify-content: center;
   border-radius: 5px;
   white-space: nowrap; /* Prevent text from wrapping */
 }
+
+
+.contact-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/contact-mountain.png");
+  display: flex;
+  gap: 50px; /* Adds space between the two cards */
+  padding: 50px;
+}
+
+.card1 {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card2 {
+  background-color: transparent;
+  border-radius: none;
+  box-shadow: none;
+  padding: 30px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card1 h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.card1 input, .card1 textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.card1 textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.card1 button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card1 button:hover {
+  background-color: #218838;
+}
