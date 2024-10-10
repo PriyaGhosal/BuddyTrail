@@ -364,6 +364,15 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
+.dark-mode .cards{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #121212;
+}
 
 .card {
   text-align: center;
@@ -372,7 +381,21 @@ nav {
   margin: 2rem 5rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  border-radius: 10px;
 }
+.dark-mode .card{
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 45vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  background-color: #232222;
+}
+/* .dark-mode .card h4 .card p{
+  background-color: rgb(152, 147, 147);
+
+} */
 
 .card:hover {
   scale: 1.02;
@@ -388,11 +411,18 @@ nav {
 .card p {
   padding: 1rem;
   line-height: 2;
+  
+}
+
+.dark-mode .card-text{
+  color: rgb(180, 174, 174);
+
 }
 
 .card-icon {
   background: #2a3c53;
   padding: 2rem;
+  border-radius: 10px;
 }
 
 /**** CONTACT PAGE ****/
@@ -462,6 +492,27 @@ nav {
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
   background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+}
+
+/* cab-booking-section in dark-mode */
+.dark-mode .booking-container {
+  width: 100%;
+  max-width: 500px; 
+  text-align: center; 
+  padding: 20px; 
+  border: 2px solid #007bff; 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  background-color: #272626; 
+}
+
+.dark-mode .cab-booking-section  {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh; /* Minimum height to fill the viewport */
+  padding: 20px; /* Padding around the section */
+  background-color: rgba(99, 98, 98, 0.738); /* Translucent background for section */
 }
 
 h2 {
@@ -1313,6 +1364,8 @@ justify-content: center;
   background-color: #f8f9fa;
 }
 
+
+
 .deals-section h2 {
   font-size: 2.2em;
   margin-bottom: 20px;
@@ -1344,6 +1397,11 @@ justify-content: center;
   text-align: center;
   color: #090f15;
   transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover transform animation */
+}
+
+.dark-mode .deal-item{
+  background-color: #232222;
+  
 }
 
 /* Added hover effect */
@@ -1393,8 +1451,14 @@ justify-content: center;
 }
 
 .dark-mode #deals {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #121212; /* Dark background */
   border: 1px solid #0056b3; /* Darker blue border */
+}
+.dark-mode .deals-text{
+  color: rgb(180, 174, 174);
+}
+.dark-mode .deals-text-heading{
+  color: white;
 }
 
 /* Responsive Styles */
