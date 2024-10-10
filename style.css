@@ -149,14 +149,20 @@ nav {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
+  margin-left: 16px;
   cursor: pointer;
+  padding: 0;
+}
+
+.toggle-container{
+  display: flex;
 }
 
 .mode-toggle {
-  position: fixed;
+  /* position: fixed;
   top: 20px;
-  right: 20px;
+  right: 20px; */
   border: none;
   background-color:white;
   cursor: pointer;
@@ -710,16 +716,16 @@ body.dark-mode {
 
 /* Button styles */
 .mode-toggle {
-  position: fixed;
+  /* position: fixed;
   top: 10px;
-  right: 10px;
+  right: 10px; */
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
   font-size: 1.5em;
   transition: color 0.3s, transform 0.3s;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 /* Sun and moon icons */
