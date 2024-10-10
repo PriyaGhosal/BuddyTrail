@@ -106,8 +106,6 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
-  padding: 15px;
   background-color: transparent;
   color: white;
   display: flex;
@@ -123,6 +121,12 @@ nav {
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
   margin: 0 auto; /* Center the nav */
+  border-radius: 15px;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(8px);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  border: 2px solid  #343c44;
 }
 
 .logo {
@@ -155,12 +159,12 @@ nav {
 
 .mode-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   border: none;
   background-color:white;
   cursor: pointer;
-  padding: 5px;
+
   
 }
 .mode-toggle img {
@@ -710,16 +714,13 @@ body.dark-mode {
 
 /* Button styles */
 .mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+  top: -5px;
+  right: -110px;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 1.5em;
   transition: color 0.3s, transform 0.3s;
-  padding: 15px;
 }
 
 /* Sun and moon icons */
@@ -733,7 +734,7 @@ body.dark-mode {
 }
 
 /* Glow effect */
-.sun-icon.glow {
+.sun-icon-glow {
   color: #ffa500;
   text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
 }
