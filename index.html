@@ -55,6 +55,13 @@
     gap: 10px; /* Add some space between the stars and the count */
 }
 
+.rating {
+  height: 50px;
+}
+
+.rating:hover {
+  cursor: pointer;
+}
 
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
@@ -134,9 +141,9 @@
       .tooltip-text {
         display: none; /* Hide by default */
         position: absolute;
-        bottom: 100%; /* Position above the button */
-        right: 50%;
-        transform: translateX(50%);
+        top: -10%; /* Position above the button */
+        left: -230px;
+        transform: translateX(-230px, -50%);
         background-color: #333; /* Background color for tooltip */
         color: #fff; /* Tooltip text color */
         padding: 5px;
@@ -151,6 +158,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+      }
+
+      .card:hover {
+        cursor: pointer;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -760,7 +771,7 @@
             <input type="text" id="destination" name="destination" required />
 
             <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
+            <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
