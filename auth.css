@@ -280,7 +280,7 @@ form.sign-in-form {
   background: #ffffff;
   color: #000000;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
   text-decoration: none;
@@ -440,15 +440,4 @@ form.sign-in-form {
   }
 }
 
-.homeBtn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: #ffffff;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
+
