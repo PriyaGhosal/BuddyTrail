@@ -1793,7 +1793,7 @@ justify-content: center;
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color:#DC5F00;
+  border-top-color:#4fb5e0;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   z-index: 99999;
@@ -1808,7 +1808,7 @@ justify-content: center;
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color:#373A40;
+  border-top-color:#1446a9;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
