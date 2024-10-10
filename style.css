@@ -1219,6 +1219,10 @@ justify-content: center;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+/* Popup Title */
+.popup-title {
+  color: black;
+}
 /* Close Button */
 .close-btn {
   position: absolute;
