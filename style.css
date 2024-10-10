@@ -814,6 +814,9 @@ body.dark-mode {
   transition: background-color 0.3s;
   margin-bottom: 15px;
 }
+.itineraries-section h2 {
+  color: #007bff; 
+}
 
 .itinerary button:hover {
   background-color: #0056b3;
