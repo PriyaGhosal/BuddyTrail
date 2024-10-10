@@ -152,6 +152,11 @@
         flex-direction: row;
         align-items: center;
       }
+      #nav-list li a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -254,8 +259,6 @@
       <h1 id="logo">BuddyTrail</h1>
     </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
 
     <ul id="nav-list">
       <!-- Close button for dropdown -->
@@ -269,10 +272,16 @@
       <li><a href="auth.html" class="navhover">Sign In</a></li>
     </ul>
 
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
-    </button>
+    <div class="toggle-container">
+      
+      <!-- Toggle Button -->
+      <button class="mode-toggle" id="modeToggle">
+        <span class="sun-icon glow"><img src="day-mode.png"></span>
+      </button>
+      
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
   </nav>
 </header>
 
