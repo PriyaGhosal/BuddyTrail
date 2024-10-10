@@ -458,7 +458,7 @@ nav {
   max-width: 500px; /* Set a max width for the container */
   text-align: center; /* Centering the text */
   padding: 20px; /* Add padding inside the container */
-  border: 2px solid #007bff; /* Border color */
+  /* border: 2px solid #007bff; Border color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
   background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
@@ -833,12 +833,12 @@ body.dark-mode {
 }
 #itineraries {
   background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
+  /* border: 1px solid #007bff; Blue border */
 }
 
 .dark-mode #itineraries {
   background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
+  /* border: 1px solid #0056b3; Darker blue border */
 }
 
 
@@ -1389,12 +1389,12 @@ justify-content: center;
 
 #deals {
   background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
+  /* border: 1px solid #007bff; Blue border */
 }
 
 .dark-mode #deals {
   background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
+  /* border: 1px solid #0056b3; Darker blue border */
 }
 
 /* Responsive Styles */
