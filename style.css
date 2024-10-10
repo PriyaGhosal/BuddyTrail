@@ -108,7 +108,8 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-  background-color: transparent;
+  background-color: rgb(156, 156, 156);
+  /*background-color: transparent;*/
   color: white;
   display: flex;
   justify-content: center; /* Keep header centered */
@@ -142,6 +143,7 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  
 }
 
 .hamburger {
