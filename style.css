@@ -399,37 +399,52 @@ nav {
 
 #contact {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/contact-mountain.png");
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.form-wrapper {
-  background: rgba(19, 28, 39, 0.8);
-  width: 60%;
-  color: white;
-  border-radius: 2rem;
+#contact .title{
+  color: #f4f4f4;
 }
-
-.form-head {
+#contact .description{
+  color: #d3cece;
+}
+.info-item{
+  display: flex;
+}
+.info-text-content h3{
+  font-size: 20px;
+  color: #f7f3f3;
+}
+.info-text-content p{
+  font-size: 16px;
+  color: #f1ecec;
+}
+.form-container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  padding: 30px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-container .form-title{
   text-align: center;
-  padding: 4rem;
+  font-size: 3.1rem;
+  margin-bottom: 20px;
 }
 
-.name-form,
-.email-form {
-  padding: 3rem;
-  text-align: center;
-}
-
-.form-wrapper label {
-  margin: 0rem 3rem;
-}
 
 .form-wrapper button {
   width: 100%;
@@ -439,9 +454,6 @@ nav {
   border-bottom-right-radius: 2rem;
 }
 
-.form-wrapper input {
-  padding: 1rem 3rem;
-}
 
 /* Cab Booking Section Styles */
 .cab-booking-section  {
@@ -489,14 +501,19 @@ label {
 }
 
 input,
-select {
-  height: 35px;
+select,
+textarea {
+  height: 45px;
   width: 100%; /* Full width */
   padding: 5px;
   border: 1px solid #ccc; /* Border for inputs */
   border-radius: 5px; /* Rounded corners */
-  font-size: 1em;
+  font-size: 1.6rem;
   margin-top: 5px;
+  outline: none;
+}
+textarea{
+  height: 150px;
 }
 
 input[type="text"],
@@ -505,8 +522,9 @@ input[type="time"] {
   transition: border 0.3s; /* Smooth transition */
 }
 
-input:focus {
-  border: 1px solid #007bff; /* Border color on focus */
+input:focus, 
+textarea:focus{
+  border: 2px solid #007bff; /* Border color on focus */
 }
 
 /* Button Styles */
