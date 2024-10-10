@@ -115,7 +115,10 @@ button {
   align-items: center;
   transition: background-color 0.3s ease;
 }
-
+.main-head.shadow {
+  background-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 nav {
   display: flex;
   align-items: center;
