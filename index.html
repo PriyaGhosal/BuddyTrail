@@ -748,16 +748,250 @@
 
 
 
-    <a href="chatbot.html">
-      <div class="fixed bottom-0 right-2 chatbot-container">
-        <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot" />
-          <span class="tooltip-text">
-            Welcome to Buddytrail! <br />
-            How can I help You? ^_^
-          </span>
-        </button>
+  <div class="fixed bottom-0 right-2 chatbot-container">
+    <!-- Button to open/close the chatbot -->
+    <button class="chatbot-button group" onclick="toggleChat()">
+      <img src="chatbot.gif" alt="chatbot" />
+      <span class="tooltip-text">Welcome to Buddytrail! <br />How can I help You? ^_^</span>
+    </button>
+  
+    <!-- Chatbot area -->
+    <div id="chatbot-area" class="chatbot-iframe" style="display: none;">
+      <div class="chat-header">
+        <span>Chat with Buddytrail Bot</span>
       </div>
+  
+      <!-- Messages Section -->
+      <div class="chat-messages" id="chat-messages">
+        <!-- Sample messages -->
+        <div class="message incoming">
+          <p>Hello! How can I assist you today?</p>
+        </div>
+        <div class="message outgoing">
+          <p>I'm looking for more information about your services.</p>
+        </div>
+      </div>
+  
+      <!-- Input area -->
+      <div class="chat-input-container">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button class="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+  
+  <style>/* Chatbot container and button */
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .chat
+    
+    .chatbot-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    
+    /* Chatbot iframe - Chat area */
+    .chatbot-iframe {
+      width: 350px;
+      height: 500px;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      display: none;
+      z-index: 100000;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Header without close button */
+    .chat-header {
+      background-color: #197ae2;
+      color: white;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Message display area */
+    .chat-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background-color: #f1f1f1;
+    }
+    
+    /* Chat input area */
+    .chat-input-container {
+      display: flex;
+      padding: 10px;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+    }
+    
+    #chat-input {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .send-btn {
+      margin-left: 10px;
+      background-color: #45515f;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .send-btn:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Message bubbles */
+    .message {
+      max-width: 75%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .message.incoming {
+  background: rgba(255, 0, 0, 0.3); /* Transparent black */
+  color: #000000; /* Black text color for incoming messages */
+  align-self: flex-start; /* Align the message to the left side of the container */
+  border-radius: 20px 20px 20px 0; /* Rounded bubble style */
+  max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+  padding: 10px; /* Add some padding inside the bubble */
+}
+
+.message.outgoing {
+  background: rgba(52, 177, 94, 0.8); /* Solid blue */
+  color: #000000; /* White text color for outgoing messages */
+  align-self: flex-end; /* Align the message to the right side of the container */
+  border-radius: 20px 20px 0 20px; /* Rounded bubble style */
+  max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+  margin-left: auto; /* Automatically push the message to the right */
+  text-align: right; /* Align the text to the right within the message bubble */
+  padding: 10px; /* Add some padding inside the bubble */
+}
+
+    
+    </style>
+          <script>
+       // Toggle chatbot open/close
+function toggleChat() {
+  var chatArea = document.getElementById("chatbot-area");
+  if (chatArea.style.display === "none" || chatArea.style.display === "") {
+    chatArea.style.display = "flex";
+  } else {
+    chatArea.style.display = "none";
+  }
+}
+
+// Send message
+function sendMessage() {
+  var inputField = document.getElementById("chat-input");
+  var messageText = inputField.value;
+  if (messageText.trim() === "") return;
+
+  // Create an outgoing message bubble
+  var messageBubble = document.createElement("div");
+  messageBubble.classList.add("message", "outgoing");
+  messageBubble.textContent = messageText;
+
+  // Append the message to the chat
+  var chatMessages = document.getElementById("chat-messages");
+  chatMessages.appendChild(messageBubble);
+
+  // Scroll to the bottom of the chat
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Clear the input field
+  inputField.value = "";
+
+  // Simulate a bot response
+  setTimeout(function () {
+    var botMessage = document.createElement("div");
+    botMessage.classList.add("message", "incoming");
+    botMessage.textContent = getBotResponse(messageText);
+    chatMessages.appendChild(botMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 1000);
+}
+
+// Add event listener for the Enter key
+document.getElementById("chat-input").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+
+// Function to get bot response based on input
+function getBotResponse(input) {
+  // Normalize input: lowercase and remove punctuation
+  const normalizedInput = input.toLowerCase().replace(/[?.,!]/g, '').trim();
+
+  const responses = {
+    "what is buddytrail": "BuddyTrail is a travel planning service that offers personalized itineraries and exclusive deals on flights and accommodations. Learn more at [BuddyTrail](https://buddytrail.netlify.app/).",
+    "how can i book a trip": "You can book a trip directly through our website by selecting your destination and preferences.",
+    "what destinations are available": "We provide itineraries for popular destinations around the world. Check our website for more details.",
+    "do you offer cab booking": "Yes, BuddyTrail offers cab booking services. Please visit our booking section for more information.",
+    "how can i contact support": "For support, please reach out to us via the contact form on our website.",
+    // Add more questions and answers as needed
+  };
+
+  // Check normalized input and return appropriate response
+  for (const [question, response] of Object.entries(responses)) {
+    if (normalizedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  // Attempt to correct common spelling mistakes
+  const correctedInput = correctSpelling(normalizedInput);
+  for (const [question, response] of Object.entries(responses)) {
+    if (correctedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  return "I'm sorry, I didn't understand that. Can you ask something else?";
+}
+
+// Simple spelling correction (basic approach)
+function correctSpelling(input) {
+  const corrections = {
+    "buddytrail": "BuddyTrail",
+    "bookin": "booking",
+    "destinashun": "destination",
+    // Add more common misspellings and corrections as needed
+  };
+
+  for (const [misspelled, correct] of Object.entries(corrections)) {
+    if (input.includes(misspelled)) {
+      return input.replace(misspelled, correct);
+    }
+  }
+  return input; // Return the input if no corrections are made
+}
+
+            </script>
     </a>
       <div class="fixed bottom-0 right-2 scroll-container">
         <button class="scroll-button group" id="scrollTopBtn">
