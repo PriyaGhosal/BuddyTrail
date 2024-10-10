@@ -445,10 +445,18 @@ form.sign-in-form {
   top: 20px;
   left: 20px;
   background: #ffffff;
-  color: #ffffff;
+  color: #000000;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
   text-decoration: none;
+}
+
+.homeBtn:hover {
+  background: #232323;
+}
+
+.homeBtn:active {
+  background: #191919;
 }
