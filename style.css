@@ -1143,7 +1143,9 @@ justify-content: center;
   .reviews-list {
     grid-template-columns: 1fr;
   }
-  
+  .form-button button{
+    width:100%;
+  }
   .reviews-title {
     font-size: 2em;
   }
@@ -1152,13 +1154,27 @@ justify-content: center;
     max-width: 400px;
     margin: 0 auto;
   }
+  .review-form{
+    width:60vw;
+  }
+  .form{
+    width: 50vw;
+  }
 }
 
 @media (max-width: 480px) {
   .reviews-container {
     padding: 20px 10px;
   }
-  
+  .review-form{
+    width:80vw;
+  }
+  .form{
+    width:70vw;
+  }
+  .form-button button{
+    width:100%
+  }
   .review-header {
     flex-direction: column;
     text-align: center;
@@ -1600,6 +1616,14 @@ justify-content: center;
 
 .recommendation-item button:hover {
   background-color: #003d80; /* Darker blue on hover */
+}
+@media (max-width: 768px) {
+  .recommendation-list{
+    flex-direction: column;
+  }
+  .recommendation-item{
+    max-width: 100%;
+  }
 }
 /* Positioning and Styling for Google Translate Button */
 .translate-container {
