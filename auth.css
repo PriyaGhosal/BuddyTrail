@@ -27,7 +27,7 @@ input {
   left: 0;
 }
 
-.signin-signup {
+.sign-in-signup {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0rem 5rem;
+  padding:  5rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
   grid-column: 1 / 2;
@@ -246,7 +246,7 @@ form.sign-in-form {
   transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin-signup {
+.container.sign-up-mode .sign-in-signup {
   left: 25%;
 }
 
@@ -316,15 +316,15 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
-  .signin-signup {
+  .sign-in-signup {
     width: 100%;
     top: 95%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
 
-  .signin-signup,
-  .container.sign-up-mode .signin-signup {
+  .sign-in-signup,
+  .container.sign-up-mode .sign-in-signup {
     left: 50%;
   }
 
@@ -408,7 +408,7 @@ form.sign-in-form {
     transform: translateY(300px);
   }
 
-  .container.sign-up-mode .signin-signup {
+  .container.sign-up-mode .sign-in-signup {
     top: 5%;
     transform: translate(-50%, 0);
   }
