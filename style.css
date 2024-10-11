@@ -172,32 +172,44 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
-  padding: 15px;
-  background-color: rgb(156, 156, 156);
-  /*background-color: transparent;*/
+  z-index: 1000;
+  background-color: rgba(25, 21, 21, 0.9); /* Semi-transparent for a sleeker look */
   color: white;
   display: flex;
-  justify-content: center; /* Keep header centered */
+  justify-content: space-between; /* Keep space between logo and nav */
   align-items: center;
-  transition: background-color 0.3s ease;
+  padding: 10px 20px; /* Add some padding for spacing */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for smoothness */
 }
+
 .main-head.shadow {
   background-color: #000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow on scroll */
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* Limit the width for better centering */
-  width: 100%; /* Ensure nav takes full width */
-  margin: 0 auto; /* Center the nav */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+#logo-web {
+  height: 40px; /* Adjust for responsive height */
+  margin-right: 10px; /* Spacing between logo image and text */
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
 }
 
 #nav-list {
@@ -212,7 +224,12 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+#nav-list li a:hover {
+  color: #ff9800; /* Highlighted color on hover */
 }
 
 .hamburger {
@@ -231,9 +248,11 @@ nav {
   border: none;
   background-color:white;
   cursor: pointer;
-  padding: 5px;
-  
-}
+  padding: 5px;}
+.mode-toggle img:hover{
+  background-color: black;
+  } 
+
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
   height: auto;
