@@ -510,21 +510,23 @@
       <section id="contact">
         <div class="form-wrapper">
           <header class="form-head">
-            <h2>Contact US</h2>
+            <h2>Contact Us</h2>
           </header>
-          <form action="https://formspree.io/f/mqkvkayy" method="POST">
+          <form action="https://formspree.io/f/mqkvkayy" method="POST" id="contact-form">
             <div class="name-form">
-              <label for="name">Name : </label>
-              <input id="name" type="text" name="name" required />
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" placeholder="Enter your name" required />
             </div>
             <div class="email-form">
-              <label for="email">Email :</label>
-              <input id="email" type="email" name="email" required />
+              <label for="email">Email:</label>
+              <input id="email" type="email" name="email" placeholder="Enter your email" required />
             </div>
             <button type="submit">Submit</button>
+            <div id="success-message" style="display:none;">Thank you for contacting us!</div>
           </form>
         </div>
       </section>
+
     </main>
     <!-- ratings by user -->
     <section id="reviews" class="reviews-section">
