@@ -274,7 +274,6 @@
       <li><a href="#benefits" class="navhover">Benefits</a></li>
       <li><a href="#contact" class="navhover">Contact</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
-      <li><a href="reviews.html" class="navhover">Share Experience</a></li>
     </ul>
 
     <!-- Toggle Button -->
@@ -800,14 +799,20 @@
                         <h2 class="form-title">Ready to Get Started?</h2>
                         <form id="contactForm">
                             <div class="input-group">
-                                <input type="text" id="name" placeholder="Your name" class="input-field">
-                                <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field" style="resize: none;"></textarea>
+                                <input type="text" id="name" placeholder="Your name" class="input-field" required>
+                                <input type="email" id="email" placeholder="Your email address" class="input-field" required>
+                                <textarea id="message" placeholder="Write your message..." class="input-field" style="resize: none;" required></textarea>
                             </div>
                             <div class="submit-button-container">
                                 <button type="submit" class="submit-button">Send Message</button>
                             </div>
                         </form>
+                        <div id="thankYouMessage" style="display: none; margin-top: 20px; color: green;">
+                            <p>Thank you for your message! We'll get back to you soon.</p>
+                        </div>
+                        <div id="errorMessage" style="display: none; margin-top: 20px; color: red;">
+                            <p></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1078,7 +1083,7 @@ document.getElementById("chat-input").addEventListener("keydown", function(event
   }
 });
 
-// Function to get bot response based on input
+/ Function to get bot response based on input
 function getBotResponse(input) {
   // Normalize input: lowercase and remove punctuation
   const normalizedInput = input.toLowerCase().replace(/[?.,!]/g, '').trim();
@@ -1143,7 +1148,7 @@ function correctSpelling(input) {
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        
+
 
     <footer>
       <div class="footer-container">
@@ -1176,8 +1181,8 @@ function correctSpelling(input) {
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
-     
-  
+
+
     </div>
 
     <div class="footer-bottom">
@@ -1299,16 +1304,16 @@ function correctSpelling(input) {
   window.onscroll = function() {
     updateProgressBar();
   };
-  
-  
+
+
   function updateProgressBar() {
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrollPercent = (scrollTop / scrollHeight) * 100;
-  
+
       document.getElementById("progressBar").style.width = scrollPercent + "%";
   }
-  
+
   </script>
      <style>
       .popup {
@@ -1323,18 +1328,18 @@ function correctSpelling(input) {
         align-items: center;
         z-index: 1000;
       }
-  
+
       .popup-content {
         background-color: white;
         padding: 20px;
         border-radius: 5px;
         text-align: center;
       }
-  
+
       .popup-content h2 {
         margin-top: 0;
       }
-  
+
       .popup-content button {
         margin-top: 10px;
         padding: 5px 10px;
@@ -1344,7 +1349,7 @@ function correctSpelling(input) {
         border-radius: 3px;
         cursor: pointer;
       }
-  
+
       .custom-alert {
         position: fixed;
         top: 50%;
@@ -1363,17 +1368,17 @@ function correctSpelling(input) {
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
       }
-  
+
   .custom-alert p {
     margin: 0;
     line-height: 1.5;
   }
     </style>
   </script>
-  
+
   <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
   <script src="https://files.bpcontent.cloud/2024/10/09/17/20241009175703-8PFPCXJZ.js"></script>  
- 
+
 </body>
 
 </html>
