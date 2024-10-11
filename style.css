@@ -174,14 +174,11 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-
-  background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity added */
-=======
-
- 
+  background-color: rgb(156, 156, 156);
+  /*background-color: transparent;*/
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Keep header centered */
   align-items: center;
   transition: background-color 0.3s ease;
 }
@@ -212,7 +209,7 @@ nav {
 }
 
 #nav-list li a {
-  color: rgb(247, 246, 246);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   
@@ -222,7 +219,7 @@ nav {
   display: none; /* Hidden on larger screens */
   background: none;
   border: none;
-  color: rgb(248, 247, 247);
+  color: white;
   font-size: 1.5em;
   cursor: pointer;
 }
