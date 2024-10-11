@@ -332,11 +332,8 @@ document.getElementById('postForm').addEventListener('submit', function (e) {
 
 window.addEventListener("scroll", function () {
     let navbar = document.getElementById("main-head");
-    if (window.scrollY > 100) {
-      navbar.classList.add("shadow");
-    } else {
-      navbar.classList.remove("shadow");
-    }
+    if (window.scrollY > 100) navbar.classList.add("shadow"); 
+    else navbar.classList.remove("shadow");
 });
 
 function initMap() {
