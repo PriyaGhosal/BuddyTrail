@@ -123,17 +123,24 @@ form.sign-in-form {
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #333;
+  color: rgb(204, 195, 195);
+  background-color: #2b2b2b;
   border-radius: 50%;
-  border: 1px solid #333;
+  border: 1px solid #282828;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   transition: 0.3s;
 }
 
-.social-icon:hover {
-  color: #0b3174;
-  border-color: #000000;
+#github:hover {
+  color: white ;
+  border-color: white;
+  background-color: black;
+}
+#google:hover {
+  color:  #EA4335;
+  background-color: black;
+  border-color: white;
 }
 
 .btn {
