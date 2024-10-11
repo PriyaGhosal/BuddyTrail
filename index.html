@@ -236,7 +236,7 @@
     });
   </script>
   <main>
-    <section class="hero">
+    <section class="hero" id="home">
       <h2>Travel Beyond Limits</h2>
       <h3>
         Connect, Explore, and Discover Together. <br />
@@ -257,7 +257,7 @@
   <nav>
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
-      <h1 id="logo">BuddyTrail</h1>
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
     </div>
 
     <!-- Hamburger button for mobile -->
@@ -267,14 +267,15 @@
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
       <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="#About" class="navhover">About</a></li>
       <li><a href="#locations" class="navhover">Location</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="#benefits" class="navhover">Benefits</a></li>
+      <li><a href="#About" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      
       <li><a href="#contact" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
-      <li><a href="reviews.html" class="navhover">Share Experience</a></li>
+     
     </ul>
 
     <!-- Toggle Button -->
@@ -724,7 +725,7 @@
     </style>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
       <p>Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
