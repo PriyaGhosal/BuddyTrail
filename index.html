@@ -489,14 +489,14 @@
     <!-- Cab or Auto Booking -->
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
+        <h2 style="color: black;">Book a Cab or Auto</h2>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
+            <label for="pickup-location" style="font-size: 15px; color: black;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
           </div>
           <div class="form-group">
-            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
+            <label for="drop-location" style="font-size: 15px; color: black;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
           </div>
         
@@ -513,14 +513,14 @@
         >
           
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
-            <strong>Vehicle Type</strong>
+          <label style="font-size: 1.5em; margin-right: 35px; color: black;" for="vehicle-type">
+            <strong style="font-size: 1.5em;">Vehicle Type</strong>
           </label>
           
           <select 
           id="vehicle-type" 
           name="vehicle-type" 
-          style="width: 150px; height: 29px; padding: 5px;" 
+          style="width: 150px; height: 29px; padding: 5px; font-size: 1.5em;" 
           required >
             <option value="cab">Cab</option>
             <option value="auto">Auto</option>
@@ -528,16 +528,17 @@
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+            <label for="travel-date" style="font-size: 15px; color: black;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
+            <label for="travel-time" style="font-size: 15px; color: black;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
           <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
-
-        </section>
+        </form>
+      </div>
+    </section>
           
     
 
