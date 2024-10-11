@@ -1065,6 +1065,7 @@ body.dark-mode {
   .booking-container h2 {
     color: #f1f1f1; /* Lighter text color for readability */
   }
+}
 @media (max-width: 768px) {
   .itinerary {
     flex: 1 1 calc(45% - 20px);
