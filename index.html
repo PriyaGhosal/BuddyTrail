@@ -195,7 +195,17 @@
 
   <script src="script.js"></script>
  
-  <div id="progress-bar"></div>
+  <div id="cursor"></div>
+  <script>
+    window.cursor={
+      emoji: "🌤️",
+      color: "black",
+    };
+  </script>
+
+<script src="cursor.js" defer="defer"></script>
+  
+<div id="progress-bar"></div>
   <!-- funcioning of progress bar -->
   <script>
     window.addEventListener('scroll', function () {
