@@ -10,7 +10,8 @@
 ├── book.html
 ├── boy.png
 ├── chatbot.gif
-├── chatbot.html
+├── crescent-moon.png
+├── day-mode.png
 ├── firebase.js
 ├── icons
 │   ├── airplane.svg
@@ -30,6 +31,7 @@
 │   ├── logo2.png
 │   └── new-york-page.png
 ├── index.html
+├── package-lock.json
 ├── project-structure.md
 ├── project_structure.txt
 ├── script.js
