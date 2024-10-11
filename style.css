@@ -854,7 +854,7 @@ body {
 }
 .dark-mode.itinerary {
   background-color: #232222;
-  padding: 25px 30px; /* Added padding left and right */
+  padding: 25px 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -918,7 +918,6 @@ body {
 
 .dark-mode.itinerary{
   background-color: #232222;
-  
 }
 
 
