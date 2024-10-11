@@ -134,8 +134,8 @@
       .tooltip-text {
         display: none; /* Hide by default */
         position: absolute;
-        bottom: 100%; /* Position above the button */
-        right: 50%;
+        bottom: 0%; /* made the message to align properly */
+        right: 350%;
         transform: translateX(50%);
         background-color: #333; /* Background color for tooltip */
         color: #f3f1f1; /* Tooltip text color */
@@ -1148,7 +1148,7 @@ function correctSpelling(input) {
       <div class="footer-container">
           <div class="footer-column">
               <h3>About Us</h3>
-              <p>We are a team of passionate developers creating amazing web experiences.</p>
+              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
           </div>
           <div class="footer-column">
               <h3>Quick Links</h3>
@@ -1186,12 +1186,13 @@ function correctSpelling(input) {
   <!-- Deals and Offers Popup -->
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
-      <span class="close-btn" id="closePopup">&times;</span>
+      <span class="close-btn" id="closePopup" onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#index'">&times;</span><!-- popup closes by clicking the 'x' button and redirects to home -->
       <h2>Exclusive Deals and Offers!</h2>
       <p>
         Get the best deals on flights, hotels, and travel packages. Don't miss
         out on our limited-time discounts. Plan your trip now!
       </p>
+      
       <button onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
         Check Out Deals
       </button>
