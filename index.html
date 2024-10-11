@@ -1082,3 +1082,303 @@ document.getElementById("chat-input").addEventListener("keydown", function(event
     sendMessage();
   }
 });
+
+/ Function to get bot response based on input
+function getBotResponse(input) {
+  // Normalize input: lowercase and remove punctuation
+  const normalizedInput = input.toLowerCase().replace(/[?.,!]/g, '').trim();
+
+  const responses = {
+    "what is buddytrail": "BuddyTrail is a travel planning service that offers personalized itineraries and exclusive deals on flights and accommodations. Learn more at [BuddyTrail](https://buddytrail.netlify.app/).",
+    "how can i book a trip": "You can book a trip directly through our website by selecting your destination and preferences.",
+    "what destinations are available": "We provide itineraries for popular destinations around the world. Check our website for more details.",
+    "do you offer cab booking": "Yes, BuddyTrail offers cab booking services. Please visit our booking section for more information.",
+    "how can i contact support": "For support, please reach out to us via the contact form on our website.",
+    // Add more questions and answers as needed
+  };
+
+  // Check normalized input and return appropriate response
+  for (const [question, response] of Object.entries(responses)) {
+    if (normalizedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  // Attempt to correct common spelling mistakes
+  const correctedInput = correctSpelling(normalizedInput);
+  for (const [question, response] of Object.entries(responses)) {
+    if (correctedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  return "I'm sorry, I didn't understand that. Can you ask something else?";
+}
+
+// Simple spelling correction (basic approach)
+function correctSpelling(input) {
+  const corrections = {
+    "buddytrail": "BuddyTrail",
+    "bookin": "booking",
+    "destinashun": "destination",
+    // Add more common misspellings and corrections as needed
+  };
+
+  for (const [misspelled, correct] of Object.entries(corrections)) {
+    if (input.includes(misspelled)) {
+      return input.replace(misspelled, correct);
+    }
+  }
+  return input; // Return the input if no corrections are made
+}
+
+            </script>
+    </a>
+      <div class="fixed bottom-0 right-2 scroll-container">
+        <button class="scroll-button group" id="scrollTopBtn">
+          <span class="tooltip-text-scroll">
+            <i class="fa-solid fa-arrow-up"></i>
+          </span>
+        </button>
+      </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+
+
+    <footer>
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p>We are a team of passionate developers creating amazing web experiences.</p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+            <div id="footer-contact-us">
+             <h3>Contact Us</h3>
+             <a href="mailto:test@mail.com">info@example.com</a>
+             <a href="tel:+911234567890">+91 1234567890</a>
+            </div>
+           </div>
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Deals and Offers Popup -->
+  <div id="dealsPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Exclusive Deals and Offers!</h2>
+      <p>
+        Get the best deals on flights, hotels, and travel packages. Don't miss
+        out on our limited-time discounts. Plan your trip now!
+      </p>
+      <button onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
+        Check Out Deals
+      </button>
+    </div>
+  </div>
+  <!-- this script is for twitter icon  starts -->
+  <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+  <!-- this script is for twitter icon  ends -->
+  <!-- this script is for twitter icon  starts -->
+ <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+ <!-- this script is for twitter icon  ends -->
+    <script>
+      // script.js
+
+      // change the color of navbar while  scrolling to make it visible
+
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".main-head");
+        if (window.scrollY > 0) {
+          navbar.classList.add("sticky"); // Add class when scrolled
+        } else {
+          navbar.classList.remove("sticky"); // Remove class when at the top
+        }
+      });
+
+      window.onscroll = function () {
+        toggleScrollTopButton();
+      };
+
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      function toggleScrollTopButton() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollTopBtn.style.display = "block"; // Show button after scrolling down
+        } else {
+          scrollTopBtn.style.display = "none"; // Hide button when at the top
+        }
+
+      }
+
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+    };
+  </script>
+  <!-- Add this at the end of the body, just before the closing </body> tag -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Submit the form data using fetch
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        // Show the confirmation popup
+        document.getElementById('confirmationPopup').style.display = 'block';
+        // Reset the form
+        this.reset();
+      }).catch(error => {
+        console.error('Error:', error);
+        // Still show the confirmation popup even if there's an error
+        document.getElementById('confirmationPopup').style.display = 'block';
+      });
+    });
+
+
+    function closePopup() {
+      document.getElementById('confirmationPopup').style.display = 'none';
+    }
+  </script>
+  <script>
+  document.getElementById('reviewForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevents form submission
+
+  // Show custom alert message
+  const customAlert = document.createElement('div');
+  customAlert.className = 'custom-alert';
+  customAlert.innerHTML = `
+    <p><b>Thank you! </b><br>We use BuddyTrail to collect and manage all your feedback because we are absolutely committed to making you a happy customer.<br>We will read your feedback, and we'll take it seriously.</p>
+  `;
+  document.body.appendChild(customAlert);
+
+  // Remove alert on click
+  customAlert.addEventListener('click', () => {
+    customAlert.remove();
+  });
+
+  this.reset(); // Clears the form fields
+});
+
+      function closePopup() {
+        document.getElementById('confirmationPopup').style.display = 'none';
+      }
+    </script>
+ <!-- Adding scroll progressBar-->
+ <script>
+
+  window.onscroll = function() {
+    updateProgressBar();
+  };
+
+
+  function updateProgressBar() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercent = (scrollTop / scrollHeight) * 100;
+
+      document.getElementById("progressBar").style.width = scrollPercent + "%";
+  }
+
+  </script>
+     <style>
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(24, 23, 24, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .popup-content h2 {
+        margin-top: 0;
+      }
+
+      .popup-content button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .custom-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 400px;
+        padding: 20px;
+        background-color: rgba(51, 51, 51, 0.8); /* Adds translucency */
+        color: #fff;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+  .custom-alert p {
+    margin: 0;
+    line-height: 1.5;
+  }
+    </style>
+  </script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/09/17/20241009175703-8PFPCXJZ.js"></script>  
+
+</body>
+
+</html>
