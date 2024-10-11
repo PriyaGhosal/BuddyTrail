@@ -339,7 +339,9 @@ nav {
 }
 
 /**** BENEFITS SECTION ****/
-
+#benefits{
+  border: 1px solid #007bff;
+}
 .benefits-head {
   background: #343c44;
   min-height: 30vh;
@@ -363,6 +365,7 @@ nav {
   min-height: 70vh;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 .dark-mode .cards{
   width: 90%;
@@ -392,10 +395,6 @@ nav {
   transition: all 0.2s;
   background-color: #232222;
 }
-/* .dark-mode .card h4 .card p{
-  background-color: rgb(152, 147, 147);
-
-} */
 
 .card:hover {
   scale: 1.02;
@@ -481,6 +480,7 @@ nav {
   min-height: 100vh; /* Minimum height to fill the viewport */
   padding: 20px; /* Padding around the section */
   background-color: rgba(255, 255, 255, 0.738); /* Translucent background for section */
+  border: 1px solid #0056b3;
 }
 
 .booking-container {
@@ -503,7 +503,7 @@ nav {
   border: 2px solid #007bff; 
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-  background-color: #272626; 
+  background-color: #232222; 
 }
 
 .dark-mode .cab-booking-section  {
@@ -512,7 +512,7 @@ nav {
   align-items: center; /* Center the content vertically */
   min-height: 100vh; /* Minimum height to fill the viewport */
   padding: 20px; /* Padding around the section */
-  background-color: rgba(99, 98, 98, 0.738); /* Translucent background for section */
+  background-color: #121212; /* Translucent background for section */
 }
 
 h2 {
@@ -537,6 +537,16 @@ p {
 label {
   font-size: 1.2em;
   color: #333; /* Label color */
+}
+.dark-mode label{
+  color: rgb(132, 130, 130);
+}
+.dark-mode input{
+  background-color: rgb(181, 179, 179);
+  color: #535252;
+}
+.dark-mode option{
+  background-color: rgb(181, 179, 179);
 }
 
 input,
@@ -738,17 +748,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode styles
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Light mode styles */
-/* body.light-mode {
-    background-color: #ffffff;
-    color: #000000;
-} */
 .light-mode {
   background-color: #ffffff; /* Light mode background */
   color: black; /* Light mode text color */
@@ -794,6 +793,10 @@ body.dark-mode {
   padding: 40px;
   background-color: inherit;
   text-align: center;
+  border: 1px solid #0056b3;
+}
+.dark-mode .map-section{
+  background-color: #121212;
 }
 
 .map-section h2 {
@@ -824,23 +827,41 @@ body.dark-mode {
 }
 
 .itinerary-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  color: #003366;
-  margin-top: 20px;
+  max-width: 90%; /* Increased max-width for better responsiveness */
+  justify-content: center;
+  padding: 40px 0;
+  margin: 0 auto;
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
+  gap: 30px; /* Space between grid items */
 }
 
+
+
 .itinerary {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: #fff;
+  padding: 25px 30px; /* Added padding left and right */
+  border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 40px);
-  max-width: calc(33% - 40px);
   text-align: center;
+  color: #090f15;
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1);
 }
+.itinerary:hover{
+  transform: translateY(-10px); 
+  cursor: pointer;
+}
+.dark-mode.itinerary {
+  background-color: #232222;
+  padding: 25px 30px; /* Added padding left and right */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #090f15;
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1);
+}
+
 
 .itinerary h3 {
   font-size: 2em;
@@ -882,14 +903,22 @@ body.dark-mode {
     max-width: 100%;
   }
 }
-#itineraries {
+.light-mode #itineraries {
   background-color: #f9f9f9; /* Light background */
   border: 1px solid #007bff; /* Blue border */
 }
 
 .dark-mode #itineraries {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #121212; /* Dark background */
   border: 1px solid #0056b3; /* Darker blue border */
+}
+.dark-mode .itinerary-list{
+  background-color: #121212;
+}
+
+.dark-mode.itinerary{
+  background-color: #232222;
+  
 }
 
 
@@ -897,6 +926,7 @@ body.dark-mode {
 .reviews-section {
   padding: 50px;
   background-color: #F0F8FF;
+  border: 1px solid #007bff;
  
 }
 .revieww{
@@ -1167,7 +1197,7 @@ justify-content: center;
 
 /* Dark Mode Styles for Review Form */
 .dark-mode .review-form {
-  background-color: #121212; /* Dark background for the review form */
+  background-color: #232222; /* Dark background for the review form */
   color: white; /* White text color */
   padding: 20px; /* Padding for inner spacing */
   border-radius: 5px; /* Rounded corners */
@@ -1189,7 +1219,7 @@ justify-content: center;
 {
   width: 100%; /* Full width */
   padding: 10px; /* Padding inside fields */
-  background-color: #1e1e1e; /* Dark background for inputs */
+  background-color: rgb(132, 130, 130); /* Dark background for inputs */
   color: white; /* White text */
   border: 1px solid #333; /* Dark border */
   border-radius: 4px; /* Slightly rounded corners */
@@ -1490,6 +1520,10 @@ justify-content: center;
 .recommendations-section {
   padding: 50px;
   background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #0056b3;
+}
+.dark-mode .recommendations-section{
+  background-color: #121212;
 }
 
 .recommendations-section h2 {
@@ -1504,6 +1538,9 @@ justify-content: center;
   text-align: center;
   margin-bottom: 30px;
   color: black; /* Darker gray for text */
+}
+.dark-mode .recommendations-section p{
+  color: rgb(180, 174, 174);
 }
 
 .recommendation-list {
@@ -1522,6 +1559,9 @@ justify-content: center;
   text-align: center;
   /* border: 2px solid #0056b3; Blue border */
 }
+.dark-mode .recommendation-item{
+  background-color: #232222;
+}
 
 .recommendation-item h3 {
   font-size: 2em;
@@ -1533,6 +1573,9 @@ justify-content: center;
   font-size: 1.5em;
   margin-bottom: 20px;
   color: black; /* Darker gray for text */
+}
+.dark-mode .recommendation-item p{
+  color: rgb(180, 174, 174);
 }
 
 .recommendation-item button {
@@ -1674,10 +1717,15 @@ justify-content: center;
 }
 
 /* Contact Container */
+#contact{
+  border: 1px solid #007bff;
+}
+
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: stretch;
+  
 }
 
 /* Grid Layout */
@@ -1739,6 +1787,9 @@ justify-content: center;
   background-color: white;
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dark-mode{
+  background-color: #232222;
 }
 
 .form-title {
