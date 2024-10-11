@@ -315,6 +315,26 @@
 
     
 // }
+document.getElementById('postForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    const postContent = document.getElementById('postContent').value;
+    if (postContent.trim() === '') return;
+
+    const postContainer = document.getElementById('posts');
+    const newPost = document.createElement('div');
+    newPost.classList.add('post');
+    newPost.textContent = postContent;
+
+    postContainer.appendChild(newPost);
+    document.getElementById('postContent').value = ''; // Clear the textarea
+});
+
+window.addEventListener("scroll", function () {
+    let navbar = document.getElementById("main-head");
+    if (window.scrollY > 100) navbar.classList.add("shadow"); 
+    else navbar.classList.remove("shadow");
+});
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -365,7 +385,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const sunIcon = document.querySelector('.sun-icon');
     const moonIcon = document.createElement('span');
     moonIcon.className = 'moon-icon';
-    moonIcon.innerHTML = '🌙';
+    moonIcon.innerHTML = '<img src="crescent-moon.png">';
+
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        modeToggle.replaceChild(moonIcon, sunIcon);
+    } else {
+        document.body.classList.add('light-mode');
+        sunIcon.classList.add('glow');
+    }
 
     modeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
@@ -373,12 +403,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (document.body.classList.contains('dark-mode')) {
             modeToggle.replaceChild(moonIcon, sunIcon);
+            localStorage.setItem('theme', 'dark');
         } else {
             modeToggle.replaceChild(sunIcon, moonIcon);
             sunIcon.classList.add('glow');
+            localStorage.setItem('theme', 'light');
         }
     });
 });
+
 // discount pop_up
 document.addEventListener('DOMContentLoaded', function() {
     // Show the popup after a slight delay
@@ -408,9 +441,9 @@ modeToggle.addEventListener('click', () => {
 
     // Toggle the icon
     if (body.classList.contains('dark-mode')) {
-        modeToggle.innerHTML = '<span class="sun-icon">🌙</span>';
+        modeToggle.innerHTML = '<span class="sun-icon"><img src="crescent-moon.png"></span>';
     } else {
-        modeToggle.innerHTML = '<span class="sun-icon glow">☀️</span>';
+        modeToggle.innerHTML = '<span class="sun-icon glow"><img src="day-mode.png"></span>';
     }
 });
 // google translator
