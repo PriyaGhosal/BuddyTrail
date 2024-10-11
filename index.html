@@ -800,9 +800,9 @@
                         <h2 class="form-title">Ready to Get Started?</h2>
                         <form id="contactForm">
                             <div class="input-group">
-                                <input type="text" id="name" placeholder="Your name" class="input-field">
-                                <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field" style="resize: none;"></textarea>
+                                <input type="text" id="name" name="name" placeholder="Your name" class="input-field" required>
+                                <input type="email" id="email" name="email" placeholder="Your email address" class="input-field" required>
+                                <textarea id="message" name="message" placeholder="Write your message..." class="input-field" style="resize: none;" required></textarea>
                             </div>
                             <div class="submit-button-container">
                                 <button type="submit" class="submit-button">Send Message</button>
