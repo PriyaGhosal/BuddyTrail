@@ -315,6 +315,26 @@
 
     
 // }
+document.getElementById('postForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    const postContent = document.getElementById('postContent').value;
+    if (postContent.trim() === '') return;
+
+    const postContainer = document.getElementById('posts');
+    const newPost = document.createElement('div');
+    newPost.classList.add('post');
+    newPost.textContent = postContent;
+
+    postContainer.appendChild(newPost);
+    document.getElementById('postContent').value = ''; // Clear the textarea
+});
+
+window.addEventListener("scroll", function () {
+    let navbar = document.getElementById("main-head");
+    if (window.scrollY > 100) navbar.classList.add("shadow"); 
+    else navbar.classList.remove("shadow");
+});
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {

@@ -138,7 +138,7 @@
         right: 50%;
         transform: translateX(50%);
         background-color: #333; /* Background color for tooltip */
-        color: #fff; /* Tooltip text color */
+        color: #f3f1f1; /* Tooltip text color */
         padding: 5px;
         border-radius: 5px;
         white-space: nowrap; /* Prevent text from wrapping */
@@ -151,6 +151,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+      }
+
+      .card button{
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding: 15px;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -231,143 +237,220 @@
   </script>
   <main>
     <section class="hero">
-      <h2>Travel Beyond Limits</h2>
-      <h3>
-        Connect, Explore, and Discover Together. <br />
-        BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
-      </h3>
-      <button id="btn"><a href="book.html ">Book now</a></button>
+        <h2>Travel Beyond Limits</h2>
+        <h3>
+            Connect, Explore, and Discover Together. <br />
+            BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
+        </h3>
+        <button id="btn"><a href="book.html">Book now</a></button>
     </section>
 
     <section id="locations">
-      <header class="locations-head">
-        <h2>The Perfect Travel Experience!</h2>
+        <header class="locations-head">
+            <h2>The Perfect Travel Experience!</h2>
+        </header>
+    </section>
 
-    
+    <header class="main-head" id="main-head">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
+                <h1 id="logo">BuddyTrail</h1>
+            </div>
+
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+
+            <ul id="nav-list">
+                <!-- Close button for dropdown -->
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="#home" class="navhover">Home</a></li>
+                <li><a href="#About" class="navhover">About</a></li>
+                <li><a href="#locations" class="navhover">Location</a></li>
+                <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="#reviews" class="navhover">Reviews</a></li>
+                <li><a href="#benefits" class="navhover">Benefits</a></li>
+                <li><a href="#contact" class="navhover">Contact</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
+
+            <!-- Toggle Button -->
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Day Mode"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- JS to handle hamburger and close button -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navList = document.getElementById("nav-list");
+            const closeBtn = document.getElementById("closeBtn");
+
+            hamburger.addEventListener("click", function () {
+                navList.classList.toggle("active");
+            });
+
+            closeBtn.addEventListener("click", function () {
+                navList.classList.remove("active");
+            });
+        });
     </script>
-
-    <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo">BuddyTrail</h1>
-    </div>
-
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
-
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#hero" class="navhover">Home</a></li>
-      <li><a href="#locations" class="navhover">Location</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="#contact" class="navhover">Contact</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
-    </button>
-  </nav>
-</header>
-
-<!-- JS to handle hamburger and close button -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.getElementById("nav-list");
-    const closeBtn = document.getElementById("closeBtn");
-
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-
-    closeBtn.addEventListener("click", function () {
-      navList.classList.remove("active");
-    });
-  });
-</script>
-
-
 
     <div id="progress-bar"></div>
-    <!-- funcioning of progress bar -->
+    <!-- Functioning of progress bar -->
     <script>
-      window.addEventListener("scroll", function () {
-        // Calculate the scroll progress
-        const scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        window.addEventListener("scroll", function () {
+            // Calculate the scroll progress
+            const scrollTop =
+                document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-        // Update the width of the progress bar
-        document.getElementById("progress-bar").style.width =
-          scrollPercent + "%";
-      });
+            // Update the width of the progress bar
+            document.getElementById("progress-bar").style.width =
+                scrollPercent + "%";
+        });
     </script>
-    <main>
-       <section class="hero">
-        <h2>Travel Beyond Limits</h2>
+</main>
+<section class="hero">
+    <h2>Travel Beyond Limits</h2>
+    <h3>
+        We handle everything, from finding the ideal travel buddy to
+        selecting your perfect hotel, flight, and destination.
+    </h3>
+    <img src="/img/cloud.png" class="moving-cloud-1 cloud" alt="Moving Cloud 1" />
+    <img src="/img/cloud.png" class="moving-cloud-2 cloud" alt="Moving Cloud 2" />
+</section>
 
+<section id="benefits">
+    <header class="benefits-head">
+        <h2>The Perfect Travel</h2>
         <h3>
-          We handle everything, from finding the ideal travel buddy to
-          selecting your perfect hotel, flight, and destination.
+            We cover everything from picking the perfect hotel, <br /> to flight
+            and destination.
         </h3>
-        <img src="/img/cloud.png" class="moving-cloud-1 cloud" />
-        <img src="/img/cloud.png" class="moving-cloud-2 cloud" />
-      </header>
-    </section>
-    <section id="benefits">
-      <header class="benefits-head">
-        <h2>The Perfect travel</h2>
-        <h3>
-          we cover everything from picking the perfect hotel, <br />to flight
-          and destination
-        </h3>
-      </header>
-      <div class="cards">
+    </header>
+    <div class="cards">
         <div class="card">
-          <div class="card-icon">
-            <img src="/icons/route-solid.svg" />
-          </div>
-          <h4>Travel</h4>
-          <p>
-            Discover budget-friendly getaways for families and friends! From
-            serene mountains to sunny beaches, find your next adventure
-            without breaking the bank. Start exploring now!
-          </p>
+            <div class="card-icon">
+                <img src="./icons/route-solid.svg" alt="Travel Icon" />
+            </div>
+            <h4>Travel</h4>
+            <p>
+                Discover budget-friendly getaways for families and friends! From
+                serene mountains to sunny beaches, find your next adventure
+                without breaking the bank. Start exploring now!
+            </p>
+            <button id="btn"><a href="book.html">Explore Itineraries</a></button>
         </div>
         <div class="card">
-          <div class="card-icon">
-            <img src="/icons/bed-solid.svg" />
-          </div>
-          <h4>Hotel</h4>
-          <p>
-            We've handpicked top-rated options that offer exceptional value.
-            Book your perfect stay today and enjoy premium accommodations
-            without the premium price tag!
-          </p>
+            <div class="card-icon">
+                <img src="./icons/bed-solid.svg" alt="Hotel Icon" />
+            </div>
+            <h4>Hotel</h4>
+            <p>
+                We've handpicked top-rated options that offer exceptional value.
+                Book your perfect stay today and enjoy premium accommodations
+                without the premium price tag!
+            </p>
+            <button id="btn"><a href="book.html">See Hotels</a></button>
         </div>
         <div class="card">
-          <div class="card-icon">
-            <img src="/icons/plane-departure-solid.svg" />
-          </div>
-          <h4>Fly</h4>
-          <p>
-            Fly to your dream destination without breaking the bank! We offers
-            the best flight deals, combining comfort and affordability for
-            perfect journey. Book now and take off for less!
-          </p>
+            <div class="card-icon">
+                <img src="./icons/plane-departure-solid.svg" alt="Fly Icon" />
+            </div>
+            <h4>Fly</h4>
+            <p>
+                Fly to your dream destination without breaking the bank! We offer
+                the best flight deals, combining comfort and affordability for
+                the perfect journey. Book now and take off for less!
+            </p>
+            <button id="btn"><a href="book.html">See Flights</a></button>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
+       <section id="About">
+        <h1>About BuddyTrail - Your Ultimate Travel Companion</h1>
+        <p>
+          Welcome to <strong>BuddyTrail</strong>, the all-in-one travel platform
+          that turns your dream vacations into reality! 🌍✈ Whether you're
+          planning a fun family getaway 👨‍👩‍👧‍👦, an exciting trip with friends 👫, or
+          even a solo adventure, BuddyTrail is here to guide you every step of
+          the way. Discover new destinations 🏖🏰, find the best hotels 🏨, and
+          book budget-friendly flights 💺 without the hassle.
+        </p>
+      
+        <h2>Why Choose BuddyTrail?</h2>
+        <p>
+          BuddyTrail isn't just another travel site. It's designed to give you
+          the most personalized, stress-free travel experience possible, making
+          sure every detail is taken care of. Here's what makes us different:
+        </p>
+      
+        <ul>
+          <li>
+            🌍 <strong>Explore the World with an Interactive Travel Map:</strong>
+            Want to see the world at your fingertips? Our dynamic map lets you
+            discover the top travel destinations, both within India and
+            globally, with just a click. Find out more about each location,
+            including the best activities, top-rated attractions, and hidden
+            gems you won't want to miss.
+          </li>
+          <li>
+            🏨 <strong>Find Hotels that Fit Your Style & Budget:</strong>
+            Finding the perfect place to stay has never been easier! Our hotel finder
+            matches you with a wide selection of handpicked hotels that suit
+            your style and budget, from luxury resorts to budget-friendly stays.
+          </li>
+          <li>
+            ✈ <strong>Book Flights at the Best Prices:</strong>
+            With BuddyTrail, you can find and book flights at unbeatable prices,
+            tailored to your travel dates and preferences.
+          </li>
+          <li>
+            📝 <strong>Get Expert Tips from Seasoned Travelers:</strong>
+            Our travel blog is packed with insider tips, guides, and stories from
+            seasoned travelers.
+          </li>
+          <li>
+            ⭐ <strong>Read & Leave Reviews to Guide Fellow Travelers:</strong>
+            Travel smarter by reading user reviews and ratings for destinations,
+            hotels, flights, and activities.
+          </li>
+          <li>
+            🌐 <strong>Multi-Language Support for Global Travelers:</strong>
+            We offer multi-language support to make sure everyone feels at home.
+          </li>
+          <li>
+            🌙🌞 <strong>Dark & Bright Modes for Comfortable Browsing:</strong>
+            BuddyTrail lets you switch between dark and bright modes with ease.
+          </li>
+          <li>
+            📱 <strong>Seamless Experience Across Devices:</strong>
+            BuddyTrail is designed to be fully responsive, so you can plan and book your trips from any device.
+          </li>
+        </ul>
+      
+        <p>Join a Community of Travelers!</p>
+        <p>
+          Become part of the BuddyTrail community and connect with fellow
+          travelers! Share your experiences, get inspired by others, and enjoy a
+          personalized travel experience like never before.
+        </p>
+      
+        <p>
+          <strong>
+            Start your journey today with BuddyTrail, and turn your travel
+            dreams into memories that last a lifetime!
+          </strong>
+        </p>
+      </section>
+      
     <!-- deals -->
     <section id="deals" class="deals-section">
       <h2>Exclusive Deals and Offers</h2>
@@ -486,17 +569,19 @@
       </div>
     </section>
 
+      
+
     <!-- Cab or Auto Booking -->
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
+        <h2 style="color: black;">Book a Cab or Auto</h2>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
+            <label for="pickup-location" style="font-size: 15px; color: black;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
           </div>
           <div class="form-group">
-            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
+            <label for="drop-location" style="font-size: 15px; color: black;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
           </div>
         
@@ -513,14 +598,14 @@
         >
           
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
-            <strong>Vehicle Type</strong>
+          <label style="font-size: 1.5em; margin-right: 35px; color: black;" for="vehicle-type">
+            <strong style="font-size: 1.5em;">Vehicle Type</strong>
           </label>
           
           <select 
           id="vehicle-type" 
           name="vehicle-type" 
-          style="width: 150px; height: 29px; padding: 5px;" 
+          style="width: 150px; height: 29px; padding: 5px; font-size: 1.5em;" 
           required >
             <option value="cab">Cab</option>
             <option value="auto">Auto</option>
@@ -528,16 +613,17 @@
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+            <label for="travel-date" style="font-size: 15px; color: black;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
+            <label for="travel-time" style="font-size: 15px; color: black;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
           <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
-
-        </section>
+        </form>
+      </div>
+    </section>
           
     
 
@@ -586,6 +672,49 @@
         </div>
       </div>
     </section>
+    <!--forum Section-->
+    <header class="forum_1">
+      <h1>Travel Discussion Forum</h1>
+      <nav class="hi">
+          <ul>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#travel-planning">Travel Planning</a></li>
+              <li><a href="#experiences">Travel Experiences</a></li>
+              <li><a href="#gear">Travel Gear</a></li>
+              <li><a href="#safety">Travel Safety</a></li>
+              <li><a href="#sustainable">Sustainable Travel</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+      <section id="destinations">
+          <h2>Destination Guides</h2>
+          <div class="post-container">
+              <h3>Share Your Experiences</h3>
+              <form id="postForm">
+                  <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+                  <button type="submit">Submit</button>
+              </form>
+              <div id="posts"></div>
+          </div>
+      </section>
+
+      <!-- Add more sections for other categories -->
+  </main>
+
+  <script src="script.js"></script>
+
+    <style>
+      .recommendation-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .recommendation-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
 
     <!-- Map Section -->
     <section class="map-section">
@@ -621,7 +750,7 @@
                         <ul class="info-list">
                             <li class="info-item">
                                 <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
                                         <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
                                     </svg>
@@ -633,7 +762,7 @@
                             </li>
                             <li class="info-item">
                                 <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
                                         <path d="M15 7a2 2 0 0 1 2 2"></path>
                                         <path d="M15 3a6 6 0 0 1 6 6"></path>
@@ -647,7 +776,7 @@
                             </li>
                             <li class="info-item">
                                 <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
                                         <path d="M12 7v5l3 3"></path>
                                     </svg>
@@ -666,7 +795,7 @@
                             <div class="input-group">
                                 <input type="text" id="name" placeholder="Your name" class="input-field">
                                 <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field"></textarea>
+                                <textarea id="textarea" placeholder="Write your message..." class="input-field" style="resize: none;"></textarea>
                             </div>
                             <div class="submit-button-container">
                                 <button type="submit" class="submit-button">Send Message</button>
@@ -699,73 +828,260 @@
     </div>
   </main>
   <section id="reviews" class="reviews-section">
-    <div class="revieww">
-      <div class="review-form">
-        <h2>Rate your experience</h2>
-        <p class="review-p">
-          Read what others have to say about their experiences with various
-          destinations, hotels, flights, and activities. Share your own reviews
-          and help fellow travelers make informed decisions.
-        </p>
+  <div class="review">
+    <div class="review-form">
+      <h2>Rate your experience</h2>
+      <p class="review-p">
+        Read what others have to say about their experiences with various
+        destinations, hotels, flights, and activities. Share your own reviews
+        and help fellow travelers make informed decisions.
+      </p>
 
-        <div style="margin-top: 20px">
-          <form class="form" id="reviewForm">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
+      <div style="margin-top: 20px">
+        <form class="form" id="reviewForm">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
 
-            <label for="destination">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required />
+          <label for="destination">Destination/Service:</label>
+          <input type="text" id="destination" name="destination" required />
 
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
 
-            <label for="review">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
-            <label for="complaint">Complaint (if any):</label>
-            <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+          <label for="review">Your Review:</label>
+          <textarea id="review" name="review" rows="4" required></textarea>
+          <label for="complaint">Complaint (if any):</label>
+          <textarea id="complaint" name="complaint" rows="3"
+            placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
 
-            <div class="form-button">
-              <button type="submit">Send</button>
-            </div>
-          </form>
-
-          <!-- Thank You Message -->
-          <div id="thankYouMessage" style="display: none; margin-top: 20px;">
-            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
-              committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
+          <div class="form-button">
+            <button type="submit">Send</button>
           </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" style="display: none; margin-top: 20px;">
+          <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
+            committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-    <a href="chatbot.html">
-      <div class="fixed bottom-0 right-2 chatbot-container">
-        <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot" />
-          <span class="tooltip-text">
-            Welcome to Buddytrail! <br />
-            How can I help You? ^_^
-          </span>
-        </button>
-      </div>
-    </a>
-      <div class="fixed bottom-0 right-2 scroll-container">
-        <button class="scroll-button group" id="scrollTopBtn">
-          <span class="tooltip-text-scroll">
-            <i class="fa-solid fa-arrow-up"></i>
-          </span>
-        </button>
-      </div>
+<div class="fixed bottom-0 right-2 chatbot-container">
+  <!-- Button to open/close the chatbot -->
+  <button class="chatbot-button group" onclick="toggleChat()">
+    <img src="chatbot.gif" alt="chatbot" />
+    <span class="tooltip-text">Welcome to Buddytrail! <br />How can I help You? ^_^</span>
+  </button>
 
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- Chatbot area -->
+  <div id="chatbot-area" class="chatbot-iframe" style="display: none;">
+    <div class="chat-header">
+      <span>Chat with Buddytrail Bot</span>
+    </div>
+
+    <!-- Messages Section -->
+    <div class="chat-messages" id="chat-messages">
+      <!-- Sample messages -->
+      <div class="message incoming">
+        <p>Hello! How can I assist you today?</p>
+      </div>
+      <div class="message outgoing">
+        <p>I'm looking for more information about your services.</p>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div class="chat-input-container">
+      <input type="text" id="chat-input" placeholder="Type a message..." />
+      <button class="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Chatbot container and button */
+  .chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .chatbot-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Chatbot iframe - Chat area */
+  .chatbot-iframe {
+    width: 350px;
+    height: 500px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: none;
+    z-index: 100000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header without close button */
+  .chat-header {
+    background-color: #197ae2;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Message display area */
+  .chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+  }
+
+  /* Chat input area */
+  .chat-input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  #chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .send-btn {
+    margin-left: 10px;
+    background-color: #45515f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .send-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Message bubbles */
+  .message {
+    max-width: 75%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .message.incoming {
+    background: rgba(255, 0, 0, 0.3); /* Transparent black */
+    color: #000000; /* Black text color for incoming messages */
+    align-self: flex-start; /* Align the message to the left side of the container */
+    border-radius: 20px 20px 20px 0; /* Rounded bubble style */
+    max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+    padding: 10px; /* Add some padding inside the bubble */
+  }
+
+  .message.outgoing {
+    background: rgba(52, 177, 94, 0.8); /* Solid blue */
+    color: #000000; /* White text color for outgoing messages */
+    align-self: flex-end; /* Align the message to the right side of the container */
+    border-radius: 20px 20px 0 20px; /* Rounded bubble style */
+    max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+    margin-left: auto; /* Automatically push the message to the right */
+    text-align: right; /* Align the text to the right within the message bubble */
+    padding: 10px; /* Add some padding inside the bubble */
+  }
+</style>
+
+<script>
+  // Toggle chatbot open/close
+  function toggleChat() {
+    var chatArea = document.getElementById("chatbot-area");
+    if (chatArea.style.display === "none" || chatArea.style.display === "") {
+      chatArea.style.display = "flex";
+    } else {
+      chatArea.style.display = "none";
+    }
+  }
+
+  // Send message
+  function sendMessage() {
+    var inputField = document.getElementById("chat-input");
+    var messageText = inputField.value;
+    if (messageText.trim() === "") return;
+
+    // Create an outgoing message bubble
+    var messageBubble = document.createElement("div");
+    messageBubble.classList.add("message", "outgoing");
+    messageBubble.textContent = messageText;
+
+    // Append the message to the chat
+    var chatMessages = document.getElementById("chat-messages");
+    chatMessages.appendChild(messageBubble);
+
+    // Scroll to the bottom of the chat
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Clear the input field
+    inputField.value = "";
+
+    // Simulate a bot response
+    setTimeout(function () {
+      var botMessage = document.createElement("div");
+      botMessage.classList.add("message", "incoming");
+      botMessage.textContent = getBotResponse(messageText);
+      chatMessages.appendChild(botMessage);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1000);
+  }
+
+  // Add event listener for the Enter key
+  document.getElementById("chat-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  });
+
+  // Function to get bot response based on input
+  function getBotResponse(input) {
+    // Normalize input: lowercase and remove punctuation
+    const normalizedInput = input.toLowerCase().replace(/[?.,!]/g, '').trim();
+
+    const responses = {
+      "what is buddytrail": "BuddyTrail is a travel planning service that offers personalized itineraries and exclusive deals on flights and accommodations. Learn more at [BuddyTrail.com](https://www.buddytrail.com).",
+      "how to book a trip": "You can book a trip by visiting our website or using our mobile app. Just select your destination, choose your travel dates, and follow the prompts!",
+      "customer service": "You can reach our customer service at support@buddytrail.com or call us at 1-800-BUDDY.",
+      "default": "I'm not sure how to help with that. Can you please rephrase your question?"
+    };
+
+    return responses[normalizedInput] || responses["default"];
+  }
+</script>
 
 
   <footer>
@@ -791,10 +1107,12 @@
               </ul>
           </div>
           <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
+            <div id="footer-contact-us">
+             <h3>Contact Us</h3>
+             <a href="mailto:test@mail.com">info@example.com</a>
+             <a href="tel:+911234567890">+91 1234567890</a>
+            </div>
+           </div>
           <div class="footer-column">
               <h3>Follow Us</h3>
               <div class="social-icons">
@@ -998,6 +1316,9 @@
   }
     </style>
   </script>
+  
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/09/17/20241009175703-8PFPCXJZ.js"></script>  
  
 </body>
 
