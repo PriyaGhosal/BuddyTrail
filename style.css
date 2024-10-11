@@ -965,7 +965,7 @@ body.dark-mode {
   background-color: #F0F8FF;
  
 }
-.revieww{
+.review{
   display: flex;
 justify-content: center;
 
@@ -1226,16 +1226,20 @@ justify-content: center;
 .dark-mode .reviews-section  {
   background-color: #121212; /* Dark background */
   color: white; /* White text */
+  border: 2px solid white;
 }
 
 .dark-mode .review {
   background-color: #1e1e1e; /* Dark background for review cards */
   color: white; /* White text for review content */
-  border: 1px solid #333; /* Darker border */
+  border: 1px solid #ebe2e2; /* Darker border */
 }
 
 .dark-mode .review h4 {
   color: #ffa500; /* Optional: Highlight the reviewer's name */
+}
+.dark-mode .review label {
+  color: rgb(233, 220, 220);
 }
 
 .dark-mode .review p {
