@@ -294,13 +294,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/snehhhcodes">
-                    <img src="https://avatars.githubusercontent.com/u/169922226?v=4" width="100;" alt="snehhhcodes"/>
-                    <br />
-                    <sub><b>Sneha Tiwari</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Kavish-Paraswar">
                     <img src="https://avatars.githubusercontent.com/u/162621258?v=4" width="100;" alt="Kavish-Paraswar"/>
                     <br />
@@ -314,8 +307,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Ishika Gupta</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/hritika2409">
                     <img src="https://avatars.githubusercontent.com/u/117531823?v=4" width="100;" alt="hritika2409"/>
@@ -323,6 +314,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Hritika Sharan</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/hgjajoo">
                     <img src="https://avatars.githubusercontent.com/u/63530396?v=4" width="100;" alt="hgjajoo"/>
@@ -349,6 +342,13 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <img src="https://avatars.githubusercontent.com/u/118966111?v=4" width="100;" alt="tusharmishra069"/>
                     <br />
                     <sub><b>Tushar Mishra</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Codewithmeowmeow">
+                    <img src="https://avatars.githubusercontent.com/u/182342654?v=4" width="100;" alt="Codewithmeowmeow"/>
+                    <br />
+                    <sub><b>codewithvibha</b></sub>
                 </a>
             </td>
             <td align="center">
