@@ -438,14 +438,15 @@
     </section>
 
     <!-- Cab or Auto Booking -->
-    <section id="cab-booking" class="cab-booking-section light-mode">
+    <section id="cab-booking" class="cab-booking-section ">
       <div class="booking-container">
         <h2>Book a Cab or Auto</h2>
         <p>Book a cab or auto with ease</p>
         <form action="/book-cab" method="POST">
           <div class="form-group">
             <label for="pickup-location">Pickup Location:</label>
-            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
+            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location"
+              required />
           </div>
           <div class="form-group">
             <label for="drop-location">Drop Location:</label>
@@ -454,10 +455,13 @@
           <div class="form-group">
             <label for="vehicle-type">Vehicle Type:</label>
             <select id="vehicle-type" name="vehicle-type" required>
+              <option value="" disabled selected>Choose vehicle type</option> <!-- Placeholder option -->
               <option value="cab">Cab</option>
               <option value="auto">Auto</option>
             </select>
           </div>
+          
+          <div id="selected-vehicle" class="selected-vehicle"></div> <!-- Display area -->
           <div class="form-group">
             <label for="travel-date">Travel Date:</label>
             <input type="date" id="travel-date" name="travel-date" required />
@@ -470,8 +474,6 @@
         </form>
       </div>
     </section>
-    
-
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
@@ -482,7 +484,6 @@
       </p>
 
       <div class="recommendation-list">
-        <!-- Example Recommendation -->
         <div class="recommendation-item">
           <h3>Beach Resort in Goa</h3>
           <p>
@@ -517,6 +518,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Map Section -->
     <section class="map-section">
@@ -711,24 +713,24 @@
     }
   </script>
   <script>
-  document.getElementById('reviewForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevents form submission
+    document.getElementById('reviewForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevents form submission
 
-  // Show custom alert message
-  const customAlert = document.createElement('div');
-  customAlert.className = 'custom-alert';
-  customAlert.innerHTML = `
+      // Show custom alert message
+      const customAlert = document.createElement('div');
+      customAlert.className = 'custom-alert';
+      customAlert.innerHTML = `
     <p><b>Thank you! </b><br>We use BuddyTrail to collect and manage all your feedback because we are absolutely committed to making you a happy customer.<br>We will read your feedback, and we'll take it seriously.</p>
   `;
-  document.body.appendChild(customAlert);
+      document.body.appendChild(customAlert);
 
-  // Remove alert on click
-  customAlert.addEventListener('click', () => {
-    customAlert.remove();
-  });
+      // Remove alert on click
+      customAlert.addEventListener('click', () => {
+        customAlert.remove();
+      });
 
-  this.reset(); // Clears the form fields
-});
+      this.reset(); // Clears the form fields
+    });
 
   </script>
   <style>
@@ -767,30 +769,30 @@
     }
 
     .custom-alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 400px;
-  padding: 20px;
-  background-color: rgba(51, 51, 51, 0.8); /* Adds translucency */
-  color: #fff;
-  font-size: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  z-index: 1000;
-  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 400px;
+      padding: 20px;
+      background-color: rgba(51, 51, 51, 0.8);
+      /* Adds translucency */
+      color: #fff;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      z-index: 1000;
+      cursor: pointer;
+      /* Changes cursor to pointer to indicate it's clickable */
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
 
-.custom-alert p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-    
+    .custom-alert p {
+      margin: 0;
+      line-height: 1.5;
+    }
   </style>
 </body>
 

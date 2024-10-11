@@ -435,3 +435,18 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
+// Get the select element and the input element
+const vehicleTypeSelect = document.getElementById('vehicle-type');
+const vehicleTypeDisplay = document.getElementById('vehicle-type-display');
+
+// Function to update the display input based on the select value
+function updateVehicleTypeDisplay() {
+    const selectedValue = vehicleTypeSelect.value;
+    vehicleTypeDisplay.value = selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1);
+}
+
+// Add event listener to the select element to call the function when changed
+vehicleTypeSelect.addEventListener('change', updateVehicleTypeDisplay);
+
+// Call the function once to display the initial value
+updateVehicleTypeDisplay();

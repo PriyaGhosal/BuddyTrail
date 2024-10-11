@@ -398,7 +398,7 @@ nav ul a:hover:after{
   align-items: center; /* Center the content vertically */
   min-height: 100vh; /* Minimum height to fill the viewport */
   padding: 20px; /* Padding around the section */
-  background-color: rgba(255, 255, 255, 0.738); /* Translucent background for section */
+  background-color: rgba(33, 31, 31, 0.738); /* Translucent background for section */
 }
 
 .booking-container {
@@ -409,7 +409,7 @@ nav ul a:hover:after{
   border: 2px solid #007bff; /* Border color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+  background-color: rgba(216, 216, 216, 0.8); /* Translucent white background */
 }
 
 h2 {
@@ -423,6 +423,13 @@ p {
   font-size: 1.5em;
   margin-bottom: 20px;
   color: #666; /* Paragraph color */
+}
+/* CSS to style the select element's text color */
+#vehicle-type {
+  color: #000000; /* Set text color to black */
+  background-color: #ffffff; /* Set background to white */
+  padding: 20px;
+  font-size: 1rem;
 }
 
 /* Form Group Styles */
