@@ -220,14 +220,21 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/Ishika-Gupta06">
+                    <img src="https://avatars.githubusercontent.com/u/118624573?v=4" width="100;" alt="Ishika-Gupta06"/>
+                    <br />
+                    <sub><b>Ishika Gupta</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
                 <a href="https://github.com/Annapoornaaradhya">
                     <img src="https://avatars.githubusercontent.com/u/139335974?v=4" width="100;" alt="Annapoornaaradhya"/>
                     <br />
                     <sub><b>ANNAPOORNA V</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/Aarnachauhan">
                     <img src="https://avatars.githubusercontent.com/u/175851904?v=4" width="100;" alt="Aarnachauhan"/>
@@ -263,6 +270,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Abankita Behera </b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/T-Rahul-prabhu-38">
                     <img src="https://avatars.githubusercontent.com/u/167653990?v=4" width="100;" alt="T-Rahul-prabhu-38"/>
@@ -270,8 +279,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Abankita Behera </b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/jvkousthub">
                     <img src="https://avatars.githubusercontent.com/u/162019723?v=4" width="100;" alt="jvkousthub"/>
@@ -307,6 +314,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Riya Aryan</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/avisha191">
                     <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
@@ -314,8 +323,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>avisha191</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/snehhhcodes">
                     <img src="https://avatars.githubusercontent.com/u/169922226?v=4" width="100;" alt="snehhhcodes"/>
@@ -328,13 +335,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <img src="https://avatars.githubusercontent.com/u/162621258?v=4" width="100;" alt="Kavish-Paraswar"/>
                     <br />
                     <sub><b>Kavish Paraswar</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Ishika-Gupta06">
-                    <img src="https://avatars.githubusercontent.com/u/118624573?v=4" width="100;" alt="Ishika-Gupta06"/>
-                    <br />
-                    <sub><b>Ishika Gupta</b></sub>
                 </a>
             </td>
             <td align="center">
