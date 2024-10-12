@@ -748,7 +748,7 @@
       <section id="contact">
         <div class="container">
             <div class="contact-container">
-                <div class="grid-container">
+                <div class="grid-container-contact">
                     <div class="text-container">
                         <div class="heading">
                             <h2 class="title">CONTACT US</h2>
@@ -1187,7 +1187,7 @@ function correctSpelling(input) {
   <!-- Deals and Offers Popup -->
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
-      <span class="close-btn" id="closePopup">&times;</span>
+      <span class="close-btn" id="closePopup" onclick="document.getElementById('dealsPopup').style.display = `none`">&times;</span>
       <h2>Exclusive Deals and Offers!</h2>
       <p>
         Get the best deals on flights, hotels, and travel packages. Don't miss

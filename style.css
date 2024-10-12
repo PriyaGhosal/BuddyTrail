@@ -502,9 +502,9 @@ nav {
   color: #f1ecec;
 }
 .form-container{
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
   width: 50%;
   height: 100%;
   padding: 30px 45px;
@@ -1037,7 +1037,7 @@ body.dark-mode {
   .booking-container h2 {
     color: #f1f1f1; /* Lighter text color for readability */
   }
-}
+
 @media (max-width: 768px) {
   .itinerary {
     flex: 1 1 calc(45% - 20px);
@@ -1882,9 +1882,15 @@ justify-content: center;
   gap: 3rem;
 }
 
+.grid-container-contact{
+  display: flex;
+
+}
+
 /* Text Container */
 .text-container {
   padding-right: 1.5rem;
+  width: 60%;
 }
 
 /* Info Text */
@@ -1978,6 +1984,16 @@ justify-content: center;
 @media (max-width: 768px) {
   .grid-container {
       grid-template-columns: 1fr;
+  }
+  .text-container{
+    width: 100%;
+  }
+  .form-container{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .grid-container-contact{
+    flex-direction: column;
   }
 }
 
