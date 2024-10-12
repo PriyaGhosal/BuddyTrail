@@ -11,6 +11,7 @@
 ├── boy.png
 ├── chatbot.gif
 ├── crescent-moon.png
+├── cursor.js
 ├── day-mode.png
 ├── firebase.js
 ├── icons
