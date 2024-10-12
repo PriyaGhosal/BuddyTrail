@@ -320,6 +320,71 @@
           scrollPercent + "%";
       });
     </script>
+
+        
+   <!-- Cookie Consent Section -->
+    <div id="cookie-popup" class="cookie-container">
+      <p>We value your privacy</p>
+      <p>
+          We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
+          By clicking "Accept All", you consent to our use of cookies.
+          <a href="cookiepolicy.html">Cookie Policy</a>
+      </p>
+      <div class="button-container">
+        <button id="customize-btn">Customize</button>
+        <button id="reject-btn">Reject All</button>
+        <button id="accept-btn">Accept All</button>
+      </div>
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const cookiePopup = document.getElementById("cookie-popup");
+      const acceptBtn = document.getElementById("accept-btn");
+      const rejectBtn = document.getElementById("reject-btn");
+      const customizeBtn = document.getElementById("customize-btn");
+    
+      // Function to get the value of a cookie
+      function getCookie(name) {
+          const value = `; ${document.cookie}`;
+          const parts = value.split(`; ${name}=`);
+          if (parts.length === 2) return parts.pop().split(';').shift();
+          return null;
+      }
+    
+      // Function to set a cookie
+      function setCookie(name, value, days) {
+          const date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+          const expires = "expires=" + date.toUTCString();
+          document.cookie = `${name}=${value}; ${expires}; path=/`;
+      }
+    
+      // Check if the user consent cookie exists
+      if (!getCookie("userConsent")) {
+          cookiePopup.style.display = "block"; // Show popup if no cookie is found
+      }
+    
+      // Set the cookie and hide the popup when "Accept All" button is clicked
+      acceptBtn.addEventListener("click", function () {
+          setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
+          cookiePopup.style.display = "none"; // Hide popup after accepting
+      });
+    
+      // Set the cookie and hide the popup when "Reject All" button is clicked
+      rejectBtn.addEventListener("click", function () {
+          setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
+          cookiePopup.style.display = "none"; // Hide popup after rejecting
+      });
+    
+      // Handle Customize button (this can be expanded with further functionality)
+      customizeBtn.addEventListener("click", function () {
+          alert("Customization options can be added here.");
+      });
+    });
+    </script>
+  <!-- Cookie Consent Section -->
+
+        
     <main>
      
       <section class="hero">
