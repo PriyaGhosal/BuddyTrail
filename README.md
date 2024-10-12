@@ -632,6 +632,13 @@ A heartfelt thank you to the following individuals for their valuable contributi
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/AyushiTaralkar">
+                    <img src="https://avatars.githubusercontent.com/u/142772971?v=4" width="100;" alt="AyushiTaralkar"/>
+                    <br />
+                    <sub><b>Ayushi_Taralkar</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Durgeshwar-AI">
                     <img src="https://avatars.githubusercontent.com/u/150506367?v=4" width="100;" alt="Durgeshwar-AI"/>
                     <br />
@@ -659,6 +666,8 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Kajal Mehta</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/kushal7201">
                     <img src="https://avatars.githubusercontent.com/u/86069454?v=4" width="100;" alt="kushal7201"/>
@@ -666,8 +675,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <sub><b>Kushal Bansal</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/neeru24">
                     <img src="https://avatars.githubusercontent.com/u/161798182?v=4" width="100;" alt="neeru24"/>
@@ -680,13 +687,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
                     <img src="https://avatars.githubusercontent.com/u/118903685?v=4" width="100;" alt="Nikhileshmauje"/>
                     <br />
                     <sub><b>NikhileshM24</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Peart-Guy">
-                    <img src="https://avatars.githubusercontent.com/u/179379879?v=4" width="100;" alt="Peart-Guy"/>
-                    <br />
-                    <sub><b>Ankan</b></sub>
                 </a>
             </td>
 		</tr>
