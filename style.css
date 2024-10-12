@@ -198,7 +198,7 @@ button {
   padding: 15px;
 
   background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity added */
-=======
+/* ======= */
 
  
   color: white;
@@ -1058,7 +1058,6 @@ body.dark-mode {
   .booking-container h1,
   .booking-container h2 {
     color: #f1f1f1; /* Lighter text color for readability */
-  }
 }
 @media (max-width: 768px) {
   .itinerary {
@@ -2020,6 +2019,10 @@ justify-content: center;
   position: relative;
   width: 50px; /* Adjusted size */
   height: 50px; /* Adjusted size */
+  /* display: none; */
+}
+.main-head.show ~ .scroll-button{
+  display: block;
 }
 
 .scroll-button img {

@@ -1221,10 +1221,12 @@ function correctSpelling(input) {
 
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".main-head");
-        if (window.scrollY > 0) {
+        if (window.scrollY > 100) {
           navbar.classList.add("sticky"); // Add class when scrolled
+          navbar.classList.add("show");
         } else {
           navbar.classList.remove("sticky"); // Remove class when at the top
+          navbar.classList.remove("show");
         }
       });
 
