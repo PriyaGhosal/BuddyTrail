@@ -37,6 +37,15 @@
 </div>
 <br>
 
+# Table of Contents
+
+1. [Website Preview](#-website-preview)
+2. [Features](#-features)
+3. [Technologies Used](#%EF%B8%8F-technologies-used)
+4. [How contribute](#-welcome-contributors-)
+5. [Project Structure](#project-strucutre-)
+6. [Contributors](#contributors)
+
 # 📸 Website Preview
 
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
