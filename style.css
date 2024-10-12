@@ -82,6 +82,28 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 97;
+  font-size: 20px;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.cloud.fade-out {
+  opacity: 0;
+}
+
 #progressBarContainer {
   position: fixed;
   top: 0;
@@ -174,14 +196,21 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-  background-color: transparent;
+
+  background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity added */
+=======
+
+ 
   color: white;
   display: flex;
-  justify-content: center; /* Keep header centered */
+  justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
 }
-
+.main-head.shadow {
+  background-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 nav {
   display: flex;
   align-items: center;
@@ -205,16 +234,17 @@ nav {
 }
 
 #nav-list li a {
-  color: white;
+  color: rgb(247, 246, 246);
   text-decoration: none;
   font-weight: bold;
+  
 }
 
 .hamburger {
   display: none; /* Hidden on larger screens */
   background: none;
   border: none;
-  color: white;
+  color: rgb(248, 247, 247);
   font-size: 1.5em;
   cursor: pointer;
 }
@@ -465,37 +495,52 @@ nav {
 
 #contact {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/contact-mountain.png");
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.form-wrapper {
-  background: rgba(19, 28, 39, 0.8);
-  width: 60%;
-  color: white;
-  border-radius: 2rem;
+#contact .title{
+  color: #f4f4f4;
 }
-
-.form-head {
+#contact .description{
+  color: #d3cece;
+}
+.info-item{
+  display: flex;
+}
+.info-text-content h3{
+  font-size: 20px;
+  color: #f7f3f3;
+}
+.info-text-content p{
+  font-size: 16px;
+  color: #f1ecec;
+}
+.form-container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  padding: 30px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-container .form-title{
   text-align: center;
-  padding: 4rem;
+  font-size: 3.1rem;
+  margin-bottom: 20px;
 }
 
-.name-form,
-.email-form {
-  padding: 3rem;
-  text-align: center;
-}
-
-.form-wrapper label {
-  margin: 0rem 3rem;
-}
 
 .form-wrapper button {
   width: 100%;
@@ -505,9 +550,106 @@ nav {
   border-bottom-right-radius: 2rem;
 }
 
-.form-wrapper input {
-  padding: 1rem 3rem;
+
+#About {
+  padding: 60px;
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
+#About h1 {
+  font-size: 3.5em;
+  color: #007bff; /* Blue color for the main heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#About h2 {
+  font-size: 3em;
+  color: #0056b3; /* Dark blue color for subheadings */
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+#About p {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #444; /* Slightly darker grey for paragraph text */
+}
+
+#About p strong {
+  color: #007bff; /* Blue highlight for important text */
+}
+
+#About ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+#About ul li {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#About ul li::before {
+  content: "✔"; /* Checkmark symbol as bullet point */
+  margin-right: 10px;
+  color: #28a745; /* Green checkmark */
+  font-size: 1.5em;
+}
+/* Light mode for #About */
+.light-mode #About {
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+}
+
+/* Dark mode for #About */
+.dark-mode #About {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+
+.light-mode #About h1 {
+  color: #007bff; /* Blue color for the main heading in light mode */
+}
+
+.dark-mode #About h1 {
+  color: #ffa500; /* Orange color for the main heading in dark mode */
+}
+
+.light-mode #About h2 {
+  color: #0056b3; /* Dark blue subheading in light mode */
+}
+
+.dark-mode #About h2 {
+  color: #ffd700; /* Bright yellow subheading in dark mode */
+}
+
+.light-mode #About p {
+  color: #444; /* Slightly darker grey for paragraph text in light mode */
+}
+
+.dark-mode #About p {
+  color: #d3d3d3; /* Lighter grey for paragraph text in dark mode */
+}
+
+.light-mode #About p strong {
+  color: #007bff; /* Blue highlight for important text in light mode */
+}
+
+.dark-mode #About p strong {
+  color: #ffcc00; /* Yellow highlight for important text in dark mode */
+}
+
 
 /* Cab Booking Section Styles */
 .cab-booking-section  {
@@ -516,7 +658,7 @@ nav {
   align-items: center; /* Center the content vertically */
   min-height: 100vh; /* Minimum height to fill the viewport */
   padding: 20px; /* Padding around the section */
-  background-color: rgba(255, 255, 255, 0.738); /* Translucent background for section */
+  background-color: white; /* Translucent background for section */
 }
 
 .booking-container {
@@ -526,15 +668,15 @@ nav {
   padding: 20px; /* Add padding inside the container */
   border: 2px solid #007bff; /* Border color */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+  box-shadow: 0 4px 15px rgba(247, 247, 247, 0.2); /* Slight shadow for depth */
+  background-color: rgba(0,0,0,0); /* Translucent white background */
 }
 
 h2 {
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0; /* Margin adjustment */
-  color: #ffffff; /* Heading color */
+  color: hsl(0, 0%, 0%); /* Heading color */
 }
 
 p {
@@ -555,14 +697,19 @@ label {
 }
 
 input,
-select {
-  height: 35px;
+select,
+textarea {
+  height: 45px;
   width: 100%; /* Full width */
   padding: 5px;
   border: 1px solid #ccc; /* Border for inputs */
   border-radius: 5px; /* Rounded corners */
-  font-size: 1em;
+  font-size: 1.6rem;
   margin-top: 5px;
+  outline: none;
+}
+textarea{
+  height: 150px;
 }
 
 input[type="text"],
@@ -571,8 +718,9 @@ input[type="time"] {
   transition: border 0.3s; /* Smooth transition */
 }
 
-input:focus {
-  border: 1px solid #007bff; /* Border color on focus */
+input:focus, 
+textarea:focus{
+  border: 2px solid #007bff; /* Border color on focus */
 }
 
 /* Button Styles */
@@ -591,6 +739,14 @@ input:focus {
 
 .book-btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Dark Mode Styles */
+.dark-mode .cab-booking-section {
+  background-color: rgba(18, 18, 18, 0.9); /* Dark background for section */
+}
+.dark-mode h2 {
+  color: #ffa500; /* Bright color for heading */
 }
 
 
@@ -618,6 +774,17 @@ footer {
     min-width: 200px;
     margin: 10px;
 }
+
+
+.footer-column a {
+  font-size: 16px;
+  line-height: 2;
+}
+#footer-contact-us{
+  display: flex;
+  flex-direction: column;
+}
+
 
 .footer-column h3 {
     margin-bottom: 15px;
@@ -884,6 +1051,15 @@ body.dark-mode {
 .itinerary button:hover {
   background-color: #0056b3;
 }
+.cab-booking-section {
+  background-color:rgba(0, 0, 0, 0.2); /* Dark translucent background */
+}
+.booking-container p,
+  .booking-container h1,
+  .booking-container h2 {
+    color: #f1f1f1; /* Lighter text color for readability */
+  }
+}
 @media (max-width: 768px) {
   .itinerary {
     flex: 1 1 calc(45% - 20px);
@@ -914,7 +1090,7 @@ body.dark-mode {
   background-color: #F0F8FF;
  
 }
-.revieww{
+.review{
   display: flex;
 justify-content: center;
 
@@ -1092,7 +1268,9 @@ justify-content: center;
   .reviews-list {
     grid-template-columns: 1fr;
   }
-  
+  .form-button button{
+    width:100%;
+  }
   .reviews-title {
     font-size: 2em;
   }
@@ -1101,13 +1279,27 @@ justify-content: center;
     max-width: 400px;
     margin: 0 auto;
   }
+  .review-form{
+    width:60vw;
+  }
+  .form{
+    width: 50vw;
+  }
 }
 
 @media (max-width: 480px) {
   .reviews-container {
     padding: 20px 10px;
   }
-  
+  .review-form{
+    width:80vw;
+  }
+  .form{
+    width:70vw;
+  }
+  .form-button button{
+    width:100%
+  }
   .review-header {
     flex-direction: column;
     text-align: center;
@@ -1159,16 +1351,20 @@ justify-content: center;
 .dark-mode .reviews-section  {
   background-color: #121212; /* Dark background */
   color: white; /* White text */
+  border: 2px solid white;
 }
 
 .dark-mode .review {
   background-color: #1e1e1e; /* Dark background for review cards */
   color: white; /* White text for review content */
-  border: 1px solid #333; /* Darker border */
+  border: 1px solid #ebe2e2; /* Darker border */
 }
 
 .dark-mode .review h4 {
   color: #ffa500; /* Optional: Highlight the reviewer's name */
+}
+.dark-mode .review label {
+  color: rgb(233, 220, 220);
 }
 
 .dark-mode .review p {
@@ -1550,6 +1746,14 @@ justify-content: center;
 .recommendation-item button:hover {
   background-color: #003d80; /* Darker blue on hover */
 }
+@media (max-width: 768px) {
+  .recommendation-list{
+    flex-direction: column;
+  }
+  .recommendation-item{
+    max-width: 100%;
+  }
+}
 /* Positioning and Styling for Google Translate Button */
 .translate-container {
   position: fixed;
@@ -1571,6 +1775,17 @@ justify-content: center;
 
 .language-toggle:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+/* Dark Mode For Recommendations */
+.dark-mode .recommendations-section {
+  background-color: #121212; /* Dark background */
+}
+.dark-mode .recommendations-section p {
+  color: #e0e0e0; /* Lighter text color */
+}
+.dark-mode .recommendation-item {
+  background-color: #1e1e1e; /* Darker background for items */
+  border: 2px solid #0056b3; /* Darker blue border */
 }
 
 /* Hide Google Translate Element by Default */
@@ -1661,18 +1876,18 @@ justify-content: center;
 
 .title {
   font-weight: bold;
-  color: #111827;
+  color: white;
   font-size: 5rem;
 }
 
 .wr{
   font-weight:600;
-  color: black;
+  color: white;
 }
 .description {
   color: #4b5563;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 2.19rem;
 }
 
 /* Contact Container */
@@ -1713,13 +1928,14 @@ justify-content: center;
 }
 
 .icon {
-  width: 2.5rem;
+  width: 4rem;
   height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   color: white;
+  margin-top: 1rem;
 }
 
 .info-text-content {
@@ -1728,11 +1944,12 @@ justify-content: center;
 
 .info-title {
   font-weight: 600;
-  color: #000e2b;
+  color: white;
 }
 
 .info-description {
-  color:whitesmoke;
+  color:white;
+  text-shadow: 2px 2px 0 black;
 }
 
 /* Form Styling */
