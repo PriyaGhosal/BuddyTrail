@@ -1023,6 +1023,11 @@ body.dark-mode {
   max-width: calc(33% - 40px);
   text-align: center;
 }
+.itinerary:hover {
+  color: white;  /* Change color on hover */
+    transform: scale(1.1);  /* Slightly increase size on hover */
+    text-decoration: underline; 
+}
 
 .itinerary h3 {
   font-size: 2em;
@@ -1047,7 +1052,6 @@ body.dark-mode {
   transition: background-color 0.3s;
   margin-bottom: 15px;
 }
-
 .itinerary button:hover {
   background-color: #0056b3;
 }
@@ -1794,18 +1798,15 @@ justify-content: center;
 }
 
 .navhover {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  display: inline-block;
-  padding: 10px 15px; /* Adds padding around the text */
-  border-radius: 20px; /* Creates rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  color: #d3d3d3;  /* Default color */
+  text-decoration: none;  /* Remove underline */
+  transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
 }
 
 .navhover:hover {
-  border: 1px solid #3498db;
-  color: white; /* Changes text color on hover */
+  color: white;  /* Change color on hover */
+  transform: scale(1.1);  /* Slightly increase size on hover */
+  text-decoration: underline;  /* Add underline on hover */
 }
 
 #social-icons {
