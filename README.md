@@ -42,7 +42,7 @@
 1. [Website Preview](#-website-preview)
 2. [Features](#-features)
 3. [Technologies Used](#%EF%B8%8F-technologies-used)
-4. [How contribute](#-welcome-contributors-)
+4. [How to contribute](#-welcome-contributors-)
 5. [Project Structure](#project-strucutre-)
 6. [Contributors](#contributors)
 
