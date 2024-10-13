@@ -468,3 +468,22 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
+//----------------------rating------------------
+const stars = document.querySelectorAll('.rating i');
+
+stars.forEach((star, idx) => {
+  star.addEventListener('click', () => {
+    stars.forEach((s, i) => {
+      if (i <= idx) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+  });
+});
+
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Feedback submitted successfully!');
+});

@@ -1097,12 +1097,19 @@ body.dark-mode {
 .reviews-section {
   padding: 50px;
   background-color: #F0F8FF;
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
+
+.reviews-section:hover{
+  box-shadow:inset 0px 0px 15px rgb(76, 137, 202);
+}
+
 .review{
   display: flex;
 justify-content: center;
-
 }
 
 .review-p{
@@ -1133,10 +1140,22 @@ justify-content: center;
 .form{
   margin-top: 10px;
   width:30vw;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: 'Times New Roman', Times, serif;
 }
-.review-form h3 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+
+.review-form h2 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 2px 2px 2px #007bff;
+}
+
+.review-form p{
+  text-align: center;
+  color: #111827b7;
 }
 
 .review-form label {
@@ -1422,16 +1441,17 @@ justify-content: center;
 }
 
 .review-form button {
-  background-color: #333; /* Dark button background */
+  background-color: rgb(23, 207, 201); 
   color: white; /* White button text */
   border: none; /* No border */
-  padding: 10px 15px; /* Padding inside button */
-  border-radius: 4px; /* Rounded corners */
+  padding: 10px 30px; /* Padding inside button */
+  border-radius: 12px; /* Rounded corners */
   cursor: pointer; /* Pointer on hover */
+  text-align: center;
 }
 
 .review-form button:hover {
-  background-color: #444; /* Slightly lighter on hover */
+  background-color:  rgb(23, 207, 201); /* Slightly lighter on hover */
 }
 
 .cab-booking-section input,
@@ -1462,6 +1482,16 @@ justify-content: center;
   color: #ffcc00; /* Star rating color */
   font-size: 1.2em;
 }
+
+.reviews-section .image img{
+  width:70rem;
+  filter: drop-shadow(7px 10px 1px rgb(2, 14, 50));
+}
+
+.reviews-section .image img:hover{
+  filter: drop-shadow(7px 5px 1px rgb(3, 95, 120));
+}
+
 
 /* Popup Background */
 .popup {
