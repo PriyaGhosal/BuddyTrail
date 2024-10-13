@@ -2,6 +2,8 @@
 ```
 ├── BuddyTrail
 ├── Code_of_Conduct.md
+├── Contributing.md
+├── LICENSE
 ├── README.md
 ├── RatingStyle.css
 ├── auth.css
@@ -10,6 +12,7 @@
 ├── book.html
 ├── boy.png
 ├── chatbot.gif
+├── contributing.md
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
