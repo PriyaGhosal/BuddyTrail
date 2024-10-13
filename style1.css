@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 1), rgba(135, 206, 250, 1), rgba(0, 191, 255, 1), rgba(0, 0, 139, 1), rgba(0, 128, 0, 1)); /* Light Blue to Dark Blue and Dark Green */
+    color: #003300; /* Dark Green for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, rgba(135, 206, 250, 1), rgba(0, 191, 255, 1)); /* Light Blue to Deep Sky Blue Gradient */
+    color: #003300; /* Dark Green for text */
+    padding: 1.5rem 0; /* Padding for spacing */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header Links */
+header a {
+    color: #003300; /* Dark Green for links */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text for visibility */
+    margin: 0 15px; /* Spacing between links */
+}
+
+header a:hover {
+    color: #1E90FF; /* Change color on hover */
+}
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    color: #003300; /* Dark Green */
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #1E90FF; /* Dark Blue */
+    text-align: center;
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #006400; /* Dark Green */
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent white */
+    background-color: #29465B;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text for visibility */
+    margin: 0 15px; /* Spacing between links */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+}
+
+header a:hover {
+    background-color: #3E3E3E; /* Slightly lighter gray on hover */
+    color: #FFD700; /* Gold color for text on hover */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    color: #003300; /* Dark Green */
+    text-align: center;
+    padding: 1.5em 0;
+}
+
