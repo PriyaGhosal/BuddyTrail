@@ -211,7 +211,7 @@ button {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
   margin: 0 auto; /* Center the nav */
@@ -225,17 +225,24 @@ nav {
 #nav-list {
   display: flex;
   gap: 20px;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+#nav-list li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #nav-list li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  
 }
+
 
 .hamburger {
   display: none; /* Hidden on larger screens */
