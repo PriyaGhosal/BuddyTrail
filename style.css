@@ -82,6 +82,28 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 97;
+  font-size: 20px;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.cloud.fade-out {
+  opacity: 0;
+}
+
 #progressBarContainer {
   position: fixed;
   top: 0;
@@ -967,96 +989,108 @@ body.dark-mode {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* itineraries */
-.itineraries-section {
-  padding: 50px;
-  background-color: #f4f4f4;
-  text-align: center;
-}
 
-.itineraries-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
 
-.itinerary-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  color: #003366;
-  margin-top: 20px;
-}
+    /* itineraries */
+    .itineraries-section {
+      padding: 50px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
 
-.itinerary {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 40px);
-  max-width: calc(33% - 40px);
-  text-align: center;
-}
+    .itineraries-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-.itinerary h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #090f15;
-}
+    .itinerary-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      color: #003366;
+      margin-top: 20px;
+    }
 
-.itinerary p {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #003366;
-}
+    .itinerary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(33% - 40px);
+      max-width: calc(33% - 40px);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+    }
 
-.itinerary button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-bottom: 15px;
-}
+    .itinerary h3 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #090f15;
+    }
 
-.itinerary button:hover {
-  background-color: #0056b3;
-}
-.cab-booking-section {
-  background-color:rgba(0, 0, 0, 0.2); /* Dark translucent background */
-}
-.booking-container p,
-  .booking-container h1,
-  .booking-container h2 {
-    color: #f1f1f1; /* Lighter text color for readability */
-  }
-}
-@media (max-width: 768px) {
-  .itinerary {
-    flex: 1 1 calc(45% - 20px);
-    max-width: calc(45% - 20px);
-  }
-}
+    .itinerary p {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #003366;
+    }
 
-@media (max-width: 480px) {
-  .itinerary {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-#itineraries {
-  background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
-}
+    .itinerary button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 15px;
+    }
 
-.dark-mode #itineraries {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
-}
+    .itinerary button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Hover effect for itinerary cards */
+    .itinerary:hover {
+      transform: scale(1.05); /* Scale up the card */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow */
+    }
+
+    .cab-booking-section {
+      background-color:rgba(0, 0, 0, 0.2); /* Dark translucent background */
+    }
+    
+    .booking-container p,
+    .booking-container h1,
+    .booking-container h2 {
+      color: #f1f1f1; /* Lighter text color for readability */
+    }
+
+    @media (max-width: 768px) {
+      .itinerary {
+        flex: 1 1 calc(45% - 20px);
+        max-width: calc(45% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .itinerary {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    #itineraries {
+      background-color: #f9f9f9; /* Light background */
+      border: 1px solid #007bff; /* Blue border */
+    }
+
+    .dark-mode #itineraries {
+      background-color: #1e1e1e; /* Dark background */
+      border: 1px solid #0056b3; /* Darker blue border */
+    }
 
 
 /* user rating */
