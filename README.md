@@ -198,6 +198,13 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/anuragverma108">
+                    <img src="https://avatars.githubusercontent.com/u/129655645?v=4" width="100;" alt="anuragverma108"/>
+                    <br />
+                    <sub><b>Anurag Verma</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/HS202022">
                     <img src="https://avatars.githubusercontent.com/u/120270398?v=4" width="100;" alt="HS202022"/>
                     <br />
@@ -218,6 +225,8 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>dwivedishrey</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/tarunkumar2005">
                     <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
@@ -225,20 +234,11 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Tarun kumar</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/Archisman141">
                     <img src="https://avatars.githubusercontent.com/u/121884549?v=4" width="100;" alt="Archisman141"/>
                     <br />
                     <sub><b>Archisman Khanra</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/anuragverma108">
-                    <img src="https://avatars.githubusercontent.com/u/129655645?v=4" width="100;" alt="anuragverma108"/>
-                    <br />
-                    <sub><b>Anurag Verma</b></sub>
                 </a>
             </td>
             <td align="center">
