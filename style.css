@@ -218,23 +218,25 @@ nav {
 }
 
 .logo {
+  padding-right: 20px;
   display: flex;
   align-items: center;
 }
 
 #nav-list {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 #nav-list li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
-  
+  font-size: medium;
+  margin-top: 20px;
 }
 
 .hamburger {
