@@ -1,37 +1,6 @@
 /**** GLOBAL STYLES ****/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* Customize the scrollbar */
-::-webkit-scrollbar {
-  width: 14px; /* Width of the scrollbar */
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #34495e; /* Darker background for the track */
-  border-radius: 10px; /* Rounded corners for the track */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #4A90E2, #50E3C2); /* Gradient for the scrollbar handle */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.7), 0 0 10px rgba(80, 227, 194, 0.5); /* Glowing effect */
-  transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #50E3C2, #4A90E2); /* Inverted gradient on hover */
-  box-shadow: 0 0 15px rgba(74, 144, 226, 1), 0 0 30px rgba(80, 227, 194, 1); /* Enhanced glow on hover */
-  transform: scale(1.1); /* Slightly enlarge handle on hover */
-}
-
-/* Optional: Customize the scrollbar corner */
-::-webkit-scrollbar-corner {
-  background: #2C3E50; /* Corner background color */
-}
-
 * {
   margin: 0;
   padding: 0;
