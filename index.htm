@@ -640,71 +640,286 @@ background-color: #333;
     <!-- CONTACT US-->
       <section id="contact">
         <div class="container">
-            <div class="contact-container">
-                <div class="grid-container">
-                    <div class="text-container">
-                        <div class="heading">
-                            <h2 class="title">CONTACT US</h2>
-                            <p class="description">At BuddyTrail, we are here to assist you every step of the way! Whether you have questions, feedback, or just want to learn more about our platform, feel free to reach out to us. Our team is committed to providing you with the best experience as you explore new trails and make new friends along the way.</p>
-                        </div>
-                        <ul class="info-list">
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Our Address</h3>
-                                    <p class="info-description">123 Trailblazer Lane, Adventure</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                                        <path d="M15 7a2 2 0 0 1 2 2"></path>
-                                        <path d="M15 3a6 6 0 0 1 6 6"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Contact</h3>
-                                    <p class="info-description">Mobile: +91 921 456-7890</p>
-                                    <p class="info-description">Mail: buddyTrail@gmail.com</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                                        <path d="M12 7v5l3 3"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="wr">Working Hours</h3>
-                                    <p class="info-description">Monday - Friday: 08:00 - 17:00</p>
-                                    <p class="info-description">Saturday & Sunday: 08:00 - 12:00</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="form-container">
-                        <h2 class="form-title">Ready to Get Started?</h2>
-                        <form id="contactForm">
-                            <div class="input-group">
-                                <input type="text" id="name" placeholder="Your name" class="input-field">
-                                <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field"></textarea>
-                            </div>
-                            <div class="submit-button-container">
-                                <button type="submit" class="submit-button">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+          <h2>Get in touch</h2>
+          <p>
+            Feel free to contact me about anything related to Web Development.
+          </p>
+          <form class="contact-form">
+            <div class="input-area">
+              <input type="text" placeholder="Your name"/>
             </div>
+            <div class="input-area">
+              <input type="email" placeholder="Email address" />
+            </div>
+            <div class="input-area">
+              <input type="text" placeholder="Subject">
+            </div>
+            <div class="input-area h-80">
+              <textarea placeholder="Your message"></textarea>
+            </div>
+            <button class="sendbtn">Send</button>
+          </form>
         </div>
+        <div class="social-container">
+          <div class="custom-social-container">
+            <p>Contact me on</p>
+            <button class="cross-btn"><i class="fas fa-times"></i></button>
+            <ul>
+              <li>
+                <a href="https://instagram.com/codewithfaraz" target="_blank" rel="nofollow">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@codewithfaraz" target="_blank" rel="nofollow">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/codewithfaraz" target="_blank" rel="nofollow">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/codewithfaraz" target="_blank" rel="nofollow">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/farazc60" target="_blank" rel="nofollow">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="connect-btn">
+          Get Connected
+        </button>
+        <script>
+          const contactform = document.querySelector('.contact-form');
+const container = document.querySelector('.container');
+
+contactform.addEventListener('submit', (event) => {
+  event.preventDefault();
+  container.innerHTML = '<p>Thanks for your message. <br /> I\'ll respond to you shortly</p>';
+});
+
+const connectbtn = document.querySelector('.connect-btn');
+const crossbtn = document.querySelector('.cross-btn');
+const socialcontainer = document.querySelector('.social-container');
+
+connectbtn.addEventListener('click', () => {
+  socialcontainer.classList.toggle('visible')
+});
+
+crossbtn.addEventListener('click', () => {
+  socialcontainer.classList.remove('visible')
+});
+        </script>
+        
+      <style> @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #E6E6FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border: 3px solid #660033;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 60px;
+  text-align: center;
+  width: 600px;
+  max-width: 100%;
+}
+
+.container p {
+  color: rgb(136, 136, 136);
+  letter-spacing: 0.4px;
+}
+
+.container form {
+  width: 100%;
+}
+
+.container .input-area {
+  position: relative;
+  margin: 10px 0;
+  height: 44px;
+  width: 100%;
+}
+
+.container .h-80 {
+  height: 80px;
+}
+
+.container input, .container textarea {
+  position: absolute;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 12px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+.container .sendbtn {
+  display: block;
+  width: 100%;
+  background: #660033;
+  color: #fff;
+  font-size: 18px;
+  padding: 11px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .sendbtn:hover {
+  background-color: #993366;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px 30px;
+  }
+}
+
+.social-container {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 10;
+}
+
+.social-container.visible {
+  transform: translateX(-10px);
+}
+
+.custom-social-container {  
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 31px -17px rgba(248, 4, 77, 0.6);
+  border: 5px solid #660033;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  height: 169px;  
+  width: 370px;
+  max-width: calc(100% - 10px);
+}
+
+.custom-social-container button.cross-btn {
+  border: 0;
+  color: #660033;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+.custom-social-container p {
+  background-color: #660033;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 2px 17px 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 215px;
+}
+
+.custom-social-container ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 58px;
+}
+
+.custom-social-container ul li {
+  margin: 0 10px;
+}
+
+.custom-social-container ul li a {
+  border: 1px solid #999;
+  border-radius: 50%;
+  color: #660033;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+}
+
+.custom-social-container ul li a:hover {
+  border-color: #ffd791;
+  box-shadow: 0 9px 12px -9px #ffd791;
+}
+
+.connect-btn {
+  border-radius: 26.5px;
+  background-color: #660033;
+  border: 1px solid #660033;
+  box-shadow: 0 16px 22px -17px #660033;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.connect-btn:hover {
+  background-color: #993366;
+}
+
+@media screen and (max-width: 480px) {
+
+  .social-container.visible {
+    transform: translateX(0px);
+  }
+  
+  .connect-btn {
+    right: 10px;
+  }
+}</style> 
+ 
     </section>
     
     
