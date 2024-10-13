@@ -336,6 +336,11 @@ nav {
 
 }
 
+.hero h2{
+  color: white;
+  font-size: 6rem;;
+}
+
 .hero h3 {
   font-size: 25px;
   line-height: 40px;
