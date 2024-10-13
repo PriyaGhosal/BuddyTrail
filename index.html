@@ -577,85 +577,59 @@
 
       
 
-    <!-- Cab or Auto Booking -->
-    <section id="cab-booking" class="cab-booking-section ">
-      <div class="booking-container">
-        <h2 style="color: black;">Book a Cab or Auto</h2>
-        <form action="/book-cab" method="POST">
-          <div class="form-group">
-<<<<<<< HEAD
-            <label for="pickup-location">Pickup Location:</label>
-            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location"
-              required />
-=======
-            <label for="pickup-location" style="font-size: 15px; color: black;"><strong>Pickup Location</strong></label>
-            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
->>>>>>> f5bed551cfe8e0ff19973dda1219fb22ca055eb9
-          </div>
-          <div class="form-group">
-            <label for="drop-location" style="font-size: 15px; color: black;"><strong>Drop Location</strong></label>
-            <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
-          </div>
-        
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-          "
-        >
-          
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <label style="font-size: 1.5em; margin-right: 35px; color: black;" for="vehicle-type">
-            <strong style="font-size: 1.5em;">Vehicle Type</strong>
-          </label>
-          
-          <select 
+   <!-- Cab or Auto Booking -->
+<section id="cab-booking" class="cab-booking-section ">
+  <div class="booking-container">
+    <h2 style="color: black;">Book a Cab or Auto</h2>
+    <form action="/book-cab" method="POST">
+      <div class="form-group">
+        <label for="pickup-location" style="font-size: 15px; color: black;"><strong>Pickup Location</strong></label>
+        <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
+      </div>
+      <div class="form-group">
+        <label for="drop-location" style="font-size: 15px; color: black;"><strong>Drop Location</strong></label>
+        <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
+      </div>
+      
+      <form
+        action="/book-cab"
+        method="POST"
+        style="
+          margin-left: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+        "
+      >
+      <div style="display: flex; align-items: flex-start; flex-direction: column; margin-bottom: 20px;">
+        <label style="font-size: 1.5em; color: black;" for="vehicle-type">
+          <strong style="font-size: 1.5em;">Vehicle Type</strong>
+        </label>
+        <select 
           id="vehicle-type" 
           name="vehicle-type" 
-          style="width: 150px; height: 29px; padding: 5px; font-size: 1.5em;" 
+          style="width: 450px; height: 42px; padding: 6px; font-size: 1.5em; margin-top: 5px;" 
           required >
-            <option value="cab">Cab</option>
-            <option value="auto">Auto</option>
-          </select>
-        </div>
-
-          <div class="form-group">
-<<<<<<< HEAD
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-              <option value="" disabled selected>Choose vehicle type</option> <!-- Placeholder option -->
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
-          
-          <div id="selected-vehicle" class="selected-vehicle"></div> <!-- Display area -->
-          <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
-=======
-            <label for="travel-date" style="font-size: 15px; color: black;"><strong>Travel Date</strong></label>
->>>>>>> f5bed551cfe8e0ff19973dda1219fb22ca055eb9
-            <input type="date" id="travel-date" name="travel-date" required />
-          </div>
-          <div class="form-group">
-            <label for="travel-time" style="font-size: 15px; color: black;"><strong>Travel Time</strong></label>
-            <input type="time" id="travel-time" name="travel-time" required />
-          </div>
-          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
-        </form>
+          <option value="" disabled selected>Choose vehicle type</option> <!-- Placeholder option -->
+          <option value="cab">Cab</option>
+          <option value="auto">Auto</option>
+        </select>
       </div>
-    </section>
-<<<<<<< HEAD
-=======
-          
-    
 
->>>>>>> f5bed551cfe8e0ff19973dda1219fb22ca055eb9
+        <div class="form-group">
+          <label for="travel-date" style="font-size: 15px; color: black;"><strong>Travel Date</strong></label>
+          <input type="date" id="travel-date" name="travel-date" required />
+        </div>
+        <div class="form-group">
+          <label for="travel-time" style="font-size: 15px; color: black;"><strong>Travel Time</strong></label>
+          <input type="time" id="travel-time" name="travel-time" required />
+        </div>
+        <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
+      </form>
+  </div>
+</section>
+
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
