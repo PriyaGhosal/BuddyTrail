@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Tour in Rajasthan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .highlights {
+            margin-top: 20px;
+            padding: 10px;
+            border-left: 4px solid #4a90e2;
+            background-color: #f9f9f9;
+        }
+
+        .highlights h3 {
+            color: #4a90e2;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none; /* Hide images by default */
+        }
+
+        .carousel img.active {
+            display: block; /* Show active image */
+        }
+
+        .carousel .prev,
+        .carousel .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .carousel .prev {
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel .next {
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .explore-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .explore-button:hover {
+            background-color: #357ab8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cultural Tour in Rajasthan</h1>
+    <p>Explore the rich cultural heritage of Rajasthan, a land of kings and queens, where history breathes through every corner. This tour is highly recommended based on your interest in historical places.</p>
+
+    <div class="carousel">
+        <img src="https://chokhidhani.com/welcome-indore/wp-content/uploads/2022/12/1-1-1536x1152.jpg" alt="Rajasthan Culture 1" class="active">
+        <img src="http://eragenx.com/wp-content/uploads/2016/07/rajasthan.jpg" alt="Rajasthan Culture 2">
+        <img src="https://i.pinimg.com/originals/ab/11/bc/ab11bc91084ae3a4b7d0677638ad0a47.jpg" alt="Rajasthan Culture 3">
+        <img src="https://i.pinimg.com/originals/52/53/20/525320cf6d55be3683d752c46eba90ac.jpg" alt="Rajasthan Culture 4">
+        <img src="https://chokhidhani.com/welcome-indore/wp-content/uploads/2022/12/5.jpg" alt="Rajasthan Culture 4">
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="highlights">
+        <h3>About Rajasthan's Culture:</h3>
+        <p>Rajasthan is renowned for its vibrant culture, which is a colorful blend of various traditions and rituals. The state's culture is reflected in its folk music, dance, festivals, and arts and crafts. Major festivals like Diwali, Holi, and Teej are celebrated with great enthusiasm, showcasing traditional Rajasthani attire and cuisines.</p>
+        <p>The state is home to numerous fairs and festivals, where visitors can experience local crafts, folk performances, and mouth-watering delicacies. From the intricate designs of block-printed textiles to the captivating melodies of Rajasthani folk songs, the culture is as diverse as the landscapes of the desert.</p>
+
+        <h3>Highlights of the Tour:</h3>
+        <ul>
+            <li>Visit the iconic Amer Fort and City Palace in Jaipur</li>
+            <li>Explore the picturesque lakes of Udaipur</li>
+            <li>Discover the blue city of Jodhpur and its stunning Mehrangarh Fort</li>
+            <li>Engage in local workshops for handicrafts and textiles</li>
+            <li>Enjoy traditional Rajasthani cuisine and folk dance performances</li>
+        </ul>
+    </div>
+    
+
+    
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.carousel img');
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active'); // Hide all images
+            if (index === slideIndex) {
+                slide.classList.add('active'); // Show the current image
+            }
+        });
+    }
+
+    function changeSlide(n) {
+        const slides = document.querySelectorAll('.carousel img');
+        slideIndex = (slideIndex + n + slides.length) % slides.length; // Wrap around
+        showSlides();
+    }
+</script>
+
+</body>
+</html>

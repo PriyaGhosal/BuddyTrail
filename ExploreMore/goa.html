@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Resort in Goa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff5722;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .highlights {
+            margin-top: 20px;
+            padding: 10px;
+            border-left: 4px solid #ff5722;
+            background-color: #f9f9f9;
+        }
+
+        .highlights h3 {
+            color: #ff5722;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none; /* Hide images by default */
+        }
+
+        .carousel img.active {
+            display: block; /* Show active image */
+        }
+
+        .carousel .prev,
+        .carousel .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .carousel .prev {
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel .next {
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .explore-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .explore-button:hover {
+            background-color: #d45d1d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Beach Resort in Goa</h1>
+    <p>Based on your love for sunny destinations, we recommend this beachfront resort in Goa for a perfect getaway. Nestled along the pristine shores of the Arabian Sea, this resort is designed for relaxation and rejuvenation, offering breathtaking views, luxurious amenities, and a tranquil atmosphere.</p>
+
+    <div class="highlights">
+        <h3>About the Resort:</h3>
+        <p>This beachfront paradise is known for its stunning architecture and lush landscapes. Guests can unwind in elegantly decorated rooms that provide direct views of the ocean. The resort offers a variety of activities, including water sports, yoga sessions, and guided tours to local attractions.</p>
+        <p>Indulge in exquisite dining experiences with fresh seafood and Goan delicacies prepared by top chefs. The resort also features a lavish spa, infinity pools, and private beach access, ensuring a delightful stay for every visitor.</p>
+
+        <div class="carousel">
+            <img src="http://www.global-gallivanting.com/wp-content/uploads/2017/11/w-goa-overview-beach-1024x747.jpg" alt="Beach Resort 1" class="active">
+            <img src="https://r1imghtlak.mmtcdn.com/0dea9712dd8811ec876f0a58a9feac02.jfif?&output-quality=75&downsize=910:612&crop=910:612;0,58&output-format=jpg" alt="Beach Resort 2">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/e6/db/4c/beachfront-location.jpg?w=900&h=-1&s=1" alt="Beach Resort 3">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/b1/0a/fc/sibaya-beach-resort-morjim.jpg?w=1400&h=-1&s=1" alt="Beach Resort 4">
+            <img src="https://media.cntraveller.in/wp-content/uploads/2017/01/goaresortlead-866x487.jpg" alt="Beach Resort 4">
+    
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <h3>Highlights of Your Stay:</h3>
+        <ul>
+            <li>Direct access to the stunning beaches of Goa</li>
+            <li>Luxury accommodations with ocean views</li>
+            <li>Wide range of water sports and recreational activities</li>
+            <li>Relaxing spa treatments and wellness programs</li>
+            <li>Delicious dining options featuring local and international cuisine</li>
+            <li>Daily yoga and meditation sessions on the beach</li>
+            <li>Excursions to nearby historical sites and local markets</li>
+            <li>Evening entertainment with live music and cultural performances</li>
+        </ul>
+    </div>
+    
+    <h3>Explore Goa's Culture and Attractions</h3>
+    <p>Beyond the resort, Goa offers a vibrant mix of Indian and Portuguese cultures. Visit the famous Basilica of Bom Jesus, a UNESCO World Heritage Site, or take a stroll through the colorful streets of Panaji, where you can find art galleries and quaint shops. Don't miss the bustling night markets in Arpora and the famous spice plantations for a taste of local flavors.</p>
+
+    <h3>Local Activities:</h3>
+    <p>While at the resort, you can enjoy a range of activities:</p>
+    <ul>
+        <li><strong>Water Sports:</strong> Enjoy thrilling water sports like jet skiing, parasailing, and scuba diving to explore the underwater beauty of the Arabian Sea.</li>
+        <li><strong>Wellness Retreats:</strong> Participate in yoga retreats and spa therapies that use traditional Indian techniques to rejuvenate your body and mind.</li>
+        <li><strong>Guided Tours:</strong> Take guided tours to nearby attractions, including the famous Dudhsagar Waterfalls and wildlife sanctuaries.</li>
+        <li><strong>Culinary Experiences:</strong> Join cooking classes to learn how to prepare authentic Goan dishes, from seafood curries to traditional sweets.</li>
+    </ul>
+
+    
+
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.carousel img');
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active'); // Hide all images
+            if (index === slideIndex) {
+                slide.classList.add('active'); // Show the current image
+            }
+        });
+    }
+
+    function changeSlide(n) {
+        const slides = document.querySelectorAll('.carousel img');
+        slideIndex = (slideIndex + n + slides.length) % slides.length; // Wrap around
+        showSlides();
+    }
+</script>
+
+</body>
+</html>

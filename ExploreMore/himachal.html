@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Trek in Himachal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .highlights {
+            margin-top: 20px;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            background-color: #f9f9f9;
+        }
+
+        .highlights h3 {
+            color: #4CAF50;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none; /* Hide images by default */
+        }
+
+        .carousel img.active {
+            display: block; /* Show active image */
+        }
+
+        .carousel .prev,
+        .carousel .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .carousel .prev {
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel .next {
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .explore-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .explore-button:hover {
+            background-color: #43a047;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Adventure Trek in Himachal</h1>
+    <p>For the adventure lover in you, we recommend a thrilling trek in the majestic mountains of Himachal Pradesh. Renowned for its breathtaking landscapes, lush valleys, and serene beauty, Himachal offers an ideal backdrop for trekking enthusiasts. From seasoned trekkers to beginners, there's something for everyone in these enchanting mountains.</p>
+
+    <div class="highlights">
+        <h3>About the Trek:</h3>
+        <p>This trek will take you through some of the most stunning terrains, including lush forests, crystal-clear rivers, and high-altitude meadows. Experience the thrill of walking through picturesque villages where you can interact with the warm and welcoming locals.</p>
+        <p>With every step, immerse yourself in the rich biodiversity of the region, including unique flora and fauna. The trails vary in difficulty, ensuring that both novice and experienced trekkers can find a suitable route that challenges and excites them.</p>
+
+        <h3>Highlights of Your Trek:</h3>
+        <ul>
+            <li>Stunning panoramic views of the Himalayas</li>
+            <li>Guided treks with experienced local guides</li>
+            <li>Opportunity to explore charming hill villages and their cultures</li>
+            <li>Camping under the stars in serene natural settings</li>
+            <li>Visit to historic temples and monasteries along the way</li>
+            <li>Engage in thrilling activities like river rafting and paragliding</li>
+            <li>Capture breathtaking photographs of nature and wildlife</li>
+        </ul>
+    </div>
+    
+    <div class="carousel">
+        <img src="https://travelogyindia.b-cdn.net/blog/wp-content/uploads/2017/09/Hampta-Pass-Trek-Himachal.jpg" alt="Trek in Himachal 1" class="active">
+        <img src="http://himalayanheightsadventure.com/wp-content/uploads/2020/05/inderahar-2.jpg" alt="Trek in Himachal 2">
+        <img src="https://en-media.thebetterindia.com/uploads/2017/04/Himachal_Trekking_.jpg" alt="Trek in Himachal 3">
+        <img src="https://chaloghummne.com/wp-content/uploads/2021/03/Sangla-Valley-trek-chaloghummne-himachal-pradesh.jpg" alt="Trek in Himachal 4">
+        <img src="https://himalayanheightsadventure.com/wp-content/uploads/2020/05/triund-main-1.jpg" alt="Trek in Himachal 4">
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <h3>Explore Himachal's Nature and Culture</h3>
+    <p>Himachal Pradesh is not just about trekking; it's a melting pot of cultures and traditions. The rich heritage of the region is reflected in its vibrant festivals, local cuisines, and the warmth of its people. Make sure to try local dishes such as Chana Madra and Siddu during your visit!</p>
+
+    <h3>Local Activities:</h3>
+    <p>While on this adventure, you can also indulge in various local activities:</p>
+    <ul>
+        <li><strong>Camping:</strong> Experience the thrill of camping amidst the mountains, surrounded by nature's beauty.</li>
+        <li><strong>Nature Walks:</strong> Take guided nature walks to learn about the diverse ecosystem of the region.</li>
+        <li><strong>Cultural Tours:</strong> Engage in cultural tours to explore ancient temples and experience local traditions.</li>
+        <li><strong>Photography:</strong> Capture stunning landscapes, wildlife, and portraits of local life.</li>
+    </ul>
+
+    
+
+
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.carousel img');
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active'); // Hide all images
+            if (index === slideIndex) {
+                slide.classList.add('active'); // Show the current image
+            }
+        });
+    }
+
+    function changeSlide(n) {
+        const slides = document.querySelectorAll('.carousel img');
+        slideIndex = (slideIndex + n + slides.length) % slides.length; // Wrap around
+        showSlides();
+    }
+</script>
+
+</body>
+</html>
