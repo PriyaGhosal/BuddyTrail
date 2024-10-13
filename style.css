@@ -678,7 +678,6 @@ h2 {
 
 p {
   font-size: 1.5em;
-  margin-bottom: 20px;
   color: #666; /* Paragraph color */
 }
 
@@ -753,7 +752,6 @@ textarea:focus{
 footer {
     background: linear-gradient(135deg, #343a40, #212529);
     color: #ffffff;
-    padding: 40px 0;
     text-align: center;
 }
 
@@ -784,7 +782,7 @@ footer {
 
 
 .footer-column h3 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 18px;
     color: #f39c12;
 }
@@ -799,10 +797,6 @@ footer {
     padding: 0;
 }
 
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
 .footer-column ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -812,10 +806,6 @@ footer {
 .footer-column ul li a:hover {
     color: #f39c12;
     text-decoration: underline;
-}
-
-.social-icons {
-    margin-top: 20px;
 }
 
 .social-icons a {
@@ -830,7 +820,6 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
     font-size: 14px;
 }
 
@@ -842,6 +831,7 @@ footer {
 .social-icons .fa-facebook-f:hover{
   color:#4267B2;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 
 /* for twitter */
@@ -851,6 +841,7 @@ footer {
 .social-icons .fa-x-twitter:hover{
   color:black;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 /* for instagram */
 .social-icons .fa-instagram {
@@ -859,6 +850,7 @@ footer {
 .social-icons .fa-instagram:hover{
   color:#c32aa3;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 
 /* for instagram */
@@ -868,6 +860,7 @@ footer {
   .social-icons .fa-linkedin-in:hover{
     color:#0a66c2;
     transform:scale(1.1);
+    transform: scale(1.2) translateY(-5px);
   }
 /**** MEDIA QUERY ****/
 
@@ -901,10 +894,12 @@ footer {
 
   footer {
     text-align: center;
+
   }
 
   footer h5 {
     padding-bottom: 3rem;
+
   }
 }
 
