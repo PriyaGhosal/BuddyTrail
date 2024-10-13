@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Luxury Stay in Goa</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="month"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff4757;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Luxury Stay in Goa</h1>
+        <form>
+            <fieldset>
+                <legend>Stay Details</legend>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+                
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Guest Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Room Preferences</legend>
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" required>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+                <label for="card-name">Cardholder Name:</label>
+                <input type="text" id="card-name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" required>
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="month" id="expiry" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Kerala Backwaters Package</title>
+    <style>
+        /* Basic reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh; /* Allows body to expand beyond viewport */
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #01579b;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #0277bd;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #01579b;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background-color: #0288d1;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0277bd;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Kerala Backwaters Package</h1>
+        <form>
+            <!-- Package Details Section -->
+            <fieldset>
+                <legend>Package Details</legend>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+                
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </fieldset>
+
+            <!-- Guest Information Section -->
+            <fieldset>
+                <legend>Guest Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </fieldset>
+
+            <!-- Room Preferences Section -->
+            <fieldset>
+                <legend>Room Preferences</legend>
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" required>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                </select>
+
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" rows="4"></textarea>
+            </fieldset>
+
+            <!-- Payment Details Section -->
+            <fieldset>
+                <legend>Payment Details</legend>
+                <label for="card-name">Cardholder Name:</label>
+                <input type="text" id="card-name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" required>
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="month" id="expiry" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
