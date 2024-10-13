@@ -37,6 +37,22 @@
 </div>
 <br>
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+### This project is now OFFICIALLY accepted for
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SwanandD121/FeatherPerfect_fe/refs/heads/main/Untitled%20design.png" alt="GSSoC 2024 Extd" width="80%">
+  <img src="https://cdn.discordapp.com/attachments/657543125190967316/1294560786114674748/Screenshot_2024-10-12_122347.png?ex=670b752f&is=670a23af&hm=26ddd7f41740b8b19ee4985e7568b3892091384b3b85e7165770a4b10f4d1050&" alt="Hacktoberfest 2024" width="80%">
+</div>
+<br>
+
+<br>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 # 📸 Website Preview
 
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
@@ -44,6 +60,9 @@
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20183005.png" alt = "image">
 
 <br>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🚀 Features
 
@@ -61,7 +80,10 @@
 
 **⭐ User Reviews and Ratings:** Read and leave reviews for destinations, hotels, flights, and activities.
 
-<br />
+<br/>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🛠️ Technologies Used
 
@@ -75,66 +97,43 @@
 
 <br />
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
-Join the list. **We are waiting** :octocat:<br />
+Join the list. **We are waiting** <br/>
 Here's how you can contribute to the repository:
 
-1. **[Fork](https://github.com/PriyaGhosal/BuddyTrail/fork) the repository** to your own GitHub account.
-   
-2. **Clone the repository** to your local machine:
-   
-    ```bash
-    git clone https://github.com/PriyalGhosal/BuddyTrail.git
-    ```
-    
-3. **Navigate into the directory**:
-   
-    ```bash
-    cd BuddyTrail
-    ```
-    
-4. **Install dependencies** (if applicable):
-   
-    ```bash
-    npm install
-    ```
-    
-5. **Create a new branch** for your changes:
-   
-    ```bash
-    git checkout -b <your-branch-name>
-    ```
-    
-6. **Make your changes**, commit, and push:
-   
-    ```bash
-    git add .
-    git commit -m "Your message here"
-    git push origin <your-branch-name>
-    ```
+1. **Fork the repository.**
+2. **Create a new feature branch.**
+3. **Commit your changes.**
+4. **Push to the branch.**
+5. **Open a Pull Request.**
 
-7. **Submit a pull request:**
-   - Go to the original repository on GitHub.
-   - Click on the "Pull Requests" tab.
-   - Click the "New Pull Request" button.
-   - Select your feature branch and submit the pull request.
+We welcome all contributions to improve **BuddyTrail**! If you would like to contribute, please follow the [Contributing.md](./Contributing.md) for more details on how to get started.
 
-8. **Wait for review and feedback.**
-   - Address any comments or requested changes.
-   - Once approved, your feature will be merged into the main branch.
+To maintain quality and consistency, please adhere to the following guidelines:
+1. **Code Style**: Follow the coding style used throughout the project. Clean, readable code with comments is always appreciated.
+2. **Commits**: Write meaningful commit messages.
+3. **Pull Requests**: Make sure PRs are focused, well-explained, and reference any issues they address.
+4. **Testing**: Ensure that your changes are well-tested locally and don’t break existing functionality.
 
-<br>
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Project-strucutre 📁
 
 You can find the project structure in the [Project Structure](project-structure.md) file. It contains the details of the project structure and the files present in the project. It will help you to understand the project structure better. 🗂️
 
-<br>
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Contributors
+<div>
+  <h2 align = "center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35">Our Contributors</h2>
+  <div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
 
-A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
 
 <!-- readme: contributors -start -->
 <table>
@@ -708,7 +707,6 @@ A heartfelt thank you to the following individuals for their valuable contributi
 </table>
 <!-- readme: contributors -end -->
 
-<br>
 
 ### &#8627; Stargazers
 
@@ -731,5 +729,26 @@ A heartfelt thank you to the following individuals for their valuable contributi
         <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
     </a>
 </div>
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+## 👥 Team
+
+| ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
+|:--:|
+| **Priya Ghosal** <br> <sub>Project Admin</sub> | 
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) |
+
+For any inquiries or feedback, please contact. Happy Contributing 🫡
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+## ⭐️ Support the Project
+If you find this project helpful, please consider giving it a ⭐ on GitHub! Your support helps to grow the project and reach more contributors.
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 # Thanks for reading!!!
