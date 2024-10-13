@@ -2,6 +2,8 @@
 ```
 ├── BuddyTrail
 ├── Code_of_Conduct.md
+├── Contributing.md
+├── LICENSE
 ├── README.md
 ├── RatingStyle.css
 ├── auth.css
@@ -10,7 +12,10 @@
 ├── book.html
 ├── boy.png
 ├── chatbot.gif
-├── chatbot.html
+├── contributing.md
+├── crescent-moon.png
+├── cursor.js
+├── day-mode.png
 ├── firebase.js
 ├── icons
 │   ├── airplane.svg
@@ -30,8 +35,10 @@
 │   ├── logo2.png
 │   └── new-york-page.png
 ├── index.html
+├── package-lock.json
 ├── project-structure.md
 ├── project_structure.txt
+├── reviews.html
 ├── script.js
 ├── star-rating.js
 └── style.css
