@@ -2,6 +2,8 @@
 ```
 ├── BuddyTrail
 ├── Code_of_Conduct.md
+├── Contributing.md
+├── LICENSE
 ├── README.md
 ├── RatingStyle.css
 ├── auth.css
@@ -11,6 +13,9 @@
 ├── boy.png
 ├── chatbot.gif
 ├── crescent-moon.png
+├── contributing.md
+├── crescent-moon.png
+├── cursor.js
 ├── day-mode.png
 ├── firebase.js
 ├── icons
@@ -34,6 +39,7 @@
 ├── package-lock.json
 ├── project-structure.md
 ├── project_structure.txt
+├── reviews.html
 ├── script.js
 ├── star-rating.js
 └── style.css
