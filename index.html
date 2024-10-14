@@ -55,6 +55,13 @@
     gap: 10px; /* Add some space between the stars and the count */
 }
 
+.rating {
+  height: 50px;
+}
+
+.rating:hover {
+  cursor: pointer;
+}
 
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
@@ -134,9 +141,9 @@
       .tooltip-text {
         display: none; /* Hide by default */
         position: absolute;
-        bottom: 100%; /* Position above the button */
-        right: 50%;
-        transform: translateX(50%);
+        top: -10%; /* Position above the button */
+        left: -230px;
+        transform: translateX(-230px, -50%);
         background-color: #333; /* Background color for tooltip */
         color: #fff; /* Tooltip text color */
         padding: 5px;
@@ -152,13 +159,14 @@
         flex-direction: row;
         align-items: center;
       }
+
+      .card:hover {
+        cursor: pointer;
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="light-mode">
-
-    <div id="progressBarContainer">
-      <div id="progressBar"></div>
-  </div>
 
     <!-- Google Translate Button -->
     <div class="translate-container">
@@ -191,11 +199,41 @@
           translateElement.style.display = "none";
         }
       }
+      //Providing scroll animation between different parts of the page using jquery
+      $(document).ready(function () {
+  $     ("a[href^='#']").on("click", function (event) {
+          event.preventDefault();
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var navbarHeight = $(".main-head").outerHeight();
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - navbarHeight,
+              },
+              1000
+            );
+            event.preventDefault();
+          }
+          event.preventDefault();
+        });
+        event.preventDefault();
+      });
   </script>
 
   <script src="script.js"></script>
  
-  <div id="progress-bar"></div>
+  <div id="cursor"></div>
+  <script>
+    window.cursor={
+      emoji: "🌤️",
+      color: "black",
+    };
+  </script>
+
+<script src="cursor.js" defer="defer"></script>
+  
+<div id="progress-bar"></div>
   <!-- funcioning of progress bar -->
   <script>
     window.addEventListener('scroll', function () {
@@ -209,7 +247,7 @@
     });
   </script>
   <main>
-    <section class="hero">
+    <section class="hero" id="home">
       <h2>Travel Beyond Limits</h2>
       <h3>
         Connect, Explore, and Discover Together. <br />
@@ -230,7 +268,7 @@
   <nav>
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
-      <h1 id="logo">BuddyTrail</h1>
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
     </div>
 
     <!-- Hamburger button for mobile -->
@@ -240,17 +278,20 @@
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
       <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="#locations" class="navhover">Location</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
       <li><a href="#benefits" class="navhover">Benefits</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      
       <li><a href="#contact" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
+     
     </ul>
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow">☀️</span>
+      <span class="sun-icon glow"><img src="day-mode.png"></span>
     </button>
   </nav>
 </header>
@@ -322,17 +363,19 @@
             serene mountains to sunny beaches, find your next adventure
             without breaking the bank. Start exploring now!
           </p>
+          <button id="btn"><a href="travel.html "> Explore more</a></button>
         </div>
         <div class="card">
           <div class="card-icon">
-            <img src="/icons/bed-solid.svg" />
-          </div>
+            <img src="./icons/bed-solid.svg" />
+          </div >
           <h4>Hotel</h4>
           <p>
             We've handpicked top-rated options that offer exceptional value.
             Book your perfect stay today and enjoy premium accommodations
             without the premium price tag!
           </p>
+          <button id="btn"><a href="hotel.html ">See Hotels</a></button>
         </div>
         <div class="card">
           <div class="card-icon">
@@ -344,86 +387,172 @@
             the best flight deals, combining comfort and affordability for
             perfect journey. Book now and take off for less!
           </p>
+          <button id="btn"><a href="fly.html ">See Flights</a></button>
         </div>
       </div>
     </section>
     <!-- deals -->
-    <section id="deals" class="deals-section">
-      <h2>Exclusive Deals and Offers</h2>
-      <p>
-        Explore our best deals on flights, hotels, and travel packages. Save
-        big on your next adventure!
-      </p>
+   <section id="deals" class="deals-section">
+        <h2>Exclusive Deals and Offers</h2>
+        <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
+      
+        <div class="carousel">
+          <div class="carousel-inner">
+            <!-- Deal 1: Flight Offer -->
+            <div class="deal-item">
+              <h3>Flight to Dubai</h3>
+              <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
+              <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
+      
+            <!-- Deal 2: Hotel Offer -->
+            <div class="deal-item">
+              <h3>Luxury Stay in Goa</h3>
+              <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
+              <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
+      
+            <!-- Deal 3: Travel Package -->
+            <div class="deal-item">
+              <h3>Kerala Backwaters Package</h3>
+              <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
+              <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
+      
+            <!-- Deal 4: International Trip -->
+            <div class="deal-item">
+              <h3>Paris Romantic Getaway</h3>
+              <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
+              <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
+      
+            <!-- Deal 5: Adventure Trip -->
+            <div class="deal-item">
+              <h3>Adventure in Bali</h3>
+              <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
+              <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
 
-      <div class="deals-list">
-        <!-- Deal 1: Flight Offer -->
-        <div class="deal-item">
-          <h3>Flight to Dubai</h3>
-          <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
-          <p>
-            <strong>Price:</strong> ₹20,000
-            <span class="discount">₹25,000 </span>
-          </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
-        </div>
+            <!-- Deal 6: Ski Trip in Switzerland -->
+            <div class="deal-item">
+              <h3>Ski Trip in Switzerland</h3>
+              <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
+              <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
 
-        <!-- Deal 2: Hotel Offer -->
-        <div class="deal-item">
-          <h3>Luxury Stay in Goa</h3>
-          <p>
-            Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
-            luxury at an affordable price!
-          </p>
-          <p>
-            <strong>Price:</strong> ₹10,500
-            <span class="discount"> ₹15,000</span> per night
-          </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
+            <!-- Deal 7: Wildlife Safari in Kenya -->
+            <div class="deal-item">
+              <h3>Wildlife Safari in Kenya</h3>
+              <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
+              <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
+              <button onclick="window.location.href='#book-now'">Book Now</button>
+            </div>
+          </div>
+          <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
         </div>
+      </section>
 
-        <!-- Deal 3: Travel Package -->
-        <div class="deal-item">
-          <h3>Kerala Backwaters Package</h3>
-          <p>
-            Experience the serene beauty of Kerala's backwaters with a 4-day,
-            3-night package. All-inclusive deal!
-          </p>
-          <p>
-            <strong>Price:</strong> ₹40,000
-            <span class="discount">₹50,000</span>
-          </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
-        </div>
-
-        <!-- Deal 4: International Trip -->
-        <div class="deal-item">
-          <h3>Paris Romantic Getaway</h3>
-          <p>
-            Enjoy a romantic trip to Paris with your loved one. Special
-            package for couples!
-          </p>
-          <p>
-            <strong>Price:</strong> ₹1,20,000
-            <span class="discount"> ₹1,50,000</span> per couple
-          </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
-        </div>
-
-        <!-- Deal 5: Adventure Trip -->
-        <div class="deal-item">
-          <h3>Adventure in Bali</h3>
-          <p>
-            Book an adventure trip to Bali with activities like snorkeling,
-            trekking, and more. Discount available for groups!
-          </p>
-          <p>
-            <strong>Price:</strong> ₹48,000
-            <span class="discount">₹60,000</span> per person
-          </p>
-          <button onclick="window.location.href='#book-now'">Book Now</button>
-        </div>
-      </div>
-    </section>
+      <style>
+        /* Existing CSS */
+        .deals-section {
+          text-align: center;
+        }
+        
+        .carousel {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        
+        .carousel-inner {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+        
+        .deal-item {
+          min-width: calc(100% / 3); /* Show 3 cards */
+          box-sizing: border-box;
+          padding: 20px;
+          border: 1px solid #150f0f;
+          border-radius: 8px;
+          margin: 10px;
+          transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+        
+        .highlight {
+          transform: scale(1.05); /* Slightly enlarge the center card */
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+        }
+        
+        .carousel-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(17, 16, 16, 0.7);
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+          border-radius: 50%;
+          font-size: 24px;
+          transition: background-color 0.3s;
+          opacity: 1; /* Always show buttons */
+        }
+        
+        .prev {
+          left: 10px;
+        }
+        
+        .next {
+          right: 10px;
+        }
+        
+        /* Optional hover effects */
+        .carousel-button:hover {
+          background-color: rgb(6, 6, 6);
+        }
+        </style>
+        
+        <script>
+        let currentSlide = 0;
+        
+        function moveSlide(direction) {
+          const slides = document.querySelectorAll('.deal-item');
+          const totalSlides = slides.length;
+          const slidesToShow = 3; // Number of cards to show at once
+        
+          // Calculate the new slide index
+          currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
+        
+          // Update the transform to show the correct slides
+          const carouselInner = document.querySelector('.carousel-inner');
+          carouselInner.style.transform = `translateX(-${currentSlide * (100 / slidesToShow)}%)`;
+        
+          // Remove highlight class from all cards
+          slides.forEach(slide => slide.classList.remove('highlight'));
+        
+          // Calculate the index of the center card
+          const centerCardIndex = currentSlide * slidesToShow + Math.floor(slidesToShow / 2);
+          // Add highlight class to the center card
+          if (centerCardIndex < totalSlides) {
+            slides[centerCardIndex].classList.add('highlight');
+          }
+        }
+        
+        // Initial highlight
+        document.addEventListener('DOMContentLoaded', () => {
+          const slides = document.querySelectorAll('.deal-item');
+          slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
+        });
+        </script>
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section">
@@ -469,47 +598,18 @@
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
         <h2>Book a Cab or Auto</h2>
-        <p>Book a cab or auto with ease</p>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location">Pickup Location:</label>
+            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
           <div class="form-group">
-            <label for="drop-location">Drop Location:</label>
+            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-          <div class="form-group">
-            <label for="vehicle-type">Vehicle Type:</label>
-            <select id="vehicle-type" name="vehicle-type" required>
-      </section>
-
-      <!-- Cab or Auto Booking -->
-      <section
-        id="cab-booking"
-        class="cab-booking-section"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 10px;
-        "
-      >
-        <h2
-          style="
-            font-size: 3em;
-            font-weight: 700;
-            margin-left: 40px;
-            margin-top: 10px;
-          "
-        >
-          Book a Cab or Auto
-        </h2>
-        <p style="margin-left: 40px; font-size: 1.5em; margin-bottom: 30px">
-          Book a cab or auto with ease
-        </p>
-
+        
         <form
           action="/book-cab"
           method="POST"
@@ -521,111 +621,38 @@
             flex-direction: column;
           "
         >
-          <div>
-            <label style="font-size: 1.5em; margin-right: 15px" for="pickup-location"
-              >Pickup Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              placeholder="Enter pickup location"
-              required
-            />
-          </div>
-          <div style = "margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 25px" for="drop-location"
-              >Drop Location:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="text"
-              id="drop-location"
-              name="drop-location"
-              placeholder="Enter drop location"
-              required
-            />
-          </div>
-          <div style="display: flex; align-items: center; margin-bottom: 20px;">
-            <label 
-            style="font-size: 1.5em; margin-right: 35px;" 
-            for="vehicle-type"
-              >Vehicle Type:</label
-            >
-            <select 
-            id="vehicle-type" 
-            name="vehicle-type" 
-            style="width: 150px; height: 29px; padding: 5px;" 
-            required 
-            >
-
-              <option value="cab">Cab</option>
-              <option value="auto">Auto</option>
-            </select>
-          </div>
+          
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
+            <strong>Vehicle Type</strong>
+          </label>
+          
+          <select 
+          id="vehicle-type" 
+          name="vehicle-type" 
+          style="width: 150px; height: 35px; padding: 5px;" 
+          required >
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+            <option value = "Sharing cab">Sharing Cab</option>
+            <option value = "Sharing cab">Sharing Auto</option>
+            <option value = "Sharing cab">Bike</option>
+            <option value = "Sharing cab">Premium Bike</option>
+          </select>
+        </div>
 
           <div class="form-group">
-            <label for="travel-date">Travel Date:</label>
+            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time">Travel Time:</label>
+            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
 
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-date"
-              >Travel Date:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="date"
-              id="travel-date"
-              name="travel-date"
-              required
-            /><br /><br />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="font-size: 1.5em; margin-right: 35px;" for="travel-time"
-              >Travel Time:</label
-            >
-            <input
-              style="height: 29px; width: 200px; padding: 5px;"
-              type="time"
-              id="travel-time"
-              name="travel-time"
-              required
-            /><br /><br />
-          </div>
-
-          <button
-            style="
-              background-color: #007bff;
-              color: white;
-              border: none;
-              width: 200px;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              cursor: pointer;
-              align-self: center;
-              padding: 10px;
-              margin-bottom: 20px;
-            "
-            type="submit"
-          >
-            Book now
-          </button>
-
-        </form>
-      </div>
-    </section>
+        </section>
+          
     
 
 
@@ -673,9 +700,52 @@
         </div>
       </div>
     </section>
+    <!--forum Section-->
+    <header class="forum_1">
+      <h1>Travel Discussion Forum</h1>
+      <nav class="hi">
+          <ul>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#travel-planning">Travel Planning</a></li>
+              <li><a href="#experiences">Travel Experiences</a></li>
+              <li><a href="#gear">Travel Gear</a></li>
+              <li><a href="#safety">Travel Safety</a></li>
+              <li><a href="#sustainable">Sustainable Travel</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+      <section id="destinations">
+          <h2>Destination Guides</h2>
+          <div class="post-container">
+              <h3>Share Your Experiences</h3>
+              <form id="postForm">
+                  <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+                  <button type="submit">Submit</button>
+              </form>
+              <div id="posts"></div>
+          </div>
+      </section>
+
+      <!-- Add more sections for other categories -->
+  </main>
+
+  <script src="script.js"></script>
+
+    <style>
+      .recommendation-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .recommendation-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
       <p>Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
@@ -684,33 +754,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
       async defer></script>
 
-    <section id="contact">
-      <div class="form-wrapper">
-        <header class="form-head">
-          <h2>Contact US</h2>
-        </header>
-        <form id="contactForm" action="https://formspree.io/f/mqkvkayy" method="POST">
-          <div class="name-form">
-            <label for="name">Name : </label>
-            <input id="name" type="text" name="name" required />
-          </div>
-
-          <div class="email-form">
-            <label for="email">Email :</label>
-            <input id="email" type="email" name="email" required />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-
-        </div>
-      </section>
+    
 
       <!-- Map Section -->
-      <section class="map-section">
-        <h2>Explore Popular Destinations</h2>
-        <p>Click on the markers to learn more about each destination.</p>
-        <div id="map"></div>
-      </section>
+    
       <!-- Google Maps JavaScript API -->
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
@@ -719,75 +766,74 @@
       ></script>
 
     <!-- CONTACT US-->
-      <section id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="grid-container">
-                    <div class="text-container">
-                        <div class="heading">
-                            <h2 class="title">CONTACT US</h2>
-                            <p class="description">At BuddyTrail, we are here to assist you every step of the way! Whether you have questions, feedback, or just want to learn more about our platform, feel free to reach out to us. Our team is committed to providing you with the best experience as you explore new trails and make new friends along the way.</p>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch with BuddyTrail</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Our Address</h3>
+                                <p>123 Trailblazer Lane, Adventure City</p>
+                            </div>
                         </div>
-                        <ul class="info-list">
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Our Address</h3>
-                                    <p class="info-description">123 Trailblazer Lane, Adventure</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                                        <path d="M15 7a2 2 0 0 1 2 2"></path>
-                                        <path d="M15 3a6 6 0 0 1 6 6"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Contact</h3>
-                                    <p class="info-description">Mobile: +91 921 456-7890</p>
-                                    <p class="info-description">Mail: buddyTrail@gmail.com</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                                        <path d="M12 7v5l3 3"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="wr">Working Hours</h3>
-                                    <p class="info-description">Monday - Friday: 08:00 - 17:00</p>
-                                    <p class="info-description">Saturday & Sunday: 08:00 - 12:00</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Contact</h3>
+                                <p>Mobile: +91 921 456-7890</p>
+                                <p>Mail: buddyTrail@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                    <path d="M12 7v5l3 3"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Working Hours</h3>
+                                <p>Monday - Friday: 08:00 - 17:00</p>
+                                <p>Saturday & Sunday: 08:00 - 12:00</p>
+                            </div>
+                        </div>
+                        <div class="about-buddytrail">
+                            <h3>About BuddyTrail</h3>
+                            <p>At BuddyTrail, we're passionate about connecting adventurers and making every trail an unforgettable experience. Our platform is designed to help you discover new paths, meet like-minded explorers, and create lasting memories in the great outdoors.</p>
+                        </div>
                     </div>
-                    <div class="form-container">
-                        <h2 class="form-title">Ready to Get Started?</h2>
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
                         <form id="contactForm">
-                            <div class="input-group">
-                                <input type="text" id="name" placeholder="Your name" class="input-field">
-                                <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field"></textarea>
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                             </div>
-                            <div class="submit-button-container">
-                                <button type="submit" class="submit-button">Send Message</button>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                             </div>
+                            <div class="form-group">
+                                <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+  
     
       <!-- Add this custom popup HTML -->
       <div id="confirmationPopup" class="popup" style="display: none;">
@@ -808,6 +854,43 @@
       </div>
     </div>
   </main>
+
+  <section id="testimonials" class="testimonials-section">
+    <h1 class="testimonials-heading">Testimonials</h1>
+    <div class="testimonials-container">
+      <figure class="snip1533">
+        <figcaption>
+          <blockquote>
+            <p>It made solo travel a breeze! I met amazing companions and discovered hidden gems.</p>
+          </blockquote>
+          <h3>Wisteria Ravenclaw</h3>
+          <h4>Traveller</h4>
+        </figcaption>
+      </figure>
+      <figure class="snip1533">
+        <figcaption>
+          <blockquote>
+            <p>Finding the perfect travel group was so easy with Buddy Trail. Unforgettable trips, hassle-free planning!
+            </p>
+          </blockquote>
+          <h3>Ursula Gurnmeister</h3>
+          <h4>Traveller</h4>
+        </figcaption>
+      </figure>
+      <figure class="snip1533">
+        <figcaption>
+          <blockquote>
+            <p>I found great travel buddies for my Europe trip! The platform is intuitive and made my adventure even
+              better. </p>
+          </blockquote>
+          <h3>Ingredia Nutrisha</h3>
+          <h4>Traveller</h4>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+
   <section id="reviews" class="reviews-section">
     <div class="revieww">
       <div class="review-form">
@@ -827,7 +910,7 @@
             <input type="text" id="destination" name="destination" required />
 
             <label for="rating">Rating:</label>
-            <select id="rating" name="rating">
+            <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
@@ -883,8 +966,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        <h3>About Us</h3>
-        <p>We are a team of passionate developers creating amazing web experiences.</p>
+        
 
     <footer>
       <div class="footer-container">
@@ -909,33 +991,21 @@
           <div class="footer-column">
               <h3>Follow Us</h3>
               <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
+                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
+                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +123 456 7890</p>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
+     
+  
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
-  <!-- Deals and Offers Popup -->
+  <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
       <span class="close-btn" id="closePopup">&times;</span>
@@ -947,7 +1017,7 @@
       <button onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
         Check Out Deals
       </button>
-    </div>
+    </div> -->
   </div>
   <!-- this script is for twitter icon  starts -->
   <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>

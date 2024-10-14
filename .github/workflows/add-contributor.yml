@@ -17,9 +17,5 @@ jobs:
 
       - name: Update Contributors List
         uses: akhilmhdh/contributors-readme-action@v2.3.10
-        with:
-          commit_message: "Updated contributors list"
-          committer_username: "yashksaini-coder"
-          committer_email: "115717039+yashksaini-coder@users.noreply.github.com"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

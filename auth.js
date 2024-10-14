@@ -2,6 +2,9 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
+// Allowed email domains for registration
+const allowedDomains = ['gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com' , 'icloud.com' , 'protonmail.com' , 'tutanota.com']; // Add more as needed
+
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
@@ -40,6 +43,15 @@ document.querySelector(".sign-up-form").addEventListener('submit', function(even
   if (username === '' || email === '' || password === '') {
     alert('Please fill in all fields');
     return;
+  }
+
+  // Extract domain from email
+  const emailDomain = email.split('@')[1];
+
+  // Check if email domain is allowed
+  if (!allowedDomains.includes(emailDomain)) {
+    alert('Please use an email from a reputable provider (Gmail, Outlook, Yahoo, etc.)');
+    return; // Prevent registration
   }
 
   // Dummy signup logic for demo purposes
