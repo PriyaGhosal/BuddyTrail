@@ -98,11 +98,17 @@
     float: right;
     cursor: pointer;
 }
-
-/* Filled stars on hover and selection */
-.rating > input:checked ~ label,
-.rating:not(:checked) > label {
-    color: #ddd; /* Keep stars empty until interaction */
+.rating-system p{
+  font-size: 3rem;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in;
+}
+.rating-system p:hover {
+  filter: grayscale(0%);
+}
+.rating-system p.activeColor{
+  filter: grayscale(0);
 }
 
 .rating > input:checked ~ label,
@@ -912,13 +918,13 @@
             <input type="text" id="destination" name="destination" required />
 
             <label for="rating">Rating:</label>
-            <select id="rating" class="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>
+            <div class="rating-system" style=" width: 100%;display: flex; align-items: center; justify-content: space-between;padding: 0 30px; cursor: pointer;">
+              <p>😡</p>
+              <p>😞</p>
+              <p>🙂</p>
+              <p>😁</p>
+              <p>😍</p>
+            </div>
 
             <label for="review">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>

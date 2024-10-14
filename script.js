@@ -468,3 +468,13 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
+// Rating system
+window.onload = function() {
+    const ratingElements = document.querySelectorAll('.rating-system p');
+
+    ratingElements.forEach((p) => {
+      p.addEventListener('click', function() {
+        this.classList.add('activeColor');
+      });
+    });
+};
