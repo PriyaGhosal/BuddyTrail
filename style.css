@@ -9,21 +9,58 @@
 }
 .forum_1
 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
 }
+
+.forum_1 h1{
+  font-size: 4rem;
+  margin: 20px;
+  padding: 18px;
+  background-color: white;
+  box-shadow: 6px 6px 15px rgb(192, 190, 190);
+}
+
 .hi
 {
-  background: #35424a;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 80vw;;
+  background: #576771;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 50px;
     text-align: center;
+    margin: 20px 0px 60px;
 }
+
 nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
   list-style-type: none;
   padding: 0;
+}
+
+.hi ul li a{
+  background-color: #fff;
+  color: blue;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.hi ul li a:hover{
+  background-color: rgb(14, 14, 136);
+  color: white;
+  box-shadow: 4px 4px 14px whitesmoke;
 }
 
 nav ul li {
