@@ -399,10 +399,11 @@ nav {
 
 .locations-head h3 {
   padding: 4rem 0rem;
-  background: linear-gradient(#1d71c4, #f9f9f9);
+  background: linear-gradient(#fff, #f9f9f9);
+  font-weight: bolder;
+  font-size: 2.8rem;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .dark-mode .locations-head h3 {
