@@ -196,7 +196,8 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-  background-color: rgb(156, 156, 156);
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.7);
   /*background-color: transparent;*/
   color: white;
   display: flex;
@@ -233,7 +234,7 @@ nav {
 #nav-list li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
   
 }
 
@@ -1809,11 +1810,12 @@ justify-content: center;
   display: inline-block;
   padding: 10px 15px; /* Adds padding around the text */
   border-radius: 20px; /* Creates rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  transition: all 0.3s ease, color 0.3s; /* Smooth transition */
 }
 
 .navhover:hover {
-  border: 1px solid #3498db;
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
   color: white; /* Changes text color on hover */
 }
 
