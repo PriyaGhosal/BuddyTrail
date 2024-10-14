@@ -222,9 +222,9 @@ nav {
 
 #nav-list {
   display: flex;
-  gap: 20px;
+  gap: 5px;
   list-style: none;
-  margin-left: 200px;
+  margin-left: 60px;
   padding: 0;
   align-items: center;
 }
@@ -1053,6 +1053,10 @@ body.dark-mode {
 .sun-icon {
   color: #ffd700;
   size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 4px;
 }
 
 .moon-icon {
