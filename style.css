@@ -1427,6 +1427,15 @@ body.dark-mode {
 }
 
 @media (max-width: 768px) {
+  .review-form{
+    width: 60vw;
+  }
+  #reviewForm{
+    width:50vw;
+  }
+  .form-button button{
+    width: 100%;
+  }
   .reviews-list {
     grid-template-columns: 1fr;
   }
@@ -1454,6 +1463,12 @@ body.dark-mode {
 }
 
 @media (max-width: 480px) {
+  .review-form{
+    width: 100vw;
+  }
+  #reviewForm{
+    width: 70vw;
+  }
   .reviews-container {
     padding: 20px 10px;
   }
@@ -1902,6 +1917,7 @@ body.dark-mode {
     max-width: 100%;
   }
 }
+
 /* Positioning and Styling for Google Translate Button */
 .translate-container {
   position: fixed;
