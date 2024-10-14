@@ -17,6 +17,7 @@
 ├── cursor.js
 ├── day-mode.png
 ├── firebase.js
+├── forgot_password.html
 ├── icons
 │   ├── airplane.svg
 │   ├── bed-solid.svg
