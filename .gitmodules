@@ -1,0 +1,3 @@
+[submodule "BuddyTrail"]
+    path = BuddyTrail
+    url = https://github.com/PriyaGhosal/BuddyTrail.git
