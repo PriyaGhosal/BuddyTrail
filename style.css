@@ -36,9 +36,6 @@ nav a {
   text-decoration: none;
 }
 
-main {
-  padding: 20px;
-}
 
 .post-container {
   background: #ffffff;
@@ -201,7 +198,7 @@ button {
   /*background-color: transparent;*/
   color: white;
   display: flex;
-  justify-content: center; /* Keep header centered */
+  justify-content: flex-start; /* Keep header centered */
   align-items: center;
   transition: background-color 0.3s ease;
 }
@@ -212,10 +209,10 @@ button {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
-  margin: 0 auto; /* Center the nav */
+  margin: 0 0; /* Center the nav */
 }
 
 .logo {
@@ -227,15 +224,17 @@ nav {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin: 0;
+  margin-left: 200px;
   padding: 0;
+  align-items: center;
 }
 
 #nav-list li a {
   color: white;
   text-decoration: none;
   font-weight: 400;
-  
+  white-space: nowrap;
+  font-size: 20px;
 }
 
 .hamburger {
