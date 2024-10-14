@@ -768,7 +768,7 @@ h2 {
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0; /* Margin adjustment */
-  
+  color: black;
 }
 
 p {
@@ -816,20 +816,18 @@ textarea:focus{
 
 /* Button Styles */
 .book-btn {
-  background-color: #007bff; /* Button background color */
+  background-color: #4a6a8a; /* Button background color */
   color: white; /* Button text color */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Padding for button */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 1.2em; /* Button text size */
-  width: 100%; /* Full width */
-  max-width: 300px; /* Max width for button */
   margin-top: 10px; /* Margin above button */
+  transition: all ease-in-out 0.2s;
 }
 
 .book-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #032c58; /* Darker shade on hover */
 }
 
 /* Dark Mode Styles */
@@ -1195,7 +1193,7 @@ body.dark-mode {
     .booking-container p,
     .booking-container h1,
     .booking-container h2 {
-      color: #f1f1f1; /* Lighter text color for readability */
+      color: #1a1818; /* Lighter text color for readability */
     }
 
     @media (max-width: 768px) {
