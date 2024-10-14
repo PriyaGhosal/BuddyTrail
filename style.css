@@ -672,9 +672,21 @@ nav {
   padding: 20px; /* Add padding inside the container */
   border: 2px solid #007bff; /* Border color */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(247, 247, 247, 0.2); /* Slight shadow for depth */
-  background-color: rgba(0,0,0,0); /* Translucent white background */
+
+  box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.24) ;/* Slight shadow for depth */
+  background-color: white; /* Translucent white background */
+ 
 }
+
+.booking-container:hover{
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3) ;
+  transform: scale(1.025);
+}
+
+.booking-container h2 {
+  color: black;
+}
+
 
 h2 {
   font-size: 2.5em;
@@ -1101,12 +1113,11 @@ body.dark-mode {
 
 
     .cab-booking-section {
-      background-color:rgba(0, 0, 0, 0.2); /* Dark translucent background */
+      background-color:rgba(0, 0, 0, 0.1); /* Dark translucent background */
     }
     
     .booking-container p,
-    .booking-container h1,
-    .booking-container h2 {
+    .booking-container h1 {
       color: #f1f1f1; /* Lighter text color for readability */
     }
 
