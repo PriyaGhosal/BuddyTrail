@@ -2253,3 +2253,67 @@ body.dark-mode {
   font-weight: 300;
   margin: 0 0 20px;
 }
+
+/* Styling Cookie Consent Section*/
+
+.cookie-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 300px;
+  height:fit-content;
+  display: none;
+  font-size: 8px;
+  font-weight: 10px;
+}
+
+.cookie-container p {
+  margin: 8px 0;
+}
+
+.cookie-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight:600;
+}
+
+.cookie-container a:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.button-container button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+#accept-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+#reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#customize-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
