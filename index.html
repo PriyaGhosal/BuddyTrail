@@ -892,57 +892,51 @@
     </div>
   </section>
 
-
   <section id="reviews" class="reviews-section">
-    <div class="revieww">
-      <div class="review-form">
-        <h2>Rate your experience</h2>
-        <p class="review-p">
-          Read what others have to say about their experiences with various
-          destinations, hotels, flights, and activities. Share your own reviews
-          and help fellow travelers make informed decisions.
+    <div class="revieww" style="max-width: 800px; margin: 0 auto;">
+      <div class="review-form" style="background-color: #2c3e50; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); color: #ecf0f1;">
+        <h2 style="color: #f1c40f;">Rate your experience</h2>
+        <p class="review-p" style="color: #bdc3c7;">
+          Read what others have to say about their experiences with various destinations, hotels, flights, and activities. Share your own reviews and help fellow travelers make informed decisions.
         </p>
-
+  
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
-
+            <input type="text" id="name" name="name" required style="border: 1px solid #7f8c8d; padding: 8px; border-radius: 5px; background-color: #34495e; color: #ecf0f1;" />
+  
             <label for="destination">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required />
-
+            <input type="text" id="destination" name="destination" required style="border: 1px solid #7f8c8d; padding: 8px; border-radius: 5px; background-color: #34495e; color: #ecf0f1;" />
+  
             <label for="rating">Rating:</label>
-            <select id="rating" class="rating" name="rating">
+            <select id="rating" class="rating" name="rating" style="border: 1px solid #7f8c8d; padding: 8px; border-radius: 5px; background-color: #34495e; color: #ecf0f1;">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
               <option value="2">⭐⭐</option>
               <option value="1">⭐</option>
             </select>
-
+  
             <label for="review">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
+            <textarea id="review" name="review" rows="4" required style="border: 1px solid #7f8c8d; padding: 8px; border-radius: 5px; background-color: #34495e; color: #ecf0f1;"></textarea>
+  
             <label for="complaint">Complaint (if any):</label>
-            <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
-
-            <div class="form-button">
-              <button type="submit">Send</button>
+            <textarea id="complaint" name="complaint" rows="3" placeholder="Describe any issue with the staff here." style="border: 1px solid #7f8c8d; padding: 8px; border-radius: 5px; background-color: #34495e; color: #ecf0f1;"></textarea>
+  
+            <div class="form-button" style="margin-top: 15px;">
+              <button type="submit" style="background-color: #f39c12; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Send</button>
             </div>
           </form>
-
-          <!-- Thank You Message -->
-          <div id="thankYouMessage" style="display: none; margin-top: 20px;">
-            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
-              committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
+  
+          <div id="thankYouMessage" style="display: none; margin-top: 20px; color: #ecf0f1;">
+            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
+  
+  
     <a href="chatbot.html">
       <div class="fixed bottom-0 right-2 chatbot-container">
         <button class="chatbot-button group">
