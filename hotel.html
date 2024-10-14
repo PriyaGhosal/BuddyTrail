@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="hotel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="/icons/airplane.svg">
+    <title>Hotel Booking - BuddyTrail</title>
+</head>
+<body>
+    <header class="main-head">
+        <nav>
+            <h1 id="logo">BuddyTrail</h1>
+            <ul id="nav-list">
+                <li><a href="index.html" class="navhover">Home</a></li>
+                <li><a href="#locations" class="navhover">Location</a></li>
+                <li><a href="#About" class="navhover">About</a></li>
+                <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="#contact" class="navhover">Contact</a></li>
+                <li><a href="#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+               
+              </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="filter-section">
+            <h1>Find Your Perfect Stay</h1>
+            <div class="filter-bar">
+                <label for="location-filter">Filter by Location:</label>
+                <select id="location-filter" onchange="filterHotels()">
+                    <option value="all">All</option>
+                    <option value="hill">Nature Retreats</option>
+                    <option value="city">Urban Hotels</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="hotel-tiles">
+            <!-- Nature Retreats -->
+            <div class="hotel-tile hill">
+                <img src="img/n5.jpg" alt="Hill Hotel">
+                <div class="hotel-info">
+                    <h2>Mountain Bliss Resort</h2>
+                    <p>Manali, Himachal Pradesh</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $120/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill">
+                <img src="img/n4.jpg" alt="Hill Hotel">
+                <div class="hotel-info">
+                    <h2>Lakeview Haven</h2>
+                    <p>Nainital, Uttarakhand</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $110/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill">
+                <img src="img/n3.jpg" alt="Hill Hotel">
+                <div class="hotel-info">
+                    <h2>Forest Retreat</h2>
+                    <p>Coorg, Karnataka</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $130/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill">
+                <img src="img/n2.jpg" alt="Hill Hotel">
+                <div class="hotel-info">
+                    <h2>Green Valley Lodge</h2>
+                    <p>Munnar, Kerala</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $100/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill">
+                <img src="img/n1.jpg" alt="Hill Hotel">
+                <div class="hotel-info">
+                    <h2>Peaceful Heights</h2>
+                    <p>Darjeeling, West Bengal</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $150/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Urban Hotels -->
+            <div class="hotel-tile city">
+                <img src="img/u1.jpg" alt="City Hotel">
+                <div class="hotel-info">
+                    <h2>Urban Stay Hotel</h2>
+                    <p>Delhi, India</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $90/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile city">
+                <img src="img/u2.jpg" alt="City Hotel">
+                <div class="hotel-info">
+                    <h2>Metropolitan Hub</h2>
+                    <p>Mumbai, Maharashtra</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $140/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile city">
+                <img src="img/c3.jpg" alt="City Hotel">
+                <div class="hotel-info">
+                    <h2>City Lights Inn</h2>
+                    <p>Bangalore, Karnataka</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $110/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile city">
+                <img src="img/u4.jpg" alt="City Hotel">
+                <div class="hotel-info">
+                    <h2>Urban Oasis</h2>
+                    <p>Kolkata, West Bengal</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $120/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotel-tile city">
+                <img src="img/u5.jpg" alt="City Hotel">
+                <div class="hotel-info">
+                    <h2>Luxury Suites</h2>
+                    <p>Hyderabad, Telangana</p>
+                    <ul>
+                        <li>⭐️⭐️⭐️⭐️</li>
+                        <li>Starting at $130/night</li>
+                    </ul>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>We are a team of passionate developers creating amazing web experiences.</p>
+        </div>
+              <div class="footer-column">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+             
+              
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="icons/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="icons/instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="icons/youtube.svg" alt="YouTube"></a></li>
+                </ul>
+            </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+    <script>
+        function filterHotels() {
+            const filter = document.getElementById("location-filter").value;
+            const hotels = document.querySelectorAll(".hotel-tile");
+            hotels.forEach(hotel => {
+                if (filter === "all" || hotel.classList.contains(filter)) {
+                    hotel.style.display = "block";
+                } else {
+                    hotel.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
