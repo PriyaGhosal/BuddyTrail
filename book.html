@@ -22,35 +22,37 @@
     <nav>
       <h1 id="logo">BuddyTrail</h1>
       <ul>
-        <li><a href="#locations">Location</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/reviews.html">Reviews</a></li>
+        <li><a href="/auth.html">Login\signin</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="booking-section">
       <h2>Book Your Trip</h2>
-      <form id="bookingForm" action="index.html">
+      <form id="bookingForm">
+
         <!-- Flight Details -->
+
         <div class="form-group">
-          <label for="destination">Destination</label>
+          <label style="color: aliceblue;" for="destination">Destination</label>
           <input type="text" id="destination" name="destination" placeholder="Enter your destination" required />
         </div>
 
         <div class="form-group">
-          <label for="departureDate">Departure Date</label>
+          <label style="color: aliceblue;" for="departureDate">Departure Date</label>
           <input type="date" id="departureDate" name="departureDate" required />
         </div>
 
         <div class="form-group">
-          <label for="returnDate">Return Date</label>
+          <label style="color: aliceblue;" for="returnDate">Return Date</label>
           <input type="date" id="returnDate" name="returnDate" required />
         </div>
 
         <!-- Hotel Booking -->
         <div class="form-group">
-          <label for="hotel">Hotel</label>
+          <label style="color: aliceblue;" for="hotel">Hotel</label>
           <select id="hotel" name="hotel">
             <option value="standard">Standard - $100/night</option>
             <option value="luxury">Luxury - $250/night</option>
@@ -60,13 +62,13 @@
 
         <!-- Travel Expense -->
         <div class="form-group">
-          <label for="travelExpense">Travel Expense</label>
+          <label style="color: aliceblue;" for="travelExpense">Travel Expense</label>
           <input type="number" id="travelExpense" name="travelExpense" placeholder="Enter estimated expense" />
         </div>
 
         <!-- Total Cost Calculation -->
         <div class="form-group">
-          <label for="totalCost">Total Cost</label>
+          <label style="color: aliceblue;" for="totalCost">Total Cost</label>
           <input type="text" id="totalCost" name="totalCost" disabled />
         </div>
 
@@ -92,20 +94,50 @@
     </div>
   </footer>
 
+  <!-- Modal (Pop-Up) for Thank You Message -->
+  <div id="thankYouModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Thank you!</h3>
+      <p>Your trip has been successfully booked.</p>
+    </div>
+  </div>
+
   <script>
     const form = document.getElementById('bookingForm');
     const totalCostField = document.getElementById('totalCost');
     const hotelSelect = document.getElementById('hotel');
     const travelExpenseInput = document.getElementById('travelExpense');
 
+    // Modal elements
+    const modal = document.getElementById('thankYouModal');
+    const closeBtn = document.querySelector('.close-btn');
+
     form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent form submission for now
+      event.preventDefault();
+
+      // Prevent form submission for now
 
       const hotelCost = parseInt(hotelSelect.options[hotelSelect.selectedIndex].text.split('-')[1].replace('$', ''));
       const travelExpense = parseInt(travelExpenseInput.value) || 0;
 
       const totalCost = hotelCost + travelExpense;
       totalCostField.value = '$' + totalCost;
+
+      // Show the thank you modal
+      modal.style.display = 'block';
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener('click', function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
     });
   </script>
 </body>
