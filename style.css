@@ -172,13 +172,14 @@ p {
 }
 
 button {
-  padding: 2rem 6rem;
+  padding: 1rem 3rem;
+  margin-bottom: 20px;
   background: #4c6e97;
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: background 0.6s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 #btn:hover {
   background-color: rgb(1, 20, 27);
@@ -471,6 +472,7 @@ nav {
   margin: 2rem 5rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  border-radius: 7px;
 }
 
 .card:hover {
@@ -492,6 +494,9 @@ nav {
 .card-icon {
   background: #2a3c53;
   padding: 2rem;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
