@@ -1,52 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/icons/airplane.svg" />
-    <title>BuddyTrail</title>
-  </head>
-  <body>
-    <header class="main-head">
-      <nav>
-        <h1 id="logo">BuddyTrail</h1>
-        <ul>
-          <li><a href="#locations">Location</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-   <main>
-    
-   </main>
-    <footer>
-      <div class="footer-wrapper">
-        <h5>BuddyTrail &copy;</h5>
-        <ul>
-          <li>
-            <a href="#"><img src="icons/twitter.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/instagram.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/youtube.svg" /></a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+  <meta name="robots" content="index,follow" />
+  <!-- <link rel="stylesheet" href="/style.css" /> -->
+  <link rel="stylesheet" href="book.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="/icons/airplane.svg" />
+  <title>BuddyTrail - Book your Trip</title>
+</head>
+
+<body>
+  <header class="main-head">
+    <nav>
+      <h1 id="logo">BuddyTrail</h1>
+      <ul>
+        <li><a href="#locations">Location</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="booking-section">
+      <h2>Book Your Trip</h2>
+      <form id="bookingForm" action="index.html">
+        <!-- Flight Details -->
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="Enter your destination" required />
+        </div>
+
+        <div class="form-group">
+          <label for="departureDate">Departure Date</label>
+          <input type="date" id="departureDate" name="departureDate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="returnDate">Return Date</label>
+          <input type="date" id="returnDate" name="returnDate" required />
+        </div>
+
+        <!-- Hotel Booking -->
+        <div class="form-group">
+          <label for="hotel">Hotel</label>
+          <select id="hotel" name="hotel">
+            <option value="standard">Standard - $100/night</option>
+            <option value="luxury">Luxury - $250/night</option>
+            <option value="budget">Budget - $50/night</option>
+          </select>
+        </div>
+
+        <!-- Travel Expense -->
+        <div class="form-group">
+          <label for="travelExpense">Travel Expense</label>
+          <input type="number" id="travelExpense" name="travelExpense" placeholder="Enter estimated expense" />
+        </div>
+
+        <!-- Total Cost Calculation -->
+        <div class="form-group">
+          <label for="totalCost">Total Cost</label>
+          <input type="text" id="totalCost" name="totalCost" disabled />
+        </div>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <h5>BuddyTrail &copy;</h5>
+      <ul>
+        <li>
+          <a href="#"><img src="icons/twitter.svg" alt="Twitter Icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/instagram.svg" alt="Instagram Icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="icons/youtube.svg" alt="YouTube Icon" /></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const totalCostField = document.getElementById('totalCost');
+    const hotelSelect = document.getElementById('hotel');
+    const travelExpenseInput = document.getElementById('travelExpense');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission for now
+
+      const hotelCost = parseInt(hotelSelect.options[hotelSelect.selectedIndex].text.split('-')[1].replace('$', ''));
+      const travelExpense = parseInt(travelExpenseInput.value) || 0;
+
+      const totalCost = hotelCost + travelExpense;
+      totalCostField.value = '$' + totalCost;
+    });
+  </script>
+</body>
+
 </html>
