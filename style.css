@@ -832,10 +832,10 @@ footer {
 
 
 /* for facebook */
-.social-icons .fa-facebook-f {
+.social-icons .fa-discord {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-facebook-f:hover{
+.social-icons .fa-discord:hover{
   color:#4267B2;
   transform:scale(1.1);
   transform: scale(1.2) translateY(-5px);
@@ -851,10 +851,10 @@ footer {
   transform: scale(1.2) translateY(-5px);
 }
 /* for instagram */
-.social-icons .fa-instagram {
+.social-icons .fa-github {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-instagram:hover{
+.social-icons .fa-github:hover{
   color:#c32aa3;
   transform:scale(1.1);
   transform: scale(1.2) translateY(-5px);
