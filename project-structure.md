@@ -2,7 +2,6 @@
 ```
 ├── BuddyTrail
 ├── Code_of_Conduct.md
-├── Contributing.md
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
