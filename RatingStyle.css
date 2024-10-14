@@ -13,9 +13,11 @@
     gap: 20px; /* Optional gap between form and rating section */
     height: auto; /* Adjust height if necessary */
 }
+
 .form-section {
     width: 70%; /* Adjust width as needed */
 }
+
 .rating-wrap {
     width: 30%; /* Adjust width as needed */
     text-align: left;
@@ -28,16 +30,68 @@
     gap: 10px; /* Add some space between the stars and the count */
 }
 
-
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
     font-weight: bold;
     color: black; /* Optional: change the color to match the theme */
 }
 
+/* Style the form */
+.review-form h2 {
+    color: #f1c40f; /* Bright yellow for contrast */
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Make the title bolder */
+    text-align: center; /* Center the title */
+    margin-bottom: 15px;
+}
+
+.review-p {
+    color: #ecf0f1; /* Lighten the paragraph color */
+    font-size: 16px; /* Adjust the font size slightly */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Labels */
+label {
+    font-size: 16px;
+    color: #ffffff; /* Change to bold white */
+    font-weight: bold;
+}
+
+/* Styling the form inputs */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #34495e; /* Dark background for input fields */
+    color: #ecf0f1; /* Light text color for input fields */
+    font-size: 14px;
+}
+
+/* Button styling */
+button {
+    background-color: #f1c40f; /* Bright yellow button */
+    color: #2c3e50; /* Dark text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #d4ac0d; /* Slightly darker yellow on hover */
+}
+
+/* Rating stars styling */
 .rating {
     border: none;
-    float:right;
+    float: right;
 }
 
 .rating > input {
@@ -45,7 +99,7 @@
 }
 
 .rating > label:before {
-    content: '\f005';
+    content: '\f005'; /* FontAwesome star */
     font-family: FontAwesome;
     margin: 5px;
     font-size: 1.5rem;
@@ -54,7 +108,7 @@
 }
 
 .rating > .half:before {
-    content: '\f089';
+    content: '\f089'; /* FontAwesome half-star */
     position: absolute;
     cursor: pointer;
 }
@@ -74,10 +128,29 @@
 .rating > input:checked ~ label,
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
+    color: rgb(230, 166, 17); /* Gold for filled stars */
 }
 
 .rating > label:hover ~ label,
 .rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
+    color: rgb(230, 166, 17); /* Gold hover effect */
 }
+
+/* Thank you message styling */
+#thankYouMessage {
+    color: #f1c40f;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

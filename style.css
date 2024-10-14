@@ -1193,7 +1193,9 @@ body.dark-mode {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
+  color: #ffffff; /* White color for better visibility */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Text shadow for contrast */
 }
 
 .review-form input,
@@ -1314,7 +1316,7 @@ body.dark-mode {
 
 .star-rating {
   color: #f1c40f;
-  font-size: 1.4em;
+  font-size: 1.5em;
   letter-spacing: 3px;
 }
 
@@ -1467,7 +1469,7 @@ body.dark-mode {
 
 /* Adjusting rating stars color in dark mode */
 .dark-mode .rating {
-  color: #ffcc00; 
+  color: #ffd700; 
 }
 
 /* Dark Mode Styles for Review Form */
