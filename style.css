@@ -494,67 +494,151 @@ nav {
   background: #2a3c53;
   padding: 2rem;
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-/**** CONTACT PAGE ****/
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
 
-#contact {
-  min-height: 100vh;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
-#contact .title{
-  color: #f4f4f4;
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
-#contact .description{
-  color: #d3cece;
+.contact-section {
+  background: linear-gradient(to right, #e6f2ff, #f0e6ff);
+  padding: 4rem 0;
 }
-.info-item{
-  display: flex;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
-.info-text-content h3{
-  font-size: 20px;
-  color: #f7f3f3;
-}
-.info-text-content p{
-  font-size: 16px;
-  color: #f1ecec;
-}
-.form-container{
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  padding: 30px 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.form-container .form-title{
+.section-title {
   text-align: center;
-  font-size: 3.1rem;
-  margin-bottom: 20px;
+  color: #1a365d;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out;
 }
-
-
-.form-wrapper button {
-  width: 100%;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-info, .contact-form {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  margin-top: 8rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
 }
-
-
+.contact-info:hover, .contact-form:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.info-item:nth-child(1) { animation-delay: 0.2s; }
+.info-item:nth-child(2) { animation-delay: 0.4s; }
+.info-item:nth-child(3) { animation-delay: 0.6s; }
+.info-icon {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+.info-item:hover .info-icon {
+  transform: rotate(15deg);
+}
+.info-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a365d;
+}
+.info-content p {
+  margin: 0.25rem 0 0;
+  color: #4a5568;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.4s; }
+.form-group:nth-child(3) { animation-delay: 0.6s; }
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+.btn-submit {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+.btn-submit:hover {
+  background: #2c5282;
+  transform: translateY(-2px);
+}
+.about-buddytrail {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+.about-buddytrail h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.about-buddytrail p {
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+      grid-template-columns: 1fr;
+  }
+}
 #About {
   padding: 60px;
   background-color: #f5f5f5; /* Light grey background */

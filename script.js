@@ -412,6 +412,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
+});
 // discount pop_up
 document.addEventListener('DOMContentLoaded', function() {
     // Show the popup after a slight delay
