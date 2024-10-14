@@ -2132,6 +2132,12 @@ body.dark-mode {
   border-top: 5px solid #2d30d2;
 }
 
+.snip1533:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transform: scale(1.05);
+}
+
+
 .snip1533 *,
 .snip1533 *:before {
   -webkit-box-sizing: border-box;
