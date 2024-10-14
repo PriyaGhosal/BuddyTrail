@@ -317,30 +317,37 @@
 // }
 document.getElementById('postForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    
+   
     const postContent = document.getElementById('postContent').value;
     if (postContent.trim() === '') return;
+
 
     const postContainer = document.getElementById('posts');
     const newPost = document.createElement('div');
     newPost.classList.add('post');
     newPost.textContent = postContent;
 
+
     postContainer.appendChild(newPost);
     document.getElementById('postContent').value = ''; // Clear the textarea
 });
 
+
+// Add scroll effect to navbar
 window.addEventListener("scroll", function () {
     let navbar = document.getElementById("main-head");
-    if (window.scrollY > 100) navbar.classList.add("shadow"); 
+    if (window.scrollY > 100) navbar.classList.add("shadow");
     else navbar.classList.remove("shadow");
 });
 
+
+// Initialize Google Map
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
-        center: {lat: 20.5937, lng: 78.9629}
+        center: {lat: 20.5937, lng: 78.9629} // Center of India
     });
+
 
     var destinations = [
         {lat: 28.6139, lng: 77.2090, title: 'Delhi, India', content: '<h3>Delhi</h3><p>Capital of India, known for its rich history and monuments.</p>'},
@@ -362,6 +369,7 @@ function initMap() {
         {lat: 35.6762, lng: 139.6503, title: 'Tokyo, Japan', content: '<h3>Tokyo</h3><p>A bustling metropolis known for its skyscrapers, shopping, and cherry blossoms.</p>'}
     ];
 
+
     destinations.forEach(function(destination) {
         var marker = new google.maps.Marker({
             position: {lat: destination.lat, lng: destination.lng},
@@ -369,15 +377,18 @@ function initMap() {
             title: destination.title
         });
 
+
         var infoWindow = new google.maps.InfoWindow({
             content: destination.content
         });
+
 
         marker.addListener('click', function() {
             infoWindow.open(map, marker);
         });
     });
 }
+
 
 // Toggle dark and bright mode
 document.addEventListener('DOMContentLoaded', function() {
@@ -387,7 +398,9 @@ document.addEventListener('DOMContentLoaded', function() {
     moonIcon.className = 'moon-icon';
     moonIcon.innerHTML = '<img src="crescent-moon.png">';
 
+
     const currentTheme = localStorage.getItem('theme');
+
 
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -397,9 +410,11 @@ document.addEventListener('DOMContentLoaded', function() {
         sunIcon.classList.add('glow');
     }
 
+
     modeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
         document.body.classList.toggle('light-mode');
+
 
         if (document.body.classList.contains('dark-mode')) {
             modeToggle.replaceChild(moonIcon, sunIcon);
@@ -412,17 +427,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// discount pop_up
+
+// Discount pop-up
 document.addEventListener('DOMContentLoaded', function() {
     // Show the popup after a slight delay
     setTimeout(function() {
         document.getElementById('dealsPopup').style.display = 'flex';
     }, 1000); // Adjust the delay as needed (1000 ms = 1 second)
 
+
     // Close the popup when the close button is clicked
     document.getElementById('closePopup').addEventListener('click', function() {
         document.getElementById('dealsPopup').style.display = 'none';
     });
+
 
     // Close the popup when the user clicks anywhere outside of the popup content
     window.addEventListener('click', function(event) {
@@ -431,25 +449,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-// adaptive background
-const modeToggle = document.getElementById('modeToggle');
-const body = document.body;
 
-modeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
 
-    // Toggle the icon
-    if (body.classList.contains('dark-mode')) {
-        modeToggle.innerHTML = '<span class="sun-icon"><img src="crescent-moon.png"></span>';
-    } else {
-        modeToggle.innerHTML = '<span class="sun-icon glow"><img src="day-mode.png"></span>';
-    }
-});
-// google translator
+// Google Translator
 document.getElementById('languageToggle').addEventListener('click', function() {
     var translateElement = document.getElementById('google_translate_element');
-    
+   
     // Toggle visibility of the Google Translate element
     if (translateElement.style.display === 'none' || translateElement.style.display === '') {
         translateElement.style.display = 'block';
@@ -467,4 +472,3 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }
-
