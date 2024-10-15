@@ -25,13 +25,6 @@
   color: rgb(1, 60, 124);
   border-radius: 8px;
 }
-
-.hi
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 80vw;;
     color: #ffffff;
     padding: 50px;
     text-align: center;
