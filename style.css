@@ -7,20 +7,25 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.forum_1
-{
+
+.forum_1 {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 35px 0;
   background-color: #f4f4f4;
 }
-.hi
-{
-  background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+
+.forum_1 h1 {
+  margin: 0px 101px;
 }
+
+.hi {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -37,12 +42,12 @@ nav a {
 }
 
 main {
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .post-container {
   background: #ffffff;
-  padding: 20px;
+  padding: 0 94px 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -74,11 +79,15 @@ button:hover {
   background: #e8e8e8;
   border-radius: 5px;
 }
+
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
 
@@ -110,29 +119,35 @@ body {
   left: 0;
   width: 100%;
   height: 7px;
-  background-color: whitesmoke; 
-  z-index: 9999; 
+  background-color: whitesmoke;
+  z-index: 9999;
 }
 
 #progressBar {
   height: 100%;
-  width: 0%; 
-  background: #2C3E50;; 
-  transition: width 0.2s ease; 
+  width: 0%;
+  background: #2C3E50;
+  ;
+  transition: width 0.2s ease;
 }
 
 .scroll-top-btn {
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Distance from the bottom of the viewport */
-  right: 80px; /* Adjust this value to move the button left */
+  position: fixed;
+  /* Fixed position */
+  bottom: 20px;
+  /* Distance from the bottom of the viewport */
+  right: 80px;
+  /* Adjust this value to move the button left */
   background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 17px;
   cursor: pointer;
   border-radius: 50%;
-  display: none; /* Initially hidden */
-  z-index: 1000; /* Ensure it appears above other content */
+  display: none;
+  /* Initially hidden */
+  z-index: 1000;
+  /* Ensure it appears above other content */
 }
 
 .scroll-top-btn:hover {
@@ -146,8 +161,9 @@ h1 {
 h2 {
   font-size: 4.8rem;
 }
+
 h3 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: normal;
 }
 
@@ -156,7 +172,7 @@ h5 {
   font-size: 2.8rem;
 }
 
-#logo-web{
+#logo-web {
   height: 50px;
   width: 70px;
 }
@@ -183,10 +199,12 @@ button {
   cursor: pointer;
   transition: background 0.6s ease-in-out;
 }
+
 #btn:hover {
   background-color: rgb(1, 20, 27);
   box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
 }
+
 /**** MAIN PAGE  ****/
 /* Header Styles */
 .main-head {
@@ -196,49 +214,63 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-  background-color: rgb(156, 156, 156);
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 92px;
+  /* background-color: rgb(156, 156, 156); */
   /*background-color: transparent;*/
   color: white;
   display: flex;
-  justify-content: center; /* Keep header centered */
+  justify-content: flex-start;
+  /* Keep header centered */
   align-items: center;
   transition: background-color 0.3s ease;
 }
+.cc{
+  margin: auto;
+}
+
 .main-head.shadow {
   background-color: #000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px; /* Limit the width for better centering */
-  width: 100%; /* Ensure nav takes full width */
-  margin: 0 auto; /* Center the nav */
+  justify-content: flex-start;
+  max-width: 1309px;
+  /* Limit the width for better centering */
+  width: 100%;
+  /* Ensure nav takes full width */
+  margin: 0;
+  /* Center the nav */
 }
 
 .logo {
   display: flex;
   align-items: center;
 }
-
 #nav-list {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 5px;
   list-style: none;
-  margin: 0;
+  margin-left: 60px;
   padding: 0;
 }
+
 
 #nav-list li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 20px;
 }
 
 .hamburger {
-  display: none; /* Hidden on larger screens */
+  display: none;
+  /* Hidden on larger screens */
   background: none;
   border: none;
   color: white;
@@ -251,28 +283,33 @@ nav {
   top: 20px;
   right: 20px;
   border: none;
-  background-color:white;
+  background-color: white;
   cursor: pointer;
   padding: 5px;
-  
+
 }
+
 .mode-toggle img {
-  width: 30px; /* Adjust the size as needed */
+  width: 30px;
+  /* Adjust the size as needed */
   height: auto;
-  
+
 }
 
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger on small screens */
+    display: block;
+    /* Show hamburger on small screens */
   }
 
   #nav-list {
-    display: none; /* Hide menu initially */
+    display: none;
+    /* Hide menu initially */
     position: absolute;
-    top: 100%; /* Position dropdown below header */
+    top: 100%;
+    /* Position dropdown below header */
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -282,12 +319,14 @@ nav {
   }
 
   #nav-list.active {
-    display: flex; /* Show menu when active */
+    display: flex;
+    /* Show menu when active */
   }
 
   /* Close button styles */
-  .dropdown-close-btn  {
-    display: block; /* Visible only in the dropdown menu */
+  .dropdown-close-btn {
+    display: block;
+    /* Visible only in the dropdown menu */
     align-self: flex-end;
     margin-right: 20px;
     color: white;
@@ -299,6 +338,7 @@ nav {
 
 /* Hide the close button on larger screens (revised) */
 @media (min-width: 769px) {
+
   /* Hide the close button by setting its display to none and removing it from the DOM */
   .dropdown-close-btn {
     display: none;
@@ -311,7 +351,7 @@ nav {
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("/img/landing-page.jpg");
+    url("/BuddyTrail/img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -325,20 +365,21 @@ nav {
 
 .hero button {
   border-radius: 1rem;
- 
-    padding: 1.5rem 4rem;
-    background: #4c6e97;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: background 0.6s ease-in-out;
+
+  padding: 1.5rem 4rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
 
 }
 
-.hero h2{
+.hero h2 {
   color: white;
-  font-size: 6rem;;
+  font-size: 6rem;
+  ;
 }
 
 .hero h3 {
@@ -360,22 +401,66 @@ nav {
 
 .content-section h2 {
   font-size: 2em;
-  color: #007bff; /* Blue color for headings */
+  color: #007bff;
+  /* Blue color for headings */
   margin-bottom: 20px;
 }
 
 .content-section p {
   font-size: 1.1em;
-  color: #e0e0e0; /* Dark text color */
+  color: #e0e0e0;
+  /* Dark text color */
   margin-bottom: 20px;
 }
 
 /**** LOCATIONS PAGE ****/
 
+.loca {
+  min-height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/BuddyTrail/img/new-york-page.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loca button {
+  border-radius: 1rem;
+
+  padding: 1.5rem 4rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
+
+}
+
+.loca h2 {
+  color: white;
+  font-size: 6rem;
+  ;
+}
+
+.loca h3 {
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.7px;
+  padding: 5rem;
+}
+
+
 #locations {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/new-york-page.png");
+    url("/BuddyTrail/img/new-york-page.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -398,7 +483,9 @@ nav {
 
 .locations-head h3 {
   padding: 4rem 0rem;
-  background: linear-gradient(#1d71c4, #f9f9f9);
+  background: -webkit-linear-gradient(#968a8a, #333);
+  font-weight: bolder;
+  font-size: 2.8rem;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -431,6 +518,7 @@ nav {
   from {
     transform: translate(10%, -10%);
   }
+
   to {
     transform: translate(0%, 0%);
   }
@@ -482,6 +570,7 @@ nav {
   max-width: 20%;
   margin: 0.5rem;
 }
+
 .card h4,
 .card p {
   padding: 1rem;
@@ -496,7 +585,8 @@ nav {
 /**** CONTACT PAGE ****/
 
 #contact {
-  min-height: 100vh;
+  margin: 0 39px 25px;
+  min-height: 92vh;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   background-position: center;
   background-repeat: no-repeat;
@@ -508,24 +598,33 @@ nav {
   border-radius: 10px;
   overflow: hidden;
 }
-#contact .title{
+
+#contact .title {
   color: #f4f4f4;
 }
-#contact .description{
+
+#contact .description {
   color: #d3cece;
 }
-.info-item{
+
+.info-item {
   display: flex;
 }
-.info-text-content h3{
-  font-size: 20px;
+
+.info-text-content h3 {
+  font-size: 18px;
   color: #f7f3f3;
 }
-.info-text-content p{
-  font-size: 16px;
+
+.info-text-content p {
+  /* background: -webkit-linear-gradient(#0f0f0f, #322929); */
+  font-size: 15px;
   color: #f1ecec;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.form-container{
+
+.form-container {
   position: absolute;
   right: 0;
   top: 0;
@@ -537,7 +636,8 @@ nav {
   justify-content: center;
   flex-direction: column;
 }
-.form-container .form-title{
+
+.form-container .form-title {
   text-align: center;
   font-size: 3.1rem;
   margin-bottom: 20px;
@@ -555,18 +655,23 @@ nav {
 
 #About {
   padding: 60px;
-  background-color: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark grey text */
+  background-color: #f5f5f5;
+  /* Light grey background */
+  color: #333;
+  /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
   text-align: left;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
 
 #About h1 {
   font-size: 3.5em;
-  color: #007bff; /* Blue color for the main heading */
+  color: #007bff;
+  /* Blue color for the main heading */
   margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
@@ -574,7 +679,8 @@ nav {
 
 #About h2 {
   font-size: 3em;
-  color: #0056b3; /* Dark blue color for subheadings */
+  color: #0056b3;
+  /* Dark blue color for subheadings */
   margin-top: 40px;
   font-weight: 600;
 }
@@ -582,11 +688,13 @@ nav {
 #About p {
   font-size: 2.2em;
   margin-bottom: 20px;
-  color: #444; /* Slightly darker grey for paragraph text */
+  color: #444;
+  /* Slightly darker grey for paragraph text */
 }
 
 #About p strong {
-  color: #007bff; /* Blue highlight for important text */
+  color: #007bff;
+  /* Blue highlight for important text */
 }
 
 #About ul {
@@ -603,270 +711,458 @@ nav {
 }
 
 #About ul li::before {
-  content: "✔"; /* Checkmark symbol as bullet point */
+  content: "✔";
+  /* Checkmark symbol as bullet point */
   margin-right: 10px;
-  color: #28a745; /* Green checkmark */
+  color: #28a745;
+  /* Green checkmark */
   font-size: 1.5em;
 }
+
 /* Light mode for #About */
 .light-mode #About {
-  background-color: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark grey text */
+  background-color: #f5f5f5;
+  /* Light grey background */
+  color: #333;
+  /* Dark grey text */
 }
 
 /* Dark mode for #About */
 .dark-mode #About {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light grey text */
+  background-color: #121212;
+  /* Dark background */
+  color: #e0e0e0;
+  /* Light grey text */
 }
 
 .light-mode #About h1 {
-  color: #007bff; /* Blue color for the main heading in light mode */
+  color: #007bff;
+  /* Blue color for the main heading in light mode */
 }
 
 .dark-mode #About h1 {
-  color: #ffa500; /* Orange color for the main heading in dark mode */
+  color: #ffa500;
+  /* Orange color for the main heading in dark mode */
 }
 
 .light-mode #About h2 {
-  color: #0056b3; /* Dark blue subheading in light mode */
+  color: #0056b3;
+  /* Dark blue subheading in light mode */
 }
 
 .dark-mode #About h2 {
-  color: #ffd700; /* Bright yellow subheading in dark mode */
+  color: #ffd700;
+  /* Bright yellow subheading in dark mode */
 }
 
 .light-mode #About p {
-  color: #444; /* Slightly darker grey for paragraph text in light mode */
+  color: #444;
+  /* Slightly darker grey for paragraph text in light mode */
 }
 
 .dark-mode #About p {
-  color: #d3d3d3; /* Lighter grey for paragraph text in dark mode */
+  color: #d3d3d3;
+  /* Lighter grey for paragraph text in dark mode */
 }
 
 .light-mode #About p strong {
-  color: #007bff; /* Blue highlight for important text in light mode */
+  color: #007bff;
+  /* Blue highlight for important text in light mode */
 }
 
 .dark-mode #About p strong {
-  color: #ffcc00; /* Yellow highlight for important text in dark mode */
+  color: #ffcc00;
+  /* Yellow highlight for important text in dark mode */
 }
 
 
 /* Cab Booking Section Styles */
-.cab-booking-section  {
+.cab-booking-section {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  min-height: 100vh; /* Minimum height to fill the viewport */
-  padding: 20px; /* Padding around the section */
-  background-color: white; /* Translucent background for section */
+  justify-content: center;
+  /* Center the content horizontally */
+  align-items: center;
+  /* Center the content vertically */
+  min-height: 100vh;
+  /* Minimum height to fill the viewport */
+  padding: 20px;
+  /* Padding around the section */
+  background-color: white;
+  /* Translucent background for section */
 }
 
 .booking-container {
   width: 100%;
-  max-width: 500px; /* Set a max width for the container */
-  text-align: center; /* Centering the text */
-  padding: 20px; /* Add padding inside the container */
-  border: 2px solid #007bff; /* Border color */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(247, 247, 247, 0.2); /* Slight shadow for depth */
-  background-color: rgba(0,0,0,0); /* Translucent white background */
+  max-width: 500px;
+  /* Set a max width for the container */
+  text-align: center;
+  /* Centering the text */
+  padding: 20px;
+  /* Add padding inside the container */
+  border: 2px solid #007bff;
+  /* Border color */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(247, 247, 247, 0.2);
+  /* Slight shadow for depth */
+  background-color: rgba(0, 0, 0, 0);
+  /* Translucent white background */
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 3.1em;
   font-weight: 700;
-  margin: 10px 0; /* Margin adjustment */
-  
+  margin: 26px 92px 0;
+  /* Margin adjustment */
+
 }
 
 p {
   font-size: 1.5em;
-  color: #666; /* Paragraph color */
+  color: #666;
+  /* Paragraph color */
 }
 
 /* Form Group Styles */
 .form-group {
   margin-bottom: 15px;
-  text-align: left; /* Align labels and inputs to the left */
+  text-align: left;
+  /* Align labels and inputs to the left */
 }
 
 label {
   font-size: 1.2em;
-  color: #333; /* Label color */
+  color: #333;
+  /* Label color */
 }
 
 input,
 select,
 textarea {
   height: 45px;
-  width: 100%; /* Full width */
+  width: 100%;
+  /* Full width */
   padding: 5px;
-  border: 1px solid #ccc; /* Border for inputs */
-  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc;
+  /* Border for inputs */
+  border-radius: 5px;
+  /* Rounded corners */
   font-size: 1.6rem;
   margin-top: 5px;
   outline: none;
 }
-textarea{
+
+textarea {
   height: 150px;
 }
 
 input[type="text"],
 input[type="date"],
 input[type="time"] {
-  transition: border 0.3s; /* Smooth transition */
+  transition: border 0.3s;
+  /* Smooth transition */
 }
 
-input:focus, 
-textarea:focus{
-  border: 2px solid #007bff; /* Border color on focus */
+input:focus,
+textarea:focus {
+  border: 2px solid #007bff;
+  /* Border color on focus */
 }
 
 /* Button Styles */
 .book-btn {
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Padding for button */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 1.2em; /* Button text size */
-  width: 100%; /* Full width */
-  max-width: 300px; /* Max width for button */
-  margin-top: 10px; /* Margin above button */
+  background-color: #007bff;
+  /* Button background color */
+  color: white;
+  /* Button text color */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px 20px;
+  /* Padding for button */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 1.2em;
+  /* Button text size */
+  width: 100%;
+  /* Full width */
+  max-width: 300px;
+  /* Max width for button */
+  margin-top: 10px;
+  /* Margin above button */
 }
 
 .book-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
+  /* Darker shade on hover */
 }
 
 /* Dark Mode Styles */
 .dark-mode .cab-booking-section {
-  background-color: rgba(18, 18, 18, 0.9); /* Dark background for section */
+  background-color: rgba(18, 18, 18, 0.9);
+  /* Dark background for section */
 }
+
 .dark-mode h2 {
-  color: #ffa500; /* Bright color for heading */
+  color: #ffa500;
+  /* Bright color for heading */
 }
+
+
+
+
 
 
 /**** FOOTER ****/
 
 /* Footer Styles */
-footer {
-    background: linear-gradient(135deg, #343a40, #212529);
-    color: #ffffff;
-    text-align: center;
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
+/* NEW FOOTER START */
 
 
-.footer-column a {
-  font-size: 16px;
-  line-height: 2;
+.section {
+  padding: 11rem 0;
 }
-#footer-contact-us{
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.f-container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.grid-three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.section-footer {
+  background: rgb(0 10 45);
+  transition: all 0.7s linear;
+}
+
+.section-footer h3 {
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.f-about p {
+  color: #adadad;
+}
+
+.f-links ul,
+.f-services ul,
+.f-address address {
   display: flex;
   flex-direction: column;
+  gap: 1.8rem;
+  justify-content: center;
+}
+
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a {
+  font-size: 1.8rem;
+  color: #adadad;
+  text-transform: capitalize;
+}
+
+.f-links span,
+.f-services span,
+.f-services span {
+  margin-right: 1rem;
+}
+
+.f-address p,
+.f-address p a {
+  font-style: normal;
+  color: #adadad;
+}
+
+.f-social-icons {
+  margin: 5rem 0;
+  text-align: center;
+  color: #adadad;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.f-social-icons .icons {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(144, 172, 209, 0.2);
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  animation: water-wave 3s linear infinite;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+.f-social-icons .icons:hover {
+  transform: scale(1.1);
+  transform: scale(1.2) translateY(-5px);
+
+}
+
+.f-social-icons .icon-twit:hover {
+  color: #0a66c2;
+}
+
+.f-social-icons .icon-facebook:hover {
+  color: #4267B2;
+}
+
+.f-social-icons .icon-github:hover {
+  color: #060708;
+
+}
+
+.f-social-icons .icon-link:hover {
+  color: #0a66c2;
+
+}
+
+.f-credits p {
+  text-align: center;
+  color: #adadad;
+
+}
+
+footer a:hover,
+footer a:active {
+  color: #fff;
+}
+
+footer p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 1.34rem;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer li {
+  list-style: none;
+}
+
+@keyframes water-wave {
+  0% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+
+  50% {
+    border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
+  }
+
+  100% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
 }
 
 
-.footer-column h3 {
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #f39c12;
-}
+/* NEW FOOTER END */
 
-.footer-column p, .footer-column ul {
-    font-size: 14px;
-    line-height: 1.5;
-}
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
 
-.footer-column ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
 
-.footer-column ul li a:hover {
-    color: #f39c12;
-    text-decoration: underline;
-}
 
-.social-icons a {
-    margin: 0 10px;
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s;
+
+
+
+
+
+
+/* .social-icons a {
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #f39c12;
+  color: #f39c12;
 }
 
-.footer-bottom {
-    font-size: 14px;
-}
+ */
 
 
 /* for facebook */
-.social-icons .fa-facebook-f {
+/* .social-icons .fa-facebook-f {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-facebook-f:hover{
-  color:#4267B2;
-  transform:scale(1.1);
+
+.social-icons .fa-facebook-f:hover {
+  color: #4267B2;
+  transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
-}
+} */
+
+
+
+
 
 /* for twitter */
-.social-icons .fa-x-twitter {
+/* .social-icons .fa-x-twitter {
   transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-icons .fa-x-twitter:hover{
-  color:black;
-  transform:scale(1.1);
-  transform: scale(1.2) translateY(-5px);
-}
-/* for instagram */
-.social-icons .fa-instagram {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-icons .fa-instagram:hover{
-  color:#c32aa3;
-  transform:scale(1.1);
-  transform: scale(1.2) translateY(-5px);
 }
 
+.social-icons .fa-x-twitter:hover {
+  color: black;
+  transform: scale(1.1);
+  transform: scale(1.2) translateY(-5px);
+} */
+
+
+
+
+
 /* for instagram */
-.social-icons .fa-linkedin-in{
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-linkedin-in:hover{
-    color:#0a66c2;
-    transform:scale(1.1);
-    transform: scale(1.2) translateY(-5px);
-  }
+/* .social-icons .fa-instagram {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .fa-instagram:hover {
+  color: #c32aa3;
+  transform: scale(1.1);
+  transform: scale(1.2) translateY(-5px);
+} */
+
+
+
+
+
+/* for instagram */
+/* .social-icons .fa-linkedin-in {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .fa-linkedin-in:hover {
+  color: #0a66c2;
+  transform: scale(1.1);
+  transform: scale(1.2) translateY(-5px);
+} */
+
+
+
+
+
+
+
 /**** MEDIA QUERY ****/
 
 @media screen and (max-width: 932px) {
@@ -877,6 +1173,7 @@ footer {
   nav ul {
     text-align: center;
   }
+
   #logo {
     padding: 1.8rem;
     text-align: center;
@@ -886,6 +1183,7 @@ footer {
     height: 40rem;
     pointer-events: none;
   }
+
   .locations-head h3 {
     background: rgba(19, 28, 39, 0.8);
     -webkit-text-fill-color: white;
@@ -929,13 +1227,17 @@ body.dark-mode {
     color: #000000;
 } */
 .light-mode {
-  background-color: #ffffff; /* Light mode background */
-  color: black; /* Light mode text color */
+  background-color: #ffffff;
+  /* Light mode background */
+  color: black;
+  /* Light mode text color */
 }
 
 .dark-mode {
-  background-color: #121212; /* Dark mode background */
-  color: #e0e0e0; /* Dark mode text color */
+  background-color: #121212;
+  /* Dark mode background */
+  color: #e0e0e0;
+  /* Dark mode text color */
 }
 
 /* Button styles */
@@ -982,7 +1284,8 @@ body.dark-mode {
 
 /* Map container styling */
 #map {
-  height: 600px; /* Adjust the height as needed */
+  height: 600px;
+  /* Adjust the height as needed */
   width: 100%;
   margin-top: 20px;
   border-radius: 8px;
@@ -991,123 +1294,141 @@ body.dark-mode {
 
 
 
-    /* itineraries */
-    .itineraries-section {
-      padding: 50px;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
+/* itineraries */
+.itineraries-section {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
 
-    .itineraries-section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
+.itineraries-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
-    .itinerary-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-      color: #003366;
-      margin-top: 20px;
-    }
+.itinerary-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  color: #003366;
+  margin-top: 20px;
+}
 
-    .itinerary {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      flex: 1 1 calc(33% - 40px);
-      max-width: calc(33% - 40px);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
-    }
+.itinerary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Added transition */
+}
 
-    .itinerary h3 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #090f15;
-    }
+.itinerary h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #090f15;
+}
 
-    .itinerary p {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 15px;
-      color: #003366;
-    }
+.itinerary p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #003366;
+}
 
-    .itinerary button {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-bottom: 15px;
-    }
+.itinerary button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
 
-    .itinerary button:hover {
-      background-color: #0056b3;
-    }
+.itinerary button:hover {
+  background-color: #0056b3;
+}
 
-    /* Hover effect for itinerary cards */
-    .itinerary:hover {
-      transform: scale(1.05); /* Scale up the card */
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow */
-    }
+/* Hover effect for itinerary cards */
+.itinerary:hover {
+  transform: scale(1.05);
+  /* Scale up the card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Increase shadow */
+}
 
-    .cab-booking-section {
-      background-color:rgba(0, 0, 0, 0.2); /* Dark translucent background */
-    }
-    
-    .booking-container p,
-    .booking-container h1,
-    .booking-container h2 {
-      color: #f1f1f1; /* Lighter text color for readability */
-    }
+.cab-booking-section {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Dark translucent background */
+}
 
-    @media (max-width: 768px) {
-      .itinerary {
-        flex: 1 1 calc(45% - 20px);
-        max-width: calc(45% - 20px);
-      }
-    }
+.booking-container p,
+.booking-container h1,
+.booking-container h2 {
+  color: #f1f1f1;
+  /* Lighter text color for readability */
+}
 
-    @media (max-width: 480px) {
-      .itinerary {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-    }
+@media (max-width: 768px) {
+  .itinerary {
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+  }
+}
 
-    #itineraries {
-      background-color: #f9f9f9; /* Light background */
-      border: 1px solid #007bff; /* Blue border */
-    }
+@media (max-width: 480px) {
+  .itinerary {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 
-    .dark-mode #itineraries {
-      background-color: #1e1e1e; /* Dark background */
-      border: 1px solid #0056b3; /* Darker blue border */
-    }
+#itineraries {
+  background-color: #f9f9f9;
+  /* Light background */
+  border: 1px solid #007bff;
+  /* Blue border */
+}
 
+.dark-mode #itineraries {
+  background-color: #1e1e1e;
+  /* Dark background */
+  border: 1px solid #0056b3;
+  /* Darker blue border */
+}
+
+.review-form:hover {
+  transform: scale(1.02);
+}
 
 /* user rating */
 .reviews-section {
   padding: 50px;
   background-color: #F0F8FF;
- 
-}
-.review{
+  padding: 50px;
   display: flex;
-justify-content: center;
+  justify-content: center;
+  background-color: #F0F8FF;
+  align-items: center;
 
 }
 
-.review-p{
-  font-size:small;
-  color:#543db0;
+.review {
+  display: flex;
+  justify-content: center;
+
+}
+
+.review-p {
+  font-size: small;
+  color: #543db0;
   font-style: italic;
   font-weight: 500;
 }
@@ -1125,15 +1446,17 @@ justify-content: center;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width:40vw;
+  width: 40vw;
   align-items: center;
   justify-items: center;
+  transition: transform 0.3s ease;
 }
 
-.form{
+.form {
   margin-top: 10px;
-  width:30vw;
+  width: 30vw;
 }
+
 .review-form h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -1166,14 +1489,14 @@ justify-content: center;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
-  color:black;
-  font-size:14px;
-  
+  color: black;
+  font-size: 14px;
+
 }
 
-.form-button{
+.form-button {
   text-align: center;
-  
+
 }
 
 .reviews-container {
@@ -1277,21 +1600,25 @@ justify-content: center;
   .reviews-list {
     grid-template-columns: 1fr;
   }
-  .form-button button{
-    width:100%;
+
+  .form-button button {
+    width: 100%;
   }
+
   .reviews-title {
     font-size: 2em;
   }
-  
+
   .review-card {
     max-width: 400px;
     margin: 0 auto;
   }
-  .review-form{
-    width:60vw;
+
+  .review-form {
+    width: 60vw;
   }
-  .form{
+
+  .form {
     width: 50vw;
   }
 }
@@ -1300,25 +1627,29 @@ justify-content: center;
   .reviews-container {
     padding: 20px 10px;
   }
-  .review-form{
-    width:80vw;
+
+  .review-form {
+    width: 80vw;
   }
-  .form{
-    width:70vw;
+
+  .form {
+    width: 70vw;
   }
-  .form-button button{
-    width:100%
+
+  .form-button button {
+    width: 100%
   }
+
   .review-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .reviewer-avatar {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  
+
   .reviewer-info {
     text-align: center;
   }
@@ -1326,8 +1657,15 @@ justify-content: center;
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .review-card {
@@ -1335,15 +1673,30 @@ justify-content: center;
   opacity: 0;
 }
 
-.review-card:nth-child(1) { animation-delay: 0.1s; }
-.review-card:nth-child(2) { animation-delay: 0.2s; }
-.review-card:nth-child(3) { animation-delay: 0.3s; }
-.review-card:nth-child(4) { animation-delay: 0.4s; }
-.review-card:nth-child(5) { animation-delay: 0.5s; }
+.review-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.review-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.review-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.review-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.review-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 .review-item {
   padding: 20px;
-  border: 1px solid #ccc; /* Light border in light mode */
+  border: 1px solid #ccc;
+  /* Light border in light mode */
   border-radius: 8px;
   transition: border-color 0.3s ease;
 }
@@ -1352,86 +1705,117 @@ justify-content: center;
   border-color: #ccc;
 }
 
-.light-mode .reviews-section{
+.light-mode .reviews-section {
   background-color: white;
 }
 
 /* Dark Mode Styles for Reviews Section */
-.dark-mode .reviews-section  {
-  background-color: #121212; /* Dark background */
-  color: white; /* White text */
+.dark-mode .reviews-section {
+  background-color: #121212;
+  /* Dark background */
+  color: white;
+  /* White text */
   border: 2px solid white;
 }
 
 .dark-mode .review {
-  background-color: #1e1e1e; /* Dark background for review cards */
-  color: white; /* White text for review content */
-  border: 1px solid #ebe2e2; /* Darker border */
+  background-color: #1e1e1e;
+  /* Dark background for review cards */
+  color: white;
+  /* White text for review content */
+  border: 1px solid #ebe2e2;
+  /* Darker border */
 }
 
 .dark-mode .review h4 {
-  color: #ffa500; /* Optional: Highlight the reviewer's name */
+  color: #ffa500;
+  /* Optional: Highlight the reviewer's name */
 }
+
 .dark-mode .review label {
   color: rgb(233, 220, 220);
 }
 
 .dark-mode .review p {
-  color: white; /* White text for review paragraphs */
+  color: white;
+  /* White text for review paragraphs */
 }
 
 /* Adjusting rating stars color in dark mode */
 .dark-mode .rating {
-  color: #ffcc00; /* Bright yellow stars for dark mode */
+  color: #ffcc00;
+  /* Bright yellow stars for dark mode */
 }
 
 /* Dark Mode Styles for Review Form */
 .dark-mode .review-form {
-  background-color: #121212; /* Dark background for the review form */
-  color: white; /* White text color */
-  padding: 20px; /* Padding for inner spacing */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow for depth */
+  background-color: #121212;
+  /* Dark background for the review form */
+  color: white;
+  /* White text color */
+  padding: 20px;
+  /* Padding for inner spacing */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* Optional: shadow for depth */
 }
 
 .review-form h1 {
-  margin-bottom: 10px; /* Space below heading */
+  margin-bottom: 10px;
+  /* Space below heading */
 }
 
 .review-form label {
-  margin-top: 10px; /* Space above labels */
-  display: block; /* Makes the label block-level for better spacing */
+  margin-top: 10px;
+  /* Space above labels */
+  display: block;
+  /* Makes the label block-level for better spacing */
 }
 
 .dark-mode .review-form input,
 .dark-mode .review-form select,
-.dark-mode .review-form textarea
-{
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding inside fields */
-  background-color: #1e1e1e; /* Dark background for inputs */
-  color: white; /* White text */
-  border: 1px solid #333; /* Dark border */
-  border-radius: 4px; /* Slightly rounded corners */
-  margin-bottom: 10px; /* Space between fields */
+.dark-mode .review-form textarea {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  /* Padding inside fields */
+  background-color: #1e1e1e;
+  /* Dark background for inputs */
+  color: white;
+  /* White text */
+  border: 1px solid #333;
+  /* Dark border */
+  border-radius: 4px;
+  /* Slightly rounded corners */
+  margin-bottom: 10px;
+  /* Space between fields */
 }
 
 .review-form input::placeholder,
 .review-form textarea::placeholder {
-  color: #aaa; /* Lighter placeholder text */
+  color: #aaa;
+  /* Lighter placeholder text */
 }
 
 .review-form button {
-  background-color: #333; /* Dark button background */
-  color: white; /* White button text */
-  border: none; /* No border */
-  padding: 10px 15px; /* Padding inside button */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
+  background-color: #333;
+  /* Dark button background */
+  color: white;
+  /* White button text */
+  border: none;
+  /* No border */
+  padding: 10px 15px;
+  /* Padding inside button */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer on hover */
 }
 
 .review-form button:hover {
-  background-color: #444; /* Slightly lighter on hover */
+  background-color: #444;
+  /* Slightly lighter on hover */
 }
 
 .cab-booking-section input,
@@ -1449,17 +1833,20 @@ justify-content: center;
 .review-item h3 {
   margin: 0 0 10px;
   font-size: 1.2em;
-  color: #007bff; /* Blue color for headings */
+  color: #007bff;
+  /* Blue color for headings */
 }
 
 .review-item p {
   margin: 0 0 10px;
   font-size: 1em;
-  color: black; /* Darker gray for text */
+  color: black;
+  /* Darker gray for text */
 }
 
 .rating {
-  color: #ffcc00; /* Star rating color */
+  color: #ffcc00;
+  /* Star rating color */
   font-size: 1.2em;
 }
 
@@ -1490,6 +1877,7 @@ justify-content: center;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Close Button */
 .close-btn {
   position: absolute;
@@ -1516,12 +1904,13 @@ justify-content: center;
 }
 
 .popup {
-  position: fixed; 
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);  /* Background overlay */
+  background: rgba(0, 0, 0, 0.7);
+  /* Background overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1530,8 +1919,10 @@ justify-content: center;
 .popup-content {
   position: relative;
   background: white;
-  padding: 40px; /* Increased padding around content */
-  padding-top: 60px; /* Extra top padding to account for close button */
+  padding: 40px;
+  /* Increased padding around content */
+  padding-top: 60px;
+  /* Extra top padding to account for close button */
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
@@ -1579,8 +1970,9 @@ justify-content: center;
 
 
 /* Deals */
-.deals-section { 
-  padding: 90px 20px; /* Adjusted padding for smaller screens */
+.deals-section {
+  padding: 90px 20px;
+  /* Adjusted padding for smaller screens */
   background-color: #f8f9fa;
 }
 
@@ -1597,35 +1989,42 @@ justify-content: center;
 }
 
 .deals-list {
-  max-width: 90%; /* Increased max-width for better responsiveness */
+  max-width: 90%;
+  /* Increased max-width for better responsiveness */
   justify-content: center;
   padding: 40px 0;
   margin: 0 auto;
-  display: grid;  
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
-  gap: 30px; /* Space between grid items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three equal columns */
+  grid-template-rows: repeat(2, auto);
+  /* Two rows with automatic height */
+  gap: 30px;
+  /* Space between grid items */
 }
 
 .deal-item {
   background-color: #fff;
-  padding: 25px 30px; /* Added padding left and right */
+  padding: 25px 30px;
+  /* Added padding left and right */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: #090f15;
-  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1); /* for smooth hover transform animation */
+  transition: transform 0.4s cubic-bezier(0.30, 0.1, 0.25, 1);
+  /* for smooth hover transform animation */
 }
 
 /* Added hover effect */
 .deal-item:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   cursor: pointer;
 }
 
 .deal-item h3 {
   font-size: 1.5em;
-  font-weight: 600; /* Made heading bold */
+  font-weight: 600;
+  /* Made heading bold */
   margin-bottom: 15px;
   color: #090f15;
 }
@@ -1659,58 +2058,71 @@ justify-content: center;
 }
 
 #deals {
-  background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
+  background-color: #f9f9f9;
+  /* Light background */
+  border: 1px solid #007bff;
+  /* Blue border */
 }
 
 .dark-mode #deals {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
+  background-color: #1e1e1e;
+  /* Dark background */
+  border: 1px solid #0056b3;
+  /* Darker blue border */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .deals-section {
-    padding: 60px 10px; /* Reduce padding for smaller screens */
+    padding: 60px 10px;
+    /* Reduce padding for smaller screens */
   }
 
   .deals-list {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns on small screens */
   }
 }
 
 @media (max-width: 480px) {
   .deals-list {
-    grid-template-columns: 1fr; /* One column on very small screens */
+    grid-template-columns: 1fr;
+    /* One column on very small screens */
   }
 
   .deal-item {
-    padding: 20px; /* Reduce padding inside deal items */
+    padding: 20px;
+    /* Reduce padding inside deal items */
   }
 
-  .deals-section h2, .deals-section p {
-    font-size: 1.5em; /* Reduce font size for smaller screens */
+  .deals-section h2,
+  .deals-section p {
+    font-size: 1.5em;
+    /* Reduce font size for smaller screens */
   }
 }
 
 /* recommendations */
 .recommendations-section {
   padding: 50px;
-  background-color: #f0f8ff; /* Light blue background */
+  background-color: #f0f8ff;
+  /* Light blue background */
 }
 
 .recommendations-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
   text-align: center;
-  color: #0056b3; /* Dark blue for headings */
+  color: #0056b3;
+  /* Dark blue for headings */
 }
 
 .recommendations-section p {
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 30px;
-  color: black; /* Darker gray for text */
+  color: black;
+  /* Darker gray for text */
 }
 
 .recommendation-list {
@@ -1721,10 +2133,12 @@ justify-content: center;
 }
 
 .recommendation-item {
-  background-color: #fff; /* White background for items */
+  background-color: #fff;
+  /* White background for items */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
   max-width: 30%;
   text-align: center;
   /* border: 2px solid #0056b3; Blue border */
@@ -1733,17 +2147,20 @@ justify-content: center;
 .recommendation-item h3 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #0056b3; /* Dark blue for headings */
+  color: #0056b3;
+  /* Dark blue for headings */
 }
 
 .recommendation-item p {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: black; /* Darker gray for text */
+  color: black;
+  /* Darker gray for text */
 }
 
 .recommendation-item button {
-  background-color: #0056b3; /* Dark blue for buttons */
+  background-color: #0056b3;
+  /* Dark blue for buttons */
   color: white;
   padding: 10px 15px;
   border: none;
@@ -1753,26 +2170,32 @@ justify-content: center;
 }
 
 .recommendation-item button:hover {
-  background-color: #003d80; /* Darker blue on hover */
+  background-color: #003d80;
+  /* Darker blue on hover */
 }
+
 @media (max-width: 768px) {
-  .recommendation-list{
+  .recommendation-list {
     flex-direction: column;
   }
-  .recommendation-item{
+
+  .recommendation-item {
     max-width: 100%;
   }
 }
+
 /* Positioning and Styling for Google Translate Button */
 .translate-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1000;
+  /* Ensure it's above other content */
 }
 
 .language-toggle {
-  background: #007bff; /* Blue color for the button */
+  background: #007bff;
+  /* Blue color for the button */
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1783,23 +2206,32 @@ justify-content: center;
 }
 
 .language-toggle:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
+
 /* Dark Mode For Recommendations */
 .dark-mode .recommendations-section {
-  background-color: #121212; /* Dark background */
+  background-color: #121212;
+  /* Dark background */
 }
+
 .dark-mode .recommendations-section p {
-  color: #e0e0e0; /* Lighter text color */
+  color: #e0e0e0;
+  /* Lighter text color */
 }
+
 .dark-mode .recommendation-item {
-  background-color: #1e1e1e; /* Darker background for items */
-  border: 2px solid #0056b3; /* Darker blue border */
+  background-color: #1e1e1e;
+  /* Darker background for items */
+  border: 2px solid #0056b3;
+  /* Darker blue border */
 }
 
 /* Hide Google Translate Element by Default */
 #google_translate_element {
-  display: none; /* Initially hidden */
+  display: none;
+  /* Initially hidden */
 }
 
 .navhover {
@@ -1807,42 +2239,55 @@ justify-content: center;
   color: black;
   font-size: 18px;
   display: inline-block;
-  padding: 10px 15px; /* Adds padding around the text */
-  border-radius: 20px; /* Creates rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  padding: 10px 15px;
+  /* Adds padding around the text */
+  border-radius: 20px;
+  /* Creates rounded corners */
+  transition: all 0.3s ease, color 0.3s;
+  /* Smooth transition */
 }
 
 .navhover:hover {
-  border: 1px solid #3498db;
-  color: white; /* Changes text color on hover */
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  /* Changes text color on hover */
 }
 
 #social-icons {
   display: inline-block;
-  font-size: 24px; /* Adjust the size as needed */
-  padding: 7px 9px 7px; /* Adds padding around the text */
-  border-radius: 20px; /* Creates rounded corners */
+  font-size: 24px;
+  /* Adjust the size as needed */
+  padding: 7px 9px 7px;
+  /* Adds padding around the text */
+  border-radius: 20px;
+  /* Creates rounded corners */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .twitter:hover {
-  background-color: #1e97e3; /* Twitter's official blue color */
+  background-color: #1e97e3;
+  /* Twitter's official blue color */
   transform: scale(1.1);
 }
 
 .instagram:hover {
-  background-color: #e1306c; /* Instagram's official pinkish color */
-  transform: scale(1.1); /* Slightly enlarges the icon */
+  background-color: #e1306c;
+  /* Instagram's official pinkish color */
+  transform: scale(1.1);
+  /* Slightly enlarges the icon */
 }
 
 .youtube:hover {
-  background-color: #ff0000; /* YouTube's official red color */
-  transform: scale(1.1); /* Slightly enlarges the icon */
+  background-color: #ff0000;
+  /* YouTube's official red color */
+  transform: scale(1.1);
+  /* Slightly enlarges the icon */
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .recommendation-item{
+  .recommendation-item {
     max-width: 100%;
   }
 }
@@ -1889,14 +2334,15 @@ justify-content: center;
   font-size: 5rem;
 }
 
-.wr{
-  font-weight:600;
+.wr {
+  font-weight: 500;
   color: white;
 }
+
 .description {
   color: #4b5563;
-  margin-top: 1rem;
-  font-size: 2.19rem;
+  margin: 1rem 14px 2rem;
+  font-size: 1.4rem;
 }
 
 /* Contact Container */
@@ -1952,13 +2398,13 @@ justify-content: center;
 }
 
 .info-title {
-  font-weight: 600;
+  font-weight: 500;
   color: white;
 }
 
 .info-description {
-  color:white;
-  text-shadow: 2px 2px 0 black;
+  color: white;
+  text-shadow: 2px 2px 0 lightcyan;
 }
 
 /* Form Styling */
@@ -2008,43 +2454,55 @@ justify-content: center;
 /* Responsive Design */
 @media (max-width: 768px) {
   .grid-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 /* Scroll to top button */
 .scroll-container {
   position: fixed;
-  bottom: 80px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1000; /* Ensure it appears above other elements */
+  bottom: 80px;
+  /* Adjust as needed */
+  right: 20px;
+  /* Adjust as needed */
+  z-index: 1000;
+  /* Ensure it appears above other elements */
 }
 
 .scroll-button {
-  background-color: #007bff; /* Change to your preferred color */
+  background-color: #007bff;
+  /* Change to your preferred color */
   border: none;
   border-radius: 50%;
-  padding: 5px; /* Smaller padding */
+  padding: 5px;
+  /* Smaller padding */
   cursor: pointer;
   position: relative;
-  width: 50px; /* Adjusted size */
-  height: 50px; /* Adjusted size */
+  width: 50px;
+  /* Adjusted size */
+  height: 50px;
+  /* Adjusted size */
 }
 
 .scroll-button img {
-  width: 30px; /* Adjusted image size */
-  height: 30px; /* Adjusted image size */
+  width: 30px;
+  /* Adjusted image size */
+  height: 30px;
+  /* Adjusted image size */
 }
 
 .tooltip-text-scroll {
   position: absolute;
-  bottom: 10%; /* Position above the button */
+  bottom: 10%;
+  /* Position above the button */
   right: 50%;
   transform: translateX(50%);
-  color: #fff; /* Tooltip text color */
+  color: #fff;
+  /* Tooltip text color */
   padding: 5px;
   border-radius: 5px;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
 }
 
 /* testimonials */
