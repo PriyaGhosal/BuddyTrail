@@ -5,6 +5,7 @@
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
+├── SignIn-Up-withGithub.js
 ├── about.html
 ├── auth.css
 ├── auth.html
@@ -48,6 +49,7 @@
 ├── index.html
 ├── moon.png
 ├── package-lock.json
+├── package.json
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
