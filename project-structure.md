@@ -5,12 +5,17 @@
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
+├── SignIn-Up-withGithub.js
 ├── about.html
 ├── auth.css
 ├── auth.html
 ├── auth.js
 ├── boy.png
+├── chatbot.css
 ├── chatbot.gif
+├── chatbot.js
+├── contact.css
+├── contact.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -46,7 +51,9 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
+├── moon.png
 ├── package-lock.json
+├── package.json
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
