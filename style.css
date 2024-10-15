@@ -109,18 +109,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 97;
-  font-size: 20px;
-  color: black; 
-  transition: color 0.3s ease; 
-}
 
 .cloud {
   position: absolute;
@@ -149,7 +137,7 @@ body {
   background: #2C3E50;; 
   transition: width 0.2s ease; 
 }
-
+ 
 .scroll-top-btn {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from the bottom of the viewport */
@@ -211,6 +199,12 @@ button {
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.4s ease;
+}
+#btn a {
+  color:white;
+}
+#btn{
+  background-color: gray;
 }
 #btn:hover {
   background-color: rgba(255,255,255,0.5);
@@ -891,7 +885,7 @@ textarea:focus{
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #343a40, #212529);
+    background-color:#232323; 
     color: #ffffff;
     text-align: center;
 }
@@ -911,6 +905,9 @@ footer {
     margin: 10px;
 }
 
+.footer-column p{
+  color:white;
+}
 
 .footer-column a {
   font-size: 16px;
@@ -2371,4 +2368,94 @@ body.light-mode {
   100%{
     transform: translateY(0px);
   }
+}
+
+/* General Body Style */
+#reviews {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8d9f1; /* Light purple background */
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.review-form h2 {
+  color: #5e2b9f; /* Deep purple for title */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-p {
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #5e2b9f; /* Purple color for labels */
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #d1c4e9; /* Light purple border */
+  border-radius: 5px;
+  background-color: white; /* White background for input fields */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
+  outline: none;
+  background-color: #f3e5f5; /* Light purple background on focus */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.form-button button {
+  padding: 12px 20px;
+  background-color: #5e2b9f; /* Deep purple background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #4b1a79; /* Darker purple on hover */
+}
+
+/* Thank You Message */
+#thankYouMessage p {
+  color: #333;
+  font-size: 16px;
 }

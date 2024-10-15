@@ -61,10 +61,10 @@ class Cursor {
     move(t) {
         this.cursor.x = t.clientX;
         this.cursor.y = t.clientY;
-        console.log(`Cursor position: (${this.cursor.x}, ${this.cursor.y})`);
+        // console.log(`Cursor position: (${this.cursor.x}, ${this.cursor.y})`);
     
         const color = this.colors[Math.floor(Math.random() * this.colors.length)];
-        console.log(`Creating particle with color: ${color}`);
+        // console.log(`Creating particle with color: ${color}`);
         this.create(this.cursor.x, this.cursor.y, color);
     }
     
@@ -73,17 +73,17 @@ class Cursor {
             for (var s = 0; s < t.touches.length; s++) {
                 const touchX = t.touches[s].clientX;
                 const touchY = t.touches[s].clientY;
-                console.log(`Touch position: (${touchX}, ${touchY})`);
+                // console.log(`Touch position: (${touchX}, ${touchY})`);
     
                 const color = this.colors[Math.floor(Math.random() * this.colors.length)];
-                console.log(`Creating particle with color: ${color}`);
+                // console.log(`Creating particle with color: ${color}`);
                 this.create(touchX, touchY, color);
             }
         }
     }
     
     create(t, s, i) {
-        console.log(`Creating particle at: (${t}, ${s}) with color: ${i}`);
+        // console.log(`Creating particle at: (${t}, ${s}) with color: ${i}`);
         this.particle = new Particle(this.container, this.char, this.time);
         this.particle.init(t, s, i);
         this.particles.push(this.particle);
@@ -105,29 +105,29 @@ class Cursor {
 }
     */
 update() {
-    console.log("Updating particles...");
+    // console.log("Updating particles...");
     for (var t = 0; t < this.particles.length; t++) {
-        console.log(`Updating particle ${t} at position (${this.particles[t].pos.x}, ${this.particles[t].pos.y})`);
+        // console.log(`Updating particle ${t} at position (${this.particles[t].pos.x}, ${this.particles[t].pos.y})`);
         this.particles[t].update();
     }
     for (t = this.particles.length - 1; t >= 0; t--) {
         if (this.particles[t].time < 0) {
-            console.log(`Destroying particle ${t} at position (${this.particles[t].pos.x}, ${this.particles[t].pos.y})`);
+            // console.log(`Destroying particle ${t} at position (${this.particles[t].pos.x}, ${this.particles[t].pos.y})`);
             this.particles[t].destroy();
             this.particles.splice(t, 1);
         }
     }
-    console.log("Particle update complete.");
+    // console.log("Particle update complete.");
 }
 
 bindAll(t, s) {
-    console.log("Binding methods...");
+    // console.log("Binding methods...");
     const i = s.length;
     for (let e = 0; e < i; e++) {
         console.log(`Binding method: ${s[e]}`);
         t[s[e]] = t[s[e]].bind(t);
     }
-    console.log("Method binding complete.");
+    // console.log("Method binding complete.");
 }
 }
 function styles(t, s) {
