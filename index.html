@@ -258,104 +258,182 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-    </div>
-
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
-
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-    </button>
-  </nav>
-</header>
-
-<!-- JS to handle hamburger and close button -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.getElementById("nav-list");
-    const closeBtn = document.getElementById("closeBtn");
-
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-
-    closeBtn.addEventListener("click", function () {
-      navList.classList.remove("active");
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed'); // Simple test log
-            const modeToggle = document.getElementById('modeToggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-
-            // Additional code...
-            modeToggle.addEventListener('click', function() {
-    console.log('Toggle clicked'); // Log when the button is clicked
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    const darkelem = document.querySelectorAll('#darkbtn');
-    const h1dark = document.querySelectorAll('#h1darkbtn');
-    const cardbtn = document.querySelectorAll('#btn a');
+    <header class="main-head" style="background: linear-gradient(to right, #1f2425, #827c7c); padding: 15px 25px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); position: fixed; width: 100%; z-index: 100;">
+      <nav style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <!-- Logo Section -->
+        <div class="logo" style="display: flex; align-items: center;">
+          <img src="img/logo.png" id="logo-web" style="width: 45px; margin-right: 12px;">
+          <h1 id="logo" style="font-size: 2rem; font-family: 'Montserrat', sans-serif; margin: 0;">
+            <a href="#home" style="text-decoration: none; color: white; font-weight: 600;">BuddyTrail</a>
+          </h1>
+        </div>
     
-    if (document.body.classList.contains('dark-mode')) {
-        console.log('Switching to dark mode');
-        sunIcon.style.display = 'none';  // Hide sun icon
-        moonIcon.style.display = 'inline-block'; // Show moon icon
-        localStorage.setItem('theme', 'dark');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#FFA500'
-        })
-      } else {
-        console.log('Switching to light mode');
-        sunIcon.style.display = 'inline-block';  // Show sun icon
-        moonIcon.style.display = 'none';   // Hide moon icon
-        localStorage.setItem('theme', 'light');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'gray';
-        }) 
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#0057B3'
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'black';
-        })
-    }
-});
-});
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger" style="font-size: 2rem; background: none; border: none; color: white; cursor: pointer; display: none;">
+          ☰
+        </button>
+    
+        <!-- Navigation List -->
+        <ul id="nav-list" style="list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; align-items: center;">
+          <!-- Close button for mobile -->
+          <li class="dropdown-close-btn" id="closeBtn" style="font-size: 2rem; display: none; cursor: pointer; margin-left: auto; color: white;">×</;>
+    
+          <li><a href="#home" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-left: 5rem; position: relative; transition: color 0.3s;">
+            Home</a></li>
+          <li><a href="#deals" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            Exclusive Deals</a></li>
+          <li><a href="#benefits" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            Benefits</a></li>
+          <li><a href="about.html" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            About</a></li>
+          <li><a href="#itineraries" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            Travel Itineraries</a></li>
+          <li><a href="#contact" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            Contact</a></li>
+          <li><a href="#reviews" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; position: relative; transition: color 0.3s;">
+            Reviews</a></li>
+          <li><a href="auth.html" class="navhover" style="text-decoration: none; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; border: 2px solid white; padding: 5px 10px; border-radius: 20px; position: relative; transition: color 0.3s, background-color 0.3s;">
+            Sign In</a></li>
+        </ul>
+    
+        <!-- Mode Toggle Button -->
+        <button class="mode-toggle" id="modeToggle" style="background: none; border: none; cursor: pointer;">
+          <span class="sun-icon glow" style="display: block;"><img src="day-mode.png" alt="Light mode" style="width: 25px;"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode" style="width: 25px;"></span>
+        </button>
+      </nav>
+    </header>
+    
+    <style>
+      /* Hover effect: color change with underline animation */
+      .navhover:hover {
+        color: #00c6ff;
+      }
+    
+      .navhover::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #00c6ff;
+        left: 0;
+        bottom: -5px;
+        transition: width 0.3s ease;
+      }
+    
+      .navhover:hover::after {
+        width: 100%;
+      }
+    
+      /* Sign In button hover */
+      .navhover:hover {
+        background-color: #00c6ff;
+        color: white;
+      }
+    </style>
+  <style>
+  /* Navigation list default style */
+  #nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
   
-</script>
+  /* Hamburger menu and close button behavior for smaller screens */
+  @media (max-width: 1450px) {
+    #nav-list {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 20px 0;
+      z-index: 99;
+      display: none;  /* Hidden by default on smaller screens */
+      flex-direction: column;  /* Display items in a vertical list */
+      align-items: center;
+    }
+  
+    .hamburger {
+      display: block;  /* Show hamburger button */
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  
+    /* Close button visible only when the menu is open */
+    #closeBtn {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+  }
+  
+  /* Navigation link styles */
+  .navhover {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .navhover:hover {
+    background-color: #2879c438;
+    color: #00c6ff;
+  }
+  </style>
+  
+  
+    
+    
+    
+    <!-- Inline JavaScript for responsiveness -->
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navList = document.getElementById('nav-list');
+      const closeBtn = document.getElementById('closeBtn');
+    
+      // Show the navigation items in a vertical list when the hamburger is clicked
+      hamburger.addEventListener('click', () => {
+        navList.style.display = 'flex';  // Show the menu (in column)
+        closeBtn.style.display = 'block';  // Show the close button
+        hamburger.style.display = 'none';  // Hide the hamburger icon
+      });
+    
+      // Hide the navigation items and show the hamburger when the close button is clicked
+      closeBtn.addEventListener('click', () => {
+        navList.style.display = 'none';  // Hide the menu
+        closeBtn.style.display = 'none';  // Hide the close button
+        hamburger.style.display = 'block';  // Show the hamburger icon again
+      });
+    
+      // Adjust layout based on screen size
+      function handleResize() {
+        if (window.innerWidth < 1450) {
+          navList.style.display = 'none';  // Hide menu on smaller screens
+          hamburger.style.display = 'block';  // Show hamburger button
+          closeBtn.style.display = 'none';  // Hide the close button
+        } else {
+          navList.style.display = 'flex';  // Show menu on larger screens
+          hamburger.style.display = 'none';  // Hide hamburger button
+        }
+      }
+    
+      // Run the function when the window is resized or loaded
+      window.addEventListener('resize', handleResize);
+      handleResize();
+    </script>
 
 
 
