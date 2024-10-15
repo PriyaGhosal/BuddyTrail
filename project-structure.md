@@ -11,7 +11,9 @@
 ├── auth.html
 ├── auth.js
 ├── boy.png
+├── chatbot.css
 ├── chatbot.gif
+├── chatbot.js
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
