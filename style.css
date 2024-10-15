@@ -88,6 +88,8 @@ body {
   pointer-events: none;
   z-index: 97;
   font-size: 20px;
+  color: black; 
+  transition: color 0.3s ease; 
 }
 
 .cloud {
@@ -173,16 +175,23 @@ p {
 
 button {
   padding: 2rem 6rem;
-  background: #4c6e97;
+  background: rgba(255,255,255,0.15);
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: background 0.6s ease-in-out;
+  transition: all 0.4s ease;
 }
 #btn:hover {
-  background-color: rgb(1, 20, 27);
-  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
+  background-color: rgba(255,255,255,0.5);
+  transform: scale(0.95);
+}
+#btn:hover a{
+  color: black;
+  font-weight: 600;
+}
+a{
+  transition: all 0.4s ease;
 }
 /**** MAIN PAGE  ****/
 /* Header Styles */
@@ -327,12 +336,12 @@ nav {
   border-radius: 1rem;
  
     padding: 1.5rem 4rem;
-    background: #4c6e97;
+    background: rgba(255,255,255,0.15);
     border: none;
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: background 0.6s ease-in-out;
+    transition: all 0.4s ease;
 
 }
 
@@ -1014,17 +1023,17 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode styles
+Dark mode styles
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* Light mode styles */
-/* body.light-mode {
+Light mode styles
+body.light-mode {
     background-color: #ffffff;
     color: #000000;
-} */
+} 
 .light-mode {
   background-color: #ffffff; /* Light mode background */
   color: black; /* Light mode text color */
@@ -1061,6 +1070,15 @@ body.dark-mode {
 
 .moon-icon {
   color: #b0c4de;
+}
+
+.sun-icon,
+.moon-icon {
+    display: inline-block; /* Ensure they are inline */
+}
+
+.moon-icon {
+    display: none; /* Hide the moon icon by default */
 }
 
 /* Glow effect */
@@ -2289,4 +2307,38 @@ body.dark-mode {
   font-style: italic;
   font-weight: 300;
   margin: 0 0 20px;
+}
+.header1{
+  animation-name: pulse1;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse1{
+  0%{
+    transform: translateY(-3.5px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(-3.5px);
+  }
+}
+.header2{
+  animation-name: pulse2;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse2{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-3.5px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
