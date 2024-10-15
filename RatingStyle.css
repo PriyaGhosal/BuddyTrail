@@ -74,7 +74,7 @@
 .rating > input:checked ~ label,
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
+    color: rgb(239, 149, 4); /* Green for filled stars */
 }
 
 .rating > label:hover ~ label,

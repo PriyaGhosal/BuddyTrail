@@ -44,6 +44,7 @@ body {
     margin: 5px 0 10px;
     width: 100%;
     text-align: center;
+    font-size: medium;
 }
 
 .container form input {
@@ -105,7 +106,7 @@ textarea::-webkit-scrollbar-thumb {
     margin-top: 20px;
     font-weight: 600;
     font-size: 20px;
-    color: #333;
+    color: #2c2929;
     width: 100px;
     padding: 6px;
     transition: opacity 0.3s;

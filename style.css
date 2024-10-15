@@ -313,6 +313,9 @@ nav {
   white-space: nowrap;
   font-size: 20px;
 }
+#nav-list li a:hover{
+  color: #047fd1;
+}
 
 .hamburger {
   display: none; /* Hidden on larger screens */
@@ -361,6 +364,10 @@ nav {
   #nav-list.active {
     display: flex;
     color: #0056b3; /* Show menu when active */
+  }
+
+  #nav-list:hover{
+    color: #007bff;
   }
 
   /* Close button styles */
