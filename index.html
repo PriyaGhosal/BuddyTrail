@@ -905,7 +905,9 @@
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+                                oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" class="form-control" placeholder="Your Email" required>
@@ -945,7 +947,7 @@
     <h2 class="testimonials-heading" >Testimonials</h2>
      
     <div class="testimonials-container">
-      <div class="header1"> 
+      <div class="header1 test"> 
       <figure class="snip1533">
         <figcaption>
           <blockquote>
@@ -956,7 +958,7 @@
         </figcaption>
       </figure>
       </div>
-      <div class="header2"> 
+      <div class="header2 test"> 
       <figure class="snip1533">
          
         <figcaption>
@@ -969,7 +971,7 @@
         </figcaption>
       </figure>
     </div>
-    <div class="header1"> 
+    <div class="header1 test"> 
       <figure class="snip1533">
          
         <figcaption>

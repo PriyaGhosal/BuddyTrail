@@ -241,9 +241,6 @@ button {
 #btn a {
   color:white;
 }
-#btn{
-  background-color: gray;
-}
 #btn:hover {
   background-color: rgba(255,255,255,0.5);
   transform: scale(0.95);
@@ -603,7 +600,7 @@ body {
 .section-title {
   text-align: center;
   color: #1a365d;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
   animation: fadeIn 1s ease-out;
 }
@@ -1340,7 +1337,9 @@ body.light-mode {
   font-style: italic;
   font-weight: 500;
 }
-
+.dark-mode .review-p{
+  color:whitesmoke
+}
 .reviews-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
@@ -2117,6 +2116,10 @@ body.light-mode {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 /* Heading and Title */
@@ -2304,6 +2307,12 @@ body.light-mode {
   align-items: center;
   gap: 10px;
 }
+@media (max-width:900px){
+   .testimonials-container{
+    flex-direction: column;
+   }
+   
+}
 
 .snip1533 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
@@ -2377,6 +2386,14 @@ body.light-mode {
   font-weight: 300;
   margin: 0 0 20px;
 }
+@media (max-width:900px){
+  .snip1533{
+    max-width:90vw;
+  }
+  .snip1533 figcaption {
+    padding: 8% 8% 5%;
+}
+}
 .header1{
   animation-name: pulse1;
   animation-duration: 1.8s;
@@ -2448,7 +2465,14 @@ body.light-mode {
   display: flex;
   flex-direction: column;
 }
-
+@media (max-width:900px){
+  .review-form{
+    width:60vw;
+  }
+  .form{
+    width:50vw;
+  }
+}
 label {
   margin-bottom: 8px;
   font-size: 16px;
