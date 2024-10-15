@@ -6,16 +6,33 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="./contact.css">
     <link rel="icon" href="../favicon.png" type="image/png">
+    <style>
+        .back-to-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-to-home:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <a href="./index.html" class="back-to-home">Back to Home</a>
         <form>
-            <h1>Contact Us </h1>
+            <h1>Contact Us</h1>
             <input type="text" id="firstName" placeholder="First Name" required>
             <input type="text" id="lastName" placeholder="Last Name" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="text" id="mobile" placeholder="Mobile" required>
-
             <h4>Type Your Message Here</h4>
             <textarea></textarea>
             <input type="submit" value="Send" id="button">
