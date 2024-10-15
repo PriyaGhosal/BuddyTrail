@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Roboto:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'dosis';
+    color: #080808;
+    /* background: linear-gradient(110deg, #fc6a6a 0%, #ffc69d 100%); */
+    background-image: url(testimonailbg.jpg);
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    min-width: 350px;
+    min-height: 250px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.wrapper{
+    width: 300%;
+    /* 300% 'caz we have 3 cards */
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.card{
+    width: 800px;
+    min-height: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.card-thumb{
+    width: 70%;
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+.client-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-name{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 5px 20px;
+    background: #fff;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.card-body{
+    width: 120%;
+    min-height: 100%;
+    height: auto;
+    margin-left: 20px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.review{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.rating{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star{
+    width: 25px;
+    margin-right: 5px;
+}
+
+.indicators{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicators button{
+    background: none;
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+button.active{
+    width: 40px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+@media (max-width: 800px){
+    .container{
+        width: 50%;
+        margin: auto;
+    }
+    .card{
+        flex-direction: column;
+    }
+    .card-thumb{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .card-body{
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+    }
+}
