@@ -2308,3 +2308,37 @@ body.light-mode {
   font-weight: 300;
   margin: 0 0 20px;
 }
+.header1{
+  animation-name: pulse1;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse1{
+  0%{
+    transform: translateY(-3.5px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(-3.5px);
+  }
+}
+.header2{
+  animation-name: pulse2;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse2{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-3.5px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
