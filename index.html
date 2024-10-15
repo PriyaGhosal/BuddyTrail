@@ -24,7 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link rel="stylesheet" href="chatbot.css">
     <title>BuddyTrail</title>
     <style>
       * {
@@ -169,10 +169,10 @@
   <body class="light-mode">
 
     <!-- Google Translate Button -->
-    <div class="translate-container">
+    <!-- <div class="translate-container">
       <button class="language-toggle" id="languageToggle">🌐</button>
       <div id="google_translate_element"></div>
-    </div>
+    </div> -->
 
     <script>
       // Initialization function
@@ -1019,18 +1019,23 @@
   </section>
 
 
+  <!-- Chatbot icon -->
+  <div id="chat-icon">🤖</div>
 
-    <a href="chatbot.html">
-      <div class="fixed bottom-0 right-2 chatbot-container">
-        <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot" />
-          <span class="tooltip-text">
-            Welcome to Buddytrail! <br />
-            How can I help You? ^_^
-          </span>
-        </button>
+  <!-- Chatbot container -->
+  <div id="chatbot">
+      <div id="chat-header">
+          <span>TrailBot</span>
+          <button id="close-button">✖</button> <!-- Close button -->
       </div>
-    </a>
+      <div id="chatbox">
+          <div id="messages"></div>
+      </div>
+      <input type="text" id="user-input" placeholder="Type your message here..." />
+      <button id="send-button">Send</button>
+  </div>
+  
+  <script src="chatbot.js"></script>
       <div class="fixed bottom-0 right-2 scroll-container">
         <button class="scroll-button group" id="scrollTopBtn">
           <span class="tooltip-text-scroll">
