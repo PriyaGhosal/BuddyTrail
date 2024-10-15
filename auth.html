@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
+    
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
           <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
+            
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" />
@@ -23,17 +25,16 @@
               <i class="fas fa-eye password-toggle" onclick="togglePassword('sign-in-password', this)"></i>
             </div>
             <input type="submit" value="Login" class="btn solid" />
-            <a href="/forgot_password.html" style="text-decoration: none; color: black;"><p>Forgot Password?</p></a>
+          </form>
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="https://www.google.com" target="_blank" class="social-icon" id="google">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="https://github.com" target="_blank" class="social-icon" id="github">
+              <button class="social-icon" id="githubSignInBtn">
                 <i class="fab fa-github"></i>
-              </a>
+              </button>
             </div>
-          </form>
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -54,16 +55,7 @@
               <div id="strength-medium"></div>
               <div id="strength-strong"></div>
             </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="https://www.google.com" target="_blank" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="https://github.com" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
+            <input type="submit" class="btn" value="Sign up" />           
           </form>
         </div>
       </div>
@@ -118,5 +110,7 @@
       </div>
     </a>
     <script src="auth.js"></script>
+    <!-- <script type="module" src="SignUpWithGoogle.js"></script> -->
+    <script type="module" src="SignIn-Up-withGithub.js"></script>
   </body>
 </html>

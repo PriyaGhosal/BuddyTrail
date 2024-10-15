@@ -71,6 +71,36 @@ button:hover {
   background: #e8e8e8;
   border-radius: 5px;
 }
+.posts_blog{
+  background-color:   
+ #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.main_blogs {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.upload {
+  margin-bottom:   
+ 40px;
+}
+
+#upload-form {
+  text-align: center;
+}
+
+#content-list {
+  list-style: none;
+  padding: 0;
+}
+
+#content-list li {
+  margin-bottom: 10px;
+}
 html {
   font-size: 62.5%;
 }
