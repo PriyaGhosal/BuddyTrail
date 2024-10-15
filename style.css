@@ -2342,3 +2342,93 @@ body.light-mode {
     transform: translateY(0px);
   }
 }
+
+/* General Body Style */
+#reviews {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8d9f1; /* Light purple background */
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.review-form h2 {
+  color: #5e2b9f; /* Deep purple for title */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-p {
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #5e2b9f; /* Purple color for labels */
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #d1c4e9; /* Light purple border */
+  border-radius: 5px;
+  background-color: white; /* White background for input fields */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
+  outline: none;
+  background-color: #f3e5f5; /* Light purple background on focus */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.form-button button {
+  padding: 12px 20px;
+  background-color: #5e2b9f; /* Deep purple background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #4b1a79; /* Darker purple on hover */
+}
+
+/* Thank You Message */
+#thankYouMessage p {
+  color: #333;
+  font-size: 16px;
+}
