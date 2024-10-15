@@ -168,10 +168,6 @@
   </head>
   <body class="light-mode">
 
-    <div id="progressBarContainer">
-      <div id="progressBar"></div>
-  </div>
-
     <!-- Google Translate Button -->
     <div class="translate-container">
       <button class="language-toggle" id="languageToggle">🌐</button>
@@ -233,6 +229,7 @@
       emoji: "🌤️",
       color: "black",
     };
+    
   </script>
 
 <script src="cursor.js" defer="defer"></script>
@@ -252,7 +249,7 @@
   </script>
   <main>
     <section class="hero" id="home">
-      <h2>Travel Beyond Limits</h2>
+      <div class="header1"><h2>Travel Beyond Limits</h2></div>
       <h3>
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
@@ -282,9 +279,9 @@
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
       <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="#locations" class="navhover">Location</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
       <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="#About" class="navhover">About</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
       
       <li><a href="#contact" class="navhover">Contact</a></li>
@@ -295,7 +292,8 @@
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
+      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
     </button>
   </nav>
 </header>
@@ -315,6 +313,33 @@
       navList.classList.remove("active");
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed'); // Simple test log
+            const modeToggle = document.getElementById('modeToggle');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+
+            // Additional code...
+            modeToggle.addEventListener('click', function() {
+    console.log('Toggle clicked'); // Log when the button is clicked
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        console.log('Switching to dark mode');
+        sunIcon.style.display = 'none';  // Hide sun icon
+        moonIcon.style.display = 'inline-block'; // Show moon icon
+        localStorage.setItem('theme', 'dark');
+    } else {
+        console.log('Switching to light mode');
+        sunIcon.style.display = 'inline-block';  // Show sun icon
+        moonIcon.style.display = 'none';   // Hide moon icon
+        localStorage.setItem('theme', 'light');
+    }
+});
+});
+  
 </script>
 
 
@@ -338,7 +363,7 @@
     </script>
     <main>
       <section class="hero">
-        <h2>Travel Beyond Limits</h2>
+       <div class="header1"><h2>Travel Beyond Limits</h2></div> 
 
         <h3>
           We handle everything, from finding the ideal travel buddy to
@@ -358,6 +383,7 @@
       </header>
       <div class="cards">
         <div class="card">
+          <div class="header1">
           <div class="card-icon">
             <img src="/icons/route-solid.svg" />
           </div>
@@ -367,19 +393,25 @@
             serene mountains to sunny beaches, find your next adventure
             without breaking the bank. Start exploring now!
           </p>
+          <button id="btn"><a href="travel.html "> Explore more</a></button></div>
         </div>
-        <div class="card">
-          <div class="card-icon">
-            <img src="/icons/bed-solid.svg" />
-          </div>
-          <h4>Hotel</h4>
-          <p>
+        
+        <div class="card" style="height: 384px;" >
+          <div class="header2">
+          <div class="card-icon" style="height: 72px;">
+            <img  src="./icons/bed-solid.svg" />
+          </div >
+          <h4  >Hotel</h4>
+          <p >
             We've handpicked top-rated options that offer exceptional value.
             Book your perfect stay today and enjoy premium accommodations
             without the premium price tag!
           </p>
+          <button id="btn" style="margin-bottom: 1px;"><a href="hotel.html ">See Hotels</a></button></div>
         </div>
+        
         <div class="card">
+          <div class="header1">
           <div class="card-icon">
             <img src="/icons/plane-departure-solid.svg" />
           </div>
@@ -389,6 +421,7 @@
             the best flight deals, combining comfort and affordability for
             perfect journey. Book now and take off for less!
           </p>
+          <button id="btn"><a href="fly.html ">See Flights</a></button></div>
         </div>
       </div>
     </section>
@@ -400,60 +433,69 @@
         <div class="carousel">
           <div class="carousel-inner">
             <!-- Deal 1: Flight Offer -->
+            
             <div class="deal-item">
+              <div class="header1">
               <h3>Flight to Dubai</h3>
               <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
               <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 2: Hotel Offer -->
-            <div class="deal-item">
+            
+            <div class="deal-item" style="height: 311.6px;width: 266.66px;">
+              <div class="header2"> 
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 3: Travel Package -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Kerala Backwaters Package</h3>
               <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
               <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
+              <div class="header2"> 
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 5: Adventure Trip -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Adventure in Bali</h3>
               <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
               <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
+              <div class="header2"> 
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
 
             <!-- Deal 7: Wildlife Safari in Kenya -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Wildlife Safari in Kenya</h3>
               <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
               <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
           </div>
           <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
           <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -566,7 +608,9 @@
       </p>
 
       <div class="itinerary-list">
+         
         <div class="itinerary">
+          <div class="header1"> 
           <h3>Family Vacation</h3>
           <p>
             Explore the best family-friendly destinations with day-by-day
@@ -574,17 +618,19 @@
             ages.
           </p>
           <button>View Itinerary</button>
-        </div>
+        </div></div>
 
         <div class="itinerary">
+          <div class="header2"> 
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
           <button>View Itinerary</button>
-        </div>
+        </div></div>
         <div class="itinerary">
+          <div class="header1"> 
           <h3>Romantic Getaway</h3>
           <p>
             Plan the perfect romantic escape with itineraries that include
@@ -668,6 +714,7 @@
       <div class="recommendation-list">
         <!-- Example Recommendation -->
         <div class="recommendation-item">
+          <div class="header1"> 
           <h3>Beach Resort in Goa</h3>
           <p>
             Based on your love for sunny destinations, we recommend this
@@ -676,9 +723,10 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
 
         <div class="recommendation-item">
+          <div class="header2"> 
           <h3>Cultural Tour in Rajasthan</h3>
           <p>
             Explore the rich cultural heritage of Rajasthan. This tour is
@@ -687,9 +735,10 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
 
         <div class="recommendation-item">
+          <div class="header1"> 
           <h3>Adventure Trek in Himachal</h3>
           <p>
             For the adventure lover in you, we recommend a thrilling trek in
@@ -698,7 +747,7 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
       </div>
     </section>
     <!--forum Section-->
@@ -767,75 +816,74 @@
       ></script>
 
     <!-- CONTACT US-->
-      <section id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="grid-container">
-                    <div class="text-container">
-                        <div class="heading">
-                            <h2 class="title">CONTACT US</h2>
-                            <p class="description">At BuddyTrail, we are here to assist you every step of the way! Whether you have questions, feedback, or just want to learn more about our platform, feel free to reach out to us. Our team is committed to providing you with the best experience as you explore new trails and make new friends along the way.</p>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch with BuddyTrail</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Our Address</h3>
+                                <p>123 Trailblazer Lane, Adventure City</p>
+                            </div>
                         </div>
-                        <ul class="info-list">
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Our Address</h3>
-                                    <p class="info-description">123 Trailblazer Lane, Adventure</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                                        <path d="M15 7a2 2 0 0 1 2 2"></path>
-                                        <path d="M15 3a6 6 0 0 1 6 6"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="info-title">Contact</h3>
-                                    <p class="info-description">Mobile: +91 921 456-7890</p>
-                                    <p class="info-description">Mail: buddyTrail@gmail.com</p>
-                                </div>
-                            </li>
-                            <li class="info-item">
-                                <div class="icon bg-blue-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                                        <path d="M12 7v5l3 3"></path>
-                                    </svg>
-                                </div>
-                                <div class="info-text-content">
-                                    <h3 class="wr">Working Hours</h3>
-                                    <p class="info-description">Monday - Friday: 08:00 - 17:00</p>
-                                    <p class="info-description">Saturday & Sunday: 08:00 - 12:00</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Contact</h3>
+                                <p>Mobile: +91 921 456-7890</p>
+                                <p>Mail: buddyTrail@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                    <path d="M12 7v5l3 3"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h3>Working Hours</h3>
+                                <p>Monday - Friday: 08:00 - 17:00</p>
+                                <p>Saturday & Sunday: 08:00 - 12:00</p>
+                            </div>
+                        </div>
+                        <div class="about-buddytrail">
+                            <h3>About BuddyTrail</h3>
+                            <p>At BuddyTrail, we're passionate about connecting adventurers and making every trail an unforgettable experience. Our platform is designed to help you discover new paths, meet like-minded explorers, and create lasting memories in the great outdoors.</p>
+                        </div>
                     </div>
-                    <div class="form-container">
-                        <h2 class="form-title">Ready to Get Started?</h2>
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
                         <form id="contactForm">
-                            <div class="input-group">
-                                <input type="text" id="name" placeholder="Your name" class="input-field">
-                                <input type="email" id="email" placeholder="Your email address" class="input-field">
-                                <textarea id="textarea" placeholder="Write your message..." class="input-field"></textarea>
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                             </div>
-                            <div class="submit-button-container">
-                                <button type="submit" class="submit-button">Send Message</button>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                             </div>
+                            <div class="form-group">
+                                <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+  
     
       <!-- Add this custom popup HTML -->
       <div id="confirmationPopup" class="popup" style="display: none;">
@@ -859,7 +907,9 @@
 
   <section id="testimonials" class="testimonials-section">
     <h1 class="testimonials-heading">Testimonials</h1>
+     
     <div class="testimonials-container">
+      <div class="header1"> 
       <figure class="snip1533">
         <figcaption>
           <blockquote>
@@ -869,7 +919,10 @@
           <h4>Traveller</h4>
         </figcaption>
       </figure>
+      </div>
+      <div class="header2"> 
       <figure class="snip1533">
+         
         <figcaption>
           <blockquote>
             <p>Finding the perfect travel group was so easy with Buddy Trail. Unforgettable trips, hassle-free planning!
@@ -879,7 +932,10 @@
           <h4>Traveller</h4>
         </figcaption>
       </figure>
+    </div>
+    <div class="header1"> 
       <figure class="snip1533">
+         
         <figcaption>
           <blockquote>
             <p>I found great travel buddies for my Europe trip! The platform is intuitive and made my adventure even
@@ -888,9 +944,10 @@
           <h3>Ingredia Nutrisha</h3>
           <h4>Traveller</h4>
         </figcaption>
-      </figure>
+      </figure></div>
     </div>
   </section>
+
 
   <section id="reviews" class="reviews-section">
     <div class="revieww" style="max-width: 800px; margin: 0 auto;">
@@ -935,8 +992,7 @@
       </div>
     </div>
   </section>
-  
-  
+
     <a href="chatbot.html">
       <div class="fixed bottom-0 right-2 chatbot-container">
         <button class="chatbot-button group">
@@ -968,7 +1024,7 @@
       <div class="footer-container">
           <div class="footer-column">
               <h3>About Us</h3>
-              <p>We are a team of passionate developers creating amazing web experiences.</p>
+              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
           </div>
           <div class="footer-column">
               <h3>Quick Links</h3>
