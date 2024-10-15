@@ -219,7 +219,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 1200px; /* Limit the width for better centering */
+  max-width: 1500px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
   margin: 0 0; /* Center the nav */
 }
@@ -231,9 +231,10 @@ nav {
 
 #nav-list {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  margin-left: 60px;
+  margin-left: 30px;
   padding: 0;
   align-items: center;
 }
@@ -243,7 +244,7 @@ nav {
   text-decoration: none;
   font-weight: 400;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .hamburger {
