@@ -229,6 +229,7 @@
       emoji: "🌤️",
       color: "black",
     };
+    
   </script>
 
 <script src="cursor.js" defer="defer"></script>
@@ -291,7 +292,8 @@
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
+      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
     </button>
   </nav>
 </header>
@@ -311,6 +313,33 @@
       navList.classList.remove("active");
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed'); // Simple test log
+            const modeToggle = document.getElementById('modeToggle');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+
+            // Additional code...
+            modeToggle.addEventListener('click', function() {
+    console.log('Toggle clicked'); // Log when the button is clicked
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        console.log('Switching to dark mode');
+        sunIcon.style.display = 'none';  // Hide sun icon
+        moonIcon.style.display = 'inline-block'; // Show moon icon
+        localStorage.setItem('theme', 'dark');
+    } else {
+        console.log('Switching to light mode');
+        sunIcon.style.display = 'inline-block';  // Show sun icon
+        moonIcon.style.display = 'none';   // Hide moon icon
+        localStorage.setItem('theme', 'light');
+    }
+});
+});
+  
 </script>
 
 
