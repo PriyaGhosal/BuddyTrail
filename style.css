@@ -28,7 +28,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 10px;
+  
 }
 
 nav a {
@@ -242,7 +242,7 @@ a{
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
   margin: 0 0; /* Center the nav */
@@ -250,17 +250,19 @@ nav {
 
 .logo {
   display: flex;
-  align-items: center;
+  margin-left: 34px;
+
 }
 
 #nav-list {
   display: flex;
-  gap: 5px;
+  gap: 1;
   list-style: none;
-  margin-left: 60px;
+  margin-left: 3px;
   padding: 0;
   align-items: center;
 }
+
 
 #nav-list li a {
   color: white;
