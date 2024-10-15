@@ -1,6 +1,5 @@
 <!-- START_STRUCTURE -->
 ```
-├── BuddyTrail
 ├── Code_of_Conduct.md
 ├── LICENSE
 ├── README.md
@@ -16,6 +15,10 @@
 ├── chatbot.js
 ├── contact.css
 ├── contact.html
+├── contributor
+│   ├── contributor.css
+│   ├── contributor.html
+│   └── contributor.js
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
