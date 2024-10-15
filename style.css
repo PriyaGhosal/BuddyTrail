@@ -9,21 +9,63 @@
 }
 .forum_1
 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: rgb(203, 229, 252);
 }
+ 
+.forum_1 h1{
+  font-size: 4.3rem;
+  margin: 20px;
+  padding: 18px;
+  color: rgb(1, 60, 124);
+  border-radius: 8px;
+}
+
 .hi
 {
+<<<<<<< HEAD
   background: #5b7484;
+=======
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 80vw;;
+>>>>>>> cd4578dce90ecfd93a0e8d463a863dbda337f2f4
     color: #ffffff;
-    padding: 10px 0;
+    padding: 50px;
     text-align: center;
+    margin: 20px 0px 60px;
+    border-radius: 8px;
 }
 nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
   list-style-type: none;
   padding: 0;
+}
+
+.hi ul li a{
+  background-color: #fff;
+  color: blue;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.35);
+}
+
+.hi ul li a:hover{
+  background-color: rgb(9, 9, 120);
+  color: white;
+  box-shadow: 4px 4px 14px whitesmoke;
 }
 
 nav ul li {
@@ -110,18 +152,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 97;
-  font-size: 20px;
-  color: black; 
-  transition: color 0.3s ease; 
-}
 
 .cloud {
   position: absolute;
@@ -150,7 +180,7 @@ body {
   background: #354a3e;; 
   transition: width 0.2s ease; 
 }
-
+ 
 .scroll-top-btn {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from the bottom of the viewport */
@@ -213,6 +243,12 @@ button {
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.4s ease;
+}
+#btn a {
+  color:white;
+}
+#btn{
+  background-color: gray;
 }
 #btn:hover {
   background-color: rgba(255,255,255,0.5);
@@ -501,18 +537,20 @@ nav {
   width: 90%;
   margin: auto;
   display: flex;
-  min-height: 70vh;
+  min-height: 90vh;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .card {
   text-align: center;
   flex: 1 1 25rem;
   min-height: 45vh;
-  margin: 2rem 5rem;
+  margin: 2rem 2rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  background: linear-gradient(135deg,#cab6df,#abc2e3);
+  border-radius: 20px;
+  width: 20pc;
 }
 
 .card:hover {
@@ -532,8 +570,10 @@ nav {
 }
 
 .card-icon {
-  background: #2a3c53;
+  border-radius: 10px;
+  background: #8b66b6;
   padding: 2rem;
+  height: 7pc;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -894,7 +934,7 @@ textarea:focus{
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #343a40, #212529);
+    background-color:#232323; 
     color: #ffffff;
     text-align: center;
 }
@@ -914,6 +954,9 @@ footer {
     margin: 10px;
 }
 
+.footer-column p{
+  color:white;
+}
 
 .footer-column a {
   font-size: 16px;
@@ -2374,4 +2417,94 @@ body.light-mode {
   100%{
     transform: translateY(0px);
   }
+}
+
+/* General Body Style */
+#reviews {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8d9f1; /* Light purple background */
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.review-form h2 {
+  color: #5e2b9f; /* Deep purple for title */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-p {
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #5e2b9f; /* Purple color for labels */
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #d1c4e9; /* Light purple border */
+  border-radius: 5px;
+  background-color: white; /* White background for input fields */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
+  outline: none;
+  background-color: #f3e5f5; /* Light purple background on focus */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.form-button button {
+  padding: 12px 20px;
+  background-color: #5e2b9f; /* Deep purple background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #4b1a79; /* Darker purple on hover */
+}
+
+/* Thank You Message */
+#thankYouMessage p {
+  color: #333;
+  font-size: 16px;
 }

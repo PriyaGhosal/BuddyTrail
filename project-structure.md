@@ -14,6 +14,8 @@
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
+├── contact.css
+├── contact.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -57,6 +59,7 @@
 ├── reviews.html
 ├── script.js
 ├── star-rating.js
-└── style.css
+├── style.css
+└── team.html
 ```
 <!-- END_STRUCTURE -->

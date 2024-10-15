@@ -223,14 +223,7 @@
 
   <script src="script.js"></script>
  
-  <div id="cursor"></div>
-  <script>
-    window.cursor={
-      emoji: "🌤️",
-      color: "black",
-    };
-    
-  </script>
+  
 
 <script src="cursor.js" defer="defer"></script>
   
@@ -279,12 +272,13 @@
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
       <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
       <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
       <li><a href="#benefits" class="navhover">Benefits</a></li>
       <li><a href="about.html" class="navhover">About</a></li>
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
       
-      <li><a href="#contact" class="navhover">Contact</a></li>
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
      
@@ -325,17 +319,38 @@
     console.log('Toggle clicked'); // Log when the button is clicked
     document.body.classList.toggle('dark-mode');
     document.body.classList.toggle('light-mode');
+    const darkelem = document.querySelectorAll('#darkbtn');
+    const h1dark = document.querySelectorAll('#h1darkbtn');
+    const cardbtn = document.querySelectorAll('#btn a');
     
     if (document.body.classList.contains('dark-mode')) {
         console.log('Switching to dark mode');
         sunIcon.style.display = 'none';  // Hide sun icon
         moonIcon.style.display = 'inline-block'; // Show moon icon
         localStorage.setItem('theme', 'dark');
-    } else {
+        darkelem.forEach((elem) =>{
+          elem.style.color = 'white';
+        })
+        cardbtn.forEach((elem) =>{
+          elem.style.color = 'white';
+        })
+        h1dark.forEach((darkbtn) =>{
+          darkbtn.style.color='#FFA500'
+        })
+      } else {
         console.log('Switching to light mode');
         sunIcon.style.display = 'inline-block';  // Show sun icon
         moonIcon.style.display = 'none';   // Hide moon icon
         localStorage.setItem('theme', 'light');
+        darkelem.forEach((elem) =>{
+          elem.style.color = 'gray';
+        }) 
+        h1dark.forEach((darkbtn) =>{
+          darkbtn.style.color='#0057B3'
+        })
+        cardbtn.forEach((elem) =>{
+          elem.style.color = 'black';
+        })
     }
 });
 });
@@ -381,7 +396,7 @@
           and destination
         </h3>
       </header>
-      <div class="cards">
+      <div class="cards" style="height: 384px;">
         <div class="card">
           <div class="header1">
           <div class="card-icon">
@@ -396,13 +411,13 @@
           <button id="btn"><a href="travel.html "> Explore more</a></button></div>
         </div>
         
-        <div class="card" style="height: 384px;" >
-          <div class="header2">
-          <div class="card-icon" style="height: 72px;">
+        <div class="card">
+          <div class="header1">
+          <div class="card-icon">
             <img  src="./icons/bed-solid.svg" />
           </div >
-          <h4  >Hotel</h4>
-          <p >
+          <h4 >Hotel</h4>
+          <p>
             We've handpicked top-rated options that offer exceptional value.
             Book your perfect stay today and enjoy premium accommodations
             without the premium price tag!
@@ -599,8 +614,8 @@
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section">
-      <h2>Travel Itineraries</h2>
-      <p>
+      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
         family vacation, a solo adventure, or a romantic getaway, we’ve got
@@ -705,7 +720,7 @@
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
-      <h2>Personalized Recommendations</h2>
+      <h2 id="h1darkbtn">Personalized Recommendations</h2>
       <p>
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
@@ -715,7 +730,7 @@
         <!-- Example Recommendation -->
         <div class="recommendation-item">
           <div class="header1"> 
-          <h3>Beach Resort in Goa</h3>
+          <h3 id="h1darkbtn">Beach Resort in Goa</h3>
           <p>
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
@@ -727,7 +742,7 @@
 
         <div class="recommendation-item">
           <div class="header2"> 
-          <h3>Cultural Tour in Rajasthan</h3>
+          <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
           <p>
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
@@ -739,7 +754,7 @@
 
         <div class="recommendation-item">
           <div class="header1"> 
-          <h3>Adventure Trek in Himachal</h3>
+          <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
           <p>
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
@@ -773,7 +788,7 @@
     <script src="script.js"></script>
     <!--forum Section-->
     <header class="forum_1">
-      <h1>Travel Discussion Forum</h1>
+      <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
               <li><a href="#destinations">Destinations</a></li>
@@ -927,7 +942,7 @@
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h1 class="testimonials-heading">Testimonials</h1>
+    <h2 class="testimonials-heading" >Testimonials</h2>
      
     <div class="testimonials-container">
       <div class="header1"> 
@@ -973,7 +988,7 @@
   <section id="reviews" class="reviews-section">
     <div class="revieww">
       <div class="review-form">
-        <h2>Rate your experience</h2>
+        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
           Read what others have to say about their experiences with various
           destinations, hotels, flights, and activities. Share your own reviews
@@ -982,13 +997,13 @@
 
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
-            <label for="name">Your Name:</label>
+            <label for="name" id="darkbtn">Your Name:</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="destination">Destination/Service:</label>
+            <label for="destination" id="darkbtn">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
 
-            <label for="rating">Rating:</label>
+            <label for="rating" id="darkbtn">Rating:</label>
             <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -997,9 +1012,9 @@
               <option value="1">⭐</option>
             </select>
 
-            <label for="review">Your Review:</label>
+            <label for="review" id="darkbtn">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
-            <label for="complaint">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
 
@@ -1047,12 +1062,12 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
 
-  <footer>
-    <div class="footer-container">
+  <footer id="footer">
+    <div class="footer-container" id="footer">
       <div class="footer-column">
         
 
-    <footer>
+    <footer id="footer">
       <div class="footer-container">
           <div class="footer-column">
               <h3>About Us</h3>
@@ -1065,6 +1080,8 @@
                   <li><a href="#">About</a></li>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">Contact</a></li>
+                  <li><a href="team.html">Team</a></li>
+
               </ul>
           </div>
           <div class="footer-column">
