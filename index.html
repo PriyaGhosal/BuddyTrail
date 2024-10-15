@@ -982,7 +982,9 @@
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn">Your Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" required required pattern="[a-zA-Z ]+"
+            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+            oninput="this.setCustomValidity('')"/>
 
             <label for="destination" id="darkbtn">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
