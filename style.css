@@ -39,12 +39,26 @@ nav a {
 main {
   padding: 20px;
 }
+#destinations{
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#destinations h2{
+  font-size: 4rem;
+}
+
+.post-container h3{
+  text-align: start;
+  font-size: 3.5rem;
+}
+
 
 .post-container {
   background: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 textarea {
