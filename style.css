@@ -41,7 +41,7 @@ main {
 }
 #destinations{
   text-align: center;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #destinations h2{
@@ -50,7 +50,7 @@ main {
 
 .post-container h3{
   text-align: start;
-  font-size: 3.5rem;
+  font-size: 3.7rem;
 }
 
 
