@@ -220,7 +220,7 @@ a{
 /**** MAIN PAGE  ****/
 /* Header Styles */
 .main-head {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
