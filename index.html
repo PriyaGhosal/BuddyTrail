@@ -760,17 +760,92 @@
     </html>
 
   <main>
-      <section id="destinations">
-          <h2>Destination Guides</h2>
-          <div class="post-container">
-              <h3>Share Your Experiences</h3>
-              <form id="postForm">
-                  <textarea id="postContent" placeholder="Write your post here..." required></textarea>
-                  <button type="submit">Submit</button>
-              </form>
-              <div id="posts"></div>
-          </div>
-      </section>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            #destinations {
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 2rem;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            h2, h3 {
+                color: #333;
+                text-align: center;
+            }
+            .post-container {
+                margin-top: 2rem;
+            }
+            #postForm {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            #postContent {
+                width: 100%;
+                height: 150px;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                resize: vertical;
+            }
+            button {
+                padding: 0.75rem 1.5rem;
+                background-color: #007bff;
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #posts {
+                margin-top: 2rem;
+            }
+            .post {
+                background-color: #f9f9f9;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="destinations">
+            <h2>Destination Guides</h2>
+            <div class="post-container">
+                <h3>Share Your Experiences</h3>
+                <form id="postForm">
+                    <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="posts"></div>
+            </div>
+        </section>
+    
+        <script>
+            document.getElementById('postForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var content = document.getElementById('postContent').value;
+                if (content) {
+                    var postElement = document.createElement('div');
+                    postElement.className = 'post';
+                    postElement.textContent = content;
+                    document.getElementById('posts').prepend(postElement);
+                    document.getElementById('postContent').value = '';
+                }
+            });
+        </script>
 
       <!-- Add more sections for other categories -->
   </main>
