@@ -187,7 +187,7 @@ button {
 /**** MAIN PAGE  ****/
 /* Header Styles */
 .main-head {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -247,7 +247,7 @@ nav {
 }
 
 .mode-toggle {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   border: none;
@@ -324,8 +324,8 @@ nav {
 }
 
 .hero button {
-  border-radius: 1rem;
- 
+    border-radius: 1rem;
+    
     padding: 1.5rem 4rem;
     background: #4c6e97;
     border: none;
