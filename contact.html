@@ -6,35 +6,40 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="./contact.css">
     <link rel="icon" href="../favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="contain">
-              <div class="left">
-                <a id="text" href="./index.html"><img src="./img/logo.png" id="logo" alt="">BuddyTrail</a>
-              </div>
-              <div class="right">
-                <a href="./index.html">
-                  <i class="fa-solid fa-house"></i>
-                </a>
-              </div>
-            </div>
-          </nav>
-    </header>
     <div class="container">
-        <form>
-            <h1>Contact Us </h1>
-            <input type="text" id="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" placeholder="Last Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="mobile" placeholder="Mobile" required>
-
-            <h4>Type Your Message Here</h4>
-            <textarea></textarea>
-            <input type="submit" value="Send" id="button">
+        <form id="contactForm">
+            <h1>Contact Us</h1>
+            <div class="input-group">
+                <input type="text" id="firstName" required>
+                <label for="firstName">First Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" id="lastName" required>
+                <label for="lastName">Last Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="mobile" required>
+                <label for="mobile">Mobile</label>
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="input-group">
+                <textarea id="message" required></textarea>
+                <label for="message">Type Your Message Here</label>
+                <i class="fas fa-comment-alt"></i>
+            </div>
+            <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
         </form>
     </div>
+    <script src="./contact.js"></script>
 </body>
 </html>
