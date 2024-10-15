@@ -46,6 +46,7 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
+├── moon.png
 ├── package-lock.json
 ├── project-structure.md
 ├── project_structure.txt
