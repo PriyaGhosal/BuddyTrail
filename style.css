@@ -175,16 +175,23 @@ p {
 
 button {
   padding: 2rem 6rem;
-  background: #4c6e97;
+  background: rgba(255,255,255,0.15);
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: background 0.6s ease-in-out;
+  transition: all 0.4s ease;
 }
 #btn:hover {
-  background-color: rgb(1, 20, 27);
-  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
+  background-color: rgba(255,255,255,0.5);
+  transform: scale(0.95);
+}
+#btn:hover a{
+  color: black;
+  font-weight: 600;
+}
+a{
+  transition: all 0.4s ease;
 }
 /**** MAIN PAGE  ****/
 /* Header Styles */
@@ -329,12 +336,12 @@ nav {
   border-radius: 1rem;
  
     padding: 1.5rem 4rem;
-    background: #4c6e97;
+    background: rgba(255,255,255,0.15);
     border: none;
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: background 0.6s ease-in-out;
+    transition: all 0.4s ease;
 
 }
 
