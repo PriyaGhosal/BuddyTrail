@@ -59,6 +59,7 @@
 ├── reviews.html
 ├── script.js
 ├── star-rating.js
-└── style.css
+├── style.css
+└── team.html
 ```
 <!-- END_STRUCTURE -->
