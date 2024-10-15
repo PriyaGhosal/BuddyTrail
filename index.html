@@ -163,6 +163,63 @@
       .card:hover {
         cursor: pointer;
       }
+
+      /* Existing CSS */
+      .main-head {
+        background-color: #313131; /* Background color for the navbar */
+        padding: 10px 20px; /* Padding for the navbar */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        display: flex;
+        justify-content: space-between; /* Space between logo and nav items */
+        align-items: center; /* Center items vertically */
+      }
+
+      #nav-list {
+        list-style: none; /* Remove default list styling */
+        display: flex; /* Flexbox for horizontal layout */
+        gap: 10px; /* Space between nav items */
+      }
+
+      #nav-list li a {
+        text-decoration: none; /* Remove underline from links */
+        color: #ffffff; /* Text color */
+        font-weight: 500; /* Font weight for links */
+        transition: color 0.3s; /* Smooth color transition */
+      }
+
+      #nav-list li a:hover {
+        color: #007bff; /* Change color on hover */
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        #nav-list {
+          flex-direction: column; /* Stack items vertically */
+          position: absolute; /* Positioning for dropdown */
+          top: 60px; /* Position below the navbar */
+          left: 0; /* Align to the left */
+          background-color: #fff; /* Background color for dropdown */
+          width: 100%; /* Full width */
+          display: none; /* Hide by default */
+          z-index: 1000; /* Ensure it appears above other elements */
+        }
+
+        #nav-list.active {
+          display: flex; /* Show when active */
+        }
+
+        .hamburger {
+          display: block; /* Show hamburger button */
+        }
+      }
+
+      .hamburger {
+        display: none; /* Hide by default */
+        background: none; /* No background */
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor */
+        font-size: 24px; /* Size of the hamburger icon */
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -265,36 +322,34 @@
 
     <script src="script.js"></script>
     <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-    </div>
+      <nav>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web">
+          <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+        </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
+        <!-- Removed Hamburger button for mobile -->
+        <!-- <button class="hamburger" id="hamburger">☰</button> -->
 
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="#contact" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
+        <ul id="nav-list">
+          <!-- Close button for dropdown -->
+          <span class="dropdown-close-btn" id="closeBtn">×</span>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+          <li><a href="#contact" class="navhover">Contact</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
 
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
-    </button>
-  </nav>
-</header>
+        <!-- Removed Toggle Button -->
+        <!-- <button class="mode-toggle" id="modeToggle"> -->
+        <!--   <span class="sun-icon glow"><img src="day-mode.png"></span> -->
+        <!-- </button> -->
+      </nav>
+    </header>
 
 <!-- JS to handle hamburger and close button -->
 <script>

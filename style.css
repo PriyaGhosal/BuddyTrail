@@ -192,15 +192,13 @@ button {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 15px;
+  padding: 5px 10px; /* Reduced padding for a slimmer navbar */
   height: 90px;
-  background-color: rgba(0, 0, 0, 0.7);
-  /*background-color: transparent;*/
-  color: white;
+  background-color: #fff; /* Background color for the navbar */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   display: flex;
-  justify-content: flex-start; /* Keep header centered */
-  align-items: center;
-  transition: background-color 0.3s ease;
+  justify-content: space-between; /* Space between logo and nav items */
+  align-items: center; /* Center items vertically */
 }
 .main-head.shadow {
   background-color: #000;
@@ -221,20 +219,28 @@ nav {
 }
 
 #nav-list {
-  display: flex;
-  gap: 5px;
-  list-style: none;
-  margin-left: 60px;
-  padding: 0;
-  align-items: center;
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 10px; /* Space between nav items */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+}
+
+#nav-list li {
+  white-space: nowrap; /* Prevent text from wrapping within list items */
 }
 
 #nav-list li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  white-space: nowrap;
-  font-size: 20px;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color */
+  font-weight: 500; /* Font weight for links */
+  transition: color 0.3s; /* Smooth color transition */
+  padding: 5px 10px; /* Added padding for better click area */
+  border-radius: 5px; /* Rounded corners for links */
+}
+
+#nav-list li a:hover {
+  color: #007bff; /* Change color on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Light background on hover */
 }
 
 .hamburger {
@@ -265,36 +271,32 @@ nav {
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show hamburger on small screens */
-  }
-
   #nav-list {
-    display: none; /* Hide menu initially */
-    position: absolute;
-    top: 100%; /* Position dropdown below header */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Positioning for dropdown */
+    top: 50px; /* Position below the navbar */
+    left: 0; /* Align to the left */
+    background-color: #fff; /* Background color for dropdown */
+    width: 100%; /* Full width */
+    display: none; /* Hide by default */
+    z-index: 1000; /* Ensure it appears above other elements */
   }
 
   #nav-list.active {
-    display: flex; /* Show menu when active */
+    display: flex; /* Show when active */
   }
 
-  /* Close button styles */
-  .dropdown-close-btn  {
-    display: block; /* Visible only in the dropdown menu */
-    align-self: flex-end;
-    margin-right: 20px;
-    color: white;
-    font-size: 2em;
-    padding: 5px;
-    cursor: pointer;
+  .hamburger {
+    display: block; /* Show hamburger button */
   }
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 24px; /* Size of the hamburger icon */
 }
 
 /* Hide the close button on larger screens (revised) */
