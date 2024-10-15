@@ -198,7 +198,7 @@ button {
   padding: 15px;
 
   background-color: rgba(128, 128, 128, 0.7); /* Grey with 70% opacity added */
-
+=======
 
  
   color: white;
@@ -1059,7 +1059,7 @@ body.dark-mode {
   .booking-container h2 {
     color: #f1f1f1; /* Lighter text color for readability */
   }
-
+}
 @media (max-width: 768px) {
   .itinerary {
     flex: 1 1 calc(45% - 20px);
@@ -2053,6 +2053,8 @@ justify-content: center;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .review-form h2 {
   color: #5e2b9f; /* Deep purple for title */
