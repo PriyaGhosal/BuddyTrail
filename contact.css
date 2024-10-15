@@ -95,7 +95,7 @@ textarea::-webkit-scrollbar {
 }
 
 textarea::-webkit-scrollbar-thumb {
-    background-color: rgba(213, 234, 16, 0.7);
+    background-color: rgba(194, 194, 0, 0.7);
 }
 
 .container form #button {
@@ -105,7 +105,7 @@ textarea::-webkit-scrollbar-thumb {
     margin-top: 20px;
     font-weight: 600;
     font-size: 20px;
-    color: #1f1e1e;
+    color: #333;
     width: 100px;
     padding: 6px;
     transition: opacity 0.3s;
