@@ -492,18 +492,20 @@ nav {
   width: 90%;
   margin: auto;
   display: flex;
-  min-height: 70vh;
+  min-height: 90vh;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .card {
   text-align: center;
   flex: 1 1 25rem;
   min-height: 45vh;
-  margin: 2rem 5rem;
+  margin: 2rem 2rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  background: linear-gradient(135deg,#cab6df,#abc2e3);
+  border-radius: 20px;
+  width: 20pc;
 }
 
 .card:hover {
@@ -523,8 +525,10 @@ nav {
 }
 
 .card-icon {
-  background: #2a3c53;
+  border-radius: 10px;
+  background: #8b66b6;
   padding: 2rem;
+  height: 7pc;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
