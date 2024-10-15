@@ -1,52 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/icons/airplane.svg" />
-    <title>BuddyTrail</title>
-  </head>
-  <body>
-    <header class="main-head">
-      <nav>
-        <h1 id="logo">BuddyTrail</h1>
-        <ul>
-          <li><a href="#locations">Location</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-   <main>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="/BuddyTrail/icons/airplane.svg" />
+
+  <title>Got Lost! Page Not Found</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+
+  }
+
+  html::-webkit-scrollbar {
+    width: .8rem;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    ;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #420177;
+  }
+
+  body {
+    overflow-x: hidden;
+
+  }
+
+  /* 404 section start */
+  .page_404 {
+    padding: 40px 0;
+    background: rgb(255, 255, 255);
+    margin-top: 6rem;
+    min-height: 60vh;
+  }
+
+  .wrapper {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+  }
+
+  .msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .msg h3 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .msg p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .wrapper h1 {
+    font-size: 80px;
+    text-align: center;
+  }
+  body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background: rgb(52, 56, 60);
+      color: white;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      max-width: 364px;
+      padding: 24px;
+      background: white;
+      color: rgb(14, 30, 37);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+    }
+
+    a {
+      margin: 0;
+      font-weight: 600;
+      line-height: 24px;
+      color: #054861;
+    }
+
+    a svg {
+      position: relative;
+      top: 2px;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    a:hover svg path {
+      fill: #007067;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  /* back button */
+  .backbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .backbtn .btn {
+    position: relative;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: .5em;
+    transition: 0.5s;
+    color: #fff;
+    background: #2506ad;
+    box-shadow: 0px 5px 10px rgba(48, 68, 247, .6);
+    text-align: center;
+  }
+
+  .backbtn .btn span {
+    font-weight: 600;
+    font-size: 1.7rem;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .backbtn .btn i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+
+  .backbtn .btn:hover {
+    background: #1a047e;
+  }
+
+  .backbtn .btn:hover i {
+    transform: translateX(-8px);
+  }
+
+  /* 404 section end */
+
+  /* Media query */
+
+  @media (max-width: 980px) {
+
+    /* footer */
+    .section-footer .grid-three-column {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* below 790px */
+
+  @media(max-width: 49em) {
+    .container {
+      max-width: 71rem;
+    }
+  }
+
+
+  /* below 560px */
+  @media (max-width: 35em) {
+    .container {
+      max-width: 70rem;
+    }
+
+    /* footer section */
+    .section-footer .f-about,
+    .section-footer .f-address {
+      grid-column: 1/-1;
+    }
+  
+  }
     
-   </main>
-    <footer>
-      <div class="footer-wrapper">
-        <h5>BuddyTrail &copy;</h5>
-        <ul>
-          <li>
-            <a href="#"><img src="icons/twitter.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/instagram.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/youtube.svg" /></a>
-          </li>
-        </ul>
+  </style>
+</head>
+
+
+
+
+<body>
+  <header class="main-head">
+    <nav>
+      <div class="logo">
+        <img src="/BuddyTrail/img/logo.png" id="logo-web">
+        <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
       </div>
-    </footer>
-  </body>
-</html>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+
+      <ul id="nav-list">
+        <!-- Close button for dropdown -->
+        <span class="dropdown-close-btn" id="closeBtn">×</span>
+        <li><a href="index.html" class="navhover">Home</a></li>
+        <li><a href="index.html" class="navhover">Location</a></li>
+        <li><a href="index.html" class="navhover">Benefits</a></li>
+        <li><a href="about.html" target="_blank" class="navhover">About</a></li>
+        <li><a href="index.html" class="navhover">Travel Itineraries</a></li>
+
+        <li><a href="index.html" class="navhover">Contact</a></li>
+        <li><a href="index.html" class="navhover">Reviews</a></li>
+        <li><a href="auth.html" class="navhover">Sign In</a></li>
+
+      </ul>
+
+      <!-- Toggle Button -->
+      <button class="mode-toggle" id="modeToggle">
+        <span class="sun-icon glow"><img src="day-mode.png"></span>
+      </button>
+    </nav>
+  </header>
+
+
+  <main style="background-color: red;">
+    <!-- ==========================================================
+    404 Section Start
+    ========================================================== -->
+
+    <section class="page_404">
+      <div class="container">
+        <div class="wrapper">
+          <h1 class="text-center ">404</h1>
+        </div>
+
+        <div class="msg">
+          <h3>Look like you're lost</h3>
+          <p>the page you are looking for not available!</p>
+
+          <div class="backbtn">
+            <a href="index.html" class="btn">
+              <i class="fas fa-arrow-left"></i>
+              <span>Back to Home</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer>
+    <div class="section section-footer">
+      <div class="f-container grid grid-three-column">
+        <div class="f-about">
+          <h3>About Us</h3>
+          <p>
+            We are a team of passionate developers creating amazing web experiences.
+          </p>
+        </div>
+        <!-- end -->
+
+        <div class="f-links">
+          <h3>Quick links</h3>
+          <ul>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- end -->
+        <div class="f-address">
+          <h3>Contact Us</h3>
+          <address>
+            <div>
+              <p>
+                <span><ion-icon name="call-outline"></ion-icon></span>
+                <a href="tel:+918937063925">+123 456 7890</a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span><ion-icon name="mail-outline"></ion-icon></span>
+                <a href="mailto:info@example.com">info@example.com</a>
+              </p>
+            </div>
+          </address>
+        </div>
+      </div>
+
+      <div class="f-container">
+        <div class="f-social-icons">
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank">
+            <ion-icon class="icons icon-twit" name="logo-twitter"></ion-icon>
+          </a>
+
+          <a href="https://www.facebook.com/login/" target="_blank">
+            <ion-icon class="icons icon-facebook" name="logo-facebook"></ion-icon>
+          </a>
+
+          <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank">
+            <ion-icon class="icons icon-github" name="logo-github"></ion-icon>
+          </a>
+
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank">
+            <ion-icon class="icons icon-link" name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+
+        <div class="f-credits">
+          <p>
+            Copyright © 2024 Buddy Trail. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    (function () {
+      if (document.referrer && document.location.host && document.referrer.match(new RegExp("^https?://" + document.location.host))) {
+        document.getElementById("back-link").setAttribute("href", document.referrer);
+      }
+    })();
+  </script>
+
+
+
+
+
+
+
+  <!-- ================================================
+    Links
+================================================ -->
+
+  <link rel="shortcut icon" href="images/FavIcon/Fav/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font-Awesome Link-->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Link-->
+
+
+</body>
+
+
+
+
+
