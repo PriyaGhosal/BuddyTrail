@@ -60,7 +60,7 @@
 }
 
 .rating > label {
-    color: #ddd; /* Empty stars initially */
+    color: #ecef94; /* Empty stars initially */
     float: right;
     cursor: pointer;
 }
@@ -79,5 +79,5 @@
 
 .rating > label:hover ~ label,
 .rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
+    color:rgb(247, 174, 5); /* Green hover effect */
 }
