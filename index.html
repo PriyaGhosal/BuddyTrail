@@ -24,7 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link rel="stylesheet" href="chatbot.css">
     <title>BuddyTrail</title>
     <style>
       * {
@@ -169,10 +169,10 @@
   <body class="light-mode">
 
     <!-- Google Translate Button -->
-    <div class="translate-container">
+    <!-- <div class="translate-container">
       <button class="language-toggle" id="languageToggle">🌐</button>
       <div id="google_translate_element"></div>
-    </div>
+    </div> -->
 
     <script>
       // Initialization function
@@ -223,13 +223,7 @@
 
   <script src="script.js"></script>
  
-  <div id="cursor"></div>
-  <script>
-    window.cursor={
-      emoji: "🌤️",
-      color: "black",
-    };
-  </script>
+  
 
 <script src="cursor.js" defer="defer"></script>
   
@@ -248,7 +242,105 @@
   </script>
   <main>
     <section class="hero" id="home">
-      <h2>Travel Beyond Limits</h2>
+
+      <header class="main-head">
+        <nav>
+          <div class="logo">
+            <img src="img/logo.png" id="logo-web">
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+          </div>
+  
+          <!-- Hamburger button for mobile -->
+          <button class="hamburger" id="hamburger">☰</button>
+  
+          
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="#home" class="navhover">Home</a></li>
+            <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+            <li><a href="./img/contact.html" class="navhover">Contact</a></li>
+            <li><a href="#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+          </ul>
+  
+        
+        <!-- Toggle Button -->
+    <div class="mode-toggle" id="modeToggle">
+      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+      <span class="moon-icon glow" style="display: none;"><img src="crescent-moon.png" alt="Dark mode"></span>
+    </div>
+  
+      </nav>
+      </header>
+    
+    <!-- JS to handle hamburger and close button -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+    const closeBtn = document.getElementById("closeBtn");
+  
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+  
+    closeBtn.addEventListener("click", function () {
+      navList.classList.remove("active");
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed'); // Simple test log
+            const modeToggle = document.getElementById('modeToggle');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+  
+            // Additional code...
+            modeToggle.addEventListener('click', function() {
+    console.log('Toggle clicked'); // Log when the button is clicked
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        console.log('Switching to dark mode');
+        sunIcon.style.display = 'none';  // Hide sun icon
+        moonIcon.style.display = 'inline-block'; // Show moon icon
+        localStorage.setItem('theme', 'dark');
+    } else {
+        console.log('Switching to light mode');
+        sunIcon.style.display = 'inline-block';  // Show sun icon
+        moonIcon.style.display = 'none';   // Hide moon icon
+        localStorage.setItem('theme', 'light');
+    }
+  });
+  });
+  
+  </script>
+  
+  <div id="progress-bar"></div>
+    <!-- funcioning of progress bar -->
+    <script>
+      window.addEventListener("scroll", function () {
+        // Calculate the scroll progress
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+        // Update the width of the progress bar
+        document.getElementById("progress-bar").style.width =
+          scrollPercent + "%";
+      });
+    </script>
+
+  
+      <div class="header1"><h2>Travel Beyond Limits</h2></div>
       <h3>
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
@@ -263,78 +355,14 @@
     
     </script>
 
-    <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-    </div>
-
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
-
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="#contact" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png"></span>
-    </button>
-  </nav>
-</header>
-
-<!-- JS to handle hamburger and close button -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.getElementById("nav-list");
-    const closeBtn = document.getElementById("closeBtn");
-
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-
-    closeBtn.addEventListener("click", function () {
-      navList.classList.remove("active");
-    });
-  });
-</script>
-
-
-
-    <div id="progress-bar"></div>
-    <!-- funcioning of progress bar -->
-    <script>
-      window.addEventListener("scroll", function () {
-        // Calculate the scroll progress
-        const scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-
-        // Update the width of the progress bar
-        document.getElementById("progress-bar").style.width =
-          scrollPercent + "%";
-      });
-    </script>
+    <script src="script.js"></script
+    
     <main>
       <section class="hero">
-        <h2>Travel Beyond Limits</h2>
+
+        <div class="header1"><h2>Travel Beyond Limits</h2></div> 
+
+  
 
         <h3>
           We handle everything, from finding the ideal travel buddy to
@@ -354,6 +382,7 @@
       </header>
       <div class="cards">
         <div class="card">
+          <div class="header1">
           <div class="card-icon">
             <img src="/icons/route-solid.svg" />
           </div>
@@ -363,21 +392,25 @@
             serene mountains to sunny beaches, find your next adventure
             without breaking the bank. Start exploring now!
           </p>
-          <button id="btn"><a href="travel.html "> Explore more</a></button>
+          <button id="btn"><a href="travel.html "> Explore more</a></button></div>
         </div>
-        <div class="card">
-          <div class="card-icon">
-            <img src="./icons/bed-solid.svg" />
+        
+        <div class="card" style="height: 384px;" >
+          <div class="header2">
+          <div class="card-icon" style="height: 72px;">
+            <img  src="./icons/bed-solid.svg" />
           </div >
-          <h4>Hotel</h4>
-          <p>
+          <h4  >Hotel</h4>
+          <p >
             We've handpicked top-rated options that offer exceptional value.
             Book your perfect stay today and enjoy premium accommodations
             without the premium price tag!
           </p>
-          <button id="btn"><a href="hotel.html ">See Hotels</a></button>
+          <button id="btn" style="margin-bottom: 1px;"><a href="hotel.html ">See Hotels</a></button></div>
         </div>
+        
         <div class="card">
+          <div class="header1">
           <div class="card-icon">
             <img src="/icons/plane-departure-solid.svg" />
           </div>
@@ -387,7 +420,7 @@
             the best flight deals, combining comfort and affordability for
             perfect journey. Book now and take off for less!
           </p>
-          <button id="btn"><a href="fly.html ">See Flights</a></button>
+          <button id="btn"><a href="fly.html ">See Flights</a></button></div>
         </div>
       </div>
     </section>
@@ -399,60 +432,69 @@
         <div class="carousel">
           <div class="carousel-inner">
             <!-- Deal 1: Flight Offer -->
+            
             <div class="deal-item">
+              <div class="header1">
               <h3>Flight to Dubai</h3>
               <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
               <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 2: Hotel Offer -->
-            <div class="deal-item">
+            
+            <div class="deal-item" style="height: 311.6px;width: 266.66px;">
+              <div class="header2"> 
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 3: Travel Package -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Kerala Backwaters Package</h3>
               <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
               <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
+              <div class="header2"> 
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
       
             <!-- Deal 5: Adventure Trip -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Adventure in Bali</h3>
               <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
               <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
+              <div class="header2"> 
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
 
             <!-- Deal 7: Wildlife Safari in Kenya -->
             <div class="deal-item">
+              <div class="header1"> 
               <h3>Wildlife Safari in Kenya</h3>
               <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
               <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
               <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div>
+            </div></div>
           </div>
           <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
           <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -556,8 +598,8 @@
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section">
-      <h2>Travel Itineraries</h2>
-      <p>
+      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
         family vacation, a solo adventure, or a romantic getaway, we’ve got
@@ -565,7 +607,9 @@
       </p>
 
       <div class="itinerary-list">
+         
         <div class="itinerary">
+          <div class="header1"> 
           <h3>Family Vacation</h3>
           <p>
             Explore the best family-friendly destinations with day-by-day
@@ -573,17 +617,19 @@
             ages.
           </p>
           <button>View Itinerary</button>
-        </div>
+        </div></div>
 
         <div class="itinerary">
+          <div class="header2"> 
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
           <button>View Itinerary</button>
-        </div>
+        </div></div>
         <div class="itinerary">
+          <div class="header1"> 
           <h3>Romantic Getaway</h3>
           <p>
             Plan the perfect romantic escape with itineraries that include
@@ -658,7 +704,7 @@
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
-      <h2>Personalized Recommendations</h2>
+      <h2 id="h1darkbtn">Personalized Recommendations</h2>
       <p>
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
@@ -667,7 +713,8 @@
       <div class="recommendation-list">
         <!-- Example Recommendation -->
         <div class="recommendation-item">
-          <h3>Beach Resort in Goa</h3>
+          <div class="header1"> 
+          <h3 id="h1darkbtn">Beach Resort in Goa</h3>
           <p>
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
@@ -675,10 +722,11 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
 
         <div class="recommendation-item">
-          <h3>Cultural Tour in Rajasthan</h3>
+          <div class="header2"> 
+          <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
           <p>
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
@@ -686,10 +734,11 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
 
         <div class="recommendation-item">
-          <h3>Adventure Trek in Himachal</h3>
+          <div class="header1"> 
+          <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
           <p>
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
@@ -697,12 +746,33 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div>
+        </div></div>
       </div>
     </section>
+    <!--posts section-->
+    <header class="posts_blog">
+      <h1>POSTS AND VLOGS</h1>
+    </header>
+  
+    <main class="main_blogs">
+      <section id="upload">
+        <h2>Upload Content</h2>
+        <form id="upload-form">
+          <input type="file" id="file-input">
+          <button type="submit">Upload</button>
+        </form>
+      </section>
+  
+      <section id="content">
+        <h2>Content</h2>
+        <ul id="content-list"></ul>
+      </section>
+    </main>
+  
+    <script src="script.js"></script>
     <!--forum Section-->
     <header class="forum_1">
-      <h1>Travel Discussion Forum</h1>
+      <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
               <li><a href="#destinations">Destinations</a></li>
@@ -856,8 +926,10 @@
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h1 class="testimonials-heading">Testimonials</h1>
+    <h2 class="testimonials-heading" >Testimonials</h2>
+     
     <div class="testimonials-container">
+      <div class="header1"> 
       <figure class="snip1533">
         <figcaption>
           <blockquote>
@@ -867,7 +939,10 @@
           <h4>Traveller</h4>
         </figcaption>
       </figure>
+      </div>
+      <div class="header2"> 
       <figure class="snip1533">
+         
         <figcaption>
           <blockquote>
             <p>Finding the perfect travel group was so easy with Buddy Trail. Unforgettable trips, hassle-free planning!
@@ -877,7 +952,10 @@
           <h4>Traveller</h4>
         </figcaption>
       </figure>
+    </div>
+    <div class="header1"> 
       <figure class="snip1533">
+         
         <figcaption>
           <blockquote>
             <p>I found great travel buddies for my Europe trip! The platform is intuitive and made my adventure even
@@ -886,7 +964,7 @@
           <h3>Ingredia Nutrisha</h3>
           <h4>Traveller</h4>
         </figcaption>
-      </figure>
+      </figure></div>
     </div>
   </section>
 
@@ -894,7 +972,7 @@
   <section id="reviews" class="reviews-section">
     <div class="revieww">
       <div class="review-form">
-        <h2>Rate your experience</h2>
+        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
           Read what others have to say about their experiences with various
           destinations, hotels, flights, and activities. Share your own reviews
@@ -903,13 +981,13 @@
 
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
-            <label for="name">Your Name:</label>
+            <label for="name" id="darkbtn">Your Name:</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="destination">Destination/Service:</label>
+            <label for="destination" id="darkbtn">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required />
 
-            <label for="rating">Rating:</label>
+            <label for="rating" id="darkbtn">Rating:</label>
             <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -918,9 +996,9 @@
               <option value="1">⭐</option>
             </select>
 
-            <label for="review">Your Review:</label>
+            <label for="review" id="darkbtn">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
-            <label for="complaint">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
 
@@ -940,18 +1018,23 @@
   </section>
 
 
+  <!-- Chatbot icon -->
+  <div id="chat-icon">🤖</div>
 
-    <a href="chatbot.html">
-      <div class="fixed bottom-0 right-2 chatbot-container">
-        <button class="chatbot-button group">
-          <img class="h-20" src="chatbot.gif" alt="chatbot" />
-          <span class="tooltip-text">
-            Welcome to Buddytrail! <br />
-            How can I help You? ^_^
-          </span>
-        </button>
+  <!-- Chatbot container -->
+  <div id="chatbot">
+      <div id="chat-header">
+          <span>TrailBot</span>
+          <button id="close-button">✖</button> <!-- Close button -->
       </div>
-    </a>
+      <div id="chatbox">
+          <div id="messages"></div>
+      </div>
+      <input type="text" id="user-input" placeholder="Type your message here..." />
+      <button id="send-button">Send</button>
+  </div>
+  
+  <script src="chatbot.js"></script>
       <div class="fixed bottom-0 right-2 scroll-container">
         <button class="scroll-button group" id="scrollTopBtn">
           <span class="tooltip-text-scroll">
@@ -963,12 +1046,12 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
 
-  <footer>
-    <div class="footer-container">
+  <footer id="footer">
+    <div class="footer-container" id="footer">
       <div class="footer-column">
         
 
-    <footer>
+    <footer id="footer">
       <div class="footer-container">
           <div class="footer-column">
               <h3>About Us</h3>
