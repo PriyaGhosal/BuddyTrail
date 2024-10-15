@@ -30,6 +30,7 @@ body {
 
 #messages {
     margin-bottom: 10px;
+    font-size: small;
 }
 
 .user, .bot {
@@ -74,7 +75,7 @@ body {
 }
 
 #send-button:hover {
-    background-color: #0056b3;
+    background-color: #120cb3;
 }
 
 #chat-icon {
@@ -102,7 +103,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
+    background-color: #3d0aab;
     color: #fff;
     padding-left: 10px;
     font-size: 1.5rem;
@@ -119,5 +120,5 @@ body {
 }
 
 #close-button:hover {
-    color: #ffcccc;
+    color: #dbe913;
 }
