@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm">
+            <h1>Contact Us</h1>
+            <div class="input-group">
+                <input type="text" id="firstName" required>
+                <label for="firstName">First Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" id="lastName" required>
+                <label for="lastName">Last Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="mobile" required>
+                <label for="mobile">Mobile</label>
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="input-group">
+                <textarea id="message" required></textarea>
+                <label for="message">Type Your Message Here</label>
+                <i class="fas fa-comment-alt"></i>
+            </div>
+            <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <script src="./contact.js"></script>
+</body>
+</html>

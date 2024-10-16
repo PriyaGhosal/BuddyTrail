@@ -19,6 +19,7 @@
 .rating-wrap {
     width: 30%; /* Adjust width as needed */
     text-align: left;
+    transition: all;
 }
 
 .center {
@@ -79,5 +80,5 @@
 
 .rating > label:hover ~ label,
 .rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
+    color:rgb(239, 127, 6); /* Green hover effect */
 }

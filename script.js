@@ -329,6 +329,45 @@ document.getElementById('postForm').addEventListener('submit', function (e) {
     postContainer.appendChild(newPost);
     document.getElementById('postContent').value = ''; // Clear the textarea
 });
+const fileInput = document.getElementById('file-input');
+const uploadForm = document.getElementById('upload-form');
+const contentList = document.getElementById('content-list');
+
+uploadForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert('Please select a file to upload.');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', file);
+
+  try {
+    const response = await fetch('/upload', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) {
+      throw new Error('Error uploading file: ' + response.statusText);
+    }
+
+    const data = await response.json();
+    console.log('File uploaded:', data.filename);
+
+    // Update content list with the new file
+    const listItem = document.createElement('li');
+    listItem.textContent = data.filename;
+    contentList.appendChild(listItem);
+  } catch (error) {
+    console.error('Error uploading file:', error);
+    alert('An error occurred while uploading the file.');
+  }
+});
 
 window.addEventListener("scroll", function () {
     let navbar = document.getElementById("main-head");
@@ -380,38 +419,31 @@ function initMap() {
 }
 
 // Toggle dark and bright mode
-document.addEventListener('DOMContentLoaded', function() {
-    const modeToggle = document.getElementById('modeToggle');
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.createElement('span');
-    moonIcon.className = 'moon-icon';
-    moonIcon.innerHTML = '<img src="crescent-moon.png">';
+// modeToggle.addEventListener('click', function() {
+//     console.log('Toggle clicked'); // Log when the button is clicked
+//     document.body.classList.toggle('dark-mode');
+//     document.body.classList.toggle('light-mode');
+    
+//     if (document.body.classList.contains('dark-mode')) {
+//         console.log('Switching to dark mode');
+//         sunIcon.style.display = 'none';  // Hide sun icon
+//         moonIcon.style.display = 'inline-block'; // Show moon icon
+//         localStorage.setItem('theme', 'dark');
+//     } else {
+//         console.log('Switching to light mode');
+//         sunIcon.style.display = 'inline-block';  // Show sun icon
+//         moonIcon.style.display = 'none';   // Hide moon icon
+//         localStorage.setItem('theme', 'light');
+//     }
+// });
 
-    const currentTheme = localStorage.getItem('theme');
 
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        modeToggle.replaceChild(moonIcon, sunIcon);
-    } else {
-        document.body.classList.add('light-mode');
-        sunIcon.classList.add('glow');
-    }
 
-    modeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
-
-        if (document.body.classList.contains('dark-mode')) {
-            modeToggle.replaceChild(moonIcon, sunIcon);
-            localStorage.setItem('theme', 'dark');
-        } else {
-            modeToggle.replaceChild(sunIcon, moonIcon);
-            sunIcon.classList.add('glow');
-            localStorage.setItem('theme', 'light');
-        }
-    });
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
 });
-
 // discount pop_up
 document.addEventListener('DOMContentLoaded', function() {
     // Show the popup after a slight delay
@@ -467,4 +499,5 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }
+
 
