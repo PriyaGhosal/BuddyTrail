@@ -74,20 +74,6 @@ nav a {
   text-decoration: none;
 }
 
-#destinations {
-  margin: auto;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-  width: 90%;
-}
-
-#destinations h2{
-  font-size: 4rem;
-}
-
-.post-container h3{
-  text-align: start;
-}
 
 .post-container {
   background: #ffffff;
@@ -104,9 +90,8 @@ textarea {
   border-radius: 5px;
 }
 
-.post-container button {
-  background: rgb(8, 47, 165);
-  width: 14rem;
+button {
+  background: #35424a;
   color: #ffffff;
   padding: 10px;
   border: none;
@@ -114,9 +99,8 @@ textarea {
   cursor: pointer;
 }
 
-.post-container button:hover {
-  transform: scale(1.025);
-  background: #1e71c5;
+button:hover {
+  background: #2c3e50;
 }
 
 .post {
