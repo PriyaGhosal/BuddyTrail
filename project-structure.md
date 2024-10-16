@@ -9,6 +9,7 @@
 ├── auth.css
 ├── auth.html
 ├── auth.js
+├── book.html
 ├── boy.png
 ├── chatbot.css
 ├── chatbot.gif
@@ -39,11 +40,13 @@
 │   └── youtube.svg
 ├── img
 │   ├── back.png
+│   ├── benefits.jpeg
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
 │   ├── landing-page.jpg
+│   ├── location.jpg
 │   ├── logo.png
 │   ├── logo2.png
 │   ├── n1.jpg
