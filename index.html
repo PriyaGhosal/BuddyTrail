@@ -258,104 +258,7 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-    </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
-
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-    </button>
-  </nav>
-</header>
-
-<!-- JS to handle hamburger and close button -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.getElementById("nav-list");
-    const closeBtn = document.getElementById("closeBtn");
-
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-
-    closeBtn.addEventListener("click", function () {
-      navList.classList.remove("active");
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed'); // Simple test log
-            const modeToggle = document.getElementById('modeToggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-
-            // Additional code...
-            modeToggle.addEventListener('click', function() {
-    console.log('Toggle clicked'); // Log when the button is clicked
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    const darkelem = document.querySelectorAll('#darkbtn');
-    const h1dark = document.querySelectorAll('#h1darkbtn');
-    const cardbtn = document.querySelectorAll('#btn a');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        console.log('Switching to dark mode');
-        sunIcon.style.display = 'none';  // Hide sun icon
-        moonIcon.style.display = 'inline-block'; // Show moon icon
-        localStorage.setItem('theme', 'dark');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#FFA500'
-        })
-      } else {
-        console.log('Switching to light mode');
-        sunIcon.style.display = 'inline-block';  // Show sun icon
-        moonIcon.style.display = 'none';   // Hide moon icon
-        localStorage.setItem('theme', 'light');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'gray';
-        }) 
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#0057B3'
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'black';
-        })
-    }
-});
-});
-  
-</script>
 
 
 
@@ -966,7 +869,7 @@
     <header class="forum_1">
       <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
-          <ul>
+          <ul >
               <li><a href="#destinations">Destinations</a></li>
               <li><a href="#travel-planning">Travel Planning</a></li>
               <li><a href="#experiences">Travel Experiences</a></li>
