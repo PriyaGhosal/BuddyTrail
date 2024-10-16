@@ -122,3 +122,21 @@ body {
 #close-button:hover {
     color: #dbe913;
 }
+
+
+#itineraries{
+    margin-bottom: 70px;
+    border: none
+}
+
+.itinerary-list{
+    padding-bottom: 30px;
+}
+
+#cab-booking{
+    margin-top: 70px;
+}
+
+#deals{
+    margin-bottom: 10px;
+}
