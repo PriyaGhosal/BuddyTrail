@@ -25,6 +25,15 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+    transform: scale(1); /* Initial scale */
+}
+
+/* Add hover effect for the whole form, including size change */
+.container:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05); /* Slightly enlarge the form on hover */
 }
 
 form {
@@ -54,6 +63,13 @@ input, textarea {
     color: #fff;
     font-size: 16px;
     transition: 0.3s ease;
+    transform: scale(1); /* Initial scale */
+}
+
+/* Add hover effect for input fields, including size change */
+input:hover, textarea:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.03); /* Slightly enlarge input fields on hover */
 }
 
 input:focus, textarea:focus {
@@ -119,9 +135,11 @@ button {
     gap: 8px;
 }
 
+/* Add hover effect for the button with size change */
 button:hover {
     background: #764ba2;
     color: #fff;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 button i {
