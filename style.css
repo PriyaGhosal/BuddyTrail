@@ -263,6 +263,7 @@ a{
   padding: 15px;
   height: 90px;
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
   /*background-color: transparent;*/
   color: white;
   display: flex;
