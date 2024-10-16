@@ -406,10 +406,44 @@ nav {
 
 }
 
-.hero h2{
-  color: white;
-  font-size: 6rem;;
+.hero h1{
+  color:white;
+  font-size: 70px;
+  line-height: 80%;
+  text-transform: Uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fefefe;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
 }
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.hero h2{
+  color:white;
+  font-size: 70px;
+  line-height: 80%;
+  text-transform: Uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fefefe;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+
+
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
 
 .hero h3 {
   font-size: 25px;
