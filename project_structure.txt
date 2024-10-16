@@ -1,19 +1,30 @@
-├── BuddyTrail
 ├── Code_of_Conduct.md
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
+├── SignIn-Up-withGithub.js
+├── about.html
 ├── auth.css
 ├── auth.html
 ├── auth.js
-├── book.html
 ├── boy.png
+├── chatbot.css
 ├── chatbot.gif
-├── contributing.md
+├── chatbot.js
+├── contact.css
+├── contact.html
+├── contact.js
+├── contributor
+│   ├── contributor.css
+│   ├── contributor.html
+│   └── contributor.js
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
 ├── firebase.js
+├── forgot_password.html
+├── hotel.css
+├── hotel.html
 ├── icons
 │   ├── airplane.svg
 │   ├── bed-solid.svg
@@ -24,18 +35,32 @@
 │   ├── twitter.svg
 │   └── youtube.svg
 ├── img
+│   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
 │   ├── landing-page.jpg
 │   ├── logo.png
 │   ├── logo2.png
-│   └── new-york-page.png
+│   ├── n1.jpg
+│   ├── n2.jpg
+│   ├── n3.jpg
+│   ├── n4.jpg
+│   ├── n5.jpg
+│   ├── new-york-page.png
+│   ├── u1.jpg
+│   ├── u2.jpg
+│   ├── u4.jpg
+│   └── u5.jpg
 ├── index.html
+├── moon.png
 ├── package-lock.json
+├── package.json
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
 ├── script.js
 ├── star-rating.js
-└── style.css
+├── style.css
+├── team.html
+└── update discussion forum

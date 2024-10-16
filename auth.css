@@ -109,6 +109,7 @@ form.sign-in-form {
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
+  text-align: center;
 }
 
 .social-media {
@@ -130,6 +131,7 @@ form.sign-in-form {
   text-decoration: none;
   font-size: 1.5rem;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 #github:hover {
@@ -467,3 +469,4 @@ form.sign-in-form {
 .homeBtn:active {
   background: #191919;
 }
+
