@@ -24,7 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="chatbot.css">
+
     <title>BuddyTrail</title>
     <style>
       * {
@@ -55,13 +55,6 @@
     gap: 10px; /* Add some space between the stars and the count */
 }
 
-.rating {
-  height: 50px;
-}
-
-.rating:hover {
-  cursor: pointer;
-}
 
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
@@ -141,11 +134,11 @@
       .tooltip-text {
         display: none; /* Hide by default */
         position: absolute;
-        top: -10%; /* Position above the button */
-        left: -230px;
-        transform: translateX(-230px, -50%);
+        bottom: 100%; /* Position above the button */
+        right: 50%;
+        transform: translateX(50%);
         background-color: #333; /* Background color for tooltip */
-        color: #fff; /* Tooltip text color */
+        color: #f3f1f1; /* Tooltip text color */
         padding: 5px;
         border-radius: 5px;
         white-space: nowrap; /* Prevent text from wrapping */
@@ -160,19 +153,25 @@
         align-items: center;
       }
 
-      .card:hover {
-        cursor: pointer;
+      .card button{
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding: 15px;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="light-mode">
 
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+  </div>
+
     <!-- Google Translate Button -->
-    <!-- <div class="translate-container">
+    <div class="translate-container">
       <button class="language-toggle" id="languageToggle">🌐</button>
       <div id="google_translate_element"></div>
-    </div> -->
+    </div>
 
     <script>
       // Initialization function
@@ -223,7 +222,13 @@
 
   <script src="script.js"></script>
  
-  
+  <div id="cursor"></div>
+  <script>
+    window.cursor={
+      emoji: "🌤️",
+      color: "black",
+    };
+  </script>
 
 <script src="cursor.js" defer="defer"></script>
   
@@ -241,8 +246,8 @@
     });
   </script>
   <main>
-    <section class="hero" id="home">
-      <div class="header1"><h2>Travel Beyond Limits</h2></div>
+    <section class="hero">
+      <h2>Travel Beyond Limits</h2>
       <h3>
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
@@ -258,11 +263,11 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
+    <header class="main-head" id="main-head">
   <nav>
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+      <h1 id="logo">BuddyTrail</h1>
     </div>
 
     <!-- Hamburger button for mobile -->
@@ -272,22 +277,20 @@
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
       <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
+      <!-- <li><a href="#About" class="navhover">About</a></li> -->
+      <!-- <li><a href="#locations" class="navhover">Location</a></li> -->
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <!-- <li><a href="#benefits" class="navhover">Benefits</a></li> -->
+      <li><a href="#contact" class="navhover">Contact</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
+      <!-- <li><a href="reviews.html" class="navhover">Share Experience</a></li> -->
+      <li><a href="#About" class="navhover">About</a></li>
     </ul>
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+      <span class="sun-icon glow"><img src="day-mode.png"></span>
     </button>
   </nav>
 </header>
@@ -307,54 +310,6 @@
       navList.classList.remove("active");
     });
   });
-
-  document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed'); // Simple test log
-            const modeToggle = document.getElementById('modeToggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-
-            // Additional code...
-            modeToggle.addEventListener('click', function() {
-    console.log('Toggle clicked'); // Log when the button is clicked
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    const darkelem = document.querySelectorAll('#darkbtn');
-    const h1dark = document.querySelectorAll('#h1darkbtn');
-    const cardbtn = document.querySelectorAll('#btn a');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        console.log('Switching to dark mode');
-        sunIcon.style.display = 'none';  // Hide sun icon
-        moonIcon.style.display = 'inline-block'; // Show moon icon
-        localStorage.setItem('theme', 'dark');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#FFA500'
-        })
-      } else {
-        console.log('Switching to light mode');
-        sunIcon.style.display = 'inline-block';  // Show sun icon
-        moonIcon.style.display = 'none';   // Hide moon icon
-        localStorage.setItem('theme', 'light');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'gray';
-        }) 
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#0057B3'
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'black';
-        })
-    }
-});
-});
-  
 </script>
 
 
@@ -377,8 +332,9 @@
       });
     </script>
     <main>
+     
       <section class="hero">
-       <div class="header1"><h2>Travel Beyond Limits</h2></div> 
+        <h2>Travel Beyond Limits</h2>
 
         <h3>
           We handle everything, from finding the ideal travel buddy to
@@ -396,11 +352,10 @@
           and destination
         </h3>
       </header>
-      <div class="cards" style="height: 384px;">
+      <div class="cards">
         <div class="card">
-          <div class="header1">
           <div class="card-icon">
-            <img src="/icons/route-solid.svg" />
+            <img src="./icons/route-solid.svg" />
           </div>
           <h4>Travel</h4>
           <p>
@@ -408,27 +363,23 @@
             serene mountains to sunny beaches, find your next adventure
             without breaking the bank. Start exploring now!
           </p>
-          <button id="btn"><a href="travel.html "> Explore more</a></button></div>
+          <button id="btn"><a href="book.html ">Explore Itineraries</a></button>
         </div>
-        
         <div class="card">
-          <div class="header1">
           <div class="card-icon">
-            <img  src="./icons/bed-solid.svg" />
-          </div >
-          <h4 >Hotel</h4>
+            <img src="./icons/bed-solid.svg" />
+          </div>
+          <h4>Hotel</h4>
           <p>
             We've handpicked top-rated options that offer exceptional value.
             Book your perfect stay today and enjoy premium accommodations
             without the premium price tag!
           </p>
-          <button id="btn" style="margin-bottom: 1px;"><a href="hotel.html ">See Hotels</a></button></div>
+          <button id="btn"><a href="book.html ">See Hotels</a></button>
         </div>
-        
         <div class="card">
-          <div class="header1">
           <div class="card-icon">
-            <img src="/icons/plane-departure-solid.svg" />
+            <img src="./icons/plane-departure-solid.svg" />
           </div>
           <h4>Fly</h4>
           <p>
@@ -436,186 +387,170 @@
             the best flight deals, combining comfort and affordability for
             perfect journey. Book now and take off for less!
           </p>
-          <button id="btn"><a href="fly.html ">See Flights</a></button></div>
+          <button id="btn"><a href="book.html ">See Flights</a></button>
         </div>
       </div>
     </section>
-    <!-- deals -->
-   <section id="deals" class="deals-section">
-        <h2>Exclusive Deals and Offers</h2>
-        <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
-      
-        <div class="carousel">
-          <div class="carousel-inner">
-            <!-- Deal 1: Flight Offer -->
-            
-            <div class="deal-item">
-              <div class="header1">
-              <h3>Flight to Dubai</h3>
-              <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
-              <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-      
-            <!-- Deal 2: Hotel Offer -->
-            
-            <div class="deal-item" style="height: 311.6px;width: 266.66px;">
-              <div class="header2"> 
-              <h3>Luxury Stay in Goa</h3>
-              <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
-              <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-      
-            <!-- Deal 3: Travel Package -->
-            <div class="deal-item">
-              <div class="header1"> 
-              <h3>Kerala Backwaters Package</h3>
-              <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
-              <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-      
-            <!-- Deal 4: International Trip -->
-            <div class="deal-item">
-              <div class="header2"> 
-              <h3>Paris Romantic Getaway</h3>
-              <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
-              <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-      
-            <!-- Deal 5: Adventure Trip -->
-            <div class="deal-item">
-              <div class="header1"> 
-              <h3>Adventure in Bali</h3>
-              <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
-              <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
 
-            <!-- Deal 6: Ski Trip in Switzerland -->
-            <div class="deal-item">
-              <div class="header2"> 
-              <h3>Ski Trip in Switzerland</h3>
-              <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
-              <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-
-            <!-- Deal 7: Wildlife Safari in Kenya -->
-            <div class="deal-item">
-              <div class="header1"> 
-              <h3>Wildlife Safari in Kenya</h3>
-              <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
-              <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
-            </div></div>
-          </div>
-          <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-          <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
+       <section id="About">
+        <h1>About BuddyTrail - Your Ultimate Travel Companion</h1>
+        <p>
+          Welcome to <strong>BuddyTrail</strong>, the all-in-one travel platform
+          that turns your dream vacations into reality! 🌍✈ Whether you're
+          planning a fun family getaway 👨‍👩‍👧‍👦, an exciting trip with friends 👫, or
+          even a solo adventure, BuddyTrail is here to guide you every step of
+          the way. Discover new destinations 🏖🏰, find the best hotels 🏨, and
+          book budget-friendly flights 💺 without the hassle.
+        </p>
+      
+        <h2>Why Choose BuddyTrail?</h2>
+        <p>
+          BuddyTrail isn't just another travel site. It's designed to give you
+          the most personalized, stress-free travel experience possible, making
+          sure every detail is taken care of. Here's what makes us different:
+        </p>
+      
+        <ul>
+          <li>
+            🌍 <strong>Explore the World with an Interactive Travel Map:</strong>
+            Want to see the world at your fingertips? Our dynamic map lets you
+            discover the top travel destinations, both within India and
+            globally, with just a click. Find out more about each location,
+            including the best activities, top-rated attractions, and hidden
+            gems you won't want to miss.
+          </li>
+          <li>
+            🏨 <strong>Find Hotels that Fit Your Style & Budget:</strong>
+            Finding the perfect place to stay has never been easier! Our hotel finder
+            matches you with a wide selection of handpicked hotels that suit
+            your style and budget, from luxury resorts to budget-friendly stays.
+          </li>
+          <li>
+            ✈ <strong>Book Flights at the Best Prices:</strong>
+            With BuddyTrail, you can find and book flights at unbeatable prices,
+            tailored to your travel dates and preferences.
+          </li>
+          <li>
+            📝 <strong>Get Expert Tips from Seasoned Travelers:</strong>
+            Our travel blog is packed with insider tips, guides, and stories from
+            seasoned travelers.
+          </li>
+          <li>
+            ⭐ <strong>Read & Leave Reviews to Guide Fellow Travelers:</strong>
+            Travel smarter by reading user reviews and ratings for destinations,
+            hotels, flights, and activities.
+          </li>
+          <li>
+            🌐 <strong>Multi-Language Support for Global Travelers:</strong>
+            We offer multi-language support to make sure everyone feels at home.
+          </li>
+          <li>
+            🌙🌞 <strong>Dark & Bright Modes for Comfortable Browsing:</strong>
+            BuddyTrail lets you switch between dark and bright modes with ease.
+          </li>
+          <li>
+            📱 <strong>Seamless Experience Across Devices:</strong>
+            BuddyTrail is designed to be fully responsive, so you can plan and book your trips from any device.
+          </li>
+        </ul>
+      
+        <p>Join a Community of Travelers!</p>
+        <p>
+          Become part of the BuddyTrail community and connect with fellow
+          travelers! Share your experiences, get inspired by others, and enjoy a
+          personalized travel experience like never before.
+        </p>
+      
+        <p>
+          <strong>
+            Start your journey today with BuddyTrail, and turn your travel
+            dreams into memories that last a lifetime!
+          </strong>
+        </p>
       </section>
+      
+    <!-- deals -->
+    <section id="deals" class="deals-section">
+      <h2>Exclusive Deals and Offers</h2>
+      <p>
+        Explore our best deals on flights, hotels, and travel packages. Save
+        big on your next adventure!
+      </p>
 
-      <style>
-        /* Existing CSS */
-        .deals-section {
-          text-align: center;
-        }
-        
-        .carousel {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        .carousel-inner {
-          display: flex;
-          transition: transform 0.5s ease;
-        }
-        
-        .deal-item {
-          min-width: calc(100% / 3); /* Show 3 cards */
-          box-sizing: border-box;
-          padding: 20px;
-          border: 1px solid #150f0f;
-          border-radius: 8px;
-          margin: 10px;
-          transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-        }
-        
-        .highlight {
-          transform: scale(1.05); /* Slightly enlarge the center card */
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
-        }
-        
-        .carousel-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(17, 16, 16, 0.7);
-          border: none;
-          cursor: pointer;
-          padding: 10px;
-          border-radius: 50%;
-          font-size: 24px;
-          transition: background-color 0.3s;
-          opacity: 1; /* Always show buttons */
-        }
-        
-        .prev {
-          left: 10px;
-        }
-        
-        .next {
-          right: 10px;
-        }
-        
-        /* Optional hover effects */
-        .carousel-button:hover {
-          background-color: rgb(6, 6, 6);
-        }
-        </style>
-        
-        <script>
-        let currentSlide = 0;
-        
-        function moveSlide(direction) {
-          const slides = document.querySelectorAll('.deal-item');
-          const totalSlides = slides.length;
-          const slidesToShow = 3; // Number of cards to show at once
-        
-          // Calculate the new slide index
-          currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
-        
-          // Update the transform to show the correct slides
-          const carouselInner = document.querySelector('.carousel-inner');
-          carouselInner.style.transform = `translateX(-${currentSlide * (100 / slidesToShow)}%)`;
-        
-          // Remove highlight class from all cards
-          slides.forEach(slide => slide.classList.remove('highlight'));
-        
-          // Calculate the index of the center card
-          const centerCardIndex = currentSlide * slidesToShow + Math.floor(slidesToShow / 2);
-          // Add highlight class to the center card
-          if (centerCardIndex < totalSlides) {
-            slides[centerCardIndex].classList.add('highlight');
-          }
-        }
-        
-        // Initial highlight
-        document.addEventListener('DOMContentLoaded', () => {
-          const slides = document.querySelectorAll('.deal-item');
-          slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
-        });
-        </script>
+      <div class="deals-list">
+        <!-- Deal 1: Flight Offer -->
+        <div class="deal-item">
+          <h3>Flight to Dubai</h3>
+          <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
+          <p>
+            <strong>Price:</strong> ₹20,000
+            <span class="discount">₹25,000 </span>
+          </p>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
+        </div>
+
+        <!-- Deal 2: Hotel Offer -->
+        <div class="deal-item">
+          <h3>Luxury Stay in Goa</h3>
+          <p>
+            Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
+            luxury at an affordable price!
+          </p>
+          <p>
+            <strong>Price:</strong> ₹10,500
+            <span class="discount"> ₹15,000</span> per night
+          </p>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
+        </div>
+
+        <!-- Deal 3: Travel Package -->
+        <div class="deal-item">
+          <h3>Kerala Backwaters Package</h3>
+          <p>
+            Experience the serene beauty of Kerala's backwaters with a 4-day,
+            3-night package. All-inclusive deal!
+          </p>
+          <p>
+            <strong>Price:</strong> ₹40,000
+            <span class="discount">₹50,000</span>
+          </p>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
+        </div>
+
+        <!-- Deal 4: International Trip -->
+        <div class="deal-item">
+          <h3>Paris Romantic Getaway</h3>
+          <p>
+            Enjoy a romantic trip to Paris with your loved one. Special
+            package for couples!
+          </p>
+          <p>
+            <strong>Price:</strong> ₹1,20,000
+            <span class="discount"> ₹1,50,000</span> per couple
+          </p>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
+        </div>
+
+        <!-- Deal 5: Adventure Trip -->
+        <div class="deal-item">
+          <h3>Adventure in Bali</h3>
+          <p>
+            Book an adventure trip to Bali with activities like snorkeling,
+            trekking, and more. Discount available for groups!
+          </p>
+          <p>
+            <strong>Price:</strong> ₹48,000
+            <span class="discount">₹60,000</span> per person
+          </p>
+          <button onclick="window.location.href='#book-now'">Book Now</button>
+        </div>
+      </div>
+    </section>
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
-      <p id="darkbtn">
+      <h2>Travel Itineraries</h2>
+      <p>
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
         family vacation, a solo adventure, or a romantic getaway, we’ve got
@@ -623,9 +558,7 @@
       </p>
 
       <div class="itinerary-list">
-         
         <div class="itinerary">
-          <div class="header1"> 
           <h3>Family Vacation</h3>
           <p>
             Explore the best family-friendly destinations with day-by-day
@@ -633,19 +566,17 @@
             ages.
           </p>
           <button>View Itinerary</button>
-        </div></div>
+        </div>
 
         <div class="itinerary">
-          <div class="header2"> 
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
           <button>View Itinerary</button>
-        </div></div>
+        </div>
         <div class="itinerary">
-          <div class="header1"> 
           <h3>Romantic Getaway</h3>
           <p>
             Plan the perfect romantic escape with itineraries that include
@@ -656,20 +587,20 @@
       </div>
     </section>
 
+      
+
     <!-- Cab or Auto Booking -->
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
+        <h2 style="color: black;">Book a Cab or Auto</h2>
         <form action="/book-cab" method="POST">
           <div class="form-group">
-            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
+            <label for="pickup-location" style="font-size: 15px; color: black;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
           <div class="form-group">
-            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
+            <label for="drop-location" style="font-size: 15px; color: black;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
         
         <form
@@ -685,42 +616,39 @@
         >
           
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
-            <strong>Vehicle Type</strong>
+          <label style="font-size: 1.5em; margin-right: 35px; color: black;" for="vehicle-type">
+            <strong style="font-size: 1.5em;">Vehicle Type</strong>
           </label>
           
           <select 
           id="vehicle-type" 
           name="vehicle-type" 
-          style="width: 150px; height: 35px; padding: 5px;" 
+          style="width: 150px; height: 29px; padding: 5px; font-size: 1.5em;" 
           required >
             <option value="cab">Cab</option>
             <option value="auto">Auto</option>
-            <option value = "Sharing cab">Sharing Cab</option>
-            <option value = "Sharing cab">Sharing Auto</option>
-            <option value = "Sharing cab">Bike</option>
-            <option value = "Sharing cab">Premium Bike</option>
           </select>
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+            <label for="travel-date" style="font-size: 15px; color: black;"><strong>Travel Date</strong></label>
             <input type="date" id="travel-date" name="travel-date" required />
           </div>
           <div class="form-group">
-            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
+            <label for="travel-time" style="font-size: 15px; color: black;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
           <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
-
-        </section>
+        </form>
+      </div>
+    </section>
           
     
 
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
-      <h2 id="h1darkbtn">Personalized Recommendations</h2>
+      <h2>Personalized Recommendations</h2>
       <p>
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
@@ -729,8 +657,7 @@
       <div class="recommendation-list">
         <!-- Example Recommendation -->
         <div class="recommendation-item">
-          <div class="header1"> 
-          <h3 id="h1darkbtn">Beach Resort in Goa</h3>
+          <h3>Beach Resort in Goa</h3>
           <p>
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
@@ -738,11 +665,10 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div></div>
+        </div>
 
         <div class="recommendation-item">
-          <div class="header2"> 
-          <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
+          <h3>Cultural Tour in Rajasthan</h3>
           <p>
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
@@ -750,11 +676,10 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div></div>
+        </div>
 
         <div class="recommendation-item">
-          <div class="header1"> 
-          <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
+          <h3>Adventure Trek in Himachal</h3>
           <p>
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
@@ -762,209 +687,12 @@
           <button onclick="window.location.href='#book-now'">
             Explore More
           </button>
-        </div></div>
+        </div>
       </div>
     </section>
-    <!--posts section-->
-    <div id="posts">
-      <header class="posts_blog">
-        <h1>POSTS AND VLOGS</h1>
-      </header>
-    
-      <main class="main_blogs">
-        <section id="upload">
-          <h2>Upload Content</h2>
-          <form id="upload-form">
-            <input type="file" id="file-input">
-            <button id="submit" type="submit">Upload</button>
-          </form>
-        </section>
-    
-        <section id="content">
-          <h2>Content</h2>
-          <input id="content-input" type="text">
-          <ul id="content-list"></ul>
-        </section>
-      </main>
-    </div>
-    <style>
-
-        /* Container for the posts and vlogs section */
-        #posts {
-          max-width: 1200px;
-          margin: 50px auto;
-          padding: 20px;
-          background-color: #fff;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          border-radius: 12px;
-        }
-
-        #content-input{
-          width: 400px;
-          height: 200px;
-          border-color: #81c784;
-        }
-
-        /* Header styling */
-        header.posts_blog {
-          background-color: #4caf50;
-          padding: 20px;
-          text-align: center;
-          border-radius: 12px 12px 0 0;
-        }
-
-        header.posts_blog h1 {
-          color: #fff;
-          font-size: 2.5rem;
-          margin: 0;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-        }
-
-        /* Main section styling */
-        main.main_blogs {
-          display: flex;
-          justify-content: space-between;
-          padding: 20px;
-        }
-
-        /* Upload Section */
-        #upload {
-          width: 40%;
-          background-color: #e8f5e9;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        #upload h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
-
-        #upload-form {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #file-input {
-        border: 2px dashed #4caf50;
-        background-color: #f1f8e9;
-        color: #4caf50;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        transition: border-color 0.3s, background-color 0.3s;
-      }
-
-      /* Hover state: change border and background color */
-      #file-input:hover {
-        border-color: #81c784;
-        background-color: #e8f5e9;
-      }
-
-      /* Focus state: when the input is clicked */
-      #file-input:focus {
-        outline: none;
-        border-color: #66bb6a;
-        background-color: #c8e6c9;
-      }
-
-      /* Active state: when file is being dragged over the input */
-      #file-input:active,
-      #file-input:focus-visible {
-        border-color: #388e3c;
-        background-color: #a5d6a7;
-      }
-
-      /* File input placeholder text styling */
-      #file-input::file-selector-button {
-        color: #fff;
-        background-color: #4caf50;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      #file-input::file-selector-button:hover {
-        background-color: #66bb6a;
-      }
-
-
-        #submit{
-          background-color: #876bb1;
-          margin-left: 40px;
-          margin-top: 20px;
-          
-        }
-
-        #submit:hover{
-          background-color: #744caf;
-        }
-
-        #upload-form button {
-          
-          color: #fff;
-          padding: 10px;
-          border: 1px solid #4caf50; /* Add a border to make the button more visible */
-          cursor: pointer;
-          font-size: 1.2rem;
-          transition: background-color 0.3s;
-        }
-
-        #upload-form button:hover {
-          background-color: #c081c7;
-        }
-
-        /* Content Section */
-        #content {
-          width: 55%;
-        }
-
-        #content h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
-
-        #content-list {
-          list-style-type: none;
-          padding: 0;
-        }
-
-        #content-list li {
-          background-color: #e8f5e9;
-          padding: 15px;
-          margin-bottom: 10px;
-          border-radius: 8px;
-          transition: background-color 0.3s;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        #content-list li:hover {
-          background-color: #c8e6c9;
-        }
-
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-          main.main_blogs {
-            flex-direction: column;
-          }
-
-          #upload, #content {
-            width: 100%;
-            margin-bottom: 20px;
-          }
-        }
-
-    </style>
-    <script src="script.js"></script>
     <!--forum Section-->
     <header class="forum_1">
-      <h1 id="h1darkbtn">Travel Discussion Forum</h1>
+      <h1>Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
               <li><a href="#destinations">Destinations</a></li>
@@ -978,47 +706,6 @@
   </header>
 
   <main>
-   <style>
-     #destinations {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-  }
-  
-  .post-container {
-      width: 100%;
-  }
-  
-  #postForm {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-  }
-  
-  #postContent {
-      width: 100%;
-      min-height: 100px;
-      margin-bottom: 10px;
-      padding: 10px;
-  }
-  
-  button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-  }
-  
-  #posts {
-      width: 100%;
-  }
-  </style>
       <section id="destinations">
           <h2>Destination Guides</h2>
           <div class="post-container">
@@ -1031,229 +718,9 @@
           </div>
       </section>
 
-
       <!-- Add more sections for other categories -->
   </main>
-  <style>
-    /* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  color: #007BFF;
-  margin-bottom: 2rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  animation: fadeInDown 1s ease-out;
-}
-
-#destinations {
-  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease;
-}
-
-#destinations:hover {
-  transform: scale(1.02);
-}
-
-.post-container {
-  background-color: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.7s ease-out;
-}
-
-h3 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-  color: #007BFF;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  transition: color 0.3s ease;
-}
-
-h3:hover {
-  color: #0056b3;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  animation: fadeIn 0.8s ease-out;
-}
-
-textarea {
-  min-height: 150px;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: box-shadow 0.4s ease, background-color 0.3s ease;
-}
-
-textarea:focus {
-  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
-  background-color: #f0f8ff;
-  outline: none;
-}
-
-button {
-  padding: 12px 18px;
-  font-size: 1.1rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-button:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.6s ease;
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-}
-
-button:hover:before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-#posts {
-  margin-top: 2rem;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-}
-
-#posts > div {
-  background-color: white;
-  margin-bottom: 15px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  position: relative;
-  animation: fadeInUp 0.8s ease-out;
-}
-
-#posts > div:hover {
-  background-color: #f0f8ff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-/* Animation Keyframes */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  main {
-    padding: 15px;
-  }
-
-  #destinations {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  textarea {
-    min-height: 120px;
-  }
-
-  button {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
-}
-
-  </style>
   <script src="script.js"></script>
 
     <style>
@@ -1268,7 +735,7 @@ button:hover:before {
     </style>
 
     <!-- Map Section -->
-    <section class="map-section" id="explore">
+    <section class="map-section">
       <h2>Explore Popular Destinations</h2>
       <p>Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
@@ -1289,76 +756,75 @@ button:hover:before {
       ></script>
 
     <!-- CONTACT US-->
-        <section class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Get in Touch with BuddyTrail</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h3>Our Address</h3>
-                                <p>123 Trailblazer Lane, Adventure City</p>
-                            </div>
+      <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="grid-container">
+                    <div class="text-container">
+                        <div class="heading">
+                            <h2 class="title">CONTACT US</h2>
+                            <p class="description">At BuddyTrail, we are here to assist you every step of the way! Whether you have questions, feedback, or just want to learn more about our platform, feel free to reach out to us. Our team is committed to providing you with the best experience as you explore new trails and make new friends along the way.</p>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
-                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h3>Contact</h3>
-                                <p>Mobile: +91 921 456-7890</p>
-                                <p>Mail: buddyTrail@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                                    <path d="M12 7v5l3 3"></path>
-                                </svg>
-                            </div>
-                            <div class="info-content">
-                                <h3>Working Hours</h3>
-                                <p>Monday - Friday: 08:00 - 17:00</p>
-                                <p>Saturday & Sunday: 08:00 - 12:00</p>
-                            </div>
-                        </div>
-                        <div class="about-buddytrail">
-                            <h3>About BuddyTrail</h3>
-                            <p>At BuddyTrail, we're passionate about connecting adventurers and making every trail an unforgettable experience. Our platform is designed to help you discover new paths, meet like-minded explorers, and create lasting memories in the great outdoors.</p>
-                        </div>
+                        <ul class="info-list">
+                            <li class="info-item">
+                                <div class="icon bg-blue-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text-content">
+                                    <h3 class="info-title">Our Address</h3>
+                                    <p class="info-description">123 Trailblazer Lane, Adventure</p>
+                                </div>
+                            </li>
+                            <li class="info-item">
+                                <div class="icon bg-blue-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                                        <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                        <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text-content">
+                                    <h3 class="info-title">Contact</h3>
+                                    <p class="info-description">Mobile: +91 921 456-7890</p>
+                                    <p class="info-description">Mail: buddyTrail@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="info-item">
+                                <div class="icon bg-blue-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                        <path d="M12 7v5l3 3"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text-content">
+                                    <h3 class="wr">Working Hours</h3>
+                                    <p class="info-description">Monday - Friday: 08:00 - 17:00</p>
+                                    <p class="info-description">Saturday & Sunday: 08:00 - 12:00</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
+                    <div class="form-container">
+                        <h2 class="form-title">Ready to Get Started?</h2>
                         <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
-                                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-                                oninput="this.setCustomValidity('')">
+                            <div class="input-group">
+                                <input type="text" id="name" placeholder="Your name" class="input-field">
+                                <input type="email" id="email" placeholder="Your email address" class="input-field">
+                                <textarea id="textarea" placeholder="Write your message..." class="input-field" style="resize: none;"></textarea>
                             </div>
-                            <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                            <div class="submit-button-container">
+                                <button type="submit" class="submit-button">Send Message</button>
                             </div>
-                            <div class="form-group">
-                                <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
-  
+        </div>
+    </section>
+    
     
       <!-- Add this custom popup HTML -->
       <div id="confirmationPopup" class="popup" style="display: none;">
@@ -1379,55 +845,10 @@ button:hover:before {
       </div>
     </div>
   </main>
-
-  <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading" >Testimonials</h2>
-     
-    <div class="testimonials-container">
-      <div class="header1 test"> 
-      <figure class="snip1533">
-        <figcaption>
-          <blockquote>
-            <p>It made solo travel a breeze! I met amazing companions and discovered hidden gems.</p>
-          </blockquote>
-          <h3>Wisteria Ravenclaw</h3>
-          <h4>Traveller</h4>
-        </figcaption>
-      </figure>
-      </div>
-      <div class="header2 test"> 
-      <figure class="snip1533">
-         
-        <figcaption>
-          <blockquote>
-            <p>Finding the perfect travel group was so easy with Buddy Trail. Unforgettable trips, hassle-free planning!
-            </p>
-          </blockquote>
-          <h3>Ursula Gurnmeister</h3>
-          <h4>Traveller</h4>
-        </figcaption>
-      </figure>
-    </div>
-    <div class="header1 test"> 
-      <figure class="snip1533">
-         
-        <figcaption>
-          <blockquote>
-            <p>I found great travel buddies for my Europe trip! The platform is intuitive and made my adventure even
-              better. </p>
-          </blockquote>
-          <h3>Ingredia Nutrisha</h3>
-          <h4>Traveller</h4>
-        </figcaption>
-      </figure></div>
-    </div>
-  </section>
-
-
   <section id="reviews" class="reviews-section">
-    <div class="revieww">
+    <div class="review">
       <div class="review-form">
-        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
+        <h2>Rate your experience</h2>
         <p class="review-p">
           Read what others have to say about their experiences with various
           destinations, hotels, flights, and activities. Share your own reviews
@@ -1436,18 +857,14 @@ button:hover:before {
 
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn">Your Name:</label>
-            <input type="text" id="name" name="name" required required pattern="[a-zA-Z ]+"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
 
-            <label for="destination" id="darkbtn">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
+            <label for="destination">Destination/Service:</label>
+            <input type="text" id="destination" name="destination" required />
 
-            <label for="rating" id="darkbtn">Rating:</label>
-            <select id="rating" class="rating" name="rating">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
@@ -1455,9 +872,9 @@ button:hover:before {
               <option value="1">⭐</option>
             </select>
 
-            <label for="review" id="darkbtn">Your Review:</label>
+            <label for="review">Your Review:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
-            <label for="complaint" id="darkbtn">Complaint (if any):</label>
+            <label for="complaint">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
 
@@ -1477,23 +894,252 @@ button:hover:before {
   </section>
 
 
-  <!-- Chatbot icon -->
-  <div id="chat-icon">🤖</div>
 
-  <!-- Chatbot container -->
-  <div id="chatbot">
-      <div id="chat-header">
-          <span>TrailBot</span>
-          <button id="close-button">✖</button> <!-- Close button -->
+  <div class="fixed bottom-0 right-2 chatbot-container">
+    <!-- Button to open/close the chatbot -->
+    <button class="chatbot-button group" onclick="toggleChat()">
+      <img src="chatbot.gif" alt="chatbot" />
+      <span class="tooltip-text">Welcome to Buddytrail! <br />How can I help You? ^_^</span>
+    </button>
+  
+    <!-- Chatbot area -->
+    <div id="chatbot-area" class="chatbot-iframe" style="display: none;">
+      <div class="chat-header">
+        <span>Chat with Buddytrail Bot</span>
       </div>
-      <div id="chatbox">
-          <div id="messages"></div>
+  
+      <!-- Messages Section -->
+      <div class="chat-messages" id="chat-messages">
+        <!-- Sample messages -->
+        <div class="message incoming">
+          <p>Hello! How can I assist you today?</p>
+        </div>
+        <div class="message outgoing">
+          <p>I'm looking for more information about your services.</p>
+        </div>
       </div>
-      <input type="text" id="user-input" placeholder="Type your message here..." />
-      <button id="send-button">Send</button>
+  
+      <!-- Input area -->
+      <div class="chat-input-container">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button class="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
   </div>
   
-  <script src="chatbot.js"></script>
+  <style>/* Chatbot container and button */
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .chat
+    
+    .chatbot-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    
+    /* Chatbot iframe - Chat area */
+    .chatbot-iframe {
+      width: 350px;
+      height: 500px;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      display: none;
+      z-index: 100000;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Header without close button */
+    .chat-header {
+      background-color: #197ae2;
+      color: white;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Message display area */
+    .chat-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background-color: #f1f1f1;
+    }
+    
+    /* Chat input area */
+    .chat-input-container {
+      display: flex;
+      padding: 10px;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+    }
+    
+    #chat-input {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .send-btn {
+      margin-left: 10px;
+      background-color: #45515f;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .send-btn:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Message bubbles */
+    .message {
+      max-width: 75%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .message.incoming {
+  background: rgba(255, 0, 0, 0.3); /* Transparent black */
+  color: #000000; /* Black text color for incoming messages */
+  align-self: flex-start; /* Align the message to the left side of the container */
+  border-radius: 20px 20px 20px 0; /* Rounded bubble style */
+  max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+  padding: 10px; /* Add some padding inside the bubble */
+}
+
+.message.outgoing {
+  background: rgba(52, 177, 94, 0.8); /* Solid blue */
+  color: #000000; /* White text color for outgoing messages */
+  align-self: flex-end; /* Align the message to the right side of the container */
+  border-radius: 20px 20px 0 20px; /* Rounded bubble style */
+  max-width: 75%; /* Ensure message bubbles don't exceed 75% of the container width */
+  margin-left: auto; /* Automatically push the message to the right */
+  text-align: right; /* Align the text to the right within the message bubble */
+  padding: 10px; /* Add some padding inside the bubble */
+}
+
+    
+    </style>
+          <script>
+       // Toggle chatbot open/close
+function toggleChat() {
+  var chatArea = document.getElementById("chatbot-area");
+  if (chatArea.style.display === "none" || chatArea.style.display === "") {
+    chatArea.style.display = "flex";
+  } else {
+    chatArea.style.display = "none";
+  }
+}
+
+// Send message
+function sendMessage() {
+  var inputField = document.getElementById("chat-input");
+  var messageText = inputField.value;
+  if (messageText.trim() === "") return;
+
+  // Create an outgoing message bubble
+  var messageBubble = document.createElement("div");
+  messageBubble.classList.add("message", "outgoing");
+  messageBubble.textContent = messageText;
+
+  // Append the message to the chat
+  var chatMessages = document.getElementById("chat-messages");
+  chatMessages.appendChild(messageBubble);
+
+  // Scroll to the bottom of the chat
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Clear the input field
+  inputField.value = "";
+
+  // Simulate a bot response
+  setTimeout(function () {
+    var botMessage = document.createElement("div");
+    botMessage.classList.add("message", "incoming");
+    botMessage.textContent = getBotResponse(messageText);
+    chatMessages.appendChild(botMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 1000);
+}
+
+// Add event listener for the Enter key
+document.getElementById("chat-input").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+
+// Function to get bot response based on input
+function getBotResponse(input) {
+  // Normalize input: lowercase and remove punctuation
+  const normalizedInput = input.toLowerCase().replace(/[?.,!]/g, '').trim();
+
+  const responses = {
+    "what is buddytrail": "BuddyTrail is a travel planning service that offers personalized itineraries and exclusive deals on flights and accommodations. Learn more at [BuddyTrail](https://buddytrail.netlify.app/).",
+    "how can i book a trip": "You can book a trip directly through our website by selecting your destination and preferences.",
+    "what destinations are available": "We provide itineraries for popular destinations around the world. Check our website for more details.",
+    "do you offer cab booking": "Yes, BuddyTrail offers cab booking services. Please visit our booking section for more information.",
+    "how can i contact support": "For support, please reach out to us via the contact form on our website.",
+    // Add more questions and answers as needed
+  };
+
+  // Check normalized input and return appropriate response
+  for (const [question, response] of Object.entries(responses)) {
+    if (normalizedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  // Attempt to correct common spelling mistakes
+  const correctedInput = correctSpelling(normalizedInput);
+  for (const [question, response] of Object.entries(responses)) {
+    if (correctedInput.includes(question)) {
+      return response;
+    }
+  }
+
+  return "I'm sorry, I didn't understand that. Can you ask something else?";
+}
+
+// Simple spelling correction (basic approach)
+function correctSpelling(input) {
+  const corrections = {
+    "buddytrail": "BuddyTrail",
+    "bookin": "booking",
+    "destinashun": "destination",
+    // Add more common misspellings and corrections as needed
+  };
+
+  for (const [misspelled, correct] of Object.entries(corrections)) {
+    if (input.includes(misspelled)) {
+      return input.replace(misspelled, correct);
+    }
+  }
+  return input; // Return the input if no corrections are made
+}
+
+            </script>
+    </a>
       <div class="fixed bottom-0 right-2 scroll-container">
         <button class="scroll-button group" id="scrollTopBtn">
           <span class="tooltip-text-scroll">
@@ -1505,16 +1151,16 @@ button:hover:before {
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
 
-  <footer id="footer">
-    <div class="footer-container" id="footer">
+  <footer>
+    <div class="footer-container">
       <div class="footer-column">
         
 
-    <footer id="footer">
+    <footer>
       <div class="footer-container">
           <div class="footer-column">
               <h3>About Us</h3>
-              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+              <p>We are a team of passionate developers creating amazing web experiences.</p>
           </div>
           <div class="footer-column">
               <h3>Quick Links</h3>
@@ -1523,23 +1169,22 @@ button:hover:before {
                   <li><a href="#">About</a></li>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">Contact</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="contributor/contributor.html">Our Contributor</a></li>
-
               </ul>
           </div>
           <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
+            <div id="footer-contact-us">
+             <h3>Contact Us</h3>
+             <a href="mailto:test@mail.com">info@example.com</a>
+             <a href="tel:+911234567890">+91 1234567890</a>
+            </div>
+           </div>
           <div class="footer-column">
               <h3>Follow Us</h3>
               <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
      
@@ -1550,7 +1195,7 @@ button:hover:before {
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
-  <!-- Deals and Offers Popup
+  <!-- Deals and Offers Popup -->
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
       <span class="close-btn" id="closePopup">&times;</span>
@@ -1562,7 +1207,7 @@ button:hover:before {
       <button onclick="document.getElementById('dealsPopup').style.display = 'none'; window.location.href='#deals'">
         Check Out Deals
       </button>
-    </div> -->
+    </div>
   </div>
   <!-- this script is for twitter icon  starts -->
   <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
@@ -1736,6 +1381,9 @@ button:hover:before {
   }
     </style>
   </script>
+  
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/09/17/20241009175703-8PFPCXJZ.js"></script>  
  
 </body>
 
