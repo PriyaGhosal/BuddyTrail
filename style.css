@@ -2245,13 +2245,17 @@ body.light-mode {
   position: absolute;
   bottom: 10%; /* Position above the button */
   right: 50%;
+ margin-bottom: 0.125rem;
   transform: translateX(50%);
   color: #fff; /* Tooltip text color */
   padding: 5px;
   border-radius: 5px;
   white-space: nowrap; /* Prevent text from wrapping */
 }
-
+.tooltip-icon{
+  justify-content: center;
+  align-items: center;
+}
 /* testimonials */
 .testimonials-heading {
   text-align: center;
