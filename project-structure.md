@@ -1,6 +1,5 @@
 <!-- START_STRUCTURE -->
 ```
-├── BuddyTrail
 ├── Code_of_Conduct.md
 ├── LICENSE
 ├── README.md
@@ -16,6 +15,11 @@
 ├── chatbot.js
 ├── contact.css
 ├── contact.html
+├── contact.js
+├── contributor
+│   ├── contributor.css
+│   ├── contributor.html
+│   └── contributor.js
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -60,6 +64,7 @@
 ├── script.js
 ├── star-rating.js
 ├── style.css
-└── team.html
+├── team.html
+└── update discussion forum
 ```
 <!-- END_STRUCTURE -->

@@ -844,25 +844,201 @@
       </div>
     </section>
     <!--posts section-->
-    <header class="posts_blog">
-      <h1>POSTS AND VLOGS</h1>
-    </header>
-  
-    <main class="main_blogs">
-      <section id="upload">
-        <h2>Upload Content</h2>
-        <form id="upload-form">
-          <input type="file" id="file-input">
-          <button type="submit">Upload</button>
-        </form>
-      </section>
-  
-      <section id="content">
-        <h2>Content</h2>
-        <ul id="content-list"></ul>
-      </section>
-    </main>
-  
+    <div id="posts">
+      <header class="posts_blog">
+        <h1>POSTS AND VLOGS</h1>
+      </header>
+    
+      <main class="main_blogs">
+        <section id="upload">
+          <h2>Upload Content</h2>
+          <form id="upload-form">
+            <input type="file" id="file-input">
+            <button id="submit" type="submit">Upload</button>
+          </form>
+        </section>
+    
+        <section id="content">
+          <h2>Content</h2>
+          <input id="content-input" type="text">
+          <ul id="content-list"></ul>
+        </section>
+      </main>
+    </div>
+    <style>
+
+        /* Container for the posts and vlogs section */
+        #posts {
+          max-width: 1200px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: #fff;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          border-radius: 12px;
+        }
+
+        #content-input{
+          width: 400px;
+          height: 200px;
+          border-color: #81c784;
+        }
+
+        /* Header styling */
+        header.posts_blog {
+          background-color: #4caf50;
+          padding: 20px;
+          text-align: center;
+          border-radius: 12px 12px 0 0;
+        }
+
+        header.posts_blog h1 {
+          color: #fff;
+          font-size: 2.5rem;
+          margin: 0;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        /* Main section styling */
+        main.main_blogs {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        /* Upload Section */
+        #upload {
+          width: 40%;
+          background-color: #e8f5e9;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #upload h2 {
+          font-size: 1.8rem;
+          color: #4caf50;
+          margin-bottom: 15px;
+        }
+
+        #upload-form {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #file-input {
+        border: 2px dashed #4caf50;
+        background-color: #f1f8e9;
+        color: #4caf50;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: border-color 0.3s, background-color 0.3s;
+      }
+
+      /* Hover state: change border and background color */
+      #file-input:hover {
+        border-color: #81c784;
+        background-color: #e8f5e9;
+      }
+
+      /* Focus state: when the input is clicked */
+      #file-input:focus {
+        outline: none;
+        border-color: #66bb6a;
+        background-color: #c8e6c9;
+      }
+
+      /* Active state: when file is being dragged over the input */
+      #file-input:active,
+      #file-input:focus-visible {
+        border-color: #388e3c;
+        background-color: #a5d6a7;
+      }
+
+      /* File input placeholder text styling */
+      #file-input::file-selector-button {
+        color: #fff;
+        background-color: #4caf50;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #file-input::file-selector-button:hover {
+        background-color: #66bb6a;
+      }
+
+
+        #submit{
+          background-color: #876bb1;
+          margin-left: 40px;
+          margin-top: 20px;
+          
+        }
+
+        #submit:hover{
+          background-color: #744caf;
+        }
+
+        #upload-form button {
+          
+          color: #fff;
+          padding: 10px;
+          border: 1px solid #4caf50; /* Add a border to make the button more visible */
+          cursor: pointer;
+          font-size: 1.2rem;
+          transition: background-color 0.3s;
+        }
+
+        #upload-form button:hover {
+          background-color: #c081c7;
+        }
+
+        /* Content Section */
+        #content {
+          width: 55%;
+        }
+
+        #content h2 {
+          font-size: 1.8rem;
+          color: #4caf50;
+          margin-bottom: 15px;
+        }
+
+        #content-list {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        #content-list li {
+          background-color: #e8f5e9;
+          padding: 15px;
+          margin-bottom: 10px;
+          border-radius: 8px;
+          transition: background-color 0.3s;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        #content-list li:hover {
+          background-color: #c8e6c9;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+          main.main_blogs {
+            flex-direction: column;
+          }
+
+          #upload, #content {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+        }
+
+    </style>
     <script src="script.js"></script>
     <!--forum Section-->
     <header class="forum_1">
@@ -880,6 +1056,47 @@
   </header>
 
   <main>
+   <style>
+     #destinations {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  .post-container {
+      width: 100%;
+  }
+  
+  #postForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  #postContent {
+      width: 100%;
+      min-height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+  }
+  
+  button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  #posts {
+      width: 100%;
+  }
+  </style>
       <section id="destinations">
           <h2>Destination Guides</h2>
           <div class="post-container">
@@ -892,9 +1109,229 @@
           </div>
       </section>
 
+
       <!-- Add more sections for other categories -->
   </main>
+  <style>
+    /* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-out;
+}
+
+#destinations {
+  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+#destinations:hover {
+  transform: scale(1.02);
+}
+
+.post-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.7s ease-out;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: #007BFF;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+textarea {
+  min-height: 150px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+  background-color: #f0f8ff;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+button:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#posts {
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+#posts > div {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+#posts > div:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  #destinations {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  button {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
   <script src="script.js"></script>
 
     <style>
@@ -983,7 +1420,9 @@
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+                                oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" class="form-control" placeholder="Your Email" required>
@@ -1023,7 +1462,7 @@
     <h2 class="testimonials-heading" >Testimonials</h2>
      
     <div class="testimonials-container">
-      <div class="header1"> 
+      <div class="header1 test"> 
       <figure class="snip1533">
         <figcaption>
           <blockquote>
@@ -1034,7 +1473,7 @@
         </figcaption>
       </figure>
       </div>
-      <div class="header2"> 
+      <div class="header2 test"> 
       <figure class="snip1533">
          
         <figcaption>
@@ -1047,7 +1486,7 @@
         </figcaption>
       </figure>
     </div>
-    <div class="header1"> 
+    <div class="header1 test"> 
       <figure class="snip1533">
          
         <figcaption>
@@ -1076,10 +1515,14 @@
         <div style="margin-top: 20px">
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn">Your Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" required required pattern="[a-zA-Z ]+"
+            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+            oninput="this.setCustomValidity('')"/>
 
             <label for="destination" id="darkbtn">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required />
+            <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+            oninput="this.setCustomValidity('')"/>
 
             <label for="rating" id="darkbtn">Rating:</label>
             <select id="rating" class="rating" name="rating">
@@ -1159,6 +1602,7 @@
                   <li><a href="#">Services</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><a href="team.html">Team</a></li>
+                  <li><a href="contributor/contributor.html">Our Contributor</a></li>
 
               </ul>
           </div>

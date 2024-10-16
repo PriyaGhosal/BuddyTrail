@@ -85,6 +85,21 @@
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+⚙️ Getting Started with the Code:
+1. Fork this Repository  🍴 
+2. Clone to your local machine 🧩:
+    git clone https://github.com/Your-Username/BuddyTrail.git
+3. Create a new branch :
+    git branch -c "Feature-Name"
+4. Navigate to the branch :
+    git checkout Feature-Name
+5. Add changes and Commit:
+    git commit -m "Add Changes msg"
+6. Push to the branch :
+    git push origin Feature-Name
+7. Submit Pull Request 
+
+
 ## 🛠️ Technologies Used
 
 **📝 HTML/CSS:** For building and styling the website structure.
@@ -184,6 +199,13 @@ You can find the project structure in the [Project Structure](project-structure.
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/AsifQamar">
+                    <img src="https://avatars.githubusercontent.com/u/93258479?v=4" width="100;" alt="AsifQamar"/>
+                    <br />
+                    <sub><b>Cyphrr_07 </b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/devarsheecodess">
                     <img src="https://avatars.githubusercontent.com/u/114805934?v=4" width="100;" alt="devarsheecodess"/>
                     <br />
@@ -198,10 +220,10 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/rees8">
-                    <img src="https://avatars.githubusercontent.com/u/88110289?v=4" width="100;" alt="rees8"/>
+                <a href="https://github.com/akash70629">
+                    <img src="https://avatars.githubusercontent.com/u/76689571?v=4" width="100;" alt="akash70629"/>
                     <br />
-                    <sub><b>Rhea</b></sub>
+                    <sub><b>Akash Das</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -212,10 +234,19 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/AsifQamar">
-                    <img src="https://avatars.githubusercontent.com/u/93258479?v=4" width="100;" alt="AsifQamar"/>
+                <a href="https://github.com/Sudhanshu248">
+                    <img src="https://avatars.githubusercontent.com/u/152962449?v=4" width="100;" alt="Sudhanshu248"/>
                     <br />
-                    <sub><b>Cyphrr_07 </b></sub>
+                    <sub><b>Sudhanshu Saini</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/rees8">
+                    <img src="https://avatars.githubusercontent.com/u/88110289?v=4" width="100;" alt="rees8"/>
+                    <br />
+                    <sub><b>Rhea</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -225,13 +256,18 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Himangshu Sharma</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/avisha191">
                     <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
                     <br />
                     <sub><b>avisha191</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/tarunkumar2005">
+                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
+                    <br />
+                    <sub><b>Tarun kumar</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -248,13 +284,8 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Archisman Khanra</b></sub>
                 </a>
             </td>
-            <td align="center">
-                <a href="https://github.com/tarunkumar2005">
-                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
-                    <br />
-                    <sub><b>Tarun kumar</b></sub>
-                </a>
-            </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/dwivedishrey">
                     <img src="https://avatars.githubusercontent.com/u/97790062?v=4" width="100;" alt="dwivedishrey"/>
@@ -269,48 +300,32 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Aradhya  Yadav</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
-                <a href="https://github.com/abdullah-k18">
-                    <img src="https://avatars.githubusercontent.com/u/115644774?v=4" width="100;" alt="abdullah-k18"/>
+                <a href="https://github.com/isimarjitsingh">
+                    <img src="https://avatars.githubusercontent.com/u/154678140?v=4" width="100;" alt="isimarjitsingh"/>
                     <br />
-                    <sub><b>Abdullah Bin Altaf</b></sub>
+                    <sub><b>Simarjit Singh</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/T-Rahul-prabhu-38">
-                    <img src="https://avatars.githubusercontent.com/u/167653990?v=4" width="100;" alt="T-Rahul-prabhu-38"/>
+                <a href="https://github.com/Annapoornaaradhya">
+                    <img src="https://avatars.githubusercontent.com/u/139335974?v=4" width="100;" alt="Annapoornaaradhya"/>
                     <br />
-                    <sub><b>Abankita Behera </b></sub>
+                    <sub><b>ANNAPOORNA V</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/jvkousthub">
-                    <img src="https://avatars.githubusercontent.com/u/162019723?v=4" width="100;" alt="jvkousthub"/>
+                <a href="https://github.com/Aarnachauhan">
+                    <img src="https://avatars.githubusercontent.com/u/175851904?v=4" width="100;" alt="Aarnachauhan"/>
                     <br />
-                    <sub><b>Kousthub J V</b></sub>
+                    <sub><b>Aarna chauhan</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/MOHIT-IITP">
-                    <img src="https://avatars.githubusercontent.com/u/136831716?v=4" width="100;" alt="MOHIT-IITP"/>
+                <a href="https://github.com/RahulScripted">
+                    <img src="https://avatars.githubusercontent.com/u/181909739?v=4" width="100;" alt="RahulScripted"/>
                     <br />
-                    <sub><b>Mohit Kumar</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Adarsh-Chaubey03">
-                    <img src="https://avatars.githubusercontent.com/u/179824602?v=4" width="100;" alt="Adarsh-Chaubey03"/>
-                    <br />
-                    <sub><b>Adarsh Chaubey</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Abankita">
-                    <img src="https://avatars.githubusercontent.com/u/138569378?v=4" width="100;" alt="Abankita"/>
-                    <br />
-                    <sub><b>Abankita Behera </b></sub>
+                    <sub><b>RahulScripted</b></sub>
                 </a>
             </td>
 		</tr>
@@ -323,31 +338,68 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/RahulScripted">
-                    <img src="https://avatars.githubusercontent.com/u/181909739?v=4" width="100;" alt="RahulScripted"/>
+                <a href="https://github.com/Abankita">
+                    <img src="https://avatars.githubusercontent.com/u/138569378?v=4" width="100;" alt="Abankita"/>
                     <br />
-                    <sub><b>RahulScripted</b></sub>
+                    <sub><b>Abankita Behera </b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Aarnachauhan">
-                    <img src="https://avatars.githubusercontent.com/u/175851904?v=4" width="100;" alt="Aarnachauhan"/>
+                <a href="https://github.com/Adarsh-Chaubey03">
+                    <img src="https://avatars.githubusercontent.com/u/179824602?v=4" width="100;" alt="Adarsh-Chaubey03"/>
                     <br />
-                    <sub><b>Aarna chauhan</b></sub>
+                    <sub><b>Adarsh Chaubey</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Annapoornaaradhya">
-                    <img src="https://avatars.githubusercontent.com/u/139335974?v=4" width="100;" alt="Annapoornaaradhya"/>
+                <a href="https://github.com/MOHIT-IITP">
+                    <img src="https://avatars.githubusercontent.com/u/136831716?v=4" width="100;" alt="MOHIT-IITP"/>
                     <br />
-                    <sub><b>ANNAPOORNA V</b></sub>
+                    <sub><b>Mohit Kumar</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/vaibhav-yerkar">
-                    <img src="https://avatars.githubusercontent.com/u/124194806?v=4" width="100;" alt="vaibhav-yerkar"/>
+                <a href="https://github.com/abdullah-k18">
+                    <img src="https://avatars.githubusercontent.com/u/115644774?v=4" width="100;" alt="abdullah-k18"/>
                     <br />
-                    <sub><b>Vaibhav._Y</b></sub>
+                    <sub><b>Abdullah Bin Altaf</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/jvkousthub">
+                    <img src="https://avatars.githubusercontent.com/u/162019723?v=4" width="100;" alt="jvkousthub"/>
+                    <br />
+                    <sub><b>Kousthub J V</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/T-Rahul-prabhu-38">
+                    <img src="https://avatars.githubusercontent.com/u/167653990?v=4" width="100;" alt="T-Rahul-prabhu-38"/>
+                    <br />
+                    <sub><b>Abankita Behera </b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/ananyag309">
+                    <img src="https://avatars.githubusercontent.com/u/145869907?v=4" width="100;" alt="ananyag309"/>
+                    <br />
+                    <sub><b>Ananya Gupta</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Aditi2k5">
+                    <img src="https://avatars.githubusercontent.com/u/146500979?v=4" width="100;" alt="Aditi2k5"/>
+                    <br />
+                    <sub><b>Aditi Prabakaran</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/srishti023">
+                    <img src="https://avatars.githubusercontent.com/u/137069939?v=4" width="100;" alt="srishti023"/>
+                    <br />
+                    <sub><b>Srishti Choudhary</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -355,6 +407,13 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/152640996?v=4" width="100;" alt="poorvikaa08"/>
                     <br />
                     <sub><b>Poorvika</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/vaibhav-yerkar">
+                    <img src="https://avatars.githubusercontent.com/u/124194806?v=4" width="100;" alt="vaibhav-yerkar"/>
+                    <br />
+                    <sub><b>Vaibhav._Y</b></sub>
                 </a>
             </td>
 		</tr>
@@ -367,38 +426,38 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/srishti023">
-                    <img src="https://avatars.githubusercontent.com/u/137069939?v=4" width="100;" alt="srishti023"/>
+                <a href="https://github.com/Mr-DK07">
+                    <img src="https://avatars.githubusercontent.com/u/143409270?v=4" width="100;" alt="Mr-DK07"/>
                     <br />
-                    <sub><b>Srishti Choudhary</b></sub>
+                    <sub><b>D K</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Aditi2k5">
-                    <img src="https://avatars.githubusercontent.com/u/146500979?v=4" width="100;" alt="Aditi2k5"/>
+                <a href="https://github.com/hgjajoo">
+                    <img src="https://avatars.githubusercontent.com/u/63530396?v=4" width="100;" alt="hgjajoo"/>
                     <br />
-                    <sub><b>Aditi Prabakaran</b></sub>
+                    <sub><b>Harshvardhan Jajoo</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Sudhanshu248">
-                    <img src="https://avatars.githubusercontent.com/u/152962449?v=4" width="100;" alt="Sudhanshu248"/>
+                <a href="https://github.com/hritika2409">
+                    <img src="https://avatars.githubusercontent.com/u/117531823?v=4" width="100;" alt="hritika2409"/>
                     <br />
-                    <sub><b>Sudhanshu Saini</b></sub>
+                    <sub><b>Hritika Sharan</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/riyaaryan2004">
-                    <img src="https://avatars.githubusercontent.com/u/145834658?v=4" width="100;" alt="riyaaryan2004"/>
+                <a href="https://github.com/Ishika-Gupta06">
+                    <img src="https://avatars.githubusercontent.com/u/118624573?v=4" width="100;" alt="Ishika-Gupta06"/>
                     <br />
-                    <sub><b>Riya Aryan</b></sub>
+                    <sub><b>Ishika Gupta</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/snehhhcodes">
-                    <img src="https://avatars.githubusercontent.com/u/169922226?v=4" width="100;" alt="snehhhcodes"/>
+                <a href="https://github.com/Kavish-Paraswar">
+                    <img src="https://avatars.githubusercontent.com/u/162621258?v=4" width="100;" alt="Kavish-Paraswar"/>
                     <br />
-                    <sub><b>Sneha Tiwari</b></sub>
+                    <sub><b>Kavish Paraswar</b></sub>
                 </a>
             </td>
 		</tr>
@@ -411,61 +470,47 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/ananyag309">
-                    <img src="https://avatars.githubusercontent.com/u/145869907?v=4" width="100;" alt="ananyag309"/>
+                <a href="https://github.com/snehhhcodes">
+                    <img src="https://avatars.githubusercontent.com/u/169922226?v=4" width="100;" alt="snehhhcodes"/>
                     <br />
-                    <sub><b>Ananya Gupta</b></sub>
+                    <sub><b>Sneha Tiwari</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Mr-DK07">
-                    <img src="https://avatars.githubusercontent.com/u/143409270?v=4" width="100;" alt="Mr-DK07"/>
+                <a href="https://github.com/riyaaryan2004">
+                    <img src="https://avatars.githubusercontent.com/u/145834658?v=4" width="100;" alt="riyaaryan2004"/>
                     <br />
-                    <sub><b>D K</b></sub>
+                    <sub><b>Riya Aryan</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Kavish-Paraswar">
-                    <img src="https://avatars.githubusercontent.com/u/162621258?v=4" width="100;" alt="Kavish-Paraswar"/>
+                <a href="https://github.com/shivisingh25">
+                    <img src="https://avatars.githubusercontent.com/u/142368095?v=4" width="100;" alt="shivisingh25"/>
                     <br />
-                    <sub><b>Kavish Paraswar</b></sub>
+                    <sub><b>Shivangi Singh</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/hgjajoo">
-                    <img src="https://avatars.githubusercontent.com/u/63530396?v=4" width="100;" alt="hgjajoo"/>
+                <a href="https://github.com/tusharmishra069">
+                    <img src="https://avatars.githubusercontent.com/u/118966111?v=4" width="100;" alt="tusharmishra069"/>
                     <br />
-                    <sub><b>Harshvardhan Jajoo</b></sub>
+                    <sub><b>Tushar Mishra</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Ishika-Gupta06">
-                    <img src="https://avatars.githubusercontent.com/u/118624573?v=4" width="100;" alt="Ishika-Gupta06"/>
+                <a href="https://github.com/swamimalode07">
+                    <img src="https://avatars.githubusercontent.com/u/139348491?v=4" width="100;" alt="swamimalode07"/>
                     <br />
-                    <sub><b>Ishika Gupta</b></sub>
+                    <sub><b>Swami Malode</b></sub>
                 </a>
             </td>
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/hritika2409">
-                    <img src="https://avatars.githubusercontent.com/u/117531823?v=4" width="100;" alt="hritika2409"/>
+                <a href="https://github.com/Codewithmeowmeow">
+                    <img src="https://avatars.githubusercontent.com/u/182342654?v=4" width="100;" alt="Codewithmeowmeow"/>
                     <br />
-                    <sub><b>Hritika Sharan</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/yasheela-alla">
-                    <img src="https://avatars.githubusercontent.com/u/149046088?v=4" width="100;" alt="yasheela-alla"/>
-                    <br />
-                    <sub><b>Ay4sh</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/isimarjitsingh">
-                    <img src="https://avatars.githubusercontent.com/u/154678140?v=4" width="100;" alt="isimarjitsingh"/>
-                    <br />
-                    <sub><b>Simarjit Singh</b></sub>
+                    <sub><b>codewithvibha</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -476,77 +521,10 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/swamimalode07">
-                    <img src="https://avatars.githubusercontent.com/u/139348491?v=4" width="100;" alt="swamimalode07"/>
-                    <br />
-                    <sub><b>Swami Malode</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/shivisingh25">
-                    <img src="https://avatars.githubusercontent.com/u/142368095?v=4" width="100;" alt="shivisingh25"/>
-                    <br />
-                    <sub><b>Shivangi Singh</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/tusharmishra069">
-                    <img src="https://avatars.githubusercontent.com/u/118966111?v=4" width="100;" alt="tusharmishra069"/>
-                    <br />
-                    <sub><b>Tushar Mishra</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Codewithmeowmeow">
-                    <img src="https://avatars.githubusercontent.com/u/182342654?v=4" width="100;" alt="Codewithmeowmeow"/>
-                    <br />
-                    <sub><b>codewithvibha</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/poojitha-ch">
                     <img src="https://avatars.githubusercontent.com/u/104563340?v=4" width="100;" alt="poojitha-ch"/>
                     <br />
                     <sub><b>poojitha-ch</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Antima2004">
-                    <img src="https://avatars.githubusercontent.com/u/114092138?v=4" width="100;" alt="Antima2004"/>
-                    <br />
-                    <sub><b>Antima Mishra</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Ananya-vastare">
-                    <img src="https://avatars.githubusercontent.com/u/116643029?v=4" width="100;" alt="Ananya-vastare"/>
-                    <br />
-                    <sub><b>Ananya Ravikiran Vastare</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Amarjha01">
-                    <img src="https://avatars.githubusercontent.com/u/96826085?v=4" width="100;" alt="Amarjha01"/>
-                    <br />
-                    <sub><b>AMAR </b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/Darshan3690">
-                    <img src="https://avatars.githubusercontent.com/u/177705772?v=4" width="100;" alt="Darshan3690"/>
-                    <br />
-                    <sub><b>Darshan Rajput </b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/HarshadaGirase">
-                    <img src="https://avatars.githubusercontent.com/u/128895955?v=4" width="100;" alt="HarshadaGirase"/>
-                    <br />
-                    <sub><b>Harshada Girase</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -564,26 +542,77 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Prathameshzad">
-                    <img src="https://avatars.githubusercontent.com/u/86947319?v=4" width="100;" alt="Prathameshzad"/>
+                <a href="https://github.com/Ananya-vastare">
+                    <img src="https://avatars.githubusercontent.com/u/116643029?v=4" width="100;" alt="Ananya-vastare"/>
                     <br />
-                    <sub><b>Prathamesh Zad</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Palmistry2310">
-                    <img src="https://avatars.githubusercontent.com/u/126777510?v=4" width="100;" alt="Palmistry2310"/>
-                    <br />
-                    <sub><b>PalMistry</b></sub>
+                    <sub><b>Ananya Ravikiran Vastare</b></sub>
                 </a>
             </td>
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/Amarjha01">
+                    <img src="https://avatars.githubusercontent.com/u/96826085?v=4" width="100;" alt="Amarjha01"/>
+                    <br />
+                    <sub><b>AMAR </b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Antima2004">
+                    <img src="https://avatars.githubusercontent.com/u/114092138?v=4" width="100;" alt="Antima2004"/>
+                    <br />
+                    <sub><b>Antima Mishra</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/yasheela-alla">
+                    <img src="https://avatars.githubusercontent.com/u/149046088?v=4" width="100;" alt="yasheela-alla"/>
+                    <br />
+                    <sub><b>Ay4sh</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Dipanita45">
+                    <img src="https://avatars.githubusercontent.com/u/132455672?v=4" width="100;" alt="Dipanita45"/>
+                    <br />
+                    <sub><b>Dipanita45</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Darshan3690">
+                    <img src="https://avatars.githubusercontent.com/u/177705772?v=4" width="100;" alt="Darshan3690"/>
+                    <br />
+                    <sub><b>Darshan Rajput </b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/GautamBytes">
+                    <img src="https://avatars.githubusercontent.com/u/161146829?v=4" width="100;" alt="GautamBytes"/>
+                    <br />
+                    <sub><b>Gautam Manchandani</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/HarshadaGirase">
+                    <img src="https://avatars.githubusercontent.com/u/128895955?v=4" width="100;" alt="HarshadaGirase"/>
+                    <br />
+                    <sub><b>Harshada Girase</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Himanshu-kumar025">
                     <img src="https://avatars.githubusercontent.com/u/177013093?v=4" width="100;" alt="Himanshu-kumar025"/>
                     <br />
                     <sub><b>Himanshu Kumar</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Ishika-Singhal">
+                    <img src="https://avatars.githubusercontent.com/u/134579503?v=4" width="100;" alt="Ishika-Singhal"/>
+                    <br />
+                    <sub><b>Ishika Singhal </b></sub>
                 </a>
             </td>
             <td align="center">
@@ -594,10 +623,26 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Shobhit1729Aryan">
-                    <img src="https://avatars.githubusercontent.com/u/182258530?v=4" width="100;" alt="Shobhit1729Aryan"/>
+                <a href="https://github.com/Palmistry2310">
+                    <img src="https://avatars.githubusercontent.com/u/126777510?v=4" width="100;" alt="Palmistry2310"/>
                     <br />
-                    <sub><b>Shobhit Aryan</b></sub>
+                    <sub><b>PalMistry</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Prathameshzad">
+                    <img src="https://avatars.githubusercontent.com/u/86947319?v=4" width="100;" alt="Prathameshzad"/>
+                    <br />
+                    <sub><b>Prathamesh Zad</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Abhi-Jeeet">
+                    <img src="https://avatars.githubusercontent.com/u/157899302?v=4" width="100;" alt="Abhi-Jeeet"/>
+                    <br />
+                    <sub><b>Abhijeet Kumar</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -621,8 +666,13 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Supratit Datta</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
+            <td align="center">
+                <a href="https://github.com/Tanushree084">
+                    <img src="https://avatars.githubusercontent.com/u/176521591?v=4" width="100;" alt="Tanushree084"/>
+                    <br />
+                    <sub><b>Tanushree084</b></sub>
+                </a>
+            </td>
             <td align="center">
                 <a href="https://github.com/Varsha-1605">
                     <img src="https://avatars.githubusercontent.com/u/140236223?v=4" width="100;" alt="Varsha-1605"/>
@@ -630,13 +680,8 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Varsha Dewangan</b></sub>
                 </a>
             </td>
-            <td align="center">
-                <a href="https://github.com/shriyadindi">
-                    <img src="https://avatars.githubusercontent.com/u/126611334?v=4" width="100;" alt="shriyadindi"/>
-                    <br />
-                    <sub><b>Shriya Dindi</b></sub>
-                </a>
-            </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Vijitverm1234">
                     <img src="https://avatars.githubusercontent.com/u/143703788?v=4" width="100;" alt="Vijitverm1234"/>
@@ -665,8 +710,6 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Prajakta Nanda</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/Nimit1775">
                     <img src="https://avatars.githubusercontent.com/u/74372261?v=4" width="100;" alt="Nimit1775"/>
@@ -675,12 +718,14 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/sv410">
-                    <img src="https://avatars.githubusercontent.com/u/164530944?v=4" width="100;" alt="sv410"/>
+                <a href="https://github.com/prachitriv">
+                    <img src="https://avatars.githubusercontent.com/u/164743217?v=4" width="100;" alt="prachitriv"/>
                     <br />
-                    <sub><b>srivani vinnakota</b></sub>
+                    <sub><b>prachitriv</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/ruchikakengal">
                     <img src="https://avatars.githubusercontent.com/u/177725578?v=4" width="100;" alt="ruchikakengal"/>
@@ -709,13 +754,27 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>smog-root</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/souvikpramanikgit">
                     <img src="https://avatars.githubusercontent.com/u/123581988?v=4" width="100;" alt="souvikpramanikgit"/>
                     <br />
                     <sub><b>Souvik Kumar Pramanik</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/sv410">
+                    <img src="https://avatars.githubusercontent.com/u/164530944?v=4" width="100;" alt="sv410"/>
+                    <br />
+                    <sub><b>srivani vinnakota</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/shriyadindi">
+                    <img src="https://avatars.githubusercontent.com/u/126611334?v=4" width="100;" alt="shriyadindi"/>
+                    <br />
+                    <sub><b>Shriya Dindi</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -791,21 +850,14 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/GautamBytes">
-                    <img src="https://avatars.githubusercontent.com/u/161146829?v=4" width="100;" alt="GautamBytes"/>
-                    <br />
-                    <sub><b>Gautam Manchandani</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/Geet2002">
                     <img src="https://avatars.githubusercontent.com/u/129830187?v=4" width="100;" alt="Geet2002"/>
                     <br />
                     <sub><b>Geetartha Bordoloi</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/IshaRawat7">
                     <img src="https://avatars.githubusercontent.com/u/139321266?v=4" width="100;" alt="IshaRawat7"/>
@@ -841,8 +893,6 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Nitheesha </b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/OmmDevgoswami">
                     <img src="https://avatars.githubusercontent.com/u/127383096?v=4" width="100;" alt="OmmDevgoswami"/>
@@ -850,6 +900,8 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Omm Devgoswami</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Peart-Guy">
                     <img src="https://avatars.githubusercontent.com/u/179379879?v=4" width="100;" alt="Peart-Guy"/>
@@ -869,6 +921,13 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/142642917?v=4" width="100;" alt="shashankgoud18"/>
                     <br />
                     <sub><b>Shashank Goud</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Shobhit1729Aryan">
+                    <img src="https://avatars.githubusercontent.com/u/182258530?v=4" width="100;" alt="Shobhit1729Aryan"/>
+                    <br />
+                    <sub><b>Shobhit Aryan</b></sub>
                 </a>
             </td>
 		</tr>
