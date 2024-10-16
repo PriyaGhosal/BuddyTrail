@@ -13,6 +13,7 @@
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
+├── conn.jpeg
 ├── contact.css
 ├── contact.html
 ├── contact.js
@@ -37,6 +38,7 @@
 │   ├── twitter.svg
 │   └── youtube.svg
 ├── img
+│   ├── back.png
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
