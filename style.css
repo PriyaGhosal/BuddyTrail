@@ -74,6 +74,20 @@ nav a {
   text-decoration: none;
 }
 
+#destinations {
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  width: 90%;
+}
+
+#destinations h2{
+  font-size: 4rem;
+}
+
+.post-container h3{
+  text-align: start;
+}
 
 .post-container {
   background: #ffffff;
@@ -90,8 +104,9 @@ textarea {
   border-radius: 5px;
 }
 
-button {
-  background: #35424a;
+.post-container button {
+  background: rgb(8, 47, 165);
+  width: 14rem;
   color: #ffffff;
   padding: 10px;
   border: none;
@@ -99,8 +114,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #2c3e50;
+.post-container button:hover {
+  transform: scale(1.025);
+  background: #1e71c5;
 }
 
 .post {
