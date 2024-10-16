@@ -85,6 +85,21 @@
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+⚙️ Getting Started with the Code:
+1. Fork this Repository  🍴 
+2. Clone to your local machine 🧩:
+    git clone https://github.com/Your-Username/BuddyTrail.git
+3. Create a new branch :
+    git branch -c "Feature-Name"
+4. Navigate to the branch :
+    git checkout Feature-Name
+5. Add changes and Commit:
+    git commit -m "Add Changes msg"
+6. Push to the branch :
+    git push origin Feature-Name
+7. Submit Pull Request 
+
+
 ## 🛠️ Technologies Used
 
 **📝 HTML/CSS:** For building and styling the website structure.
