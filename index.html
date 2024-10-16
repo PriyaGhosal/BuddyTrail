@@ -32,7 +32,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+  background-color: #FBE9D0;
+}
 .container {
     display: flex;
     align-items: flex-start; /* Align items at the start of the container */
@@ -614,7 +616,7 @@
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <h2 id="h1darkbtn"   >Travel Itineraries</h2>
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -776,7 +778,8 @@
           <h2>Upload Content</h2>
           <form id="upload-form">
             <input type="file" id="file-input">
-            <button id="submit" type="submit">Upload</button>
+            <div style="margin-left: 53px;">
+            <button id="submit" type="submit">Upload</button></div>
           </form>
         </section>
     
@@ -1013,6 +1016,7 @@
       color: white;
       border: none;
       cursor: pointer;
+       
   }
   
   #posts {
@@ -1044,7 +1048,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
+ 
   color: #333;
   line-height: 1.6;
   padding: 20px;

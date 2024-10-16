@@ -79,12 +79,12 @@ body {
 }
 
 #chat-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #E64833;
     color: #fff;
     border-radius: 50%;
     display: flex;

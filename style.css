@@ -51,7 +51,7 @@ nav ul {
 .hi ul li a{
   background-color: #fff;
   color: blue;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   padding: 15px;
   border-radius: 7px;
@@ -73,8 +73,10 @@ nav a {
   color: #ffffff;
   text-decoration: none;
 }
-
-
+.dark-mode nav a{
+  color:#e64833;
+}
+ 
 .post-container {
   background: #ffffff;
   padding: 20px;
@@ -145,6 +147,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  
 }
 
 
@@ -306,7 +309,9 @@ nav {
   white-space: nowrap;
   font-size: 20px;
 }
-
+.dark-mode #nav-list li a{
+  color: #e4d3bc;
+}
 .hamburger {
   display: none; /* Hidden on larger screens */
   background: none;
@@ -918,7 +923,7 @@ textarea:focus{
   background-color: rgba(18, 18, 18, 0.9); /* Dark background for section */
 }
 .dark-mode h2 {
-  color: #ffa500; /* Bright color for heading */
+  color: #e64833; /* Bright color for heading */
 }
 
 
@@ -1108,7 +1113,7 @@ body.light-mode {
 }
 
 .dark-mode {
-  background-color: #121212; 
+  background-color: #14303b; 
   color: #e0e0e0; 
 }
 
@@ -2269,19 +2274,22 @@ body.light-mode {
 }
 
 .scroll-button {
-  background-color: #007bff; /* Change to your preferred color */
+  background-color: #244855; /* Change to your preferred color */
   border: none;
   border-radius: 50%;
   padding: 5px; /* Smaller padding */
   cursor: pointer;
   position: relative;
   width: 50px; /* Adjusted size */
-  height: 50px; /* Adjusted size */
+  height:50px; /* Adjusted size */
+   
+  
 }
 
 .scroll-button img {
   width: 30px; /* Adjusted image size */
   height: 30px; /* Adjusted image size */
+  
 }
 
 .tooltip-text-scroll {
@@ -2436,7 +2444,7 @@ body.light-mode {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #e8d9f1; /* Light purple background */
+  background-color: #FBE9D0; /* Light purple background */
 }
 
 /* Reviews Section */
