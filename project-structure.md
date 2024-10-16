@@ -64,6 +64,7 @@
 ├── script.js
 ├── star-rating.js
 ├── style.css
-└── team.html
+├── team.html
+└── update discussion forum
 ```
 <!-- END_STRUCTURE -->
