@@ -12,11 +12,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6d7dc6 0%, #5e13aa 100%);
     padding: 20px;
 }
 
 .container {
+    margin-top: 30px;
+    
     width: 100%;
     max-width: 450px;
     background: rgba(255, 255, 255, 0.1);
@@ -35,7 +37,7 @@ form {
 h1 {
     color: #fff;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -132,4 +134,47 @@ button i {
     .container {
         padding: 20px;
     }
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+  height:60px;
+  width:100%;
+  padding:10px;
+  font-family: Poppins;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.contain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color:#d1d1d1;
+  font-weight: 600;
+}
+.contain a:hover{
+  text-shadow: 2px 2px 0px black;
+}
+.right a{
+  font-size: 1.5rem;
+}
+#logo{
+    height: 2rem;
+    
+}
+#text{
+    display: flex;
+}
+
+#text:hover{
+  filter: drop-shadow(0px 0px 0px black);
+  
+
 }
