@@ -163,6 +163,23 @@
       .card:hover {
         cursor: pointer;
       }
+
+      .top{
+
+        margin : 30px;
+        background-color: orange;
+        color : black;
+        padding-right : 16px;
+        padding : 16px;
+        padding-left : 16px;
+        margin-left: 120px;
+        margin-top : 100px;
+      }
+
+      .top:hover{
+
+        color : black;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -262,7 +279,7 @@
   <nav>
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+      <h1 style="margin-left : 40px; margin-top : 50px;" id="logo"><a href="#home">BuddyTrail</a></h1>
     </div>
 
     <!-- Hamburger button for mobile -->
@@ -271,16 +288,16 @@
     <ul id="nav-list">
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a class="top"  href="#home" >Home</a></li>
+      <li><a class="top"  href="team.html" >Team</a></li>
+      <li><a class="top"  href="#deals" >Exclusive Deals</a></li>
+      <li><a class="top"  href="#benefits" >Benefits</a></li>
+      <li><a class="top"  href="about.html" >About</a></li>
+      <li><a class="top"  href="#itineraries">Travel Itineraries</a></li>
       
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
+      <li><a class="top" href="./contact.html" class="navhover">Contact</a></li>
+      <li><a class="top" href="#reviews" class="navhover">Reviews</a></li>
+      <li><a class="top" href="auth.html" class="navhover">Sign In</a></li>
      
     </ul>
 
