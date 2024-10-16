@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   background-color: rgb(203, 229, 252);
-} 
+}
  
 .forum_1 h1{
   font-size: 4.3rem;
@@ -380,7 +380,8 @@ nav {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),url("img/landing-page.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -443,7 +444,8 @@ nav {
 
 #locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),url("img/new-york-page.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/new-york-page.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -462,8 +464,6 @@ nav {
   padding: 1rem 0rem;
   text-decoration: none;
   text-decoration-thickness: 0.5rem;
-  font-size: 5rem;
-  text-decoration: underline;
 }
 
 .locations-head h3 {
@@ -471,8 +471,6 @@ nav {
   background: linear-gradient(#fff, #f9f9f9);
   font-weight: bolder;
   font-size: 2.8rem;
-  font-weight: 500;
-  max-width: 55vw;
   -webkit-background-clip: text;
   background-clip: text;
 }
