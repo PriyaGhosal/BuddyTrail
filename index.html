@@ -978,6 +978,47 @@
   </header>
 
   <main>
+   <style>
+     #destinations {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  .post-container {
+      width: 100%;
+  }
+  
+  #postForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  #postContent {
+      width: 100%;
+      min-height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+  }
+  
+  button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  #posts {
+      width: 100%;
+  }
+  </style>
       <section id="destinations">
           <h2>Destination Guides</h2>
           <div class="post-container">
@@ -989,6 +1030,7 @@
               <div id="posts"></div>
           </div>
       </section>
+
 
       <!-- Add more sections for other categories -->
   </main>
