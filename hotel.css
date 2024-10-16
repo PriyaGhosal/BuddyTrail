@@ -40,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #f0f0f0;
+    color: #0617b8;
 }
 
 /* Main content styles */
@@ -95,8 +95,9 @@ nav a:hover {
 }
 
 .hotel-info p {
-    color: #888;
+    color: #2d2d2d;
     margin: 5px 0;
+    font-weight: 500;
 }
 
 .hotel-info ul {
@@ -116,7 +117,7 @@ nav a:hover {
 }
 
 .book-now:hover {
-    background-color: #357ab8;
+    background-color: #0db120;
 }
 
 /* Footer styles */
@@ -144,7 +145,7 @@ footer {
 .footer-column h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #fdd8d8;
+    color: #f9c3c3;
 }
 
 .footer-column p,
@@ -192,7 +193,7 @@ footer {
     border-top: 1px solid #eaeaea;
     font-size: 13px;
     color: #e6dcdc;
-    background-color: #7a7979;
+    background-color: #2f2e2e;
 }
 
 .footer-bottom p {
