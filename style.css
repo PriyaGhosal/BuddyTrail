@@ -73,7 +73,12 @@ nav a {
   color: #ffffff;
   text-decoration: none;
 }
-
+nav a:hover
+{
+  color:blue;
+  font-style: bold;
+  font-size: 30px;
+}
 
 .post-container {
   background: #ffffff;
@@ -100,7 +105,7 @@ button {
 }
 
 button:hover {
-  background: #2c3e50;
+  background: #2d445c;
 }
 
 .post {
@@ -129,6 +134,9 @@ button:hover {
 
 #upload-form {
   text-align: center;
+}
+#upload-form:active{
+  color:olive;
 }
 
 #content-list {
@@ -180,7 +188,7 @@ body {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from the bottom of the viewport */
   right: 80px; /* Adjust this value to move the button left */
-  background-color: #007bff;
+  background-color: #2f12ec;
   color: white;
   border: none;
   padding: 10px 17px;
@@ -191,7 +199,7 @@ body {
 }
 
 .scroll-top-btn:hover {
-  background-color: #2c445e;
+  background-color: #187be5;
 }
 
 h1 {
@@ -242,7 +250,7 @@ button {
   color:white;
 }
 #btn:hover {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(72, 67, 67, 0.5);
   transform: scale(0.95);
 }
 #btn:hover a{
@@ -288,6 +296,11 @@ nav {
   margin-left: 34px;
 
 }
+.logo:hover{
+  color:red;
+  font-size: large;
+  font-weight: 500;
+}
 
 #nav-list {
   display: flex;
@@ -305,6 +318,10 @@ nav {
   font-weight: 400;
   white-space: nowrap;
   font-size: 20px;
+}
+#nav-list li a:hover{
+  color: blue;
+  font-style: bold;
 }
 
 .hamburger {
@@ -408,7 +425,8 @@ nav {
 
 .hero h2{
   color: white;
-  font-size: 6rem;;
+  font-size: 6rem;
+  font-style: normal;
 }
 
 .hero h3 {
@@ -563,7 +581,7 @@ nav {
 
 .card-icon {
   border-radius: 10px;
-  background: #8b66b6;
+  background: #aa78e2;
   padding: 2rem;
   height: 7pc;
 }
@@ -686,7 +704,7 @@ body {
   animation: pulse 2s infinite;
 }
 .btn-submit:hover {
-  background: #2c5282;
+  background: #047dee;
   transform: translateY(-2px);
 }
 .about-buddytrail {

@@ -74,7 +74,7 @@ body {
 }
 
 #send-button:hover {
-    background-color: #0056b3;
+    background-color: #061e38;
 }
 
 #chat-icon {
@@ -112,12 +112,12 @@ body {
     background: none;
     border: none;
     padding: 15px;
-    color: rgb(229, 63, 63);
+    color: rgb(241, 84, 84);
     font-size: 1.5rem;
     font-weight: 700;
     cursor: pointer;
 }
 
 #close-button:hover {
-    color: #ffcccc;
+    color: #f51a1a;
 }

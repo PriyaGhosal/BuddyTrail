@@ -103,7 +103,7 @@ body {
 }
 
 .contributor-stat-card {
-  background-color: #fff;
+  background-color: #c9fdf6;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   padding: 1.5rem;
@@ -131,10 +131,14 @@ body {
   padding: 4rem 0;
   text-align: center;
 }
+.contributor-contributions:hover{
+  color:gray;
+}
 
 .contributor-contributors h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .contributor-contributors-grid {

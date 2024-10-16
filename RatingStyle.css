@@ -63,6 +63,7 @@
     color: #ddd; /* Empty stars initially */
     float: right;
     cursor: pointer;
+    position: relative;
 }
 
 /* Filled stars on hover and selection */
@@ -74,7 +75,7 @@
 .rating > input:checked ~ label,
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
+    color: rgb(237, 167, 5); /* Green for filled stars */
 }
 
 .rating > label:hover ~ label,
