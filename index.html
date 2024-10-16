@@ -1034,7 +1034,226 @@
 
       <!-- Add more sections for other categories -->
   </main>
+  <style>
+    /* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-out;
+}
+
+#destinations {
+  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+#destinations:hover {
+  transform: scale(1.02);
+}
+
+.post-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.7s ease-out;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: #007BFF;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+textarea {
+  min-height: 150px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+  background-color: #f0f8ff;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+button:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#posts {
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+#posts > div {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+#posts > div:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  #destinations {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  button {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
   <script src="script.js"></script>
 
     <style>
