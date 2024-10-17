@@ -33,6 +33,7 @@
      .header1{
        background-color:white;
        border-radius:8px;
+       padding: 4px 8px 4px 8px;
      }
     /* Button Styling */
     .btn {
@@ -184,6 +185,18 @@
       .card:hover {
         cursor: pointer;
       }
+      @media (max-width: 768px) {
+    .itinerary-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itinerary {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+}
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
@@ -748,7 +761,7 @@
       </div>
 
         <div class="itinerary">
-          <div class="header2"> 
+          <div class="header1"> 
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
