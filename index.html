@@ -6,7 +6,7 @@
     <meta
       name="description"
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
+    /> 
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
@@ -244,19 +244,16 @@ body{
   </script>
   <main>
     <section class="hero" id="home">
-      <div class="header1"><h2>Travel Beyond Limits</h2></div>
+      <div class="header2"><h1>Travel Beyond Limits</h1></div>
       <h3>
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
       </h3>
-      <button id="btn"><a href="book.html ">Book now</a></button>
+      <a href="book.html" id="btn">Book now</a>
     </section>
 
     <section id="locations">
       <header class="locations-head">
-        <h2>The Perfect Travel Experience!</h2>
-
-    
     </script>
 
     <script src="script.js"></script>
@@ -296,11 +293,14 @@ body{
 
 <!-- JS to handle hamburger and close button -->
 <script>
+
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navList = document.getElementById("nav-list");
     const closeBtn = document.getElementById("closeBtn");
+    const mainHead = document.querySelector('.main-head'); // Selecting the header
 
+    // Hamburger menu functionality
     hamburger.addEventListener("click", function () {
       navList.classList.toggle("active");
     });
@@ -308,55 +308,45 @@ body{
     closeBtn.addEventListener("click", function () {
       navList.classList.remove("active");
     });
-  });
 
-  document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed'); // Simple test log
-            const modeToggle = document.getElementById('modeToggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-
-            // Additional code...
-            modeToggle.addEventListener('click', function() {
-    console.log('Toggle clicked'); // Log when the button is clicked
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    const darkelem = document.querySelectorAll('#darkbtn');
-    const h1dark = document.querySelectorAll('#h1darkbtn');
-    const cardbtn = document.querySelectorAll('#btn a');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        console.log('Switching to dark mode');
-        sunIcon.style.display = 'none';  // Hide sun icon
-        moonIcon.style.display = 'inline-block'; // Show moon icon
-        localStorage.setItem('theme', 'dark');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'white';
-        })
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#FFA500'
-        })
+    // Scroll event to handle header transparency
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) { // If scrolled more than 50px
+        mainHead.classList.add("shadow");
       } else {
-        console.log('Switching to light mode');
-        sunIcon.style.display = 'inline-block';  // Show sun icon
-        moonIcon.style.display = 'none';   // Hide moon icon
+        mainHead.classList.remove("shadow");
+      }
+    });
+
+    // Dark and light mode toggle logic
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    
+    modeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      const darkelem = document.querySelectorAll('#darkbtn');
+      const h1dark = document.querySelectorAll('#h1darkbtn');
+      const cardbtn = document.querySelectorAll('#btn a');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
+        localStorage.setItem('theme', 'dark');
+        darkelem.forEach((elem) => elem.style.color = 'white');
+        cardbtn.forEach((elem) => elem.style.color = 'white');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#FFA500');
+      } else {
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
         localStorage.setItem('theme', 'light');
-        darkelem.forEach((elem) =>{
-          elem.style.color = 'gray';
-        }) 
-        h1dark.forEach((darkbtn) =>{
-          darkbtn.style.color='#0057B3'
-        })
-        cardbtn.forEach((elem) =>{
-          elem.style.color = 'black';
-        })
-    }
-});
-});
-  
+        darkelem.forEach((elem) => elem.style.color = 'gray');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#0057B3');
+        cardbtn.forEach((elem) => elem.style.color = 'black');
+      }
+    });
+  });
 </script>
 
 
@@ -379,15 +369,14 @@ body{
       });
     </script>
     <main>
-      <section class="hero">
-       <div class="header1"><h2>Travel Beyond Limits</h2></div> 
+      
+       
 
         <h3>
           We handle everything, from finding the ideal travel buddy to
           selecting your perfect hotel, flight, and destination.
         </h3>
-        <img src="/img/cloud.png" class="moving-cloud-1 cloud" />
-        <img src="/img/cloud.png" class="moving-cloud-2 cloud" />
+
       </header>
     </section>
     <section id="benefits">
@@ -456,17 +445,17 @@ body{
               <h3>Flight to Dubai</h3>
               <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
               <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 2: Hotel Offer -->
             
-            <div class="deal-item" style="height: 311.6px;width: 266.66px;">
-              <div class="header2"> 
+            <div class="deal-item" >
+              <div class="header1"> 
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 3: Travel Package -->
@@ -475,16 +464,16 @@ body{
               <h3>Kerala Backwaters Package</h3>
               <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
               <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
-              <div class="header2"> 
+              <div class="header1"> 
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 5: Adventure Trip -->
@@ -493,16 +482,16 @@ body{
               <h3>Adventure in Bali</h3>
               <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
               <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
-              <div class="header2"> 
+              <div class="header1"> 
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
 
             <!-- Deal 7: Wildlife Safari in Kenya -->
@@ -511,7 +500,7 @@ body{
               <h3>Wildlife Safari in Kenya</h3>
               <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
               <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
-              <button onclick="window.location.href='#book-now'">Book Now</button>
+              <button onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
           </div>
           <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -523,6 +512,9 @@ body{
         /* Existing CSS */
         .deals-section {
           text-align: center;
+          padding: 58px 20px;
+          background-color: #f8f9fa;
+
         }
         
         .carousel {
@@ -539,12 +531,12 @@ body{
         }
         
         .deal-item {
-          min-width: calc(100% / 3); /* Show 3 cards */
+          min-width: 260px; /* Show 3 cards */
           box-sizing: border-box;
           padding: 20px;
           border: 1px solid #150f0f;
           border-radius: 8px;
-          margin: 10px;
+          margin: 3px;
           transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
         }
         
@@ -635,7 +627,8 @@ body{
             ages.
           </p>
           <button>View Itinerary</button>
-        </div></div>
+        </div>
+      </div>
 
         <div class="itinerary">
           <div class="header2"> 
@@ -655,6 +648,7 @@ body{
           </p>
           <button>View Itinerary</button>
         </div>
+      </div>
       </div>
     </section>
 
@@ -838,6 +832,10 @@ body{
           padding: 20px;
           border-radius: 10px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 30px;
         }
 
         #upload h2 {
@@ -899,8 +897,7 @@ body{
 
         #submit{
           background-color: #876bb1;
-          margin-left: 40px;
-          margin-top: 20px;
+          margin: 20px;
           
         }
 
@@ -970,15 +967,142 @@ body{
       <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
-              <li><a href="#destinations">Destinations</a></li>
-              <li><a href="#travel-planning">Travel Planning</a></li>
-              <li><a href="#experiences">Travel Experiences</a></li>
-              <li><a href="#gear">Travel Gear</a></li>
-              <li><a href="#safety">Travel Safety</a></li>
-              <li><a href="#sustainable">Sustainable Travel</a></li>
+              <li class="NAVI"><a href="#destinations">Destinations</a></li>
+              <li class="NAVI"><a href="#travel-planning">Travel Planning</a></li>
+              <li class="NAVI"><a href="#experiences">Travel Experiences</a></li>
+              <li class="NAVI"><a href="#gear">Travel Gear</a></li>
+              <li class="NAVI"><a href="#safety">Travel Safety</a></li>
+              <li class="NAVI"><a href="#sustainable">Sustainable Travel</a></li>
           </ul>
       </nav>
   </header>
+  <style>
+          /* General Styles */
+      body {
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f9;
+      }
+
+      /* Header Border */
+header.forum_1 {
+    border: 10px solid transparent; /* Initial transparent border */
+    border-image: linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
+    border-image-slice: 1; /* Ensures the full gradient is applied */
+    border-radius: 10px; /* Rounded corners for smooth appearance */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header.forum_1:hover {
+    border-color: #ffcc00; /* Changes border color on hover */
+}
+
+/* Navigation Item Borders */
+nav.hi ul li.NAVI a {
+    border: 2px solid transparent; /* Transparent border initially */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+nav.hi ul li.NAVI a:hover {
+    border-color: #ffcc00; /* Border color change on hover */
+    background-color: #ffffff; /* White background on hover */
+    color: #1e88e5; /* Text color change on hover */
+}
+
+
+      /* Header Section */
+      header.forum_1 {
+          background-color: #1e88e5; /* Primary color for the header */
+          color: white;
+          padding: 10px 20px; /* Minimal padding for compact height */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          min-height: 50px; /* Minimum height of the header bar */
+      }
+
+      h1#h1darkbtn {
+        color: white;
+        font-size:xx-large;
+          margin: 0;
+          letter-spacing: 1.2px;
+          transition: color 0.3s ease;
+      }
+
+      h1#h1darkbtn:hover {
+          color: #ffcc00; /* Changes the color when hovered */
+      }
+
+      /* Navigation Styles */
+      nav.hi ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 15px;
+      }
+
+      nav.hi ul li.NAVI {
+          position: relative;
+      }
+
+      nav.hi ul li.NAVI a {
+          color: rgb(162, 37, 37);
+          text-decoration: none;
+          font-size: 14px; /* Reduced font size for a more compact design */
+          padding-right: 5px;
+          padding: 8px 12px; /* Reduced padding to fit minimal height */
+          transition: color 0.3s, background-color 0.3s ease;
+          border-radius: 5px; /* Slight rounding for a modern look */
+      }
+
+      nav.hi ul li.NAVI a:hover {
+          background-color: #ffcc00; /* Background highlight on hover */
+          color: #1e88e5; /* Text color change on hover */
+      }
+
+      /* Underline effect */
+      nav.hi ul li.NAVI a::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #ffcc00;
+          transition: width 0.3s;
+          margin: 0 auto;
+      }
+
+      nav.hi ul li.NAVI a:hover::after {
+          width: 100%; /* Underline expands on hover */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          header.forum_1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+
+          nav.hi ul {
+              flex-direction: column;
+              width: 100%;
+              gap: 10px;
+          }
+
+          nav.hi ul li.NAVI a {
+              display: block;
+              width: 100%;
+              text-align: center;
+          }
+      }
+
+
+
+
+  </style>
 
   <main>
    <style>
@@ -1051,23 +1175,19 @@ body {
  
   color: #333;
   line-height: 1.6;
-  padding: 20px;
+
   transition: background-color 0.3s ease;
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+
 
 h2 {
   font-size: 2.2rem;
   text-align: center;
-  color: #007BFF;
+
   margin-bottom: 2rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
+
   animation: fadeInDown 1s ease-out;
 }
 
@@ -1094,16 +1214,14 @@ h2 {
 h3 {
   font-size: 1.7rem;
   margin-bottom: 1.5rem;
-  color: #007BFF;
+
   text-align: center;
   letter-spacing: 1px;
-  text-transform: capitalize;
+
   transition: color 0.3s ease;
 }
 
-h3:hover {
-  color: #0056b3;
-}
+
 
 form {
   display: flex;
@@ -1429,7 +1547,7 @@ button:hover:before {
 
 
   <section id="reviews" class="reviews-section">
-    <div class="revieww">
+    <div class="revieww">  
       <div class="review-form">
         <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
@@ -1438,10 +1556,10 @@ button:hover:before {
           and help fellow travelers make informed decisions.
         </p>
 
-        <div style="margin-top: 20px">
+        <div style="display: flex;">
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn">Your Name:</label>
-            <input type="text" id="name" name="name" required required pattern="[a-zA-Z ]+"
+            <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
@@ -1501,7 +1619,8 @@ button:hover:before {
       <div class="fixed bottom-0 right-2 scroll-container">
         <button class="scroll-button group" id="scrollTopBtn">
           <span class="tooltip-text-scroll">
-            <i class="fa-solid fa-arrow-up"></i>
+            <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+           
           </span>
         </button>
       </div>
@@ -1529,6 +1648,17 @@ button:hover:before {
                   <li><a href="#">Contact</a></li>
                   <li><a href="team.html">Team</a></li>
                   <li><a href="contributor/contributor.html">Our Contributor</a></li>
+
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Legal Links</h3>
+              <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Cookie Policy</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                  <li><a href="#">Copyright Notice</a></li>
 
               </ul>
           </div>
