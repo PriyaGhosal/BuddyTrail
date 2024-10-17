@@ -1136,12 +1136,36 @@
       <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
-              <li class="NAVI"><a href="#destinations">Destinations</a></li>
-              <li class="NAVI"><a href="#travel-planning">Travel Planning</a></li>
-              <li class="NAVI"><a href="#experiences">Travel Experiences</a></li>
-              <li class="NAVI"><a href="#gear">Travel Gear</a></li>
-              <li class="NAVI"><a href="#safety">Travel Safety</a></li>
-              <li class="NAVI"><a href="#sustainable">Sustainable Travel</a></li>
+              <li class="NAVI">
+                <!-- added favicon for destinations -->
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#destinations">Destinations</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel planning -->
+                <i class="fa-solid fa-earth-americas"></i>
+                <a href="#travel-planning">Travel Planning</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel experience -->
+                <i class="fa-regular fa-face-smile"></i>
+                <a href="#experiences">Travel Experiences</a>
+              </li>
+              <li class="NAVI">
+                <i class="fa-solid fa-gear"></i>
+                <!-- added favicon for travel gear -->
+                <a href="#gear">Travel Gear</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel safety -->
+                <i class="fa-solid fa-shield"></i>
+                <a href="#safety">Travel Safety</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for sustainable travel -->
+                <i class="fa-solid fa-seedling"></i>
+                <a href="#sustainable">Sustainable Travel</a>
+              </li>
           </ul>
       </nav>
   </header>
@@ -1172,13 +1196,18 @@ nav.hi ul li.NAVI a {
     border-radius: 5px; /* Rounded corners */
     transition: border 0.3s ease, background-color 0.3s ease;
 }
-
-nav.hi ul li.NAVI a:hover {
-    border-color: #ffcc00; /* Border color change on hover */
-    background-color: #ffffff; /* White background on hover */
-    color: #1e88e5; /* Text color change on hover */
+/*  not needed as styling for nav,li,a is handled at lower */
+/* nav.hi ul li.NAVI a:hover {
+    border-color: #ffcc00; 
+    background-color: #ffffff; 
+    color: #1e88e5;
+} */
+    
+/* Added styling for favicon */
+nav.hi ul li.NAVI i:hover  {
+    color: #ffcc00; /* color change on hover */
+    transform: scale(1.2); /* scale up on hover */
 }
-
 
       /* Header Section */
       header.forum_1 {
@@ -1232,9 +1261,9 @@ nav.hi ul li.NAVI a:hover {
           background-color: #ffcc00; /* Background highlight on hover */
           color: #1e88e5; /* Text color change on hover */
       }
-
+    
       /* Underline effect */
-      nav.hi ul li.NAVI a::after {
+    /*nav.hi ul li.NAVI a::after {
           content: '';
           display: block;
           width: 0;
@@ -1245,8 +1274,8 @@ nav.hi ul li.NAVI a:hover {
       }
 
       nav.hi ul li.NAVI a:hover::after {
-          width: 100%; /* Underline expands on hover */
-      }
+          width: 100%; 
+      } */
 
       /* Responsive Design */
       @media (max-width: 768px) {
