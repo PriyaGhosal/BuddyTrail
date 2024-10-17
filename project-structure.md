@@ -70,6 +70,10 @@
 │   ├── plan-1.jpg
 │   ├── plan-2.jpg
 │   ├── plan-3.jpeg
+│   ├── popup.jpg
+│   ├── popup1.jpg
+│   ├── popup2.jpg
+│   ├── popup3.jpg
 │   ├── safety.jpg
 │   ├── safety1.jpg
 │   ├── safety2.jpg
@@ -85,9 +89,13 @@
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
+├── script
+│   └── popup.js
 ├── script.js
 ├── star-rating.js
 ├── style.css
+├── styles
+│   └── popup.css
 ├── team.html
 └── update discussion forum
 ```
