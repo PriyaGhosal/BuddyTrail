@@ -818,14 +818,18 @@ body {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #e2e8f0;
-  border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  border: 2px solid #d1c4e9;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
 }
 .form-control:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
   outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  background-color: #f3e5f5; /* Light purple background on focus */
 }
 .btn-submit {
   background: #1a365d;
@@ -2640,7 +2644,7 @@ textarea,
 select {
   width: 100%;
   padding: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 2px solid #d1c4e9; /* Light purple border */
   border-radius: 5px;
   background-color: white; /* White background for input fields */
