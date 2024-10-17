@@ -149,3 +149,16 @@ body {
 .review-form{
     margin: 20px;
 }
+
+.review-form:hover{
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(13, 71, 216, 0.2), 0 6px 20px 0 rgba(14, 14, 219, 0.19);
+}
+
+#name,#destination,#rating,#review,#complaint{
+    border: 2px solid rgb(187, 124, 202);
+}
+
+#name:hover,#destination:hover,#rating:hover,#review:hover,#complaint:hover{
+    border: 2px solid rgb(180, 104, 175);
+}
