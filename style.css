@@ -272,42 +272,40 @@ a{
   z-index: 5;
   padding: 15px;
   height: 90px;
-  background-color: rgba(0, 0, 0, 0.7);
-  /*background-color: transparent;*/
+  background-color: #000; /* Initially black */
   color: white;
   display: flex;
-  justify-content: flex-start; /* Keep header centered */
+  justify-content: space-between; /* Adjusted to space-between for better layout */
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, height 0.3s ease;
 }
+
 .main-head.shadow {
-  background-color: #000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
-  margin: 0 0; /* Center the nav */
+  margin: 0 auto; /* Center the nav */
 }
 
 .logo {
   display: flex;
   margin-left: 34px;
-
 }
 
 #nav-list {
   display: flex;
-  gap: 1;
+  gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
   margin-left: 3px;
   padding: 0;
   align-items: center;
 }
-
 
 #nav-list li a {
   color: white;
@@ -331,20 +329,25 @@ nav {
   top: 20px;
   right: 20px;
   border: none;
-  background-color:white;
+  background-color: white;
   cursor: pointer;
   padding: 5px;
-  
+  z-index: 10; /* Ensure it stays above other elements */
 }
+
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
   height: auto;
-  
 }
-
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
+  .main-head {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
   .hamburger {
     display: block; /* Show hamburger on small screens */
   }
@@ -366,7 +369,7 @@ nav {
   }
 
   /* Close button styles */
-  .dropdown-close-btn  {
+  .dropdown-close-btn {
     display: block; /* Visible only in the dropdown menu */
     align-self: flex-end;
     margin-right: 20px;
@@ -379,14 +382,10 @@ nav {
 
 /* Hide the close button on larger screens (revised) */
 @media (min-width: 769px) {
-  /* Hide the close button by setting its display to none and removing it from the DOM */
   .dropdown-close-btn {
     display: none;
-    /* Remove the close button from the DOM */
-    display: none !important;
   }
 }
-
 
 .hero {
   min-height: 100vh;
@@ -819,14 +818,18 @@ body {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #e2e8f0;
-  border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  border: 2px solid #d1c4e9;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
 }
 .form-control:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
   outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  background-color: #f3e5f5; /* Light purple background on focus */
 }
 .btn-submit {
   background: #1a365d;
@@ -1507,21 +1510,18 @@ body.light-mode {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 70vw;
   align-items: center;
   justify-items: center;
   transition: transform 0.3s ease; /* Transition for hover effect */
 }
 
-.review-form:hover {
-  transform: scale(1.02); /* Scale effect on hover */
-}
-
 .form {
-  margin-top: 10px;
-  width: 30vw;
+  /* margin-top: 100px; */
+  width: 60vw;
 }
 
 .review-form h3 {
@@ -1531,9 +1531,9 @@ body.light-mode {
 
 .review-form label {
   display: block;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .review-form input,
@@ -1542,9 +1542,9 @@ body.light-mode {
   min-width: 100%;
   max-width: 100%;
   font-weight: 600;
-  padding: 10px;
+  /* padding: 10px; */
   font-size: 15px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s ease; /* Transition for input fields */
@@ -2442,13 +2442,17 @@ body.light-mode {
   position: absolute;
   bottom: 10%; /* Position above the button */
   right: 50%;
+ margin-bottom: 0.125rem;
   transform: translateX(50%);
   color: #fff; /* Tooltip text color */
   padding: 5px;
   border-radius: 5px;
   white-space: nowrap; /* Prevent text from wrapping */
 }
-
+.tooltip-icon{
+  justify-content: center;
+  align-items: center;
+}
 /* testimonials */
 .testimonials-heading {
   text-align: center;
@@ -2640,7 +2644,7 @@ textarea,
 select {
   width: 100%;
   padding: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 2px solid #d1c4e9; /* Light purple border */
   border-radius: 5px;
   background-color: white; /* White background for input fields */
@@ -2680,4 +2684,80 @@ textarea {
 #thankYouMessage p {
   color: #333;
   font-size: 16px;
+}
+
+
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.services h2 {
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
+  color: #00467f;
+}
+
+.services p {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  background-color: #00467f;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  transition: background-color 0.3s ease;
+}
+
+.icon i {
+  font-size: 2rem;
+}
+
+.service-card:hover .icon {
+  background-color: #ffdd57;
+  color: #00467f;
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #00467f;
+}
+
+.service-card p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
