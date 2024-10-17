@@ -2,29 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="RatingStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/icons/airplane.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="RatingStyle.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/icons/airplane.svg" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <title>Book Now - BuddyTrail</title>
+
+  <style>
+    .error-message {
+      color: red;
+      font-size: 1.2em;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .booking-form {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+    }
+  </style>
+
 </head>
 <body>
   <header class="main-head">
@@ -41,68 +87,35 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="hero">
-      <h2>Welcome to BuddyTrail</h2>
-    </section>
-
-    <section id="locations" class="locations">
-      <h2>Popular Destinations</h2>
-      <div class="location-cards">
-        <div class="location-card">
-          <h3>Dubai</h3>
-          <p>Flight to Dubai<br>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
-          <p><strong>Price:</strong> ₹20,000 <del>₹25,000</del></p>
-        </div>
-        <div class="location-card">
-          <h3>Goa</h3>
-          <p>Luxury Stay in Goa<br>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
-          <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> per night</p>
-        </div>
-        <div class="location-card">
-          <h3>Kerala</h3>
-          <p>Kerala Backwaters Package<br>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
-        </div>
-        <div class="location-card">
-          <h3>Paris</h3>
-          <p>Paris Romantic Getaway<br>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p><br>
-          <p><strong>Price:</strong> ₹1,20,000 <del>₹1,50,000</del> per couple</p>
-        </div>
-        <div class="location-card">
-          <h3>Bali</h3>
-          <p>Adventure in Bali<br>Book an adventure trip to Bali with activities like snorkeling, trekking & more. Discount available for groups!</p>
-          <p><strong>Price:</strong> ₹48,000 <del>₹60,000</del> per person</p>
-        </div>
-      </div>
-    </section>
-    
-
-    <section id="benefits" class="benefits">
-      <h2 style="">Why Travel with BuddyTrail?</h2>
-      <ul>
-        <li>Exclusive discounts and travel packages</li>
-        <li>24/7 customer support for a hassle-free experience</li>
-        <li>Handpicked destinations and personalized itineraries</li>
-        <li>Safe and secure travel arrangements</li>
-      </ul>
-      <div class="call-to-action">
-        <h2>Ready to embark on your next adventure?</h2>
-        <h2>Let BuddyTrail take you there!</h2>
-      </div>
-    </section>
-    
-
+    <!-- Booking form -->
     <section id="booking-form" class="booking-form">
       <h2>Book Your Trip</h2>
-      <form action="#" method="post">
+      <form id="bookingForm" action="#" method="post" novalidate>
         <div class="form-group">
           <label for="place">Place of Visit:</label>
-          <input type="text" id="place" name="place" placeholder="Enter your destination" required />
+          <input 
+            type="text" 
+            id="place" 
+            name="place" 
+            placeholder="Enter your destination" 
+            required 
+          />
+          <small id="place-error" class="error-message"></small>
         </div>
+
         <div class="form-group">
           <label for="dates">Dates of Staying:</label>
-          <input type="date" id="dates" name="dates" required />
+          <input 
+            type="date" 
+            id="dates" 
+            name="dates" 
+            required 
+          />
+          <small id="date-error" class="error-message"></small>
         </div>
+
         <div class="form-group">
           <label for="transport">Mode of Transport:</label>
           <select id="transport" name="transport" required>
@@ -112,52 +125,92 @@
             <option value="bus">Bus</option>
             <option value="car">Car</option>
           </select>
+          <small id="transport-error" class="error-message"></small>
         </div>
+
         <button type="submit" class="btn">Book Now</button>
       </form>
     </section>
   </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        
-
-    <footer>
-      <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>We are a team of passionate developers creating amazing web experiences.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="index.html">Services</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fa-brands fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
-     
-  
+        <h3>About Us</h3>
+        <p>We are a team of passionate developers creating amazing web experiences.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/priyaghosal"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      let isValid = true;
+
+      document.querySelectorAll(".error-message").forEach((el) => el.textContent = "");
+
+      const placeInput = document.getElementById("place");
+      const placeError = document.getElementById("place-error");
+      if (placeInput.value.trim() === "") {
+        placeError.textContent = "Please enter your destination.";
+        isValid = false;
+      } else if (!/^[A-Za-z\s]+$/.test(placeInput.value)) {
+        placeError.textContent = "Destination must contain only letters and spaces.";
+        isValid = false;
+      }
+
+      const dateInput = document.getElementById("dates");
+      const dateError = document.getElementById("date-error");
+      if (dateInput.value === "") {
+        dateError.textContent = "Please select a date.";
+        isValid = false;
+      } else {
+        const selectedDate = new Date(dateInput.value);
+        const today = new Date();
+        if (selectedDate < today) {
+          dateError.textContent = "Date cannot be in the past.";
+          isValid = false;
+        }
+      }
+
+      const transportInput = document.getElementById("transport");
+      const transportError = document.getElementById("transport-error");
+      if (transportInput.value === "") {
+        transportError.textContent = "Please select a mode of transport.";
+        isValid = false;
+      }
+
+      if (!isValid) {
+        event.preventDefault();
+      }
+    });
+  </script>
+
 </body>
 </html>
