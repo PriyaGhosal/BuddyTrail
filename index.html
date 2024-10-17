@@ -1543,7 +1543,7 @@ button:hover:before {
 
 
   <section id="reviews" class="reviews-section">
-    <div class="revieww">
+    <div class="revieww">  
       <div class="review-form">
         <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
@@ -1552,10 +1552,10 @@ button:hover:before {
           and help fellow travelers make informed decisions.
         </p>
 
-        <div style="margin-top: 20px">
+        <div style="display: flex;">
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn">Your Name:</label>
-            <input type="text" id="name" name="name" required required pattern="[a-zA-Z ]+"
+            <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
