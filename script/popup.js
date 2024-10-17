@@ -21,8 +21,8 @@ document.getElementById('emailForm').addEventListener('submit', function(event) 
     }
 });
 
-// Handle "No thanks" link
-document.querySelector('.no-thanks').addEventListener('click', function(event) {
+// Handlling "No thanks" button
+document.getElementById('no-thanks').addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('popup').style.display = 'none';
 });
