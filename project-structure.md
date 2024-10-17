@@ -5,14 +5,17 @@
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── about.css
 ├── about.html
 ├── auth.css
 ├── auth.html
 ├── auth.js
+├── book.html
 ├── boy.png
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
+├── conn.jpeg
 ├── contact.css
 ├── contact.html
 ├── contact.js
@@ -37,11 +40,14 @@
 │   ├── twitter.svg
 │   └── youtube.svg
 ├── img
+│   ├── back.png
+│   ├── benefits.jpeg
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
 │   ├── landing-page.jpg
+│   ├── location.jpg
 │   ├── logo.png
 │   ├── logo2.png
 │   ├── n1.jpg

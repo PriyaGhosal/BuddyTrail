@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - BuddyTrail</title>
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+            <h1 id="logo">BuddyTrail</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About Us</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #f39c12;
-            margin-bottom: 20px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        /* Styles for the Back to Home link */
-        .back-home {
-            display: inline-block; /* Make it behave like a block for padding */
-            padding: 10px 20px; /* Add padding */
-            margin-top: 20px; /* Space above the button */
-            background-color: #007BFF; /* Button color */
-            color: white; /* Text color */
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-
-        /* Hover effect */
-        .back-home:hover {
-            background-color: #0056b3; /* Darker shade on hover */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+    <main class="main-content">
+      <div class="content-container">
         <h1>About Our Website</h1>
-        <p>Welcome to BuddyTrail – your ultimate travel companion! 🌍✈️ Whether you're planning a family vacation 👨‍👩‍👧‍👦 or a trip with friends 👫, BuddyTrail helps you discover and explore amazing destinations 🏖️🏰, find the best hotels 🏨, and book affordable flights 💺 with ease.</p>
-        <p>Our mission is to provide the best travel experiences for our customers.</p>
-        <a href="index.html" class="back-home">Back to Home</a>
-    </div>
-</body>
+        <p>
+          Welcome to BuddyTrail – your ultimate travel companion! 🌍✈️ Whether
+          you're planning a family vacation or a trip with friends, BuddyTrail
+          helps you discover amazing destinations, find the best hotels, and
+          book affordable flights with ease.
+        </p>
+        <p>
+          Our mission is to provide the best travel experiences for our
+          customers, ensuring that every trip is memorable and hassle-free.
+        </p>
+        <p>
+          At BuddyTrail, we believe in the power of travel to transform lives.
+          Our team is dedicated to curating unique experiences, personalized
+          recommendations, and valuable resources that empower our users to
+          explore the world confidently.
+        </p>
+        <h2>Our Values</h2>
+        <p>
+          We value integrity, innovation, and community. Our goal is to build a
+          platform that fosters trust and connectivity among travelers, allowing
+          them to share their experiences and insights.
+        </p>
+        <h2>Meet Our Team</h2>
+        <p>
+          Our diverse team of travel enthusiasts and experts is passionate about
+          creating the best possible service for you. Together, we work
+          tirelessly to ensure your travel journey is seamless from start to
+          finish.
+        </p>
+        <a href="index.html" class="btn-primary">Back to Home</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column-l">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="footer-column-r">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal" target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
