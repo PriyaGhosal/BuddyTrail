@@ -1,5 +1,6 @@
 <!-- START_STRUCTURE -->
 ```
+├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
 ├── LICENSE
 ├── README.md
