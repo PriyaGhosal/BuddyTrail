@@ -8,10 +8,13 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     /> 
     <meta name="robots" content="index,follow" />
+
     <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/popup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
@@ -308,6 +311,29 @@
   </nav>
 </header>
 
+
+<!-- Pop up HTML Starts Here -->
+ <!-- Pop-up for BuddyTrail -->
+<div id="popup" class="popup">
+  <div id="popup-content">
+      <div class="popup-left">
+          <img if="popupimage" src="./img/popup1.jpg" alt="Travel Image">
+      </div>
+      <div class="popup-right">
+          <h1>Ready for Your Next Adventure?</h1>
+          <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
+          <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
+          <form id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" id="signup-btn">Sign Up</button>
+          </form>
+          <a href="#" id="no-thanks">No thanks</a>
+          <p id="terms">By signing up, you agree to our <a id="link" href="#1">Terms of Service</a> and <a id="link" href="#1">Privacy Policy</a></p>
+      </div>
+  </div>
+</div>
+<!-- Pop up HTML ends Here -->
+
 <!-- JS to handle hamburger and close button -->
 <script>
 
@@ -365,6 +391,8 @@
     });
   });
 </script>
+
+<script src="./script/popup.js"></script>
 
 
 
