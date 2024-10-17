@@ -455,8 +455,8 @@
       
             <!-- Deal 2: Hotel Offer -->
             
-            <div class="deal-item" style="height: 311.6px;width: 266.66px;">
-              <div class="header2"> 
+            <div class="deal-item" >
+              <div class="header1"> 
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
@@ -474,7 +474,7 @@
       
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
-              <div class="header2"> 
+              <div class="header1"> 
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
@@ -492,7 +492,7 @@
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
-              <div class="header2"> 
+              <div class="header1"> 
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
@@ -517,6 +517,9 @@
         /* Existing CSS */
         .deals-section {
           text-align: center;
+          padding: 58px 20px;
+          background-color: #f8f9fa;
+
         }
         
         .carousel {
@@ -533,12 +536,12 @@
         }
         
         .deal-item {
-          min-width: calc(100% / 3); /* Show 3 cards */
+          min-width: 260px; /* Show 3 cards */
           box-sizing: border-box;
           padding: 20px;
           border: 1px solid #150f0f;
           border-radius: 8px;
-          margin: 10px;
+          margin: 3px;
           transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
         }
         
