@@ -1678,15 +1678,182 @@ button:hover:before {
       </form>
       <p id="subscription-message"></p>
     </div>
-     
-  
     </div>
+    <style>
+      body {
+          font-family: Arial, sans-serif; /* Set a clean font for the body */
+          background-color: #f9f9f9; /* Light background for contrast */
+          color: #333; /* Dark text for readability */
+      }
+  
+      .faq-popup {
+          display: none; /* Hidden by default */
+          position: fixed; /* Fixed position */
+          text-align: initial; /* Align text to the left */
+          top: 50%; /* Center vertically */
+          left: 50%; /* Center horizontally */
+          transform: translate(-50%, -50%); /* Translate to truly center */
+          width: 600px; /* Increased width of the pop-up */
+          max-height: 80%; /* Limit the height */
+          overflow-y: auto; /* Scroll if content exceeds max height */
+          background-color: white; /* Background color of the pop-up */
+          border: 1px solid #ccc; /* Border color */
+          border-radius: 10px; /* Rounded corners */
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+          z-index: 1000; /* Ensure it's above other elements */
+          padding: 20px; /* Padding inside the pop-up */
+          transition: all 0.3s ease; /* Smooth transition for pop-up effects */
+      }
+  
+      .faq-header {
+          display: flex; /* Use flexbox for header alignment */
+          justify-content: space-between; /* Space between title and close button */
+          align-items: center; /* Center vertically */
+      }
+  
+      .faq-answer {
+          display: none; /* Hidden by default */
+          color: #444; /* Slightly lighter text color for answers */
+          margin-top: 10px; /* Space above the answer */
+          padding: 10px; /* Padding around the answer */
+          border-left: 3px solid #007BFF; /* Left border for emphasis */
+          background-color: #f0f8ff; /* Light blue background for answers */
+          border-radius: 5px; /* Rounded corners for the answer box */
+      }
+  
+      .faq-toggle {
+          margin-right: 10px; /* Space between toggle and question text */
+          font-weight: bold; /* Make the toggle stand out */
+          cursor: pointer; /* Indicate that the item is clickable */
+          color: #007BFF; /* Change toggle color */
+      }
+  
+      .faq-toggle:hover {
+          color: #0056b3; /* Darker shade on hover */
+      }
+  
+      .faq-question {
+          padding: 10px 0; /* Padding around questions */
+          border-bottom: 1px solid #ccc; /* Bottom border for separation */
+          transition: background-color 0.2s; /* Smooth background transition */
+      }
+  
+      .faq-question:hover {
+          background-color: #f1f1f1; /* Light gray background on hover */
+      }
+  
+      .faq-section {
+          position: fixed; /* Fixed position */
+          bottom: 50px; /* Position from the bottom */
+          right: 80px; /* Position from the right */
+          z-index: 1000; /* Ensure it’s above other elements */
+      }
+  
+      #faq-button {
+          background-color: #007BFF; /* Primary button color */
+          color: white; /* Text color */
+          padding: 10px 15px; /* Padding inside the button */
+          border: none; /* No border */
+          border-radius: 5px; /* Rounded corners */
+          cursor: pointer; /* Pointer cursor for button */
+          transition: background-color 0.3s; /* Smooth background transition */
+      }
+  
+      #faq-button:hover {
+          background-color: #0056b3; /* Darker button color on hover */
+      }
+  
+      #close-popup {
+          cursor: pointer; /* Pointer cursor for close button */
+          color: #999; /* Gray color for the close button */
+          font-size: 18px; /* Increased font size for visibility */
+        padding: 10px; /* Padding around the button for better click area */
+        background-color: transparent; /* Transparent background */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+      }
+  
+      #close-popup:hover {
+          color: #f00; /* Change color on hover for better visibility */
+      }
+  </style>
+  
+</head>
+<body>
 
+<div class="faq-section" id="faq-section">
+  <button id="faq-button">FAQ</button>
+  <div class="faq-popup" id="faq-popup">
+      <div class="faq-content">
+          <span id="close-popup" class="close">&times;</span>
+          <h3 style="color: black;">Frequently Asked Questions</h3>
+          <div class="faq-item">
+              <h4 style="color: black;" class="faq-question">
+                  <span class="faq-toggle">+</span>
+                  1. What is BuddyTrail?
+              </h4>
+              <p class="faq-answer" style="color: black;">BuddyTrail is your ultimate travel companion, helping you discover amazing destinations, find hotels, and book affordable flights.</p>
+          </div>
+          <div class="faq-item">
+              <h4 style="color: black;" class="faq-question">
+                  <span class="faq-toggle">+</span>
+                  2. How can I book a trip?
+              </h4>
+              <p class="faq-answer" style="color: black;">You can book a trip through our platform by selecting your destination, finding available hotels, and booking flights.</p>
+          </div>
+          <div class="faq-item">
+              <h4 style="color: black;" class="faq-question">
+                  <span class="faq-toggle">+</span>
+                  3. What if I need assistance during my trip?
+              </h4>
+              <p class="faq-answer" style="color: black;">Our customer support team is available to assist you with any issues or questions you may have during your trip.</p>
+          </div>
+          <div class="faq-item">
+              <h4 style="color: black;" class="faq-question">
+                  <span class="faq-toggle">+</span>
+                  4. How do I contact customer support?
+              </h4>
+              <p class="faq-answer" style="color: black;">You can contact our customer support team through the contact form on our website or by emailing us at info@example.com.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+          const answer = question.nextElementSibling; // Get the next sibling (the answer)
+          const toggle = question.querySelector('.faq-toggle'); // Get the toggle indicator
+
+          // Toggle the display property between 'block' and 'none'
+          if (answer.style.display === 'block') {
+              answer.style.display = 'none'; // Hide the answer
+              toggle.textContent = '+'; // Change to plus sign
+          } else {
+              answer.style.display = 'block'; // Show the answer
+              toggle.textContent = '-'; // Change to minus sign
+          }
+      });
+  });
+
+  // Optional: Add functionality to show/hide the FAQ popup when the button is clicked
+  document.getElementById('faq-button').addEventListener('click', () => {
+      const faqPopup = document.getElementById('faq-popup');
+      faqPopup.style.display = (faqPopup.style.display === 'block') ? 'none' : 'block';
+  });
+
+  // Optional: Close the popup when the close button is clicked
+  document.getElementById('close-popup').addEventListener('click', () => {
+      document.getElementById('faq-popup').style.display = 'none';
+  });
+</script>
     <div class="footer-bottom">
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
-  
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
@@ -1872,30 +2039,7 @@ button:hover:before {
     line-height: 1.5;
   }
     </style>
-  </script>
-  <script src="script.js">
-document.getElementById('newsletter-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent the default form submission
-
-    const email = document.getElementById('email').value.trim(); // Get the email value
-    const messageElement = document.getElementById('subscription-message'); // Get the message display element
-
-    // Regular expression to validate email format
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailPattern.test(email)) {
-        // Simulate a successful subscription
-        messageElement.textContent = 'Subscribed successfully!'; // Show success message
-        messageElement.style.color = 'green'; // Change message color to green
-
-        // Clear the input field after successful submission
-        document.getElementById('email').value = '';
-    } else {
-        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
-        messageElement.style.color = 'red'; // Change message color to red
-    }
-});
-    </script>    
+  </script>      
 </body>
 
 </html>
