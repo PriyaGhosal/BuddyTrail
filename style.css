@@ -7,13 +7,159 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.forum_1
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(203, 229, 252);
+}
+ 
+.forum_1 h1{
+  font-size: 4.3rem;
+  margin: 20px;
+  padding: 18px;
+  color: rgb(1, 60, 124);
+  border-radius: 8px;
+}
 
+.hi
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;;
+  color: #ffffff;
+  padding: 50px;
+  /* text-align: center; */
+  margin: 10px 0px 40px;
+  border-radius: 8px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.hi ul li a{
+  background-color: #fff;
+  color: blue;
+  min-height:15vh;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.35);
+}
+
+.hi ul li a:hover{
+  background-color: rgb(9, 9, 120);
+  color: white;
+  box-shadow: 4px 4px 14px whitesmoke;
+}
+
+
+nav ul li {
+  display: inline;
+  
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.post-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2c3e50;
+}
+
+.post {
+  margin: 10px 0;
+  padding: 10px;
+  background: #e8e8e8;
+  border-radius: 5px;
+}
+.posts_blog{
+  background-color:   
+ #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.main_blogs {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.upload {
+  margin-bottom:   
+ 40px;
+}
+
+#upload-form {
+  text-align: center;
+}
+
+#content-list {
+  list-style: none;
+  padding: 0;
+}
+
+#content-list li {
+  margin-bottom: 10px;
+}
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+
+.cloud {
+  position: absolute;
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.cloud.fade-out {
+  opacity: 0;
 }
 
 #progressBarContainer {
@@ -32,7 +178,7 @@ body {
   background: #2C3E50;; 
   transition: width 0.2s ease; 
 }
-
+ 
 .scroll-top-btn {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from the bottom of the viewport */
@@ -88,16 +234,36 @@ p {
 
 button {
   padding: 2rem 6rem;
-  background: #4c6e97;
+  background: rgba(255,255,255,0.15);
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: background 0.6s ease-in-out;
+  transition: all 0.4s ease;
+}
+#btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+#btn a {
+  color:white;
 }
 #btn:hover {
-  background-color: rgb(1, 20, 27);
-  box-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
+  background-color:#2c5282;
+  transform: scale(0.95);
+}
+#btn:hover a{
+  color: black;
+  font-weight: 600;
+}
+a{
+  transition: all 0.4s ease;
 }
 /**** MAIN PAGE  ****/
 /* Header Styles */
@@ -108,18 +274,23 @@ button {
   right: 0;
   z-index: 5;
   padding: 15px;
-  background-color: transparent;
+  height: 90px;
+  background-color: #000; /* Initially black */
   color: white;
   display: flex;
-  justify-content: center; /* Keep header centered */
+  justify-content: space-between; /* Adjusted to space-between for better layout */
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+.main-head.shadow {
+  background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
   margin: 0 auto; /* Center the nav */
@@ -127,21 +298,24 @@ nav {
 
 .logo {
   display: flex;
-  align-items: center;
+  margin-left: 34px;
 }
 
 #nav-list {
   display: flex;
-  gap: 20px;
+  gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
-  margin: 0;
+  margin-left: 3px;
   padding: 0;
+  align-items: center;
 }
 
 #nav-list li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 20px;
 }
 
 .hamburger {
@@ -154,15 +328,29 @@ nav {
 }
 
 .mode-toggle {
-  margin-left: 20px;
-  background: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   border: none;
-  color: white;
-  font-size: 1.5em;
+  background-color: white;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.mode-toggle img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
 }
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
+  .main-head {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
   .hamburger {
     display: block; /* Show hamburger on small screens */
   }
@@ -184,7 +372,7 @@ nav {
   }
 
   /* Close button styles */
-  .dropdown-close-btn  {
+  .dropdown-close-btn {
     display: block; /* Visible only in the dropdown menu */
     align-self: flex-end;
     margin-right: 20px;
@@ -197,19 +385,15 @@ nav {
 
 /* Hide the close button on larger screens (revised) */
 @media (min-width: 769px) {
-  /* Hide the close button by setting its display to none and removing it from the DOM */
   .dropdown-close-btn {
     display: none;
-    /* Remove the close button from the DOM */
-    display: none !important;
   }
 }
-
 
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("/img/landing-page.jpg");
+    url("./img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -225,14 +409,53 @@ nav {
   border-radius: 1rem;
  
     padding: 1.5rem 4rem;
-    background: #4c6e97;
+    background: rgba(255,255,255,0.15);
     border: none;
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: background 0.6s ease-in-out;
+    transition: all 0.4s ease;
 
 }
+
+.hero h1{
+  color:white;
+  font-size: 70px;
+  line-height: 80%;
+  text-transform: Uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fefefe;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.hero h2{
+  color:white;
+  font-size: 70px;
+  line-height: 80%;
+  text-transform: Uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fefefe;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+
+
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
 
 .hero h3 {
   font-size: 25px;
@@ -267,8 +490,10 @@ nav {
 
 #locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/new-york-page.png");
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./img/new-york-page.png");
+
+    
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -284,17 +509,52 @@ nav {
 }
 
 .locations-head h2 {
-  padding: 1rem 0rem;
-  text-decoration: underline;
+  text-align: start;
+  
+  text-decoration: none;
   text-decoration-thickness: 0.5rem;
+  font-size: 5rem;
+  text-decoration: underline;
+  padding: 1rem 0rem;
 }
 
 .locations-head h3 {
-  padding: 4rem 0rem;
-  background: linear-gradient(#090f15, #42231e);
+
+  background: linear-gradient(#fff, #f9f9f9);
+  font-weight: bolder;
+  font-size: 2.8rem;
+  
+  max-width: 55vw;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-align: start;
+  font-weight: 500;
+}
+
+/* Location flashcards */
+.location-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Center the cards */
+  padding: 20px;
+}
+
+.location-card {
+  background: rgba(133, 235, 163, 0.9);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px; /* Adds space between cards */
+  width: 250px; /* Fixed width for each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  transition: transform 0.2s; /* Smooth scale effect on hover */
+}
+
+.location-card:hover {
+  transform: scale(1.5); /* Scale effect on hover */
+}
+
+.location-card h3 {
+  margin-top: 0;
 }
 
 .dark-mode .locations-head h3 {
@@ -330,6 +590,29 @@ nav {
 }
 
 /**** BENEFITS SECTION ****/
+.benefits {
+  padding: 50px 20px;
+
+  align-items: center;
+  background-image: url(img/benefits.jpeg);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.benefits h2 {
+  text-align: center;
+}
+
+.benefits ul {
+  list-style: disc inside;
+}
+
+.call-to-action {
+  text-align: center;
+  margin-top: 30px;
+}
 
 .benefits-head {
   background: #343c44;
@@ -351,18 +634,20 @@ nav {
   width: 90%;
   margin: auto;
   display: flex;
-  min-height: 70vh;
+  min-height: 90vh;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .card {
   text-align: center;
   flex: 1 1 25rem;
   min-height: 45vh;
-  margin: 2rem 5rem;
+  margin: 2rem 2rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  background: linear-gradient(135deg,#cab6df,#abc2e3);
+  border-radius: 20px;
+  width: 20pc;
 }
 
 .card:hover {
@@ -382,57 +667,310 @@ nav {
 }
 
 .card-icon {
-  background: #2a3c53;
+  border-radius: 10px;
+  background: #8b66b6;
   padding: 2rem;
+  height: 7pc;
 }
 
-/**** CONTACT PAGE ****/
-
-#contact {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/contact-mountain.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/**** BOOKING FORM ****/
+.booking-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.form-wrapper {
-  background: rgba(19, 28, 39, 0.8);
-  width: 60%;
-  color: white;
-  border-radius: 2rem;
-}
-
-.form-head {
+.booking-form h2 {
   text-align: center;
-  padding: 4rem;
+  margin-bottom: 20px;
 }
 
-.name-form,
-.email-form {
-  padding: 3rem;
-  text-align: center;
+.form-group {
+  margin-bottom: 15px;
 }
 
-.form-wrapper label {
-  margin: 0rem 3rem;
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.form-wrapper button {
+.form-group input,
+.form-group select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  display: block;
   width: 100%;
-  padding: 2rem;
-  margin-top: 8rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.form-wrapper input {
-  padding: 1rem 3rem;
+.btn:hover {
+  background-color: #0056b3;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.contact-section {
+  background: linear-gradient(to right, #e6f2ff, #f0e6ff);
+  padding: 4rem 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.section-title {
+  text-align: center;
+  color: #1a365d;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-info, .contact-form {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+.contact-info:hover, .contact-form:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.info-item:nth-child(1) { animation-delay: 0.2s; }
+.info-item:nth-child(2) { animation-delay: 0.4s; }
+.info-item:nth-child(3) { animation-delay: 0.6s; }
+.info-icon {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+.info-item:hover .info-icon {
+  transform: rotate(15deg);
+}
+.info-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a365d;
+}
+.info-content p {
+  margin: 0.25rem 0 0;
+  color: #4a5568;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.4s; }
+.form-group:nth-child(3) { animation-delay: 0.6s; }
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  border: 2px solid #d1c4e9;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+}
+.form-control:focus {
+  border-color: #6a1b9a; /* Purple border on focus */
+  outline: none;
+  background-color: #f3e5f5; /* Light purple background on focus */
+}
+.btn-submit {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+.btn-submit:hover {
+  background: #2c5282;
+  transform: translateY(-2px);
+}
+.about-buddytrail {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+.about-buddytrail h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.about-buddytrail p {
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+      grid-template-columns: 1fr;
+  }
+}
+#About {
+  padding: 60px;
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#About h1 {
+  font-size: 3.5em;
+  color: #007bff; /* Blue color for the main heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#About h2 {
+  font-size: 3em;
+  color: #0056b3; /* Dark blue color for subheadings */
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+#About p {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #444; /* Slightly darker grey for paragraph text */
+}
+
+#About p strong {
+  color: #007bff; /* Blue highlight for important text */
+}
+
+#About ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+#About ul li {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#About ul li::before {
+  content: "✔"; /* Checkmark symbol as bullet point */
+  margin-right: 10px;
+  color: #28a745; /* Green checkmark */
+  font-size: 1.5em;
+}
+/* Light mode for #About */
+.light-mode #About {
+  background-color: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+}
+
+/* Dark mode for #About */
+.dark-mode #About {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+
+.light-mode #About h1 {
+  color: #007bff; /* Blue color for the main heading in light mode */
+}
+
+.dark-mode #About h1 {
+  color: #ffa500; /* Orange color for the main heading in dark mode */
+}
+
+.light-mode #About h2 {
+  color: #0056b3; /* Dark blue subheading in light mode */
+}
+
+.dark-mode #About h2 {
+  color: #ffd700; /* Bright yellow subheading in dark mode */
+}
+
+.light-mode #About p {
+  color: #444; /* Slightly darker grey for paragraph text in light mode */
+}
+
+.dark-mode #About p {
+  color: #d3d3d3; /* Lighter grey for paragraph text in dark mode */
+}
+
+.light-mode #About p strong {
+  color: #007bff; /* Blue highlight for important text in light mode */
+}
+
+.dark-mode #About p strong {
+  color: #ffcc00; /* Yellow highlight for important text in dark mode */
+}
+
 
 /* Cab Booking Section Styles */
 .cab-booking-section  {
@@ -441,7 +979,7 @@ nav {
   align-items: center; /* Center the content vertically */
   min-height: 100vh; /* Minimum height to fill the viewport */
   padding: 20px; /* Padding around the section */
-  background-color: rgba(255, 255, 255, 0.738); /* Translucent background for section */
+  background-color: white; /* Translucent background for section */
 }
 
 .booking-container {
@@ -451,20 +989,31 @@ nav {
   padding: 20px; /* Add padding inside the container */
   border: 2px solid #007bff; /* Border color */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+
+  box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.24) ;/* Slight shadow for depth */
+  background-color: white; /* Translucent white background */
+ 
 }
+
+.booking-container:hover{
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3) ;
+  transform: scale(1.025);
+}
+
+.booking-container h2 {
+  color: black;
+}
+
 
 h2 {
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0; /* Margin adjustment */
-  color: #333; /* Heading color */
+  
 }
 
 p {
   font-size: 1.5em;
-  margin-bottom: 20px;
   color: #666; /* Paragraph color */
 }
 
@@ -480,14 +1029,19 @@ label {
 }
 
 input,
-select {
-  height: 35px;
+select,
+textarea {
+  height: 45px;
   width: 100%; /* Full width */
   padding: 5px;
   border: 1px solid #ccc; /* Border for inputs */
   border-radius: 5px; /* Rounded corners */
-  font-size: 1em;
+  font-size: 1.6rem;
   margin-top: 5px;
+  outline: none;
+}
+textarea{
+  height: 150px;
 }
 
 input[type="text"],
@@ -496,8 +1050,9 @@ input[type="time"] {
   transition: border 0.3s; /* Smooth transition */
 }
 
-input:focus {
-  border: 1px solid #007bff; /* Border color on focus */
+input:focus, 
+textarea:focus{
+  border: 2px solid #007bff; /* Border color on focus */
 }
 
 /* Button Styles */
@@ -518,14 +1073,21 @@ input:focus {
   background-color: #0056b3; /* Darker shade on hover */
 }
 
+/* Dark Mode Styles */
+.dark-mode .cab-booking-section {
+  background-color: rgba(18, 18, 18, 0.9); /* Dark background for section */
+}
+.dark-mode h2 {
+  color: #ffa500; /* Bright color for heading */
+}
+
 
 /**** FOOTER ****/
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #343a40, #212529);
+    background-color:#232323; 
     color: #ffffff;
-    padding: 40px 0;
     text-align: center;
 }
 
@@ -544,8 +1106,22 @@ footer {
     margin: 10px;
 }
 
+.footer-column p{
+  color:white;
+}
+
+.footer-column a {
+  font-size: 16px;
+  line-height: 2;
+}
+#footer-contact-us{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .footer-column h3 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 18px;
     color: #f39c12;
 }
@@ -560,10 +1136,6 @@ footer {
     padding: 0;
 }
 
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
 .footer-column ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -573,10 +1145,6 @@ footer {
 .footer-column ul li a:hover {
     color: #f39c12;
     text-decoration: underline;
-}
-
-.social-icons {
-    margin-top: 20px;
 }
 
 .social-icons a {
@@ -591,18 +1159,18 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
     font-size: 14px;
 }
 
 
 /* for facebook */
-.social-icons .fa-facebook-f {
+.social-icons .fa-discord {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-facebook-f:hover{
+.social-icons .fa-discord:hover{
   color:#4267B2;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 
 /* for twitter */
@@ -612,14 +1180,16 @@ footer {
 .social-icons .fa-x-twitter:hover{
   color:black;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 /* for instagram */
-.social-icons .fa-instagram {
+.social-icons .fa-github {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.social-icons .fa-instagram:hover{
+.social-icons .fa-github:hover{
   color:#c32aa3;
   transform:scale(1.1);
+  transform: scale(1.2) translateY(-5px);
 }
 
 /* for instagram */
@@ -629,6 +1199,7 @@ footer {
   .social-icons .fa-linkedin-in:hover{
     color:#0a66c2;
     transform:scale(1.1);
+    transform: scale(1.2) translateY(-5px);
   }
 /**** MEDIA QUERY ****/
 
@@ -662,10 +1233,12 @@ footer {
 
   footer {
     text-align: center;
+
   }
 
   footer h5 {
     padding-bottom: 3rem;
+
   }
 }
 
@@ -678,25 +1251,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode styles
+Dark mode styles
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* Light mode styles */
-/* body.light-mode {
+Light mode styles
+body.light-mode {
     background-color: #ffffff;
     color: #000000;
-} */
+} 
 .light-mode {
   background-color: #ffffff; /* Light mode background */
   color: black; /* Light mode text color */
 }
 
 .dark-mode {
-  background-color: #121212; /* Dark mode background */
-  color: #e0e0e0; /* Dark mode text color */
+  background-color: #121212; 
+  color: #e0e0e0; 
 }
 
 /* Button styles */
@@ -716,10 +1289,24 @@ body.dark-mode {
 /* Sun and moon icons */
 .sun-icon {
   color: #ffd700;
+  size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 4px;
 }
 
 .moon-icon {
   color: #b0c4de;
+}
+
+.sun-icon,
+.moon-icon {
+    display: inline-block; /* Ensure they are inline */
+}
+
+.moon-icon {
+    display: none; /* Hide the moon icon by default */
 }
 
 /* Glow effect */
@@ -748,7 +1335,6 @@ body.dark-mode {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-
 /* itineraries */
 .itineraries-section {
   padding: 50px;
@@ -760,6 +1346,7 @@ body.dark-mode {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: bold;
+  color: black;
 }
 
 .itinerary-list {
@@ -768,7 +1355,7 @@ body.dark-mode {
   justify-content: space-around;
   gap: 20px;
   color: #003366;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .itinerary {
@@ -787,56 +1374,118 @@ body.dark-mode {
   color: #090f15;
 }
 
-.itinerary p {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #003366;
-}
 
-.itinerary button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-bottom: 15px;
-}
+    /* itineraries */
+    .itineraries-section {
+      padding: 50px;
+      background-color: #f4f4f4;
+      text-align: center;
+      height: 60vh;
+      padding: 20px;
+    }
 
-.itinerary button:hover {
-  background-color: #0056b3;
-}
-@media (max-width: 768px) {
-  .itinerary {
-    flex: 1 1 calc(45% - 20px);
-    max-width: calc(45% - 20px);
-  }
-}
+    .itineraries-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-@media (max-width: 480px) {
-  .itinerary {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-#itineraries {
-  background-color: #f9f9f9; /* Light background */
-  border: 1px solid #007bff; /* Blue border */
-}
+    .itinerary-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      color: #003366;
+      margin-top: 20px;
+    }
 
-.dark-mode #itineraries {
-  background-color: #1e1e1e; /* Dark background */
-  border: 1px solid #0056b3; /* Darker blue border */
-}
+    .itinerary {
+      background: lightgrey;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(33% - 40px);
+      max-width: calc(33% - 40px);
+      text-align: center;
+      transition: all 0.4s ease, box-shadow 0.3s; /* Added transition */
+      height: 32vh;
+    }
+
+    .itinerary:hover{
+      transform: scale(0.95);
+      background-color: white;
+    }
+
+    .itinerary h3 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #090f15;
+    }
+
+    .itinerary p {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #003366;
+    }
+
+    .itinerary button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 15px;
+    }
+
+    .itinerary button:hover {
+      background-color: #0056b3;
+    }
+
+
+    .cab-booking-section {
+      background-color:rgba(0, 0, 0, 0.1); /* Dark translucent background */
+    }
+    
+    .booking-container p,
+    .booking-container h1 {
+      color: #f1f1f1; /* Lighter text color for readability */
+    }
+
+    @media (max-width: 768px) {
+      .itinerary {
+        flex: 1 1 calc(45% - 20px);
+        max-width: calc(45% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .itinerary {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    #itineraries {
+      background-color: #f9f9f9; /* Light background */
+      border: 1px solid #007bff; /* Blue border */
+    }
+
+    .dark-mode #itineraries {
+      background-color: #1e1e1e; /* Dark background */
+      border: 1px solid #0056b3; /* Darker blue border */
+    }
 
 
 /* user rating */
 .reviews-section {
   padding: 100px;
   background-color: #F0F8FF;
- 
+  display: flex; /* Centering the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 .revieww{
 display: flex;
@@ -844,13 +1493,15 @@ justify-content: center;
 
 }
 
-.review-p{
-  font-size:small;
-  color:#543db0;
+.review-p {
+  font-size: small;
+  color: #543db0;
   font-style: italic;
   font-weight: 500;
 }
-
+.dark-mode .review-p{
+  color:whitesmoke
+}
 .reviews-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
@@ -864,10 +1515,12 @@ justify-content: center;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  width: 70vw;
   width:100vw;
   max-width: 1300px;
   align-items: center;
   justify-items: center;
+  transition: transform 0.3s ease; /* Transition for hover effect */
 }
 
 .form{
@@ -877,6 +1530,7 @@ justify-content: center;
   top:0;
   bottom: 0;
 }
+
 .review-form h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -895,11 +1549,18 @@ justify-content: center;
   min-width: 100%;
   max-width: 100%;
   font-weight: 600;
-  padding: 5px;
+  /* padding: 5px; */
   font-size: 15px;
   margin-bottom: 10px;
   border: 1px solid #0e0d0d;
   border-radius: 5px;
+  transition: border-color 0.3s ease; /* Transition for input fields */
+}
+
+.review-form input:hover,
+.review-form select:hover,
+.review-form textarea:hover {
+  border-color: #F7D160; /* Change border color on hover */
 }
 
 .review-form button {
@@ -909,14 +1570,12 @@ justify-content: center;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
-  color:black;
-  font-size:14px;
-  
+  color: black;
+  font-size: 14px;
 }
 
-.form-button{
+.form-button {
   text-align: center;
-  
 }
 
 .reviews-container {
@@ -1101,35 +1760,74 @@ input#rate-5:checked ~ header:before {
 }
 
 @media (max-width: 768px) {
+  .review-form{
+    width: 60vw;
+  }
+  #reviewForm{
+    width:50vw;
+  }
+  .form-button button{
+    width: 100%;
+  }
   .reviews-list {
     grid-template-columns: 1fr;
   }
-  
+
+  .form-button button {
+    width: 100%;
+  }
+
   .reviews-title {
     font-size: 2em;
   }
-  
+
   .review-card {
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .review-form {
+    width: 60vw;
+  }
+
+  .form {
+    width: 50vw;
+  }
 }
 
 @media (max-width: 480px) {
+  .review-form{
+    width: 100vw;
+  }
+  #reviewForm{
+    width: 70vw;
+  }
   .reviews-container {
     padding: 20px 10px;
   }
-  
+
+  .review-form {
+    width: 80vw;
+  }
+
+  .form {
+    width: 70vw;
+  }
+
+  .form-button button {
+    width: 100%;
+  }
+
   .review-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .reviewer-avatar {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  
+
   .reviewer-info {
     text-align: center;
   }
@@ -1137,8 +1835,15 @@ input#rate-5:checked ~ header:before {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .review-card {
@@ -1146,15 +1851,29 @@ input#rate-5:checked ~ header:before {
   opacity: 0;
 }
 
-.review-card:nth-child(1) { animation-delay: 0.1s; }
-.review-card:nth-child(2) { animation-delay: 0.2s; }
-.review-card:nth-child(3) { animation-delay: 0.3s; }
-.review-card:nth-child(4) { animation-delay: 0.4s; }
-.review-card:nth-child(5) { animation-delay: 0.5s; }
+.review-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.review-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.review-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.review-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.review-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 .review-item {
   padding: 20px;
-  border: 1px solid #ccc; /* Light border in light mode */
+  border: 1px solid #ccc; 
   border-radius: 8px;
   transition: border-color 0.3s ease;
 }
@@ -1163,51 +1882,56 @@ input#rate-5:checked ~ header:before {
   border-color: #ccc;
 }
 
-.light-mode .reviews-section{
+.light-mode .reviews-section {
   background-color: white;
 }
 
 /* Dark Mode Styles for Reviews Section */
-.dark-mode .reviews-section  {
-  background-color: #121212; /* Dark background */
-  color: white; /* White text */
+.dark-mode .reviews-section {
+  background-color: #121212; 
+  color: white;
+  border: 2px solid white;
 }
 
 .dark-mode .review {
-  background-color: #1e1e1e; /* Dark background for review cards */
-  color: white; /* White text for review content */
-  border: 1px solid #333; /* Darker border */
+  background-color: #1e1e1e; 
+  color: white; 
+  border: 1px solid #ebe2e2; 
 }
 
 .dark-mode .review h4 {
-  color: #ffa500; /* Optional: Highlight the reviewer's name */
+  color: #ffa500;
+}
+
+.dark-mode .review label {
+  color: rgb(233, 220, 220);
 }
 
 .dark-mode .review p {
-  color: white; /* White text for review paragraphs */
+  color: white; 
 }
 
 /* Adjusting rating stars color in dark mode */
 .dark-mode .rating {
-  color: #ffcc00; /* Bright yellow stars for dark mode */
+  color: #ffcc00; 
 }
 
 /* Dark Mode Styles for Review Form */
 .dark-mode .review-form {
-  background-color: #121212; /* Dark background for the review form */
-  color: white; /* White text color */
-  padding: 20px; /* Padding for inner spacing */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow for depth */
+  background-color: #121212; 
+  color: white;
+  padding: 20px;
+  border-radius: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .review-form h1 {
-  margin-bottom: 10px; /* Space below heading */
+  margin-bottom: 10px; 
 }
 
 .review-form label {
-  margin-top: 10px; /* Space above labels */
-  display: block; /* Makes the label block-level for better spacing */
+  margin-top: 10px;
+  display: block; 
 }
 
 .dark-mode .review-form input,
@@ -1289,7 +2013,7 @@ input#rate-5:checked ~ header:before {
 .popup-content {
   background-color: #fff;
   margin: 15% auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #888;
   border-radius: 10px;
   width: 100%;
@@ -1297,7 +2021,6 @@ input#rate-5:checked ~ header:before {
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Close Button */
 .close-btn {
   position: absolute;
@@ -1322,6 +2045,52 @@ input#rate-5:checked ~ header:before {
   color: #fff;
   text-decoration: none;
 }
+
+.popup {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);  /* Background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  background: white;
+  padding: 40px; /* Increased padding around content */
+  padding-top: 60px; /* Extra top padding to account for close button */
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #ff4c4c;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.close-btn:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+
 
 /* Button to check deals */
 .popup-content button {
@@ -1517,6 +2286,15 @@ input#rate-5:checked ~ header:before {
 .recommendation-item button:hover {
   background-color: #003d80; /* Darker blue on hover */
 }
+@media (max-width: 768px) {
+  .recommendation-list{
+    flex-direction: column;
+  }
+  .recommendation-item{
+    max-width: 100%;
+  }
+}
+
 /* Positioning and Styling for Google Translate Button */
 .translate-container {
   position: fixed;
@@ -1539,6 +2317,17 @@ input#rate-5:checked ~ header:before {
 .language-toggle:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+/* Dark Mode For Recommendations */
+.dark-mode .recommendations-section {
+  background-color: #121212; /* Dark background */
+}
+.dark-mode .recommendations-section p {
+  color: #e0e0e0; /* Lighter text color */
+}
+.dark-mode .recommendation-item {
+  background-color: #1e1e1e; /* Darker background for items */
+  border: 2px solid #0056b3; /* Darker blue border */
+}
 
 /* Hide Google Translate Element by Default */
 #google_translate_element {
@@ -1552,11 +2341,12 @@ input#rate-5:checked ~ header:before {
   display: inline-block;
   padding: 10px 15px; /* Adds padding around the text */
   border-radius: 20px; /* Creates rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  transition: all 0.3s ease, color 0.3s; /* Smooth transition */
 }
 
 .navhover:hover {
-  border: 1px solid #3498db;
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
   color: white; /* Changes text color on hover */
 }
 
@@ -1584,7 +2374,11 @@ input#rate-5:checked ~ header:before {
 }
 
 /* Extra small devices (phones, 600px and down) */
-/*@media only screen and (max-width: 600px) {...}*/
+@media only screen and (max-width: 600px) {
+  .recommendation-item{
+    max-width: 100%;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media only screen and (min-width: 600px) {...}*/
@@ -1613,6 +2407,10 @@ input#rate-5:checked ~ header:before {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 /* Heading and Title */
@@ -1624,18 +2422,18 @@ input#rate-5:checked ~ header:before {
 
 .title {
   font-weight: bold;
-  color: #111827;
+  color: white;
   font-size: 5rem;
 }
 
 .wr{
   font-weight:600;
-  color: black;
+  color: white;
 }
 .description {
   color: #4b5563;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 2.19rem;
 }
 
 /* Contact Container */
@@ -1676,13 +2474,14 @@ input#rate-5:checked ~ header:before {
 }
 
 .icon {
-  width: 2.5rem;
+  width: 4rem;
   height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   color: white;
+  margin-top: 1rem;
 }
 
 .info-text-content {
@@ -1691,11 +2490,12 @@ input#rate-5:checked ~ header:before {
 
 .info-title {
   font-weight: 600;
-  color: #000e2b;
+  color: white;
 }
 
 .info-description {
-  color:whitesmoke;
+  color:white;
+  text-shadow: 2px 2px 0 black;
 }
 
 /* Form Styling */
@@ -1777,6 +2577,7 @@ input#rate-5:checked ~ header:before {
   position: absolute;
   bottom: 10%; /* Position above the button */
   right: 50%;
+ margin-bottom: 0.125rem;
   transform: translateX(50%);
   color: #fff; /* Tooltip text color */
   padding: 5px;
