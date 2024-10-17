@@ -1207,11 +1207,11 @@ nav.hi ul li.NAVI a:hover {
 
       /* Navigation Styles */
       nav.hi ul {
-          list-style-type: none;
+          list-style-type: ;
           margin: 0;
           padding: 0;
           display: flex;
-          gap: 15px;
+          gap: 0px;
       }
 
       nav.hi ul li.NAVI {
@@ -1236,7 +1236,7 @@ nav.hi ul li.NAVI a:hover {
       /* Underline effect */
       nav.hi ul li.NAVI a::after {
           content: '';
-          display: block;
+         /*display: block;*/
           width: 0;
           height: 2px;
           background: #ffcc00;
@@ -1737,19 +1737,36 @@ button:hover:before {
             oninput="this.setCustomValidity('')"/>
 
             <label for="rating" id="darkbtn">Rating:</label>
-            <select id="rating" class="rating" name="rating">
+           <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
               <option value="2">⭐⭐</option>
               <option value="1">⭐</option>
-            </select>
+            </select>-->
+
+            <div class="rating" name="rating">
+              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->   
+              <div class="star-widget">
+               <input type="radio" name="rate" id="rate-5">
+               <label for="rate-5"  class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-4">
+               <label for="rate-4" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-3">
+               <label for="rate-3" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-2">
+               <label for="rate-2" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-1">
+               <label for="rate-1" class="fas fa-star"></label>
+               <header></header>
+            </div>
+           </div>
 
             <label for="review" id="darkbtn">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
+            <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
             <label for="complaint" id="darkbtn">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+              placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
             <div class="form-button">
               <button type="submit">Send</button>
