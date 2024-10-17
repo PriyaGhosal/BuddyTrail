@@ -282,6 +282,7 @@ a{
 
 .main-head.shadow {
   background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
+  backdrop-filter: blur(8px);
 }
 
 nav {
