@@ -183,6 +183,7 @@
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
   </head>
   <body class="light-mode">
 
@@ -1807,6 +1808,15 @@ button:hover:before {
                   <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
+          <!-- Newsletter Form -->
+    <div class="newsletter" id="newsletter">
+      <form id="newsletter-form">
+        <h3>Newsletter Form</h3>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
      
   
     </div>
@@ -1815,6 +1825,7 @@ button:hover:before {
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+  
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
@@ -2001,7 +2012,29 @@ button:hover:before {
   }
     </style>
   </script>
- 
+  <script src="script.js">
+document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('email').value.trim(); // Get the email value
+    const messageElement = document.getElementById('subscription-message'); // Get the message display element
+
+    // Regular expression to validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+        // Simulate a successful subscription
+        messageElement.textContent = 'Subscribed successfully!'; // Show success message
+        messageElement.style.color = 'green'; // Change message color to green
+
+        // Clear the input field after successful submission
+        document.getElementById('email').value = '';
+    } else {
+        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
+        messageElement.style.color = 'red'; // Change message color to red
+    }
+});
+    </script>    
 </body>
 
 </html>
