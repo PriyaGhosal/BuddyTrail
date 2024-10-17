@@ -27,6 +27,24 @@
     <link rel="stylesheet" href="chatbot.css">
     <title>BuddyTrail</title>
     <style>
+     .header1{
+       background-color:white;
+       border-radius:8px;
+     }
+    /* Button Styling */
+    .btn {
+      background-color: #007bff; /* Primary button color */
+      padding: 10px 20px; /* Padding for button size */
+      text-decoration: none; /* Remove underline from text */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+    }
+  
+    /* Hover Effect for Buttons */
+    .btn:hover {
+      background-color: #0056b3; /* Darker color on hover */
+    }
+
       * {
     margin: 0;
     padding: 0;
@@ -165,6 +183,7 @@
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
   </head>
   <body class="light-mode">
 
@@ -255,6 +274,12 @@
     </script>
 
     <script src="script.js"></script>
+    <header class="main-head">
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+    </div>
 
     <!-- Hamburger button for mobile -->
     <button class="hamburger" id="hamburger">☰</button>
@@ -379,7 +404,79 @@
           and destination
         </h3>
       </header>
-      <div class="cards" style="height: 384px;">
+      <!-- Start of Cards Container -->
+<div class="cards" style="height: 384px;">
+
+  <!-- Travel Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Travel Icon -->
+      <div class="card-icon">
+        <img src="/icons/route-solid.svg" alt="Travel Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Travel</h4>
+      <!-- Card Description -->
+      <p>
+        Discover budget-friendly getaways for families and friends! From serene
+        mountains to sunny beaches, find your next adventure without breaking the
+        bank. Start exploring now!
+      </p>
+      <!-- Button Link for Travel -->
+      <a href="travel.html" class="btn" style="color: white;">Explore more</a>
+    </div>
+  </div>
+  <!-- End of Travel Card -->
+
+  <!-- Hotel Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Hotel Icon -->
+      <div class="card-icon">
+        <img src="./icons/bed-solid.svg" alt="Hotel Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Hotel</h4>
+      <!-- Card Description -->
+      <p>
+        We've handpicked top-rated options that offer exceptional value. Book your
+        perfect stay today and enjoy premium accommodations without the premium
+        price tag!
+      </p>
+      <!-- Button Link for Hotels -->
+      <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
+    </div>
+  </div>
+  <!-- End of Hotel Card -->
+
+  <!-- Fly Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Fly Icon -->
+      <div class="card-icon">
+        <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Fly</h4>
+      <!-- Card Description -->
+      <p>
+        Fly to your dream destination without breaking the bank! We offer the best
+        flight deals, combining comfort and affordability for perfect journey.
+        Book now and take off for less!
+      </p>
+      <!-- Button Link for Flights -->
+      <a href="fly.html" class="btn" style="color: white;">See Flights</a>
+    </div>
+  </div>
+  <!-- End of Fly Card -->
+
+</div>
+<!-- End of Cards Container -->
+
+<!-- CSS for the buttons (Move this to your CSS file) -->
+
+
+<!--       <div class="cards" style="height: 384px;">
         <div class="card">
           <div class="header1">
           <div class="card-icon">
@@ -421,7 +518,7 @@
           </p>
           <button id="btn"><a href="fly.html ">See Flights</a></button></div>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- deals -->
    <section id="deals" class="deals-section">
@@ -644,6 +741,51 @@
       </div>
     </section>
 
+    <!-- Our Services Section -->
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <p>Travel smarter with our curated services designed to make your trips effortless and enjoyable.</p>
+    
+      <div class="services-container">
+        <!-- Service Card: Interactive Travel Map -->
+        <div class="service-card">
+          <div class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Travel Map</h3>
+          <p>Explore popular destinations across India and the world. Click on markers to learn more about each location.
+          </p>
+        </div>
+    
+        <!-- Service Card: Hotel Finder -->
+        <div class="service-card">
+          <div class="icon">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h3>Hotel Finder</h3>
+          <p>Find the best hotels at affordable rates, handpicked to suit your budget and preferences.</p>
+        </div>
+    
+        <!-- Service Card: Flight Booking -->
+        <div class="service-card">
+          <div class="icon">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3>Flight Booking</h3>
+          <p>Book flights at the best prices, with options tailored to your travel needs.</p>
+        </div>
+    
+        <!-- Service Card: Travel Blog -->
+        <div class="service-card">
+          <div class="icon">
+            <i class="fas fa-pen"></i>
+          </div>
+          <h3>Travel Blog</h3>
+          <p>Read tips, guides, and personal stories from seasoned travelers.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Cab or Auto Booking -->
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
@@ -692,9 +834,17 @@
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
-            <input type="date" id="travel-date" name="travel-date" required />
-          </div>
+          <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+          <input type="date" id="travel-date" name="travel-date" required min="" />
+
+          <!--Logic To prevent the user from selecting an old date  -->
+
+          <script>
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('travel-date').setAttribute('min', today);
+          </script>
+
+        </div>
           <div class="form-group">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
@@ -957,15 +1107,13 @@
     <header class="forum_1">
       <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
-
-          <ul >
-              <li><a href="#destinations">Destinations</a></li>
-              <li><a href="#travel-planning">Travel Planning</a></li>
-              <li><a href="#experiences">Travel Experiences</a></li>
-              <li><a href="#gear">Travel Gear</a></li>
-              <li><a href="#safety">Travel Safety</a></li>
-              <li><a href="#sustainable">Sustainable Travel</a></li>
-
+          <ul>
+              <li class="NAVI"><a href="#destinations">Destinations</a></li>
+              <li class="NAVI"><a href="#travel-planning">Travel Planning</a></li>
+              <li class="NAVI"><a href="#experiences">Travel Experiences</a></li>
+              <li class="NAVI"><a href="#gear">Travel Gear</a></li>
+              <li class="NAVI"><a href="#safety">Travel Safety</a></li>
+              <li class="NAVI"><a href="#sustainable">Sustainable Travel</a></li>
           </ul>
       </nav>
   </header>
@@ -1653,7 +1801,7 @@ button:hover:before {
               <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
+                  <li><a href="#services">Services</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><a href="team.html">Team</a></li>
                   <li><a href="contributor/contributor.html">Our Contributor</a></li>
@@ -1663,11 +1811,11 @@ button:hover:before {
           <div class="footer-column">
               <h3>Legal Links</h3>
               <ul>
+                  <li><a href="#"></a>Terms of Service</li>
                   <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
                   <li><a href="#">Disclaimer</a></li>
                   <li><a href="#">Copyright Notice</a></li>
+                  <li><a href="#">Cookie Policy</a></li>
 
               </ul>
           </div>
@@ -1685,6 +1833,15 @@ button:hover:before {
                   <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
+          <!-- Newsletter Form -->
+    <div class="newsletter" id="newsletter">
+      <form id="newsletter-form">
+        <h3>Newsletter Form</h3>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
      
   
     </div>
@@ -1693,6 +1850,7 @@ button:hover:before {
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+  
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
@@ -1879,7 +2037,29 @@ button:hover:before {
   }
     </style>
   </script>
- 
+  <script src="script.js">
+document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('email').value.trim(); // Get the email value
+    const messageElement = document.getElementById('subscription-message'); // Get the message display element
+
+    // Regular expression to validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+        // Simulate a successful subscription
+        messageElement.textContent = 'Subscribed successfully!'; // Show success message
+        messageElement.style.color = 'green'; // Change message color to green
+
+        // Clear the input field after successful submission
+        document.getElementById('email').value = '';
+    } else {
+        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
+        messageElement.style.color = 'red'; // Change message color to red
+    }
+});
+    </script>    
 </body>
 
 </html>
