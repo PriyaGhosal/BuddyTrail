@@ -260,7 +260,8 @@ a{
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 15px;
+  
+  padding: 55px;
   height: 90px;
   background-color: rgba(0, 0, 0, 0.7);
   /*background-color: transparent;*/
@@ -304,7 +305,8 @@ nav {
   text-decoration: none;
   font-weight: 400;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .hamburger {
