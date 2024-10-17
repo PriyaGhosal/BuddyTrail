@@ -271,14 +271,14 @@ a{
   right: 0;
   z-index: 5;
   padding: 15px;
-  height: 90px;
   background-color: rgba(0, 0, 0, 0.7);
   /*background-color: transparent;*/
   color: white;
   display: flex;
-  justify-content: flex-start; /* Keep header centered */
+  justify-content: space-between;/* Keep header centered */
   align-items: center;
   transition: background-color 0.3s ease;
+  width: 100vw;
 }
 .main-head.shadow {
   background-color: #000;
@@ -295,17 +295,11 @@ nav {
 
 .logo {
   display: flex;
-  margin-left: 34px;
 
 }
 
 #nav-list {
-  display: flex;
-  gap: 1;
   list-style: none;
-  margin-left: 3px;
-  padding: 0;
-  align-items: center;
 }
 
 
@@ -314,7 +308,7 @@ nav {
   text-decoration: none;
   font-weight: 400;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.8rem;
 }
 
 .hamburger {
@@ -327,14 +321,9 @@ nav {
 }
 
 .mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
   border: none;
   background-color:white;
-  cursor: pointer;
-  padding: 5px;
-  
+  cursor: pointer; 
 }
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
@@ -347,6 +336,7 @@ nav {
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Show hamburger on small screens */
+    font-size: 4.5rem;
   }
 
   #nav-list {
@@ -391,7 +381,7 @@ nav {
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("/img/landing-page.jpg");
+    url("img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -489,7 +479,7 @@ nav {
 #locations {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/location.jpg");
+    url("img/location.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1196,7 +1186,6 @@ footer {
     text-align: center;
   }
   #logo {
-    padding: 1.8rem;
     text-align: center;
   }
 
@@ -1258,16 +1247,12 @@ body.light-mode {
 
 /* Button styles */
 .mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
   font-size: 1.5em;
   transition: color 0.3s, transform 0.3s;
-  padding: 15px;
 }
 
 /* Sun and moon icons */
