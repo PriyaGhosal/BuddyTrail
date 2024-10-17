@@ -202,3 +202,15 @@ textarea.input{
         font-size: 12px;
     }
 }
+.home-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    z-index: 100;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
