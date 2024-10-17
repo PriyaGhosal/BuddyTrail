@@ -743,9 +743,17 @@
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
-            <input type="date" id="travel-date" name="travel-date" required />
-          </div>
+          <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+          <input type="date" id="travel-date" name="travel-date" required min="" />
+
+          <!--Logic To prevent the user from selecting an old date  -->
+
+          <script>
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('travel-date').setAttribute('min', today);
+          </script>
+
+        </div>
           <div class="form-group">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
