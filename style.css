@@ -391,7 +391,7 @@ nav {
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("/img/landing-page.jpg");
+    url("./img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -488,8 +488,10 @@ nav {
 
 #locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/location.jpg");
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./img/new-york-page.png");
+
+    
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -505,18 +507,26 @@ nav {
 }
 
 .locations-head h2 {
-  padding: 1rem 0rem;
+  text-align: start;
+  
   text-decoration: none;
   text-decoration-thickness: 0.5rem;
+  font-size: 5rem;
+  text-decoration: underline;
+  padding: 1rem 0rem;
 }
 
 .locations-head h3 {
-  padding: 4rem 0rem;
+
   background: linear-gradient(#fff, #f9f9f9);
   font-weight: bolder;
   font-size: 2.8rem;
+  
+  max-width: 55vw;
   -webkit-background-clip: text;
   background-clip: text;
+  text-align: start;
+  font-weight: 500;
 }
 
 /* Location flashcards */
