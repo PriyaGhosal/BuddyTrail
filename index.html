@@ -123,10 +123,11 @@
       }
 
       .chatbot-button {
-        background-color: #007bff; /* Change to your preferred color */
+        background-color: blue; /* Change to your preferred color */
         border: none;
         border-radius: 50%;
         padding: 5px; /* Smaller padding */
+        margin: 20px;
         cursor: pointer;
         position: relative;
         width: 50px; /* Adjusted size */
@@ -134,8 +135,12 @@
       }
 
       .chatbot-button img {
-        width: 30px; /* Adjusted image size */
+        width: 10px; /* Adjusted image size */
         height: 30px; /* Adjusted image size */
+      }
+
+      #chat-icon{
+        margin: -12px;
       }
 
       .tooltip-text {
@@ -518,6 +523,7 @@
         .deals-section {
           text-align: center;
           padding: 58px 20px;
+          margin: 30px;
           background-color: #f8f9fa;
 
         }
@@ -553,23 +559,27 @@
         .carousel-button {
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
+          margin: -26px;
+          width: 7%;
+          margin: -40px;
+          transform: translateY(-10%);
           background-color: rgba(17, 16, 16, 0.7);
           border: none;
           cursor: pointer;
-          padding: 10px;
+          padding: 15px;
           border-radius: 50%;
-          font-size: 24px;
-          transition: background-color 0.3s;
+          font-size: 25px;
+          transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
           opacity: 1; /* Always show buttons */
+          color: white;
         }
         
         .prev {
-          left: 10px;
+          left: 40px;
         }
         
         .next {
-          right: 10px;
+          right: 40px;
         }
         
         /* Optional hover effects */
@@ -649,7 +659,7 @@
           <h3>Romantic Getaway</h3>
           <p>
             Plan the perfect romantic escape with itineraries that include
-            serene locations, romantic dinners, and memorable experiences.
+            serene locations, romantic dinners, and great experiences.
           </p>
           <button>View Itinerary</button>
         </div>
@@ -983,7 +993,8 @@
   <style>
           /* General Styles */
       body {
-          margin: 0;
+          margin: 10px;
+          padding: 10px;
           font-family: 'Arial', sans-serif;
           background-color: #f4f4f9;
       }
@@ -995,6 +1006,9 @@ header.forum_1 {
     border-image-slice: 1; /* Ensures the full gradient is applied */
     border-radius: 10px; /* Rounded corners for smooth appearance */
     transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%;
+    margin: -10px;
+    margin-bottom: 30px;
 }
 
 header.forum_1:hover {
@@ -1006,6 +1020,11 @@ nav.hi ul li.NAVI a {
     border: 2px solid transparent; /* Transparent border initially */
     border-radius: 5px; /* Rounded corners */
     transition: border 0.3s ease, background-color 0.3s ease;
+    width: 50%;
+    margin: 10px;
+    text-align: left;
+    padding: 30px;
+    justify-content: left;
 }
 
 nav.hi ul li.NAVI a:hover {
@@ -1056,11 +1075,12 @@ nav.hi ul li.NAVI a:hover {
       nav.hi ul li.NAVI a {
           color: rgb(162, 37, 37);
           text-decoration: none;
-          font-size: 14px; /* Reduced font size for a more compact design */
-          padding-right: 5px;
+          font-size: 16px; /* Reduced font size for a more compact design */
+          padding-right:5px;
+          text-align: left;
           padding: 8px 12px; /* Reduced padding to fit minimal height */
           transition: color 0.3s, background-color 0.3s ease;
-          border-radius: 5px; /* Slight rounding for a modern look */
+          border-radius: 50px; /* Slight rounding for a modern look */
       }
 
       nav.hi ul li.NAVI a:hover {
@@ -1195,8 +1215,9 @@ h2 {
 }
 
 #destinations {
-  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
+  background: linear-gradient(145deg, plum, #f4f4f9);
   padding: 30px;
+  font-size: xx-large;
   border-radius: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease;
@@ -1204,10 +1225,11 @@ h2 {
 
 #destinations:hover {
   transform: scale(1.02);
+ 
 }
 
 .post-container {
-  background-color: white;
+  background-color: salmon;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1249,7 +1271,7 @@ textarea:focus {
 }
 
 button {
-  padding: 12px 18px;
+  padding: 15px 18px;
   font-size: 1.1rem;
   background-color: #007BFF;
   color: white;
