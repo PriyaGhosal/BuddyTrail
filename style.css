@@ -290,19 +290,20 @@ nav {
   justify-content: center;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
-  margin: 0 auto; /* Center the nav */
+  margin-left: 200px ; /* Center the nav */
+  padding-left: 0;
 }
 
 .logo {
   display: flex;
-  margin-left: 34px;
+  margin-left: 0;
 }
 
 #nav-list {
   display: flex;
   gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
-  margin-left: 3px;
+  margin-left: 180px;
   padding: 0;
   align-items: center;
 }
