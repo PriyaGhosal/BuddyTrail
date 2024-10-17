@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="contact">
+                <div class="first-text">Let's get in touch</div>
+                <img src="conn.jpeg" alt="contact-us-image" class="image">
+                <div class="social-links">
+                    <span class="secnd-text">Connect with us:</span>
+                    <ul class="social-media">
+                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="submit-form">
+                <h4 class="third-text text">Contact Us</h4>
+                <form id="contactForm">
+                    <div class="input-box">
+                        <input type="text" class="input" required>
+                        <label for="fullname">Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="input" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" class="input" required>
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <input type="submit" class="btn" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+</body>
+</html>
