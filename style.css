@@ -272,42 +272,40 @@ a{
   z-index: 5;
   padding: 15px;
   height: 90px;
-  background-color: rgba(0, 0, 0, 0.7);
-  /*background-color: transparent;*/
+  background-color: #000; /* Initially black */
   color: white;
   display: flex;
-  justify-content: flex-start; /* Keep header centered */
+  justify-content: space-between; /* Adjusted to space-between for better layout */
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, height 0.3s ease;
 }
+
 .main-head.shadow {
-  background-color: #000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px; /* Limit the width for better centering */
   width: 100%; /* Ensure nav takes full width */
-  margin: 0 0; /* Center the nav */
+  margin: 0 auto; /* Center the nav */
 }
 
 .logo {
   display: flex;
   margin-left: 34px;
-
 }
 
 #nav-list {
   display: flex;
-  gap: 1;
+  gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
   margin-left: 3px;
   padding: 0;
   align-items: center;
 }
-
 
 #nav-list li a {
   color: white;
@@ -331,20 +329,25 @@ nav {
   top: 20px;
   right: 20px;
   border: none;
-  background-color:white;
+  background-color: white;
   cursor: pointer;
   padding: 5px;
-  
+  z-index: 10; /* Ensure it stays above other elements */
 }
+
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
   height: auto;
-  
 }
-
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
+  .main-head {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
   .hamburger {
     display: block; /* Show hamburger on small screens */
   }
@@ -366,7 +369,7 @@ nav {
   }
 
   /* Close button styles */
-  .dropdown-close-btn  {
+  .dropdown-close-btn {
     display: block; /* Visible only in the dropdown menu */
     align-self: flex-end;
     margin-right: 20px;
@@ -379,14 +382,10 @@ nav {
 
 /* Hide the close button on larger screens (revised) */
 @media (min-width: 769px) {
-  /* Hide the close button by setting its display to none and removing it from the DOM */
   .dropdown-close-btn {
     display: none;
-    /* Remove the close button from the DOM */
-    display: none !important;
   }
 }
-
 
 .hero {
   min-height: 100vh;
