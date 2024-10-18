@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>About Us</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f9f9f9;
+            background-color:#f0f8ff ;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,13 +27,13 @@
         }
 
         h1 {
-            color: #f39c12;
+            color: #0056b3;
             margin-bottom: 20px;
         }
 
         p {
             margin-bottom: 15px;
-            color: #555;
+            color: black;
         }
 
         /* Styles for the Back to Home link */
@@ -40,7 +41,7 @@
             display: inline-block; /* Make it behave like a block for padding */
             padding: 10px 20px; /* Add padding */
             margin-top: 20px; /* Space above the button */
-            background-color: #007BFF; /* Button color */
+            background-color: #0056b3; /* Button color */
             color: white; /* Text color */
             text-decoration: none; /* Remove underline */
             border-radius: 5px; /* Rounded corners */
@@ -54,6 +55,40 @@
     </style>
 </head>
 <body>
+        <header class="main-head">
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="index.html" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="#benefits" class="navhover">Benefits</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+     
+    </ul>
+
+    <!-- Toggle Button -->
+    <button class="mode-toggle" id="modeToggle">
+      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+    </button>
+  </nav>
+</header>
+
     <div class="container">
         <h1>About Our Website</h1>
         <p>Welcome to BuddyTrail – your ultimate travel companion! 🌍✈️ Whether you're planning a family vacation 👨‍👩‍👧‍👦 or a trip with friends 👫, BuddyTrail helps you discover and explore amazing destinations 🏖️🏰, find the best hotels 🏨, and book affordable flights 💺 with ease.</p>
