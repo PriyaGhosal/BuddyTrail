@@ -220,17 +220,17 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Sudhanshu248">
-                    <img src="https://avatars.githubusercontent.com/u/152962449?v=4" width="100;" alt="Sudhanshu248"/>
-                    <br />
-                    <sub><b>Sudhanshu Saini</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Bhum-ika">
                     <img src="https://avatars.githubusercontent.com/u/91523494?v=4" width="100;" alt="Bhum-ika"/>
                     <br />
                     <sub><b>Bhumika Sharma</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Sudhanshu248">
+                    <img src="https://avatars.githubusercontent.com/u/152962449?v=4" width="100;" alt="Sudhanshu248"/>
+                    <br />
+                    <sub><b>Sudhanshu Saini</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -243,6 +243,13 @@ You can find the project structure in the [Project Structure](project-structure.
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/isimarjitsingh">
+                    <img src="https://avatars.githubusercontent.com/u/154678140?v=4" width="100;" alt="isimarjitsingh"/>
+                    <br />
+                    <sub><b>Simarjit Singh</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/rees8">
                     <img src="https://avatars.githubusercontent.com/u/88110289?v=4" width="100;" alt="rees8"/>
                     <br />
@@ -250,17 +257,10 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Ujjwal5705">
-                    <img src="https://avatars.githubusercontent.com/u/152475026?v=4" width="100;" alt="Ujjwal5705"/>
+                <a href="https://github.com/HimangshuSharma01">
+                    <img src="https://avatars.githubusercontent.com/u/120270398?v=4" width="100;" alt="HimangshuSharma01"/>
                     <br />
-                    <sub><b>Ujjwal Sharma</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/tarunkumar2005">
-                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
-                    <br />
-                    <sub><b>Tarun kumar</b></sub>
+                    <sub><b>Himangshu Sharma</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -271,17 +271,17 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/isimarjitsingh">
-                    <img src="https://avatars.githubusercontent.com/u/154678140?v=4" width="100;" alt="isimarjitsingh"/>
+                <a href="https://github.com/tarunkumar2005">
+                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
                     <br />
-                    <sub><b>Simarjit Singh</b></sub>
+                    <sub><b>Tarun kumar</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/HimangshuSharma01">
-                    <img src="https://avatars.githubusercontent.com/u/120270398?v=4" width="100;" alt="HimangshuSharma01"/>
+                <a href="https://github.com/Ujjwal5705">
+                    <img src="https://avatars.githubusercontent.com/u/152475026?v=4" width="100;" alt="Ujjwal5705"/>
                     <br />
-                    <sub><b>Himangshu Sharma</b></sub>
+                    <sub><b>Ujjwal Sharma</b></sub>
                 </a>
             </td>
 		</tr>
