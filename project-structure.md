@@ -11,6 +11,21 @@
 ├── auth.css
 ├── auth.html
 ├── auth.js
+├── backend
+│   ├── config
+│   │   ├── config.js
+│   │   └── db.js
+│   ├── controllers
+│   │   └── authController.js
+│   ├── index.js
+│   ├── models
+│   │   └── User.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   └── authRoutes.js
+│   └── utils
+│       └── authUtils.js
 ├── book.html
 ├── boy.png
 ├── chatbot.css
