@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Form</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-                    <h1 id="logo">BuddyTrail</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="auth.html" class="nav-link">Sign In</a></li>
-                </ul>
-            </nav>
-    </header>
-
+    <header class="main-head">
+        <nav>
+          <div class="logo">
+            <img src="img/logo.png" id="logo-web">
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+          </div>
+      
+          <!-- Hamburger button for mobile -->
+          <button class="hamburger" id="hamburger">☰</button>
+      
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="#home" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+            
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+           
+          </ul>
+    
+        </nav>
+      </header>
+<br><br><br>
     <div class="container">
         <div class="item">
             <div class="contact">
