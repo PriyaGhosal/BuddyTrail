@@ -496,6 +496,7 @@ nav {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -548,7 +549,7 @@ nav {
 }
 
 .location-card:hover {
-  transform: scale(1.5); /* Scale effect on hover */
+  transform: scale(1.12); /* Scale effect on hover */
 }
 
 .location-card h3 {
@@ -684,6 +685,11 @@ nav {
     margin: auto;
     font-size: large;
 
+    background-color: #0000000d;
+    padding: 50px 100px;
+    border-radius: 15px;
+    font-size: 2.3rem;
+
 }
 
 .benifits-list li {
@@ -692,17 +698,38 @@ nav {
 
 /**** BOOKING FORM ****/
 .booking-form {
-  max-width: 600px;
   margin: 30px auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  padding-bottom: 5rem;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background-image: url(/img/new-york-page.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form form{
+  max-width: 600px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #d8d8d858;
 }
 
 .booking-form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 4rem;
 }
 
 .form-group {
@@ -715,9 +742,16 @@ nav {
   font-weight: bold;
 }
 
-.form-group input,
+.form-group input{
+  width: calc(100% - 0px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .form-group select {
-  width: calc(100% - 20px);
+  width: calc(100% - 0px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
