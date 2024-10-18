@@ -285,7 +285,7 @@ nav {
 
 .logo {
   display: flex;
-  margin-left: 3px;
+  margin-left: 2px;
 }
 
 #nav-list {
@@ -2058,8 +2058,9 @@ body.light-mode {
 
 .navhover:hover {
   transform: scale(1.05);
-  background-color: rgba(255,255,255,0.1);
-  color: white; /* Changes text color on hover */
+  background-color: rgba(223, 223, 225, 0.1);
+  color: rgb(14, 13, 13); /* Changes text color on hover */
+  border-radius: 2px;
 }
 
 #social-icons {
