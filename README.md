@@ -213,6 +213,13 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/avisha191">
+                    <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
+                    <br />
+                    <sub><b>avisha191</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Son7c">
                     <img src="https://avatars.githubusercontent.com/u/177312486?v=4" width="100;" alt="Son7c"/>
                     <br />
@@ -233,6 +240,8 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Bhumika Sharma</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Sudhanshu248">
                     <img src="https://avatars.githubusercontent.com/u/152962449?v=4" width="100;" alt="Sudhanshu248"/>
@@ -240,8 +249,6 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Sudhanshu Saini</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/tarunkumar2005">
                     <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
@@ -268,13 +275,6 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/120270398?v=4" width="100;" alt="HimangshuSharma01"/>
                     <br />
                     <sub><b>Himangshu Sharma</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/avisha191">
-                    <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
-                    <br />
-                    <sub><b>avisha191</b></sub>
                 </a>
             </td>
             <td align="center">
