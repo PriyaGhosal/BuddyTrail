@@ -33,12 +33,12 @@
     <section class="about">
       <div class="container">
           <h1>About Our Travel Agency</h1>
-          <p>Welcome to [Your Travel Agency Name], where we turn your travel dreams into reality. We provide exceptional travel planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that meet your unique travel preferences.</p>
+          <p>Welcome to BuddyTrail, where we turn your travel dreams into reality. We provide exceptional travel planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that meet your unique travel preferences.</p>
       </div>
   </section>
 
   <section class="core-values">
-      <div class="container">
+      <div class="container" id="container-Core-values">
           <h2>Our Core Values</h2>
           <div class="values">
               <div class="value-item">
@@ -73,7 +73,7 @@
                   </P>
               </div>
                  <div class="team-description">
-                    <p style="color: white;"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
+                    <p style="color: rgb(79, 78, 78);"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
                         United by our love for exploration and commitment to excellence, we work tirelessly to ensure your journey with
                         us is seamless, inspiring, and unforgettable.</p>
                         <a href="team.html" id="cta-button">The BuddyTrail Team</a>
@@ -117,9 +117,13 @@
 
  .team-description{
   
-  border: 2px solid black;
-  border-radius: 10%;
-  background-color: #286db3;
+  border-radius:2rem;
+  
+  background: rgba(200,235,171,0.85);
+-webkit-backdrop-filter: blur(12px);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(48, 49, 48, 0.425);
+
   font-weight: bolder;
   position:relative;
   left: 35%;
@@ -223,10 +227,12 @@ body {
 }
 
 .core-values .value-item:hover {
-    background: linear-gradient(45deg, #ff66b2, #c0c0c0); /* Pink-silver gradient */
+    background: rgb(83,180,215);
+    background: linear-gradient(0deg, rgba(83,180,215,1) 15%, rgba(28,103,130,1) 75%);
+ /* Pink-silver gradient */
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #007BFF;
+    border-color: #7ac9a6;
 }
 
 .core-values .value-item h3 {
@@ -237,7 +243,12 @@ body {
 }
 
 .core-values .value-item:hover h3 {
-    color: #fff; /* Text color changes to white on hover */
+    background: #ffffff;
+    background: linear-gradient(to right, #C7C7C7 0%, #CED9D3 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+ /* Text color changes to white on hover */
 }
 
 .core-values .value-item p {
@@ -287,7 +298,8 @@ body {
 }
 
 .team .team-member:hover {
-    background: linear-gradient(45deg, #ff66b2, #c0c0c0); /* Pink-silver gradient */
+    background: rgb(83,180,215);
+    background: linear-gradient(0deg, rgba(83,180,215,1) 15%, rgba(28,103,130,1) 75%); /* Pink-silver gradient */
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border-color: #007BFF;
@@ -375,12 +387,29 @@ button:hover {
     <footer>
       <div class="container">
         <div class="footer-content">
-          <div class="footer-column-l">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contributor/contributor.html">Our Contributor</a></li>
+  
+                </ul>
+            </div>
+          <div class="footer-column">
             <h3>Contact Us</h3>
             <p>Email: info@example.com</p>
             <p>Phone: +123 456 7890</p>
           </div>
-          <div class="footer-column-r">
+          <div class="footer-column">
             <h3>Follow Us</h3>
             <div class="social-icons">
               <a href="https://discord.com/invite/priyaghosal" target="_blank"
