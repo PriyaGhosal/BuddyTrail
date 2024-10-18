@@ -19,6 +19,49 @@
       font-size: 1.2em;
       margin-top: 5px;
     }
+
+    .nav-elem{
+      font-size: 1.9rem;
+      width: 100vw;
+      margin-left: 50px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .logo{
+      left: 50px;
+      
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+
+    .locations h2{
+      font-size: 4rem;
+      color: white;
+    }
+
+    .benefits {
+      color: #f9f9f9;
+    }
+
+    .benefits h2{
+      font-size: 4rem;
+      margin-bottom: 50px;
+      text-shadow: 0 0 2px rgb(110, 110, 110);
+    }
+
+    footer{
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    .footer-bottom{
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -28,12 +71,12 @@
         <img src="img/logo.png" id="logo-web">
         <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
       </div>
-      <ul>
-        <li><a href="#locations">Location</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#booking-form">Book Now</a></li>
-      </ul>
+      <div class="nav-elem">
+      <a href="#locations">Location</a>
+      <a href="#benefits">Benefits</a>
+      <a href="contact.html">Contact</a>
+      <a href="#booking-form">Book Now</a>
+      </div>
     </nav>
   </header>
   <main>
@@ -72,7 +115,7 @@
     </section>
     
     <section id="benefits" class="benefits">
-      <h2 style="">Why Travel with BuddyTrail?</h2>
+      <h2>Why Travel with BuddyTrail?</h2>
       <ul class="benifits-list">
         <li>Exclusive discounts and travel packages</li>
         <li>24/7 customer support for a hassle-free experience</li>
