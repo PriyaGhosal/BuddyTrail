@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Contributors</title>
     <link rel="stylesheet" href="communityStyle.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +13,7 @@
     
 body {
     /* padding-top: 80px; */
-    background-color: #FFFFFF;
+    background-color: #040b21;
 }
 .home-btn{
     height: 50px;
@@ -154,31 +155,30 @@ body {
     border-radius: 50%;
     object-fit: cover;
 }
-
-.heading-contributors {
-    margin-top: 5rem;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    font: 900 2.3rem 'Orbitron', sans-serif;
-    background: #222222;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* text"meet our  awesome contributors" design for glowy animation  */
+.heading-contributors{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
+  font-stretch: expanded;
+  padding-bottom: 1px;
+  line-height: 120px;
+  text-transform: Uppercase;
+  color: transparent;
+  -webkit-text-stroke: 0.1px #140000;
+  background: url(img/Premium\ Photo\ _\ Vibrant\ mesh\ gradient\ with\ magenta\ and\ blue\ colors\ high\ quality\ image\ for\ backgrounds\ and\ web.jpeg);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 10s linear infinite;
+  
+}
+@keyframes back{
+  100%{
+    
+    background-position: 200% 0;
+  }
 }
 
-.heading-contributors:after {
-    content: "Meet our awesome contributors 💙";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200%;
-    animation: shine 2.5s infinite;
-}
+
 
 
 </style>
@@ -198,7 +198,7 @@ body {
     <main>
         <section class="team">
             <div class="team-top" id="slide">
-                <div class="heading-contributors">Meet our awesome contributors 💙 </div>
+                <div class="heading-contributors"><h2>Meet our awesome contributors 💙</h2></div>
                 <div class="team-members">
                     <!-- Team members' data will be dynamically populated here -->
                 </div>

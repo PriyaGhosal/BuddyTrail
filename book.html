@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="RatingStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/icons/airplane.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="RatingStyle.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/icons/airplane.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Book Now - BuddyTrail</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+  </style>
 </head>
 <body>
   <header class="main-head">
@@ -76,10 +71,9 @@
       </div>
     </section>
     
-
     <section id="benefits" class="benefits">
       <h2 style="">Why Travel with BuddyTrail?</h2>
-      <ul>
+      <ul class="benifits-list">
         <li>Exclusive discounts and travel packages</li>
         <li>24/7 customer support for a hassle-free experience</li>
         <li>Handpicked destinations and personalized itineraries</li>
@@ -91,17 +85,18 @@
       </div>
     </section>
     
-
     <section id="booking-form" class="booking-form">
       <h2>Book Your Trip</h2>
-      <form action="#" method="post">
+      <form id="bookingForm" action="#" method="post" onsubmit="return validateForm()" novalidate>
         <div class="form-group">
           <label for="place">Place of Visit:</label>
           <input type="text" id="place" name="place" placeholder="Enter your destination" required />
+          <div class="error" id="placeError"></div>
         </div>
         <div class="form-group">
           <label for="dates">Dates of Staying:</label>
           <input type="date" id="dates" name="dates" required />
+          <div class="error" id="datesError"></div>
         </div>
         <div class="form-group">
           <label for="transport">Mode of Transport:</label>
@@ -112,52 +107,81 @@
             <option value="bus">Bus</option>
             <option value="car">Car</option>
           </select>
+          <div class="error" id="transportError"></div>
         </div>
         <button type="submit" class="btn">Book Now</button>
       </form>
     </section>
   </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        
-
-    <footer>
-      <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>We are a team of passionate developers creating amazing web experiences.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="index.html">Services</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fa-brands fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
-     
-  
+        <h3>About Us</h3>
+        <p>We are a team of passionate developers creating amazing web experiences.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/priyaghosal"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function validateForm() {
+      let valid = true;
+
+      // Clear previous error messages
+      document.getElementById("placeError").innerText = "";
+      document.getElementById("datesError").innerText = "";
+      document.getElementById("transportError").innerText = "";
+
+      // Validate Place of Visit
+      const place = document.getElementById("place").value.trim();
+      if (place === "") {
+        document.getElementById("placeError").innerText = "Please enter a place of visit.";
+        valid = false;
+      }
+
+      // Validate Dates of Staying
+      const dates = document.getElementById("dates").value;
+      if (dates === "") {
+        document.getElementById("datesError").innerText = "Please select your dates of stay.";
+        valid = false;
+      }
+
+      // Validate Mode of Transport
+      const transport = document.getElementById("transport").value;
+      if (transport === "") {
+        document.getElementById("transportError").innerText = "Please select a mode of transport.";
+        valid = false;
+      }
+
+      return valid;
+    }
+  </script>
 </body>
 </html>

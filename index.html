@@ -8,10 +8,13 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     /> 
     <meta name="robots" content="index,follow" />
+
     <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/popup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
@@ -27,6 +30,25 @@
     <link rel="stylesheet" href="chatbot.css">
     <title>BuddyTrail</title>
     <style>
+     .header1{
+       background-color:white;
+       border-radius:8px;
+       padding: 4px 8px 4px 8px;
+     }
+    /* Button Styling */
+    .btn {
+      background-color: #007bff; /* Primary button color */
+      padding: 10px 20px; /* Padding for button size */
+      text-decoration: none; /* Remove underline from text */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+    }
+  
+    /* Hover Effect for Buttons */
+    .btn:hover {
+      background-color: #0056b3; /* Darker color on hover */
+    }
+
       * {
     margin: 0;
     padding: 0;
@@ -163,8 +185,35 @@
       .card:hover {
         cursor: pointer;
       }
+      @media (max-width: 768px) {
+    .itinerary-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itinerary {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    .itinerary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  }
+
+.itinerary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-view-itinerary:hover {
+    background-color: #0056b3; 
+}
+
+
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
   </head>
   <body class="light-mode">
 
@@ -289,6 +338,29 @@
   </nav>
 </header>
 
+
+<!-- Pop up HTML Starts Here -->
+ <!-- Pop-up for BuddyTrail -->
+<div id="popup" class="popup">
+  <div id="popup-content">
+      <div class="popup-left">
+          <img if="popupimage" src="./img/popup1.jpg" alt="Travel Image">
+      </div>
+      <div class="popup-right">
+          <h1>Ready for Your Next Adventure?</h1>
+          <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
+          <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
+          <form id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" id="signup-btn">Sign Up</button>
+          </form>
+          <a href="#" id="no-thanks">No thanks</a>
+          <p id="terms">By signing up, you agree to our <a id="link" href="#1">Terms of Service</a> and <a id="link" href="#1">Privacy Policy</a></p>
+      </div>
+  </div>
+</div>
+<!-- Pop up HTML ends Here -->
+
 <!-- JS to handle hamburger and close button -->
 <script>
 
@@ -347,6 +419,8 @@
   });
 </script>
 
+<script src="./script/popup.js"></script>
+
 
 
     <div id="progress-bar"></div>
@@ -385,7 +459,79 @@
           and destination
         </h3>
       </header>
-      <div class="cards" style="height: 384px;">
+      <!-- Start of Cards Container -->
+<div class="cards" style="height: 384px;">
+
+  <!-- Travel Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Travel Icon -->
+      <div class="card-icon">
+        <img src="/icons/route-solid.svg" alt="Travel Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Travel</h4>
+      <!-- Card Description -->
+      <p>
+        Discover budget-friendly getaways for families and friends! From serene
+        mountains to sunny beaches, find your next adventure without breaking the
+        bank. Start exploring now!
+      </p>
+      <!-- Button Link for Travel -->
+      <a href="travel.html" class="btn" style="color: white;">Explore more</a>
+    </div>
+  </div>
+  <!-- End of Travel Card -->
+
+  <!-- Hotel Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Hotel Icon -->
+      <div class="card-icon">
+        <img src="./icons/bed-solid.svg" alt="Hotel Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Hotel</h4>
+      <!-- Card Description -->
+      <p>
+        We've handpicked top-rated options that offer exceptional value. Book your
+        perfect stay today and enjoy premium accommodations without the premium
+        price tag!
+      </p>
+      <!-- Button Link for Hotels -->
+      <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
+    </div>
+  </div>
+  <!-- End of Hotel Card -->
+
+  <!-- Fly Card -->
+  <div class="card">
+    <div class="header1">
+      <!-- Fly Icon -->
+      <div class="card-icon">
+        <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
+      </div>
+      <!-- Card Title -->
+      <h4>Fly</h4>
+      <!-- Card Description -->
+      <p>
+        Fly to your dream destination without breaking the bank! We offer the best
+        flight deals, combining comfort and affordability for perfect journey.
+        Book now and take off for less!
+      </p>
+      <!-- Button Link for Flights -->
+      <a href="fly.html" class="btn" style="color: white;">See Flights</a>
+    </div>
+  </div>
+  <!-- End of Fly Card -->
+
+</div>
+<!-- End of Cards Container -->
+
+<!-- CSS for the buttons (Move this to your CSS file) -->
+
+
+<!--       <div class="cards" style="height: 384px;">
         <div class="card">
           <div class="header1">
           <div class="card-icon">
@@ -427,7 +573,7 @@
           </p>
           <button id="btn"><a href="fly.html ">See Flights</a></button></div>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- deals -->
    <section id="deals" class="deals-section">
@@ -510,22 +656,29 @@
         /* Existing CSS */
         .deals-section {
           text-align: center;
-          padding: 58px 20px;
+          padding: 3rem 20px;
           background-color: #f8f9fa;
+          width: 90vw;
+          margin: 0 auto;
 
         }
         
         .carousel {
           position: relative;
           overflow: hidden;
-          width: 100%;
-          max-width: 800px;
+          width: 90vw;
+          max-width: 820px;
           margin: 0 auto;
+          height: 400px;
+          display: flex;
+          align-items: center;
         }
         
         .carousel-inner {
           display: flex;
           transition: transform 0.5s ease;
+          height: 350px;
+          gap: 10px;
         }
         
         .deal-item {
@@ -550,9 +703,9 @@
           background-color: rgba(17, 16, 16, 0.7);
           border: none;
           cursor: pointer;
-          padding: 10px;
+          /* padding: 10px; */
           border-radius: 50%;
-          font-size: 24px;
+          font-size: 1.3rem;
           transition: background-color 0.3s;
           opacity: 1; /* Always show buttons */
         }
@@ -568,6 +721,8 @@
         /* Optional hover effects */
         .carousel-button:hover {
           background-color: rgb(6, 6, 6);
+          transform: translateY(-50%);
+
         }
         </style>
         
@@ -629,7 +784,7 @@
       </div>
 
         <div class="itinerary">
-          <div class="header2"> 
+          <div class="header1"> 
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
@@ -743,9 +898,17 @@
         </div>
 
           <div class="form-group">
-            <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
-            <input type="date" id="travel-date" name="travel-date" required />
-          </div>
+          <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
+          <input type="date" id="travel-date" name="travel-date" required min="" />
+
+          <!--Logic To prevent the user from selecting an old date  -->
+
+          <script>
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('travel-date').setAttribute('min', today);
+          </script>
+
+        </div>
           <div class="form-group">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
@@ -839,7 +1002,6 @@
         }
 
         #content-input{
-          width: 400px;
           height: 200px;
           border-color: #81c784;
         }
@@ -1009,12 +1171,36 @@
       <h1 id="h1darkbtn">Travel Discussion Forum</h1>
       <nav class="hi">
           <ul>
-              <li class="NAVI"><a href="#destinations">Destinations</a></li>
-              <li class="NAVI"><a href="#travel-planning">Travel Planning</a></li>
-              <li class="NAVI"><a href="#experiences">Travel Experiences</a></li>
-              <li class="NAVI"><a href="#gear">Travel Gear</a></li>
-              <li class="NAVI"><a href="#safety">Travel Safety</a></li>
-              <li class="NAVI"><a href="#sustainable">Sustainable Travel</a></li>
+              <li class="NAVI">
+                <!-- added favicon for destinations -->
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#destinations">Destinations</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel planning -->
+                <i class="fa-solid fa-earth-americas"></i>
+                <a href="#travel-planning">Travel Planning</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel experience -->
+                <i class="fa-regular fa-face-smile"></i>
+                <a href="#experiences">Travel Experiences</a>
+              </li>
+              <li class="NAVI">
+                <i class="fa-solid fa-gear"></i>
+                <!-- added favicon for travel gear -->
+                <a href="#gear">Travel Gear</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for travel safety -->
+                <i class="fa-solid fa-shield"></i>
+                <a href="#safety">Travel Safety</a>
+              </li>
+              <li class="NAVI">
+                <!-- added favicon for sustainable travel -->
+                <i class="fa-solid fa-seedling"></i>
+                <a href="#sustainable">Sustainable Travel</a>
+              </li>
           </ul>
       </nav>
   </header>
@@ -1045,13 +1231,18 @@ nav.hi ul li.NAVI a {
     border-radius: 5px; /* Rounded corners */
     transition: border 0.3s ease, background-color 0.3s ease;
 }
-
-nav.hi ul li.NAVI a:hover {
-    border-color: #ffcc00; /* Border color change on hover */
-    background-color: #ffffff; /* White background on hover */
-    color: #1e88e5; /* Text color change on hover */
+/*  not needed as styling for nav,li,a is handled at lower */
+/* nav.hi ul li.NAVI a:hover {
+    border-color: #ffcc00; 
+    background-color: #ffffff; 
+    color: #1e88e5;
+} */
+    
+/* Added styling for favicon */
+nav.hi ul li.NAVI i:hover  {
+    color: #ffcc00; /* color change on hover */
+    transform: scale(1.2); /* scale up on hover */
 }
-
 
       /* Header Section */
       header.forum_1 {
@@ -1080,11 +1271,11 @@ nav.hi ul li.NAVI a:hover {
 
       /* Navigation Styles */
       nav.hi ul {
-          list-style-type: none;
+          list-style-type: ;
           margin: 0;
           padding: 0;
           display: flex;
-          gap: 15px;
+          gap: 0px;
       }
 
       nav.hi ul li.NAVI {
@@ -1105,11 +1296,11 @@ nav.hi ul li.NAVI a:hover {
           background-color: #ffcc00; /* Background highlight on hover */
           color: #1e88e5; /* Text color change on hover */
       }
-
+    
       /* Underline effect */
-      nav.hi ul li.NAVI a::after {
+    /*nav.hi ul li.NAVI a::after {
           content: '';
-          display: block;
+         /*display: block;*/
           width: 0;
           height: 2px;
           background: #ffcc00;
@@ -1118,8 +1309,8 @@ nav.hi ul li.NAVI a:hover {
       }
 
       nav.hi ul li.NAVI a:hover::after {
-          width: 100%; /* Underline expands on hover */
-      }
+          width: 100%; 
+      } */
 
       /* Responsive Design */
       @media (max-width: 768px) {
@@ -1610,19 +1801,36 @@ button:hover:before {
             oninput="this.setCustomValidity('')"/>
 
             <label for="rating" id="darkbtn">Rating:</label>
-            <select id="rating" class="rating" name="rating">
+           <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
               <option value="2">⭐⭐</option>
               <option value="1">⭐</option>
-            </select>
+            </select>-->
+
+            <div class="rating" name="rating">
+              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->   
+              <div class="star-widget">
+               <input type="radio" name="rate" id="rate-5">
+               <label for="rate-5"  class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-4">
+               <label for="rate-4" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-3">
+               <label for="rate-3" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-2">
+               <label for="rate-2" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-1">
+               <label for="rate-1" class="fas fa-star"></label>
+               <header></header>
+            </div>
+           </div>
 
             <label for="review" id="darkbtn">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
+            <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
             <label for="complaint" id="darkbtn">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please explain every single detail ex:location,name of the person"></textarea>
+              placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
             <div class="form-button">
               <button type="submit">Send</button>
@@ -1685,6 +1893,7 @@ button:hover:before {
               <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#">About</a></li>
+                  <li><a href="faq.html" class="faq-link">FAQs</a></li>
                   <li><a href="#services">Services</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><a href="team.html">Team</a></li>
@@ -1695,11 +1904,11 @@ button:hover:before {
           <div class="footer-column">
               <h3>Legal Links</h3>
               <ul>
+                  <li><a href="#"></a>Terms of Service</li>
                   <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
                   <li><a href="#">Disclaimer</a></li>
                   <li><a href="#">Copyright Notice</a></li>
+                  <li><a href="#">Cookie Policy</a></li>
 
               </ul>
           </div>
@@ -1717,6 +1926,15 @@ button:hover:before {
                   <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
               </div>
           </div>
+          <!-- Newsletter Form -->
+    <div class="newsletter" id="newsletter">
+      <form id="newsletter-form">
+        <h3>Newsletter Form</h3>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
      
   
     </div>
@@ -1725,6 +1943,7 @@ button:hover:before {
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+  
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
@@ -1911,7 +2130,29 @@ button:hover:before {
   }
     </style>
   </script>
- 
+  <script src="script.js">
+document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('email').value.trim(); // Get the email value
+    const messageElement = document.getElementById('subscription-message'); // Get the message display element
+
+    // Regular expression to validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+        // Simulate a successful subscription
+        messageElement.textContent = 'Subscribed successfully!'; // Show success message
+        messageElement.style.color = 'green'; // Change message color to green
+
+        // Clear the input field after successful submission
+        document.getElementById('email').value = '';
+    } else {
+        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
+        messageElement.style.color = 'red'; // Change message color to red
+    }
+});
+    </script>    
 </body>
 
 </html>
