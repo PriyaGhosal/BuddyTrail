@@ -656,22 +656,29 @@
         /* Existing CSS */
         .deals-section {
           text-align: center;
-          padding: 58px 20px;
+          padding: 3rem 20px;
           background-color: #f8f9fa;
+          width: 90vw;
+          margin: 0 auto;
 
         }
         
         .carousel {
           position: relative;
           overflow: hidden;
-          width: 100%;
-          max-width: 800px;
+          width: 90vw;
+          max-width: 820px;
           margin: 0 auto;
+          height: 400px;
+          display: flex;
+          align-items: center;
         }
         
         .carousel-inner {
           display: flex;
           transition: transform 0.5s ease;
+          height: 350px;
+          gap: 10px;
         }
         
         .deal-item {
@@ -696,9 +703,9 @@
           background-color: rgba(17, 16, 16, 0.7);
           border: none;
           cursor: pointer;
-          padding: 10px;
+          /* padding: 10px; */
           border-radius: 50%;
-          font-size: 24px;
+          font-size: 1.3rem;
           transition: background-color 0.3s;
           opacity: 1; /* Always show buttons */
         }
@@ -714,6 +721,8 @@
         /* Optional hover effects */
         .carousel-button:hover {
           background-color: rgb(6, 6, 6);
+          transform: translateY(-50%);
+
         }
         </style>
         
