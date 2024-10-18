@@ -1107,14 +1107,16 @@ textarea:focus{
   padding: 10px 20px; /* Padding for button */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 1.2em; /* Button text size */
-  width: 100%; /* Full width */
+  width: 100%; /* Full width can be changed */
   max-width: 300px; /* Max width for button */
-  margin-top: 10px; /* Margin above button */
+  margin: 10px auto; /* Center the button with auto margins */
+  display: block; /* Make it a block element to enable margin auto */
 }
 
 .book-btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+
 
 /* Dark Mode Styles */
 .dark-mode .cab-booking-section {
