@@ -1,6 +1,8 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
+const gbutton=document.getElementById("auth");
+
 
 // Allowed email domains for registration
 const allowedDomains = ['gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com' , 'icloud.com' , 'protonmail.com' , 'tutanota.com']; // Add more as needed
