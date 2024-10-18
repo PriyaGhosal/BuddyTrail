@@ -45,19 +45,19 @@
                 <form id="contactForm">
                     <div class="input-box">
                         <input type="text" class="input" required>
-                        <label for="fullname">Name</label>
+                        <label for="fullname"  class="label common-label">Name</label>
                     </div>
                     <div class="input-box">
                         <input type="email" class="input" required>
-                        <label for="email">Email</label>
+                        <label for="email"  class="label common-label">Email</label>
                     </div>
                     <div class="input-box">
                         <input type="tel" class="input" required>
-                        <label for="phone">Phone</label>
+                        <label for="phone" class="label common-label">Phone</label>
                     </div>
                     <div class="input-box">
                         <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
-                        <label for="message">Message</label>
+                        <label for="message" class="label common-label">Message</label>
                     </div>
                     <input type="submit" class="btn" value="Submit">
                 </form>
@@ -67,3 +67,475 @@
     <script src="contact.js"></script>
 </body>
 </html>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #3bb8c9, #50c065);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background: #00796b;
+    color: rgba(80, 79, 79, 0.614);
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-web {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    background: rgb(214, 12, 12);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px; /* Wider container for better layout */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    width: 100%;
+}
+
+.contact {
+    flex: 1; /* Takes up equal space */
+    text-align: center;
+    padding-right: 20px; /* Space between image and form */
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.first-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.secnd-text {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #00796b;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #004d40;
+}
+
+.submit-form {
+    flex: 1; /* Takes up equal space */
+}
+
+.third-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #00796b; /* Make border more prominent */
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+    background-color: #f9f9f9; /* Light background for inputs */
+}
+
+.input:focus {
+    border-color: #004d40; /* Darker border on focus */
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    transition: 0.3s;
+    color: #999;
+}
+
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #792600;
+}
+
+.btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Full width for button */
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+.container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    background: rgba(80, 80, 80, 0.136);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px; /* Wider container for better layout */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contact {
+    flex: 1; /* Takes up equal space */
+    text-align: center;
+    padding-right: 20px; /* Space between image and form */
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.first-text {
+    font-size: 28px; /* Increased font size for better visibility */
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.secnd-text {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333; /* Darker color for better visibility */
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px; /* Increased padding for better touch targets */
+    border: 2px solid #00796b; /* Prominent border */
+    border-radius: 5px; /* Slightly larger border radius */
+    font-size: 16px;
+    transition: border 0.3s;
+    background-color: #f9f9f9; /* Light background for inputs */
+}
+
+.input:focus {
+    border-color: #004d40; /* Darker border on focus */
+    outline: none;
+}
+
+.btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 14px 20px; /* Increased padding for better touch targets */
+    border-radius: 5px; /* Slightly larger border radius */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Full width for button */
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+.input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s, background 0.3s;
+    background-color: #f9f9f9; /* Light background for inputs */
+    color: #333; /* Darker text color for visibility */
+}
+
+.input:focus {
+    border-color: #004d40; /* Darker border on focus */
+    outline: none;
+    background-color: #e0f2f1; /* Light background on focus */
+}
+
+.input:placeholder-shown + label {
+    color: #999; /* Placeholder color */
+}
+
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #00796b;
+}
+
+.btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #004d40;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Optional: Add focus effect for button */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    background: #fff; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Softer shadow */
+    padding: 20px;
+    max-width: 800px; /* Wider container for better layout */
+    width: 100%;
+    margin-top: 30px;
+    border: 2px solid #ff6f61; /* Baby pink border */
+}
+
+.item {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    width: 100%;
+}
+
+/* Optional: Add a subtle background gradient */
+.container {
+    background: linear-gradient(to right, #9cf78e, #d2e865); /* Light pink gradient */
+}.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%; /* Ensures input boxes take full available width */
+}
+
+.input {
+    width: calc(100% + 20px); /* Increase width beyond the container */
+    padding: 14px;
+    border: 2px solid #ff6e6100; /* Baby pink border */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s, background 0.3s;
+    background-color: #f9f9f9; /* Light background for inputs */
+    color: #333; /* Darker text color for visibility */
+    margin-left: -10px; /* Adjust left margin to balance increased width */
+}
+
+.btn {
+    background-color: #ff6f61; /* Baby pink button */
+    color: white;
+    border: 2px solid #c0c0c0; /* Silver border for button */
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, border 0.3s;
+    width: calc(100% + 20px); /* Increase button width */
+    margin-left: 10px; /* Adjust left margin to balance increased width */
+}
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%; /* Ensures input boxes take full available width */
+}
+
+.label {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    transition: all 0.3s ease;
+    font-size: 16px; /* Initial font size for labels */
+    color: #d00d0d; /* Soft grey color for labels */
+    pointer-events: none; /* Prevents interaction */
+}
+
+.input {
+    width: calc(100% + 20px); /* Increase width */
+    padding: 14px;
+    border: 2px solid #575554; /* Baby pink border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font for inputs */
+    transition: border 0.3s, background 0.3s;
+    background-color: #f9f9f9; /* Light background for inputs */
+    color: #333; /* Darker text color for visibility */
+    margin-left: -10px; /* Adjust left margin */
+}
+
+/* Change label styles on input focus or when text is present */
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+    top: -10px; /* Move label up */
+    left: 10px; /* Adjust left position */
+    font-size: 12px; /* Smaller font size for emphasis */
+    color: #ffffff; /* Change to baby pink when focused */
+    font-weight: bold; /* Make the label bold */
+}
+
+/* Style for the submit button */
+.btn {
+    background-color: #ff6f61; /* Baby pink button */
+    color: white;
+    border: 2px solid #c0c0c0; /* Silver border */
+    padding: 14px 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: calc(100% + 20px); /* Increase button width */
+    margin-left: -10px; /* Adjust left margin */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #c0c0c0; /* Silver on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+.social-media li {
+    display: inline; /* Keep icons inline */
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-media li a {
+    color: #333; /* Default color for icons */
+    font-size: 24px; /* Increase icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for social media icons */
+.social-media li a:hover {
+    color: #ff6f61; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+.social-media {
+    display: flex; /* Use flexbox for alignment */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 15px 0; /* Add margin for spacing */
+}
+
+.social-media li {
+    margin: 0 15px; /* Space between icons */
+}
+
+.social-media li a {
+    color: #333; /* Default icon color */
+    font-size: 30px; /* Increase icon size for visibility */
+    transition: transform 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    display: inline-block; /* Make anchor tag behave like a block */
+    border-radius: 50%; /* Circular background */
+    padding: 10px; /* Padding for a larger clickable area */
+}
+
+/* Hover effect for social media icons */
+.social-media li a:hover {
+    color: #fff; /* Change text color to white on hover */
+    background-color: #ff6f61; /* Baby pink background on hover */
+    transform: scale(1.2); /* Enlarge icon on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+
+
+</style>
