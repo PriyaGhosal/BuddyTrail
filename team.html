@@ -171,6 +171,43 @@ body {
   animation: back 10s linear infinite;
   
 }
+.main-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 15px;
+  height: 90px;
+  background-color: #000; /* Initially black */
+  color: white;
+  display: flex;
+  justify-content:space-evenly; /* Adjusted to space-between for better layout */
+  align-items: center;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+#nav-list {
+  display: flex;
+  gap: 1rem; /* Adjusted gap for better spacing */
+  list-style: none;
+  margin-left: 10px;
+  padding: 0;
+  align-items: center;
+}
+#nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.navhover:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
+  color: white; /* Changes text color on hover */
+}
 @keyframes back{
   100%{
     
@@ -179,16 +216,97 @@ body {
 }
 
 
+#logo-web{
+  height: 50px;
+  width: 70px;
+}
 
+.mode-toggle img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+}
 
+#nav-list {
+  display: flex;
+  gap: 1rem; /* Adjusted gap for better spacing */
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.main-head a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-head li{
+    display: inline;
+}
+
+#nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 20px;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5em;
+  transition: color 0.3s, transform 0.3s;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
 </style>
 <body>
 
     <!-- Header Include -->
-    <header>
-        <a href="index.html"><button class="home-btn">Back to Home</button></a>
-    </header>
-
+     <div class="main-head">
+        <div class="logo">
+            <img src="img/logo.png" id="logo-web">
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+          </div>
+      
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <li><a href="#home" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+            
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+           
+          </ul>
+      
+          <!-- Toggle Button -->
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+          </button>
+        </div>
+     </div>
     <!-- Sidebar Include -->
     <aside>
         <!-- Include your sidebar here -->
