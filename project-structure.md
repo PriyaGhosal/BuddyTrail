@@ -27,6 +27,7 @@
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── faq.html
 ├── firebase.js
 ├── fly.css
 ├── fly.html
