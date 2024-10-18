@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "buddytrail": "file:",
     "firebase": "^10.14.1"
   }
 }

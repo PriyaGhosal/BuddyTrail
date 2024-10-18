@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyTrail</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Full height of the viewport */
+            flex-direction: column; /* Aligns children vertically */
+        }
+
+        footer {
+            width: 100%; /* Full width */
+            padding: 40px 20px; /* Padding for footer */
+            background-color: #ffffff; /* White background for footer */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        .faq-container {
+            background-color: #e9f7ff; /* Light blue background for contrast */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Width of the FAQ section */
+            margin: 20px auto; /* Center the container */
+        }
+
+        .faq-container h2 {
+            text-align: center; /* Center the heading */
+            color: #007BFF; /* Primary color */
+            margin-bottom: 20px; /* Space below heading */
+        }
+
+        .faq-item {
+            margin-bottom: 3px; /* Reduced space between items */
+            cursor: pointer; /* Indicate clickable items */
+            padding: 5px 0; /* Padding for the FAQ item */
+        }
+
+        .faq-item h3 {
+            background-color: #007BFF; /* Primary color */
+            color: white; /* Text color */
+            padding: 10px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .faq-item h3:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        .faq-answer {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            border: 1px solid #007BFF; /* Border color */
+            border-radius: 5px;
+            margin-top: 5px; /* Space between question and answer */
+            background-color: #f1f8ff; /* Light background for answer */
+        }
+
+        /* Add your existing footer styles here */
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="faq-container">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>What is BuddyTrail?</h3>
+                <div class="faq-answer">Your ultimate travel companion!</div>
+            </div>
+            
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>What services do you offer?</h3>
+                <div class="faq-answer">We help with trips, hotels, and flights.</div>
+            </div>
+            
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>How can I contact you?</h3>
+                <div class="faq-answer">Email us at info@example.com.</div>
+            </div>
+            
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>Is BuddyTrail suitable for everyone?</h3>
+                <div class="faq-answer">Absolutely! For all types of travelers.</div>
+            </div>
+            
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>How can I stay updated?</h3>
+                <div class="faq-answer">Subscribe to our newsletter!</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>What destinations can I explore with BuddyTrail?</h3>
+                <div class="faq-answer">We offer a variety of destinations worldwide!</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h3>Can I customize my travel itinerary?</h3>
+                <div class="faq-answer">Yes, we allow full customization for your trips!</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(faqItem) {
+            const answer = faqItem.querySelector('.faq-answer');
+            answer.style.display = answer.style.display === 'none' || answer.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

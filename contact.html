@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="./contact.css">
-    <link rel="icon" href="../favicon.png" type="image/png">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
-        <form id="contactForm">
-            <h1>Contact Us</h1>
-            <div class="input-group">
-                <input type="text" id="firstName" required>
-                <label for="firstName">First Name</label>
-                <i class="fas fa-user"></i>
+        <div class="item">
+            <div class="contact">
+                <div class="first-text">Let's get in touch</div>
+                <img src="conn.jpeg" alt="contact-us-image" class="image">
+                <div class="social-links">
+                    <span class="secnd-text">Connect with us:</span>
+                    <ul class="social-media">
+                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="input-group">
-                <input type="text" id="lastName" required>
-                <label for="lastName">Last Name</label>
-                <i class="fas fa-user"></i>
+            <div class="submit-form">
+                <h4 class="third-text text">Contact Us</h4>
+                <form id="contactForm">
+                    <div class="input-box">
+                        <input type="text" class="input" required>
+                        <label for="fullname">Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="input" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" class="input" required>
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <input type="submit" class="btn" value="Submit">
+                </form>
             </div>
-            <div class="input-group">
-                <input type="email" id="email" required>
-                <label for="email">Email</label>
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="input-group">
-                <input type="tel" id="mobile" required>
-                <label for="mobile">Mobile</label>
-                <i class="fas fa-phone"></i>
-            </div>
-            <div class="input-group">
-                <textarea id="message" required></textarea>
-                <label for="message">Type Your Message Here</label>
-                <i class="fas fa-comment-alt"></i>
-            </div>
-            <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
-        </form>
+        </div>
     </div>
-    <script src="./contact.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>

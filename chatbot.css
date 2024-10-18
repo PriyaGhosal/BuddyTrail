@@ -1,10 +1,9 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
-
 
 #chatbot {
     width: 350px;
@@ -21,7 +20,6 @@ body {
     z-index: 100;
 }
 
-
 #chat-header {
     background-color: #007bff;
     color: white;
@@ -31,12 +29,9 @@ body {
     align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    font-size: 3rem; 
+    font-size: 1.5rem; 
     font-weight: bold;
-    letter-spacing: 1.2px;
-    position: relative;
 }
-
 
 #close-button {
     background: none;
@@ -44,17 +39,12 @@ body {
     font-size: 2rem;  
     color: #fff;
     cursor: pointer;
-    position: absolute;
-    left: 250px;  
-    top: 2px;   
     transition: color 0.3s ease;
 }
 
 #close-button:hover {
     color: #ffcccb;
 }
-
-
 
 #chatbox {
     height: 350px;
@@ -67,7 +57,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 10px;
 }
 
 .user, .bot {
@@ -107,7 +96,6 @@ body {
     }
 }
 
-
 #user-input {
     width: calc(100% - 30px);
     padding: 15px;
@@ -115,7 +103,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 30px;
     font-size: 14px;
-    box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
 }
@@ -124,7 +111,6 @@ body {
     border-color: #007bff;
     box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
-
 
 #send-button {
     padding: 12px 25px;
@@ -141,7 +127,6 @@ body {
 #send-button:hover {
     background-color: #0056b3;
 }
-
 
 #chat-icon {
     width: 50px;
@@ -164,4 +149,43 @@ body {
 #chat-icon:hover {
     transform: scale(1.1);
     background-color: #0056b3;
+}
+
+/* Additional Styles for Itineraries, Deals, Testimonials, and Review Forms */
+#itineraries {
+    margin-bottom: 70px;
+    border: none;
+}
+
+.itinerary-list {
+    padding-bottom: 30px;
+}
+
+#cab-booking {
+    margin-top: 70px;
+}
+
+#deals {
+    margin-bottom: 10px;
+}
+
+#testimonials {
+    margin-bottom: 70px;
+}
+
+.review-form {
+    margin: 20px;
+}
+
+.review-form:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(13, 71, 216, 0.2), 0 6px 20px rgba(14, 14, 219, 0.19);
+}
+
+#name, #destination, #rating, #review, #complaint {
+    border: 2px solid rgb(187, 124, 202);
+}
+
+#name:hover, #destination:hover, #rating:hover, #review:hover, #complaint:hover {
+    border: 2px solid rgb(180, 104, 175);
 }
