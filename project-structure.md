@@ -1,5 +1,6 @@
 <!-- START_STRUCTURE -->
 ```
+├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
 ├── LICENSE
 ├── README.md
@@ -26,7 +27,10 @@
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── faq.html
 ├── firebase.js
+├── fly.css
+├── fly.html
 ├── forgot_password.html
 ├── hotel.css
 ├── hotel.html
@@ -40,6 +44,13 @@
 │   ├── twitter.svg
 │   └── youtube.svg
 ├── img
+│   ├── DUBAI.jpeg
+│   ├── INDIA.jpg
+│   ├── MALDIVES.jpeg
+│   ├── Premium Photo _ Vibrant mesh gradient with magenta and blue colors high quality image for backgrounds and web.jpeg
+│   ├── Presentation1-removebg-preview.png
+│   ├── Presentation1.png
+│   ├── USA.jpeg
 │   ├── back.png
 │   ├── benefits.jpeg
 │   ├── c3.jpg
@@ -50,12 +61,24 @@
 │   ├── location.jpg
 │   ├── logo.png
 │   ├── logo2.png
+│   ├── maldives1.jpg
 │   ├── n1.jpg
 │   ├── n2.jpg
 │   ├── n3.jpg
 │   ├── n4.jpg
 │   ├── n5.jpg
 │   ├── new-york-page.png
+│   ├── plan-1.jpg
+│   ├── plan-2.jpg
+│   ├── plan-3.jpeg
+│   ├── popup.jpg
+│   ├── popup1.jpg
+│   ├── popup2.jpg
+│   ├── popup3.jpg
+│   ├── safety.jpg
+│   ├── safety1.jpg
+│   ├── safety2.jpg
+│   ├── safety3.jpeg
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
@@ -67,9 +90,13 @@
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
+├── script
+│   └── popup.js
 ├── script.js
 ├── star-rating.js
 ├── style.css
+├── styles
+│   └── popup.css
 ├── team.html
 └── update discussion forum
 ```

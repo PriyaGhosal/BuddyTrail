@@ -31,19 +31,18 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100vw;;
-  color: #ffffff;
-  padding: 50px;
-  /* text-align: center; */
-  margin: 10px 0px 40px;
-  border-radius: 8px;
+  max-width: 80vw;;
+    color: #ffffff;
+    padding: 50px;
+    text-align: center;
+    margin: 20px 0px 60px;
+    border-radius: 8px;
 }
 nav ul {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style-type: none;
   padding: 0;
@@ -52,9 +51,8 @@ nav ul {
 .hi ul li a{
   background-color: #fff;
   color: blue;
-  min-height:15vh;
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: 600;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.35);
@@ -65,7 +63,6 @@ nav ul {
   color: white;
   box-shadow: 4px 4px 14px whitesmoke;
 }
-
 
 nav ul li {
   display: inline;
@@ -211,7 +208,7 @@ h3 {
 
 h4,
 h5 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 
 #logo-web{
@@ -229,7 +226,7 @@ button,
 label,
 input,
 p {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 button {
@@ -285,6 +282,7 @@ a{
 
 .main-head.shadow {
   background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
+  backdrop-filter: blur(8px);
 }
 
 nav {
@@ -616,8 +614,7 @@ nav {
 
 .benefits-head {
   background: #343c44;
-  min-height: 30vh;
-  padding: 3rem;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -627,27 +624,32 @@ nav {
 }
 
 .benefits-head h3 {
-  padding: 1rem;
+  padding: 1px;
+  font-size: 20px;
 }
 
 .cards {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  min-height: 90vh;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 84%;
+    margin: auto;
+    display: flex;
+    min-height: 52vh;
+    align-items: center;
+    flex-wrap: wrap;
+
+
 }
 .card {
   text-align: center;
-  flex: 1 1 25rem;
-  min-height: 45vh;
-  margin: 2rem 2rem;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s;
-  background: linear-gradient(135deg,#cab6df,#abc2e3);
-  border-radius: 20px;
-  width: 20pc;
+    flex: 1 1 25rem;
+    min-height: 38vh;
+    margin: 1rem 2rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    background: linear-gradient(135deg, #cab6df, #abc2e3);
+    border-radius: 20px;
+    width: 20pc;
+
+
 }
 
 .card:hover {
@@ -663,7 +665,8 @@ nav {
 .card h4,
 .card p {
   padding: 1rem;
-  line-height: 2;
+  line-height: inherit;
+
 }
 
 .card-icon {
@@ -1649,7 +1652,7 @@ body.light-mode {
   font-style: italic;
 }
 
-.review-rating {
+/*.review-rating {
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
   background-color: #f9f9f9;
@@ -1660,7 +1663,89 @@ body.light-mode {
   font-size: 1.4em;
   letter-spacing: 3px;
 }
+  */
+/*for rate your experince*/
+.rating {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Maximum width of the rating widget */
+  background: #f5f1e6; /* Background color */
+  padding: 6px 12px; /* Padding around the content */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Use flexbox for layout */
+  align-items: right; /* Center items vertically */
+  justify-content: right; /* Center items horizontally */
+  flex-direction: column; /* Stack items vertically */
+  margin-bottom: auto; /* Center the widget horizontally */
+  box-shadow: 0 5pX 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+  height: 60px; /* Allow height to adjust based on content */
+}
 
+.rating .star-widget input{
+  display: none;
+}
+
+.star-widget label{
+    font-size: 17px;
+    color: #444;
+    padding: 6px;
+    float: right;
+    transition: all o.2s ease;
+    cursor: pointer;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+
+input:checked ~ label{
+  color: #fd4;
+}
+.rating form{
+  display: none;
+}
+input:checked ~ form{
+  display:block;
+  width: 100%;
+}
+
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.star-widget header {
+  width: 100%;
+  font-size: 19px;
+  color: rgb(4, 4, 4); /* Color for the header text */
+  font-weight: 500;
+  margin: 5px 0 20px 0; /* Margin for spacing */
+  text-align: center; /* Center the text */
+  transition: all 0.2s ease; /* Smooth transition for changes */
+}
+
+/* CSS for displaying messages based on selected rating */
+input#rate-1:checked ~ header:before {
+  content: "I just hate it 😠";
+}
+
+input#rate-2:checked ~ header:before {
+  content: "I don't like it 😐";
+}
+
+input#rate-3:checked ~ header:before {
+  content: "It is awesome 😉";
+}
+
+input#rate-4:checked ~ header:before {
+  content: "I just like it 😎";
+}
+
+input#rate-5:checked ~ header:before {
+  content: "I just love it 😍";
+}
+  
 .review-text {
   padding: 20px;
   font-size: 1em;
@@ -2687,4 +2772,80 @@ textarea {
 #thankYouMessage p {
   color: #333;
   font-size: 16px;
+}
+
+
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.services h2 {
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
+  color: #00467f;
+}
+
+.services p {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  background-color: #00467f;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  transition: background-color 0.3s ease;
+}
+
+.icon i {
+  font-size: 2rem;
+}
+
+.service-card:hover .icon {
+  background-color: #ffdd57;
+  color: #00467f;
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #00467f;
+}
+
+.service-card p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
