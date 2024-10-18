@@ -89,6 +89,10 @@ nav a:hover {
     padding: 30px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.filter-section label{
+    font-size: 2rem;
+    margin-top: 10px;
+}
 
 .header1 {
     background-color: #007bff;
