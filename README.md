@@ -213,13 +213,6 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Son7c">
-                    <img src="https://avatars.githubusercontent.com/u/177312486?v=4" width="100;" alt="Son7c"/>
-                    <br />
-                    <sub><b>Son7c</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/devarsheecodess">
                     <img src="https://avatars.githubusercontent.com/u/114805934?v=4" width="100;" alt="devarsheecodess"/>
                     <br />
@@ -240,15 +233,15 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Sudhanshu Saini</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
-                <a href="https://github.com/tarunkumar2005">
-                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
+                <a href="https://github.com/Son7c">
+                    <img src="https://avatars.githubusercontent.com/u/177312486?v=4" width="100;" alt="Son7c"/>
                     <br />
-                    <sub><b>Tarun kumar</b></sub>
+                    <sub><b>Son7c</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/isimarjitsingh">
                     <img src="https://avatars.githubusercontent.com/u/154678140?v=4" width="100;" alt="isimarjitsingh"/>
@@ -261,6 +254,13 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/88110289?v=4" width="100;" alt="rees8"/>
                     <br />
                     <sub><b>Rhea</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/tarunkumar2005">
+                    <img src="https://avatars.githubusercontent.com/u/158801564?v=4" width="100;" alt="tarunkumar2005"/>
+                    <br />
+                    <sub><b>Tarun kumar</b></sub>
                 </a>
             </td>
             <td align="center">
