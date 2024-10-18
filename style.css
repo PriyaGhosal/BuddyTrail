@@ -285,8 +285,7 @@ nav {
 
 .logo {
   display: flex;
-  margin-left: 34px;
-
+  margin-left: 3px;
 }
 
 #nav-list {
@@ -324,8 +323,12 @@ nav {
   background-color:white;
   cursor: pointer;
   padding: 5px;
-  
 }
+
+.mode-toggle:hover{
+  border-radius: 50px;
+}
+
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
   height: auto;
@@ -2049,8 +2052,6 @@ body.light-mode {
   text-decoration: none;
   color: black;
   font-size: 18px;
-  display: inline-block;
-  padding: 10px 15px; /* Adds padding around the text */
   border-radius: 20px; /* Creates rounded corners */
   transition: all 0.3s ease, color 0.3s; /* Smooth transition */
 }
