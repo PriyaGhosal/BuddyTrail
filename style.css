@@ -676,6 +676,20 @@ nav {
   height: 7pc;
 }
 
+/* Booking Page */
+.benifits-list {
+    display: table;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    font-size: large;
+
+}
+
+.benifits-list li {
+    font-size: 1em;
+}
+
 /**** BOOKING FORM ****/
 .booking-form {
   max-width: 600px;
