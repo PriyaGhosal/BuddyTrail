@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyTrail</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+       
+    
+            #faq{
+                padding-top: 80px;
+                padding-top: 70px;
+              }
+                              
+                
+                .faq-container {
+                  max-width: 900px;
+                  margin: 40px auto;
+                  padding: 20px;
+                  background-color: rgb(203, 203, 220);
+                  border: 1px solid #ddd;
+                  border-radius: 10px;
+                  box-shadow: 2 10px 8px rgba(255, 254, 254, 0.1);
+                }
+                
+                .faq-title {
+                  text-align: center;
+                  font-size: 1.8em;
+                  color: #161515;
+                  margin-bottom: 20px;
+                }
+                
+                .faq {
+                  margin-bottom: 15px;
+                }
+                
+                .faq input[type="checkbox"] {
+                  display: none;
+                }
+                
+                .faq-question {
+                  padding: 15px;
+                  font-size: 1.2em;
+                  background-color: #1477da;
+                  color: #fff;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  /* display: block; */
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  transition: background-color 0.3s ease;
+                }
+                
+                .faq-question:hover {
+                  background-color: #0680fa;
+                }
+                
+                .faq-answer {
+                  max-height: 0;
+                  overflow: hidden;
+                  padding: 0 15px;
+                  background-color: #f3f1ef;
+                  color: #333;
+                  border-left: 4px solid #0f0f10;
+                  transition: all 0.6s ease;
+                }
+                
+                .faq input[type="checkbox"]:checked ~ .faq-answer {
+                  max-height: 150px;
+                  padding: 15px;
+                }
+                .arrow {
+                  margin-top: -3px;
+                  display: inline-block;
+                  width: 12px;
+                  height: 12px;
+                  border-right: 2px solid #fff;
+                  border-bottom: 2px solid #fff;
+                  transform: rotate(45deg);
+                  transition: transform 0.3s ease;
+                }
+                /* Rotate arrow on FAQ open */
+                .faq input[type="checkbox"]:checked + label .arrow {
+                  transform: rotate(225deg);
+                }
+              
+            </style>
+           
+
+</head>
+<body>
+   
+<!-- FAQ Section -->
+<section id="faq">          
+    <div class="faq-container">
+        <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>  
+        
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-question">1.What is your return and refund policy? ? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                We offer a 30-day return policy from the date of delivery. Items must be unworn, unwashed, and in their original condition. Refunds will be processed within 7 business days after the return is approved.
+            </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq2">
+            <label for="faq2" class="faq-question">2.How long does delivery take? ? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                Standard delivery typically takes 5-7 business days, depending on your location. Express delivery options are also available, with shipments arriving within 2-3 business days.
+            </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq3">
+            <label for="faq3" class="faq-question">3. How can I be sure about the clothing quality?? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                We are committed to offering high-quality fabrics and materials for all our clothing. Each item undergoes strict quality checks to ensure durability and comfort.
+            </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq4">
+            <label for="faq4" class="faq-question">4. What sizes do you offer?? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                Our sizes range from XS to XXL. You can refer to our detailed size guide on each product page to find the perfect fit for you.
+            </div>
+        </div>
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq5">
+            <label for="faq5" class="faq-question">5.Do you offer international shipping?? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                Yes, we ship to several countries around the world. International shipping costs and delivery times will vary depending on the destination.
+
+
+            </div>
+        </div>
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq7">
+            <label for="faq7" class="faq-question">6.How can I track my order? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                Once your order is shipped, you will receive a tracking link via email. You can use this link to track your order status online.
+
+            </div>
+        </div>
+        <div class="faq" data-aos="fade-right">
+            <input type="checkbox" id="faq6">
+            <label for="faq6" class="faq-question">7.Can I cancel or change my order after placing it? <span class="arrow"></span></label>
+            <div class="faq-answer">
+                You can cancel or make changes to your order within 24 hours of placing it. Please contact our support team as soon as possible to assist you.
+            </div>
+        </div>
+    </div>
+</section>
+     
+
+</body>
+</html>
