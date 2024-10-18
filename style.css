@@ -277,8 +277,9 @@ nav {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5em;
+  font-size: 4.3em;
   cursor: pointer;
+
 }
 
 .mode-toggle {
@@ -324,10 +325,10 @@ nav {
   .dropdown-close-btn  {
     display: block; /* Visible only in the dropdown menu */
     align-self: flex-end;
-    margin-right: 20px;
+    margin-right: 25px;
     color: white;
-    font-size: 2em;
-    padding: 5px;
+    font-size: 4.5em;
+    padding: 1.5px;
     cursor: pointer;
   }
 }
