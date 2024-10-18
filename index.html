@@ -576,7 +576,7 @@
       </div> -->
     </section>
     <!-- deals -->
-   <section id="deals" class="deals-section">
+    <section id="deals" class="deals-section">
         <h2>Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
       
@@ -617,7 +617,7 @@
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
+              <button class="btn-hover" onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 5: Adventure Trip -->
@@ -652,78 +652,161 @@
         </div>
       </section>
 
-      <style>
-        /* Existing CSS */
-        .deals-section {
-          text-align: center;
-          padding: 3rem 20px;
-          background-color: #f8f9fa;
-          width: 90vw;
-          margin: 0 auto;
+      
+        <style>
 
-        }
-        
-        .carousel {
-          position: relative;
-          overflow: hidden;
-          width: 90vw;
-          max-width: 820px;
-          margin: 0 auto;
-          height: 400px;
-          display: flex;
-          align-items: center;
-        }
-        
-        .carousel-inner {
-          display: flex;
-          transition: transform 0.5s ease;
-          height: 350px;
-          gap: 10px;
-        }
-        
-        .deal-item {
-          min-width: 260px; /* Show 3 cards */
-          box-sizing: border-box;
-          padding: 20px;
-          border: 1px solid #150f0f;
-          border-radius: 8px;
-          margin: 3px;
-          transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-        }
-        
-        .highlight {
-          transform: scale(1.05); /* Slightly enlarge the center card */
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
-        }
-        
-        .carousel-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(17, 16, 16, 0.7);
-          border: none;
-          cursor: pointer;
-          /* padding: 10px; */
-          border-radius: 50%;
-          font-size: 1.3rem;
-          transition: background-color 0.3s;
-          opacity: 1; /* Always show buttons */
-        }
-        
-        .prev {
-          left: 10px;
-        }
-        
-        .next {
-          right: 10px;
-        }
-        
-        /* Optional hover effects */
-        .carousel-button:hover {
-          background-color: rgb(6, 6, 6);
-          transform: translateY(-50%);
+          /* Updated CSS with Nature-Inspired Colors and Enhanced Hover Effects */
+.deals-section {
+  text-align: center;
+  padding: 3rem 20px;
+  background: linear-gradient(135deg, #d0ea80 0%, #4de1dc 100%); /* Light aqua gradient background */
+  width: 90vw;
+  margin: 0 auto;
+  color: #2e573e;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
 
-        }
+.deals-section:hover {
+   /* Darker aqua gradient on hover */
+}
+
+h2 {
+  font-size:xx-large;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+/* Deal Item Styling */
+.deal-item {
+  min-width: 280px;
+  box-sizing: border-box;
+  padding: 25px;
+  background: #ffffff; /* Start with a clean white background */
+  border: 2px solid transparent;
+  background-color: #82699d;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.deal-item:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
+  border: 2px solid #662f8b; /* Appear border on hover */
+}
+
+
+
+.deal-item:hover .discount {
+  color: #ff7043; /* Highlight discount with orange when hovered */
+}
+
+/* Button Styles */
+button {
+  background-color: #ba5ae0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+}
+
+button:hover {
+  background-color: #d097e5; /* Bright yellow on hover */
+  color: #e9e8ea;
+  transform: translateY(-3px);
+  border: 2px solid #7f6e60;
+}
+
+/* Carousel Button Styles */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: #a4caad;
+  transform: scale(1.1);
+}
+
+/* Animation for Carousel Slide */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel-inner {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Deal Title and Price Styling */
+h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  transition: color 0.4s ease;
+}
+
+p {
+  transition: color 0.4s ease;
+}
+
+.discount {
+  text-decoration: line-through;
+  color: #6cff43; /* Discount text in a noticeable orange */
+}
+
+
         </style>
         
         <script>
