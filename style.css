@@ -1312,6 +1312,7 @@ body.light-mode {
   background: #ffffff;
   padding: 30px;
   border-radius: 8px;
+  margin-top: 4rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   display: flex;
