@@ -487,6 +487,26 @@ nav {
   letter-spacing: 0.7px;
   padding: 5rem;
 }
+.slide-right {
+  width: 100%;
+  overflow: hidden;
+  max-width: 500px
+}
+
+.slide-right h3 {
+  animation: 3s slide-right;
+  animation-delay: 3s;
+}
+
+@keyframes slide-right {
+   from {
+      margin-left: -500px;
+   }
+
+   to {
+      margin-left: 0%;
+   }
+}
 
 
 /* Section Styles */
