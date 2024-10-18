@@ -158,6 +158,32 @@ body {
 .cloud.fade-out {
   opacity: 0;
 }
+/*SOS*/
+.sos-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#sosButton {
+  padding: 20px;
+  font-size: 18px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sosButton:hover {
+  background-color: darkred;
+}
+
+#sos-status {
+  margin-top: 20px;
+  color: green;
+}
 
 #progressBarContainer {
   position: fixed;
