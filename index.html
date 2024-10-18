@@ -305,38 +305,36 @@
 
     <script src="script.js"></script>
     <header class="main-head">
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-    </div>
+      <div class="logo">
+        <img src="img/logo.png" id="logo-web">
+        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+      </div>
+      <nav>
+        <ul id="nav-list">
+          <!-- Close button for dropdown -->
+          <span class="dropdown-close-btn" id="closeBtn">×</span>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="team.html" class="navhover">Team</a></li>
+          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+          <li><a href="./contact.html" class="navhover">Contact</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
+      </nav>
+      <!-- Toggle Button -->
+      <div class="toggle">
+        <button class="mode-toggle" id="modeToggle">
+          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+        </button>
+      </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
-
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-    </button>
-  </nav>
-</header>
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </header>
 
 
 <!-- Pop up HTML Starts Here -->
@@ -1264,6 +1262,7 @@ nav.hi ul li.NAVI i:hover  {
           align-items: center;
           flex-wrap: wrap;
           min-height: 50px; /* Minimum height of the header bar */
+          overflow: hidden;
       }
 
       h1#h1darkbtn {
@@ -1579,9 +1578,6 @@ button:hover:before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  main {
-    padding: 15px;
-  }
 
   #destinations {
     padding: 20px;
