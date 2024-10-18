@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -8,7 +11,7 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -333,18 +336,45 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <footer>
       <div class="footer-wrapper">
-        <h5>BuddyTrail &copy;</h5>
+        <h5>BuddyTrail</h5>
         <ul>
-          <li>
-            <a href="#"><img src="icons/twitter.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/instagram.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/youtube.svg" /></a>
-          </li>
+          <div class="row">
+          <a href="#"><h4>EXPLORE</h4></a>
+          <a href="#"><h4>SOCIALS</h4></a>
+          <a href="#"><h4>CONTACT</h4></a>
+          </div>
+        </ul> 
+        <ul>
+          <div class="column">
+              <a href="#"><li>Insights</li></a>
+              <a href="#"><li>Career</li></a>
+              <a href="#"><li>Blog</li></a>
+              <a href="#"><li>Support</li></a>
+          </div>
         </ul>
+        </div>
+        
+          <div class="newsletter">
+          <h1>JOIN OUR NEWSLETTER</h1>
+          <form action="post">
+          <div>
+          <input type="text" id="email" name="email" placeholder=" enter email">
+          <button class="send"><a href="#">send</a></button>
+          </div>
+          </form>
+          </div>
+          <div class="socials">
+            <li>
+              <a href="#"><img src="icons/twitter-x.svg" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="icons/instagram.svg" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="icons/youtube.svg" /></a>
+            </li>
+            </div>
+        <h4>&copy;All rights reserved</h4>
       </div>
     </footer>
     <!-- Deals and Offers Popup -->
