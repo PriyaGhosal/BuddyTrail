@@ -26,6 +26,11 @@
             <li><a href="contact.html" class="nav-link">Contact</a></li>
             <li><a href="auth.html" class="btn-primary">Sign In</a></li>
           </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
       </div>
     </header>
@@ -401,5 +406,26 @@ button:hover {
         <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Add this script at the end of the body -->
+    <script>
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav-links');
+      const navLinks = document.querySelectorAll('.nav-links li');
+
+      burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = '';
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+          }
+        });
+
+        burger.classList.toggle('toggle');
+      });
+    </script>
   </body>
 </html>
