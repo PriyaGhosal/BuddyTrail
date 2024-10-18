@@ -1194,6 +1194,14 @@ You can find the project structure in the [Project Structure](project-structure.
                     <sub><b>Shashank Goud</b></sub>
                 </a>
             </td>
+
+     <td align="center">
+                <a href="https://github.com/Varsha-1605">
+                    <img src="https://avatars.githubusercontent.com/u/140236223?v=4" width="100;" alt="Varsha-1605"/>
+                    <br />
+                    <sub><b>Varsha Dewangan</b></sub>
+                </a>
+            </td>
 		</tr>
 	<tbody>
 </table>
