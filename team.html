@@ -179,12 +179,15 @@ body {
   z-index: 5;
   padding: 15px;
   height: 90px;
-  background-color: #000; /* Initially black */
+  background-color: rgba(0,0,0,0.4); /* Initially black */
   color: white;
   display: flex;
-  justify-content:space-evenly; /* Adjusted to space-between for better layout */
+  justify-content:center; /* Adjusted to space-between for better layout */
   align-items: center;
   transition: background-color 0.3s ease, height 0.3s ease;
+}
+li, button, label, input, p {
+    font-size: 1rem;
 }
 
 #nav-list {
@@ -253,9 +256,9 @@ body {
 #nav-list li a {
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
   white-space: nowrap;
-  font-size: 25px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   margin-right: 20px;
 }
@@ -279,32 +282,15 @@ body {
 <body>
 
     <!-- Header Include -->
-     <div class="main-head">
-        <div class="logo">
-            <img src="img/logo.png" id="logo-web">
-            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-          </div>
-      
+        <div class="main-head">
           <ul id="nav-list">
             <!-- Close button for dropdown -->
-            <li><a href="#home" class="navhover">Home</a></li>
+            <li><a href="/" class="navhover">Home</a></li>
             <li><a href="team.html" class="navhover">Team</a></li>
-            <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-            <li><a href="#benefits" class="navhover">Benefits</a></li>
             <li><a href="about.html" class="navhover">About</a></li>
-            <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-            
             <li><a href="./contact.html" class="navhover">Contact</a></li>
-            <li><a href="#reviews" class="navhover">Reviews</a></li>
             <li><a href="auth.html" class="navhover">Sign In</a></li>
-           
           </ul>
-      
-          <!-- Toggle Button -->
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-          </button>
         </div>
      </div>
     <!-- Sidebar Include -->
