@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
+  <meta name="description"
+    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
   <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="RatingStyle.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
   <link rel="icon" href="/icons/airplane.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Book Now - BuddyTrail</title>
   <style>
     .error {
@@ -20,7 +25,7 @@
       margin-top: 5px;
     }
 
-    .nav-elem{
+    .nav-elem {
       font-size: 1.9rem;
       width: 100vw;
       margin-left: 50px;
@@ -28,18 +33,18 @@
       justify-content: space-evenly;
     }
 
-    .logo{
+    .logo {
       left: 50px;
-      
+
     }
 
-    nav{
+    nav {
       display: flex;
       justify-content: space-evenly;
     }
 
 
-    .locations h2{
+    .locations h2 {
       font-size: 4rem;
       color: white;
     }
@@ -48,22 +53,30 @@
       color: #f9f9f9;
     }
 
-    .benefits h2{
+    .benefits h2 {
       font-size: 4rem;
       margin-bottom: 50px;
       text-shadow: 0 0 2px rgb(110, 110, 110);
     }
 
-    footer{
+    footer {
       padding-top: 50px;
       padding-bottom: 20px;
     }
 
-    .footer-bottom{
+    .footer-bottom {
       margin-top: 20px;
+    }
+
+    .confirmation {
+      color: green;
+      font-size: 1.5em;
+      margin-top: 10px;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <header class="main-head">
     <nav>
@@ -72,10 +85,10 @@
         <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
       </div>
       <div class="nav-elem">
-      <a href="#locations">Location</a>
-      <a href="#benefits">Benefits</a>
-      <a href="contact.html">Contact</a>
-      <a href="#booking-form">Book Now</a>
+        <a href="#locations">Location</a>
+        <a href="#benefits">Benefits</a>
+        <a href="contact.html">Contact</a>
+        <a href="#booking-form">Book Now</a>
       </div>
     </nav>
   </header>
@@ -87,62 +100,32 @@
     <section id="locations" class="locations">
       <h2>Popular Destinations</h2>
       <div class="location-cards">
-        <div class="location-card">
-          <h3>Dubai</h3>
-          <p>Flight to Dubai<br>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
-          <p><strong>Price:</strong> ₹20,000 <del>₹25,000</del></p>
-        </div>
-        <div class="location-card">
-          <h3>Goa</h3>
-          <p>Luxury Stay in Goa<br>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
-          <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> per night</p>
-        </div>
-        <div class="location-card">
-          <h3>Kerala</h3>
-          <p>Kerala Backwaters Package<br>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
-        </div>
-        <div class="location-card">
-          <h3>Paris</h3>
-          <p>Paris Romantic Getaway<br>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p><br>
-          <p><strong>Price:</strong> ₹1,20,000 <del>₹1,50,000</del> per couple</p>
-        </div>
-        <div class="location-card">
-          <h3>Bali</h3>
-          <p>Adventure in Bali<br>Book an adventure trip to Bali with activities like snorkeling, trekking & more. Discount available for groups!</p>
-          <p><strong>Price:</strong> ₹48,000 <del>₹60,000</del> per person</p>
-        </div>
+        <!-- Cards for destinations -->
       </div>
     </section>
-    
-    <section id="benefits" class="benefits">
-      <h2>Why Travel with BuddyTrail?</h2>
-      <ul class="benifits-list">
-        <li>Exclusive discounts and travel packages</li>
-        <li>24/7 customer support for a hassle-free experience</li>
-        <li>Handpicked destinations and personalized itineraries</li>
-        <li>Safe and secure travel arrangements</li>
-      </ul>
-      <div class="call-to-action">
-        <h2>Ready to embark on your next adventure?</h2>
-        <h2>Let BuddyTrail take you there!</h2>
-      </div>
-    </section>
-    
+
     <section id="booking-form" class="booking-form">
       <h2>Book Your Trip</h2>
-      <form id="bookingForm" action="#" method="post" onsubmit="return validateForm()" novalidate>
+      <!-- Display confirmation message after form submission -->
+      <div id="confirmationMessage" class="confirmation"></div>
+      <form id="bookingForm" action="" method="post" onsubmit="return handleSubmit(event)" novalidate>
+        <!-- Place of Visit -->
         <div class="form-group">
-          <label for="place">Place of Visit:</label>
+          <label for="place"><i class="fas fa-map-marker-alt"></i> Place of Visit:</label>
           <input type="text" id="place" name="place" placeholder="Enter your destination" required />
           <div class="error" id="placeError"></div>
         </div>
+
+        <!-- Dates of Staying -->
         <div class="form-group">
-          <label for="dates">Dates of Staying:</label>
+          <label for="dates"><i class="fas fa-calendar-alt"></i> Dates of Staying:</label>
           <input type="date" id="dates" name="dates" required />
           <div class="error" id="datesError"></div>
         </div>
+
+        <!-- Mode of Transport -->
         <div class="form-group">
-          <label for="transport">Mode of Transport:</label>
+          <label for="transport"><i class="fas fa-plane"></i> Mode of Transport:</label>
           <select id="transport" name="transport" required>
             <option value="" disabled selected>Select mode of transport</option>
             <option value="air">Air</option>
@@ -152,7 +135,42 @@
           </select>
           <div class="error" id="transportError"></div>
         </div>
-        <button type="submit" class="btn">Book Now</button>
+
+        <!-- Number of Travelers -->
+        <div class="form-group">
+          <label for="travelers"><i class="fas fa-users"></i> Number of Travelers:</label>
+          <input type="number" id="travelers" name="travelers" min="1" placeholder="Enter number of travelers"
+            required />
+          <div class="error" id="travelersError"></div>
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group">
+          <label for="budget"><i class="fas fa-money-bill-wave"></i> Budget:</label>
+          <select id="budget" name="budget" required>
+            <option value="" disabled selected>Select your budget</option>
+            <option value="cheap">Cheap</option>
+            <option value="medium">Medium</option>
+            <option value="expensive">Expensive</option>
+          </select>
+          <div class="error" id="budgetError"></div>
+        </div>
+
+        <!-- Place Preference -->
+        <div class="form-group">
+          <label for="preference"><i class="fas fa-compass"></i> Place Preference:</label>
+          <select id="preference" name="preference" required>
+            <option value="" disabled selected>Select place preference</option>
+            <option value="mountains">Mountains</option>
+            <option value="beach">Beach</option>
+            <option value="city">City</option>
+            <option value="countryside">Countryside</option>
+          </select>
+          <div class="error" id="preferenceError"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Book Now</button>
       </form>
     </section>
   </main>
@@ -200,6 +218,9 @@
       // Clear previous error messages
       document.getElementById("placeError").innerText = "";
       document.getElementById("datesError").innerText = "";
+      document.getElementById("travelersError").innerText = "";
+      document.getElementById("budgetError").innerText = "";
+      document.getElementById("preferenceError").innerText = "";
       document.getElementById("transportError").innerText = "";
 
       // Validate Place of Visit
@@ -216,15 +237,55 @@
         valid = false;
       }
 
+      // Validate Number of Travelers
+      const travelers = document.getElementById("travelers").value;
+      if (travelers === "" || travelers <= 0) {
+        document.getElementById("travelersError").innerText = "Please enter a valid number of travelers.";
+        valid = false;
+      }
+
+      // Validate Budget
+      const budget = document.getElementById("budget").value;
+      if (budget === "") {
+        document.getElementById("budgetError").innerText = "Please select a budget.";
+        valid = false;
+      }
+
+      // Validate Place Preference
+      const preference = document.getElementById("preference").value;
+      if (preference === "") {
+        document.getElementById("preferenceError").innerText = "Please select a place preference.";
+        valid = false;
+      }
+
       // Validate Mode of Transport
       const transport = document.getElementById("transport").value;
       if (transport === "") {
-        document.getElementById("transportError").innerText = "Please select a mode of transport.";
+        document.getElementById("transportError").innerText = "Please select your mode of transport.";
         valid = false;
       }
 
       return valid;
     }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      if (validateForm()) {
+        // Display a confirmation message
+        const confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.innerText = "Thank you! Your booking is confirmed.";
+
+        // Clear the form fields
+        document.getElementById("bookingForm").reset();
+
+        // Optional: You can add a timeout before redirecting or resetting the form
+        setTimeout(() => {
+          confirmationMessage.innerText = ""; // Hide the message after a few seconds
+        }, 5000);
+      }
+    }
   </script>
 </body>
+
 </html>
