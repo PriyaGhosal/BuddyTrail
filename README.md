@@ -509,7 +509,7 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/138569378?v=4" width="100;" alt="Abankita"/>
                     <br />
                     <sub><b>Abankita Behera </b></sub>
-======
+
     <a href="https://github.com/rahulbamnuya">
         <img src="https://avatars.githubusercontent.com/u/129646171?s=48&v=4" width="100;" alt="rahulbamnuya"/>
         <br />
@@ -692,7 +692,6 @@ You can find the project structure in the [Project Structure](project-structure.
             </td>
             <td align="center">
 
->>>>>>> 
     <a href="https://github.com/rahulbamnuya">
         <img src="https://avatars.githubusercontent.com/u/129646171?s=48&v=4" width="100;" alt="rahulbamnuya"/>
         <br />
@@ -791,7 +790,7 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/63530396?v=4" width="100;" alt="hgjajoo"/>
                     <br />
                     <sub><b>Harshvardhan Jajoo</b></sub>
- <
+
     <a href="https://github.com/rahulbamnuya">
         <img src="https://avatars.githubusercontent.com/u/129646171?s=48&v=4" width="100;" alt="rahulbamnuya"/>
         <br />
@@ -978,7 +977,7 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/118966111?v=4" width="100;" alt="tusharmishra069"/>
                     <br />
                     <sub><b>Tushar Mishra</b></sub>
-====== 
+
     <a href="https://github.com/rahulbamnuya">
         <img src="https://avatars.githubusercontent.com/u/129646171?s=48&v=4" width="100;" alt="rahulbamnuya"/>
         <br />
@@ -1169,7 +1168,7 @@ You can find the project structure in the [Project Structure](project-structure.
                     <img src="https://avatars.githubusercontent.com/u/142707684?v=4" width="100;" alt="ShrishtiSingh26"/>
                     <br />
                     <sub><b>Shrishti</b></sub>
- <
+ 
     <a href="https://github.com/rahulbamnuya">
         <img src="https://avatars.githubusercontent.com/u/129646171?s=48&v=4" width="100;" alt="rahulbamnuya"/>
         <br />

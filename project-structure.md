@@ -60,6 +60,7 @@
 │   └── youtube.svg
 ├── image.png
 ├── img
+│   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
@@ -74,6 +75,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
+│   ├── gssocextd.jpg
+│   ├── hacktoberfest.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
