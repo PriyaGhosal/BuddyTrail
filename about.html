@@ -25,10 +25,18 @@
             <li><a href="team.html" class="nav-link">Team</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
             <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+              </button>
+            </nav>
+          </header>
           </ul>
+          
         </nav>
       </div>
     </header>
+
 
     <section class="about">
       <div class="container">
@@ -91,7 +99,22 @@
 
  /* CTA Button */
 
- 
+ .mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10; /* Ensure it stays above other elements */
+  }
+  
+  .mode-toggle img {
+    width: 30px; 
+    height: auto;
+  }
+  
 #cta-button {
    margin-left: 300px;
     display: inline-block;
@@ -368,9 +391,42 @@ button:hover {
  
 }
 
+
  
 
   </style>
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+const sunIcon = document.querySelector('.sun-icon');
+const moonIcon = document.querySelector('.moon-icon');
+
+// Load theme from localStorage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+  sunIcon.style.display = 'none';
+  moonIcon.style.display = 'inline-block';
+} else {
+  sunIcon.style.display = 'inline-block';
+  moonIcon.style.display = 'none';
+}
+
+// Toggle dark/light mode on button click
+modeToggle.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  
+  if (document.body.classList.contains('dark-mode')) {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'inline-block';
+    localStorage.setItem('theme', 'dark'); 
+  } else {
+    sunIcon.style.display = 'inline-block';
+    moonIcon.style.display = 'none';
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+  </script>
 
     <footer>
       <div class="container">

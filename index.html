@@ -88,7 +88,7 @@
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
     font-weight: bold;
-    color: black; /* Optional: change the color to match the theme */
+    color: black; 
 }
 
 .rating {
@@ -999,179 +999,191 @@
     <style>
     
     
+/* Container for the posts and vlogs section */
+#posts {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
 
-        /* Container for the posts and vlogs section */
-        #posts {
-          max-width: 1200px;
-          margin: 50px auto;
-          padding: 20px;
-          background-color: #fff;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          border-radius: 12px;
-        }
+#content-input {
+  height: 200px;
+  border-color: #81c784;
+  padding: 10px;
+  width: 100%; /* Ensure full width inside the container */
+  border-radius: 8px;
+  outline: none;
+}
 
-        #content-input{
-          height: 200px;
-          border-color: #81c784;
-        }
+/* Header styling */
+header.posts_blog {
+  background-color: #4caf50;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
 
-        /* Header styling */
-        header.posts_blog {
-          background-color: #4caf50;
-          padding: 20px;
-          text-align: center;
-          border-radius: 12px 12px 0 0;
-        }
+header.posts_blog h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-        header.posts_blog h1 {
-          color: #fff;
-          font-size: 2.5rem;
-          margin: 0;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-        }
+/* Main section styling */
+main.main_blogs {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 30px; /* Adds space between the two sections */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
 
-        /* Main section styling */
-        main.main_blogs {
-          display: flex;
-          justify-content: space-between;
-          padding: 20px;
-        }
+/* Upload Section */
+#upload {
+  width: 45%; /* Adjusted width to fit next to content */
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  align-items: center;
+  margin: 0; /* Removed extra margin */
+}
 
-        /* Upload Section */
-        #upload {
-          width: 40%;
-          background-color: #e8f5e9;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 30px;
-        }
+#upload h2 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
 
-        #upload h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
 
-        #upload-form {
-          display: flex;
-          flex-direction: column;
-        }
+#file-input {
+  border: 2px dashed #4caf50;
+  background-color: #f1f8e9;
+  color: #4caf50;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  height: fit-content;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
 
-        #file-input {
-        border: 2px dashed #4caf50;
-        background-color: #f1f8e9;
-        color: #4caf50;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        transition: border-color 0.3s, background-color 0.3s;
-      }
+/* Hover, Focus, Active state for file input */
+#file-input:hover {
+  border-color: #81c784;
+  background-color: #e8f5e9;
+}
 
-      /* Hover state: change border and background color */
-      #file-input:hover {
-        border-color: #81c784;
-        background-color: #e8f5e9;
-      }
+#file-input:focus {
+  outline: none;
+  border-color: #66bb6a;
+  background-color: #c8e6c9;
+}
 
-      /* Focus state: when the input is clicked */
-      #file-input:focus {
-        outline: none;
-        border-color: #66bb6a;
-        background-color: #c8e6c9;
-      }
+#file-input:active,
+#file-input:focus-visible {
+  border-color: #388e3c;
+  background-color: #a5d6a7;
+}
 
-      /* Active state: when file is being dragged over the input */
-      #file-input:active,
-      #file-input:focus-visible {
-        border-color: #388e3c;
-        background-color: #a5d6a7;
-      }
+/* File input button styling */
+#file-input::file-selector-button {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-      /* File input placeholder text styling */
-      #file-input::file-selector-button {
-        color: #fff;
-        background-color: #4caf50;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
+#file-input::file-selector-button:hover {
+  background-color: #66bb6a;
+}
 
-      #file-input::file-selector-button:hover {
-        background-color: #66bb6a;
-      }
+#submit {
+  background-color: #876bb1;
+  margin: 20px;
+}
 
+#submit:hover {
+  background-color: #744caf;
+}
 
-        #submit{
-          background-color: #876bb1;
-          margin: 20px;
-          
-        }
+#upload-form button {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #4caf50; /* Adds border */
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
 
-        #submit:hover{
-          background-color: #744caf;
-        }
+#upload-form button:hover {
+  background-color: #c081c7;
+}
 
-        #upload-form button {
-          
-          color: #fff;
-          padding: 10px;
-          border: 1px solid #4caf50; /* Add a border to make the button more visible */
-          cursor: pointer;
-          font-size: 1.2rem;
-          transition: background-color 0.3s;
-        }
+/* Content Section */
+#content {
+  width: 50%; /* Adjusted width to fit next to upload */
+  background-color: #f9fbe7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        #upload-form button:hover {
-          background-color: #c081c7;
-        }
+#content h2 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
 
-        /* Content Section */
-        #content {
-          width: 55%;
-        }
+#content-list {
+  list-style-type: none;
+  padding: 0;
+}
 
-        #content h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
+#content-list li {
+  background-color: #e8f5e9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-        #content-list {
-          list-style-type: none;
-          padding: 0;
-        }
+#content-list li:hover {
+  background-color: #c8e6c9;
+}
 
-        #content-list li {
-          background-color: #e8f5e9;
-          padding: 15px;
-          margin-bottom: 10px;
-          border-radius: 8px;
-          transition: background-color 0.3s;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  main.main_blogs {
+    flex-direction: column; /* Stack upload and content vertically */
+  }
 
-        #content-list li:hover {
-          background-color: #c8e6c9;
-        }
+  #upload, #content {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+}
 
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-          main.main_blogs {
-            flex-direction: column;
-          }
-
-          #upload, #content {
-            width: 100%;
-            margin-bottom: 20px;
-          }
-        }
 
     </style>
     <script src="script.js"></script>
@@ -1182,155 +1194,145 @@
           <ul>
               <li class="NAVI">
                 <!-- added favicon for destinations -->
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#destinations">Destinations</a>
+               
+                <a href="#destinations"> <i class="fa-solid fa-location-dot"></i> Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
-                <i class="fa-solid fa-earth-americas"></i>
-                <a href="#travel-planning">Travel Planning</a>
+                
+                <a href="#travel-planning"> <i class="fa-solid fa-earth-americas"></i>  Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
-                <i class="fa-regular fa-face-smile"></i>
-                <a href="#experiences">Travel Experiences</a>
+                
+                <a href="#experiences" ><i class="fa-regular fa-face-smile"></i> Travel Experiences</a>
               </li>
               <li class="NAVI">
-                <i class="fa-solid fa-gear"></i>
+                
                 <!-- added favicon for travel gear -->
-                <a href="#gear">Travel Gear</a>
+                <a href="#gear"><i class="fa-solid fa-gear"></i> Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
-                <i class="fa-solid fa-shield"></i>
-                <a href="#safety">Travel Safety</a>
+               
+                <a href="#safety"> <i class="fa-solid fa-shield"></i> Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
-                <i class="fa-solid fa-seedling"></i>
-                <a href="#sustainable">Sustainable Travel</a>
+                
+                <a href="#sustainable"><i class="fa-solid fa-seedling"></i> Sustainable Travel</a>
               </li>
           </ul>
       </nav>
   </header>
   <style>
-          /* General Styles */
-      body {
-          margin: 0;
-          font-family: 'Arial', sans-serif;
-          background-color: #f4f4f9;
-      }
+    /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+}
 
-      /* Header Border */
+/* Header Border */
 header.forum_1 {
-    border: 10px solid transparent; /* Initial transparent border */
-    border-image: linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
-    border-image-slice: 1; /* Ensures the full gradient is applied */
-    border-radius: 10px; /* Rounded corners for smooth appearance */
-    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+  border: 10px solid transparent; /* Initial transparent border */
+  border-image: linear-gradient(to right, #44dfa6, #a08be6); /* Gradient border */
+  border-image-slice: 1; /* Ensures the full gradient is applied */
+  border-radius: 10px; /* Rounded corners for smooth appearance */
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 header.forum_1:hover {
-    border-color: #ffcc00; /* Changes border color on hover */
+  border-color: #ffcc00; /* Changes border color on hover */
 }
 
-/* Navigation Item Borders */
+/* Header Section */
+header.forum_1 {
+  background-color: #1e88e5; /* Primary color for the header */
+  color: white;
+  padding: 10px 20px; /* Minimal padding for compact height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px; /* Minimum height of the header bar */
+}
+
+/* Header Title */
+h1#h1darkbtn {
+  color: white;
+  font-size: xx-large;
+  margin: 0;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
+}
+
+h1#h1darkbtn:hover {
+  color: #0b0b0a; /* Changes the color when hovered */
+}
+
+/* Navigation Styles */
+nav.hi ul {
+  list-style-type: armenian;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0px;
+}
+
+nav.hi ul li.NAVI {
+  position: relative;
+}
+
 nav.hi ul li.NAVI a {
-    border: 2px solid transparent; /* Transparent border initially */
-    border-radius: 5px; /* Rounded corners */
-    transition: border 0.3s ease, background-color 0.3s ease;
-}
-/*  not needed as styling for nav,li,a is handled at lower */
-/* nav.hi ul li.NAVI a:hover {
-    border-color: #ffcc00; 
-    background-color: #ffffff; 
-    color: #1e88e5;
-} */
-    
-/* Added styling for favicon */
-nav.hi ul li.NAVI i:hover  {
-    color: #ffcc00; /* color change on hover */
-    transform: scale(1.2); /* scale up on hover */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 14px; /* Adjusted font size */
+  padding: 8px 12px; /* Padding for link */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Space between icon and text */
+  border-radius: 5px; /* Rounded corners */
+  transition: color 0.3s, background-color 0.3s ease;
 }
 
-      /* Header Section */
-      header.forum_1 {
-          background-color: #1e88e5; /* Primary color for the header */
-          color: white;
-          padding: 10px 20px; /* Minimal padding for compact height */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          min-height: 50px; /* Minimum height of the header bar */
-      }
+nav.hi ul li.NAVI a:hover {
+  background-color: #000000; /* Background highlight on hover */
+  color: #ffffff; /* Text color change on hover */
+}
 
-      h1#h1darkbtn {
-        color: white;
-        font-size:xx-large;
-          margin: 0;
-          letter-spacing: 1.2px;
-          transition: color 0.3s ease;
-      }
+/* Styling for icons when hovering over the entire link */
+nav.hi ul li.NAVI a:hover i {
+  color: #ffffff; /* Change icon color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+}
 
-      h1#h1darkbtn:hover {
-          color: #ffcc00; /* Changes the color when hovered */
-      }
+/* Icon styling */
+nav.hi ul li.NAVI i {
+  font-size: 18px; /* Adjust icon size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
 
-      /* Navigation Styles */
-      nav.hi ul {
-          list-style-type: ;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          gap: 0px;
-      }
+/* Responsive Design */
+@media (max-width: 768px) {
+  header.forum_1 {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
-      nav.hi ul li.NAVI {
-          position: relative;
-      }
+  nav.hi ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+  }
 
-      nav.hi ul li.NAVI a {
-          color: rgb(162, 37, 37);
-          text-decoration: none;
-          font-size: 14px; /* Reduced font size for a more compact design */
-          padding-right: 5px;
-          padding: 8px 12px; /* Reduced padding to fit minimal height */
-          transition: color 0.3s, background-color 0.3s ease;
-          border-radius: 5px; /* Slight rounding for a modern look */
-      }
-
-      nav.hi ul li.NAVI a:hover {
-          background-color: #ffcc00; /* Background highlight on hover */
-          color: #1e88e5; /* Text color change on hover */
-      }
-    
-      nav.hi ul li.NAVI a:hover::after {
-          width: 100%; 
-      } */
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-          header.forum_1 {
-              flex-direction: column;
-              align-items: flex-start;
-          }
-
-          nav.hi ul {
-              flex-direction: column;
-              width: 100%;
-              gap: 10px;
-          }
-
-          nav.hi ul li.NAVI a {
-              display: block;
-              width: 100%;
-              text-align: center;
-          }
-      }
-
-
+  nav.hi ul li.NAVI a {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+}
 
 
   </style>
@@ -1876,71 +1878,76 @@ button:hover:before {
 
 
   <footer id="footer">
-    <div class="footer-container" id="footer">
+    <div class="footer-container">
+      <!-- About Us Section -->
       <div class="footer-column">
-        
-
-    <footer id="footer">
-      <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="faq.html" class="faq-link">FAQs</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="contributor/contributor.html">Our Contributor</a></li>
-
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Legal Links</h3>
-              <ul>
-                  <li><a href="#"></a>Terms of Service</li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Disclaimer</a></li>
-                  <li><a href="#">Copyright Notice</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
-
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
-          <!-- Newsletter Form -->
-    <div class="newsletter" id="newsletter">
-      <form id="newsletter-form">
-        <h3>Newsletter Form</h3>
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-      <p id="subscription-message"></p>
-    </div>
-     
+        <h3>About Us</h3>
+        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+      </div>
   
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="faq.html" class="faq-link">FAQs</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contributor/contributor.html">Our Contributor</a></li>
+        </ul>
+      </div>
+  
+      <!-- Legal Links Section -->
+      <div class="footer-column">
+        <h3>Legal Links</h3>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="copyright.html">Copyright Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Us Section -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      </div>
+  
+      <!-- Follow Us Section -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+  
+      <!-- Newsletter Form Section -->
+      <div class="footer-column newsletter" id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+      </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-    </div>
+  
+    <!-- Footer Bottom Section -->
+    <footer>
+      <div class="footer-bottom">
+          <p>&copy; 2024 BuddyTrail. All rights reserved.
+          </p>
+      </div>
   </footer>
+  
   
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
