@@ -66,6 +66,11 @@
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 # 📸 Website Preview
+
+
+https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
+
+
 ![Screenshot 2024-10-19 143805](https://github.com/user-attachments/assets/96abf31b-b1bc-4b05-ae4a-00e225da1e0c)
 
 ![Screenshot 2024-10-19 143906](https://github.com/user-attachments/assets/e77ac002-1a7b-4172-a847-b8ec950a1f89)
