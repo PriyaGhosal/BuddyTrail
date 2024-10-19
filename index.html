@@ -7,31 +7,31 @@
       name="description"
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     /> 
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content= "index,follow" />
 
-    <link rel="stylesheet" href="RatingStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./styles/popup.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href= "RatingStyle.css">
+    <link rel="stylesheet" href= "style.css" />
+    <link rel="stylesheet" href= "./styles/popup.css">
+    <link rel="preconnect" href= "https://fonts.googleapis.com" />
+    <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
+      href= "https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel= "stylesheet"
     />
     <link rel="icon" href="/icons/airplane.svg" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      rel= "stylesheet"
+      href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity= "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin= "anonymous"
+      referrerpolicy= "no-referrer"
     />
     <link rel="stylesheet" href="chatbot.css">
     <title>BuddyTrail</title>
     <style>
      .header1{
-       background-color:white;
+       /* background-color:white; */
        border-radius:8px;
        padding: 4px 8px 4px 8px;
      }
@@ -338,6 +338,9 @@
   </nav>
 </header>
 
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </header>
 
 <!-- Pop up HTML Starts Here -->
  <!-- Pop-up for BuddyTrail -->
@@ -576,7 +579,7 @@
       </div> -->
     </section>
     <!-- deals -->
-   <section id="deals" class="deals-section">
+    <section id="deals" class="deals-section">
         <h2>Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
       
@@ -617,7 +620,7 @@
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
+              <button class="btn-hover" onclick="window.location.href='book.html'">Book Now</button>
             </div></div>
       
             <!-- Deal 5: Adventure Trip -->
@@ -652,78 +655,158 @@
         </div>
       </section>
 
-      <style>
-        /* Existing CSS */
-        .deals-section {
-          text-align: center;
-          padding: 3rem 20px;
-          background-color: #f8f9fa;
-          width: 90vw;
-          margin: 0 auto;
+      
+        <style>
 
-        }
-        
-        .carousel {
-          position: relative;
-          overflow: hidden;
-          width: 90vw;
-          max-width: 820px;
-          margin: 0 auto;
-          height: 400px;
-          display: flex;
-          align-items: center;
-        }
-        
-        .carousel-inner {
-          display: flex;
-          transition: transform 0.5s ease;
-          height: 350px;
-          gap: 10px;
-        }
-        
-        .deal-item {
-          min-width: 260px; /* Show 3 cards */
-          box-sizing: border-box;
-          padding: 20px;
-          border: 1px solid #150f0f;
-          border-radius: 8px;
-          margin: 3px;
-          transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-        }
-        
-        .highlight {
-          transform: scale(1.05); /* Slightly enlarge the center card */
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
-        }
-        
-        .carousel-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(17, 16, 16, 0.7);
-          border: none;
-          cursor: pointer;
-          /* padding: 10px; */
-          border-radius: 50%;
-          font-size: 1.3rem;
-          transition: background-color 0.3s;
-          opacity: 1; /* Always show buttons */
-        }
-        
-        .prev {
-          left: 10px;
-        }
-        
-        .next {
-          right: 10px;
-        }
-        
-        /* Optional hover effects */
-        .carousel-button:hover {
-          background-color: rgb(6, 6, 6);
-          transform: translateY(-50%);
+          /* Updated CSS with Nature-Inspired Colors and Enhanced Hover Effects */
+.deals-section {
+  text-align: center;
+  padding: 3rem 20px;
+  background: linear-gradient(135deg, #d0ea80 0%, #4de1dc 100%); /* Light aqua gradient background */
+  width: 90vw;
+  margin: 0 auto;
+  color: #2e573e;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
 
-        }
+
+h2 {
+  font-size:xx-large;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+/* Deal Item Styling */
+.deal-item {
+  min-width: 280px;
+  box-sizing: border-box;
+  padding: 25px;
+  background: #ffffff; /* Start with a clean white background */
+  border: 2px solid transparent;
+  background-color: #82699d;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.deal-item:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
+  border: 2px solid #662f8b; /* Appear border on hover */
+}
+
+
+
+.deal-item:hover .discount {
+  color: #ff7043; /* Highlight discount with orange when hovered */
+}
+
+/* Button Styles */
+button {
+  background-color: #ba5ae0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+}
+
+button:hover {
+  background-color: #d097e5; /* Bright yellow on hover */
+  color: #e9e8ea;
+  transform: translateY(-3px);
+  border: 2px solid #7f6e60;
+}
+
+/* Carousel Button Styles */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: #a4caad;
+  transform: scale(1.1);
+}
+
+/* Animation for Carousel Slide */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel-inner {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Deal Title and Price Styling */
+h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  transition: color 0.4s ease;
+}
+
+p {
+  transition: color 0.4s ease;
+}
+
+.discount {
+  text-decoration: line-through;
+  color: #6cff43; /* Discount text in a noticeable orange */
+}
+
+
         </style>
         
         <script>
@@ -851,9 +934,10 @@
     </section>
 
     <!-- Cab or Auto Booking -->
+    <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
+        <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
           <div class="form-group">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
@@ -913,9 +997,203 @@
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button>
 
         </section>
+          
+  <style>
+    /* Main Section Styling */
+.cab-booking-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Container Styling */
+.booking-container {
+    width: 80%; /* Increase width of the container */
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center align the container */
+    background: linear-gradient(135deg, #5fc0d6, #2193b0); /* Eye-catching gradient */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.booking-container:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Heading Styles */
+.cab-booking-section h2 {
+    color: white; /* Match with gradient background */
+    text-align: center;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.cab-booking-section h2:hover {
+    color: #f1f1f1; /* Slight lightening effect on hover */
+}
+
+/* Form Group Styles */
+.form-group {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.form-group:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+/* Label and Input Styles */
+label {
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 200px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 5px rgba(33, 147, 176, 0.5); /* Match gradient color */
+}
+
+/* Button Styling */
+.book-btn {
+    background-color: #2193b0; /* Gradient color for button */
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-btn:hover {
+    background-color: #6dd5ed; /* Gradient effect on hover */
+    transform: scale(1.05);
+}
+
+    /* Main Section Styling */
+.cab-booking-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Background color for form groups */
+.form-group {
+    background-color: #e8f4fa; /* Light blue background for each form group */
+    border-radius: 5px;
+    padding: 15px; /* Padding around the inputs */
+    margin-bottom: 20px;
+    transition: background-color 0.3s; /* Transition for background color on hover */
+}
+
+.form-group:hover {
+    background-color: #d1e7f9; /* Darker blue on hover */
+}
+
+/* Heading Styles */
+.cab-booking-section h2 {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.cab-booking-section h2:hover {
+    color: #007bff; /* Color changes on hover */
+}
+
+/* Label Styles */
+label {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 200px; /* Increased width for text inputs */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Button Styles */
+.book-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-btn:hover {
+    background-color: #007bff; /* Button color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Iframe Styles */
+iframe {
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.02); /* Slight zoom effect on iframe */
+}
+
+/* Flex Container for Vehicle Type */
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Vehicle Type Dropdown Styling */
+select {
+    margin-left: 10px;
+}
+
+  </style>
           
     
 
@@ -1000,178 +1278,191 @@
     
     
 
-        /* Container for the posts and vlogs section */
-        #posts {
-          max-width: 1200px;
-          margin: 50px auto;
-          padding: 20px;
-          background-color: #fff;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          border-radius: 12px;
-        }
+       /* Container for the posts and vlogs section */
+#posts {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
 
-        #content-input{
-          height: 200px;
-          border-color: #81c784;
-        }
+#content-input {
+  height: 200px;
+  border-color: #81c784;
+  padding: 10px;
+  width: 100%; /* Ensure full width inside the container */
+  border-radius: 8px;
+  outline: none;
+}
 
-        /* Header styling */
-        header.posts_blog {
-          background-color: #4caf50;
-          padding: 20px;
-          text-align: center;
-          border-radius: 12px 12px 0 0;
-        }
+/* Header styling */
+header.posts_blog {
+  background-color: #4caf50;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
 
-        header.posts_blog h1 {
-          color: #fff;
-          font-size: 2.5rem;
-          margin: 0;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-        }
+header.posts_blog h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-        /* Main section styling */
-        main.main_blogs {
-          display: flex;
-          justify-content: space-between;
-          padding: 20px;
-        }
+/* Main section styling */
+main.main_blogs {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 30px; /* Adds space between the two sections */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
 
-        /* Upload Section */
-        #upload {
-          width: 40%;
-          background-color: #e8f5e9;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 30px;
-        }
+/* Upload Section */
+#upload {
+  width: 45%; /* Adjusted width to fit next to content */
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  align-items: center;
+  margin: 0; /* Removed extra margin */
+}
 
-        #upload h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
+#upload h2 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
 
-        #upload-form {
-          display: flex;
-          flex-direction: column;
-        }
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
 
-        #file-input {
-        border: 2px dashed #4caf50;
-        background-color: #f1f8e9;
-        color: #4caf50;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        transition: border-color 0.3s, background-color 0.3s;
-      }
+#file-input {
+  border: 2px dashed #4caf50;
+  background-color: #f1f8e9;
+  color: #4caf50;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  height: fit-content;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
 
-      /* Hover state: change border and background color */
-      #file-input:hover {
-        border-color: #81c784;
-        background-color: #e8f5e9;
-      }
+/* Hover, Focus, Active state for file input */
+#file-input:hover {
+  border-color: #81c784;
+  background-color: #e8f5e9;
+}
 
-      /* Focus state: when the input is clicked */
-      #file-input:focus {
-        outline: none;
-        border-color: #66bb6a;
-        background-color: #c8e6c9;
-      }
+#file-input:focus {
+  outline: none;
+  border-color: #66bb6a;
+  background-color: #c8e6c9;
+}
 
-      /* Active state: when file is being dragged over the input */
-      #file-input:active,
-      #file-input:focus-visible {
-        border-color: #388e3c;
-        background-color: #a5d6a7;
-      }
+#file-input:active,
+#file-input:focus-visible {
+  border-color: #388e3c;
+  background-color: #a5d6a7;
+}
 
-      /* File input placeholder text styling */
-      #file-input::file-selector-button {
-        color: #fff;
-        background-color: #4caf50;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
+/* File input button styling */
+#file-input::file-selector-button {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-      #file-input::file-selector-button:hover {
-        background-color: #66bb6a;
-      }
+#file-input::file-selector-button:hover {
+  background-color: #66bb6a;
+}
 
+#submit {
+  background-color: #876bb1;
+  margin: 20px;
+}
 
-        #submit{
-          background-color: #876bb1;
-          margin: 20px;
-          
-        }
+#submit:hover {
+  background-color: #744caf;
+}
 
-        #submit:hover{
-          background-color: #744caf;
-        }
+#upload-form button {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #4caf50; /* Adds border */
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
 
-        #upload-form button {
-          
-          color: #fff;
-          padding: 10px;
-          border: 1px solid #4caf50; /* Add a border to make the button more visible */
-          cursor: pointer;
-          font-size: 1.2rem;
-          transition: background-color 0.3s;
-        }
+#upload-form button:hover {
+  background-color: #c081c7;
+}
 
-        #upload-form button:hover {
-          background-color: #c081c7;
-        }
+/* Content Section */
+#content {
+  width: 50%; /* Adjusted width to fit next to upload */
+  background-color: #f9fbe7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        /* Content Section */
-        #content {
-          width: 55%;
-        }
+#content h2 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
 
-        #content h2 {
-          font-size: 1.8rem;
-          color: #4caf50;
-          margin-bottom: 15px;
-        }
+#content-list {
+  list-style-type: none;
+  padding: 0;
+}
 
-        #content-list {
-          list-style-type: none;
-          padding: 0;
-        }
+#content-list li {
+  background-color: #e8f5e9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-        #content-list li {
-          background-color: #e8f5e9;
-          padding: 15px;
-          margin-bottom: 10px;
-          border-radius: 8px;
-          transition: background-color 0.3s;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+#content-list li:hover {
+  background-color: #c8e6c9;
+}
 
-        #content-list li:hover {
-          background-color: #c8e6c9;
-        }
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  main.main_blogs {
+    flex-direction: column; /* Stack upload and content vertically */
+  }
 
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-          main.main_blogs {
-            flex-direction: column;
-          }
+  #upload, #content {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+}
 
-          #upload, #content {
-            width: 100%;
-            margin-bottom: 20px;
-          }
-        }
 
     </style>
     <script src="script.js"></script>
@@ -1223,11 +1514,13 @@
 
       /* Header Border */
 header.forum_1 {
-    border: 10px solid transparent; /* Initial transparent border */
-    border-image: linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
-    border-image-slice: 1; /* Ensures the full gradient is applied */
-    border-radius: 10px; /* Rounded corners for smooth appearance */
-    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+
+    border:  10px solid transparent; /* Initial transparent border */
+    border-image:  linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
+    border-image-slice:  1; /* Ensures the full gradient is applied */
+    border-radius:  10px; /* Rounded corners for smooth appearance */
+    transition:  border-color 0.3s ease; /* Smooth transition for hover effect */
+
 }
 
 header.forum_1:hover {
@@ -1264,6 +1557,7 @@ nav.hi ul li.NAVI i:hover  {
           align-items: center;
           flex-wrap: wrap;
           min-height: 50px; /* Minimum height of the header bar */
+          overflow: hidden;
       }
 
       h1#h1darkbtn {
@@ -1280,7 +1574,7 @@ nav.hi ul li.NAVI i:hover  {
 
       /* Navigation Styles */
       nav.hi ul {
-          list-style-type: ;
+          list-style-type: None;
           margin: 0;
           padding: 0;
           display: flex;
@@ -1308,10 +1602,10 @@ nav.hi ul li.NAVI i:hover  {
     
       nav.hi ul li.NAVI a:hover::after {
           width: 100%; 
-      } */
+      }
 
       /* Responsive Design */
-      @media (max-width: 768px) {
+      /* @media (max-width: 768px) {
           header.forum_1 {
               flex-direction: column;
               align-items: flex-start;
@@ -1328,7 +1622,7 @@ nav.hi ul li.NAVI i:hover  {
               width: 100%;
               text-align: center;
           }
-      }
+      } */
 
 
 
@@ -1579,9 +1873,6 @@ button:hover:before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  main {
-    padding: 15px;
-  }
 
   #destinations {
     padding: 20px;
@@ -1874,73 +2165,102 @@ button:hover:before {
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
+<footer id="footer">
+  <div class="footer-container">
+    <!-- About Us Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+    </div>
 
-  <footer id="footer">
-    <div class="footer-container" id="footer">
-      <div class="footer-column">
-        
+    <!-- Quick Links Section -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+      </ul>
+    </div>
 
-    <footer id="footer">
-      <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="faq.html" class="faq-link">FAQs</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="contributor/contributor.html">Our Contributor</a></li>
+    <!-- Legal Links Section -->
+    <div class="footer-column">
+      <h3>Legal Links</h3>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Copyright Notice</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
 
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Legal Links</h3>
-              <ul>
-                  <li><a href="#"></a>Terms of Service</li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Disclaimer</a></li>
-                  <li><a href="#">Copyright Notice</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
+    <!-- Contact Us Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    </div>
 
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
-          <!-- Newsletter Form -->
-    <div class="newsletter" id="newsletter">
+    <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Newsletter Form Section -->
+    <style>
+      .footer-column.newsletter {
+          max-width: 300px;
+          margin: 0 auto;
+          text-align: center;
+      }
+      #newsletter-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      #email {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 8px;
+          box-sizing: border-box;
+      }
+      button[type="submit"] {
+          width: 100px;
+          padding: 6px;
+          font-size: 14px;
+      }
+      #subscription-message {
+          font-size: 14px;
+          margin-top: 10px;
+      }
+  </style>
+    <div class="footer-column newsletter" id="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
       <form id="newsletter-form">
-        <h3>Newsletter Form</h3>
         <input type="email" id="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
       </form>
       <p id="subscription-message"></p>
     </div>
-     
-  
-    </div>
+  </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 BuddyTrail. All rights reserved.</p>
+  </div>
+</footer>
+
   
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
@@ -2110,7 +2430,8 @@ button:hover:before {
         transform: translate(-50%, -50%);
         max-width: 400px;
         padding: 20px;
-        background-color: rgba(51, 51, 51, 0.8); /* Adds translucency */
+        background-color: black; 
+        border: 1px solid white;
         color: #fff;
         font-size: 16px;
         border-radius: 8px;
@@ -2123,6 +2444,8 @@ button:hover:before {
       }
   
   .custom-alert p {
+/*     white color text on black background will look nice */
+    color:white; 
     margin: 0;
     line-height: 1.5;
   }
@@ -2146,11 +2469,17 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         // Clear the input field after successful submission
         document.getElementById('email').value = '';
     } else {
-        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
-        messageElement.style.color = 'red'; // Change message color to red
+        messageElement.textContent =  'Please enter a valid email address.'; // Show error message
+        messageElement.style.color =  'red'; // Change message color to red
     }
 });
-    </script>    
+    </script>   
+    
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
 </body>
 
 </html>
