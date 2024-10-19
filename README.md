@@ -213,17 +213,17 @@ You can find the project structure in the [Project Structure](project-structure.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/avisha191">
-                    <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
-                    <br />
-                    <sub><b>avisha191</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Son7c">
                     <img src="https://avatars.githubusercontent.com/u/177312486?v=4" width="100;" alt="Son7c"/>
                     <br />
                     <sub><b>Son7c</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/avisha191">
+                    <img src="https://avatars.githubusercontent.com/u/164632028?v=4" width="100;" alt="avisha191"/>
+                    <br />
+                    <sub><b>avisha191</b></sub>
                 </a>
             </td>
             <td align="center">
