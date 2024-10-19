@@ -58,6 +58,7 @@
 │   ├── twitter-x.svg
 │   ├── twitter.svg
 │   └── youtube.svg
+├── image.png
 ├── img
 │   ├── DUBAI.jpeg
 │   ├── INDIA.jpg

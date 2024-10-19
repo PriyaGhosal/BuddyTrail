@@ -26,6 +26,21 @@
   border-radius: 8px;
 }
 
+.NAVI {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NAVI i {
+  margin-right: 10px;
+}
+
+.NAVI a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
 .hi
 {
   display: flex;
@@ -296,9 +311,8 @@ a{
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 15px;
-  height: 90px;
-  background-color: #000; /* Initially black */
+  padding: 17px;
+  background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
   justify-content: space-between; /* Adjusted to space-between for better layout */
@@ -315,22 +329,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px; /* Limit the width for better centering */
-  width: 100%; /* Ensure nav takes full width */
-  margin: 0 auto; /* Center the nav */
 }
 
 .logo {
   display: flex;
-  margin-left: 34px;
 }
 
 #nav-list {
-  display: flex;
-  gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
-  margin-left: 3px;
-  padding: 0;
   align-items: center;
 }
 
@@ -339,7 +345,7 @@ nav {
   text-decoration: none;
   font-weight: 400;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.8rem;
 }
 
 .hamburger {
@@ -347,18 +353,14 @@ nav {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5em;
+  font-size: 3.5em;
   cursor: pointer;
 }
 
 .mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
   border: none;
   background-color: white;
   cursor: pointer;
-  padding: 5px;
   z-index: 10; /* Ensure it stays above other elements */
 }
 
@@ -369,12 +371,6 @@ nav {
 
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
-  .main-head {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
   .hamburger {
     display: block; /* Show hamburger on small screens */
   }
@@ -522,6 +518,7 @@ nav {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -574,7 +571,7 @@ nav {
 }
 
 .location-card:hover {
-  transform: scale(1.5); /* Scale effect on hover */
+  transform: scale(1.12); /* Scale effect on hover */
 }
 
 .location-card h3 {
@@ -710,6 +707,11 @@ nav {
     margin: auto;
     font-size: large;
 
+    background-color: #0000000d;
+    padding: 50px 100px;
+    border-radius: 15px;
+    font-size: 2.3rem;
+
 }
 
 .benifits-list li {
@@ -718,17 +720,38 @@ nav {
 
 /**** BOOKING FORM ****/
 .booking-form {
-  max-width: 600px;
   margin: 30px auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  padding-bottom: 5rem;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background-image: url(/img/new-york-page.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form form{
+  max-width: 600px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #d8d8d858;
 }
 
 .booking-form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 4rem;
 }
 
 .form-group {
@@ -741,9 +764,16 @@ nav {
   font-weight: bold;
 }
 
-.form-group input,
+.form-group input{
+  width: calc(100% - 0px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .form-group select {
-  width: calc(100% - 20px);
+  width: calc(100% - 0px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1107,14 +1137,16 @@ textarea:focus{
   padding: 10px 20px; /* Padding for button */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 1.2em; /* Button text size */
-  width: 100%; /* Full width */
+  width: 100%; /* Full width can be changed */
   max-width: 300px; /* Max width for button */
-  margin-top: 10px; /* Margin above button */
+  margin: 10px auto; /* Center the button with auto margins */
+  display: block; /* Make it a block element to enable margin auto */
 }
 
 .book-btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+
 
 /* Dark Mode Styles */
 .dark-mode .cab-booking-section {
@@ -1254,10 +1286,6 @@ footer {
   nav ul {
     text-align: center;
   }
-  #logo {
-    padding: 1.8rem;
-    text-align: center;
-  }
 
   .cloud {
     height: 40rem;
@@ -1317,14 +1345,10 @@ body.light-mode {
 
 /* Button styles */
 .mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 1.5em;
   transition: color 0.3s, transform 0.3s;
   padding: 15px;
 }
@@ -1554,6 +1578,7 @@ body.light-mode {
   background: #ffffff;
   padding: 30px;
   border-radius: 8px;
+  margin-top: 4rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   margin-top: 30px;
@@ -2888,4 +2913,23 @@ textarea {
   color: #666;
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
