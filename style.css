@@ -7,8 +7,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.forum_1
-{
+.forum_1{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +15,7 @@
   margin: 0;
   padding: 0;
   background-color: rgb(203, 229, 252);
+  margin-bottom: 30px;
 }
  
 .forum_1 h1{
@@ -30,6 +30,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 5rem 0;
+  
 }
 
 .NAVI i {
@@ -41,17 +44,19 @@
   color: #337ab7;
 }
 
-.hi
-{
+.hi{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 80vw;;
-    color: #ffffff;
-    padding: 50px;
-    text-align: center;
-    margin: 20px 0px 60px;
-    border-radius: 8px;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 80vw;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+  /* margin: 20px 0px 60px; */
+  border-radius: 8px;
+  gap: 10px;
 }
 nav ul {
   display: flex;
@@ -63,7 +68,7 @@ nav ul {
   padding: 0;
 }
 
-.hi ul li a{
+.NAVI{
   background-color: #fff;
   color: blue;
   font-size: 2.2rem;
@@ -71,17 +76,17 @@ nav ul {
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
 }
 
-.hi ul li a:hover{
-  background-color: rgb(9, 9, 120);
-  color: white;
-  box-shadow: 4px 4px 14px whitesmoke;
-}
 
 nav ul li {
   display: inline;
   
+}
+
+.hi-icon {
+  color: #000000;
 }
 
 nav a {
@@ -138,8 +143,7 @@ button:hover {
 }
 
 .upload {
-  margin-bottom:   
- 40px;
+  margin-bottom: 40px;
 }
 
 #upload-form {
