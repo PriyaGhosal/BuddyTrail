@@ -1423,45 +1423,100 @@ h1#h1darkbtn:hover {
 
   <main>
    <style>
-     #destinations {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-  }
-  
-  .post-container {
-      width: 100%;
-  }
-  
-  #postForm {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-  }
-  
-  #postContent {
-      width: 100%;
-      min-height: 100px;
-      margin-bottom: 10px;
-      padding: 10px;
-  }
-  
-  button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-  }
-  
-  #posts {
-      width: 100%;
-  }
+ #destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Subtle background color */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.post-container {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff; /* White background for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for a lifted effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+#postForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle form shadow */
+}
+
+#postContent {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd; /* Light border for better separation */
+    background-color: #f9f9f9; /* Slightly off-white background */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#postContent:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button[type="submit"]:active {
+    background-color: #004b9a; /* Even darker blue on active */
+    transform: translateY(0); /* Reset lift when clicked */
+}
+
+#posts {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #destinations {
+        padding: 15px;
+    }
+    #postContent {
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
   </style>
       <section id="destinations">
           <h2>Destination Guides</h2>
