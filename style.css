@@ -26,6 +26,21 @@
   border-radius: 8px;
 }
 
+.NAVI {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NAVI i {
+  margin-right: 10px;
+}
+
+.NAVI a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
 .hi
 {
   display: flex;
