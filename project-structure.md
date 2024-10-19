@@ -11,6 +11,21 @@
 ├── auth.css
 ├── auth.html
 ├── auth.js
+├── backend
+│   ├── config
+│   │   ├── config.js
+│   │   └── db.js
+│   ├── controllers
+│   │   └── authController.js
+│   ├── index.js
+│   ├── models
+│   │   └── User.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   └── authRoutes.js
+│   └── utils
+│       └── authUtils.js
 ├── book.html
 ├── boy.png
 ├── chatbot.css
@@ -43,10 +58,13 @@
 │   ├── twitter-x.svg
 │   ├── twitter.svg
 │   └── youtube.svg
+├── image.png
 ├── img
+│   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
+│   ├── PROJECT-LEADER.png
 │   ├── Premium Photo _ Vibrant mesh gradient with magenta and blue colors high quality image for backgrounds and web.jpeg
 │   ├── Presentation1-removebg-preview.png
 │   ├── Presentation1.png
@@ -57,6 +75,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
+│   ├── gssocextd.jpg
+│   ├── hacktoberfest.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png

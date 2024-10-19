@@ -11,94 +11,464 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-          <h1 id="logo">BuddyTrail</h1>
+  <body>
+    <header>
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+              <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+            <button class="dropdown-close-btn" id="closeBtn">✖</button> 
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link active">About Us</a></li>
+              <li><a href="team.html" class="nav-link">Team</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+              <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+            </ul>
+          </nav>
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link active">About Us</a></li>
-          <li><a href="team.html" class="nav-link">Team</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="auth.html" class="btn-primary">Sign In</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      </header>
 
-  <main class="main-content">
-    <div class="content-container">
-      <h1>Discover BuddyTrail</h1>
-      <p>
-        Welcome to BuddyTrail – your ultimate travel companion! 🌍✈️ We're here to transform your travel dreams into
-        unforgettable experiences. Whether you're planning a family vacation, a trip with friends, or a solo adventure,
-        BuddyTrail is your go-to platform for discovering amazing destinations, finding the best accommodations, and
-        booking affordable flights with ease.
-      </p>
-      <p>
-        Our mission is to provide extraordinary travel experiences for our customers, ensuring that every journey is not
-        just a trip, but a story waiting to be told. We believe in the power of travel to broaden horizons, create
-        lasting memories, and bring people together.
-      </p>
-      <h2>Our Core Values</h2>
-      <div class="values-container">
-        <div class="value-item">
-          <i class="fas fa-handshake"></i>
-          <h3>Integrity</h3>
-          <p>We build trust through transparent and honest practices.</p>
+      <section class="about">
+        <div class="container">
+            <h1>About BuddyTrail</h1>
+  
+            <p>Welcome to BuddyTrail, where we turn your travel dreams into reality. We provide exceptional travel planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that meet your unique travel preferences.</p>
         </div>
-        <div class="value-item">
-          <i class="fas fa-lightbulb"></i>
-          <h3>Innovation</h3>
-          <p>We constantly evolve to enhance your travel experience.</p>
-        </div>
-        <div class="value-item">
-          <i class="fas fa-users"></i>
-          <h3>Community</h3>
-          <p>We foster connections among global travelers.</p>
-        </div>
-      </div>
-      <p>
-        At BuddyTrail, we're more than just a travel platform. We're a community of passionate explorers, dedicated to
-        curating unique experiences, providing personalized recommendations, and offering valuable resources that
-        empower you to navigate the world with confidence and excitement.
-      </p>
-      <h2>Meet Our Team</h2>
-      <p>
-        Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
-        United by our love for exploration and commitment to excellence, we work tirelessly to ensure your journey with
-        us is seamless, inspiring, and unforgettable.
-      </p>
-      <a href="team.html" class="cta-button">Meet the BuddyTrail Team</a>
-    </div>
-  </main>
+    </section>
 
-  <footer>
+    <section class="core-values">
+        <div class="container" id="container-Core-values">
+            <h2>Our Core Values</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We are committed to ensuring that every client receives the best possible travel experience with personalized service and attention to detail.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Transparency</h3>
+                    <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden fees, ensuring you know exactly what you're paying for.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Reliability</h3>
+                    <p>We offer trusted services with a dedicated support team available 24/7 to assist you during your travels.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Innovation</h3>
+                    <p>We continuously update our services with the latest travel trends and technology, offering our clients a modern and seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div id="team-members" class="team-members">
+                <div class="team-member">
+                    <img src="img/PROJECT-LEADER.png" alt="Team Member 1">
+                    <h3>PRIYA Ghosal</h3>
+                    <p>CEO & Founder</p>
+                    <P>I'm Priya Ghosal, a sophomore at NSEC (IT) '27, embarking on an exciting journey in the world of technology and coding.
+                    </P>
+                </div>
+                   <div class="team-description">
+                      <p style="color: rgb(79, 78, 78);"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
+                          United by our love for exploration and commitment to excellence, we work tirelessly to ensure your journey with
+                          us is seamless, inspiring, and unforgettable.</p>
+                          <div class="align1">
+                          <a href="team.html" id="cta-button">The BuddyTrail Team</a>
+                          </div>
+                </div> 
+                  
+                
+              
+            </div>
+            
+        </div>
+    </section>
+  <style>
+ /* Global Styles */
+
+ /* CTA Button */
+
+ .align1{
+    width: 255px;
+    height: 50px;
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-top: 55px;
+    margin-right: 220px;   
+}
+ #cta-button {
+    display: flex;
+    justify-content: center;
+    padding: 5px;/* Adjust padding for button size */    
+    background-color: #000;  /* Background color black */
+    color: #fff;  /* Text color white */
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;  /* Rounded corners */
+    width: 250px;  /* Fixed width */
+    height: 45px;  /* Fixed height */
+    line-height: 35px;  /* Vertically center text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+#cta-button:hover {
+    background-color: #333;  /* Darker black on hover */
+    transform: scale(1.05);  /* Slightly enlarge button */
+}
+
+ .team-description{
+  
+  border-radius:2rem;
+  display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #eef5f9;
+    border-radius: 10px;
+    padding: auto;
+    width: 700px;
+    height: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+    border: 2px solid transparent;
+
+ }
+ .team-description:hover{
+    background: linear-gradient(45deg, #ff66b2, #c0c0c0); /* Pink-silver gradient */
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007BFF;
+ }
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: color 0.4s ease;
+}
+
+.about h1 {
+    font-size: 36px;
+    color: #007BFF;
+    margin-bottom: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.about h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 10px auto;
+    transition: width 0.3s ease;
+}
+
+.about:hover h1 {
+    color: #0056b3;
+}
+
+.about:hover h1::after {
+    width: 120px;
+}
+
+.about:hover p {
+    color: #333;
+}
+
+/* Core Values Section */
+.core-values {
+    background-color: #eef5f9;
+    padding: 60px 0;
+}
+
+.core-values h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #007BFF;
+    font-size: 32px;
+    transition: color 0.3s ease;
+}
+
+.core-values h2:hover {
+    color: #0056b3;
+}
+
+.core-values .values {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.core-values .value-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.core-values .value-item:hover {
+    background: rgb(83,180,215);
+    background: linear-gradient(0deg, rgba(83,180,215,1) 15%, rgba(28,103,130,1) 75%);
+ /* Pink-silver gradient */
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #7ac9a6;
+}
+
+.core-values .value-item h3 {
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.core-values .value-item:hover h3 {
+    background: #ffffff;
+    background: linear-gradient(to right, #C7C7C7 0%, #CED9D3 100%);
+    background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+ /* Text color changes to white on hover */
+}
+
+.core-values .value-item p {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.core-values .value-item:hover p {
+    color: #f0f0f0; /* Subtle text color change on hover */
+}
+
+/* Team Section */
+.team {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.team h2:hover {
+    color: #0056b3;
+}
+
+.team .team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.team .team-member {
+    background-color: #eef5f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.team .team-member:hover {
+    background: rgb(83,180,215);
+    background: linear-gradient(0deg, rgba(83,180,215,1) 15%, rgba(28,103,130,1) 75%); /* Pink-silver gradient */
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007BFF;
+}
+
+.team .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.4s ease, border 0.3s ease;
+    border: 4px solid #fff;
+}
+
+.team .team-member:hover img {
+    transform: scale(1.1);
+    border: 4px solid #007BFF;
+}
+
+.team .team-member h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.team .team-member:hover h3 {
+    color: #fff; /* Text color changes to white on hover */
+}
+
+.team .team-member p {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.team .team-member:hover p {
+    color: #f0f0f0; /* Subtle text color change on hover */
+}
+
+/* Button Styling (If you use any) */
+button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    border-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .core-values .value-item, .team .team-member {
+        width: 100%;
+    }
+}
+
+/* Team Description Paragraph */
+.team-description p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+   cursor: pointer;
+}
+
+.team-description p:hover {
+    color: #9000ff; /* Change text color on hover */
+ 
+}
+
+ 
+
+  </style>
+
+<footer>
     <div class="container">
       <div class="footer-content">
-        <div class="footer-column-l">
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="contributor/contributor.html">Our Contributor</a></li>
+
+              </ul>
+          </div>
+        <div class="footer-column">
           <h3>Contact Us</h3>
           <p>Email: info@example.com</p>
           <p>Phone: +123 456 7890</p>
         </div>
-        <div class="footer-column-r">
+        <div class="footer-column">
           <h3>Follow Us</h3>
           <div class="social-icons">
-            <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
+            <a href="https://discord.com/invite/priyaghosal" target="_blank"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
       </div>
       <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
     </div>
   </footer>
-</body>
 
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.getElementById("hamburger");
+          const navList = document.getElementById("nav-links");
+          const closeBtn = document.getElementById("closeBtn");
+    
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+    
+          closeBtn.addEventListener("click", function () {
+            navList.classList.remove("active");
+          });
+        });
+      </script>
+
+  </body>
 </html>

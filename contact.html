@@ -4,50 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<style>
+   
+   .card {
+        width: 50%; /* Set a specific width */
+        margin: 10px auto; /* Center horizontally with automatic margins */
+        padding: 20px; /* Add padding */
+        margin-bottom: 70px;
+       
+        border: 1px solid #ccc; /* Optional: Add a border */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    }
+    
+   .card-header {
+        background-color: #1971b0;
+        color: #0c0c0c;
+        padding: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 90%;
+        border-bottom: 1px solid #ddd;
+        border-radius: 6px;
+    }
+    
+    #contactus .card-body {
+        display: flex;
+        justify-content: space-between; /* Form on the left and image on the right */
+        align-items: flex-start; /* Align content to the top */
+    }
+    
+    #contactus .form-section {
+        width: 50%; /* Width for the form section */
+        color: #fff;
+    }
+    
+    #contactus .image-section {
+        padding-top: 35px;
+        width: 60%; /* Width for the image section */
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center;
+    }
+    
+    #contactus .image-section img {
+        max-width: 100%; /* Ensure the image does not exceed its container width */
+        height: auto;
+    }
+    
+    #contactus .form-group {
+        margin-bottom: 20px;
+        color: #121111; /* Form text color */
+    }
+    
+    #contactus label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    #contactus input, #contactus textarea {
+        width: 100%; /* Adjust width for better alignment */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #contactus textarea {
+        height: 100px; /* Adjust height for textarea */
+    }
+    
+    #contactus button[type="submit"] {
+        background-color: #0a6aae;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #contactus button[type="submit"]:hover {
+        background-color: #2d81f7;
+    }
+
+    .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; /* Hide by default */
+}
+    
+    
+</style>
 <body>
-    <div class="container">
-        <div class="item">
-            <div class="contact">
-                <div class="first-text">Let's get in touch</div>
-                <img src="conn.jpeg" alt="contact-us-image" class="image">
-                <div class="social-links">
-                    <span class="secnd-text">Connect with us:</span>
-                    <ul class="social-media">
-                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                    </ul>
+    <div class="container-fluid">
+    <header style="background-color: black;height:85px" >
+        <nav style="padding: 5px;width:90%">
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web">
+              <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+            </div>
+        
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+        
+            <ul id="nav-list">
+              <!-- Close button for dropdown -->
+              <span class="dropdown-close-btn" id="closeBtn">×</span>
+              <li><a href="./index.html" class="navhover">Home</a></li>
+              <li><a href="team.html" class="navhover">Team</a></li>
+              <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+              <li><a href="#benefits" class="navhover">Benefits</a></li>
+              <li><a href="about.html" class="navhover">About</a></li>
+              <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+              
+              <li><a href="./contact.html" class="navhover">Contact</a></li>
+              <li><a href="#reviews" class="navhover">Reviews</a></li>
+              <li><a href="auth.html" class="navhover">Sign In</a></li>
+             
+            </ul>
+        
+            <!-- Toggle Button -->
+            <button class="mode-toggle" id="modeToggle">
+              <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+              <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+          </nav>
+    </header>
+    <div>
+        <section id="contactus">
+
+            <div class="card pb-5 pt-1" style="background-color:#fff;">
+                <div class="card-header">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-section">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" style="color: #121111;">Name</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Your name">
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" style="color: #121111;">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" style="color: #121111;">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" style="color: #121111;">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                    <div class="image-section">
+                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                    </div>
                 </div>
             </div>
-            <div class="submit-form">
-                <h4 class="third-text text">Contact Us</h4>
-                <form id="contactForm">
-                    <div class="input-box">
-                        <input type="text" class="input" required>
-                        <label for="fullname">Name</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" class="input" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" class="input" required>
-                        <label for="phone">Phone</label>
-                    </div>
-                    <div class="input-box">
-                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                    <input type="submit" class="btn" value="Submit">
-                </form>
-            </div>
-        </div>
+        </section>
     </div>
-    <script src="contact.js"></script>
+</div>
+<script src="./contact.js"></script>
 </body>
 </html>
