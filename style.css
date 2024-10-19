@@ -1233,8 +1233,11 @@ footer {
     color: #f39c12;
 }
 
-.footer-bottom {
-    font-size: 14px;
+
+.footer-bottom .copyright-b{
+  color: #fffcfc;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
 }
 
 
