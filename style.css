@@ -447,6 +447,7 @@ nav {
   -webkit-text-stroke: 1px #fefefe;
   background: url(img/back.png);
   -webkit-background-clip: text;
+  background-clip: text;
   background-position: 0 0;
   animation: back 20s linear infinite;
 }
@@ -465,6 +466,7 @@ nav {
   -webkit-text-stroke: 1px #fefefe;
   background: url(img/back.png);
   -webkit-background-clip: text;
+  background-clip: text;
   background-position: 0 0;
   animation: back 20s linear infinite;
 
@@ -1170,15 +1172,15 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+    gap: 5px;
+    max-width: 1300px;
+    margin: 10px;
 }
 
 .footer-column {
     flex: 1;
     min-width: 200px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .footer-column p{
@@ -1235,6 +1237,12 @@ footer {
 
 .footer-bottom {
     font-size: 14px;
+    background-color: #000000;
+    color: white;
+    font-weight: 100;
+    font-size:20px;
+    margin-top: 0px;
+    height: 20px;
 }
 
 
