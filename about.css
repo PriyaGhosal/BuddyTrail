@@ -365,31 +365,55 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-       .content-container {
-max-width: 100%; /* Full width on smaller screens */
-padding: 1.5rem;
-}
+.hamburger {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+  }
 
 
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .nav-link,
-    .btn-primary {
-        display: block;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 0.5rem;
-    }
+    @media (max-width: 768px) {
+        .hamburger {
+          display: block; /* Show hamburger on small screens */
+        }
+      
+        .nav-links {
+          display: none; /* Hide menu initially */
+          position: absolute;
+          top: 100%; /* Position dropdown below header */
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.9);
+          flex-direction: column;
+          align-items: center;
+          padding: 10px 0;
+        }
+      
+        .nav-links.active {
+          display: flex; /* Show menu when active */
+        }
+      
+        /* Close button styles */
+        .dropdown-close-btn {
+          display: block; /* Visible only in the dropdown menu */
+          align-self: flex-end;
+          margin-right: 20px;
+          color: white;
+          font-size: 2em;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+      
+      /* Hide the close button on larger screens (revised) */
+      @media (min-width: 769px) {
+        .dropdown-close-btn {
+          display: none;
+        }
+      }
 
     .footer-content {
         flex-direction: column;
@@ -409,7 +433,7 @@ padding: 1.5rem;
         width: 100%;
         margin-bottom: 1rem;
     }
-}
+
         footer {
             background-color: #2D3748;
             color: #ffffff;
