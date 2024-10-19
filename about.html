@@ -19,7 +19,9 @@
               <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
               <h1 id="logo">BuddyTrail</h1>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+            <button class="dropdown-close-btn" id="closeBtn">✖</button> 
               <li><a href="index.html" class="nav-link">Home</a></li>
               <li><a href="about.html" class="nav-link active">About Us</a></li>
               <li><a href="team.html" class="nav-link">Team</a></li>
@@ -77,8 +79,9 @@
                       <p style="color: rgb(79, 78, 78);"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
                           United by our love for exploration and commitment to excellence, we work tirelessly to ensure your journey with
                           us is seamless, inspiring, and unforgettable.</p>
+                          <div class="align1">
                           <a href="team.html" id="cta-button">The BuddyTrail Team</a>
-                          
+                          </div>
                 </div> 
                   
                 
@@ -92,11 +95,20 @@
 
  /* CTA Button */
 
-  
+ .align1{
+    width: 255px;
+    height: 50px;
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-top: 55px;
+    margin-right: 220px;   
+}
  #cta-button {
-   margin-left: 300px;
-    display: inline-block;
-    padding: 10px 10px;  /* Adjust padding for button size */
+    display: flex;
+    justify-content: center;
+    padding: 5px;/* Adjust padding for button size */    
     background-color: #000;  /* Background color black */
     color: #fff;  /* Text color white */
     text-align: center;
@@ -105,9 +117,8 @@
     border-radius: 5px;  /* Rounded corners */
     width: 250px;  /* Fixed width */
     height: 45px;  /* Fixed height */
-    line-height: 30px;  /* Vertically center text */
+    line-height: 35px;  /* Vertically center text */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-bottom: 20px;
 }
 
 /* Hover Effect */
@@ -119,17 +130,25 @@
  .team-description{
   
   border-radius:2rem;
-  
-  background: rgba(200,235,171,0.85);
--webkit-backdrop-filter: blur(12px);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(48, 49, 48, 0.425);
+  display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #eef5f9;
+    border-radius: 10px;
+    padding: auto;
+    width: 700px;
+    height: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+    border: 2px solid transparent;
 
-  font-weight: bolder;
-  position:relative;
-  left: 35%;
-  top: -300px;
-  display: inline-block;
+ }
+ .team-description:hover{
+    background: linear-gradient(45deg, #ff66b2, #c0c0c0); /* Pink-silver gradient */
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007BFF;
  }
 body {
     font-family: 'Poppins', sans-serif;
@@ -435,7 +454,21 @@ button:hover {
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.getElementById("hamburger");
+          const navList = document.getElementById("nav-links");
+          const closeBtn = document.getElementById("closeBtn");
+    
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+    
+          closeBtn.addEventListener("click", function () {
+            navList.classList.remove("active");
+          });
+        });
+      </script>
 
   </body>
 </html>
