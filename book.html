@@ -8,7 +8,8 @@
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="RatingStyle.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,37 +17,309 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/icons/airplane.svg" />
-    <title>BuddyTrail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Book Now - BuddyTrail</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 1.2rem;
+        margin-top: 5px;
+      }
+      /* General navigation styles */
+      nav {
+        display: flex;
+        justify-content: space-evenly; /* Aligns nav items evenly */
+      }
+
+      nav ul {
+        list-style-type: none; /* Removes bullet points */
+        padding: 0; /* Removes padding */
+      }
+
+      /* Navigation link styles */
+      nav ul li {
+        display: inline; /* Displays list items in a row */
+      }
+
+      nav ul li a {
+        font-size: 2.5rem; /* Font size for nav links */
+        color: #fffdfd; /* Default color */
+        transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      /* Hover and active link styles */
+      nav ul li a:hover,
+      nav ul li a:active {
+        color: #ff5733; /* Color on hover or active state */
+      }
+
+      /* Optional: Style for icons specifically */
+      .social-icons a {
+        color: #ffffff; /* Default color for social icons */
+        transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      .social-icons a:hover,
+      .social-icons a:active {
+        color: #ff5733; /* Color for social icons on hover or active state */
+      }
+
+      /* Additional styles */
+      .nav-elem {
+        font-size: 1.8rem; /* Font size for additional navigation elements */
+        width: 80vw; /* Full viewport width */
+        margin-left: 20px; /* Left margin */
+        display: flex; /* Flexbox display */
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+         /* Even spacing between items */
+      }
+
+      .logo {
+        left: 50px; /* Left positioning for logo */
+      }
+
+      .locations h2 {
+        font-size: 4rem; /* Font size for location headings */
+        color: white; /* Color for location headings */
+      }
+
+      .benefits {
+        color: #f9f9f9; /* Color for benefits text */
+      }
+
+      .benefits h2 {
+        font-size: 4rem; /* Font size for benefits headings */
+        margin-bottom: 50px; /* Margin below benefits headings */
+        text-shadow: 0 0 2px rgb(110, 110, 110); /* Text shadow for benefits headings */
+      }
+
+      footer {
+        padding-top: 50px; /* Top padding for footer */
+        padding-bottom: 20px; /* Bottom padding for footer */
+      }
+
+      .footer-bottom {
+        margin-top: 20px; /* Margin at the top of footer bottom section */
+      }
+    </style>
   </head>
   <body>
     <header class="main-head">
       <nav>
-        <h1 id="logo">BuddyTrail</h1>
-        <ul>
-          <li><a href="#locations">Location</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+        </div>
+        <div class="nav-elem">
+          <a href="#locations">Location</a>
+          <a href="#benefits">Benefits</a>
+          <a href="contact.html">Contact</a>
+          <a href="#booking-form">Book Now</a>
+        </div>
       </nav>
     </header>
-   <main>
-    
-   </main>
-    <footer>
-      <div class="footer-wrapper">
-        <h5>BuddyTrail &copy;</h5>
-        <ul>
-          <li>
-            <a href="#"><img src="icons/twitter.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/instagram.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/youtube.svg" /></a>
-          </li>
+    <main>
+      <section class="hero">
+        <h2>Welcome to BuddyTrail</h2>
+      </section>
+
+      <section id="locations" class="locations">
+        <h2>Popular Destinations</h2>
+        <div class="location-cards">
+          <div class="location-card">
+            <h3>Dubai</h3>
+            <p>
+              Flight to Dubai<br />Save 20% on round-trip flights to Dubai.
+              Limited time offer!
+            </p>
+            <p><strong>Price:</strong> ₹20,000 <del>₹25,000</del></p>
+          </div>
+          <div class="location-card">
+            <h3>Goa</h3>
+            <p>
+              Luxury Stay in Goa<br />Get 30% off on a 5-star hotel stay in Goa.
+              Enjoy the best of luxury at an affordable price!
+            </p>
+            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> per night</p>
+          </div>
+          <div class="location-card">
+            <h3>Kerala</h3>
+            <p>
+              Kerala Backwaters Package<br />Experience the serene beauty of
+              Kerala's backwaters with a 4-day, 3-night package. All-inclusive
+              deal!
+            </p>
+          </div>
+          <div class="location-card">
+            <h3>Paris</h3>
+            <p>
+              Paris Romantic Getaway<br />Enjoy a romantic trip to Paris with
+              your loved one. Special package for couples!
+            </p>
+            <br />
+            <p>
+              <strong>Price:</strong> ₹1,20,000 <del>₹1,50,000</del> per couple
+            </p>
+          </div>
+          <div class="location-card">
+            <h3>Bali</h3>
+            <p>
+              Adventure in Bali<br />Book an adventure trip to Bali with
+              activities like snorkeling, trekking & more. Discount available
+              for groups!
+            </p>
+            <p><strong>Price:</strong> ₹48,000 <del>₹60,000</del> per person</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits">
+        <h2>Why Travel with BuddyTrail?</h2>
+        <ul class="benifits-list">
+          <li>Exclusive discounts and travel packages</li>
+          <li>24/7 customer support for a hassle-free experience</li>
+          <li>Handpicked destinations and personalized itineraries</li>
+          <li>Safe and secure travel arrangements</li>
         </ul>
+        <div class="call-to-action">
+          <h2>Ready to embark on your next adventure?</h2>
+          <h2>Let BuddyTrail take you there!</h2>
+        </div>
+      </section>
+
+      <section id="booking-form" class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form
+          id="bookingForm"
+          action="#"
+          method="post"
+          onsubmit="return validateForm()"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="place">Place of Visit:</label>
+            <input
+              type="text"
+              id="place"
+              name="place"
+              placeholder="Enter your destination"
+              required
+            />
+            <div class="error" id="placeError"></div>
+          </div>
+          <div class="form-group">
+            <label for="dates">Dates of Staying:</label>
+            <input type="date" id="dates" name="dates" required />
+            <div class="error" id="datesError"></div>
+          </div>
+          <div class="form-group">
+            <label for="transport">Mode of Transport:</label>
+            <select id="transport" name="transport" required>
+              <option value="" disabled selected>
+                Select mode of transport
+              </option>
+              <option value="air">Air</option>
+              <option value="train">Train</option>
+              <option value="bus">Bus</option>
+              <option value="car">Car</option>
+            </select>
+            <div class="error" id="transportError"></div>
+          </div>
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We are a team of passionate developers creating amazing web
+            experiences.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal"
+              ><i class="fa-brands fa-discord"></i
+            ></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      function validateForm() {
+        let valid = true;
+
+        // Clear previous error messages
+        document.getElementById("placeError").innerText = "";
+        document.getElementById("datesError").innerText = "";
+        document.getElementById("transportError").innerText = "";
+
+        // Validate Place of Visit
+        const place = document.getElementById("place").value.trim();
+        if (place === "") {
+          document.getElementById("placeError").innerText =
+            "Please enter a place of visit.";
+          valid = false;
+        }
+
+        // Validate Dates of Staying
+        const dates = document.getElementById("dates").value;
+        if (dates === "") {
+          document.getElementById("datesError").innerText =
+            "Please select your dates of stay.";
+          valid = false;
+        }
+
+        // Validate Mode of Transport
+        const transport = document.getElementById("transport").value;
+        if (transport === "") {
+          document.getElementById("transportError").innerText =
+            "Please select a mode of transport.";
+          valid = false;
+        }
+
+        return valid;
+      }
+    </script>
   </body>
 </html>
