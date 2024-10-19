@@ -931,9 +931,10 @@ p {
     </section>
 
     <!-- Cab or Auto Booking -->
+    <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h2>Book a Cab or Auto</h2>
+        <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
           <div class="form-group">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
@@ -993,9 +994,203 @@ p {
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px">Book now</button>
+          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button>
 
         </section>
+          
+  <style>
+    /* Main Section Styling */
+.cab-booking-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Container Styling */
+.booking-container {
+    width: 80%; /* Increase width of the container */
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center align the container */
+    background: linear-gradient(135deg, #5fc0d6, #2193b0); /* Eye-catching gradient */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.booking-container:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Heading Styles */
+.cab-booking-section h2 {
+    color: white; /* Match with gradient background */
+    text-align: center;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.cab-booking-section h2:hover {
+    color: #f1f1f1; /* Slight lightening effect on hover */
+}
+
+/* Form Group Styles */
+.form-group {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.form-group:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+/* Label and Input Styles */
+label {
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 200px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 5px rgba(33, 147, 176, 0.5); /* Match gradient color */
+}
+
+/* Button Styling */
+.book-btn {
+    background-color: #2193b0; /* Gradient color for button */
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-btn:hover {
+    background-color: #6dd5ed; /* Gradient effect on hover */
+    transform: scale(1.05);
+}
+
+    /* Main Section Styling */
+.cab-booking-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Background color for form groups */
+.form-group {
+    background-color: #e8f4fa; /* Light blue background for each form group */
+    border-radius: 5px;
+    padding: 15px; /* Padding around the inputs */
+    margin-bottom: 20px;
+    transition: background-color 0.3s; /* Transition for background color on hover */
+}
+
+.form-group:hover {
+    background-color: #d1e7f9; /* Darker blue on hover */
+}
+
+/* Heading Styles */
+.cab-booking-section h2 {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.cab-booking-section h2:hover {
+    color: #007bff; /* Color changes on hover */
+}
+
+/* Label Styles */
+label {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 200px; /* Increased width for text inputs */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Button Styles */
+.book-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-btn:hover {
+    background-color: #007bff; /* Button color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Iframe Styles */
+iframe {
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.02); /* Slight zoom effect on iframe */
+}
+
+/* Flex Container for Vehicle Type */
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Vehicle Type Dropdown Styling */
+select {
+    margin-left: 10px;
+}
+
+  </style>
           
     
 
