@@ -4,538 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<style>
+   
+   .card {
+        width: 50%; /* Set a specific width */
+        margin: 10px auto; /* Center horizontally with automatic margins */
+        padding: 20px; /* Add padding */
+        margin-bottom: 70px;
+       
+        border: 1px solid #ccc; /* Optional: Add a border */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    }
+    
+   .card-header {
+        background-color: #1971b0;
+        color: #0c0c0c;
+        padding: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 90%;
+        border-bottom: 1px solid #ddd;
+        border-radius: 6px;
+    }
+    
+    #contactus .card-body {
+        display: flex;
+        justify-content: space-between; /* Form on the left and image on the right */
+        align-items: flex-start; /* Align content to the top */
+    }
+    
+    #contactus .form-section {
+        width: 50%; /* Width for the form section */
+        color: #fff;
+    }
+    
+    #contactus .image-section {
+        padding-top: 35px;
+        width: 60%; /* Width for the image section */
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center;
+    }
+    
+    #contactus .image-section img {
+        max-width: 100%; /* Ensure the image does not exceed its container width */
+        height: auto;
+    }
+    
+    #contactus .form-group {
+        margin-bottom: 20px;
+        color: #121111; /* Form text color */
+    }
+    
+    #contactus label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    #contactus input, #contactus textarea {
+        width: 100%; /* Adjust width for better alignment */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #contactus textarea {
+        height: 100px; /* Adjust height for textarea */
+    }
+    
+    #contactus button[type="submit"] {
+        background-color: #0a6aae;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #contactus button[type="submit"]:hover {
+        background-color: #2d81f7;
+    }
+    
+    
+</style>
 <body>
-    <header>
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-                    <h1 id="logo">BuddyTrail</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="auth.html" class="nav-link">Sign In</a></li>
-                </ul>
-            </nav>
+    <div class="container-fluid">
+    <header style="background-color: black;height:85px" >
+        <nav style="padding: 5px;width:90%">
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web">
+              <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+            </div>
+        
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+        
+            <ul id="nav-list">
+              <!-- Close button for dropdown -->
+              <span class="dropdown-close-btn" id="closeBtn">×</span>
+              <li><a href="./index.html" class="navhover">Home</a></li>
+              <li><a href="team.html" class="navhover">Team</a></li>
+              <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+              <li><a href="#benefits" class="navhover">Benefits</a></li>
+              <li><a href="about.html" class="navhover">About</a></li>
+              <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+              
+              <li><a href="./contact.html" class="navhover">Contact</a></li>
+              <li><a href="#reviews" class="navhover">Reviews</a></li>
+              <li><a href="auth.html" class="navhover">Sign In</a></li>
+             
+            </ul>
+        
+            <!-- Toggle Button -->
+            <button class="mode-toggle" id="modeToggle">
+              <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+              <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+          </nav>
     </header>
+    <div>
+        <section id="contactus">
 
-    <div class="container">
-        <div class="item">
-            <div class="contact">
-                <div class="first-text">Let's get in touch</div>
-                <img src="conn.jpeg" alt="contact-us-image" class="image">
-                <div class="social-links">
-                    <span class="secnd-text">Connect with us:</span>
-                    <ul class="social-media">
-                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                    </ul>
+            <div class="card pb-5 pt-1" style="background-color:#fff;">
+                <div class="card-header">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-section">
+                        <form>
+                            <div class="form-group">
+                                <label for="name" style="color: #121111;">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" style="color: #121111;">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" style="color: #121111;">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                    <div class="image-section">
+                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                    </div>
                 </div>
             </div>
-            <div class="submit-form">
-                <h4 class="third-text text">Contact Us</h4>
-                <form id="contactForm">
-                    <div class="input-box">
-                        <input type="text" class="input" required>
-                        <label for="fullname"  class="label common-label">Name</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" class="input" required>
-                        <label for="email"  class="label common-label">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" class="input" required>
-                        <label for="phone" class="label common-label">Phone</label>
-                    </div>
-                    <div class="input-box">
-                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
-                        <label for="message" class="label common-label">Message</label>
-                    </div>
-                    <input type="submit" class="btn" value="Submit">
-                </form>
-            </div>
-        </div>
+        </section>
     </div>
-    <script src="contact.js"></script>
+</div>
 </body>
 </html>
-<style>
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #3bb8c9, #50c065);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-}
-
-header {
-    width: 100%;
-    background: #00796b;
-    color: rgba(80, 79, 79, 0.614);
-    padding: 15px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-#logo-web {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: rgb(214, 12, 12);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-}
-
-.item {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    width: 100%;
-}
-
-.contact {
-    flex: 1; /* Takes up equal space */
-    text-align: center;
-    padding-right: 20px; /* Space between image and form */
-}
-
-.image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.first-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00796b;
-    margin-bottom: 10px;
-}
-
-.secnd-text {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-.social-links {
-    margin-bottom: 20px;
-}
-
-.social-media {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.social-media li {
-    margin: 0 10px;
-}
-
-.social-media a {
-    text-decoration: none;
-    font-size: 24px;
-    color: #00796b;
-    transition: color 0.3s;
-}
-
-.social-media a:hover {
-    color: #004d40;
-}
-
-.submit-form {
-    flex: 1; /* Takes up equal space */
-}
-
-.third-text {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #00796b; /* Make border more prominent */
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-}
-
-.input-box label {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    transition: 0.3s;
-    color: #999;
-}
-
-.input:focus + label,
-.input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 5px;
-    font-size: 12px;
-    color: #792600;
-}
-
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%; /* Full width for button */
-}
-
-.btn:hover {
-    background-color: #004d40;
-}
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: rgba(80, 80, 80, 0.136);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-}
-
-.contact {
-    flex: 1; /* Takes up equal space */
-    text-align: center;
-    padding-right: 20px; /* Space between image and form */
-}
-
-.image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.first-text {
-    font-size: 28px; /* Increased font size for better visibility */
-    font-weight: bold;
-    color: #00796b;
-    margin-bottom: 15px;
-}
-
-.secnd-text {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #333; /* Darker color for better visibility */
-}
-
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input {
-    width: 100%;
-    padding: 14px; /* Increased padding for better touch targets */
-    border: 2px solid #00796b; /* Prominent border */
-    border-radius: 5px; /* Slightly larger border radius */
-    font-size: 16px;
-    transition: border 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-}
-
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 14px 20px; /* Increased padding for better touch targets */
-    border-radius: 5px; /* Slightly larger border radius */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%; /* Full width for button */
-}
-
-.btn:hover {
-    background-color: #004d40;
-}
-.input {
-    width: 100%;
-    padding: 14px;
-    border: 2px solid #00796b;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-    background-color: #e0f2f1; /* Light background on focus */
-}
-
-.input:placeholder-shown + label {
-    color: #999; /* Placeholder color */
-}
-
-.input:focus + label,
-.input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 5px;
-    font-size: 12px;
-    color: #00796b;
-}
-
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    width: 100%;
-}
-
-.btn:hover {
-    background-color: #004d40;
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-/* Optional: Add focus effect for button */
-.btn:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: #fff; /* White background for contrast */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Softer shadow */
-    padding: 20px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-    border: 2px solid #ff6f61; /* Baby pink border */
-}
-
-.item {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    width: 100%;
-}
-
-/* Optional: Add a subtle background gradient */
-.container {
-    background: linear-gradient(to right, #9cf78e, #d2e865); /* Light pink gradient */
-}.input-box {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%; /* Ensures input boxes take full available width */
-}
-
-.input {
-    width: calc(100% + 20px); /* Increase width beyond the container */
-    padding: 14px;
-    border: 2px solid #ff6e6100; /* Baby pink border */
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-    margin-left: -10px; /* Adjust left margin to balance increased width */
-}
-
-.btn {
-    background-color: #ff6f61; /* Baby pink button */
-    color: white;
-    border: 2px solid #c0c0c0; /* Silver border for button */
-    padding: 14px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s, border 0.3s;
-    width: calc(100% + 20px); /* Increase button width */
-    margin-left: 10px; /* Adjust left margin to balance increased width */
-}
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%; /* Ensures input boxes take full available width */
-}
-
-.label {
-    position: absolute;
-    left: 15px;
-    top: 14px;
-    transition: all 0.3s ease;
-    font-size: 16px; /* Initial font size for labels */
-    color: #d00d0d; /* Soft grey color for labels */
-    pointer-events: none; /* Prevents interaction */
-}
-
-.input {
-    width: calc(100% + 20px); /* Increase width */
-    padding: 14px;
-    border: 2px solid #575554; /* Baby pink border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Larger font for inputs */
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-    margin-left: -10px; /* Adjust left margin */
-}
-
-/* Change label styles on input focus or when text is present */
-.input:focus + .label,
-.input:not(:placeholder-shown) + .label {
-    top: -10px; /* Move label up */
-    left: 10px; /* Adjust left position */
-    font-size: 12px; /* Smaller font size for emphasis */
-    color: #ffffff; /* Change to baby pink when focused */
-    font-weight: bold; /* Make the label bold */
-}
-
-/* Style for the submit button */
-.btn {
-    background-color: #ff6f61; /* Baby pink button */
-    color: white;
-    border: 2px solid #c0c0c0; /* Silver border */
-    padding: 14px 20px;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    width: calc(100% + 20px); /* Increase button width */
-    margin-left: -10px; /* Adjust left margin */
-}
-
-/* Button hover effect */
-.btn:hover {
-    background-color: #c0c0c0; /* Silver on hover */
-    transform: scale(1.05); /* Slightly enlarge button */
-}
-.social-media li {
-    display: inline; /* Keep icons inline */
-    margin: 0 10px; /* Space between icons */
-}
-
-.social-media li a {
-    color: #333; /* Default color for icons */
-    font-size: 24px; /* Increase icon size */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-/* Hover effect for social media icons */
-.social-media li a:hover {
-    color: #ff6f61; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge icon on hover */
-}
-.social-media {
-    display: flex; /* Use flexbox for alignment */
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    margin: 15px 0; /* Add margin for spacing */
-}
-
-.social-media li {
-    margin: 0 15px; /* Space between icons */
-}
-
-.social-media li a {
-    color: #333; /* Default icon color */
-    font-size: 30px; /* Increase icon size for visibility */
-    transition: transform 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition */
-    display: inline-block; /* Make anchor tag behave like a block */
-    border-radius: 50%; /* Circular background */
-    padding: 10px; /* Padding for a larger clickable area */
-}
-
-/* Hover effect for social media icons */
-.social-media li a:hover {
-    color: #fff; /* Change text color to white on hover */
-    background-color: #ff6f61; /* Baby pink background on hover */
-    transform: scale(1.2); /* Enlarge icon on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-
-
-
-</style>

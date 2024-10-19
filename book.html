@@ -91,6 +91,136 @@
       <section class="hero">
         <h2>Welcome to BuddyTrail</h2>
       </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="RatingStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/icons/airplane.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Book Now - BuddyTrail</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 1.2rem;
+        margin-top: 5px;
+      }
+      /* General navigation styles */
+      nav {
+        display: flex;
+        justify-content: space-evenly; /* Aligns nav items evenly */
+      }
+
+      nav ul {
+        list-style-type: none; /* Removes bullet points */
+        padding: 0; /* Removes padding */
+      }
+
+      /* Navigation link styles */
+      nav ul li {
+        display: inline; /* Displays list items in a row */
+      }
+
+      nav ul li a {
+        font-size: 2.5rem; /* Font size for nav links */
+        color: #fffdfd; /* Default color */
+        transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      /* Hover and active link styles */
+      nav ul li a:hover,
+      nav ul li a:active {
+        color: #ff5733; /* Color on hover or active state */
+      }
+
+      /* Optional: Style for icons specifically */
+      .social-icons a {
+        color: #ffffff; /* Default color for social icons */
+        transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      .social-icons a:hover,
+      .social-icons a:active {
+        color: #ff5733; /* Color for social icons on hover or active state */
+      }
+
+      /* Additional styles */
+      .nav-elem {
+        font-size: 1.8rem; /* Font size for additional navigation elements */
+        width: 80vw; /* Full viewport width */
+        margin-left: 20px; /* Left margin */
+        display: flex; /* Flexbox display */
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+         /* Even spacing between items */
+      }
+
+      .logo {
+        left: 50px; /* Left positioning for logo */
+      }
+
+      .locations h2 {
+        font-size: 4rem; /* Font size for location headings */
+        color: white; /* Color for location headings */
+      }
+
+      .benefits {
+        color: #f9f9f9; /* Color for benefits text */
+      }
+
+      .benefits h2 {
+        font-size: 4rem; /* Font size for benefits headings */
+        margin-bottom: 50px; /* Margin below benefits headings */
+        text-shadow: 0 0 2px rgb(110, 110, 110); /* Text shadow for benefits headings */
+      }
+
+      footer {
+        padding-top: 50px; /* Top padding for footer */
+        padding-bottom: 20px; /* Bottom padding for footer */
+      }
+
+      .footer-bottom {
+        margin-top: 20px; /* Margin at the top of footer bottom section */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-head">
+      <nav>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+        </div>
+        <div class="nav-elem">
+          <a href="#locations">Location</a>
+          <a href="#benefits">Benefits</a>
+          <a href="contact.html">Contact</a>
+          <a href="#booking-form">Book Now</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h2>Welcome to BuddyTrail</h2>
+      </section>
 
       <section id="locations" class="locations">
         <h2>Popular Destinations</h2>
@@ -143,7 +273,7 @@
       </section>
 
       <section id="benefits" class="benefits">
-        <h2 style="">Why Travel with BuddyTrail?</h2>
+        <h2>Why Travel with BuddyTrail?</h2>
         <ul class="benifits-list">
           <li>Exclusive discounts and travel packages</li>
           <li>24/7 customer support for a hassle-free experience</li>
