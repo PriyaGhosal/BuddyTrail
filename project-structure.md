@@ -60,6 +60,7 @@
 │   └── youtube.svg
 ├── image.png
 ├── img
+│   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
