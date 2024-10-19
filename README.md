@@ -41,25 +41,38 @@
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ### This project is now OFFICIALLY accepted for
+<table>
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://raw.githubusercontent.com/SwanandD121/FeatherPerfect_fe/refs/heads/main/Untitled%20design.png" alt="GSSoC 2024 Extd" style="max-width: 50%;">
-  <img src="https://pbs.twimg.com/profile_images/1831003149072535554/leInyk8A_400x400.jpg" alt="Hacktoberfest 2024" style="max-width: 20%; margin-left: 20px;">
-</div>
-<br>
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/README/img/gssocextd.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+    <tr>
+      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/README/img/hacktoberfest.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
+      <td>Hacktoberfest 2024</td>
+      <td>Hacktoberfest is a month-long celebration of open source software run by DigitalOcean, GitHub, and Twilio. It encourages contributions to open source projects and promotes a global community of developers.</td>
+   </tr>
 
-<br>
+</table>
 
+<br />
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 # 📸 Website Preview
+![Screenshot 2024-10-19 143805](https://github.com/user-attachments/assets/96abf31b-b1bc-4b05-ae4a-00e225da1e0c)
 
-<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182908.png" alt = "image">
-<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20182935.png" alt = "image">
-<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-07%20183005.png" alt = "image">
+![Screenshot 2024-10-19 143906](https://github.com/user-attachments/assets/e77ac002-1a7b-4172-a847-b8ec950a1f89)
 
-<br>
+![Screenshot 2024-10-19 143959](https://github.com/user-attachments/assets/2a043906-7b91-4cac-bca0-b6ab195edcee)
+
+<br/>
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
