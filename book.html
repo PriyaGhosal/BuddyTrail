@@ -19,28 +19,80 @@
       font-size: 1.2rem;
       margin-top: 5px;
     }
-    nav ul li a {
-    font-size: 2.5rem; 
-}
-nav ul li a {
-    color: #fffdfd; 
-    transition: color 0.3s ease; 
+/* General navigation styles */
+nav {
+    display: flex;
+    justify-content: space-evenly; /* Aligns nav items evenly */
 }
 
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+}
+
+/* Navigation link styles */
+nav ul li {
+    display: inline; /* Displays list items in a row */
+}
+
+nav ul li a {
+    font-size: 2.5rem; /* Font size for nav links */
+    color: #fffdfd; /* Default color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover and active link styles */
 nav ul li a:hover,
 nav ul li a:active {
-    color: #FF5733; 
+    color: #FF5733; /* Color on hover or active state */
 }
 
 /* Optional: Style for icons specifically */
 .social-icons a {
-    color: #ffffff;
-    transition: color 0.3s ease; 
+    color: #ffffff; /* Default color for social icons */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .social-icons a:hover,
 .social-icons a:active {
-    color: #FF5733; 
+    color: #FF5733; /* Color for social icons on hover or active state */
+}
+
+/* Additional styles */
+.nav-elem {
+    font-size: 1.9rem; /* Font size for additional navigation elements */
+    width: 100vw; /* Full viewport width */
+    margin-left: 50px; /* Left margin */
+    display: flex; /* Flexbox display */
+    justify-content: space-evenly; /* Even spacing between items */
+}
+
+.logo {
+    left: 50px; /* Left positioning for logo */
+}
+
+.locations h2 {
+    font-size: 4rem; /* Font size for location headings */
+    color: white; /* Color for location headings */
+}
+
+.benefits {
+    color: #f9f9f9; /* Color for benefits text */
+}
+
+.benefits h2 {
+    font-size: 4rem; /* Font size for benefits headings */
+    margin-bottom: 50px; /* Margin below benefits headings */
+    text-shadow: 0 0 2px rgb(110, 110, 110); /* Text shadow for benefits headings */
+}
+
+footer {
+    padding-top: 50px; /* Top padding for footer */
+    padding-bottom: 20px; /* Bottom padding for footer */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Margin at the top of footer bottom section */
 }
 
   </style>
@@ -52,12 +104,12 @@ nav ul li a:active {
         <img src="img/logo.png" id="logo-web">
         <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
       </div>
-      <ul>
-        <li><a href="#locations">Location</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#booking-form">Book Now</a></li>
-      </ul>
+      <div class="nav-elem">
+      <a href="#locations">Location</a>
+      <a href="#benefits">Benefits</a>
+      <a href="contact.html">Contact</a>
+      <a href="#booking-form">Book Now</a>
+      </div>
     </nav>
   </header>
   <main>
@@ -96,7 +148,7 @@ nav ul li a:active {
     </section>
     
     <section id="benefits" class="benefits">
-      <h2 style="">Why Travel with BuddyTrail?</h2>
+      <h2>Why Travel with BuddyTrail?</h2>
       <ul class="benifits-list">
         <li>Exclusive discounts and travel packages</li>
         <li>24/7 customer support for a hassle-free experience</li>
