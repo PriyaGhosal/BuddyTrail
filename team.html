@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="communityStyle.css">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">
     <!-- <link rel="stylesheet" href="style.css"> -->
+     
+    <link rel="stylesheet" href="RatingStyle.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <style>
@@ -14,6 +25,7 @@
 body {
     /* padding-top: 80px; */
     background-color: #040b21;
+    padding-top: 100px;
 }
 .home-btn{
     height: 50px;
@@ -43,16 +55,18 @@ body {
 
 .team-member {
     text-align: center;
+    
 }
 
 .team-member img {
-    width: 150px;
+    width: 180px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     border: 4px solid #fff;
+    background-color: #000;
 }
 
 .team-member p {
@@ -125,8 +139,35 @@ body {
     background: #fff;
     color: red;
     border: 5px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    word-wrap: break-word;
+
+    /* Additions to confine the text */
+    border-radius: 50%; /* Match the circular profile picture */
+    padding: 10px; /* Add padding to keep text away from the edges */
+    overflow: hidden; /* Ensure no text overflows the box */
+   
+
+
 }
 
+.box-back .box-content {
+    text-align: center;
+    word-wrap: break-word; /* Allows long words to wrap */
+    overflow-wrap: break-word; /* Helps in breaking long words */
+    white-space: normal; /* Ensures text wraps onto multiple lines */
+    
+    /* Add text ellipsis if content overflows */
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; /* Adjust line height to prevent text collision */
+    font-size: 14px; /* Adjust font size to fit the content better */
+}
 .flip-box:hover .box-front {
     transform: rotateX(0) rotateY(180deg);
 }
@@ -156,21 +197,23 @@ body {
     object-fit: cover;
 }
 /* text"meet our  awesome contributors" design for glowy animation  */
-.heading-contributors{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 100px;
-  font-stretch: expanded;
-  padding-bottom: 1px;
-  line-height: 120px;
-  text-transform: Uppercase;
-  color: transparent;
-  -webkit-text-stroke: 0.1px #140000;
-  background: url(img/Premium\ Photo\ _\ Vibrant\ mesh\ gradient\ with\ magenta\ and\ blue\ colors\ high\ quality\ image\ for\ backgrounds\ and\ web.jpeg);
-  -webkit-background-clip: text;
-  background-position: 0 0;
-  animation: back 10s linear infinite;
-  
+.heading-contributors {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-stretch: expanded;
+    padding-bottom: 1px;
+    line-height: 1.2; /* Adjusted line-height to work better with large text */
+    text-transform: Uppercase;
+    color: transparent;
+    -webkit-text-stroke: 0.1px #140000;
+    background: url(img/Premium\ Photo\ _\ Vibrant\ mesh\ gradient\ with\ magenta\ and\ blue\ colors\ high\ quality\ image\ for\ backgrounds\ and\ web.jpeg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 10s linear infinite;
+    margin-top: 20px; /* Add some top margin */
+    margin-bottom: 40px; /* Add some bottom margin to separate from other elements */
 }
+
 .main-head {
   position: fixed;
   top: 0;
@@ -224,14 +267,9 @@ li, button, label, input, p {
   width: 70px;
 }
 
-.mode-toggle img {
-  width: 30px; /* Adjust the size as needed */
-  height: auto;
-}
-
 #nav-list {
   display: flex;
-  gap: 1rem; /* Adjusted gap for better spacing */
+  gap: 0.3rem; /* Adjusted gap for better spacing */
   list-style: none;
   padding: 0;
   align-items: center;
@@ -258,7 +296,11 @@ li, button, label, input, p {
   text-decoration: none;
   font-weight: 300;
   white-space: nowrap;
+
   font-size: 30px;
+
+  font-size: 20px;
+
   font-family: Arial, Helvetica, sans-serif;
   margin-right: 20px;
 }
@@ -266,18 +308,33 @@ li, button, label, input, p {
 .mode-toggle {
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 20px;
+  width: 40px; /* Define a fixed width for the button */
+  height: 60px; /* Define a fixed height for the button */
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 1.5em;
-  transition: color 0.3s, transform 0.3s;
-  padding: 15px;
+  z-index: 5; /* Ensure it doesn't interfere with the rest of the navbar */
   display: flex;
   align-items: center;
-  z-index: 5;
+  justify-content: center;
+  border-radius: 50%; /* Ensure hover effect is rounded around the button */
 }
+
+/* Confine hover effect to the button area only */
+.mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Confined hover background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  border-radius: 50%; /* Keep it circular */
+}
+
+.mode-toggle img {
+  width: 30px; /* Icon size */
+  height: auto;
+  display: block; /* Ensure it doesn't stretch outside the button */
+}
+
 </style>
 <body>
 
@@ -285,14 +342,34 @@ li, button, label, input, p {
         <div class="main-head">
           <ul id="nav-list">
             <!-- Close button for dropdown -->
+
             <li><a href="/" class="navhover">Home</a></li>
             <li><a href="team.html" class="navhover">Team</a></li>
             <li><a href="about.html" class="navhover">About</a></li>
             <li><a href="./contact.html" class="navhover">Contact</a></li>
+
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+            
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
             <li><a href="auth.html" class="navhover">Sign In</a></li>
           </ul>
+
+
+      
+        <!-- Toggle Button -->
+        <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+        </button>
+
         </div>
-     </div>
+    </div>
     <!-- Sidebar Include -->
     <aside>
         <!-- Include your sidebar here -->
@@ -313,6 +390,72 @@ li, button, label, input, p {
     <!-- Footer Include -->
     <footer>
         <!-- Include your footer here -->
+
+    <footer id="footer">
+    <div class="footer-container" id="footer">
+    <div class="footer-column">
+        
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="team.html">Team</a></l>
+                    <li><a href="contributor/contributor.html">Our Contributor</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal Links</h3>
+                <ul>
+                    <li><a href="#"></a>Terms of Service</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Copyright Notice</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+
+                    </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
+                    <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
+                    <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    <!-- Newsletter Form -->
+    <div class="newsletter" id="newsletter">
+        <form id="newsletter-form">
+        <h3>Newsletter Form</h3>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+    </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+    </div>
+  </footer>
     </footer>
 
     <script>
@@ -385,7 +528,36 @@ fetch(apiURL)
     .catch((error) => {
         console.error("Error fetching contributors:", error);
     });
-
+    
+    // Dark and light mode toggle logic
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    
+    modeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+        const darkelem = document.querySelectorAll('#darkbtn');
+        const h1dark = document.querySelectorAll('#h1darkbtn');
+        const cardbtn = document.querySelectorAll('#btn a');
+        
+        if (document.body.classList.contains('dark-mode')) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
+        localStorage.setItem('theme', 'dark');
+        darkelem.forEach((elem) => elem.style.color = 'white');
+        cardbtn.forEach((elem) => elem.style.color = 'white');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#FFA500');
+        } else {
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'light');
+        darkelem.forEach((elem) => elem.style.color = 'gray');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#0057B3');
+        cardbtn.forEach((elem) => elem.style.color = 'black');
+        }
+    });
+    
 
     
     </script>

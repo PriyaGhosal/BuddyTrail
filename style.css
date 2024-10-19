@@ -26,6 +26,21 @@
   border-radius: 8px;
 }
 
+.NAVI {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NAVI i {
+  margin-right: 10px;
+}
+
+.NAVI a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
 .hi
 {
   display: flex;
@@ -2898,4 +2913,23 @@ textarea {
   color: #666;
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }

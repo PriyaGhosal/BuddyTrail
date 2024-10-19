@@ -16,52 +16,85 @@
   <style>
     .error {
       color: red;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       margin-top: 5px;
     }
+/* General navigation styles */
+nav {
+    display: flex;
+    justify-content: space-evenly; /* Aligns nav items evenly */
+}
 
-    .nav-elem{
-      font-size: 1.9rem;
-      width: 100vw;
-      margin-left: 50px;
-      display: flex;
-      justify-content: space-evenly;
-    }
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+}
 
-    .logo{
-      left: 50px;
-      
-    }
+/* Navigation link styles */
+nav ul li {
+    display: inline; /* Displays list items in a row */
+}
 
-    nav{
-      display: flex;
-      justify-content: space-evenly;
-    }
+nav ul li a {
+    font-size: 2.5rem; /* Font size for nav links */
+    color: #fffdfd; /* Default color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
 
+/* Hover and active link styles */
+nav ul li a:hover,
+nav ul li a:active {
+    color: #FF5733; /* Color on hover or active state */
+}
 
-    .locations h2{
-      font-size: 4rem;
-      color: white;
-    }
+/* Optional: Style for icons specifically */
+.social-icons a {
+    color: #ffffff; /* Default color for social icons */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
 
-    .benefits {
-      color: #f9f9f9;
-    }
+.social-icons a:hover,
+.social-icons a:active {
+    color: #FF5733; /* Color for social icons on hover or active state */
+}
 
-    .benefits h2{
-      font-size: 4rem;
-      margin-bottom: 50px;
-      text-shadow: 0 0 2px rgb(110, 110, 110);
-    }
+/* Additional styles */
+.nav-elem {
+    font-size: 1.9rem; /* Font size for additional navigation elements */
+    width: 100vw; /* Full viewport width */
+    margin-left: 50px; /* Left margin */
+    display: flex; /* Flexbox display */
+    justify-content: space-evenly; /* Even spacing between items */
+}
 
-    footer{
-      padding-top: 50px;
-      padding-bottom: 20px;
-    }
+.logo {
+    left: 50px; /* Left positioning for logo */
+}
 
-    .footer-bottom{
-      margin-top: 20px;
-    }
+.locations h2 {
+    font-size: 4rem; /* Font size for location headings */
+    color: white; /* Color for location headings */
+}
+
+.benefits {
+    color: #f9f9f9; /* Color for benefits text */
+}
+
+.benefits h2 {
+    font-size: 4rem; /* Font size for benefits headings */
+    margin-bottom: 50px; /* Margin below benefits headings */
+    text-shadow: 0 0 2px rgb(110, 110, 110); /* Text shadow for benefits headings */
+}
+
+footer {
+    padding-top: 50px; /* Top padding for footer */
+    padding-bottom: 20px; /* Bottom padding for footer */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Margin at the top of footer bottom section */
+}
+
   </style>
 </head>
 <body>
