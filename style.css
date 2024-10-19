@@ -1546,13 +1546,42 @@ body.light-mode {
     }
 
 
-/* user rating */
+/* Enhanced Reviews Section */
 .reviews-section {
-  padding: 50px;
-  background-color: #F0F8FF;
-  display: flex; /* Centering the content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  padding: 100px;
+  background: linear-gradient(135deg, #F0F8FF 0%, #E6F7FF 100%); /* Gradient background */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; /* Stack items vertically */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: fadeIn 0.5s ease-out; /* Fade-in effect */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 40px; /* Further reduced padding for very small screens */
+  }
 }
 
 .review {
