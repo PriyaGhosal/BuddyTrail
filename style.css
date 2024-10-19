@@ -447,6 +447,7 @@ nav {
   -webkit-text-stroke: 1px #fefefe;
   background: url(img/back.png);
   -webkit-background-clip: text;
+  background-clip: text;
   background-position: 0 0;
   animation: back 20s linear infinite;
 }
@@ -465,6 +466,7 @@ nav {
   -webkit-text-stroke: 1px #fefefe;
   background: url(img/back.png);
   -webkit-background-clip: text;
+  background-clip: text;
   background-position: 0 0;
   animation: back 20s linear infinite;
 
@@ -1164,21 +1166,24 @@ footer {
     background-color:#232323; 
     color: #ffffff;
     text-align: center;
+    
+    
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+    gap: 5px;
+    max-width: 1250px;
+    
 }
 
 .footer-column {
     flex: 1;
-    min-width: 200px;
+    min-width: 150px;
     margin: 10px;
+    padding-left: 10px;
 }
 
 .footer-column p{
@@ -1235,6 +1240,13 @@ footer {
 
 .footer-bottom {
     font-size: 14px;
+   color: #fdfdfd;
+   background-color: #232323;
+   align-items: center;
+   padding-left: 40%;
+   font-weight: 300;
+   font-size: 20px;
+   
 }
 
 
