@@ -320,6 +320,32 @@ form.sign-in-form {
 .password-strength .medium { background-color: #ffa502; }
 .password-strength .strong { background-color: #23ad5c; }
 
+/* Toast styles */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.toast {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.toast.show {
+  opacity: 1;
+}
+.toast.success {
+  background-color: #4CAF50;
+}
+.toast.error {
+  background-color: #F44336;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;

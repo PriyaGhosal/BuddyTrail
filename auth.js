@@ -3,7 +3,7 @@ const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
 // Allowed email domains for registration
-const allowedDomains = ['gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com' , 'icloud.com' , 'protonmail.com' , 'tutanota.com']; // Add more as needed
+const allowedDomains = ['gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com', 'icloud.com', 'protonmail.com', 'tutanota.com'];
 
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
@@ -12,6 +12,27 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
+// Toast function
+function showToast(message, type = 'default') {
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+  
+  const toastContainer = document.getElementById('toast-container');
+  toastContainer.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.classList.add('show');
+  }, 100);
+  
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => {
+      toastContainer.removeChild(toast);
+    }, 300);
+  }, 3000);
+}
 
 // Sign in form submission
 document.querySelector(".sign-in-form").addEventListener('submit', function(event) {
@@ -23,11 +44,13 @@ document.querySelector(".sign-in-form").addEventListener('submit', function(even
 
   // Dummy login logic for demo purposes
   if (username === 'admin' && password === 'password') {
-    alert('Login successful!');
+    showToast('Login successful!', 'success');
     // Redirect to dashboard page
-    window.location.href = 'index.html';
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1500);
   } else {
-    alert('Invalid username or password');
+    showToast('Invalid username or password', 'error');
   }
 });
 
@@ -41,7 +64,7 @@ document.querySelector(".sign-up-form").addEventListener('submit', function(even
   const password = document.querySelector(".sign-up-form input[type='password']").value;
 
   if (username === '' || email === '' || password === '') {
-    alert('Please fill in all fields');
+    showToast('Please fill in all fields', 'error');
     return;
   }
 
@@ -50,19 +73,26 @@ document.querySelector(".sign-up-form").addEventListener('submit', function(even
 
   // Check if email domain is allowed
   if (!allowedDomains.includes(emailDomain)) {
-    alert('Please use an email from a reputable provider (Gmail, Outlook, Yahoo, etc.)');
+    showToast('Please use an email from a reputable provider (Gmail, Outlook, Yahoo, etc.)', 'error');
     return; // Prevent registration
   }
 
   // Dummy signup logic for demo purposes
-  localStorage.setItem('username', username);
-  localStorage.setItem('email', email);
-  localStorage.setItem('password', password);
-  localStorage.setItem('isLoggedIn', 'true');
+  try {
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+    localStorage.setItem('isLoggedIn', 'true');
 
-  alert('Signup successful!');
-  // Redirect to dashboard page
-  window.location.href = 'index.html';
+    showToast('Signup successful!', 'success');
+    // Redirect to dashboard page
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1500);
+  } catch (error) {
+    showToast('An error occurred during signup. Please try again.', 'error');
+    console.error('Signup error:', error);
+  }
 });
 
 // Toggle password visibility
