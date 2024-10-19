@@ -70,7 +70,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
+  margin: 20px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
@@ -107,6 +107,7 @@ form.sign-in-form {
 }
 
 .social-text {
+  margin:5px 0;
   padding: 0.7rem 0;
   font-size: 1rem;
   text-align: center;
@@ -115,6 +116,7 @@ form.sign-in-form {
 .social-media {
   display: flex;
   justify-content: center;
+  gap:15px;
 }
 
 .social-icon {
@@ -267,6 +269,10 @@ form.sign-in-form {
 .container.sign-up-mode form.sign-in-form {
   opacity: 0;
   z-index: 1;
+}
+
+.sign-in-form .btn.solid {
+  margin-bottom: 20px; 
 }
 
 .container.sign-up-mode .right-panel .image,
@@ -470,3 +476,11 @@ form.sign-in-form {
   background: #191919;
 }
 
+.social-icon {
+  margin: 0 20px; 
+}
+
+.login{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
