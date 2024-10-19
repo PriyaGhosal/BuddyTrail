@@ -13,22 +13,23 @@
     gap: 20px; /* Optional gap between form and rating section */
     height: auto; /* Adjust height if necessary */
 }
+
 .form-section {
-    width: 70%; /* Adjust width as needed */
+    width: 65%; /* Slightly adjusted width for better balance */
 }
+
 .rating-wrap {
     width: 30%; /* Adjust width as needed */
     text-align: left;
-    transition: all;
+    transition: all 0.3s ease; /* Smooth transition effect */
 }
 
 .center {
-    width: auto;
-    display: inline-flex; /* Align stars and rating count in a row */
+    display: flex; /* Flexbox for better alignment of stars and rating count */
     align-items: center;
-    gap: 10px; /* Add some space between the stars and the count */
+    gap: 10px; /* Add space between stars and rating value */
+    justify-content: flex-start; /* Align stars to the left */
 }
-
 
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
@@ -38,15 +39,15 @@
 
 .rating {
     border: none;
-    float:right;
+    float: right;
 }
 
 .rating > input {
-    display: none;
+    display: none; /* Hide the radio inputs */
 }
 
 .rating > label:before {
-    content: '\f005';
+    content: '\f005'; /* Star icon from FontAwesome */
     font-family: FontAwesome;
     margin: 5px;
     font-size: 1.5rem;
@@ -55,30 +56,43 @@
 }
 
 .rating > .half:before {
-    content: '\f089';
+    content: '\f089'; /* Half star icon */
     position: absolute;
     cursor: pointer;
 }
 
 .rating > label {
-    color: #ddd; /* Empty stars initially */
+    color: #ddd; /* Default empty stars color */
     float: right;
     cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Filled stars on hover and selection */
+/* Style filled stars on hover or when selected */
 .rating > input:checked ~ label,
 .rating:not(:checked) > label {
-    color: #ddd; /* Keep stars empty until interaction */
+    color: #ddd; /* Keep stars empty until selection or hover */
 }
 
 .rating > input:checked ~ label,
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label {
-    color: rgb(230, 166, 17); /* Green for filled stars */
+    color: rgb(230, 166, 17); /* Gold color for filled stars */
 }
 
+/* Hover effect for stars */
 .rating > label:hover ~ label,
 .rating > label:hover {
-    color:rgb(239, 127, 6); /* Green hover effect */
+    color: rgb(239, 127, 6); /* Darker gold color on hover */
+}
+
+/* Optional: Adjust gap and star container */
+.rating-container {
+    display: flex;
+    justify-content: center; /* Center the stars horizontally */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background to make stars stand out */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }

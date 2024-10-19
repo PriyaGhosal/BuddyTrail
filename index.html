@@ -1350,16 +1350,19 @@ nav.hi ul li.NAVI i:hover  {
       }
 
       h1#h1darkbtn {
-        color: white;
-        font-size:xx-large;
-          margin: 0;
-          letter-spacing: 1.2px;
-          transition: color 0.3s ease;
-      }
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive font size */
+    margin: 0;
+    letter-spacing: 1.2px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transform effect */
+}
 
-      h1#h1darkbtn:hover {
-          color: #ffcc00; /* Changes the color when hovered */
-      }
+h1#h1darkbtn:hover {
+    color: #ffcc00; /* Changes the color when hovered */
+    transform: scale(1.05); /* Slightly scales up the text when hovered */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow effect */
+}
+
 
       /* Navigation Styles */
       nav.hi ul {
