@@ -1077,14 +1077,16 @@ body {
   color: black;
 }
 
-
+ 
 h2 {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 10px 0; /* Margin adjustment */
-  
-}
 
+  font-size:  2.5em;
+  font-weight:  700;
+  margin:  10px 0; /* Margin adjustment */
+  color:  #007bff;
+   
+}
+ 
 p {
   font-size: 1.5em;
   color: #666; /* Paragraph color */
