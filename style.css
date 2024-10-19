@@ -26,21 +26,6 @@
   border-radius: 8px;
 }
 
-.NAVI {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.NAVI i {
-  margin-right: 10px;
-}
-
-.NAVI a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
 .hi
 {
   display: flex;
@@ -716,9 +701,7 @@ nav {
 
 .benifits-list li {
     font-size: 1em;
-}
-
-/**** BOOKING FORM ****/
+}/**** BOOKING FORM WITH ICONS ****/
 .booking-form {
   margin: 30px auto;
   margin-bottom: 0;
@@ -728,18 +711,15 @@ nav {
   align-items: center;
   padding: 20px;
   padding-bottom: 5rem;
-  /* background: rgba(255, 255, 255, 0.9); */
   background-image: url(/img/new-york-page.png);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.booking-form form{
+.booking-form form {
   max-width: 600px;
   width: 90%;
   border-radius: 8px;
@@ -756,6 +736,8 @@ nav {
 
 .form-group {
   margin-bottom: 15px;
+  position: relative;
+  /* To position the icons inside the input */
 }
 
 .form-group label {
@@ -764,20 +746,33 @@ nav {
   font-weight: bold;
 }
 
-.form-group input{
-  width: calc(100% - 0px);
-  padding: 10px;
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  /* Adjust padding for icons */
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
 
-.form-group select {
-  width: calc(100% - 0px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+.form-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #6c757d;
+  /* Icon color */
+  font-size: 18px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6a1b9a;
+  /* Purple border on focus */
+  outline: none;
+  background-color: #f3e5f5;
+  /* Light purple background on focus */
 }
 
 .btn {
@@ -797,21 +792,46 @@ nav {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-@keyframes slideIn {
-  from { transform: translateX(-50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
+/* Additional form styling with icons */
+
+.form-group:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.form-group:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.form-group:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Light and Dark Modes */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -819,231 +839,14 @@ body {
   margin: 0;
   padding: 0;
 }
-.contact-section {
-  background: linear-gradient(to right, #e6f2ff, #f0e6ff);
-  padding: 4rem 0;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.section-title {
-  text-align: center;
-  color: #1a365d;
-  font-size: 3rem;
-  margin-bottom: 3rem;
-  animation: fadeIn 1s ease-out;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-.contact-info, .contact-form {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  animation: fadeIn 1s ease-out;
-}
-.contact-info:hover, .contact-form:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  animation: slideIn 0.5s ease-out;
-  animation-fill-mode: both;
-}
-.info-item:nth-child(1) { animation-delay: 0.2s; }
-.info-item:nth-child(2) { animation-delay: 0.4s; }
-.info-item:nth-child(3) { animation-delay: 0.6s; }
-.info-icon {
-  background: #1a365d;
-  color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-  transition: transform 0.3s ease;
-}
-.info-item:hover .info-icon {
-  transform: rotate(15deg);
-}
-.info-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #1a365d;
-}
-.info-content p {
-  margin: 0.25rem 0 0;
-  color: #4a5568;
-}
-.form-group {
-  margin-bottom: 1.5rem;
-  animation: fadeIn 0.5s ease-out;
-  animation-fill-mode: both;
-}
-.form-group:nth-child(1) { animation-delay: 0.2s; }
-.form-group:nth-child(2) { animation-delay: 0.4s; }
-.form-group:nth-child(3) { animation-delay: 0.6s; }
-.form-control {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e2e8f0;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 15px;
-  border: 2px solid #d1c4e9;
-  border-radius: 5px;
-  background-color: white;
-  font-size: 16px;
-}
-.form-control:focus {
-  border-color: #6a1b9a; /* Purple border on focus */
-  outline: none;
-  background-color: #f3e5f5; /* Light purple background on focus */
-}
-.btn-submit {
-  background: #1a365d;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  animation: pulse 2s infinite;
-}
-.btn-submit:hover {
-  background: #2c5282;
-  transform: translateY(-2px);
-}
-.about-buddytrail {
-  background: #1a365d;
-  color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-top: 2rem;
-  animation: fadeIn 1s ease-out;
-  animation-delay: 0.8s;
-  animation-fill-mode: both;
-}
-.about-buddytrail h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-.about-buddytrail p {
-  color: #ffffff;
-}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .contact-grid {
-      grid-template-columns: 1fr;
+  .form-group .icon {
+    left: 5px;
+    /* Adjust icon for mobile */
   }
 }
-#About {
-  padding: 60px;
-  background-color: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark grey text */
-  font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.6;
-  text-align: left;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-#About h1 {
-  font-size: 3.5em;
-  color: #007bff; /* Blue color for the main heading */
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-#About h2 {
-  font-size: 3em;
-  color: #0056b3; /* Dark blue color for subheadings */
-  margin-top: 40px;
-  font-weight: 600;
-}
-
-#About p {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  color: #444; /* Slightly darker grey for paragraph text */
-}
-
-#About p strong {
-  color: #007bff; /* Blue highlight for important text */
-}
-
-#About ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 20px;
-}
-
-#About ul li {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: flex-start;
-}
-
-#About ul li::before {
-  content: "✔"; /* Checkmark symbol as bullet point */
-  margin-right: 10px;
-  color: #28a745; /* Green checkmark */
-  font-size: 1.5em;
-}
-/* Light mode for #About */
-.light-mode #About {
-  background-color: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark grey text */
-}
-
-/* Dark mode for #About */
-.dark-mode #About {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light grey text */
-}
-
-.light-mode #About h1 {
-  color: #007bff; /* Blue color for the main heading in light mode */
-}
-
-.dark-mode #About h1 {
-  color: #ffa500; /* Orange color for the main heading in dark mode */
-}
-
-.light-mode #About h2 {
-  color: #0056b3; /* Dark blue subheading in light mode */
-}
-
-.dark-mode #About h2 {
-  color: #ffd700; /* Bright yellow subheading in dark mode */
-}
-
-.light-mode #About p {
-  color: #444; /* Slightly darker grey for paragraph text in light mode */
-}
-
-.dark-mode #About p {
-  color: #d3d3d3; /* Lighter grey for paragraph text in dark mode */
-}
-
-.light-mode #About p strong {
-  color: #007bff; /* Blue highlight for important text in light mode */
-}
-
-.dark-mode #About p strong {
-  color: #ffcc00; /* Yellow highlight for important text in dark mode */
-}
-
 
 /* Cab Booking Section Styles */
 .cab-booking-section  {
@@ -2913,23 +2716,4 @@ textarea {
   color: #666;
   margin-bottom: 1rem;
   line-height: 1.5;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-#root {
-  width: 100%;
-}
-
-.container {
-  width: 100%;
-  max-width: 100vw;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
 }
