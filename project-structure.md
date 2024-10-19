@@ -74,6 +74,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
+│   ├── gssocextd.jpg
+│   ├── hacktoberfest.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
