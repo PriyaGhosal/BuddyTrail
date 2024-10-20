@@ -29,6 +29,7 @@
 ├── blog.html
 ├── book.html
 ├── boy.png
+├── button-ui.css
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
@@ -41,6 +42,8 @@
 │   ├── contributor.html
 │   └── contributor.js
 ├── cookie.html
+├── cookie_policy.html
+├── copyright.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -78,6 +81,7 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
 │   ├── hacktoberfest1.png
@@ -117,11 +121,15 @@
 ├── script
 │   └── popup.js
 ├── script.js
+├── security.md
+├── service.css
+├── service.html
 ├── star-rating.js
 ├── style.css
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms_of_service.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
