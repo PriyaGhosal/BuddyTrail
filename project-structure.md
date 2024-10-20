@@ -120,6 +120,7 @@
 ├── script
 │   └── popup.js
 ├── script.js
+├── security.md
 ├── star-rating.js
 ├── style.css
 ├── styles
