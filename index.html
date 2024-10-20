@@ -1081,19 +1081,27 @@ select:focus {
 
 /* Button Styling */
 .book-btn {
-    background-color: #2193b0; /* Gradient color for button */
-    color: white;
-    padding: 15px;
-    font-size: 20px;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Smooth gradient */
+    color: #fff;
+    padding: 12px 24px; /* Balanced padding for a better look */
+    font-size: 18px; /* Slightly smaller font for a cleaner appearance */
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px; /* Smoothly rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Pointer cursor for better interactivity */
+    width: fit-content; /* Ensures the button fits the content */
 }
 
 .book-btn:hover {
-    background-color: #6dd5ed; /* Gradient effect on hover */
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
 }
+
+.book-btn:active {
+    transform: translateY(1px); /* Pressed effect for click feedback */
+}
+
 
     /* Main Section Styling */
 .cab-booking-section {
