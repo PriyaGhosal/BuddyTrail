@@ -122,6 +122,8 @@
 │   └── popup.js
 ├── script.js
 ├── security.md
+├── service.css
+├── service.html
 ├── star-rating.js
 ├── style.css
 ├── styles
