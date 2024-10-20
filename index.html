@@ -88,7 +88,7 @@
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
     font-weight: bold;
-    color: black; 
+    color: black; /* Optional: change the color to match the theme */
 }
 
 .rating {
@@ -1281,18 +1281,7 @@ select {
     <style>
     
     
-/* Container for the posts and vlogs section */
-#posts {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-}
 
-
-=======
        /* Container for the posts and vlogs section */
 #posts {
   max-width: 1200px;
@@ -1302,7 +1291,6 @@ select {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 }
-
 
 #content-input {
   height: 200px;
@@ -1489,53 +1477,47 @@ main.main_blogs {
           <ul>
               <li class="NAVI">
                 <!-- added favicon for destinations -->
-               
-                <a href="#destinations"> <i class="fa-solid fa-location-dot"></i> Destinations</a>
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#destinations">Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
-                
-                <a href="#travel-planning"> <i class="fa-solid fa-earth-americas"></i>  Travel Planning</a>
+                <i class="fa-solid fa-earth-americas"></i>
+                <a href="#travel-planning">Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
-                
-                <a href="#experiences" ><i class="fa-regular fa-face-smile"></i> Travel Experiences</a>
+                <i class="fa-regular fa-face-smile"></i>
+                <a href="#experiences">Travel Experiences</a>
               </li>
               <li class="NAVI">
-                
+                <i class="fa-solid fa-gear"></i>
                 <!-- added favicon for travel gear -->
-                <a href="#gear"><i class="fa-solid fa-gear"></i> Travel Gear</a>
+                <a href="#gear">Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
-               
-                <a href="#safety"> <i class="fa-solid fa-shield"></i> Travel Safety</a>
+                <i class="fa-solid fa-shield"></i>
+                <a href="#safety">Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
-                
-                <a href="#sustainable"><i class="fa-solid fa-seedling"></i> Sustainable Travel</a>
+                <i class="fa-solid fa-seedling"></i>
+                <a href="#sustainable">Sustainable Travel</a>
               </li>
           </ul>
       </nav>
   </header>
   <style>
-    /* General Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-}
+          /* General Styles */
+      body {
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f9;
+      }
 
-/* Header Border */
+      /* Header Border */
 header.forum_1 {
-
-  border: 10px solid transparent; /* Initial transparent border */
-  border-image: linear-gradient(to right, #44dfa6, #a08be6); /* Gradient border */
-  border-image-slice: 1; /* Ensures the full gradient is applied */
-  border-radius: 10px; /* Rounded corners for smooth appearance */
-  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
 
     border:  10px solid transparent; /* Initial transparent border */
     border-image:  linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
@@ -1543,25 +1525,10 @@ header.forum_1 {
     border-radius:  10px; /* Rounded corners for smooth appearance */
     transition:  border-color 0.3s ease; /* Smooth transition for hover effect */
 
-
 }
 
 header.forum_1:hover {
-  border-color: #ffcc00; /* Changes border color on hover */
-}
-
-
-/* Header Section */
-header.forum_1 {
-  background-color: #1e88e5; /* Primary color for the header */
-  color: white;
-  padding: 10px 20px; /* Minimal padding for compact height */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 50px; /* Minimum height of the header bar */
+    border-color: #ffcc00; /* Changes border color on hover */
 }
 
 /* Navigation Item Borders */
@@ -1597,29 +1564,17 @@ nav.hi ul li.NAVI i:hover  {
           overflow: hidden;
       }
 
+      h1#h1darkbtn {
+        color: white;
+        font-size:xx-large;
+          margin: 0;
+          letter-spacing: 1.2px;
+          transition: color 0.3s ease;
+      }
 
-/* Header Title */
-h1#h1darkbtn {
-  color: white;
-  font-size: xx-large;
-  margin: 0;
-  letter-spacing: 1.2px;
-  transition: color 0.3s ease;
-}
-
-h1#h1darkbtn:hover {
-  color: #0b0b0a; /* Changes the color when hovered */
-}
-
-
-/* Navigation Styles */
-nav.hi ul {
-  list-style-type: armenian;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 0px;
-}
+      h1#h1darkbtn:hover {
+          color: #ffcc00; /* Changes the color when hovered */
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -1630,34 +1585,19 @@ nav.hi ul {
           gap: 0px;
       }
 
+      nav.hi ul li.NAVI {
+          position: relative;
+      }
 
-nav.hi ul li.NAVI {
-  position: relative;
-}
-
-nav.hi ul li.NAVI a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 14px; /* Adjusted font size */
-  padding: 8px 12px; /* Padding for link */
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center items vertically */
-  gap: 8px; /* Space between icon and text */
-  border-radius: 5px; /* Rounded corners */
-  transition: color 0.3s, background-color 0.3s ease;
-}
-
-
-nav.hi ul li.NAVI a:hover {
-  background-color: #000000; /* Background highlight on hover */
-  color: #ffffff; /* Text color change on hover */
-}
-
-/* Styling for icons when hovering over the entire link */
-nav.hi ul li.NAVI a:hover i {
-  color: #ffffff; /* Change icon color on hover */
-  transform: scale(1.2); /* Scale up on hover */
-}
+      nav.hi ul li.NAVI a {
+          color: rgb(162, 37, 37);
+          text-decoration: none;
+          font-size: 14px; /* Reduced font size for a more compact design */
+          padding-right: 5px;
+          padding: 8px 12px; /* Reduced padding to fit minimal height */
+          transition: color 0.3s, background-color 0.3s ease;
+          border-radius: 5px; /* Slight rounding for a modern look */
+      }
 
       nav.hi ul li.NAVI a:hover {
           background-color: #ffcc00; /* Background highlight on hover */
@@ -1675,20 +1615,11 @@ nav.hi ul li.NAVI a:hover i {
               align-items: flex-start;
           }
 
-
-/* Icon styling */
-nav.hi ul li.NAVI i {
-  font-size: 18px; /* Adjust icon size */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header.forum_1 {
-      flex-direction: column;
-      align-items: flex-start;
-  }
+          nav.hi ul {
+              flex-direction: column;
+              width: 100%;
+              gap: 10px;
+          }
 
           nav.hi ul li.NAVI a {
               display: block;
@@ -1698,18 +1629,6 @@ nav.hi ul li.NAVI i {
       } */
 
 
-  nav.hi ul {
-      flex-direction: column;
-      width: 100%;
-      gap: 10px;
-  }
-
-  nav.hi ul li.NAVI a {
-      display: block;
-      width: 100%;
-      text-align: center;
-  }
-}
 
 
   </style>
@@ -2264,8 +2183,6 @@ button:hover:before {
       <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
     </div>
 
-
-
     <!-- Quick Links Section -->
     <div class="footer-column">
       <h3>Quick Links</h3>
@@ -2299,80 +2216,54 @@ button:hover:before {
       <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
     </div>
 
-
-  <footer id="footer">
-    <div class="footer-container">
-      <!-- About Us Section -->
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-      </div>
-  
-      <!-- Quick Links Section -->
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html" class="faq-link">FAQs</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contributor/contributor.html">Our Contributor</a></li>
-        </ul>
-      </div>
-  
-      <!-- Legal Links Section -->
-      <div class="footer-column">
-        <h3>Legal Links</h3>
-        <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Disclaimer</a></li>
-          <li><a href="copyright.html">Copyright Notice</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-      </div>
-  
-      <!-- Contact Us Section -->
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-      </div>
-  
-      <!-- Follow Us Section -->
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
-          <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-  
-      <!-- Newsletter Form Section -->
-      <div class="footer-column newsletter" id="newsletter">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form id="newsletter-form">
-          <input type="email" id="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p id="subscription-message"></p>
+    <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-  
-    <!-- Footer Bottom Section -->
-    <footer>
-      <div class="footer-bottom">
-          <p>&copy; 2024 BuddyTrail. All rights reserved.
-          </p>
-      </div>
-  </footer>
 
-
-
+    <!-- Newsletter Form Section -->
+    <style>
+      .footer-column.newsletter {
+          max-width: 300px;
+          margin: 0 auto;
+          text-align: center;
+      }
+      #newsletter-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      #email {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 8px;
+          box-sizing: border-box;
+      }
+      button[type="submit"] {
+          width: 100px;
+          padding: 6px;
+          font-size: 14px;
+      }
+      #subscription-message {
+          font-size: 14px;
+          margin-top: 10px;
+      }
+  </style>
+    <div class="footer-column newsletter" id="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
+  </div>
 
   <!-- Footer Bottom Section -->
   <div class="footer-bottom">
@@ -2380,8 +2271,6 @@ button:hover:before {
   </div>
 </footer>
 
-
-  
   
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
