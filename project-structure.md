@@ -40,6 +40,7 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -121,6 +122,7 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms_of_service.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
