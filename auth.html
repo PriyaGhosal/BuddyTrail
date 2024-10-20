@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-    
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
           <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
-            
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" />
@@ -28,10 +26,9 @@
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
-          
-          <p class="social-text">OR</p>
+            <p class="social-text">OR</p>
             <p class="social-text">Sign in with social platforms</p>
-            <div class="social-media"> 
+            <div class="social-media">
               <button class="social-icon">
                 <img src="./img/google.png" alt="Google Icon" style="width: 30px; height: 30px;">
               </button>
@@ -40,7 +37,7 @@
               </button>
             </div>
           </form>
-            
+
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -61,19 +58,11 @@
               <div id="strength-medium"></div>
               <div id="strength-strong"></div>
             </div>
-            <input type="submit" class="btn" value="Sign up" />           
+            <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>
       </div>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
-    <script src="firebase.js"></script>
-    <script>
-      // Home button
-      document.getElementById('home-btn').addEventListener('click', function() {
-        window.location.href = "index.html";
-      });
-    </script>
+
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -106,8 +95,34 @@
     </a>
     <div id="toast-container"></div>
     
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script>
+      const signUpBtn = document.getElementById('sign-up-btn');
+      const signInBtn = document.getElementById('sign-in-btn');
+      const container = document.querySelector('.container');
+
+      signUpBtn.addEventListener('click', () => {
+        container.classList.add('sign-up-mode');
+      });
+
+      signInBtn.addEventListener('click', () => {
+        container.classList.remove('sign-up-mode');
+      });
+
+      function togglePassword(id, element) {
+        const passwordInput = document.getElementById(id);
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          element.classList.add('active');
+        } else {
+          passwordInput.type = 'password';
+          element.classList.remove('active');
+        }
+      }
+    </script>
     <script type="module" src="auth.js" defer></script>
-    <!-- <script type="module" src="SignUpWithGoogle.js"></script> -->
     <script type="module" src="SignIn-Up-withGithub.js"></script>
   </body>
 </html>
