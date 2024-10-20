@@ -41,6 +41,8 @@
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── disclaimer.css
+├── disclaimer.html
 ├── faq.html
 ├── firebase.js
 ├── fly.css
