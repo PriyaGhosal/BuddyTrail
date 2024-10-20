@@ -10,135 +10,147 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
-   
-   .card {
-        width: 50%; /* Set a specific width */
-        margin: 10px auto; /* Center horizontally with automatic margins */
-        padding: 20px; /* Add padding */
+    .card {
+        width: 80%; /* Increase width for larger view */
+        margin: 10px auto; /* Center horizontally */
+        padding: 20px;
         margin-bottom: 70px;
-       
-        border: 1px solid #ccc; /* Optional: Add a border */
-        border-radius: 8px; /* Optional: Add rounded corners */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* Add a background color */
     }
     
-   .card-header {
+    .card-header {
         background-color: #1971b0;
-        color: #0c0c0c;
-        padding: 10px;
-        margin-bottom: 15px;
+        color: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
         text-align: center;
-        width: 90%;
+        width: 100%;
         border-bottom: 1px solid #ddd;
         border-radius: 6px;
     }
     
-    #contactus .card-body {
+    .card-body {
         display: flex;
-        justify-content: space-between; /* Form on the left and image on the right */
-        align-items: flex-start; /* Align content to the top */
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+        gap: 20px; /* Add gap between sections */
     }
     
-    #contactus .form-section {
-        width: 50%; /* Width for the form section */
-        color: #fff;
+    .form-section {
+        flex: 1;
+        min-width: 45%; /* Ensure minimum width */
+        color: #121111;
     }
     
-    #contactus .image-section {
-        padding-top: 35px;
-        width: 60%; /* Width for the image section */
+    .image-section {
+        flex: 1;
+        min-width: 45%; /* Ensure minimum width */
         display: flex;
-        justify-content: center; /* Center the image */
+        justify-content: center;
         align-items: center;
     }
     
-    #contactus .image-section img {
-        max-width: 100%; /* Ensure the image does not exceed its container width */
+    .image-section img {
+        max-width: 100%;
         height: auto;
+        max-height: 500px;
     }
     
-    #contactus .form-group {
+    .form-group {
         margin-bottom: 20px;
-        color: #121111; /* Form text color */
+        color: #121111;
     }
     
-    #contactus label {
+    label {
         display: block;
         margin-bottom: 10px;
     }
     
-    #contactus input, #contactus textarea {
-        width: 100%; /* Adjust width for better alignment */
-        padding: 10px;
+    input, textarea {
+        width: 100%;
+        padding: 12px;
         border: 1px solid #ccc;
         border-radius: 5px;
     }
     
-    #contactus textarea {
-        height: 100px; /* Adjust height for textarea */
+    textarea {
+        height: 120px;
     }
     
-    #contactus button[type="submit"] {
+    button[type="submit"] {
         background-color: #0a6aae;
         color: #fff;
-        padding: 10px 20px;
+        padding: 12px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 1rem;
     }
     
-    #contactus button[type="submit"]:hover {
+    button[type="submit"]:hover {
         background-color: #2d81f7;
     }
 
     .error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    display: none; /* Hide by default */
-}
-    
-    
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .card-body {
+            flex-direction: column; /* Stack form and image vertically */
+        }
+
+        .form-section, .image-section {
+            width: 100%; /* Full width on smaller screens */
+            min-width: 100%;
+        }
+    }
+
 </style>
 <body>
     <div class="container-fluid">
-    <header style="background-color: black;height:85px" >
-        <nav style="padding: 5px;width:90%">
-            <div class="logo">
-              <img src="img/logo.png" id="logo-web">
-              <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-            </div>
+        <header style="background-color: black;height:85px;">
+            <nav style="padding: 5px;width:90%;">
+                <div class="logo">
+                    <img src="img/logo.png" id="logo-web">
+                    <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+                </div>
         
-            <!-- Hamburger button for mobile -->
-            <button class="hamburger" id="hamburger">☰</button>
+                <!-- Hamburger button for mobile -->
+                <button class="hamburger" id="hamburger">☰</button>
         
-            <ul id="nav-list">
-              <!-- Close button for dropdown -->
-              <span class="dropdown-close-btn" id="closeBtn">×</span>
-              <li><a href="./index.html" class="navhover">Home</a></li>
-              <li><a href="team.html" class="navhover">Team</a></li>
-              <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-              <li><a href="#benefits" class="navhover">Benefits</a></li>
-              <li><a href="about.html" class="navhover">About</a></li>
-              <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-              
-              <li><a href="./contact.html" class="navhover">Contact</a></li>
-              <li><a href="#reviews" class="navhover">Reviews</a></li>
-              <li><a href="auth.html" class="navhover">Sign In</a></li>
-             
-            </ul>
+                <ul id="nav-list">
+                    <!-- Close button for dropdown -->
+                    <span class="dropdown-close-btn" id="closeBtn">×</span>
+                    <li><a href="./index.html" class="navhover">Home</a></li>
+                    <li><a href="team.html" class="navhover">Team</a></li>
+                    <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+                    <li><a href="#benefits" class="navhover">Benefits</a></li>
+                    <li><a href="about.html" class="navhover">About</a></li>
+                    <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+                    <li><a href="./contact.html" class="navhover">Contact</a></li>
+                    <li><a href="#reviews" class="navhover">Reviews</a></li>
+                    <li><a href="auth.html" class="navhover">Sign In</a></li>
+                </ul>
         
-            <!-- Toggle Button -->
-            <button class="mode-toggle" id="modeToggle">
-              <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-              <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-            </button>
-          </nav>
-    </header>
-    <div>
+                <!-- Toggle Button -->
+                <button class="mode-toggle" id="modeToggle">
+                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                </button>
+            </nav>
+        </header>
+        
         <section id="contactus">
-
-            <div class="card pb-5 pt-1" style="background-color:#fff;">
+            <div class="card pb-5 pt-1">
                 <div class="card-header">
                     <h2>Contact Us</h2>
                 </div>
@@ -146,22 +158,22 @@
                     <div class="form-section">
                         <form id="contactForm">
                             <div class="form-group">
-                                <label for="name" style="color: #121111;">Name</label>
+                                <label for="name">Name</label>
                                 <input type="text" id="fullname" name="fullname" placeholder="Your name">
                                 <span class="error-message" id="nameError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email" style="color: #121111;">Email</label>
+                                <label for="email">Email</label>
                                 <input type="email" id="email" name="email" placeholder="Your email">
                                 <span class="error-message" id="emailError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="phone" style="color: #121111;">Phone Number</label>
+                                <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="Your phone number">
                                 <span class="error-message" id="phoneError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="message" style="color: #121111;">Message</label>
+                                <label for="message">Message</label>
                                 <textarea id="message" name="message" placeholder="Your message"></textarea>
                                 <span class="error-message" id="messageError"></span>
                             </div>
@@ -169,13 +181,12 @@
                         </form>
                     </div>
                     <div class="image-section">
-                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        <img src="./image.png" alt="Contact Image" style="max-width: 80%; height: auto; max-height: 500px;">
                     </div>
                 </div>
             </div>
         </section>
     </div>
-</div>
-<script src="./contact.js"></script>
+    <script src="./contact.js"></script>
 </body>
 </html>
