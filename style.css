@@ -336,6 +336,7 @@ nav {
 #nav-list {
   list-style: none;
   align-items: center;
+  margin: 0px 0px 0px 59rem;
 }
 
 #nav-list li a {
