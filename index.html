@@ -674,7 +674,6 @@
 h2 {
   font-size:xx-large;
   margin-bottom: 1.5rem;
-  color: #ffffff;
 }
 
 p {
@@ -1683,7 +1682,6 @@ nav.hi ul li.NAVI i:hover  {
                   <textarea id="postContent" placeholder="Write your post here..." required></textarea>
                   <button type="submit">Submit</button>
               </form>
-              <div id="posts"></div>
           </div>
       </section>
 
@@ -1911,6 +1909,23 @@ button:hover:before {
       .recommendation-item:hover {
         transform: translateY(-10px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+/*       styling to handle improper alignment of get in touch section */
+      .section-title{
+        width:100%;
+      }
+      .contact-grid{
+        margin: 0 40px;
+      }
+      .contact-info, .contact-form{
+        padding:4rem;
+      }
+      button[type="submit"] {
+        align-self: center;
+        width: 200px;
+        height: 60px;
+        padding: 2rem;
+        font-size: 16px;
       }
     </style>
 
@@ -2205,14 +2220,23 @@ button:hover:before {
         <li><a href="#">Privacy Policy</a></li>
 
 
-        <li><a href="#">Disclaimer</a></li>
+
+        
         <li><a href="copyright.html">Copyright Notice</a></li>
 
       
 
-        <li><a href="#">Cookie Policy</a></li>
+        
 
        
+
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        
+
+        <li><a href="cookie_policy.html">Cookie Policy</a></li>
+
+        
+
       </ul>
     </div>
 

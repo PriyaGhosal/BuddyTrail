@@ -41,6 +41,7 @@
 │   ├── contributor.html
 │   └── contributor.js
 ├── cookie.html
+├── cookie_policy.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -78,6 +79,7 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
 │   ├── hacktoberfest1.png
