@@ -26,6 +26,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.html
 ├── book.html
 ├── boy.png
 ├── chatbot.css
@@ -39,9 +40,13 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie.html
+├── cookie_policy.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── disclaimer.css
+├── disclaimer.html
 ├── faq.html
 ├── firebase.js
 ├── fly.css
@@ -74,9 +79,10 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── google.png
 │   ├── googleLogo.png
-│   ├── gssocextd.jpg
-│   ├── hacktoberfest.png
+│   ├── gssocextd1.jpg
+│   ├── hacktoberfest1.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
@@ -118,6 +124,7 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms_of_service.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
