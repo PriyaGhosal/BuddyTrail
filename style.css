@@ -179,7 +179,10 @@ body {
   text-align: center;
   margin-top: 50px;
 }
-
+.sos-container h2 {
+  font-size: 2.2rem;
+  color:#0056b3;  
+}
 #sosButton {
   padding: 20px;
   font-size: 18px;
@@ -1577,6 +1580,9 @@ body.light-mode {
 .reviews-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
+}
+.dark-mode .sos-container p {
+  color: whitesmoke;
 }
 
 .review-form {
