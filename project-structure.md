@@ -42,6 +42,7 @@
 │   └── contributor.js
 ├── cookie.html
 ├── cookie_policy.html
+├── copyright.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
