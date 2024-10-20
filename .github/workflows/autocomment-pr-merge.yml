@@ -29,8 +29,13 @@ jobs:
         }
         EOF
         )
-        curl -X POST \
+        RESPONSE=$(curl -s -o response.json -w "%{http_code}" --max-time 60 -X POST \
           -H "Authorization: Bearer $GITHUB_TOKEN" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
-          -d "$COMMENT"
+          -d "$COMMENT")
+        if [ "$RESPONSE" -ne 201 ]; then
+          echo "Failed to add comment"
+          cat response.json
+          exit 1
+        fi

@@ -26,6 +26,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.html
 ├── book.html
 ├── boy.png
 ├── chatbot.css
@@ -42,6 +43,8 @@
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── disclaimer.css
+├── disclaimer.html
 ├── faq.html
 ├── firebase.js
 ├── fly.css
@@ -75,8 +78,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
-│   ├── gssocextd.jpg
-│   ├── hacktoberfest.png
+│   ├── gssocextd1.jpg
+│   ├── hacktoberfest1.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
