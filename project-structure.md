@@ -26,6 +26,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.html
 ├── book.html
 ├── boy.png
 ├── chatbot.css
@@ -39,9 +40,12 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── disclaimer.css
+├── disclaimer.html
 ├── faq.html
 ├── firebase.js
 ├── fly.css
@@ -58,7 +62,9 @@
 │   ├── twitter-x.svg
 │   ├── twitter.svg
 │   └── youtube.svg
+├── image.png
 ├── img
+│   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
@@ -73,6 +79,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
+│   ├── gssocextd1.jpg
+│   ├── hacktoberfest1.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
@@ -114,6 +122,7 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms_of_service.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
