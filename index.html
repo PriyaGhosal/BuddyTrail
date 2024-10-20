@@ -305,32 +305,38 @@
 
     <script src="script.js"></script>
     <header class="main-head">
-      <div class="logo">
-        <img src="img/logo.png" id="logo-web">
-        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-      </div>
-      <nav>
-        <ul id="nav-list">
-          <!-- Close button for dropdown -->
-          <span class="dropdown-close-btn" id="closeBtn">×</span>
-          <li><a href="#home" class="navhover">Home</a></li>
-          <li><a href="team.html" class="navhover">Team</a></li>
-          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="about.html" class="navhover">About</a></li>
-          <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-          <li><a href="./contact.html" class="navhover">Contact</a></li>
-          <li><a href="#reviews" class="navhover">Reviews</a></li>
-          <li><a href="auth.html" class="navhover">Sign In</a></li>
-        </ul>
-      </nav>
-      <!-- Toggle Button -->
-      <div class="toggle">
-        <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-        </button>
-      </div>
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="blog.html" class="navhover">Blogs</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+     
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+     
+    </ul>
+
+    <!-- Toggle Button -->
+    <button class="mode-toggle" id="modeToggle">
+      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+    </button>
+  </nav>
+</header>
 
       <!-- Hamburger button for mobile -->
       <button class="hamburger" id="hamburger">☰</button>
@@ -991,7 +997,11 @@ p {
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
+
+          
+
           <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button>
+
 
         </section>
           
@@ -1926,6 +1936,13 @@ button:hover:before {
       ></script>
 
     <!-- CONTACT US-->
+    <style>
+      .contact-section .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+</style>
         <section class="contact-section">
             <div class="container">
                 <h2 class="section-title">Get in Touch with BuddyTrail</h2>
@@ -1989,7 +2006,7 @@ button:hover:before {
                             <div class="form-group">
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <button type="submit" class="btn-submit">Send Message</button>
+                            <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -2060,9 +2077,8 @@ button:hover:before {
     </div>
   </section>
 
-
   <section id="reviews" class="reviews-section">
-    <div class="revieww">  
+    <div class="review">  
       <div class="review-form">
         <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
@@ -2187,7 +2203,7 @@ button:hover:before {
       <ul>
         <li><a href="#">Terms of Service</a></li>
         <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Disclaimer</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
         <li><a href="#">Copyright Notice</a></li>
         <li><a href="#">Cookie Policy</a></li>
       </ul>
@@ -2251,7 +2267,7 @@ button:hover:before {
 
   <!-- Footer Bottom Section -->
   <div class="footer-bottom">
-    <p>&copy; 2024 BuddyTrail. All rights reserved.</p>
+    <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
   </div>
 </footer>
 
