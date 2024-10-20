@@ -26,6 +26,10 @@
             <li><a href="contact.html" class="nav-link">Contact</a></li>
             <li><a href="auth.html" class="btn-primary">Sign In</a></li>
           </ul>
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+          </button>
         </nav>
       </div>
     </header>
@@ -368,8 +372,6 @@ button:hover {
  
 }
 
- 
-
   </style>
 
     <footer>
@@ -398,8 +400,54 @@ button:hover {
             </div>
           </div>
         </div>
-        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.++</p>
       </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const modeToggle = document.getElementById("modeToggle");
+    const sunIcon = document.querySelector(".sun-icon");
+    const moonIcon = document.querySelector(".moon-icon");
+
+    // Check saved theme in localStorage and apply it
+    const currentTheme = localStorage.getItem("theme") || "light";
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+    }
+
+    // Toggle between light and dark mode on button click
+    modeToggle.addEventListener("click", () => {
+        const isDarkMode = document.body.classList.toggle("dark-mode");
+
+        // Apply dark mode styles to relevant sections
+        const sections = document.querySelectorAll('.about, .core-values, .team');
+        sections.forEach(section => {
+            if (isDarkMode) {
+                section.classList.add('dark-mode');
+            } else {
+                section.classList.remove('dark-mode');
+            }
+        });
+
+        // Update icons and local storage
+        if (isDarkMode) {
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+            localStorage.setItem("theme", "dark");
+        } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
+
+
+    </script>
   </body>
 </html>
