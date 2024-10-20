@@ -26,6 +26,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.html
 ├── book.html
 ├── boy.png
 ├── chatbot.css
@@ -75,8 +76,8 @@
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── googleLogo.png
-│   ├── gssocextd.jpg
-│   ├── hacktoberfest.png
+│   ├── gssocextd1.jpg
+│   ├── hacktoberfest1.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
