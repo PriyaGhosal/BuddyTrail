@@ -10,13 +10,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
-   
    .card {
         width: 50%; /* Set a specific width */
         margin: 10px auto; /* Center horizontally with automatic margins */
         padding: 20px; /* Add padding */
         margin-bottom: 70px;
-       
         border: 1px solid #ccc; /* Optional: Add a border */
         border-radius: 8px; /* Optional: Add rounded corners */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
@@ -97,12 +95,33 @@
     margin-top: 5px;
     display: none; /* Hide by default */
 }
-    
+
+    /* Fixed header styles */
+    header {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        height: 85px;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Sticky effect and opacity changes */
+    header.sticky {
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0.9;
+    }
+
+    /* Adjust the content below the header */
+    .container-fluid {
+        margin-top: 85px; /* Space for the fixed header */
+    }
     
 </style>
 <body>
     <div class="container-fluid">
-    <header style="background-color: black;height:85px" >
+    <header>
         <nav style="padding: 5px;width:90%">
             <div class="logo">
               <img src="img/logo.png" id="logo-web">
@@ -195,5 +214,16 @@ window.gtranslateSettings = {
 ></script>
 
 <script src="./contact.js"></script>
+
+<script>
+    window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > 0) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    };
+</script>
 </body>
 </html>
