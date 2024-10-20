@@ -29,6 +29,7 @@
 ├── blog.html
 ├── book.html
 ├── boy.png
+├── button-ui.css
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
@@ -42,6 +43,7 @@
 │   └── contributor.js
 ├── cookie.html
 ├── cookie_policy.html
+├── copyright.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -119,6 +121,9 @@
 ├── script
 │   └── popup.js
 ├── script.js
+├── security.md
+├── service.css
+├── service.html
 ├── star-rating.js
 ├── style.css
 ├── styles
