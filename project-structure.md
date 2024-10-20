@@ -122,6 +122,7 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms_of_service.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
