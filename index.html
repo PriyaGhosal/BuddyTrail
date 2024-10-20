@@ -1476,33 +1476,33 @@ main.main_blogs {
           <ul>
               <li class="NAVI">
                 <!-- added favicon for destinations -->
-                <i class="hi-icon fa-solid fa-location-dot"></i>
-                <a class="hi-texts" href="#destinations">Destinations</a>
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#destinations">Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
-                <i class="hi-icon fa-solid fa-earth-americas"></i>
-                <a class="hi-texts" href="#travel-planning">Travel Planning</a>
+                <i class="fa-solid fa-earth-americas"></i>
+                <a href="#travel-planning">Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
-                <i class="hi-icon fa-regular fa-face-smile"></i>
-                <a class="hi-texts" href="#experiences">Travel Experiences</a>
+                <i class="fa-regular fa-face-smile"></i>
+                <a href="#experiences">Travel Experiences</a>
               </li>
               <li class="NAVI">
-                <i class="hi-icon fa-solid fa-gear"></i>
+                <i class="fa-solid fa-gear"></i>
                 <!-- added favicon for travel gear -->
-                <a class="hi-texts" href="#gear">Travel Gear</a>
+                <a href="#gear">Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
-                <i class="hi-icon fa-solid fa-shield"></i>
-                <a class="hi-texts" href="#safety">Travel Safety</a>
+                <i class="fa-solid fa-shield"></i>
+                <a href="#safety">Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
-                <i class="hi-icon fa-solid fa-seedling"></i>
-                <a class="hi-texts" href="#sustainable">Sustainable Travel</a>
+                <i class="fa-solid fa-seedling"></i>
+                <a href="#sustainable">Sustainable Travel</a>
               </li>
           </ul>
       </nav>
@@ -1536,17 +1536,18 @@ nav.hi ul li.NAVI a {
     border-radius: 5px; /* Rounded corners */
     transition: border 0.3s ease, background-color 0.3s ease;
 }
-
-.NAVI .hi-texts:hover{
-  transform: scale(1.1);
-  transition: all 0.3s ease;
+/*  not needed as styling for nav,li,a is handled at lower */
+/* nav.hi ul li.NAVI a:hover {
+    border-color: #ffcc00; 
+    background-color: #ffffff; 
+    color: #1e88e5;
+} */
+    
+/* Added styling for favicon */
+nav.hi ul li.NAVI i:hover  {
+    color: #ffcc00; /* color change on hover */
+    transform: scale(1.2); /* scale up on hover */
 }
-
-.hi-texts{
-  height: 100%;
-}
-
-
 
       /* Header Section */
       header.forum_1 {
@@ -1570,7 +1571,9 @@ nav.hi ul li.NAVI a {
           transition: color 0.3s ease;
       }
 
-     
+      h1#h1darkbtn:hover {
+          color: #ffcc00; /* Changes the color when hovered */
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -1588,18 +1591,24 @@ nav.hi ul li.NAVI a {
       nav.hi ul li.NAVI a {
           color: rgb(162, 37, 37);
           text-decoration: none;
-          font-size: 14px;  
-          padding: 0 5px;
-          
+          font-size: 14px; /* Reduced font size for a more compact design */
+          padding-right: 5px;
+          padding: 8px 12px; /* Reduced padding to fit minimal height */
           transition: color 0.3s, background-color 0.3s ease;
-          border-radius: 5px; 
+          border-radius: 5px; /* Slight rounding for a modern look */
       }
-      
+
+      nav.hi ul li.NAVI a:hover {
+          background-color: #ffcc00; /* Background highlight on hover */
+          color: #1e88e5; /* Text color change on hover */
+      }
     
-      
+      nav.hi ul li.NAVI a:hover::after {
+          width: 100%; 
+      }
 
       /* Responsive Design */
-       @media (max-width: 768px) {
+      /* @media (max-width: 768px) {
           header.forum_1 {
               flex-direction: column;
               align-items: flex-start;
@@ -1616,7 +1625,7 @@ nav.hi ul li.NAVI a {
               width: 100%;
               text-align: center;
           }
-      } 
+      } */
 
 
 
