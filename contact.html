@@ -10,13 +10,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
-   
    .card {
         width: 50%; /* Set a specific width */
         margin: 10px auto; /* Center horizontally with automatic margins */
         padding: 20px; /* Add padding */
         margin-bottom: 70px;
-       
         border: 1px solid #ccc; /* Optional: Add a border */
         border-radius: 8px; /* Optional: Add rounded corners */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
@@ -98,11 +96,32 @@
     display: none; /* Hide by default */
 }
     
-    
+    /* Fixed header styles */
+    header {
+        background-color: black;
+        
+        position: fixed;
+        top: 0;
+        height: 85px;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Sticky effect and opacity changes */
+    header.sticky {
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0.9;
+    }
+
+    /* Adjust the content below the header */
+    .container-fluid {
+        margin-top: 85px; /* Space for the fixed header */
+    }
 </style>
 <body>
     <div class="container-fluid">
-    <header style="background-color: black;height:85px" >
+    <header>
         <nav style="padding: 5px;width:90%">
             <div class="logo">
               <img src="img/logo.png" id="logo-web">
@@ -121,11 +140,9 @@
               <li><a href="#benefits" class="navhover">Benefits</a></li>
               <li><a href="about.html" class="navhover">About</a></li>
               <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-              
               <li><a href="./contact.html" class="navhover">Contact</a></li>
               <li><a href="#reviews" class="navhover">Reviews</a></li>
               <li><a href="auth.html" class="navhover">Sign In</a></li>
-             
             </ul>
         
             <!-- Toggle Button -->
@@ -133,11 +150,11 @@
               <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
               <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
             </button>
-          </nav>
+        </nav>
     </header>
+    
     <div>
         <section id="contactus">
-
             <div class="card pb-5 pt-1" style="background-color:#fff;">
                 <div class="card-header">
                     <h2>Contact Us</h2>
@@ -176,6 +193,7 @@
         </section>
     </div>
 </div>
+
 <script src="./contact.js"></script>
 </body>
 </html>
