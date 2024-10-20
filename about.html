@@ -13,82 +13,6 @@
   </head>
   <body>
     <header>
-
-      <div class="container">
-        <nav>
-          <div class="logo">
-            <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-            <h1 id="logo">BuddyTrail</h1>
-          </div>
-          <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link active">About Us</a></li>
-            <li><a href="team.html" class="nav-link">Team</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="auth.html" class="btn-primary">Sign In</a></li>
-            <button class="mode-toggle" id="modeToggle">
-                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-              </button>
-            </nav>
-          </header>
-          </ul>
-          
-        </nav>
-      </div>
-    </header>
-
-
-    <section class="about">
-      <div class="container">
-          <h1>About BuddyTrail</h1>
-          <p>Welcome to BuddyTrail, where we turn your travel dreams into reality. We provide exceptional travel planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that meet your unique travel preferences.</p>
-      </div>
-  </section>
-
-  <section class="core-values">
-      <div class="container">
-          <h2>Our Core Values</h2>
-          <div class="values">
-              <div class="value-item">
-                  <h3>Customer Satisfaction</h3>
-                  <p>We are committed to ensuring that every client receives the best possible travel experience with personalized service and attention to detail.</p>
-              </div>
-              <div class="value-item">
-                  <h3>Transparency</h3>
-                  <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden fees, ensuring you know exactly what you're paying for.</p>
-              </div>
-              <div class="value-item">
-                  <h3>Reliability</h3>
-                  <p>We offer trusted services with a dedicated support team available 24/7 to assist you during your travels.</p>
-              </div>
-              <div class="value-item">
-                  <h3>Innovation</h3>
-                  <p>We continuously update our services with the latest travel trends and technology, offering our clients a modern and seamless experience.</p>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="team">
-      <div class="container">
-          <h2>Meet Our Team</h2>
-          <div id="team-members" class="team-members">
-              <div class="team-member">
-                  <img src="img/PROJECT-LEADER.png" alt="Team Member 1">
-                  <h3>PRIYA Ghosal</h3>
-                  <p>CEO & Founder</p>
-                  <P>I'm Priya Ghosal, a sophomore at NSEC (IT) '27, embarking on an exciting journey in the world of technology and coding.
-                  </P>
-              </div>
-                 <div class="team-description">
-                    <p style="color: white;"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech innovators, and customer experience experts.
-                        United by our love for exploration and commitment to excellence, we work tirelessly to ensure your journey with
-                        us is seamless, inspiring, and unforgettable.</p>
-                        <a href="team.html" id="cta-button">The BuddyTrail Team</a>
-                        
-              </div> 
-=======
         <div class="container">
           <nav>
             <div class="logo">
@@ -163,7 +87,6 @@
                           </div>
                 </div> 
                   
-
                 
               
             </div>
@@ -175,27 +98,6 @@
 
  /* CTA Button */
 
- .mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 10; /* Ensure it stays above other elements */
-  }
-  
-  .mode-toggle img {
-    width: 30px; 
-    height: auto;
-  }
-  
-#cta-button {
-   margin-left: 300px;
-    display: inline-block;
-    padding: 10px 10px;  /* Adjust padding for button size */
-=======
  .align1{
     width: 255px;
     height: 50px;
@@ -210,7 +112,6 @@
     display: flex;
     justify-content: center;
     padding: 5px;/* Adjust padding for button size */    
-
     background-color: #000;  /* Background color black */
     color: #fff;  /* Text color white */
     text-align: center;
@@ -502,42 +403,9 @@ button:hover {
  
 }
 
-
  
 
   </style>
-  <script>
-    const modeToggle = document.getElementById('modeToggle');
-const sunIcon = document.querySelector('.sun-icon');
-const moonIcon = document.querySelector('.moon-icon');
-
-// Load theme from localStorage
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-  document.body.classList.add('dark-mode');
-  sunIcon.style.display = 'none';
-  moonIcon.style.display = 'inline-block';
-} else {
-  sunIcon.style.display = 'inline-block';
-  moonIcon.style.display = 'none';
-}
-
-// Toggle dark/light mode on button click
-modeToggle.addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-  
-  if (document.body.classList.contains('dark-mode')) {
-    sunIcon.style.display = 'none';
-    moonIcon.style.display = 'inline-block';
-    localStorage.setItem('theme', 'dark'); 
-  } else {
-    sunIcon.style.display = 'inline-block';
-    moonIcon.style.display = 'none';
-    localStorage.setItem('theme', 'light');
-  }
-});
-
-  </script>
 
 <footer>
     <div class="container">
