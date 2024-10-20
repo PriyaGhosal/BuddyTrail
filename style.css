@@ -282,6 +282,10 @@ button {
   font-size: 16px;
   transition: background-color 0.3s;
 }
+.heading-contributors h2{
+  color: transparent;
+}
+
 #btn a {
   color: white;
 }

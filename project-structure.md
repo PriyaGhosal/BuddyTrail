@@ -40,6 +40,7 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
