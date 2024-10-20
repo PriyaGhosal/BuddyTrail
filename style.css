@@ -502,9 +502,11 @@ nav {
 /**** LOCATIONS PAGE ****/
 
 #locations {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   overflow: hidden;
+  color: white; /* Ensures the text remains visible over the darker gradient */
 }
+
 
 h2 {
   text-align: center;
