@@ -49,12 +49,12 @@
       <th>Event Description</th>
    </tr>
    <tr>
-      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/README/img/gssocextd.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/gssocextd1.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
       <td>GirlScript Summer of Code 2024</td>
       <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
    </tr>
     <tr>
-      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/README/img/hacktoberfest.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
+      <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/hacktoberfest1.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
       <td>Hacktoberfest 2024</td>
       <td>Hacktoberfest is a month-long celebration of open source software run by DigitalOcean, GitHub, and Twilio. It encourages contributions to open source projects and promotes a global community of developers.</td>
    </tr>
@@ -66,6 +66,11 @@
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 # 📸 Website Preview
+
+
+https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
+
+
 ![Screenshot 2024-10-19 143805](https://github.com/user-attachments/assets/96abf31b-b1bc-4b05-ae4a-00e225da1e0c)
 
 ![Screenshot 2024-10-19 143906](https://github.com/user-attachments/assets/e77ac002-1a7b-4172-a847-b8ec950a1f89)
