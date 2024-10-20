@@ -1237,6 +1237,10 @@ footer {
     font-size: 14px;
 }
 
+.footer-bottom p {
+  color: #ffffff;
+}
+
 
 /* for facebook */
 .social-icons .fa-discord {
