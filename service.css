@@ -1,0 +1,30 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.service-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+    }
+}

@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuddyTrail</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="about.css" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-       
-    
+      header {
+            background-color: #2D3748;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
             #faq{
                 padding-top: 80px;
                 padding-top: 70px;
@@ -88,11 +106,27 @@
                 }
               
             </style>
-           
+
 
 </head>
 <body>
-   
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+          <h1 id="logo">BuddyTrail</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 <!-- FAQ Section -->
 <section id="faq">          
   <div class="faq-container">
@@ -156,7 +190,56 @@
   </div>
 </section>
 
-     
 
+<div class="gtranslate_wrapper"></div>
+
+<script>
+
+window.gtranslateSettings = {
+  "default_language":"en",
+  "detect_browser_language":true,
+  "wrapper_selector":".gtranslate_wrapper"
+}
+
+</script>
+
+<script 
+  src="https://cdn.gtranslate.net/widgets/latest/float.js"
+  defer
+></script>
+
+ 
+
+    <!-- Footer Include -->
+  
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column-l">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="footer-column-r">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal" target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+      </div>
+    </footer>
 </body>
 </html>
