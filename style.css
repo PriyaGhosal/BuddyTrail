@@ -510,14 +510,14 @@ nav {
 /**** LOCATIONS PAGE ****/
 
 #locations {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to top, #e23668 0%, #0b7a1f 100%);
   overflow: hidden;
 }
 
 h2 {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color: #ffffff;
 }
 .location-cards {
   display: flex;
@@ -525,6 +525,9 @@ h2 {
   justify-content: center;
   padding: 20px;
   gap: 14px;
+}
+.sos-container h2{
+  color:#1a365d;
 }
 .location-card {
   position: relative;
@@ -644,7 +647,7 @@ h2 {
 }
 
 .benefits-head {
-  background: #343c44;
+  background: #090f15de;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -2162,7 +2165,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deals-section h2 {
-  font-size: 2.2em;
+  font-size: x-large;
   margin-bottom: 20px;
   text-align: center;
 }
