@@ -214,6 +214,7 @@ h5 {
 #logo-web{
   height: 50px;
   width: 70px;
+  margin-left: 2px;
 }
 
 a {
@@ -326,13 +327,14 @@ nav {
 }
 
 .mode-toggle:hover{
-  border-radius: 50px;
+  border-radius: 80px 20px 80px 20px;
+  background-color:rgb(96, 99, 99);
+  opacity: 0.9;
 }
 
 .mode-toggle img {
   width: 30px; /* Adjust the size as needed */
-  height: auto;
-  
+  height: auto; 
 }
 
 
@@ -1057,6 +1059,7 @@ footer {
   #logo {
     padding: 1.8rem;
     text-align: center;
+    margin-left: 30px;
   }
 
   .cloud {
@@ -2054,13 +2057,16 @@ body.light-mode {
   font-size: 18px;
   border-radius: 20px; /* Creates rounded corners */
   transition: all 0.3s ease, color 0.3s; /* Smooth transition */
+  padding: 5px;
+  margin: 1.5px;
 }
 
 .navhover:hover {
   transform: scale(1.05);
   background-color: rgba(223, 223, 225, 0.1);
   color: rgb(14, 13, 13); /* Changes text color on hover */
-  border-radius: 2px;
+  border: 2px solid rgb(212, 200, 200);
+  border-radius: 20px;
 }
 
 #social-icons {
