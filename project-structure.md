@@ -135,6 +135,7 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms.css
 ├── terms_of_service.html
 ├── travel.css
 ├── travel.html
