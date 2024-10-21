@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,192 +9,278 @@
     <link rel="stylesheet" href="./contact.css">
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .main-head {
+            background-color: black; 
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        #logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        #nav-list {
+            list-style: none;
+        }
+
+        #nav-list li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #nav-list li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        #nav-list li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 50px 20px; 
+            margin-top: 80px;
+        }
+
+        .form-section {
+            width: 50%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .form-section {
+                width: 100%;
+            }
+
+            .image-section img {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+
+.hamburger {
+    display: none; 
+    flex-direction: column; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    background-color: white; 
+    display: block;
+    height: 3px; 
+    width: 25px; 
+    margin: 4px 0; 
+}
+
+@media (max-width: 768px) {
+    #nav-list {
+        display: none; 
+        position: absolute; 
+        top: 60px; 
+        right: 0;
+        background-color: black; 
+        width: 100%; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 20px 0; 
+        z-index: 100; 
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+
+    #nav-list.show {
+        display: flex; 
+    }
+}
+
+.dropdown-close-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px; 
+    font-size: 24px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+#nav-list.show .dropdown-close-btn {
+    display: block; 
+}
+
+        }
+    </style>
 </head>
-<style>
-   
-   .card {
-        width: 50%; /* Set a specific width */
-        margin: 10px auto; /* Center horizontally with automatic margins */
-        padding: 20px; /* Add padding */
-        margin-bottom: 70px;
-       
-        border: 1px solid #ccc; /* Optional: Add a border */
-        border-radius: 8px; /* Optional: Add rounded corners */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-    }
-    
-   .card-header {
-        background-color: #1971b0;
-        color: #0c0c0c;
-        padding: 10px;
-        margin-bottom: 15px;
-        text-align: center;
-        width: 90%;
-        border-bottom: 1px solid #ddd;
-        border-radius: 6px;
-    }
-    
-    #contactus .card-body {
-        display: flex;
-        justify-content: space-between; /* Form on the left and image on the right */
-        align-items: flex-start; /* Align content to the top */
-    }
-    
-    #contactus .form-section {
-        width: 50%; /* Width for the form section */
-        color: #fff;
-    }
-    
-    #contactus .image-section {
-        padding-top: 35px;
-        width: 60%; /* Width for the image section */
-        display: flex;
-        justify-content: center; /* Center the image */
-        align-items: center;
-    }
-    
-    #contactus .image-section img {
-        max-width: 100%; /* Ensure the image does not exceed its container width */
-        height: auto;
-    }
-    
-    #contactus .form-group {
-        margin-bottom: 20px;
-        color: #121111; /* Form text color */
-    }
-    
-    #contactus label {
-        display: block;
-        margin-bottom: 10px;
-    }
-    
-    #contactus input, #contactus textarea {
-        width: 100%; /* Adjust width for better alignment */
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    #contactus textarea {
-        height: 100px; /* Adjust height for textarea */
-    }
-    
-    #contactus button[type="submit"] {
-        background-color: #0a6aae;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    #contactus button[type="submit"]:hover {
-        background-color: #2d81f7;
-    }
 
-    .error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    display: none; /* Hide by default */
-}
-    
-    
-</style>
 <body>
-    <div class="container-fluid">
-    <header style="background-color: black;height:85px" >
-        <nav style="padding: 5px;width:90%">
+
+    <header class="main-head">
+        <nav>
             <div class="logo">
-              <img src="img/logo.png" id="logo-web">
-              <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+                <img src="img/logo.png" id="logo-web" alt="Logo">
+                <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
             </div>
-        
-            <!-- Hamburger button for mobile -->
+
             <button class="hamburger" id="hamburger">☰</button>
-        
+
             <ul id="nav-list">
-              <!-- Close button for dropdown -->
-              <span class="dropdown-close-btn" id="closeBtn">×</span>
-              <li><a href="./index.html" class="navhover">Home</a></li>
-              <li><a href="team.html" class="navhover">Team</a></li>
-              <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
-              <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-              <li><a href="about.html" class="navhover">About</a></li>
-              <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
-              
-              <li><a href="./contact.html" class="navhover">Contact</a></li>
-              <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-              <li><a href="auth.html" class="navhover">Sign In</a></li>
-             
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="#home" class="navhover">Home</a></li>
+                <li><a href="team.html" class="navhover">Team</a></li>
+                <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+                <li><a href="blog.html" class="navhover">Blogs</a></li>
+                <li><a href="about.html" class="navhover">About</a></li>
+                <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+                <li><a href="./contact.html" class="navhover">Contact</a></li>
+                <li><a href="#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
             </ul>
-        
-            <!-- Toggle Button -->
+
             <button class="mode-toggle" id="modeToggle">
-              <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-              <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
             </button>
-          </nav>
+        </nav>
     </header>
-    <div>
-        <section id="contactus">
 
-            <div class="card pb-5 pt-1" style="background-color:#fff;">
-                <div class="card-header">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="card-body">
-                    <div class="form-section">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name" style="color: #121111;">Name</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="Your name">
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" style="color: #121111;">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email">
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" style="color: #121111;">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-                                <span class="error-message" id="phoneError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" style="color: #121111;">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                <span class="error-message" id="messageError"></span>
-                            </div>
-                            <button type="submit">Send</button>
-                        </form>
+    <section id="contactus">
+        <div class="container">
+            <div class="form-section">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Your name">
+                        <span class="error-message" id="nameError"></span>
                     </div>
-                    <div class="image-section">
-                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email">
+                        <span class="error-message" id="emailError"></span>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
             </div>
-        </section>
-    </div>
-</div>
-
-<div class="gtranslate_wrapper"></div>
-
-<script>
-
-window.gtranslateSettings = {
-  "default_language":"en",
-  "detect_browser_language":true,
-  "wrapper_selector":".gtranslate_wrapper"
-}
-
-</script>
-
-<script 
-  src="https://cdn.gtranslate.net/widgets/latest/float.js"
-  defer
-></script>
-
-<script src="./contact.js"></script>
+        </div>
+    </section>
+    <div class="gtranslate_wrapper"></div>
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script src="./contact.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show'); 
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            navList.classList.remove('show'); 
+        });
+        </script>
 </body>
+
 </html>
