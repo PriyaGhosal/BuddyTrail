@@ -1,0 +1,113 @@
+/* STYLING FOR PRIMARY CONTACT SECTION */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 48%;
+}
+
+.contact-form {
+    width: 48%;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    flex-shrink: 0;
+}
+
+.info-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.about-buddytrail {
+    margin-top: 30px;
+}
+
+.about-buddytrail h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.about-buddytrail p {
+    font-size: 16px;
+    color: #fefefe;
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.book-btn {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
