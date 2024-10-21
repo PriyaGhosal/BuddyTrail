@@ -2,6 +2,7 @@
 ```
 ├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
+├── F&Q.html
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
@@ -69,6 +70,7 @@
 ├── img
 │   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
+│   ├── HELP-IMG.jpg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
 │   ├── PROJECT-LEADER.png
@@ -81,6 +83,7 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── download.jpeg
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
