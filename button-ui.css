@@ -1,0 +1,35 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh; /* Adjust height if necessary */
+  }
+
+
+.book2-btn {
+    padding: 15px 25px;
+    font-size: 20px;
+    background-color: #ba5ae0;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book2-btn:hover {
+    background-color: #9c48b7;
+    transform: scale(1.05);
+  }
+  
+  .book2-btn:active {
+    background-color: #812f98;
+    transform: scale(1);
+  }
+  
+  .book2-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(186, 90, 224, 0.5);
+  }
