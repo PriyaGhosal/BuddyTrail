@@ -2181,17 +2181,17 @@ button:hover:before {
 
         <div style="display: flex;">
           <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn">Your Name:</label>
+            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="destination" id="darkbtn">Destination/Service:</label>
+            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="rating" id="darkbtn">Rating:</label>
+            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
            <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -2217,9 +2217,9 @@ button:hover:before {
             </div>
            </div>
 
-            <label for="review" id="darkbtn">Your Review:</label>
+            <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
             <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
