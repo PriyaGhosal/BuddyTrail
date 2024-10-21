@@ -1,6 +1,88 @@
 /**** GLOBAL STYLES ****/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
+/* Popup Styling */
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Close Button Styling */
+.close {
+  position: absolute;
+  top: 10px; /* Adjusted position */
+  right: 10px; /* Adjusted position */
+  cursor: pointer;
+  display: inline-block;
+  width: 24px; /* Smaller size */
+  height: 24px; /* Smaller size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close svg {
+  width: 24px; /* Smaller size */
+  height: 24px; /* Smaller size */
+  stroke: red;
+  stroke-width: 2;
+  fill: none;
+}
+
+.close span {
+  position: absolute;
+  width: 2px;
+  height: 12px; /* Adjusted size */
+  background-color: red;
+  transform-origin: center;
+  transition: transform 0.25s ease-in-out;
+}
+
+.close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.close span:nth-child(3), .close span:nth-child(4) {
+  display: none;
+}
+
+.close:hover span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.close:hover span:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+/* Circle SVG Style */
+.close svg .circle {
+  stroke: red;
+  stroke-width: 2;
+}
+
+
 * {
   margin: 0;
   padding: 0;
