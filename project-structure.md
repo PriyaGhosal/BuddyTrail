@@ -7,6 +7,7 @@
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
 ├── about.css
 ├── about.html
 ├── auth.css
