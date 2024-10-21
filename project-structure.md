@@ -2,10 +2,12 @@
 ```
 ├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
+├── F&Q.html
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -29,6 +31,7 @@
 ├── blog.html
 ├── book.html
 ├── boy.png
+├── button-ui.css
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
@@ -40,8 +43,10 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
+├── copyright.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
@@ -67,6 +72,7 @@
 ├── img
 │   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
+│   ├── HELP-IMG.jpg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
 │   ├── PROJECT-LEADER.png
@@ -79,6 +85,7 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── download.jpeg
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
@@ -113,12 +120,16 @@
 ├── moon.png
 ├── package-lock.json
 ├── package.json
+├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
 ├── script
 │   └── popup.js
 ├── script.js
+├── security.md
+├── service.css
+├── service.html
 ├── star-rating.js
 ├── style.css
 ├── styles

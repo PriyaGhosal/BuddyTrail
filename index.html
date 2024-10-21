@@ -10,8 +10,10 @@
     <meta name="robots" content= "index,follow" />
 
     <link rel="stylesheet" href= "RatingStyle.css">
+    <link rel="stylesheet" href="button-ui.css">
     <link rel="stylesheet" href= "style.css" />
     <link rel="stylesheet" href= "./styles/popup.css">
+    <link rel="stylesheet" href= "cookie-popup.css">
     <link rel="preconnect" href= "https://fonts.googleapis.com" />
     <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
 
@@ -208,9 +210,26 @@
 .btn-view-itinerary:hover {
     background-color: #0056b3; 
 }
-
-
-
+ 
+.circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+ 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
@@ -326,6 +345,39 @@
       <div id="google_translate_element"></div>
     </div> -->
 
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
     <script>
       // Initialization function
       function googleTranslateElementInit() {
@@ -426,7 +478,7 @@
       <li><a href="blog.html" class="navhover">Blogs</a></li>
       <li><a href="about.html" class="navhover">About</a></li>
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-     
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
       <li><a href="./contact.html" class="navhover">Contact</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
@@ -434,10 +486,12 @@
     </ul>
 
     <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-    </button>
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
   </nav>
 </header>
 
@@ -456,12 +510,12 @@
           <h1>Ready for Your Next Adventure?</h1>
           <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
           <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
-          <form id="emailForm">
+          <form id="emailForm" >
             <input type="email" id="email" placeholder="Enter your email" required>
             <button type="submit" id="signup-btn">Sign Up</button>
           </form>
           <a href="#" id="no-thanks">No thanks</a>
-          <p id="terms">By signing up, you agree to our <a id="link" href="#1">Terms of Service</a> and <a id="link" href="#1">Privacy Policy</a></p>
+          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="" style="text-decoration: underline;">Privacy Policy</a></p>
       </div>
   </div>
 </div>
@@ -695,8 +749,9 @@
               <h3>Flight to Dubai</h3>
               <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
               <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span></p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
+          </div>
       
             <!-- Deal 2: Hotel Offer -->
             
@@ -705,8 +760,9 @@
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
+          </div>
       
             <!-- Deal 3: Travel Package -->
             <div class="deal-item">
@@ -714,8 +770,10 @@
               <h3>Kerala Backwaters Package</h3>
               <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
               <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+              
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
+          </div>
       
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
@@ -723,8 +781,10 @@
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              <button class="btn-hover" onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+              
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
+          </div>
       
             <!-- Deal 5: Adventure Trip -->
             <div class="deal-item">
@@ -732,8 +792,10 @@
               <h3>Adventure in Bali</h3>
               <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
               <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+              
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
+          </div>
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
@@ -741,8 +803,9 @@
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+              
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button></div>
 
             <!-- Deal 7: Wildlife Safari in Kenya -->
             <div class="deal-item">
@@ -750,8 +813,9 @@
               <h3>Wildlife Safari in Kenya</h3>
               <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
               <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
-              <button onclick="window.location.href='book.html'">Book Now</button>
-            </div></div>
+              
+            </div>
+            <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button></div>
           </div>
           <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
           <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -907,7 +971,11 @@ p {
   text-decoration: line-through;
   color: #6cff43; /* Discount text in a noticeable orange */
 }
-
+.btn-book-now {
+  position: fixed;
+    top: 84%;
+    left: 34%;
+}
 
         </style>
         
@@ -1102,9 +1170,13 @@ p {
 
           
 
-          <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button>
+          <!-- <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button> -->
 
-
+          <div class="button-container">
+          <button class="book2-btn" type="submit">
+            Book now
+          </button>
+        </div>
         </section>
           
   <style>
@@ -1184,19 +1256,27 @@ select:focus {
 
 /* Button Styling */
 .book-btn {
-    background-color: #2193b0; /* Gradient color for button */
-    color: white;
-    padding: 15px;
-    font-size: 20px;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Smooth gradient */
+    color: #fff;
+    padding: 12px 24px; /* Balanced padding for a better look */
+    font-size: 18px; /* Slightly smaller font for a cleaner appearance */
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px; /* Smoothly rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Pointer cursor for better interactivity */
+    width: fit-content; /* Ensures the button fits the content */
 }
 
 .book-btn:hover {
-    background-color: #6dd5ed; /* Gradient effect on hover */
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
 }
+
+.book-btn:active {
+    transform: translateY(1px); /* Pressed effect for click feedback */
+}
+
 
     /* Main Section Styling */
 .cab-booking-section {
@@ -2207,17 +2287,17 @@ button:hover:before {
 
         <div style="display: flex;">
           <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn">Your Name:</label>
+            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="destination" id="darkbtn">Destination/Service:</label>
+            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="rating" id="darkbtn">Rating:</label>
+            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
            <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -2243,9 +2323,9 @@ button:hover:before {
             </div>
            </div>
 
-            <label for="review" id="darkbtn">Your Review:</label>
+            <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
             <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
@@ -2264,6 +2344,69 @@ button:hover:before {
     </div>
   </section>
 
+
+  <!--Cookie pop up-->
+  <div id="cookie-popup" class="cookie-container">
+    <p>We value your privacy</p>
+    <p>
+        We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
+        By clicking "Accept", you consent to our use of cookies.
+        <a href="cookie_policy.html">Cookie Policy</a>
+    </p>
+    <div class="button-container">
+        <button id="customize-btn">Customize</button>
+        <button id="reject-btn">Reject</button>
+        <button id="accept-btn">Accept</button>
+    </div>
+</div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cookiePopup = document.getElementById("cookie-popup");
+    const acceptBtn = document.getElementById("accept-btn");
+    const rejectBtn = document.getElementById("reject-btn");
+    const customizeBtn = document.getElementById("customize-btn");
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    // Check if the user consent cookie exists
+    if (!getCookie("userConsent")) {
+        cookiePopup.style.display = "block"; // Show popup if no cookie is found
+    }
+
+    // Set the cookie and hide the popup when "Accept All" button is clicked
+    acceptBtn.addEventListener("click", function () {
+        setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after accepting
+    });
+
+    // Set the cookie and hide the popup when "Reject All" button is clicked
+    rejectBtn.addEventListener("click", function () {
+        setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after rejecting
+    });
+
+    // Handle Customize button (this can be expanded with further functionality)
+    customizeBtn.addEventListener("click", function () {
+        alert("Customization options can be added here.");
+    });
+});
+</script>
+
+          
 
   <!-- Chatbot icon -->
   <div id="chat-icon">🤖</div>
@@ -2320,13 +2463,13 @@ button:hover:before {
       <h3>Legal Links</h3>
       <ul>
         <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="copyright.html">Copyright Notice</a></li>
         <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="#">Copyright Notice</a></li>
-
         <li><a href="cookie_policy.html">Cookie Policy</a></li>
 
         
+
       </ul>
     </div>
 
@@ -2502,7 +2645,25 @@ button:hover:before {
         document.getElementById('confirmationPopup').style.display = 'none';
       }
     </script>
- <!-- Adding scroll progressBar-->
+ 
+
+ <div class="gtranslate_wrapper"></div>
+
+ <script>
+
+ window.gtranslateSettings = {
+   "default_language":"en",
+   "detect_browser_language":true,
+   "wrapper_selector":".gtranslate_wrapper"
+ }
+
+ </script>
+
+ <script 
+   src="https://cdn.gtranslate.net/widgets/latest/float.js"
+   defer
+ ></script>
+<!-- Adding scroll progressBar-->
  <script>
 
   window.onscroll = function() {
@@ -2609,8 +2770,49 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
-
+ 
+ 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+    
+        circles.forEach(function (circle) {
+          circle.x = 0;
+          circle.y = 0;
+        });
+    
+        window.addEventListener("mousemove", function (e) {
+          coords.x = e.pageX;
+          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+        });
+    
+        function animateCircles() {
+          let x = coords.x;
+          let y = coords.y;
+    
+          circles.forEach(function (circle, index) {
+            circle.style.left = `${x - 12}px`;
+            circle.style.top = `${y - 12}px`;
+            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+            const nextCircle = circles[index + 1] || circles[0];
+            circle.x = x;
+            circle.y = y;
+    
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+          });
+    
+          requestAnimationFrame(animateCircles);
+        }
+    
+        animateCircles();
+      });
+    
+    </script>
+ 
+ 
 </body>
 
 </html>

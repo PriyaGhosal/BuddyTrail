@@ -9,115 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-      <!-- Preloader -->
-      <div id="preloader">
-        <div class="loader-wrapper">
-          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
-          <div class="loader-globe"></div>
-        </div>
-        <div id="loading-text">Ready to Explore the World...</div>
-      </div>
-      <style>
-      /* Preloader Container */
-      #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-  }
-  
-  /* Wrapper for the logo and loader */
-  .loader-wrapper {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Logo Styling */
-  #logo {
-    width: 140px;
-    position: relative;
-    z-index: 10; /* Ensures logo stays above the loader */
-    animation: pulse 2s infinite ease-in-out;
-  }
-  
-  /* Circular Loader surrounding the logo */
-  .loader-globe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 8px solid transparent;
-    border-left-color: white;
-    border-right-color: white;
-    animation: spin 2s linear infinite;
-  }
-  
-  /* Loading Text */
-  #loading-text {
-    margin-top: 20px;
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-    animation: textGlow 2s ease-in-out infinite;
-  }
-  
-  /* Keyframes Animations */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes textGlow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-      </style>
-      <script>
-        // Function to hide preloader and show content once the page has fully loaded
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        const content = document.getElementById('content');
-    
-        // Set a small timeout for better user experience
-        setTimeout(function() {
-            // Hide preloader
-            preloader.style.opacity = '0';
-            preloader.style.transition = 'opacity 1s ease-in-out';
-    
-            // Show content after preloader fades out
-            setTimeout(function() {
-                preloader.style.display = 'none';
-                content.style.display = 'block';
-                content.classList.add('show');  // Trigger fade-in transition
-            }, 1000); // Match the transition duration
-        }, 2000);  // Adjust to the length of your spinner animation
-    });
-    
-      </script>
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
           <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
-            
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" />
@@ -130,11 +26,15 @@
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
-          
-          <p class="social-text">OR</p>
+            <p class="social-text">OR</p>
             <p class="social-text">Sign in with social platforms</p>
+
             <div class="social-media"> 
+              <button class="social-icon" id="googleSignInBtn">
+
+            <div class="social-media">
               <button class="social-icon">
+
                 <img src="./img/google.png" alt="Google Icon" style="width: 30px; height: 30px;">
               </button>
               <button class="social-icon" id="githubSignInBtn">
@@ -142,7 +42,7 @@
               </button>
             </div>
           </form>
-            
+
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -163,19 +63,11 @@
               <div id="strength-medium"></div>
               <div id="strength-strong"></div>
             </div>
-            <input type="submit" class="btn" value="Sign up" />           
+            <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>
       </div>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
-    <script src="firebase.js"></script>
-    <script>
-      // Home button
-      document.getElementById('home-btn').addEventListener('click', function() {
-        window.location.href = "index.html";
-      });
-    </script>
+
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -208,8 +100,55 @@
     </a>
     <div id="toast-container"></div>
     
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script>
+      const signUpBtn = document.getElementById('sign-up-btn');
+      const signInBtn = document.getElementById('sign-in-btn');
+      const container = document.querySelector('.container');
+
+      signUpBtn.addEventListener('click', () => {
+        container.classList.add('sign-up-mode');
+      });
+
+      signInBtn.addEventListener('click', () => {
+        container.classList.remove('sign-up-mode');
+      });
+
+      function togglePassword(id, element) {
+        const passwordInput = document.getElementById(id);
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          element.classList.add('active');
+        } else {
+          passwordInput.type = 'password';
+          element.classList.remove('active');
+        }
+      }
+    </script>
     <script type="module" src="auth.js" defer></script>
-    <!-- <script type="module" src="SignUpWithGoogle.js"></script> -->
+
+    <script type="module" src="SignUpWithGoogle.js"></script>
+
     <script type="module" src="SignIn-Up-withGithub.js"></script>
+
+  <div class="gtranslate_wrapper"></div>
+
+  <script>
+
+  window.gtranslateSettings = {
+    "default_language":"en",
+    "detect_browser_language":true,
+    "wrapper_selector":".gtranslate_wrapper"
+  }
+
+  </script>
+
+  <script 
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+
   </body>
 </html>
