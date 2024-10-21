@@ -17,7 +17,9 @@
     />
 </head>
 <style>
-   
+   body{
+    background: linear-gradient(135deg,#18a5a7,#b6c0c5);
+   }
    .card {
         width: 50%; /* Set a specific width */
         margin: 10px auto; /* Center horizontally with automatic margins */
@@ -30,13 +32,11 @@
     }
     
    .card-header {
-        background-color: #1971b0;
         color: #0c0c0c;
-        padding: 10px;
+        padding: 10px 10px 10px 70px;
         margin-bottom: 15px;
         text-align: center;
         width: 90%;
-        border-bottom: 1px solid #ddd;
         border-radius: 6px;
     }
     
@@ -104,6 +104,21 @@
     margin-top: 5px;
     display: none; /* Hide by default */
 }
+
+.message{
+  position: relative;
+  left: 60%;
+}
+button{
+  width: 70%;
+  position: relative;
+  left: 63%;
+  transition: all 0.4s ease;
+}
+button:hover{
+  width: 75%;
+  transform: scale(1.05);
+}
     
     
 </style>
@@ -145,7 +160,7 @@
     <div>
         <section id="contactus">
 
-            <div class="card pb-5 pt-1" style="background-color:#fff;">
+            <div class="card pb-5 pt-1" style="background-color:#fff;" id="Cont">
                 <div class="card-header">
                     <h2>Contact Us</h2>
                 </div>
@@ -167,8 +182,8 @@
                                 <input type="tel" id="phone" name="phone" placeholder="Your phone number">
                                 <span class="error-message" id="phoneError"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="message" style="color: #121111;">Message</label>
+                            <div class="form-group message">
+                                <label for="message" style="color: #121111; text-align: center;">Message</label>
                                 <textarea id="message" name="message" placeholder="Your message"></textarea>
                                 <span class="error-message" id="messageError"></span>
                             </div>
@@ -176,13 +191,15 @@
                         </form>
                     </div>
                     <div class="image-section">
-                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        <img src="./image.png" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px; scale:0.5; position:relative;
+                        top:-80px" >
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br>
 
 <div class="gtranslate_wrapper"></div>
 
