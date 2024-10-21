@@ -176,6 +176,10 @@ body {
   font-size: 2.2rem;
   color:#0056b3;  
 }
+.sos-container p{
+  font-size :1.2rem ;
+  font-weight: normal;
+}
 #sosButton {
   padding: 20px;
   font-size: 18px;
@@ -1104,10 +1108,9 @@ body {
   color: black;
 }
 
- issue
+
  
 h2 {
-main
 
   font-size:  2.5em;
   font-weight:  700;
@@ -1600,7 +1603,9 @@ Light mode styles body.light-mode {
   margin-bottom: 20px;
 }
 .dark-mode .sos-container p {
-  color: whitesmoke;
+  color: white;
+  font-size :1.2rem ;
+  font-weight: normal;
 }
 
 .review-form {
