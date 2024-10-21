@@ -7,6 +7,7 @@
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -42,6 +43,7 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
 ├── copyright.html
@@ -118,6 +120,7 @@
 ├── moon.png
 ├── package-lock.json
 ├── package.json
+├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html

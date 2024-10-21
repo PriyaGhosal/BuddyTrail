@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="button-ui.css">
     <link rel="stylesheet" href= "style.css" />
     <link rel="stylesheet" href= "./styles/popup.css">
+    <link rel="stylesheet" href= "cookie-popup.css">
     <link rel="preconnect" href= "https://fonts.googleapis.com" />
     <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
 
@@ -356,6 +357,7 @@
 
     <script src="script.js"></script>
     <header class="main-head">
+<<<<<<< HEAD
       <div class="logo">
         <img src="img/logo.png" id="logo-web">
         <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -371,6 +373,7 @@
           <li><a href="blog.html" class="navhover">Blogs</a></li>
           <li><a href="about.html" class="navhover">About</a></li>
           <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+          <li><a href="F&Q.html" class="navhover"> FAQ</a></li>
           <li><a href="./contact.html" class="navhover">Contact</a></li>
           <li><a href="reviews.html" class="navhover">Reviews</a></li>
           <li><a href="auth.html" class="navhover">Sign In</a></li>
@@ -383,6 +386,42 @@
           <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
         </button>
       </div>
+=======
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="blog.html" class="navhover">Blogs</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+     
+    </ul>
+
+    <!-- Toggle Button -->
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
+  </nav>
+</header>
+>>>>>>> 3d1e22f120f2cd3f20c1447cc400292e10409840
 
       <!-- Hamburger button for mobile -->
       <button class="hamburger" id="hamburger">☰</button>
@@ -404,7 +443,7 @@
             <button type="submit" id="signup-btn">Sign Up</button>
           </form>
           <a href="#" id="no-thanks">No thanks</a>
-          <p id="terms">By signing up, you agree to our <a id="link" href="#1">Terms of Service</a> and <a id="link" href="#1">Privacy Policy</a></p>
+          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="" style="text-decoration: underline;">Privacy Policy</a></p>
       </div>
   </div>
 </div>
@@ -2176,17 +2215,17 @@ button:hover:before {
 
         <div style="display: flex;">
           <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn">Your Name:</label>
+            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="destination" id="darkbtn">Destination/Service:</label>
+            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="rating" id="darkbtn">Rating:</label>
+            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
            <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -2212,9 +2251,9 @@ button:hover:before {
             </div>
            </div>
 
-            <label for="review" id="darkbtn">Your Review:</label>
+            <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
             <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
@@ -2233,6 +2272,69 @@ button:hover:before {
     </div>
   </section>
 
+
+  <!--Cookie pop up-->
+  <div id="cookie-popup" class="cookie-container">
+    <p>We value your privacy</p>
+    <p>
+        We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
+        By clicking "Accept", you consent to our use of cookies.
+        <a href="cookie_policy.html">Cookie Policy</a>
+    </p>
+    <div class="button-container">
+        <button id="customize-btn">Customize</button>
+        <button id="reject-btn">Reject</button>
+        <button id="accept-btn">Accept</button>
+    </div>
+</div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cookiePopup = document.getElementById("cookie-popup");
+    const acceptBtn = document.getElementById("accept-btn");
+    const rejectBtn = document.getElementById("reject-btn");
+    const customizeBtn = document.getElementById("customize-btn");
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    // Check if the user consent cookie exists
+    if (!getCookie("userConsent")) {
+        cookiePopup.style.display = "block"; // Show popup if no cookie is found
+    }
+
+    // Set the cookie and hide the popup when "Accept All" button is clicked
+    acceptBtn.addEventListener("click", function () {
+        setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after accepting
+    });
+
+    // Set the cookie and hide the popup when "Reject All" button is clicked
+    rejectBtn.addEventListener("click", function () {
+        setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after rejecting
+    });
+
+    // Handle Customize button (this can be expanded with further functionality)
+    customizeBtn.addEventListener("click", function () {
+        alert("Customization options can be added here.");
+    });
+});
+</script>
+
+          
 
   <!-- Chatbot icon -->
   <div id="chat-icon">🤖</div>
@@ -2289,22 +2391,9 @@ button:hover:before {
       <h3>Legal Links</h3>
       <ul>
         <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-
-
-
-        
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
         <li><a href="copyright.html">Copyright Notice</a></li>
-
-      
-
-        
-
-       
-
         <li><a href="disclaimer.html">Disclaimer</a></li>
-        
-
         <li><a href="cookie_policy.html">Cookie Policy</a></li>
 
         
