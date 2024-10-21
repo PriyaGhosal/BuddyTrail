@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
+    /> 
+    <meta name="robots" content= "index,follow" />
+
+    <link rel="stylesheet" href= "RatingStyle.css">
+    <link rel="stylesheet" href= "style.css" />
+    <link rel="stylesheet" href= "./styles/popup.css">
+    <link rel="preconnect" href= "https://fonts.googleapis.com" />
+    <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href= "https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel= "stylesheet"
+    />
+    <link rel="icon" href="/icons/airplane.svg" />
+    <link
+      rel= "stylesheet"
+      href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity= "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin= "anonymous"
+      referrerpolicy= "no-referrer"
+    />
+    <link rel="stylesheet" href="chatbot.css">
+    <title>BuddyTrail</title>
+    <style>
+     .header1{
+       /* background-color:white; */
+       border-radius:8px;
+       padding: 4px 8px 4px 8px;
+     }
+    /* Button Styling */
+    .btn {
+      background-color: #007bff; /* Primary button color */
+      padding: 10px 20px; /* Padding for button size */
+      text-decoration: none; /* Remove underline from text */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+    }
+  
+    /* Hover Effect for Buttons */
+    .btn:hover {
+      background-color: #0056b3; /* Darker color on hover */
+    }
+
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-between; /* Space between elements */
+    gap: 20px; /* Optional gap between form and rating section */
+    height: auto; /* Adjust height if necessary */
+}
+.form-section {
+    width: 70%; /* Adjust width as needed */
+}
+.rating-wrap {
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.center {
+    width: auto;
+    display: inline-flex; /* Align stars and rating count in a row */
+    align-items: center;
+    gap: 10px; /* Add some space between the stars and the count */
+}
+
+.rating {
+  height: 50px;
+}
+
+.rating:hover {
+  cursor: pointer;
+}
+
+#rating-value {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold;
+    color: black; /* Optional: change the color to match the theme */
+}
+
+.rating {
+    border: none;
+    float:right;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before {
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating > label {
+    color: #ddd; /* Empty stars initially */
+    float: right;
+    cursor: pointer;
+}
+
+/* Filled stars on hover and selection */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label {
+    color: #ddd; /* Keep stars empty until interaction */
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label {
+    color: rgb(230, 166, 17); /* Green for filled stars */
+}
+
+.rating > label:hover ~ label,
+.rating > label:hover {
+    color:rgb(230, 166, 17); /* Green hover effect */
+}
+      .chatbot-container {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other elements */
+      }
+
+      .chatbot-button {
+        background-color: #007bff; /* Change to your preferred color */
+        border: none;
+        border-radius: 50%;
+        padding: 5px; /* Smaller padding */
+        cursor: pointer;
+        position: relative;
+        width: 50px; /* Adjusted size */
+        height: 50px; /* Adjusted size */
+      }
+
+      .chatbot-button img {
+        width: 30px; /* Adjusted image size */
+        height: 30px; /* Adjusted image size */
+      }
+
+      .tooltip-text {
+        display: none; /* Hide by default */
+        position: absolute;
+        top: -10%; /* Position above the button */
+        left: -230px;
+        transform: translateX(-230px, -50%);
+        background-color: #333; /* Background color for tooltip */
+        color: #fff; /* Tooltip text color */
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap; /* Prevent text from wrapping */
+      }
+
+      .chatbot-button:hover .tooltip-text {
+        display: block; /* Show on hover */
+      }
+      .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .card:hover {
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+    .itinerary-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itinerary {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    .itinerary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  }
+
+.itinerary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-view-itinerary:hover {
+    background-color: #0056b3; 
+}
+
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+  </head>
+<body>
+     <script src="script.js"></script>
+    <header class="main-head">
+      <div class="logo">
+        <img src="img/logo.png" id="logo-web">
+        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+      </div>
+      <nav>
+        <ul id="nav-list">
+          <!-- Close button for dropdown -->
+          <span class="dropdown-close-btn" id="closeBtn">×</span>
+          <li><a href="#home" class="navhover">Home</a></li>
+          <li><a href="team.html" class="navhover">Team</a></li>
+          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+          <li><a href="#benefits" class="navhover">Benefits</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+          <li><a href="F&Q.html" class="navhover">F&Q</a></li>
+          <li><a href="./contact.html" class="navhover">Contact</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
+      </nav>
+      <!-- Toggle Button -->
+      <div class="toggle">
+        <button class="mode-toggle" id="modeToggle">
+          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+        </button>
+      </div>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </header>
+    <div style="width:100%;height: 110px;background-color: #333;margin-top: -20px;"></div>
+    <img style="position:absolute;width:250px; top: 450px; right: 1250px;mix-blend-mode: multiply;" src="img/HELP-IMG.jpg" alt="image">
+    <img style="position:absolute;width:250px; top: 300px;left: 1250px;mix-blend-mode: multiply;" src="img/download.jpeg" alt="image">
+    <div class="faq-container">
+        <!-- About Our Website Section -->
+        <section id="about">
+            <h2>About Our Website</h2>
+            <p>
+                Welcome to our travel agency website! We are dedicated to providing you with the best travel experiences by offering comprehensive trip plans and a wide selection of hotels. Whether you are looking for an adventurous getaway or a relaxing retreat, we've got you covered.
+            </p>
+        </section>
+
+        <!-- Most Frequent Questions Section -->
+        <section id="frequent-questions">
+            <h2>Most Frequent Questions</h2>
+            <ul>
+                <li><strong>Q: How do I book a trip?</strong><br>A: You can book a trip by visiting our "Book a Trip" section and filling out the required details.</li>
+                <li><strong>Q: Can I modify my hotel reservations?</strong><br>A: Yes, you can modify your hotel reservations through your account dashboard.</li>
+                <li><strong>Q: Do you offer group discounts?</strong><br>A: Yes, we offer special discounts for group bookings. Contact us for more details.</li>
+            </ul>
+        </section>
+
+        <!-- Suggestions/Questions Form Section -->
+        <section id="suggestions-form">
+            <h2>Suggestions/Questions</h2>
+            <form action="/submit-suggestion" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-container:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.02);
+}
+
+/* Section Headings */
+h2 {
+    color: #0056b3;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for headings */
+h2:hover {
+    color: #004494;
+    transform: translateY(-5px);
+}
+
+/* Paragraphs and List Styling */
+p, ul, li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for input and textarea */
+input:focus, textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Button Styling */
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #004494;
+    transform: translateY(-3px);
+}
+
+/* Form Section Background */
+#suggestions-form {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for form section */
+#suggestions-form:hover {
+    background-color: #e6f7ff;
+}
+
+/* Frequent Questions Section */
+#frequent-questions {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for FAQ section */
+#frequent-questions:hover {
+    background-color: #dcedc8;
+}
+
+/* About Section */
+#about {
+    background-color: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for About section */
+#about:hover {
+    background-color: #ffe0b2;
+}
+
+    </style>
+   
+
+</body>
+</html>
