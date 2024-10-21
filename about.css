@@ -511,5 +511,71 @@ footer {
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+  
+       body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+  
+      .navbar {
+          background-color: #f0f0f0;
+          transition: background-color 0.3s;
+        }
+  
+      body.dark-mode .navbar {
+          background-color: #333;
+        }
+  
+      .mode-toggle {
+          cursor: pointer;
+          border: none;
+          background: transparent;
+          outline: none;
+          padding: 10px;
+        }
+  
+     .mode-toggle img {
+          width: 24px;
+          height: 24px;
+       }
+  
+     body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+       }
+  
+     header.dark-mode {
+        background-color: #1f1f1f;
+       }
+  
+    .about.dark-mode,
+    .core-values.dark-mode,
+    .team.dark-mode {
+        background-color: #1f1f1f;
+        color: #ffffff;
+      }
+  
+    .about.dark-mode h1,
+    .core-values.dark-mode h2,
+    .team.dark-mode h2 {
+        color: #e0e0e0;
+      }
+  
+    .value-item.dark-mode {
+        background-color: #2c2c2c;
+        color: #ffffff;
+      }
+  
+    .team-member.dark-mode {
+        background-color: #2c2c2c;
+      }
+  
+    #cta-button.dark-mode {
+        background-color: #333333;
+        color: #ffffff;
+      }
