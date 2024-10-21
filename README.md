@@ -105,15 +105,15 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 
 ⚙️ Getting Started with the Code:
 1. Fork this Repository  🍴 
-2. Clone to your local machine 🧩:
+2. Clone to your local machine 🧩 using:
     git clone https://github.com/Your-Username/BuddyTrail.git
-3. Create a new branch :
+3. Create a new branch:
     git branch -c "Feature-Name"
-4. Navigate to the branch :
+4. Navigate to the branch:
     git checkout Feature-Name
 5. Add changes and Commit:
-    git commit -m "Add Changes msg"
-6. Push to the branch :
+    git commit -m "Add Changes message"
+6. Push to the branch:
     git push origin Feature-Name
 7. Submit Pull Request 
 
