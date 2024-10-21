@@ -7,6 +7,7 @@
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -134,7 +135,10 @@
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms.css
 ├── terms_of_service.html
+├── travel.css
+├── travel.html
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
