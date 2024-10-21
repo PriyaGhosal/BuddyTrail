@@ -223,9 +223,12 @@
         <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
       </div>
       <nav>
+        <button class="hamburger" id="hamburger">☰</button>
         <ul id="nav-list">
           <!-- Close button for dropdown -->
-          <span class="dropdown-close-btn" id="closeBtn">×</span>
+          <button class="dropdown-close-btn" id="closeBtn">✖</button> 
+          
+          
           <li><a href="#home" class="navhover">Home</a></li>
           <li><a href="team.html" class="navhover">Team</a></li>
           <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
@@ -246,13 +249,29 @@
         </button>
       </div>
 
-      <!-- Hamburger button for mobile -->
-      <button class="hamburger" id="hamburger">☰</button>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navList = document.getElementById("nav-list");
+            const closeBtn = document.getElementById("closeBtn");
+
+            hamburger.addEventListener("click", function () {
+                navList.classList.toggle("active");
+            });
+
+            closeBtn.addEventListener("click", function () {
+                navList.classList.remove("active");
+            });
+        });
+        </script>
     </header>
     <div style="width:100%;height: 110px;background-color: #333;margin-top: -20px;"></div>
     <img style="position:absolute;width:250px; top: 450px; right: 1250px;mix-blend-mode: multiply;" src="img/HELP-IMG.jpg" alt="image">
     <img style="position:absolute;width:250px; top: 300px;left: 1250px;mix-blend-mode: multiply;" src="img/download.jpeg" alt="image">
     <div class="faq-container">
+      
+
         <!-- About Our Website Section -->
         <section id="about">
             <h2>About Our Website</h2>
