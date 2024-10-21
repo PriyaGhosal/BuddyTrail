@@ -37,6 +37,25 @@
        border-radius:8px;
        padding: 4px 8px 4px 8px;
      }
+
+      <!-- Close Button -->
+        <div class="close" onclick="closePopup()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <svg viewBox="0 0 36 36" class="circle">
+            <path
+              stroke-dasharray="100, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+  </div>
+</div>
+      
     /* Button Styling */
     .btn {
       background-color: #007bff; /* Primary button color */
@@ -2709,6 +2728,11 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
     
     </script>
  
+
+ <script> 
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+  }</script> 
  
 </body>
 
