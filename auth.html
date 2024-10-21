@@ -26,10 +26,15 @@
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
-            <p class="social-text">OR</p>
-            <p class="social-text">Sign in with social platforms</p>
+            <a href="/forgot_password.html" style="text-decoration: none; color: black;"><p>Forgot Password?</p></a>
+            <p class="social-text">OR<br>Sign in with social platforms</p>
+
+            <div class="social-media">
+              <button class="social-icon" id="googleSignInBtn">
+
             <div class="social-media">
               <button class="social-icon">
+
                 <img src="./img/google.png" alt="Google Icon" style="width: 30px; height: 30px;">
               </button>
               <button class="social-icon" id="githubSignInBtn">
@@ -94,7 +99,7 @@
       <i class="fas fa-home"></i>
     </a>
     <div id="toast-container"></div>
-    
+
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
     <script src="firebase.js"></script>
@@ -123,6 +128,9 @@
       }
     </script>
     <script type="module" src="auth.js" defer></script>
+
+    <script type="module" src="SignUpWithGoogle.js"></script>
+
     <script type="module" src="SignIn-Up-withGithub.js"></script>
 
   <div class="gtranslate_wrapper"></div>
@@ -137,7 +145,7 @@
 
   </script>
 
-  <script 
+  <script
     src="https://cdn.gtranslate.net/widgets/latest/float.js"
     defer
   ></script>

@@ -48,6 +48,7 @@ a {
     color: #e68612;
     text-decoration: none;
     font-weight: bold;
+    z-index: 999;
 }
 
 

@@ -355,6 +355,14 @@ nav {
   cursor: pointer;
 }
 
+.toggle-button{
+  width: 7%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .mode-toggle {
   border: none;
   background-color: white;

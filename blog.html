@@ -332,68 +332,91 @@
         }
 
         footer {
-            background-color: var(--header-bg);
-            color: var(--header-text);
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 3rem 0; /* Increased padding for more space */
+    margin-top: 2rem;
+}
 
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem; /* Added gap for better spacing between columns */
+}
 
-        .footer-column {
-            flex: 1;
-            margin-bottom: 1rem;
-            min-width: 200px;
-        }
+.footer-column {
+    flex: 1;
+    margin-bottom: 2rem; /* Increased margin for better spacing */
+    min-width: 250px; /* Increased min-width for more balance */
+}
 
-        .footer-column h3 {
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
+.footer-column h3 {
+    margin-bottom: 1.5rem; /* Increased spacing for better layout */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; /* Increased font size for headings */
+    color: var(--secondary-color); /* Color added for contrast */
+}
 
-        .footer-column ul {
-            list-style-type: none;
-        }
+.footer-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
-        .footer-column ul li {
-            margin-bottom: 0.5rem;
-        }
+.footer-column ul li {
+    margin-bottom: 0.8rem; /* Increased spacing for a cleaner look */
+}
 
-        .footer-column a {
-            color: var(--header-text);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.footer-column a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 1.1rem; /* Increased font size for better readability */
+    transition: color 0.3s ease, transform 0.3s ease; /* Added hover effect */
+}
 
-        .footer-column a:hover {
-            color: var(--secondary-color);
-        }
+.footer-column a:hover {
+    color: var(--secondary-color); /* Smooth color transition */
+    transform: translateX(5px); /* Slight movement on hover */
+}
 
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
+.social-icons {
+    display: flex;
+    gap: 1.5rem; /* Increased gap between social icons */
+    margin-top: 1.5rem;
+}
 
-        .social-icons a {
-            color: var(--header-text);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
+.social-icons a {
+    color: var(--header-text);
+    font-size: 1.8rem; /* Increased size for icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-        .social-icons a:hover {
-            color: var(--secondary-color);
-        }
+.social-icons a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1); /* Scale effect on hover */
+}
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Softer border color */
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Softer footer text color */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Center align items on mobile */
+        gap: 1.5rem; /* Adjusted gap for mobile layout */
+    }
+
+    .footer-column {
+        min-width: unset; /* Remove min-width on smaller screens */
+        text-align: center; /* Center align text on mobile */
+    }
+}
 
         @media (max-width: 768px) {
             .hamburger {
