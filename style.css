@@ -2611,6 +2611,7 @@ input#rate-5:checked ~ header:before {
   position: relative;
   width: 50px; /* Adjusted size */
   height: 50px; /* Adjusted size */
+  margin-right: 3px;
 }
 
 .scroll-button img {
