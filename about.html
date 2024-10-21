@@ -26,8 +26,12 @@
               <li><a href="about.html" class="nav-link active">About Us</a></li>
               <li><a href="team.html" class="nav-link">Team</a></li>
               <li><a href="contact.html" class="nav-link">Contact</a></li>
-              <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+              <li ><a href="auth.html"class="btn-primary" >Sign In</a></li>
             </ul>
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+          </button>
           </nav>
         </div>
       </header>
@@ -43,14 +47,17 @@
     <section class="core-values">
         <div class="container" id="container-Core-values">
             <h2>Our Core Values</h2>
-            <div class="values">
+            <div class="values">    
                 <div class="value-item">
+                    
                     <h3>Customer Satisfaction</h3>
                     <p>We are committed to ensuring that every client receives the best possible travel experience with personalized service and attention to detail.</p>
+                    
                 </div>
                 <div class="value-item">
                     <h3>Transparency</h3>
                     <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden fees, ensuring you know exactly what you're paying for.</p>
+                    
                 </div>
                 <div class="value-item">
                     <h3>Reliability</h3>
@@ -166,7 +173,9 @@ body {
 
 /* About Section */
 .about {
-    background-color: #fff;
+    background-color: #e6f0ff;
+    animation: changeBackground 10s infinite alternate;
+    transition: background-color 2s ease-in-out;
     padding: 60px 0;
     text-align: center;
     position: relative;
@@ -468,7 +477,68 @@ button:hover {
             navList.classList.remove("active");
           });
         });
+
+       document.addEventListener("DOMContentLoaded", function() {
+         const modeToggle = document.getElementById("modeToggle");
+         const sunIcon = document.querySelector(".sun-icon");
+         const moonIcon = document.querySelector(".moon-icon");
+
+         // Check saved theme in localStorage and apply it
+         const currentTheme = localStorage.getItem("theme") || "light";
+          if (currentTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+         } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+        }
+
+    // Toggle between light and dark mode on button click
+    modeToggle.addEventListener("click", () => {
+        const isDarkMode = document.body.classList.toggle("dark-mode");
+
+        // Apply dark mode styles to relevant sections
+        const sections = document.querySelectorAll('.about, .core-values, .team');
+        sections.forEach(section => {
+            if (isDarkMode) {
+                section.classList.add('dark-mode');
+            } else {
+                section.classList.remove('dark-mode');
+            }
+        });
+
+        // Update icons and local storage
+        if (isDarkMode) {
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+            localStorage.setItem("theme", "dark");
+        } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
       </script>
+
+  <div class="gtranslate_wrapper"></div>
+
+  <script>
+
+  window.gtranslateSettings = {
+    "default_language":"en",
+    "detect_browser_language":true,
+    "wrapper_selector":".gtranslate_wrapper"
+  }
+
+  </script>
+
+  <script 
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+
 
   </body>
 </html>
