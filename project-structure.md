@@ -42,6 +42,7 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
 ├── copyright.html
