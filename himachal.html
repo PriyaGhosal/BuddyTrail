@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Pradesh Adventure Treks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="himachal.html">
+</head>
+<body>
+    <div class="container-fluid py-5 trek-header">
+        <h1 class="text-center text-white mb-4">Himachal Pradesh Adventure Treks</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search treks..." aria-label="Search treks">
+                    <button class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <select class="form-select" aria-label="Filter by difficulty">
+                    <option selected>Filter by difficulty</option>
+                    <option value="1">Easy</option>
+                    <option value="2">Moderate</option>
+                    <option value="3">Difficult</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <select class="form-select" aria-label="Filter by duration">
+                    <option selected>Filter by duration</option>
+                    <option value="1">1-3 days</option>
+                    <option value="2">4-7 days</option>
+                    <option value="3">8+ days</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <select class="form-select" aria-label="Sort by">
+                    <option selected>Sort by</option>
+                    <option value="1">Popularity</option>
+                    <option value="2">Duration</option>
+                    <option value="3">Difficulty</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="trekCards">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trek-card">
+                    <img src="triundtrek.jpg" class="card-img-top" alt="Triund Trek">
+                    <div class="card-body">
+                        <h5 class="card-title">Triund Trek</h5>
+                        <p class="card-text">A beautiful 2-day trek near Dharamshala with stunning views of the Dhauladhar range.</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><strong>Duration:</strong> 2 days</li>
+                            <li class="list-group-item"><strong>Difficulty:</strong> Easy to Moderate</li>
+                            <li class="list-group-item"><strong>Best Time:</strong> March to June, September to November</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trek-card">
+                    <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a" class="card-img-top" alt="Hampta Pass Trek">
+                    <div class="card-body">
+                        <h5 class="card-title">Hampta Pass Trek</h5>
+                        <p class="card-text">A diverse 5-day trek crossing from lush Kullu Valley to the arid Spiti region.</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><strong>Duration:</strong> 5 days</li>
+                            <li class="list-group-item"><strong>Difficulty:</strong> Moderate</li>
+                            <li class="list-group-item"><strong>Best Time:</strong> June to September</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trek-card">
+                    <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" class="card-img-top" alt="Bhrigu Lake Trek">
+                    <div class="card-body">
+                        <h5 class="card-title">Bhrigu Lake Trek</h5>
+                        <p class="card-text">A 4-day trek to a high-altitude glacial lake near Manali with panoramic views.</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><strong>Duration:</strong> 4 days</li>
+                            <li class="list-group-item"><strong>Difficulty:</strong> Moderate to Difficult</li>
+                            <li class="list-group-item"><strong>Best Time:</strong> May to October</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trekModal" tabindex="-1" aria-labelledby="trekModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trekModalLabel">Trek Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="trekCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="triundtrek.jpg" class="d-block w-100" alt="Trek Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a" class="d-block w-100" alt="Trek Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" class="d-block w-100" alt="Trek Image 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#trekCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#trekCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h4>Itinerary</h4>
+                    <ul>
+                        <li>Day 1: Start point to Base Camp</li>
+                        <li>Day 2: Base Camp to Summit</li>
+                        <li>Day 3: Summit to Base Camp</li>
+                        <li>Day 4: Return to Start point</li>
+                    </ul>
+                    <h4>Inclusions</h4>
+                    <ul>
+                        <li>Professional trek guide</li>
+                        <li>Camping equipment</li>
+                        <li>Meals during the trek</li>
+                        <li>First aid kit</li>
+                    </ul>
+                    <h4>Exclusions</h4>
+                    <ul>
+                        <li>Transportation to and from the trek starting point</li>
+                        <li>Personal expenses</li>
+                        <li>Travel insurance</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
