@@ -118,6 +118,7 @@
 ├── moon.png
 ├── package-lock.json
 ├── package.json
+├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── reviews.html
