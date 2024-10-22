@@ -483,6 +483,17 @@ nav{
     font-size: 0.9rem;
     color: var(--extra-light);
   }
+
+.footer__col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__col ul li a:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
   
   .socials {
     display: flex;
