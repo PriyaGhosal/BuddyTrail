@@ -7,6 +7,8 @@
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
+├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -42,6 +44,7 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
 ├── copyright.html
@@ -55,6 +58,10 @@
 ├── fly.css
 ├── fly.html
 ├── forgot_password.html
+├── goa-resort.css
+├── goa-resort.html
+├── himachal.css
+├── himachal.html
 ├── hotel.css
 ├── hotel.html
 ├── icons
@@ -118,8 +125,11 @@
 ├── moon.png
 ├── package-lock.json
 ├── package.json
+├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
+├── rajasthan.css
+├── rajasthan.html
 ├── reviews.html
 ├── script
 │   └── popup.js
@@ -127,12 +137,20 @@
 ├── security.md
 ├── service.css
 ├── service.html
+├── servicespage.html
 ├── star-rating.js
 ├── style.css
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms.css
 ├── terms_of_service.html
+├── travel-itineraries.css
+├── travel.css
+├── travel.html
+├── travelmap.css
+├── travelmap.html
+├── triundtrek.jpg
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
