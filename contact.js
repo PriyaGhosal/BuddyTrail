@@ -65,3 +65,31 @@ function isValidEmail(email) {
 function isValidPhone(phone) {
     return /^\+?[1-9]\d{1,14}$/.test(phone); // e.g., +1234567890
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+
+    // Check if the user has a saved mode preference
+    const currentMode = localStorage.getItem('mode');
+    if (currentMode === 'dark') {
+        document.body.classList.add('dark-mode');
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+    }
+
+    // Toggle the mode when the button is clicked
+    modeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+            localStorage.setItem('mode', 'dark'); // Save the user's preference
+        } else {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+            localStorage.setItem('mode', 'light'); // Save the user's preference
+        }
+    });
+});
