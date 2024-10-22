@@ -57,6 +57,10 @@
 ├── fly.css
 ├── fly.html
 ├── forgot_password.html
+├── goa-resort.css
+├── goa-resort.html
+├── himachal.css
+├── himachal.html
 ├── hotel.css
 ├── hotel.html
 ├── icons
@@ -123,6 +127,8 @@
 ├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
+├── rajasthan.css
+├── rajasthan.html
 ├── reviews.html
 ├── script
 │   └── popup.js
@@ -130,6 +136,7 @@
 ├── security.md
 ├── service.css
 ├── service.html
+├── servicespage.html
 ├── star-rating.js
 ├── style.css
 ├── styles
@@ -139,6 +146,7 @@
 ├── terms_of_service.html
 ├── travel.css
 ├── travel.html
+├── triundtrek.jpg
 └── update discussion forum
 ```
 <!-- END_STRUCTURE -->
