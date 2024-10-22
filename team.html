@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Contributors</title>
+    <link rel="stylesheet" href="communityStyle.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     
+    <link rel="stylesheet" href="RatingStyle.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+</head>
+<style>
+    
+body {
+    /* padding-top: 80px; */
+    background-color: #040b21;
+    padding-top: 100px;
+}
+.home-btn{
+    height: 50px;
+    background-color:black ;
+    color: white;
+    border-radius: 10px;
+}
+
+.team-top {
+    text-align: center;
+}
+
+.team-top h3 {
+    font-size: 36px;
+    margin-top: 20px;
+    border: 2.5px solid gray;
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member {
+    text-align: center;
+    
+}
+
+.team-member img {
+    width: 180px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    border: 4px solid #fff;
+    background-color: #000;
+}
+
+.team-member p {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(241, 228, 228);
+}
+
+.team-member img:hover {
+    transform: scale(1.121);
+    border: 0px;
+    position: relative;
+}
+
+.team-member p:nth-child(1) {
+    z-index: 999;
+}
+
+.team-member p:nth-child(2) {
+    border: 2px solid #333;
+    background-color: #ffffff4a;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.box-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-container {
+    transition: all 0.3s ease;
+}
+
+.common-flip-style {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.common-box-style {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    border-radius: 10px;
+}
+
+.flip-box {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.box-front {
+    transform: none;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box-back {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    transform: rotateX(0) rotateY(-180deg);
+    background: #fff;
+    color: red;
+    border: 5px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    word-wrap: break-word;
+
+    /* Additions to confine the text */
+    border-radius: 50%; /* Match the circular profile picture */
+    padding: 10px; /* Add padding to keep text away from the edges */
+    overflow: hidden; /* Ensure no text overflows the box */
+   
+
+
+}
+
+.box-back .box-content {
+    text-align: center;
+    word-wrap: break-word; /* Allows long words to wrap */
+    overflow-wrap: break-word; /* Helps in breaking long words */
+    white-space: normal; /* Ensures text wraps onto multiple lines */
+    
+    /* Add text ellipsis if content overflows */
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; /* Adjust line height to prevent text collision */
+    font-size: 14px; /* Adjust font size to fit the content better */
+}
+.flip-box:hover .box-front {
+    transform: rotateX(0) rotateY(180deg);
+}
+
+.flip-box:hover .box-back {
+    border-radius: 50%;
+    color: red;
+    transform: none;
+}
+
+.box-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateZ(90px);
+    border-radius: 50%;
+}
+
+.box-content-wrapper img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* text"meet our  awesome contributors" design for glowy animation  */
+.heading-contributors {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-stretch: expanded;
+    padding-bottom: 1px;
+    line-height: 1.2; /* Adjusted line-height to work better with large text */
+    text-transform: Uppercase;
+    color: transparent;
+    -webkit-text-stroke: 0.1px #140000;
+    background: url(img/Premium\ Photo\ _\ Vibrant\ mesh\ gradient\ with\ magenta\ and\ blue\ colors\ high\ quality\ image\ for\ backgrounds\ and\ web.jpeg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 10s linear infinite;
+    margin-top: 20px; /* Add some top margin */
+    margin-bottom: 40px; /* Add some bottom margin to separate from other elements */
+}
+
+.main-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 15px;
+  height: 90px;
+  background-color: #000; /* Initially black */
+  color: white;
+  display: flex;
+  justify-content:space-evenly; /* Adjusted to space-between for better layout */
+  align-items: center;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+#nav-list {
+  display: flex;
+  gap: 1rem; /* Adjusted gap for better spacing */
+  list-style: none;
+  margin-left: 10px;
+  padding: 0;
+  align-items: center;
+}
+#nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.navhover:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
+  color: white; /* Changes text color on hover */
+}
+@keyframes back{
+  100%{
+    
+    background-position: 200% 0;
+  }
+}
+
+
+#logo-web{
+  height: 50px;
+  width: 70px;
+}
+
+#nav-list {
+  display: flex;
+  gap: 0.3rem; /* Adjusted gap for better spacing */
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.main-head a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-head li{
+    display: inline;
+}
+
+#nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 20px;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 40px; /* Define a fixed width for the button */
+  height: 60px; /* Define a fixed height for the button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 5; /* Ensure it doesn't interfere with the rest of the navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Ensure hover effect is rounded around the button */
+}
+
+/* Confine hover effect to the button area only */
+.mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Confined hover background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  border-radius: 50%; /* Keep it circular */
+}
+
+.mode-toggle img {
+  width: 30px; /* Icon size */
+  height: auto;
+  display: block; /* Ensure it doesn't stretch outside the button */
+}
+.footer-column.newsletter {
+    max-width: 300px;
+    text-align: center;
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+#subscription-message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+</style>
+<body>
+
+    <!-- Header Include -->
+     <div class="main-head">
+        <div class="logo">
+            <img src="img/logo.png" id="logo-web">
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+          </div>
+      
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+            
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+           
+          </ul>
+      
+        <!-- Toggle Button -->
+        <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+        </button>
+        </div>
+    </div>
+    <!-- Sidebar Include -->
+    <aside>
+        <!-- Include your sidebar here -->
+    </aside>
+
+    <!-- Navbar Include -->
+    <main>
+        <section class="team">
+            <div class="team-top" id="slide">
+                <div class="heading-contributors"><h2>Meet our awesome contributors 💙</h2></div>
+                <div class="team-members">
+                    <!-- Team members' data will be dynamically populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-container">
+          <!-- About Us Section -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html" class="faq-link">FAQs</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contributor/contributor.html">Our Contributor</a></li>
+            </ul>
+          </div>
+      
+          <!-- Legal Links Section -->
+          <div class="footer-column">
+            <h3>Legal Links</h3>
+            <ul>
+              <li><a href="terms_of_service.html">Terms of Service</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="copyright.html">Copyright Notice</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      
+              
+      
+            </ul>
+          </div>
+      
+          <!-- Contact Us Section -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          </div>
+      
+          <!-- Follow Us Section -->
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
+              <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+      
+          <!-- Newsletter Form Section -->
+          <style>
+            .social-icons {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+    
+            .social-icons a {
+                color: #E2E8F0;
+                transition: color 0.3s ease, transform 0.2s ease;
+            }
+    
+            .social-icons a:hover {
+                color: #4C51BF;
+                transform: translateY(-2px);
+            }
+
+/* for facebook */
+.social-icons .fa-discord {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-discord:hover {
+    color: #4267b2;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  /* for twitter */
+  .social-icons .fa-x-twitter {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-x-twitter:hover {
+    color: black;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  /* for instagram */
+  .social-icons .fa-github {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-github:hover {
+    color: #c32aa3;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  /* for instagram */
+  .social-icons .fa-linkedin-in {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-linkedin-in:hover {
+    color: #0a66c2;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+    
+            
+            .footer-column.newsletter {
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #newsletter-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #email {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button[type="submit"] {
+                width: 100px;
+                padding: 6px;
+                font-size: 14px;
+                height: 50px;
+                background-color: #007bff;
+            }
+            #subscription-message {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+          <div class="footer-column newsletter" id="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="newsletter-form">
+              <input type="email" id="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscription-message"></p>
+          </div>
+        </div>
+      
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+        </div>
+      </footer>
+
+      
+    <script>
+        const ownerName = "PriyaGhosal";
+const repoName = "BuddyTrail";
+const apiURL = `https://api.github.com/repos/${ownerName}/${repoName}/contributors`;
+
+fetch(apiURL)
+    .then((response) => response.json())
+    .then((contributors) => {
+        const teamMembersDiv = document.querySelector(".team-members");
+        contributors.forEach((contributor) => {
+            const contributorDiv = document.createElement("div");
+            contributorDiv.classList.add("team-member");
+
+            const boxPanelSection = document.createElement("section");
+            boxPanelSection.classList.add("box-panel");
+            const widgetContainer = document.createElement("div");
+            widgetContainer.classList.add("widget-container");
+            const flipBox = document.createElement("div");
+            flipBox.classList.add("flip-box", "common-flip-style");
+            const boxFront = document.createElement("div");
+            boxFront.classList.add("box-front", "common-box-style");
+            const boxContentWrapperFront = document.createElement("div");
+            boxContentWrapperFront.classList.add("box-content-wrapper");
+            const contributorImageFront = document.createElement("img");
+            contributorImageFront.src = contributor.avatar_url;
+            contributorImageFront.alt = contributor.login;
+            boxContentWrapperFront.appendChild(contributorImageFront);
+            boxFront.appendChild(boxContentWrapperFront);
+
+            const boxBack = document.createElement("div");
+            boxBack.classList.add("box-back", "common-box-style", "box-bgi-effect");
+            const boxContentWrapperBack = document.createElement("div");
+            boxContentWrapperBack.classList.add("box-content-wrapper");
+            const boxContentBack = document.createElement("div");
+            boxContentBack.classList.add("box-content");
+            const contributorNameBack = document.createElement("h1");
+            contributorNameBack.textContent = "Hello there!";
+            const contributorRoleBack = document.createElement("h1");
+            contributorRoleBack.innerHTML = `I am the <strong>${contributor.login}</strong>.`;
+            const contributorCommitsBack = document.createElement("h1");
+            contributorCommitsBack.textContent = `Commits: ${contributor.contributions}`;
+            boxContentBack.appendChild(contributorNameBack);
+            boxContentBack.appendChild(contributorRoleBack);
+            boxContentBack.appendChild(contributorCommitsBack);
+            boxContentWrapperBack.appendChild(boxContentBack);
+            boxBack.appendChild(boxContentWrapperBack);
+
+            flipBox.appendChild(boxFront);
+            flipBox.appendChild(boxBack);
+            widgetContainer.appendChild(flipBox);
+            boxPanelSection.appendChild(widgetContainer);
+            contributorDiv.appendChild(boxPanelSection);
+
+            const contributorLink = document.createElement("a");
+            contributorLink.href = contributor.html_url;
+            contributorLink.target = "_blank";
+
+            const contributorName = document.createElement("p");
+            contributorName.textContent = contributor.login;
+
+            const contributorRole = document.createElement("p");
+            contributorRole.textContent = "Commits: " + contributor.contributions;
+
+            contributorDiv.appendChild(contributorLink);
+            teamMembersDiv.appendChild(contributorDiv);
+        });
+    })
+    .catch((error) => {
+        console.error("Error fetching contributors:", error);
+    });
+    
+    // Dark and light mode toggle logic
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    
+    modeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+        const darkelem = document.querySelectorAll('#darkbtn');
+        const h1dark = document.querySelectorAll('#h1darkbtn');
+        const cardbtn = document.querySelectorAll('#btn a');
+        
+        if (document.body.classList.contains('dark-mode')) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
+        localStorage.setItem('theme', 'dark');
+        darkelem.forEach((elem) => elem.style.color = 'white');
+        cardbtn.forEach((elem) => elem.style.color = 'white');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#FFA500');
+        } else {
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'light');
+        darkelem.forEach((elem) => elem.style.color = 'gray');
+        h1dark.forEach((darkbtn) => darkbtn.style.color = '#0057B3');
+        cardbtn.forEach((elem) => elem.style.color = 'black');
+        }
+    });
+    
+
+    
+    </script>
+
+  <div class="gtranslate_wrapper"></div>
+
+  <script>
+
+  window.gtranslateSettings = {
+    "default_language":"en",
+    "detect_browser_language":true,
+    "wrapper_selector":".gtranslate_wrapper"
+  }
+
+  </script>
+
+  <script 
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+
+</body>
+</html>

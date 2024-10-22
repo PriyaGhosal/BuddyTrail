@@ -70,7 +70,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
+  margin: 20px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
@@ -107,13 +107,16 @@ form.sign-in-form {
 }
 
 .social-text {
+  margin:5px 0;
   padding: 0.7rem 0;
   font-size: 1rem;
+  text-align: center;
 }
 
 .social-media {
   display: flex;
   justify-content: center;
+  gap:15px;
 }
 
 .social-icon {
@@ -130,6 +133,7 @@ form.sign-in-form {
   text-decoration: none;
   font-size: 1.5rem;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 #github:hover {
@@ -267,6 +271,10 @@ form.sign-in-form {
   z-index: 1;
 }
 
+.sign-in-form .btn.solid {
+  margin-bottom: 20px; 
+}
+
 .container.sign-up-mode .right-panel .image,
 .container.sign-up-mode .right-panel .content {
   transform: translateX(0%);
@@ -317,6 +325,32 @@ form.sign-in-form {
 .password-strength .weak { background-color: #ff4757; }
 .password-strength .medium { background-color: #ffa502; }
 .password-strength .strong { background-color: #23ad5c; }
+
+/* Toast styles */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.toast {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.toast.show {
+  opacity: 1;
+}
+.toast.success {
+  background-color: #4CAF50;
+}
+.toast.error {
+  background-color: #F44336;
+}
 
 @media (max-width: 870px) {
   .container {
@@ -468,43 +502,11 @@ form.sign-in-form {
   background: #191919;
 }
 
-/* for chatbot styling */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1000; /* Ensure it appears above other elements */
+.social-icon {
+  margin: 0 20px; 
 }
 
-.chatbot-button {
-  background-color: #111; /* Change to your preferred color */
-  border: none;
-  border-radius: 50%;
-  padding: 5px; /* Smaller padding */
-  cursor: pointer;
-  position: relative;
-  width: 50px; /* Adjusted size */
-  height: 50px; /* Adjusted size */
-}
-
-.chatbot-button img {
-  width: 30px; /* Adjusted image size */
-  height: 30px; /* Adjusted image size */
-}
-
-.tooltip-text {
-  display: none; /* Hide by default */
-  position: absolute;
-  top: -10%; /* Position above the button */
-  left: -230px;
-  transform: translateX(-230px, -50%);
-  background-color: #333; /* Background color for tooltip */
-  color: #fff; /* Tooltip text color */
-  padding: 5px;
-  border-radius: 5px;
-  white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.chatbot-button:hover .tooltip-text {
-  display: block; /* Show on hover */
+.login{
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

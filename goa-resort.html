@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Beach Resorts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="goa-resort.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid bg-light py-5">
+        <h1 class="text-center mb-5">Goa Beach Resorts</h1>
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Search resorts..." aria-label="Search resorts">
+            </div>
+            <div class="col-md-3 mb-3">
+                <select class="form-select" aria-label="Sort resorts">
+                    <option selected>Sort by</option>
+                    <option value="price">Price</option>
+                    <option value="rating">Rating</option>
+                    <option value="popularity">Popularity</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+                    Filter
+                </button>
+            </div>
+        </div>
+        <div class="collapse mb-4" id="filterCollapse">
+            <div class="card card-body">
+                <h5 class="mb-3">Filter by amenities:</h5>
+                <div class="row">
+                    <div class="col-md-3 col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="poolFilter">
+                            <label class="form-check-label" for="poolFilter">
+                                Swimming Pool
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="spaFilter">
+                            <label class="form-check-label" for="spaFilter">
+                                Spa
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="beachFilter">
+                            <label class="form-check-label" for="beachFilter">
+                                Beach Access
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="restaurantFilter">
+                            <label class="form-check-label" for="restaurantFilter">
+                                Restaurant
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="resortGrid">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 resort-card">
+                    <img src="https://images.unsplash.com/photo-1582610116397-edb318620f90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk3Nw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Sunset Beach Resort">
+                    <div class="card-body">
+                        <h5 class="card-title">Sunset Beach Resort</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Calangute, Goa</p>
+                        <p class="card-text">Experience luxury by the sea with stunning sunset views.</p>
+                        <div class="mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                            <i class="bi bi-flower1 me-2" title="Spa"></i>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 resort-card">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk5MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Palm Grove Resort">
+                    <div class="card-body">
+                        <h5 class="card-title">Palm Grove Resort</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Baga, Goa</p>
+                        <p class="card-text">Relax in our tropical paradise surrounded by palm trees.</p>
+                        <div class="mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 resort-card">
+                    <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUxMDAwMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Azure Bay Resort">
+                    <div class="card-body">
+                        <h5 class="card-title">Azure Bay Resort</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Palolem, Goa</p>
+                        <p class="card-text">Discover serenity in our private bay with crystal clear waters.</p>
+                        <div class="mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                            <i class="bi bi-flower1 me-2" title="Spa"></i>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="resortModal" tabindex="-1" aria-labelledby="resortModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resortModalLabel">Resort Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Detailed information about the resort will be displayed here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

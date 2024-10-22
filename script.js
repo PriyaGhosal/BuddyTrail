@@ -315,6 +315,37 @@
 
     
 // }
+/*SOS*/
+function sendSOS() {
+    const statusDiv = document.getElementById("sos-status");
+    
+    // Check if Geolocation is available
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Generate a message with location data
+            const sosMessage = `Emergency! My current location is: Latitude: ${latitude}, Longitude: ${longitude}. Please send help immediately.`;
+
+            // Provide options to send the SOS message via Email or SMS
+            statusDiv.innerHTML = `
+                <p>Location acquired. Send your emergency message:</p>
+                <a href="mailto:?subject=Emergency SOS&body=${encodeURIComponent(sosMessage)}" target="_blank">
+                    <button>Email SOS</button>
+                </a>
+                <a href="sms:?body=${encodeURIComponent(sosMessage)}" target="_blank">
+                    <button>SMS SOS</button>
+                </a>
+            `;
+        }, function (error) {
+            statusDiv.innerHTML = `<p>Error retrieving location: ${error.message}</p>`;
+        });
+    } else {
+        statusDiv.innerHTML = "<p>Geolocation is not supported by your browser.</p>";
+    }
+}
+
 document.getElementById('postForm').addEventListener('submit', function (e) {
     e.preventDefault();
     
@@ -328,6 +359,45 @@ document.getElementById('postForm').addEventListener('submit', function (e) {
 
     postContainer.appendChild(newPost);
     document.getElementById('postContent').value = ''; // Clear the textarea
+});
+const fileInput = document.getElementById('file-input');
+const uploadForm = document.getElementById('upload-form');
+const contentList = document.getElementById('content-list');
+
+uploadForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert('Please select a file to upload.');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', file);
+
+  try {
+    const response = await fetch('/upload', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) {
+      throw new Error('Error uploading file: ' + response.statusText);
+    }
+
+    const data = await response.json();
+    console.log('File uploaded:', data.filename);
+
+    // Update content list with the new file
+    const listItem = document.createElement('li');
+    listItem.textContent = data.filename;
+    contentList.appendChild(listItem);
+  } catch (error) {
+    console.error('Error uploading file:', error);
+    alert('An error occurred while uploading the file.');
+  }
 });
 
 window.addEventListener("scroll", function () {
