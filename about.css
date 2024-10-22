@@ -1,12 +1,8 @@
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 body {
     font-family: 'Inter', sans-serif;
@@ -449,10 +445,6 @@ footer {
         }
       }
 
-    .footer-content {
-        flex-direction: column;
-    }
-
     .footer-column {
         width: 100%;
         margin-bottom: 1rem;
@@ -480,7 +472,6 @@ footer {
             justify-content: center;
             align-items: flex-start;
             gap: 2rem;
-            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -520,7 +511,6 @@ footer {
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         body {
             background-color: white;
             color: black;
@@ -589,5 +579,3 @@ footer {
         background-color: #333333;
         color: #ffffff;
       }
-  
-  
