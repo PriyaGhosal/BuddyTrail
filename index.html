@@ -210,6 +210,39 @@
 .btn-view-itinerary:hover {
     background-color: #0056b3; 
 }
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General hidden state and transition for smooth animation */
+.itinerary, .service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state triggered when the element comes into view */
+.itinerary.inview, .service-card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
  
 .circle {
       position: absolute;
@@ -520,69 +553,74 @@
 <div class="cards" style="height: 384px;">
 
   <!-- Travel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Travel Icon -->
-      <div class="card-icon">
-        <img src="/icons/route-solid.svg" alt="Travel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Travel</h4>
-      <!-- Card Description -->
-      <p>
-        Discover budget-friendly getaways for families and friends! From serene
-        mountains to sunny beaches, find your next adventure without breaking the
-        bank. Start exploring now!
-      </p>
-      <!-- Button Link for Travel -->
-      <a href="travel.html" class="btn" style="color: white;">Explore more</a>
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/route-solid.svg" alt="Travel Icon">
     </div>
+    <h4>Travel</h4>
+    <p>
+      Discover budget-friendly getaways for families and friends! From serene
+      mountains to sunny beaches, find your next adventure without breaking the
+      bank. Start exploring now!
+    </p>
+    <a href="travel.html" class="btn" style="color: white;">Explore more</a>
   </div>
-  <!-- End of Travel Card -->
+</div>
 
-  <!-- Hotel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Hotel Icon -->
-      <div class="card-icon">
-        <img src="./icons/bed-solid.svg" alt="Hotel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Hotel</h4>
-      <!-- Card Description -->
-      <p>
-        We've handpicked top-rated options that offer exceptional value. Book your
-        perfect stay today and enjoy premium accommodations without the premium
-        price tag!
-      </p>
-      <!-- Button Link for Hotels -->
-      <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
+<!-- Hotel Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="./icons/bed-solid.svg" alt="Hotel Icon">
     </div>
+    <h4>Hotel</h4>
+    <p>
+      We've handpicked top-rated options that offer exceptional value. Book your
+      perfect stay today and enjoy premium accommodations without the premium
+      price tag!
+    </p>
+    <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
   </div>
-  <!-- End of Hotel Card -->
+</div>
 
-  <!-- Fly Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Fly Icon -->
-      <div class="card-icon">
-        <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Fly</h4>
-      <!-- Card Description -->
-      <p>
-        Fly to your dream destination without breaking the bank! We offer the best
-        flight deals, combining comfort and affordability for perfect journey.
-        Book now and take off for less!
-      </p>
-      <!-- Button Link for Flights -->
-      <a href="fly.html" class="btn" style="color: white;">See Flights</a>
+<!-- Fly Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
     </div>
+    <h4>Fly</h4>
+    <p>
+      Fly to your dream destination without breaking the bank! We offer the best
+      flight deals, combining comfort and affordability for perfect journey.
+      Book now and take off for less!
+    </p>
+    <a href="fly.html" class="btn" style="color: white;">See Flights</a>
   </div>
-  <!-- End of Fly Card -->
+</div>
 
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("inview");
+      } else {
+        entry.target.classList.remove("inview"); // Remove the class when it goes out of view
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+</script>
 <!-- End of Cards Container -->
 
 <!-- CSS for the buttons (Move this to your CSS file) -->
@@ -1000,6 +1038,32 @@ p {
       </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const itineraries = document.querySelectorAll(".itinerary");
+        const serviceCards = document.querySelectorAll(".service-card");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("inview");
+            } else {
+              entry.target.classList.remove("inview"); // Remove class when out of view
+            }
+          });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        // Observe both itineraries and service cards
+        itineraries.forEach(itinerary => {
+          observer.observe(itinerary);
+        });
+
+        serviceCards.forEach(card => {
+          observer.observe(card);
+        });
+      });
+
+    </script>
     <!-- Cab or Auto Booking -->
     <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
