@@ -1001,258 +1001,119 @@ p {
     </section>
 
     <!-- Cab or Auto Booking -->
-    <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
-        <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
+        <h1 style="color: #333;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
+    
           <div class="form-group">
-            <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
+            <label for="pickup-location"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
+    
           <div class="form-group">
-            <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
+            <label for="drop-location"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-        
-        <form
-          action="/book-cab"
-          method="POST"
-          style="
-            margin-left: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-          "
-        >
-          
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
-            <strong>Vehicle Type</strong>
-          </label>
-          
-          <select 
-          id="vehicle-type" 
-          name="vehicle-type" 
-          style="width: 150px; height: 35px; padding: 5px;" 
-          required >
-            <option value="cab">Cab</option>
-            <option value="auto">Auto</option>
-            <option value = "Sharing cab">Sharing Cab</option>
-            <option value = "Sharing cab">Sharing Auto</option>
-            <option value = "Sharing cab">Bike</option>
-            <option value = "Sharing cab">Premium Bike</option>
-          </select>
-        </div>
-
+    
           <div class="form-group">
-          <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
-          <input type="date" id="travel-date" name="travel-date" required min="" />
-
-          <!--Logic To prevent the user from selecting an old date  -->
-
-          <script>
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('travel-date').setAttribute('min', today);
-          </script>
-
-        </div>
+            <label for="vehicle-type"><strong>Vehicle Type</strong></label>
+            <select id="vehicle-type" name="vehicle-type" required>
+              <option value="cab">Cab</option>
+              <option value="auto">Auto</option>
+              <option value="sharing-cab">Sharing Cab</option>
+              <option value="sharing-auto">Sharing Auto</option>
+              <option value="bike">Bike</option>
+              <option value="premium-bike">Premium Bike</option>
+            </select>
+          </div>
+    
           <div class="form-group">
-            <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
+            <label for="travel-date"><strong>Travel Date</strong></label>
+            <input type="date" id="travel-date" name="travel-date" required />
+          </div>
+    
+          <div class="form-group">
+            <label for="travel-time"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
-
-          
-
-          <!-- <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button> -->
-
+    
           <div class="button-container">
-          <button class="book2-btn" type="submit">
-            Book now
-          </button>
-        </div>
-        </section>
-          
-  <style>
-    /* Main Section Styling */
-.cab-booking-section {
-    background-color: #f9f9f9;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Booking Container Styling */
-.booking-container {
-    width: 80%; /* Increase width of the container */
-    max-width: 1200px; /* Limit max width for larger screens */
-    margin: 0 auto; /* Center align the container */
-    background: linear-gradient(135deg, #5fc0d6, #2193b0); /* Eye-catching gradient */
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.booking-container:hover {
-    transform: scale(1.02); /* Slight scale effect on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
-}
-
-/* Heading Styles */
-.cab-booking-section h2 {
-    color: white; /* Match with gradient background */
-    text-align: center;
-    margin-bottom: 30px;
-    transition: color 0.3s;
-}
-
-.cab-booking-section h2:hover {
-    color: #f1f1f1; /* Slight lightening effect on hover */
-}
-
-/* Form Group Styles */
-.form-group {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-}
-
-.form-group:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
-}
-
-/* Label and Input Styles */
-label {
-    color: #333;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="time"],
-select {
-    width: 200px;
-    padding: 12px;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="time"]:focus,
-select:focus {
-    border-color: #2193b0;
-    box-shadow: 0 0 5px rgba(33, 147, 176, 0.5); /* Match gradient color */
-}
-
-/* Button Styling */
-.book-btn {
-    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Smooth gradient */
-    color: #fff;
-    padding: 12px 24px; /* Balanced padding for a better look */
-    font-size: 18px; /* Slightly smaller font for a cleaner appearance */
-    border: none;
-    border-radius: 8px; /* Smoothly rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background 0.3s ease, transform 0.2s ease;
-    cursor: pointer; /* Pointer cursor for better interactivity */
-    width: fit-content; /* Ensures the button fits the content */
-}
-
-.book-btn:hover {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Reverse gradient on hover */
-    transform: translateY(-3px); /* Slight lift effect on hover */
-}
-
-.book-btn:active {
-    transform: translateY(1px); /* Pressed effect for click feedback */
-}
-
-
-    /* Main Section Styling */
-.cab-booking-section {
-    background-color: #f9f9f9;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Background color for form groups */
-.form-group {
-    background-color: #e8f4fa; /* Light blue background for each form group */
-    border-radius: 5px;
-    padding: 15px; /* Padding around the inputs */
-    margin-bottom: 20px;
-    transition: background-color 0.3s; /* Transition for background color on hover */
-}
-
-.form-group:hover {
-    background-color: #d1e7f9; /* Darker blue on hover */
-}
-
-/* Heading Styles */
-.cab-booking-section h2 {
-    color: #4a90e2;
-    text-align: center;
-    margin-bottom: 30px;
-    transition: color 0.3s;
-}
-
-.cab-booking-section h2:hover {
-    color: #007bff; /* Color changes on hover */
-}
-
-/* Label Styles */
-label {
-    display: block;
-    color: #333;
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-/* Input Styles */
-input[type="text"],
-input[type="date"],
-input[type="time"],
-select {
-    width: 200px; /* Increased width for text inputs */
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="time"]:focus,
-select:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-}
-
-/* Button Styles */
-.book-btn {
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 15px;
-    font-size: 20px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.book-btn:hover {
-    background-color: #007bff; /* Button color on hover */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
+            <button class="book-btn" type="submit">Confirm Booking</button>
+          </div>
+    
+        </form>
+      </div>
+    </section>
+    
+    <style>
+      /* Improved UI styles */
+      .cab-booking-section {
+          background: linear-gradient(135deg, #5fc0d6, #2193b0);
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          color: white; /* Adjusted text color for contrast */
+      }
+    
+      .booking-container {
+          width: 90%; /* Responsive width */
+          max-width: 1200px;
+          margin: 0 auto;
+          background: rgba(255, 255, 255, 0.8); /* Slightly opaque white */
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    
+      h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #1a73e8;
+          font-size: 2rem; /* Increased heading size */
+      }
+    
+      .form-group {
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 5px;
+          padding: 15px;
+          margin-bottom: 20px;
+          transition: background-color 0.3s;
+      }
+    
+      input[type="text"],
+      input[type="date"],
+      input[type="time"],
+      select {
+          width: 100%; /* Full width for inputs */
+          padding: 12px;
+          border: 2px solid #ddd;
+          border-radius: 5px;
+          transition: border-color 0.3s, box-shadow 0.3s;
+      }
+    
+      input:focus,
+      select:focus {
+          border-color: #2193b0;
+          box-shadow: 0 0 5px rgba(33, 147, 176, 0.5);
+      }
+    
+      .book-btn {
+          background: #4a90e2;
+          color: white;
+          padding: 15px;
+          font-size: 1.2em; /* Larger font for better visibility */
+          border: none;
+          border-radius: 5px;
+          transition: background 0.3s, transform 0.2s;
+          cursor: pointer;
+      }
+    
+      .book-btn:hover {
+          background: #007bff; /* Different hover color */
+          transform: scale(1.05); /* Slight scale on hover */
+      }
+    
 /* Responsive Iframe Styles */
 iframe {
     border: none;
