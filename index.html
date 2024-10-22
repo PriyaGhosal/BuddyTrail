@@ -2538,14 +2538,23 @@ textarea.form-control {
   </div>
   
   <script src="chatbot.js"></script>
-      <div class="fixed bottom-0 right-2 scroll-container">
-        <button class="scroll-button group" id="scrollTopBtn">
-          <span class="tooltip-text-scroll">
-            <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
-           
-          </span>
-        </button>
-      </div>
+  <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
+    <button class="scroll-button group" id="scrollTopBtn">
+      <span class="tooltip-text-scroll">
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+      </span>
+    </button>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollContainer = document.getElementById('scrollContainer');
+      if (window.scrollY > 0) {
+        scrollContainer.style.display = 'block';
+      } else {
+        scrollContainer.style.display = 'none';
+      }
+    });
+  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
