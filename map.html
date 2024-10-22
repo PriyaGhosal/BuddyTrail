@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Places in India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Famous Places in India</h1>
+    <div id="map"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="places-data">
+            <!-- Places will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // List of famous places in India
+        const famousPlaces = {
+            'Taj Mahal': {
+                coords: [27.1751, 78.0421],
+                description: 'A UNESCO World Heritage Site and an iconic symbol of love.'
+            },
+            'Jaipur': {
+                coords: [26.9124, 75.7873],
+                description: 'Known as the Pink City, famous for its historic palaces and forts.'
+            },
+            'Goa': {
+                coords: [15.2993, 74.1240],
+                description: 'Famous for its beautiful beaches and vibrant nightlife.'
+            },
+            'Kerala Backwaters': {
+                coords: [9.6510, 76.3305],
+                description: 'A network of lagoons and lakes known for houseboat tourism.'
+            },
+            'Varanasi': {
+                coords: [25.3176, 82.9739],
+                description: 'One of the oldest living cities in the world, famous for its ghats.'
+            },
+            'Hampi': {
+                coords: [15.3350, 76.4600],
+                description: 'A UNESCO World Heritage Site known for its ancient ruins.'
+            },
+            'Rajasthan': {
+                coords: [27.0238, 74.2179],
+                description: 'Famous for its deserts, forts, and royal history.'
+            },
+            'Darjeeling': {
+                coords: [27.0379, 88.2622],
+                description: 'Famous for its tea gardens and stunning views of the Himalayas.'
+            },
+            'Ladakh': {
+                coords: [34.1526, 77.5776],
+                description: 'Known for its stunning landscapes and Buddhist monasteries.'
+            },
+            'Ranthambore National Park': {
+                coords: [26.0026, 75.0102],
+                description: 'Famous for its tiger population and wildlife safaris.'
+            },
+            'Mysore Palace': {
+                coords: [12.3051, 76.6555],
+                description: 'An architectural marvel and a historical palace in Mysore.'
+            },
+            'Nashik': {
+                coords: [19.9975, 73.7898],
+                description: 'Famous for its vineyards and the Kumbh Mela festival.'
+            },
+            'Chandratal Lake': {
+                coords: [32.3281, 77.3691],
+                description: 'Known as the Moon Lake, a stunning high-altitude lake in Himachal Pradesh.'
+            },
+            'Rishikesh': {
+                coords: [30.0869, 78.2677],
+                description: 'Known as the Yoga Capital of the World.'
+            },
+            'Manali': {
+                coords: [32.2396, 77.1889],
+                description: 'A popular hill station in Himachal Pradesh.'
+            },
+            'Andaman Islands': {
+                coords: [11.6236, 92.7265],
+                description: 'Famous for its pristine beaches and coral reefs.'
+            },
+            'Coorg': {
+                coords: [12.3292, 75.7314],
+                description: 'Known for its coffee plantations and scenic hills.'
+            },
+            'Mount Abu': {
+                coords: [24.5921, 72.6851],
+                description: 'The only hill station in Rajasthan, famous for its Dilwara Temples.'
+            },
+            'Gokarna': {
+                coords: [14.5553, 74.2974],
+                description: 'Known for its beaches and temples.'
+            },
+            'Udaipur': {
+                coords: [24.5795, 73.6915],
+                description: 'Known as the City of Lakes.'
+            },
+            'Kumarakom Bird Sanctuary': {
+                coords: [9.6076, 76.3647],
+                description: 'A paradise for birdwatchers located in Kerala.'
+            },
+            'Alleppey': {
+                coords: [9.4981, 76.3323],
+                description: 'Famous for its backwaters and houseboat tourism.'
+            },
+            'Puri': {
+                coords: [19.8134, 85.8312],
+                description: 'Famous for the Jagannath Temple and its beaches.'
+            },
+            'Chennai Marina Beach': {
+                coords: [13.0481, 80.2863],
+                description: 'One of the longest urban beaches in the world.'
+            },
+            'Agra Fort': {
+                coords: [27.1753, 78.0421],
+                description: 'A UNESCO World Heritage Site and a historical fort in Agra.'
+            },
+            'Chandigarh Rock Garden': {
+                coords: [30.7362, 76.7854],
+                description: 'An artistic garden made of scrap and industrial waste.'
+            },
+            'Shivaji Park': {
+                coords: [19.0225, 72.8432],
+                description: 'A historic park in Mumbai, famous for its cricket grounds.'
+            },
+            'Kolkata Howrah Bridge': {
+                coords: [22.5966, 88.3435],
+                description: 'An iconic symbol of Kolkata and an engineering marvel.'
+            },
+            'Mahakaleshwar Temple': {
+                coords: [23.2105, 75.4635],
+                description: 'A prominent temple dedicated to Lord Shiva in Ujjain.'
+            },
+            'Fatehpur Sikri': {
+                coords: [27.0973, 77.6618],
+                description: 'A UNESCO World Heritage Site known for its Mughal architecture.'
+            },
+            'Auroville': {
+                coords: [12.0006, 79.8046],
+                description: 'An experimental township in Tamil Nadu.'
+            },
+            'Ajanta Caves': {
+        coords: [20.6004, 75.7007],
+        description: 'Ancient rock-cut Buddhist cave monuments, a UNESCO World Heritage Site.'
+    },
+    'Ellora Caves': {
+        coords: [20.0194, 75.2260],
+        description: 'Known for its stunning rock-cut architecture, featuring Hindu, Jain, and Buddhist caves.'
+    },
+    'Gateway of India': {
+        coords: [18.9219, 72.8347],
+        description: 'A historical monument in Mumbai, overlooking the Arabian Sea.'
+    },
+    'Jaisalmer Fort': {
+        coords: [26.9157, 70.9220],
+        description: 'A stunning yellow sandstone fort known as the "Golden Fort."'
+    },
+    'Lotus Temple': {
+        coords: [28.5535, 77.2588],
+        description: 'A Bahá\'í House of Worship in Delhi, known for its lotus-shaped architecture.'
+    },
+    'Golden Temple (Harmandir Sahib)': {
+        coords: [31.6200, 74.8765],
+        description: 'The holiest Gurdwara of Sikhism, located in Amritsar.'
+    },
+    'Sundarbans': {
+        coords: [21.9498, 88.7340],
+        description: 'A UNESCO World Heritage Site, home to the Royal Bengal Tiger and mangrove forests.'
+    },
+    'Mahabalipuram': {
+        coords: [12.6203, 80.1952],
+        description: 'Known for its rock-cut temples and shore temple, a UNESCO World Heritage Site.'
+    },
+    'Bodh Gaya': {
+        coords: [24.6964, 84.9920],
+        description: 'The place where Buddha attained enlightenment, home to the Mahabodhi Temple.'
+    },
+    'Kaziranga National Park': {
+        coords: [26.5885, 93.1703],
+        description: 'A UNESCO World Heritage Site known for its population of the Indian one-horned rhinoceros.'
+    },
+    'Neemrana Fort': {
+        coords: [27.9202, 76.4975],
+        description: 'A historic 15th-century fort located in Rajasthan.'
+    },
+    'Kumarakom': {
+        coords: [9.6202, 76.4000],
+        description: 'A scenic backwater destination in Kerala.'
+    },
+    'Mahabodhi Temple': {
+        coords: [24.6957, 84.9928],
+        description: 'A UNESCO World Heritage Site, important to Buddhists.'
+    },
+    'Mahabalipuram Shore Temple': {
+        coords: [12.6196, 80.1969],
+        description: 'An ancient temple overlooking the Bay of Bengal.'
+    },
+    'Golconda Fort': {
+        coords: [17.3824, 78.4019],
+        description: 'A historic fort in Hyderabad known for its acoustic system.'
+    },
+    'Nubra Valley': {
+        coords: [34.3900, 78.6713],
+        description: 'A high-altitude desert valley in Ladakh known for its stunning landscapes.'
+    },
+    'Sanchi Stupa': {
+        coords: [23.4862, 77.7481],
+        description: 'An ancient Buddhist complex and UNESCO World Heritage Site.'
+    },
+    'Kanha National Park': {
+        coords: [22.3610, 80.3975],
+        description: 'A popular national park known for its tiger reserve.'
+    },
+    'Ajmer Sharif Dargah': {
+        coords: [26.4532, 74.6360],
+        description: 'A famous Sufi shrine in Ajmer, Rajasthan.'
+    },
+    'Tawang Monastery': {
+        coords: [27.5520, 91.5708],
+        description: 'A significant Buddhist monastery located in Arunachal Pradesh.'
+    },
+    'Khajuraho Temples': {
+        coords: [24.8275, 79.9190],
+        description: 'Known for their stunning sculptures and intricate carvings.'
+    },
+    'Jodhpur (Blue City)': {
+        coords: [26.2389, 73.0243],
+        description: 'Famous for its blue-painted houses and Mehrangarh Fort.'
+    },
+    'Udaipur City Palace': {
+        coords: [24.5854, 73.6694],
+        description: 'A magnificent palace complex overlooking Lake Pichola.'
+    },
+    'Kumarakom Lake': {
+        coords: [9.6078, 76.3298],
+        description: 'A popular backwater destination in Kerala.'
+    },
+    'Corbett National Park': {
+        coords: [29.5206, 78.7469],
+        description: 'The first national park in India, famous for its tiger population.'
+    },
+    'Shivaji Terminus': {
+        coords: [18.9404, 72.8347],
+        description: 'A historic railway station in Mumbai, a UNESCO World Heritage Site.'
+    },
+    'Hawa Mahal': {
+        coords: [26.9932, 75.8267],
+        description: 'Known as the Palace of Winds, located in Jaipur.'
+    },
+    'Vijayawada Kanaka Durga Temple': {
+        coords: [16.5067, 80.6480],
+        description: 'A famous Hindu temple located on Indrakeeladri Hill.'
+    },
+    'Patna Sahib': {
+        coords: [25.6055, 85.1188],
+        description: 'A significant Gurudwara and the birthplace of Guru Gobind Singh.'
+    },
+    'Tirupati Balaji Temple': {
+        coords: [13.6288, 79.4192],
+        description: 'One of the most revered Hindu temples dedicated to Lord Venkateswara.'
+    },
+    'Kanaka Durga Temple': {
+        coords: [16.5063, 80.6480],
+        description: 'A prominent temple located on Indrakeeladri Hill in Vijayawada.'
+    },
+    'Buddhist Stupa': {
+        coords: [16.5118, 80.5508],
+        description: 'An ancient stupa in Amaravati, significant to Buddhist heritage.'
+    },
+    'Rama Krishna Beach': {
+        coords: [17.6868, 83.2946],
+        description: 'A beautiful beach located in Visakhapatnam, perfect for relaxation.'
+    },
+    'Submarine Museum': {
+        coords: [17.6795, 83.3090],
+        description: 'A unique museum showcasing a decommissioned submarine in Visakhapatnam.'
+    },
+    'Kondapalli Fort': {
+        coords: [16.6120, 80.6847],
+        description: 'A historic fort with beautiful views and rich heritage.'
+    },
+    'Undavalli Caves': {
+        coords: [16.4305, 80.6170],
+        description: 'Rock-cut caves with intricate carvings and historical significance.'
+    },
+    'Nagarjuna Sagar Dam': {
+        coords: [16.7832, 79.3227],
+        description: 'One of the largest dams in India, offering picturesque views.'
+    },
+    'Bhavani Island': {
+        coords: [16.5166, 80.6015],
+        description: 'A scenic island on the Krishna River, ideal for picnics and boating.'
+    },
+    'Qutb Shahi Tombs': {
+        coords: [17.3913, 78.4015],
+        description: 'A collection of tombs of the Qutb Shahi dynasty in Hyderabad.'
+    },
+    'Golconda Fort': {
+        coords: [17.4009, 78.4010],
+        description: 'A historic fort known for its grand architecture and sound system.'
+    },
+    'Charminar': {
+        coords: [17.3616, 78.4747],
+        description: 'An iconic monument and mosque that symbolizes Hyderabad.'
+    },
+    'Ramoji Film City': {
+        coords: [17.3640, 78.5001],
+        description: 'A massive film city and popular tourist destination in Hyderabad.'
+    },
+    'Salar Jung Museum': {
+        coords: [17.3664, 78.4710],
+        description: 'One of the largest art museums in India, housing a diverse collection.'
+    },
+    'Nehru Zoological Park': {
+        coords: [17.3793, 78.4602],
+        description: 'A large zoo featuring a variety of wildlife and conservation programs.'
+    },
+    'Hussain Sagar Lake': {
+        coords: [17.4238, 78.4710],
+        description: 'An artificial lake known for its large Buddha statue and scenic views.'
+    },
+    'Thousand Pillar Temple': {
+        coords: [17.9785, 79.5940],
+        description: 'A historic temple in Warangal with intricate stone carvings.'
+    },
+    'Ramappa Temple': {
+        coords: [17.6162, 79.3460],
+        description: 'An ancient temple known for its stunning architecture and history.'
+    },
+    'Kakatiya Fort': {
+        coords: [17.9780, 79.5928],
+        description: 'A historic fort with beautiful ruins located in Warangal.'
+    },
+    'Pochampally Ikkat Weaving Village': {
+        coords: [16.6736, 77.3220],
+        description: 'Famous for its traditional Ikkat weaving and textiles.'
+    },
+    'Bhagyanagar Ganesh Utsav': {
+        coords: [17.3850, 78.4867],
+        description: 'A grand festival celebrating Lord Ganesha in Hyderabad.'
+    },
+    'Ananthagiri Hills': {
+        coords: [17.3543, 78.6331],
+        description: 'A serene hill station known for its lush greenery and trekking.'
+    },
+    'Kakatiya Rock Garden': {
+        coords: [17.9785, 79.5940],
+        description: 'A beautiful garden showcasing rock sculptures and landscapes.'
+    },
+    'Chandragiri Fort': {
+        coords: [13.7341, 79.2999],
+        description: 'A historical fort offering panoramic views of the surroundings.'
+    },
+    'Sri Kalahasti Temple': {
+        coords: [13.9271, 79.7262],
+        description: 'A prominent temple dedicated to Lord Shiva, known for its architecture.'
+    },
+    'Visakha Museum': {
+        coords: [17.6888, 83.2272],
+        description: 'A museum showcasing the rich history of Visakhapatnam.'
+    },
+    'Borra Caves': {
+        coords: [18.2037, 83.1361],
+        description: 'Famous limestone caves with stunning stalactites and stalagmites.'
+    },
+    'Papikondalu': {
+        coords: [17.1404, 81.7457],
+        description: 'Scenic hills and river views, ideal for nature lovers.'
+    },
+    'Araku Valley': {
+        coords: [18.9345, 82.8113],
+        description: 'A picturesque valley known for coffee plantations and hills.'
+    },
+    'Simhachalam Temple': {
+        coords: [17.7402, 83.2361],
+        description: 'An ancient temple dedicated to Lord Narasimha, located on a hill.'
+    },
+    'Mangalagiri Temple': {
+        coords: [16.5163, 80.6126],
+        description: 'A famous temple dedicated to Lord Narasimha, known for its architecture.'
+    },
+    'Chilika Lake': {
+        coords: [19.8000, 85.3170],
+        description: 'Asia’s largest brackish water lagoon, known for its biodiversity.'
+    },
+    'Golkonda Fort': {
+        coords: [17.4009, 78.4010],
+        description: 'Famous for its fortifications and historic significance.'
+    },
+    'Nehru Planetarium': {
+        coords: [17.3756, 78.4763],
+        description: 'A popular planetarium showcasing astronomy and space science.'
+    },
+    'Lumbini Park': {
+        coords: [17.4157, 78.4753],
+        description: 'A scenic park located by Hussain Sagar Lake, ideal for leisure.'
+    },
+    'Shilparamam': {
+        coords: [17.4449, 78.3846],
+        description: 'An arts and crafts village showcasing traditional Indian crafts.'
+    },
+    'Gangtok': {
+        coords: [27.3389, 88.6065],
+        description: 'The capital city of Sikkim, known for its monasteries and beautiful views.'
+    },
+    
+    
+
+        };
+
+        // Create markers for each place
+        for (const [place, { coords, description }] of Object.entries(famousPlaces)) {
+            const marker = L.circleMarker(coords, {
+                color: 'blue',
+                radius: 8
+            }).addTo(map);
+
+            // Bind a popup to the marker
+            marker.bindPopup(`<strong>${place}</strong><br>${description}`);
+
+            // Add to table
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${place}</td><td>${description}</td>`;
+            document.getElementById('places-data').appendChild(row);
+        }
+    </script>
+</body>
+</html>
