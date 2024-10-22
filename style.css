@@ -334,7 +334,7 @@ nav {
 }
 
 #nav-list {
-  list-style: none;
+  list-style: none; 
   align-items: center;
 }
 
@@ -1040,6 +1040,9 @@ body {
 .light-mode #About {
   background-color: #f5f5f5; /* Light grey background */
   color: #333; /* Dark grey text */
+}
+.light-mode .main-head{
+  background-color: rgba(255, 255, 255, 0.352);
 }
 
 /* Dark mode for #About */
