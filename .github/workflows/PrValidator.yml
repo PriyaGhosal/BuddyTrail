@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      
+
       - name: Validate PR Description
         id: check_description
         run: |
@@ -28,9 +28,9 @@ jobs:
           fi
 
           # Check for issue number or 'Fix #NEW'
-          if [[ ! "$description" =~ [Ff]ix\ #[0-9]+ && ! "$description" =~ [Ff]ix\ #NEW ]]; then
+          if [[ "$description" =~ [Ff]ix\ #[0-9]+ || "$description" =~ [Ff]ix\ #NEW ]]; then
+            echo "PR Description is valid."
+          else
             echo "::error::PR description must contain an issue number or 'Fix #NEW'"
             exit 1
           fi
-
-          echo "PR Description is valid."
