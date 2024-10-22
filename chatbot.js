@@ -367,5 +367,5 @@ userInput.addEventListener('keypress', (event) => {
 
 // Event listener for the close button
 document.getElementById('close-button').addEventListener('click', () => {
-chatbotContainer.style.display = 'none'; // Hide chatbot on close
-});: 10;top: 4047px;mix-blend-mode:multiply;
+    chatbotContainer.style.display = 'none'; // Hide chatbot on close
+    });
