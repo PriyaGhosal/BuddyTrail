@@ -8,10 +8,18 @@ jobs:
   validate-pr-description:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      
       - name: Validate PR Description
         id: check_description
         run: |
+          # Fetch the PR description
           description="${{ github.event.pull_request.body }}"
+
+          # Debugging output: Show the raw description
+          echo "PR Description:"
+          echo "$description"
 
           # Check if the description is empty
           if [ -z "$description" ]; then
@@ -24,3 +32,5 @@ jobs:
             echo "::error::PR description must contain an issue number or 'Fix #NEW'"
             exit 1
           fi
+
+          echo "PR Description is valid."
