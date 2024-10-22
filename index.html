@@ -751,7 +751,7 @@ p {
   position: relative;
   overflow: hidden;
   width: 90vw;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   height: 450px;
   display: flex;
@@ -813,28 +813,29 @@ button:hover {
 /* Carousel Button Styles */
 .carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  padding: 15px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .prev {
   left: 10px;
+  padding: 0 4px 4px 0;
 }
 
 .next {
   right: 10px;
+  padding: 0;
 }
 
 .carousel-button:hover {
-  background-color: #a4caad;
+  background-color: #007bff;
   transform: scale(1.1);
 }
 
@@ -882,7 +883,8 @@ p {
         function moveSlide(direction) {
           const slides = document.querySelectorAll('.deal-item');
           const totalSlides = slides.length;
-          const slidesToShow = 3; // Number of cards to show at once
+          console.log(totalSlides);
+          const slidesToShow = 3; 
         
           // Calculate the new slide index
           currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
@@ -901,12 +903,26 @@ p {
             slides[centerCardIndex].classList.add('highlight');
           }
         }
-        
-        // Initial highlight
-        document.addEventListener('DOMContentLoaded', () => {
-          const slides = document.querySelectorAll('.deal-item');
-          slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
+
+        const autoScrollInterval = 3000; // 3000ms = 3 seconds
+        let autoScroll = setInterval(() => moveSlide(1), autoScrollInterval);
+
+        // Pause auto-scroll when hovering over the carousel
+        const carousel = document.querySelector('.carousel');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoScroll);
         });
+
+        // Resume auto-scroll when not hovering
+        carousel.addEventListener('mouseleave', () => {
+            autoScroll = setInterval(() => moveSlide(1), autoScrollInterval);
+        });
+    
+        // // Initial highlight
+        // document.addEventListener('DOMContentLoaded', () => {
+        //   const slides = document.querySelectorAll('.deal-item');
+        //   slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
+        // });
         </script>
 
     <!-- travel itineraries -->
