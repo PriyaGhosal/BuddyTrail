@@ -397,6 +397,19 @@ nav {
     display: flex; /* Show menu when active */
   }
 
+ .dark-mode .services {
+  background-color: #121212; /* Dark background */
+}
+
+.dark-mode .services p {
+  color: #e0e0e0; /* Lighter text color */
+}
+
+.dark-mode .service-card {
+  background-color: #1e1e1e; /* Darker background for items */
+  border: 2px solid #0056b3; /* Darker blue border */
+}
+  
   /* Close button styles */
   .dropdown-close-btn {
     display: block; /* Visible only in the dropdown menu */
