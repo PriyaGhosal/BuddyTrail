@@ -59,8 +59,36 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 });
 
 function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Regular expression for stricter email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Check for the basic format
+    if (!emailRegex.test(email)) {
+        return false;
+    }
+
+    // Split the email into local part and domain part
+    const [localPart, domainPart] = email.split('@');
+
+    // Ensure local part and domain part exist and aren't too long
+    if (localPart.length > 64 || domainPart.length > 255) {
+        return false;
+    }
+
+    // Ensure domain part has a valid format
+    const domainParts = domainPart.split('.');
+    if (domainParts.some(part => part.length > 63)) {
+        return false;
+    }
+
+    // Additional checks for edge cases
+    if (localPart.startsWith('.') || localPart.endsWith('.') || localPart.includes('..')) {
+        return false;
+    }
+
+    return true;
 }
+
 
 function isValidPhone(phone) {
     return /^\+?[1-9]\d{1,14}$/.test(phone); // e.g., +1234567890
