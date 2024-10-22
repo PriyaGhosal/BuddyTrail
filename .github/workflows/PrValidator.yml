@@ -2,7 +2,7 @@ name: PR Description Check
 
 on:
   pull_request:
-    types: [opened,edited]
+    types: [opened, edited]
 
 jobs:
   validate-pr-description:
@@ -11,15 +11,16 @@ jobs:
       - name: Validate PR Description
         id: check_description
         run: |
-          if [ -z "${{ github.event.pull_request.body }}" ]; then
+          description="${{ github.event.pull_request.body }}"
+
+          # Check if the description is empty
+          if [ -z "$description" ]; then
             echo "::error::Description is missing!"
             exit 1
           fi
-      - name: Check for issue number or 'Fix #NEW'
-        id: check_issue_number
-        run: |
-          description="${{ github.event.pull_request.body }}"
-          if [[ ! "$description" =~ (?i)fix #[0-9]+|(?i)fix #NEW ]]; then
+
+          # Check for issue number or 'Fix #NEW'
+          if [[ ! "$description" =~ [Ff]ix\ #[0-9]+ && ! "$description" =~ [Ff]ix\ #NEW ]]; then
             echo "::error::PR description must contain an issue number or 'Fix #NEW'"
             exit 1
           fi
