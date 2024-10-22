@@ -1,9 +1,12 @@
 ├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
+├── F&Q.html
 ├── LICENSE
 ├── README.md
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
+├── SignUpWithGoogle.js
+├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -24,8 +27,10 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.html
 ├── book.html
 ├── boy.png
+├── button-ui.css
 ├── chatbot.css
 ├── chatbot.gif
 ├── chatbot.js
@@ -37,14 +42,24 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── cookie-popup.css
+├── cookie.html
+├── cookie_policy.html
+├── copyright.html
 ├── crescent-moon.png
 ├── cursor.js
 ├── day-mode.png
+├── disclaimer.css
+├── disclaimer.html
 ├── faq.html
 ├── firebase.js
 ├── fly.css
 ├── fly.html
 ├── forgot_password.html
+├── goa-resort.css
+├── goa-resort.html
+├── himachal.css
+├── himachal.html
 ├── hotel.css
 ├── hotel.html
 ├── icons
@@ -56,8 +71,11 @@
 │   ├── twitter-x.svg
 │   ├── twitter.svg
 │   └── youtube.svg
+├── image.png
 ├── img
+│   ├── BOOK-img.avif
 │   ├── DUBAI.jpeg
+│   ├── HELP-IMG.jpg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
 │   ├── PROJECT-LEADER.png
@@ -70,7 +88,11 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── download.jpeg
+│   ├── google.png
 │   ├── googleLogo.png
+│   ├── gssocextd1.jpg
+│   ├── hacktoberfest1.png
 │   ├── landing-page.jpg
 │   ├── location.jpg
 │   ├── logo.png
@@ -101,15 +123,30 @@
 ├── moon.png
 ├── package-lock.json
 ├── package.json
+├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
+├── rajasthan.css
+├── rajasthan.html
 ├── reviews.html
 ├── script
 │   └── popup.js
 ├── script.js
+├── security.md
+├── service.css
+├── service.html
+├── servicespage.html
 ├── star-rating.js
 ├── style.css
 ├── styles
 │   └── popup.css
 ├── team.html
+├── terms.css
+├── terms_of_service.html
+├── travel-itineraries.css
+├── travel.css
+├── travel.html
+├── travelmap.css
+├── travelmap.html
+├── triundtrek.jpg
 └── update discussion forum
