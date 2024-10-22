@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Privacy Policy - BuddyTrail</title>
+    <link rel="stylesheet" href="terms.css">
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
         /* Resetting margin and padding */
         * {
@@ -36,7 +45,7 @@
         .toc {
             flex-basis: 25%;
             background-color: #e9ecef;
-            padding: 20px;
+            padding:70px 20px;
             border-radius: 8px;
             margin-right: 20px;
             height: fit-content;
@@ -80,7 +89,7 @@
         h1 {
             font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin: 53px 0;
             border-bottom: 2px solid #004085;
             padding-bottom: 10px;
         }
@@ -156,7 +165,33 @@
     </style>
 </head>
 <body>
-
+    <header>
+        <div class="container3">
+          <nav>
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+              <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+              <button class="dropdown-close-btn" id="closeBtn">✖</button>
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link active">About Us</a></li>
+              <li><a href="team.html" class="nav-link">Team</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+              <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+            </ul>
+            <button class="mode-toggle" id="modeToggle">
+              <span class="sun-icon glow"
+                ><img src="day-mode.png" alt="Light mode"
+              /></span>
+              <span class="moon-icon glow" style="display: none"
+                ><img src="moon.png" alt="Dark mode"
+              /></span>
+            </button>
+          </nav>
+        </div>
+      </header>
     <div class="container">
         
         <!-- Table of contents on the left side -->
@@ -227,6 +262,61 @@
             <p>Phone: +1-800-555-1234</p>
         </div>
     </div>
-
+    <footer>
+        <div class="container2">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <p>
+                Discover and plan affordable trips with BuddyTrail's travel
+                companion tools.
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li>
+                  <a href="contributor/contributor.html">Our Contributor</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Email: info@example.com</p>
+              <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="https://discord.com/invite/priyaghosal" target="_blank"
+                  ><i class="fab fa-discord"></i
+                ></a>
+                <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://github.com/PriyaGhosal/BuddyTrail"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+        </div>
+      </footer>
+      <div class="gtranslate_wrapper"></div>
+    
 </body>
 </html>
