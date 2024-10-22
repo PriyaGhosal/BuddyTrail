@@ -2186,16 +2186,6 @@ input#rate-5:checked ~ header:before {
   gap: 30px; /* Space between grid items */
 }
 
-.deal-item {
-  background-color: #fff;
-  padding: 25px 30px; /* Added padding left and right */
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  color: #090f15;
-  transition: transform 0.4s cubic-bezier(0.3, 0.1, 0.25, 1); /* for smooth hover transform animation */
-}
-
 /* Added hover effect */
 .deal-item:hover {
   transform: translateY(-10px);
@@ -2206,7 +2196,7 @@ input#rate-5:checked ~ header:before {
   font-size: 1.5em;
   font-weight: 600; /* Made heading bold */
   margin-bottom: 15px;
-  color: #090f15;
+  
 }
 
 .deal-item p {
@@ -2214,28 +2204,7 @@ input#rate-5:checked ~ header:before {
   margin-bottom: 15px;
   color: #090f15;
 }
-
-.deal-item .discount {
-  color: red;
-  font-weight: bold;
-  text-decoration: line-through;
-  margin-left: 10px;
-}
-
-.deal-item button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
-}
-
-.deal-item button:hover {
-  background-color: #218838;
-}
+ 
 
 #deals {
   background-color: #f9f9f9; /* Light background */
