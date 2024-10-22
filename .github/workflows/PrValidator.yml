@@ -19,7 +19,7 @@ jobs:
         id: check_issue_number
         run: |
           description="${{ github.event.pull_request.body }}"
-          if [[ ! "$description" =~ (?i)fix #[0-9]+|(?i)fix #NEW ]]; then
+          if [[ ! "$description" =~ [Ff]ix\ #[0-9]+ && ! "$description" =~ [Ff]ix\ #NEW ]]; then
             echo "::error::PR description must contain an issue number or 'Fix #NEW'"
             exit 1
           fi
