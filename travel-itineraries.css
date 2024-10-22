@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0056b3;
+}
+
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #007bff;
+}
+
+.form-range::-moz-range-thumb {
+    background: #007bff;
+}
+
+.form-range::-ms-thumb {
+    background: #007bff;
+}

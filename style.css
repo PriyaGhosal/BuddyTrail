@@ -2958,3 +2958,23 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+.chatbot-container {
+  position: fixed;
+  bottom: 70px; /* Adjust for vertical spacing above the icon */
+  right: 20px;  /* Adjust for horizontal spacing */
+  z-index: 1000; 
+  display: none; /* Initially hide the chatbot */
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust for positioning */
+  right: 20px;  /* Adjust for positioning */
+  z-index: 1001; /* Ensure icon is above the chatbot */
+  cursor: pointer; /* Change cursor to pointer */
+  background-color: #007bff; /* Optional: add a background color */
+  color: white; /* Optional: icon color */
+  padding: 18px; /* Optional: padding for better click area */
+  border-radius: 50%; /* Optional: make it circular */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
+}

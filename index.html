@@ -977,7 +977,7 @@ p {
             guides that include must-see attractions and activities for all
             ages.
           </p>
-          <button>View Itinerary</button>
+          <a href="./Travel-Itineraries.html"><button>View Itinerary</button></a>
         </div>
       </div>
 
@@ -1011,38 +1011,39 @@ p {
       <div class="services-container">
         <!-- Service Card: Interactive Travel Map -->
         <div class="service-card">
-          <div class="icon">
+          <a href="travelmap.html"><div class="icon">
             <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h3>Travel Map</h3>
+          </div></a>
+         <a href="travelmap.html"> <h3>Travel Map</h3></a>
           <p>Explore popular destinations across India and the world. Click on markers to learn more about each location.
           </p>
         </div>
     
         <!-- Service Card: Hotel Finder -->
         <div class="service-card">
-          <div class="icon">
+          <a href="hotel.html"> <div class="icon">
             <i class="fas fa-hotel"></i>
-          </div>
-          <h3>Hotel Finder</h3>
+          </div></a>
+         <a href="hotel.html"> <h3>Hotel Finder</h3></a>
           <p>Find the best hotels at affordable rates, handpicked to suit your budget and preferences.</p>
         </div>
     
         <!-- Service Card: Flight Booking -->
         <div class="service-card">
-          <div class="icon">
+          <a href="fly.html"> <div class="icon">
             <i class="fas fa-plane"></i>
-          </div>
-          <h3>Flight Booking</h3>
+          </div></a>
+          <a href="fly.html"><h3>Flight Booking</h3></a>
           <p>Book flights at the best prices, with options tailored to your travel needs.</p>
         </div>
     
         <!-- Service Card: Travel Blog -->
         <div class="service-card">
-          <div class="icon">
+          <a href="blog.html">
+            <<div class="icon">
             <i class="fas fa-pen"></i>
-          </div>
-          <h3>Travel Blog</h3>
+          </div></a>
+         <a href="blog.html"><h3>Travel Blog</h3></a>
           <p>Read tips, guides, and personal stories from seasoned travelers.</p>
         </div>
       </div>
@@ -2618,7 +2619,7 @@ textarea.form-control {
           
 
   <!-- Chatbot icon -->
-  <div id="chat-icon">🤖</div>
+  
 
   <!-- Chatbot container -->
   <div id="chatbot">
@@ -3029,7 +3030,38 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       });
     
     </script>
- 
+  <body>
+    <div class="container">
+        <!-- Your existing content -->
+
+        <!-- Chatbot Icon -->
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            🗨️ <!-- You can replace this with an actual image/icon -->
+        </div>
+
+        <!-- Chatbot Iframe -->
+        <div class="chatbot-container" id="chatbotContainer">
+            <iframe src="https://www.chatbase.co/chatbot-iframe/GtcyNsebrd_nrDUEQz53T" 
+                    width="350" 
+                    height="500" 
+                    style="border:none;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+            } else {
+                chatbotContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
  
 </body>
 

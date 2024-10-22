@@ -8,6 +8,7 @@
 ├── RatingStyle.css
 ├── SignIn-Up-withGithub.js
 ├── SignUpWithGoogle.js
+├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
 ├── auth.css
@@ -144,8 +145,11 @@
 ├── team.html
 ├── terms.css
 ├── terms_of_service.html
+├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
+├── travelmap.css
+├── travelmap.html
 ├── triundtrek.jpg
 └── update discussion forum
 ```
