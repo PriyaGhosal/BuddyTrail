@@ -2522,7 +2522,7 @@ textarea.form-control {
           
 
   <!-- Chatbot icon -->
-  <div id="chat-icon">🤖</div>
+  
 
   <!-- Chatbot container -->
   <div id="chatbot">
@@ -2933,7 +2933,38 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       });
     
     </script>
- 
+  <body>
+    <div class="container">
+        <!-- Your existing content -->
+
+        <!-- Chatbot Icon -->
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            🗨️ <!-- You can replace this with an actual image/icon -->
+        </div>
+
+        <!-- Chatbot Iframe -->
+        <div class="chatbot-container" id="chatbotContainer">
+            <iframe src="https://www.chatbase.co/chatbot-iframe/GtcyNsebrd_nrDUEQz53T" 
+                    width="350" 
+                    height="500" 
+                    style="border:none;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+            } else {
+                chatbotContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
  
 </body>
 
