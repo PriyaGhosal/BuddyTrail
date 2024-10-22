@@ -1112,7 +1112,7 @@ body {
 }
 
  issue
- 
+
 h2 {
 main
 
@@ -1120,9 +1120,9 @@ main
   font-weight:  700;
   margin:  10px 0; /* Margin adjustment */
   color:  #007bff;
-   
+
 }
- 
+
 p {
   font-size: 1.5em;
   color: #666; /* Paragraph color */
@@ -2939,6 +2939,33 @@ textarea {
   line-height: 1.5;
 }
 
+/* Dark mode for Service */
+.dark-mode #services {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
+  }
+
+  .dark-mode #services h1 {
+    color: #ffa500; /* Orange color for the main heading in dark mode */
+  }
+
+  .dark-mode #services h2 {
+    color: #ffa500; /* Bright yellow subheading in dark mode */
+  }
+
+  .dark-mode #services p {
+    color: #e0e0e0; /* darker grey for paragraph text in dark mode */
+  }
+
+  .dark-mode #services p strong {
+    color: #ffa500; /* Yellow highlight for important text in dark mode */
+  }
+
+  .dark-mode .service-card{
+    background-color: #1e1e1e; /* Darker background for service cards */
+    color: #e0e0e0; /* Light grey text color */
+  }
+
 html,
 body {
   margin: 0;
@@ -2962,7 +2989,7 @@ body {
   position: fixed;
   bottom: 70px; /* Adjust for vertical spacing above the icon */
   right: 20px;  /* Adjust for horizontal spacing */
-  z-index: 1000; 
+  z-index: 1000;
   display: none; /* Initially hide the chatbot */
 }
 
