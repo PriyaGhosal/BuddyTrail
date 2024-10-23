@@ -41,12 +41,13 @@
       </div>
     </header>
     <section id="aeroseat" class="section__container booking__container">
-      <div class="booking__nav">
-        <span>First Class </span>
-        <span>Economy Class </span>
-        <span>Business Class </span>
-      </div>
-      <form>
+<div class="booking__nav">
+  <span id="1st_class" class=""><p>First Class</p></span>
+  <span id="eco_class" class="bg_blue_selected"><p>Economy Class</p></span>
+  <span id="bsn_class" class=""><p>Business Class</p></span>
+</div>
+<form>
+
         <div class="form__group">
           <span><i class="ri-map-pin-line"></i></span>
           <div class="input__content">
@@ -87,8 +88,11 @@
             <p>Back By</p>
           </div>
         </div>
-        <button class="btn"><i class="ri-search-line"></i></button>
-      </form>
+</form>
+<div class="btn-container">
+  <button class="btn"><i class="ri-search-line"></i> Search</button>
+</div>
+
     </section>
     <section class="section__container plan__container" id="travel support">
       <p class="subheader" style="font-size: 3rem">TRAVEL SUPPORT</p>
@@ -301,15 +305,40 @@
 
     <script>
       window.gtranslateSettings = {
+    <script>
+      const options = {
         default_language: "en",
         detect_browser_language: true,
         wrapper_selector: ".gtranslate_wrapper",
       };
     </script>
 
-    <script
-      src="https://cdn.gtranslate.net/widgets/latest/float.js"
-      defer
-    ></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+    <script>
+      // Toggle class selection for flight classes
+      const first = document.getElementById('1st_class');
+      const eco = document.getElementById('eco_class');
+      const bsn = document.getElementById('bsn_class');
+
+      first.addEventListener('click', () => {
+        first.classList.add('bg_blue_selected');
+        eco.classList.remove('bg_blue_selected');
+        bsn.classList.remove('bg_blue_selected');
+      });
+
+      eco.addEventListener('click', () => {
+        first.classList.remove('bg_blue_selected');
+        eco.classList.add('bg_blue_selected');
+        bsn.classList.remove('bg_blue_selected');
+      });
+
+      bsn.addEventListener('click', () => {
+        first.classList.remove('bg_blue_selected');
+        eco.classList.remove('bg_blue_selected');
+        bsn.classList.add('bg_blue_selected');
+      });
+    </script>
   </body>
 </html>
+
