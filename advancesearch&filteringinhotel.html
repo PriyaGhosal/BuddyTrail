@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="hotel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="/icons/airplane.svg">
+    <title>Hotel Booking - BuddyTrail</title>
+    <style>
+        .advanced-filter-section {
+            margin: 20px 0;
+        }
+
+        .advanced-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .advanced-filter-bar label {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
+                <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+            </div>
+            <ul id="nav-list">
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="#home" class="navhover">Home</a></li>
+                <li><a href="team.html" class="navhover">Team</a></li>
+                <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+                <li><a href="#benefits" class="navhover">Benefits</a></li>
+                <li><a href="about.html" class="navhover">About</a></li>
+                <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="./contact.html" class="navhover">Contact</a></li>
+                <li><a href="#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
+            <div style="display: flex;">
+            <button class="hamburger" id="hamburger" style="margin-right: 10px;">☰</button>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="filter-section">
+            <h1 class="header1">Find Your Perfect Stay</h1>
+            <div class="filter-bar">
+                <label for="location-filter">Location:</label>
+                <select id="location-filter" onchange="filterHotels()">
+                    <option value="all">All</option>
+                    <option value="hill">Nature Retreats</option>
+                    <option value="city">Urban Hotels</option>
+                </select>
+
+                <label for="price-filter">Price Range:</label>
+                <select id="price-filter" onchange="filterHotels()">
+                    <option value="all">All</option>
+                    <option value="budget">Budget ($0 - $100)</option>
+                    <option value="mid-range">Mid-range ($101 - $200)</option>
+                    <option value="luxury">Luxury ($201+)</option>
+                </select>
+
+                <label for="rating-filter">Rating:</label>
+                <select id="rating-filter" onchange="filterHotels()">
+                    <option value="all">All</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars & Up</option>
+                    <option value="3">3 Stars & Up</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="advanced-filter-section">
+            <h1 class="header1">Advanced Search</h1>
+            <div class="advanced-filter-bar">
+                <label for="amenities-filter">Amenities:</label>
+                <select id="amenities-filter" onchange="filterHotels()">
+                    <option value="all">All</option>
+                    <option value="wifi">Wi-Fi</option>
+                    <option value="pool">Swimming Pool</option>
+                    <option value="breakfast">Breakfast Included</option>
+                    <option value="parking">Parking Available</option>
+                </select>
+
+                <label for="guests-filter">Number of Guests:</label>
+                <select id="guests-filter" onchange="filterHotels()">
+                    <option value="all">Any</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                </select>
+
+                <label for="checkin-filter">Check-in Date:</label>
+                <input type="date" id="checkin-filter" onchange="filterHotels()">
+
+                <label for="checkout-filter">Check-out Date:</label>
+                <input type="date" id="checkout-filter" onchange="filterHotels()">
+            </div>
+        </section>
+
+        <section class="hotel-tiles">
+            <!-- Nature Retreats -->
+            <div class="hotel-tile hill" data-price="120" data-rating="5" data-guests="2" data-amenities="wifi">
+                <img src="img/n5.jpg" alt="Mountain Bliss Resort">
+                <div class="hotel-info">
+                    <h2>Mountain Bliss Resort</h2>
+                    <p>Delhi, India</p>
+                    <div class="hotel-details">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="price">$120/night</span>
+                    </div>
+                    <a href="#book" class="btn book-now">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill" data-price="150" data-rating="3" data-guests="2" data-amenities="pool">
+                <img src="img/n4.jpg" alt="Lakeview Haven">
+                <div class="hotel-info">
+                    <h2>Lakeview Haven</h2>
+                    <p>Delhi, India</p>
+                    <div class="hotel-details">
+                        <span class="rating">⭐️⭐️⭐️</span>
+                        <span class="price">$150/night</span>
+                    </div>
+                    <a href="#book" class="btn book-now">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill" data-price="250" data-rating="5" data-guests="3" data-amenities="breakfast">
+                <img src="img/n3.jpg" alt="Forest Retreat">
+                <div class="hotel-info">
+                    <h2>Forest Retreat</h2>
+                    <p>Delhi, India</p>
+                    <div class="hotel-details">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="price">$250/night</span>
+                    </div>
+                    <a href="#book" class="btn book-now">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill" data-price="90" data-rating="5" data-guests="1" data-amenities="wifi">
+                <img src="img/n2.jpg" alt="Green Valley Lodge">
+                <div class="hotel-info">
+                    <h2>Green Valley Lodge</h2>
+                    <p>Delhi, India</p>
+                    <div class="hotel-details">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="price">$90/night</span>
+                    </div>
+                    <a href="#book" class="btn book-now">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-tile hill" data-price="50" data-rating="3" data-guests="1" data-amenities="parking">
+                <img src="img/n1.jpg" alt="Peaceful Heights">
+                <div class="hotel-info">
+                    <h2>Peaceful Heights</h2>
+                    <p>Delhi, India</p>
+                    <div class="hotel-details">
+                        <span class="rating">⭐️⭐️⭐️</span>
+                        <span class="price">$50/night</span>
+                    </div>
+                    <a href="#book" class="btn book-now">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Urban Hotels -->
+            <div class="
