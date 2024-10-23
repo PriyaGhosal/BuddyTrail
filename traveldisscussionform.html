@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Discussion Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="traveldisscussionform.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid bg-image">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg rounded-3">
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4">Travel Discussion Form</h2>
+                        <form id="travelForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" required>
+                                <div id="nameError" class="form-text text-danger"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                <div id="emailError" class="form-text text-danger"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" required>
+                                <div id="phoneError" class="form-text text-danger"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="destination" class="form-label">Destination</label>
+                                <input type="text" class="form-control" id="destination" list="destinationList" aria-describedby="destinationHelp">
+                                <datalist id="destinationList">
+                                    <option value="Paris, France">
+                                    <option value="Tokyo, Japan">
+                                    <option value="New York, USA">
+                                    <option value="Rome, Italy">
+                                    <option value="Sydney, Australia">
+                                </datalist>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                                <div id="messageError" class="form-text text-danger"></div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit 🛫</button>
+                            </div>
+                        </form>
+                        <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+                            We will contact you shortly!
+                        </div>
+                        <div id="loadingSpinner" class="text-center mt-3 d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('travelForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('loadingSpinner').classList.remove('d-none');
+            setTimeout(function() {
+                document.getElementById('loadingSpinner').classList.add('d-none');
+                document.getElementById('successMessage').classList.remove('d-none');
+            }, 2000);
+        });
+
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                const errorElement = document.getElementById(this.id + 'Error');
+                if (this.validity.valid) {
+                    errorElement.textContent = '';
+                    this.classList.remove('is-invalid');
+                } else {
+                    errorElement.textContent = this.validationMessage;
+                    this.classList.add('is-invalid');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

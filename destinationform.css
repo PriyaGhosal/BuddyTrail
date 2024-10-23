@@ -1,0 +1,38 @@
+.booking-form-container {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.booking-form:hover {
+    transform: translateY(-5px);
+}
+
+.form-control, .form-select {
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:hover, .form-select:hover {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .booking-form {
+        padding: 1.5rem !important;
+    }
+}
