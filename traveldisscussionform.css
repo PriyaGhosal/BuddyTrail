@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.bg-image {
+    background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: #86b7fe;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003d82;
+    border-color: #003d82;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+    }
+}
+
+.form-control, .btn {
+    border-radius: 0.5rem;
+}
+
+.form-control {
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    box-shadow: 0 4px 6px rgba(0, 86, 179, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
