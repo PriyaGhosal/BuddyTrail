@@ -33,7 +33,7 @@
 #rating-value {
     font-size: 1.2rem; /* Adjust font size */
     font-weight: bold;
-    color: black; /* Optional: change the color to match the theme */
+    color: black; /* change the color to match the theme */
 }
 
 .rating {
@@ -84,8 +84,6 @@
     color: rgb(239, 127, 6); /* Brighter orange on hover */
 }
 
-
-/* Filled stars on hover and selection */
 .rating > input:checked ~ label,
 .rating:not(:checked) > label {
     color: #ddd; /* Keep stars empty until interaction */
