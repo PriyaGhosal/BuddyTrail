@@ -886,7 +886,7 @@
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
-          <button>View Itinerary</button>
+          <a href="./solo-adventure.html"><button>View Itinerary</button></a>
         </div></div>
         <div class="itinerary">
           <div class="header1"> 
@@ -895,7 +895,7 @@
             Plan the perfect romantic escape with itineraries that include
             serene locations, romantic dinners, and memorable experiences.
           </p>
-          <button>View Itinerary</button>
+          <a href="./romantic-gateway.html"><button>View Itinerary</button></a>
         </div>
       </div>
       </div>
@@ -938,13 +938,23 @@
         <!-- Service Card: Travel Blog -->
         <div class="service-card">
           <a href="blog.html">
-            <<div class="icon">
+            <div class="icon">
             <i class="fas fa-pen"></i>
           </div></a>
          <a href="blog.html"><h3>Travel Blog</h3></a>
           <p>Read tips, guides, and personal stories from seasoned travelers.</p>
         </div>
-      </div>
+
+         <!-- Local Guide Connection -->
+          <div class="service-card">
+            <a href="guide.html"> <div class="icon">
+              <i class="fa-solid fa-person"></i>
+            </div></a>
+            <a href="guide.html"><h3>Local Guide Connection</h3></a>
+            <p>Partner with local guides and tour providers, allowing to book personalized tours or experiences led by locals for an authentic travel experience.</p>
+          </div>
+        </div>
+      
     </section>
 
     <script>
@@ -1194,7 +1204,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"],
 select {
-    width: 200px; /* Increased width for text inputs */
+    width: 100%; /* Increased width for text inputs */
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -1301,6 +1311,102 @@ select {
         </div></div>
       </div>
     </section>
+
+    <style>
+      /* Recommendations Section Styling */
+#recommendations {
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%)/* Light background for eye comfort */
+  padding: 40px; /* Increased padding for more spacing */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#recommendations h2 {
+  text-align: center;
+  color: #2c2b2b;
+  font-size: 4rem;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+/* Recommendations List */
+.recommendation-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap for larger cards */
+  flex-wrap: wrap;
+}
+
+/* Recommendation Item with Gradient Background and Increased Size */
+.recommendation-item {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Gradient 1 */
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  padding: 25px; /* Increased padding */
+  flex: 1 1 calc(33.333% - 30px); /* Adjust size to fit more content */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower hover effect */
+  cursor: pointer;
+  height: 320px; /* Fixed height for consistency */
+}
+
+.recommendation-item:nth-child(2) {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Gradient 2 */
+}
+
+.recommendation-item:nth-child(3) {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); /* Gradient 3 */
+}
+
+/* Hover Effects: Larger scale and deeper shadow */
+.recommendation-item:hover {
+  transform: scale(1.08); /* Larger scaling effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.recommendation-item h3 {
+  color: #1e293b; /* Darker text for readability */
+  font-size: 2.5rem; /* Slightly larger text */
+  margin-bottom: 15px;
+}
+
+.recommendation-item p {
+  color: #555555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.recommendation-item button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px; /* Increased button size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.recommendation-item button:hover {
+  background-color: #1e40af; /* Darker button on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Section Responsiveness */
+@media (max-width: 768px) {
+  .recommendation-list {
+    flex-direction: column;
+  }
+
+  .recommendation-item {
+    margin-bottom: 20px;
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+    </style>
+
+
+
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
@@ -1530,32 +1636,32 @@ main.main_blogs {
               <li class="NAVI">
                 <!-- added favicon for destinations -->
                 <i class="fa-solid fa-location-dot"></i>
-                <a href="#destinations">Destinations</a>
+                <a href="destinationform.html">Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
                 <i class="fa-solid fa-earth-americas"></i>
-                <a href="#travel-planning">Travel Planning</a>
+                <a href="traveldisscussionform.html">Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
                 <i class="fa-regular fa-face-smile"></i>
-                <a href="#experiences">Travel Experiences</a>
+                <a href="experience.html">Travel Experiences</a>
               </li>
               <li class="NAVI">
                 <i class="fa-solid fa-gear"></i>
                 <!-- added favicon for travel gear -->
-                <a href="#gear">Travel Gear</a>
+                <a href="gear.html">Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
                 <i class="fa-solid fa-shield"></i>
-                <a href="#safety">Travel Safety</a>
+                <a href="travelsafety.html">Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
                 <i class="fa-solid fa-seedling"></i>
-                <a href="#sustainable">Sustainable Travel</a>
+                <a href="sustainabeltravel.html">Sustainable Travel</a>
               </li>
           </ul>
       </nav>
@@ -2862,7 +2968,21 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
                 chatbotContainer.style.display = 'none';
             }
         }
+         
     </script>
+    <br /><br />
+    <link rel="stylesheet" href="visi.css">
+    <!-- ############### Footer ############### -->
+    <div class="visitor-counter">
+      <div>Visitor</div>
+      <div class="website-counter"></div>
+    </div>
+    <script src="path/to/visitorCounter.js"></script>
+    <script src="./assets/css/visitors.css"></script>
+    
+      <script src="visi.js"></script>
+    
+    
 </body>
  
 </body>

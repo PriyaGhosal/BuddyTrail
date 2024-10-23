@@ -1,0 +1,49 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.trip-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.trip-card:hover, .trip-card:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.trip-card:focus {
+    outline: 2px solid #007bff;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#gearSection {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#gearSection.d-none {
+    display: none !important;
+}
+
+#gearSection:not(.d-none) {
+    opacity: 1;
+}
+
+.btn-primary {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}

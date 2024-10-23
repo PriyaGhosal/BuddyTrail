@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Safety Measures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="travelsafety.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🌍 TravelSafe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#health">Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emergency">Emergency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#restrictions">Restrictions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tips">Tips</a></li>
+                </ul>
+                <div class="d-flex">
+                    <select class="form-select me-2" aria-label="Language select">
+                        <option selected>English</option>
+                        <option value="1">Español</option>
+                        <option value="2">Français</option>
+                        <option value="3">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Travel Safety Measures</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search safety information..." aria-label="Search safety information" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">🔍 Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header" id="health">
+                        <h2>🏥 Health Advisories</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✅ Get vaccinated before travel</li>
+                            <li class="list-group-item">✅ Carry essential medications</li>
+                            <li class="list-group-item">✅ Be aware of local health risks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header" id="emergency">
+                        <h2>📞 Emergency Contacts</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🚑 Emergency: 108</li>
+                            <li class="list-group-item">🏥 Local Hospital: +91 0151-200851</li>
+                            <li class="list-group-item">🛂 Embassy: +977 1-4410900</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header" id="restrictions">
+                        <h2>🚫 Travel Restrictions</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">⚠️ Check visa requirements</li>
+                            <li class="list-group-item">⚠️ Be aware of local laws</li>
+                            <li class="list-group-item">⚠️ Follow customs regulations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header" id="tips">
+                        <h2>💡 Safety Tips</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🔒 Secure your belongings</li>
+                            <li class="list-group-item">📱 Stay connected with family</li>
+                            <li class="list-group-item">🗺️ Research your destination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🗺️ Interactive Safety Map</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="map" style="height: 400px; background-color: #e9ecef;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🔔 Emergency Notifications</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Subscribe to receive real-time safety alerts and travel advisories.</p>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="subscribe-btn">
+                            <button class="btn btn-primary" type="button" id="subscribe-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h3>Share Travel Safety</h3>
+                <button class="btn btn-outline-primary me-2">📘 Facebook</button>
+                <button class="btn btn-outline-info me-2">🐦 Twitter</button>
+                <button class="btn btn-outline-danger">📸 Instagram</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About TravelSafe</h5>
+                    <p>Providing comprehensive travel safety information to ensure a secure and enjoyable journey for all travelers.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#!" class="text-dark">Terms of Service</a></li>
+                        <li><a href="#!" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Facebook</a></li>
+                        <li><a href="#!" class="text-dark">Twitter</a></li>
+                        <li><a href="#!" class="text-dark">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 TravelSafe: 
+            <a class="text-dark" href="#">www.travelsafe.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
