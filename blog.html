@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #3498db;
@@ -42,7 +45,7 @@
             background-color: var(--header-bg);
             color: var(--header-text);
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -95,7 +98,8 @@
             transition: color 0.3s ease;
         }
 
-        #nav-list a:hover, #nav-list a.active {
+        #nav-list a:hover,
+        #nav-list a.active {
             color: var(--secondary-color);
         }
 
@@ -120,7 +124,7 @@
             color: white;
             margin-bottom: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .hero h2 {
@@ -140,13 +144,14 @@
         }
 
         @keyframes fadeInUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(20px); 
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -166,13 +171,13 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 500;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .cms-controls button:hover {
             background-color: #27ae60;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .blog-filters {
@@ -208,7 +213,7 @@
         .blog-post {
             background-color: var(--card-bg);
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             transition: all 0.3s ease;
             display: flex;
@@ -217,7 +222,7 @@
 
         .blog-post:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .blog-post h2 {
@@ -332,91 +337,112 @@
         }
 
         footer {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    padding: 3rem 0; /* Increased padding for more space */
-    margin-top: 2rem;
-}
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 3rem 0;
+            /* Increased padding for more space */
+            margin-top: 2rem;
+        }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem; /* Added gap for better spacing between columns */
-}
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            /* Added gap for better spacing between columns */
+        }
 
-.footer-column {
-    flex: 1;
-    margin-bottom: 2rem; /* Increased margin for better spacing */
-    min-width: 250px; /* Increased min-width for more balance */
-}
+        .footer-column {
+            flex: 1;
+            margin-bottom: 2rem;
+            /* Increased margin for better spacing */
+            min-width: 250px;
+            /* Increased min-width for more balance */
+        }
 
-.footer-column h3 {
-    margin-bottom: 1.5rem; /* Increased spacing for better layout */
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem; /* Increased font size for headings */
-    color: var(--secondary-color); /* Color added for contrast */
-}
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            /* Increased spacing for better layout */
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            /* Increased font size for headings */
+            color: var(--secondary-color);
+            /* Color added for contrast */
+        }
 
-.footer-column ul {
-    list-style-type: none;
-    padding-left: 0;
-}
+        .footer-column ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-.footer-column ul li {
-    margin-bottom: 0.8rem; /* Increased spacing for a cleaner look */
-}
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+            /* Increased spacing for a cleaner look */
+        }
 
-.footer-column a {
-    color: var(--header-text);
-    text-decoration: none;
-    font-size: 1.1rem; /* Increased font size for better readability */
-    transition: color 0.3s ease, transform 0.3s ease; /* Added hover effect */
-}
+        .footer-column a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            /* Increased font size for better readability */
+            transition: color 0.3s ease, transform 0.3s ease;
+            /* Added hover effect */
+        }
 
-.footer-column a:hover {
-    color: var(--secondary-color); /* Smooth color transition */
-    transform: translateX(5px); /* Slight movement on hover */
-}
+        .footer-column a:hover {
+            color: var(--secondary-color);
+            /* Smooth color transition */
+            transform: translateX(5px);
+            /* Slight movement on hover */
+        }
 
-.social-icons {
-    display: flex;
-    gap: 1.5rem; /* Increased gap between social icons */
-    margin-top: 1.5rem;
-}
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            /* Increased gap between social icons */
+            margin-top: 1.5rem;
+        }
 
-.social-icons a {
-    color: var(--header-text);
-    font-size: 1.8rem; /* Increased size for icons */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        .social-icons a {
+            color: var(--header-text);
+            font-size: 1.8rem;
+            /* Increased size for icons */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-.social-icons a:hover {
-    color: var(--secondary-color);
-    transform: scale(1.1); /* Scale effect on hover */
-}
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+            /* Scale effect on hover */
+        }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Softer border color */
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8); /* Softer footer text color */
-}
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            /* Softer border color */
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            /* Softer footer text color */
+        }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center; /* Center align items on mobile */
-        gap: 1.5rem; /* Adjusted gap for mobile layout */
-    }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                /* Center align items on mobile */
+                gap: 1.5rem;
+                /* Adjusted gap for mobile layout */
+            }
 
-    .footer-column {
-        min-width: unset; /* Remove min-width on smaller screens */
-        text-align: center; /* Center align text on mobile */
-    }
-}
+            .footer-column {
+                min-width: unset;
+                /* Remove min-width on smaller screens */
+                text-align: center;
+                /* Center align text on mobile */
+            }
+        }
 
         @media (max-width: 768px) {
             .hamburger {
@@ -461,13 +487,18 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
             animation: fadeIn 0.3s;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .modal-content {
@@ -475,15 +506,22 @@
             margin: 10% auto;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             width: 80%;
             max-width: 600px;
             animation: slideIn 0.3s;
         }
 
         @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .modal-content h2 {
@@ -540,7 +578,7 @@
         .modal-form button:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* List styles for categories and tags */
@@ -580,9 +618,9 @@
             background-color: #c0392b;
             transform: translateY(-1px);
         }
-   
     </style>
 </head>
+
 <body>
       <!-- Preloader -->
       <div id="preloader">
@@ -771,202 +809,116 @@
             </div>
         </div>
     </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
-<script>
-// Initialize data in localStorage if it doesn't exist
-if (!localStorage.getItem('blogPosts')) {
-localStorage.setItem('blogPosts', JSON.stringify([
-    {
-        id: 1,
-        title: "10 Must-Visit Destinations for 2024",
-        content: "As we enter 2024, the world of travel continues to evolve...",
-        author: "Travel Expert",
-        date: "May 15, 2024",
-        category: "Destinations",
-        tags: ["2024", "travel", "destinations"],
-        comments: []
-    },
-    // Add more sample posts here
-]));
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+    <script>
+        // Initialize data in localStorage if it doesn't exist
+        if (!localStorage.getItem('blogPosts')) {
+            localStorage.setItem('blogPosts', JSON.stringify([
+                {
+                    id: 1,
+                    title: "10 Must-Visit Destinations for 2024",
+                    content: "As we enter 2024, the world of travel continues to evolve. Here are our top picks for must-visit destinations:\n\n1. Kyoto, Japan: Experience the perfect blend of ancient traditions and modern innovations.\n2. Galapagos Islands, Ecuador: Witness unique wildlife in their natural habitat.\n3. Dubrovnik, Croatia: Explore the stunning medieval architecture and crystal-clear Adriatic waters.\n4. Machu Picchu, Peru: Discover the mysteries of this ancient Incan citadel.\n5. Santorini, Greece: Enjoy breathtaking sunsets and picturesque white-washed buildings.\n6. Banff National Park, Canada: Immerse yourself in the pristine wilderness of the Canadian Rockies.\n7. Marrakech, Morocco: Get lost in the vibrant souks and experience rich Moroccan culture.\n8. Reykjavik, Iceland: Chase the Northern Lights and relax in geothermal hot springs.\n9. Queenstown, New Zealand: Indulge in adrenaline-pumping activities amidst stunning landscapes.\n10. Petra, Jordan: Step back in time at this ancient wonder carved into rose-red cliffs.\n\nEach of these destinations offers unique experiences that will create lasting memories. Whether you're seeking cultural immersion, natural wonders, or adventure, these places have something special to offer every type of traveler in 2024.",
+                    author: "Travel Expert",
+                    date: "May 15, 2024",
+                    category: "Destinations",
+                    tags: ["2024", "travel", "destinations"],
+                    comments: []
+                },
+                {
+                    id: 2,
+                    title: "Exploring the Hidden Gems of Bali",
+                    content: "Bali, known for its stunning beaches and vibrant culture, offers much more than meets the eye. Venture beyond the popular tourist spots to discover hidden waterfalls, ancient temples, and serene rice terraces. Don't miss the sacred Tirta Empul temple or the breathtaking Sekumpul Waterfall. For a unique experience, visit the lesser-known Nusa Penida island for its dramatic cliffs and pristine beaches.",
+                    author: "Island Explorer",
+                    date: "June 1, 2024",
+                    category: "Destinations",
+                    tags: ["Bali", "hidden gems", "adventure"],
+                    comments: []
+                },
+                {
+                    id: 3,
+                    title: "The Majestic Landscapes of Patagonia",
+                    content: "Patagonia, straddling Chile and Argentina, is a must-visit destination for nature lovers and adventure seekers. Witness the towering peaks of Torres del Paine, trek on the massive Perito Moreno Glacier, and explore the enchanting Tierra del Fuego. The region's diverse wildlife, including guanacos and Andean condors, adds to its allure. Plan your visit between December and February for the best weather conditions.",
+                    author: "Adventure Junkie",
+                    date: "June 15, 2024",
+                    category: "Destinations",
+                    tags: ["Patagonia", "nature", "trekking"],
+                    comments: []
+                },
+                {
+                    id: 4,
+                    title: "Uncovering the Magic of Marrakech",
+                    content: "Marrakech, the Red City of Morocco, is a sensory delight that should be on every traveler's bucket list. Lose yourself in the winding alleys of the medina, bargain for treasures in the bustling souks, and marvel at the intricate architecture of the Bahia Palace. Don't miss the chance to experience a traditional hammam or enjoy a sunset camel ride in the nearby Agafay Desert. The vibrant Jardin Majorelle and the historic Koutoubia Mosque are also must-see attractions.",
+                    author: "Culture Enthusiast",
+                    date: "July 1, 2024",
+                    category: "Destinations",
+                    tags: ["Marrakech", "culture", "history"],
+                    comments: []
+                },
+                {
+                    id: 5,
+                    title: "The Natural Wonders of Iceland",
+                    content: "Iceland, the land of fire and ice, offers a unique landscape that seems almost otherworldly. From the ethereal Northern Lights to the powerful geysers and hot springs, nature's spectacles are on full display here. Take a dip in the Blue Lagoon, witness the beauty of Gullfoss waterfall, and explore the black sand beaches of Vik. For the adventurous, a trip to the Vatnajökull glacier or a tour of the Golden Circle is a must. Don't forget to visit in summer for the midnight sun or in winter for the best chances to see the aurora borealis.",
+                    author: "Nature Photographer",
+                    date: "July 15, 2024",
+                    category: "Destinations",
+                    tags: ["Iceland", "natural wonders", "photography"],
+                    comments: []
+                },
+                {
+                    id: 6,
+                    title: "The Ancient Wonders of Petra, Jordan",
+                    content: "Petra, the ancient city carved into rose-red cliffs, is a testament to human ingenuity and one of the world's most impressive archaeological sites. Walk through the narrow Siq to reach the iconic Treasury, then explore the vast complex of tombs, temples, and the Roman-style theatre. For a truly magical experience, visit Petra by Night when the site is illuminated by thousands of candles. Don't miss the opportunity to hike up to the Monastery for panoramic views of the surrounding landscape. Petra is not just a destination; it's a journey through time that will leave you in awe.",
+                    author: "History Buff",
+                    date: "August 1, 2024",
+                    category: "Destinations",
+                    tags: ["Petra", "archaeology", "history"],
+                    comments: []
+                }
+            ]));
+        }
 
-if (!localStorage.getItem('categories')) {
-localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable Travel", "Budget Travel", "Solo Travel", "Food"]));
-}
+        if (!localStorage.getItem('categories')) {
+            localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable Travel", "Budget Travel", "Solo Travel", "Food"]));
+        }
 
-if (!localStorage.getItem('tags')) {
-localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food"]));
-}
+        if (!localStorage.getItem('tags')) {
+            localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food", "Bali", "hidden gems", "adventure", "Patagonia", "nature", "trekking", "Marrakech", "culture", "history", "Iceland", "natural wonders", "photography", "Petra", "archaeology"]));
+        }
 
-// Function to get data from localStorage
-function getLocalData(key) {
-return JSON.parse(localStorage.getItem(key));
-}
+        // Function to get data from localStorage
+        function getLocalData(key) {
+            return JSON.parse(localStorage.getItem(key));
+        }
 
-// Function to set data in localStorage
-function setLocalData(key, data) {
-localStorage.setItem(key, JSON.stringify(data));
-}
+        // Function to set data in localStorage
+        function setLocalData(key, data) {
+            localStorage.setItem(key, JSON.stringify(data));
+        }
 
-function renderPosts() {
-const container = document.querySelector('.blog-container');
-container.innerHTML = '';
-const posts = getLocalData('blogPosts');
+        function renderPosts() {
+            const container = document.querySelector('.blog-container');
+            container.innerHTML = '';
+            const posts = getLocalData('blogPosts');
 
-posts.forEach(post => {
-    const article = document.createElement('article');
-    article.className = 'blog-post';
-    article.innerHTML = `
-        <h2>${post.title}</h2>
-        <div class="meta">Posted on ${post.date} by ${post.author}</div>
-        <div class="category">${post.category}</div>
-        <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-        <div class="content">
-            <p>${post.content.substring(0, 150)}...</p>
-        </div>
-        <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-        <div class="comments-section">
-            <h3>Comments (${post.comments.length})</h3>
-            <div class="comments">
-                ${post.comments.slice(0, 2).map(comment => `
-                    <div class="comment">
-                        <p>${comment.text}</p>
-                        <small>${comment.date}</small>
-                    </div>
-                `).join('')}
-            </div>
-            <form class="comment-form" data-post-id="${post.id}">
-                <textarea placeholder="Add a comment"></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-        </div>
-    `;
-    container.appendChild(article);
-});
-
-// Add event listeners for read more links
-document.querySelectorAll('.read-more').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const postId = parseInt(e.target.getAttribute('data-id'));
-        viewFullPost(postId);
-    });
-});
-
-// Add event listeners for comment forms
-document.querySelectorAll('.comment-form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const postId = parseInt(e.target.getAttribute('data-post-id'));
-        const comment = e.target.querySelector('textarea').value;
-        addComment(postId, comment);
-        e.target.reset();
-    });
-});
-}
-
-function populateFilters() {
-const categoryFilter = document.getElementById('categoryFilter');
-const tagFilter = document.getElementById('tagFilter');
-const categories = getLocalData('categories');
-const tags = getLocalData('tags');
-
-categoryFilter.innerHTML = '<option value="">All Categories</option>';
-tagFilter.innerHTML = '<option value="">All Tags</option>';
-
-categories.forEach(category => {
-    const option = document.createElement('option');
-    option.value = category;
-    option.textContent = category;
-    categoryFilter.appendChild(option);
-});
-
-tags.forEach(tag => {
-    const option = document.createElement('option');
-    option.value = tag;
-    option.textContent = tag;
-    tagFilter.appendChild(option);
-});
-
-// Add event listeners for filters
-categoryFilter.addEventListener('change', filterPosts);
-tagFilter.addEventListener('change', filterPosts);
-}
-
-function filterPosts() {
-const selectedCategory = document.getElementById('categoryFilter').value;
-const selectedTag = document.getElementById('tagFilter').value;
-const posts = getLocalData('blogPosts');
-
-const filteredPosts = posts.filter(post => {
-    const categoryMatch = !selectedCategory || post.category === selectedCategory;
-    const tagMatch = !selectedTag || post.tags.includes(selectedTag);
-    return categoryMatch && tagMatch;
-});
-
-renderFilteredPosts(filteredPosts);
-}
-
-function renderFilteredPosts(filteredPosts) {
-const container = document.querySelector('.blog-container');
-container.innerHTML = '';
-
-filteredPosts.forEach(post => {
-    // Render filtered posts (similar to renderPosts function)
-    const article = document.createElement('article');
-    article.className = 'blog-post';
-    article.innerHTML = `
-        <h2>${post.title}</h2>
-        <div class="meta">Posted on ${post.date} by ${post.author}</div>
-        <div class="category">${post.category}</div>
-        <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-        <div class="content">
-            <p>${post.content.substring(0, 150)}...</p>
-        </div>
-        <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-        <div class="comments-section">
-            <h3>Comments (${post.comments.length})</h3>
-            <div class="comments">
-                ${post.comments.slice(0, 2).map(comment => `
-                    <div class="comment">
-                        <p>${comment.text}</p>
-                        <small>${comment.date}</small>
-                    </div>
-                `).join('')}
-            </div>
-            <form class="comment-form" data-post-id="${post.id}">
-                <textarea placeholder="Add a comment"></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-        </div>
-    `;
-    container.appendChild(article);
-});
-
-// Re-add event listeners
-addEventListeners();
-}
-
-function viewFullPost(postId) {
-const posts = getLocalData('blogPosts');
-const post = posts.find(p => p.id === postId);
-if (post) {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close">&times;</span>
+            posts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post';
+                article.innerHTML = `
             <h2>${post.title}</h2>
             <div class="meta">Posted on ${post.date} by ${post.author}</div>
             <div class="category">${post.category}</div>
             <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <div class="content">
-                <p>${post.content}</p>
+                <p>${post.content.substring(0, 150)}...</p>
             </div>
+            <div class="full-content" style="display: none;">
+                <p>${marked(post.content)}</p>
+            </div>
+            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
             <div class="comments-section">
                 <h3>Comments (${post.comments.length})</h3>
                 <div class="comments">
-                    ${post.comments.map(comment => `
+                    ${post.comments.slice(0, 2).map(comment => `
                         <div class="comment">
                             <p>${comment.text}</p>
                             <small>${comment.date}</small>
@@ -978,332 +930,218 @@ if (post) {
                     <button type="submit">Post Comment</button>
                 </form>
             </div>
-        </div>
-    `;
-    document.body.appendChild(modal);
-
-    // Close modal when clicking on the close button or outside the modal
-    modal.querySelector('.close').addEventListener('click', () => {
-        document.body.removeChild(modal);
-    });
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            document.body.removeChild(modal);
-        }
-    });
-
-    // Add event listener for comment form in modal
-    modal.querySelector('.comment-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const comment = e.target.querySelector('textarea').value;
-        addComment(postId, comment);
-        e.target.reset();
-    });
-}
-}
-
-function addComment(postId, commentText) {
-const posts = getLocalData('blogPosts');
-const postIndex = posts.findIndex(p => p.id === postId);
-if (postIndex !== -1) {
-    posts[postIndex].comments.push({
-        text: commentText,
-        date: new Date().toLocaleString()
-    });
-    setLocalData('blogPosts', posts);
-    renderPosts();
-}
-}
-
-function createNewPost() {
-            const modal = document.createElement('div');
-            modal.className = 'modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Create New Post</h2>
-                    <form id="newPostForm" class="modal-form">
-                        <input type="text" id="postTitle" placeholder="Enter post title" required>
-                        <textarea id="postContent" placeholder="Enter post content" required rows="5"></textarea>
-                        <input type="text" id="postAuthor" placeholder="Enter author name" required>
-                        <input type="text" id="postCategory" placeholder="Enter post category" required>
-                        <input type="text" id="postTags" placeholder="Enter tags (comma-separated)" required>
-                        <button type="submit">Create Post</button>
-                    </form>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            modal.style.display = 'block';
-
-
-// Close modal when clicking on the close button or outside the modal
-modal.querySelector('.close').addEventListener('click', () => {
-    document.body.removeChild(modal);
-});
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        document.body.removeChild(modal);
-    }
-});
-
-// Add event listener for form submission
-modal.querySelector('#newPostForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const title = document.getElementById('postTitle').value;
-    const content = document.getElementById('postContent').value;
-    const author = document.getElementById('postAuthor').value;
-    const category = document.getElementById('postCategory').value;
-    const tags = document.getElementById('postTags').value.split(',').map(tag => tag.trim());
-
-    const posts = getLocalData('blogPosts');
-    const newPost = {
-        id: posts.length + 1,
-        title,
-        content,
-        author,
-        date: new Date().toLocaleDateString(),
-        category,
-        tags,
-        comments: []
-    };
-
-    posts.push(newPost);
-    setLocalData('blogPosts', posts);
-
-    // Update categories and tags
-    let categories = getLocalData('categories');
-    let allTags = getLocalData('tags');
-
-    if (!categories.includes(category)) {
-        categories.push(category);
-        setLocalData('categories', categories);
-    }
-
-    tags.forEach(tag => {
-        if (!allTags.includes(tag)) {
-            allTags.push(tag);
-        }
-    });
-    setLocalData('tags', allTags);
-
-    renderPosts();
-    populateFilters();
-    document.body.removeChild(modal);
-});
-}
-
-function manageCategories() {
-            const categories = getLocalData('categories');
-            const modal = document.createElement('div');
-            modal.className = 'modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Manage Categories</h2>
-                    <ul id="categoryList" class="item-list">
-                        ${categories.map(category => `<li>${category} <button class="delete-btn delete-category" data-category="${category}">Delete</button></li>`).join('')}
-                    </ul>
-                    <form id="addCategoryForm" class="modal-form">
-                        <input type="text" id="newCategory" placeholder="Enter new category" required>
-                        <button type="submit">Add Category</button>
-                    </form>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            modal.style.display = 'block';
-
-// Close modal when clicking on the close button or outside the modal
-modal.querySelector('.close').addEventListener('click', () => {
-    document.body.removeChild(modal);
-});
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        document.body.removeChild(modal);
-    }
-});
-
-// Add event listener for adding new category
-modal.querySelector('#addCategoryForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const newCategory = document.getElementById('newCategory').value;
-    if (!categories.includes(newCategory)) {
-        categories.push(newCategory);
-        setLocalData('categories', categories);
-        populateFilters();
-        document.body.removeChild(modal);
-        manageCategories(); // Reopen the modal with updated list
-                }
+        `;
+                container.appendChild(article);
             });
 
-            // Add event listeners for deleting categories
-            modal.querySelectorAll('.delete-category').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const categoryToDelete = e.target.getAttribute('data-category');
-                    const updatedCategories = categories.filter(category => category !== categoryToDelete);
-                    setLocalData('categories', updatedCategories);
-                    populateFilters();
-                    document.body.removeChild(modal);
-                    manageCategories(); // Reopen the modal with updated list
-                });
-            });
+            addEventListeners();
         }
 
-        function manageTags() {
-            const tags = getLocalData('tags');
-            const modal = document.createElement('div');
-            modal.className = 'modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Manage Tags</h2>
-                    <ul id="tagList" class="item-list">
-                        ${tags.map(tag => `<li>${tag} <button class="delete-btn delete-tag" data-tag="${tag}">Delete</button></li>`).join('')}
-                    </ul>
-                    <form id="addTagForm" class="modal-form">
-                        <input type="text" id="newTag" placeholder="Enter new tag" required>
-                        <button type="submit">Add Tag</button>
-                    </form>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            modal.style.display = 'block';
-            // Close modal when clicking on the close button or outside the modal
-            modal.querySelector('.close').addEventListener('click', () => {
-                document.body.removeChild(modal);
-            });
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    document.body.removeChild(modal);
-                }
-            });
-
-            // Add event listener for adding new tag
-            modal.querySelector('#addTagForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                const newTag = document.getElementById('newTag').value;
-                if (!tags.includes(newTag)) {
-                    tags.push(newTag);
-                    setLocalData('tags', tags);
-                    populateFilters();
-                    document.body.removeChild(modal);
-                    manageTags(); // Reopen the modal with updated list
-                }
-            });
-
-            // Add event listeners for deleting tags
-            modal.querySelectorAll('.delete-tag').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const tagToDelete = e.target.getAttribute('data-tag');
-                    const updatedTags = tags.filter(tag => tag !== tagToDelete);
-                    setLocalData('tags', updatedTags);
-                    populateFilters();
-                    document.body.removeChild(modal);
-                    manageTags(); // Reopen the modal with updated list
-                });
-            });
-        }
-
-        // UI Enhancements and Animations
-        function addUIEnhancements() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
+        function addEventListeners() {
+            // Add event listeners for read more links
+            document.querySelectorAll('.read-more').forEach(link => {
+                link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+                    const article = e.target.closest('.blog-post');
+                    const content = article.querySelector('.content');
+                    const fullContent = article.querySelector('.full-content');
 
-            // Fade in blog posts on scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
+                    if (content.style.display !== 'none') {
+                        content.style.display = 'none';
+                        fullContent.style.display = 'block';
+                        e.target.textContent = 'Read Less';
+                    } else {
+                        content.style.display = 'block';
+                        fullContent.style.display = 'none';
+                        e.target.textContent = 'Read More';
                     }
                 });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.blog-post').forEach(post => {
-                observer.observe(post);
             });
 
-            // Add hover effect to blog posts
-            document.querySelectorAll('.blog-post').forEach(post => {
-                post.addEventListener('mouseenter', () => {
-                    post.style.transform = 'translateY(-5px)';
-                    post.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+            // Add event listeners for comment forms
+            document.querySelectorAll('.comment-form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const postId = parseInt(e.target.getAttribute('data-post-id'));
+                    const comment = e.target.querySelector('textarea').value;
+                    addComment(postId, comment);
+                    e.target.reset();
                 });
-                post.addEventListener('mouseleave', () => {
-                    post.style.transform = 'translateY(0)';
-                    post.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                });
-            });
-
-            // Add parallax effect to hero section
-            window.addEventListener('scroll', () => {
-                const hero = document.querySelector('.hero');
-                const scrollPosition = window.pageYOffset;
-                hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
             });
         }
 
-        // Mobile menu toggle
-        function setupMobileMenu() {
-            const hamburger = document.getElementById('hamburger');
-            const navList = document.getElementById('nav-list');
+        function populateFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            const categories = getLocalData('categories');
+            const tags = getLocalData('tags');
 
-            hamburger.addEventListener('click', () => {
-                navList.classList.toggle('show');
+            categoryFilter.innerHTML = '<option value="">All Categories</option>';
+            tagFilter.innerHTML = '<option value="">All Tags</option>';
+
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
             });
+
+            tags.forEach(tag => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = tag;
+                tagFilter.appendChild(option);
+            });
+
+            // Add event listeners for filters
+            categoryFilter.addEventListener('change', filterPosts);
+            tagFilter.addEventListener('change', filterPosts);
         }
 
-        // Header scroll effect
-        function setupHeaderScroll() {
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
+        function filterPosts() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            const selectedTag = document.getElementById('tagFilter').value;
+            const posts = getLocalData('blogPosts');
+
+            const filteredPosts = posts.filter(post => {
+                const categoryMatch = !selectedCategory || post.category === selectedCategory;
+                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+                return categoryMatch && tagMatch;
             });
+
+            renderFilteredPosts(filteredPosts);
+        }
+
+        function renderFilteredPosts(filteredPosts) {
+            const container = document.querySelector('.blog-container');
+            container.innerHTML = '';
+
+            filteredPosts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post';
+                article.innerHTML = `
+            <h2>${post.title}</h2>
+            <div class="meta">Posted on ${post.date} by ${post.author}</div>
+            <div class="category">${post.category}</div>
+            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="content">
+                <p>${post.content.substring(0, 150)}...</p>
+            </div>
+            <div class="full-content" style="display: none;">
+                <p>${marked(post.content)}</p>
+            </div>
+            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+            <div class="comments-section">
+                <h3>Comments (${post.comments.length})</h3>
+                <div class="comments">
+                    ${post.comments.slice(0, 2).map(comment => `
+                        <div class="comment">
+                            <p>${comment.text}</p>
+                            <small>${comment.date}</small>
+                        </div>
+                    `).join('')}
+                </div>
+                <form class="comment-form" data-post-id="${post.id}">
+                    <textarea placeholder="Add a comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        `;
+                container.appendChild(article);
+            });
+
+            addEventListeners();
+        }
+
+        function viewFullPost(postId) {
+            const posts = getLocalData('blogPosts');
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>${post.title}</h2>
+                <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                <div class="category">${post.category}</div>
+                <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                <div class="content">
+                    <p>${marked(post.content)}</p>
+                </div>
+                <div class="comments-section">
+                    <h3>Comments (${post.comments.length})</h3>
+                    <div class="comments">
+                        ${post.comments.map(comment => `
+                            <div class="comment">
+                                <p>${comment.text}</p>
+                                <small>${comment.date}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <form class="comment-form" data-post-id="${post.id}">
+                        <textarea placeholder="Add a comment"></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        `;
+                document.body.appendChild(modal);
+
+                // Close modal when clicking on the close button or outside the modal
+                modal.querySelector('.close').addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        document.body.removeChild(modal);
+                    }
+                });
+
+                // Add event listener for comment form in modal
+                modal.querySelector('.comment-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const comment = e.target.querySelector('textarea').value;
+                    addComment(postId, comment);
+                    e.target.reset();
+                });
+            }
+        }
+
+        function addComment(postId, commentText) {
+            const posts = getLocalData('blogPosts');
+            const postIndex = posts.findIndex(p => p.id === postId);
+            if (postIndex !== -1) {
+                posts[postIndex].comments.push({
+                    text: commentText,
+                    date: new Date().toLocaleString()
+                });
+                setLocalData('blogPosts', posts);
+                renderPosts();
+            }
         }
 
         // Initialize the blog
         function initializeBlog() {
             renderPosts();
-            populateFilters();
-            addUIEnhancements();
-            setupMobileMenu();
-            setupHeaderScroll();
         }
-
-        // CMS control functions
-        document.getElementById('newPostBtn').addEventListener('click', createNewPost);
-        document.getElementById('manageCategoriesBtn').addEventListener('click', manageCategories);
-        document.getElementById('manageTagsBtn').addEventListener('click', manageTags);
 
         // Initialize the blog when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', initializeBlog);
     </script>
 
-  <div class="gtranslate_wrapper"></div>
+    <div class="gtranslate_wrapper"></div>
 
-  <script>
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+        }
+    </script>
 
-  window.gtranslateSettings = {
-    "default_language":"en",
-    "detect_browser_language":true,
-    "wrapper_selector":".gtranslate_wrapper"
-  }
-
-  </script>
-
-  <script 
-    src="https://cdn.gtranslate.net/widgets/latest/float.js"
-    defer
-  ></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 </body>
+
 </html>

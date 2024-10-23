@@ -510,9 +510,11 @@ nav {
 /**** LOCATIONS PAGE ****/
 
 #locations {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   overflow: hidden;
+  color: white; /* Ensures the text remains visible over the darker gradient */
 }
+
 
 h2 {
   text-align: center;
@@ -1110,7 +1112,7 @@ body {
 }
 
  issue
- 
+
 h2 {
 main
 
@@ -1118,9 +1120,9 @@ main
   font-weight:  700;
   margin:  10px 0; /* Margin adjustment */
   color:  #007bff;
-   
+
 }
- 
+
 p {
   font-size: 1.5em;
   color: #666; /* Paragraph color */
@@ -2937,6 +2939,33 @@ textarea {
   line-height: 1.5;
 }
 
+/* Dark mode for Service */
+.dark-mode #services {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
+  }
+
+  .dark-mode #services h1 {
+    color: #ffa500; /* Orange color for the main heading in dark mode */
+  }
+
+  .dark-mode #services h2 {
+    color: #ffa500; /* Bright yellow subheading in dark mode */
+  }
+
+  .dark-mode #services p {
+    color: #e0e0e0; /* darker grey for paragraph text in dark mode */
+  }
+
+  .dark-mode #services p strong {
+    color: #ffa500; /* Yellow highlight for important text in dark mode */
+  }
+
+  .dark-mode .service-card{
+    background-color: #1e1e1e; /* Darker background for service cards */
+    color: #e0e0e0; /* Light grey text color */
+  }
+
 html,
 body {
   margin: 0;
@@ -2955,4 +2984,24 @@ body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+}
+.chatbot-container {
+  position: fixed;
+  bottom: 70px; /* Adjust for vertical spacing above the icon */
+  right: 20px;  /* Adjust for horizontal spacing */
+  z-index: 1000;
+  display: none; /* Initially hide the chatbot */
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust for positioning */
+  right: 20px;  /* Adjust for positioning */
+  z-index: 1001; /* Ensure icon is above the chatbot */
+  cursor: pointer; /* Change cursor to pointer */
+  background-color: #007bff; /* Optional: add a background color */
+  color: white; /* Optional: icon color */
+  padding: 18px; /* Optional: padding for better click area */
+  border-radius: 50%; /* Optional: make it circular */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }
