@@ -66,6 +66,7 @@
 ├── gear.html
 ├── goa-resort.css
 ├── goa-resort.html
+├── guide.html
 ├── himachal.css
 ├── himachal.html
 ├── hotel.css
