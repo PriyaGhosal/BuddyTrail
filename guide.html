@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Guide Connection</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0066cc;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header nav ul {
+            display: inline-block;
+            list-style: none;
+            float: right;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: url('https://example.com/your-tour-image.jpg') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 102, 204, 0.7);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .overlay p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #008cff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0066cc;
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background-color: #f4f7f6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            font-size: 36px;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* FAQ and Blog Section Styles */
+        .faq-and-blog {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px; /* Space between FAQ and Blog sections */
+            padding: 50px;
+        }
+
+        .faq, .blog {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq {
+            max-width: 45%;
+        }
+
+        .blog {
+            max-width: 45%;
+        }
+
+        .faq-item, .blog-post {
+            margin-bottom: 20px;
+        }
+
+        .blog-post a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .faq-and-blog {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .faq, .blog {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Local Guide Connection</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+            <h2>Discover Authentic Local Experiences</h2>
+            <p>Partner with local guides and book personalized tours for a unique travel experience.</p>
+            <a href="#book" class="cta-button">Book a Tour</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="booking-section">
+        <h2>Book a Personalized Tour</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Choose Destination:</label>
+                <select id="destination" required>
+                    <option value="">Select...</option>
+                    <option value="paris">Paris</option>
+                    <option value="new_york">New York</option>
+                    <option value="tokyo">Tokyo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tourDate">Preferred Tour Date:</label>
+                <input type="date" id="tourDate" required>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </section>
+
+    <!-- FAQ and Blog Section aligned in one row -->
+    <div class="faq-and-blog">
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I book a tour?</h3>
+                <p>Simply fill out the booking form with your details and preferred date, and our team will handle the rest.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are the tours customizable?</h3>
+                <p>Yes! We work closely with our local guides to create a personalized itinerary for each traveler.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is your cancellation policy?</h3>
+                <p>You can cancel up to 48 hours before the tour for a full refund.</p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog">
+            <h2>Travel Tips & Blog</h2>
+            <div class="blog-post">
+                <h3><a href="#">5 Hidden Gems in Paris You Must See</a></h3>
+                <p>Discover the lesser-known spots that will make your Paris trip unforgettable.</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="#">How to Travel Like a Local in New York</a></h3>
+                <p>Get insider tips from local guides on experiencing New York authentically.</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="#">The Ultimate Guide to Exploring Tokyo</a></h3>
+                <p>Explore Tokyo's blend of traditional and modern culture with these essential tips.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Local Guide Connection. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const destination = document.getElementById('destination').value;
+            const tourDate = document.getElementById('tourDate').value;
+
+            if (name && email && destination && tourDate) {
+                alert(`Thank you, ${name}! Your tour to ${destination} is booked for ${tourDate}.`);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Trip Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="gear.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Adventure Trip Planner</h1>
+        <div class="row" id="tripListings">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trip-card" data-trip="mountain" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" class="card-img-top" alt="Mountain Trip">
+                    <div class="card-body">
+                        <h5 class="card-title">Mountain Adventure</h5>
+                        <p class="card-text">Destination: Rocky Mountains</p>
+                        <p class="card-text">Duration: 7 days</p>
+                        <p class="card-text">Difficulty: Challenging</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trip-card" data-trip="beach" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="card-img-top" alt="Beach Trip">
+                    <div class="card-body">
+                        <h5 class="card-title">Tropical Paradise</h5>
+                        <p class="card-text">Destination: Bali</p>
+                        <p class="card-text">Duration: 10 days</p>
+                        <p class="card-text">Difficulty: Easy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 trip-card" data-trip="safari" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801" class="card-img-top" alt="Safari Trip">
+                    <div class="card-body">
+                        <h5 class="card-title">African Safari</h5>
+                        <p class="card-text">Destination: Serengeti</p>
+                        <p class="card-text">Duration: 14 days</p>
+                        <p class="card-text">Difficulty: Moderate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gearSection" class="mt-5 d-none">
+            <h2 class="mb-4">Required Gear</h2>
+            <div id="gearList" class="row"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const trips = {
+            mountain: [
+                { name: "Hiking Boots", description: "Durable and waterproof boots for rough terrain", image: "https://images.unsplash.com/photo-1582588678413-dbf45f4823e9" },
+                { name: "Backpack", description: "Large capacity backpack for multi-day hikes", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62" },
+                { name: "Sleeping Bag", description: "Insulated sleeping bag for cold nights", image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" }
+            ],
+            beach: [
+                { name: "Sunscreen", description: "High SPF sunscreen for UV protection", image: "https://images.unsplash.com/photo-1526434630747-bdd209ae46c2" },
+                { name: "Snorkel Set", description: "Mask, snorkel, and fins for underwater exploration", image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5" },
+                { name: "Beach Towel", description: "Quick-dry towel for beach activities", image: "https://images.unsplash.com/photo-1590480598135-3be152c87913" }
+            ],
+            safari: [
+                { name: "Binoculars", description: "High-power binoculars for wildlife viewing", image: "https://images.unsplash.com/photo-1551524559-8af4e6624178" },
+                { name: "Safari Hat", description: "Wide-brimmed hat for sun protection", image: "https://images.unsplash.com/photo-1582791694770-cbdc9dda338f" },
+                { name: "Insect Repellent", description: "DEET-based repellent for mosquito protection", image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed" }
+            ]
+        };
+
+        document.querySelectorAll('.trip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const tripType = this.dataset.trip;
+                const gearList = trips[tripType];
+                const gearSection = document.getElementById('gearSection');
+                const gearListEl = document.getElementById('gearList');
+
+                gearListEl.innerHTML = '';
+                if (gearList && gearList.length > 0) {
+                    gearList.forEach(gear => {
+                        const gearCard = `
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="${gear.image}" class="card-img-top" alt="${gear.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${gear.name}</h5>
+                                        <p class="card-text">${gear.description}</p>
+                                        <button class="btn btn-primary">Add to Cart 🛒</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        gearListEl.innerHTML += gearCard;
+                    });
+                    gearSection.classList.remove('d-none');
+                } else {
+                    gearListEl.innerHTML = '<p class="col-12 text-center">No gears required for this trip.</p>';
+                    gearSection.classList.remove('d-none');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

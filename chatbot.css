@@ -1,0 +1,194 @@
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#chatbot {
+    width: 350px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#chat-header {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#close-button:hover {
+    color: #ffcccb;
+    transform: scale(1.1);
+}
+
+#chatbox {
+    height: 350px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user, .bot {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 14px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.user {
+    align-self: flex-end;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#user-input {
+    width: calc(100% - 30px);
+    padding: 12px 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+#user-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+#send-button {
+    padding: 12px 20px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    margin: 10px;
+}
+
+#send-button:hover {
+    background: linear-gradient(to right, #0056b3, #004494);
+    transform: translateY(-2px);
+}
+
+#chat-icon {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #0056b3, #004494);
+}
+
+
+/* Additional Styles for Itineraries, Deals, Testimonials, and Review Forms */
+#itineraries {
+    margin-bottom: 70px;
+    border: none;
+}
+
+.itinerary-list {
+    padding-bottom: 30px;
+}
+
+#cab-booking {
+    margin-top: 70px;
+}
+
+#deals {
+    margin-bottom: 10px;
+}
+
+#testimonials {
+    margin-bottom: 70px;
+}
+
+.review-form {
+    margin: 20px;
+}
+
+.review-form:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(13, 71, 216, 0.2), 0 6px 20px rgba(14, 14, 219, 0.19);
+}
+
+#name, #destination, #rating, #review, #complaint {
+    border: 2px solid rgb(187, 124, 202);
+}
+
+#name:hover, #destination:hover, #rating:hover, #review:hover, #complaint:hover {
+    border: 2px solid rgb(180, 104, 175);
+}

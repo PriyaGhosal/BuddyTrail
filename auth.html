@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=48179&format=png&color=000000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="sign-in-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="sign-in-password" />
+              <i class="fas fa-eye password-toggle" onclick="togglePassword('sign-in-password', this)"></i>
+            </div>
+            <div class="login">
+              <input type="submit" value="Login" class="btn solid" />
+            </div>
+            <a href="/forgot_password.html" style="text-decoration: none; color: black;"><p>Forgot Password?</p></a>
+            <p class="social-text">OR<br>Sign in with social platforms</p>
+
+            <div class="social-media">
+              <button class="social-icon" id="googleSignInBtn">
+
+            <div class="social-media">
+              <button class="social-icon">
+
+                <img src="./img/google.png" alt="Google Icon" style="width: 30px; height: 30px;">
+              </button>
+              <button class="social-icon" id="githubSignInBtn">
+                <i class="fab fa-github"></i>
+              </button>
+            </div>
+          </form>
+
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="signup-password" />
+              <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
+            </div>
+            <div class="password-strength">
+              <div id="strength-weak"></div>
+              <div id="strength-medium"></div>
+              <div id="strength-strong"></div>
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Discover new experiences with BuddyTrail! <br> Create your account.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Welcome back to our community
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <a href="index.html" class="homeBtn">
+      <i class="fas fa-home"></i>
+    </a>
+    <div id="toast-container"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script>
+      const signUpBtn = document.getElementById('sign-up-btn');
+      const signInBtn = document.getElementById('sign-in-btn');
+      const container = document.querySelector('.container');
+
+      signUpBtn.addEventListener('click', () => {
+        container.classList.add('sign-up-mode');
+      });
+
+      signInBtn.addEventListener('click', () => {
+        container.classList.remove('sign-up-mode');
+      });
+
+      function togglePassword(id, element) {
+        const passwordInput = document.getElementById(id);
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          element.classList.add('active');
+        } else {
+          passwordInput.type = 'password';
+          element.classList.remove('active');
+        }
+      }
+    </script>
+    <script type="module" src="auth.js" defer></script>
+
+    <script type="module" src="SignUpWithGoogle.js"></script>
+
+    <script type="module" src="SignIn-Up-withGithub.js"></script>
+
+  <div class="gtranslate_wrapper"></div>
+
+  <script>
+
+  window.gtranslateSettings = {
+    "default_language":"en",
+    "detect_browser_language":true,
+    "wrapper_selector":".gtranslate_wrapper"
+  }
+
+  </script>
+
+  <script
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+
+  </body>
+</html>
