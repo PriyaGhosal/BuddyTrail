@@ -66,6 +66,7 @@
 ├── gear.html
 ├── goa-resort.css
 ├── goa-resort.html
+├── guide.html
 ├── himachal.css
 ├── himachal.html
 ├── hotel.css
@@ -137,6 +138,8 @@
 ├── rajasthan.css
 ├── rajasthan.html
 ├── reviews.html
+├── romantic-gateway.css
+├── romantic-gateway.html
 ├── script
 │   └── popup.js
 ├── script.js
@@ -144,6 +147,8 @@
 ├── service.css
 ├── service.html
 ├── servicespage.html
+├── solo-adventure.css
+├── solo-adventure.html
 ├── star-rating.js
 ├── style.css
 ├── styles
