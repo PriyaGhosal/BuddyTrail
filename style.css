@@ -430,9 +430,9 @@ nav {
 }
 
 .locations-head h3 {
-  padding: 4rem 0rem;
+  padding: 0rem 0rem;
   background: linear-gradient(#fff, #f9f9f9);
-  font-weight: bolder;
+  font-weight: normal;
   font-size: 2.8rem;
   -webkit-background-clip: text;
   background-clip: text;
@@ -2345,6 +2345,7 @@ body.light-mode {
   margin: 0 0 20px;
 }
 .header1{
+  margin-bottom: 1.5rem;
   animation-name: pulse1;
   animation-duration: 1.8s;
   animation-timing-function: ease-in-out;
