@@ -13,25 +13,21 @@
 <body>
     <header>
         <div class="container">
-          <nav>
-            <div class="logo">
-              <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-              <h1 id="logo">BuddyTrail</h1>
-            </div>
-            <button class="hamburger" id="hamburger">☰</button>
-            <ul class="nav-links" id="nav-links">
-            <button class="dropdown-close-btn" id="closeBtn">✖</button> 
-              <li><a href="index.html" class="nav-link">Home</a></li>
-              <li><a href="about.html" class="nav-link active">About Us</a></li>
-              <li><a href="team.html" class="nav-link">Team</a></li>
-              <li><a href="contact.html" class="nav-link">Contact</a></li>
-              <li ><a href="auth.html"class="btn-primary" >Sign In</a></li>
-            </ul>
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-          </button>
-          </nav>
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+                    <h1 id="logo">BuddyTrail</h1>
+                </div>
+                <button class="hamburger" id="hamburger">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -51,17 +47,14 @@
             <h2>Our Core Values</h2>
             <div class="values">
                 <div class="value-item">
-
                     <h3>Customer Satisfaction</h3>
                     <p>We are committed to ensuring that every client receives the best possible travel experience with
                         personalized service and attention to detail.</p>
-
                 </div>
                 <div class="value-item">
                     <h3>Transparency</h3>
                     <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden
                         fees, ensuring you know exactly what you're paying for.</p>
-
                 </div>
                 <div class="value-item">
                     <h3>Reliability</h3>
@@ -116,10 +109,9 @@
             height: 50px;
             display: flex;
             align-self: flex-end;
-            margin-bottom: 10px;
             justify-content: center;
-            margin-top: 55px;
-            margin-right: 220px;
+            margin: 56px auto 56px;
+
         }
 
         #cta-button {
@@ -162,8 +154,8 @@
             background-color: #eef5f9;
             border-radius: 10px;
             padding: auto;
-            width: 700px;
-            height: 350px;
+            width: 680px;
+            height: 23rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
@@ -195,9 +187,7 @@
 
         /* About Section */
         .about {
-            background-color: #e6f0ff;
-            animation: changeBackground 10s infinite alternate;
-            transition: background-color 2s ease-in-out;
+            background-color: #fff;
             padding: 60px 0;
             text-align: center;
             position: relative;
@@ -244,10 +234,11 @@
         /* Core Values Section */
         .core-values {
             background-color: #eef5f9;
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         .core-values h2 {
+            margin-top: -1rem;
             text-align: center;
             margin-bottom: 40px;
             color: #007BFF;
@@ -261,7 +252,7 @@
 
         .core-values .values {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
@@ -321,6 +312,7 @@
         .team h2 {
             text-align: center;
             margin-bottom: 40px;
+            margin-top: -2rem;
             font-size: 32px;
             color: #007BFF;
             transition: color 0.3s ease;
@@ -332,7 +324,7 @@
 
         .team .team-members {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
         }
 
@@ -341,7 +333,7 @@
             background-color: #eef5f9;
             padding: 30px;
             border-radius: 10px;
-            width: 30%;
+            width: 57%;
             text-align: center;
             margin: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -439,47 +431,83 @@
         }
     </style>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About Us</h3>
-                    <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+    <div class="footer-responsive">
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <div class="logo-footer">
+                        <img src="img/logo.png" alt="BuddyTrail Logo" />
+                        <h1 id="logo">BuddyTrail</h1>
+                    </div>
+                    <p>Welcome to BuddyTrail - your premier travel companion! Whether you're planning a family vacation
+                        or a
+                        getaway with friends, BuddyTrail is here to help you discover and explore incredible
+                        destinations.
+                        Our platform makes it easy to find the best hotels and book affordable flights, ensuring a
+                        seamless
+                        travel experience.</p>
+
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
+                <div class="col">
+                    <h3>Office <div class="underline"><span></span></div>
+                    </h3>
+                    <p>123 Fake Street</p>
+                    <p>Near XYZ Mall, Sample City</p>
+                    <p>Fake State, PIN 12345, India</p>
+                    <p class="email-id">info@example.com</p>
+                    <h4>+123 456 7890</h4>
+
+                </div>
+                <div class="col">
+                    <h3>Links <div class="underline"><span></span></div>
+                    </h3>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="faq.html" class="faq-link">FAQs</a></li>
-                        <li><a href="/#services">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+                        <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
+                        <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
+                        <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
+                        <li><a href="https://buddytrail.netlify.app/faq" target="_blank">FAQs</a></li>
+                        <li><a href="https://buddytrail.netlify.app/team" target="_blank">Our Team</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contributor/contributor"
+                                target="_blank">Contributors</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contact">Contact Us</a></li>
 
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@example.com</p>
-                    <p>Phone: +123 456 7890</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i
-                                class="fab fa-discord"></i></a>
-                        <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
+                <div class="col">
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <form>
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://discord.com/invite/priyaghosal" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://x.com/i/flow/login?redirect_after_login=%2FPriyaGhosa39968" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
-            <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
-        </div>
-    </footer>
+            <hr>
+            <p class="copyright"> © 2024 BuddyTrail | All Rights Reserved</p>
+        </footer>
+    </div>
 
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
@@ -498,68 +526,8 @@
                 navList.classList.remove("active");
             });
         });
+    </script>
 
-       document.addEventListener("DOMContentLoaded", function() {
-         const modeToggle = document.getElementById("modeToggle");
-         const sunIcon = document.querySelector(".sun-icon");
-         const moonIcon = document.querySelector(".moon-icon");
+</body>
 
-         // Check saved theme in localStorage and apply it
-         const currentTheme = localStorage.getItem("theme") || "light";
-          if (currentTheme === "dark") {
-            document.body.classList.add("dark-mode");
-            sunIcon.style.display = "none";
-            moonIcon.style.display = "inline-block";
-         } else {
-            sunIcon.style.display = "inline-block";
-            moonIcon.style.display = "none";
-        }
-
-    // Toggle between light and dark mode on button click
-    modeToggle.addEventListener("click", () => {
-        const isDarkMode = document.body.classList.toggle("dark-mode");
-
-        // Apply dark mode styles to relevant sections
-        const sections = document.querySelectorAll('.about, .core-values, .team');
-        sections.forEach(section => {
-            if (isDarkMode) {
-                section.classList.add('dark-mode');
-            } else {
-                section.classList.remove('dark-mode');
-            }
-        });
-
-        // Update icons and local storage
-        if (isDarkMode) {
-            sunIcon.style.display = "none";
-            moonIcon.style.display = "inline-block";
-            localStorage.setItem("theme", "dark");
-        } else {
-            sunIcon.style.display = "inline-block";
-            moonIcon.style.display = "none";
-            localStorage.setItem("theme", "light");
-        }
-    });
-});
-      </script>
-
-  <div class="gtranslate_wrapper"></div>
-
-  <script>
-
-  window.gtranslateSettings = {
-    "default_language":"en",
-    "detect_browser_language":true,
-    "wrapper_selector":".gtranslate_wrapper"
-  }
-
-  </script>
-
-  <script 
-    src="https://cdn.gtranslate.net/widgets/latest/float.js"
-    defer
-  ></script>
-
-
-  </body>
 </html>

@@ -154,14 +154,18 @@ nav{
     border-radius: 5px;
     cursor:pointer;
 }
-.booking__nav span:nth-child(2){
-    color:var(--white);
+.bg_blue_selected {
+    color:white;
     background-color: var(--primary-color);
 }
+.bg_blue_selected p {
+  color: white;
+}
+
 .booking__container form{
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(3,2fr) auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:1rem;
 }
 .booking__container .input__content{
@@ -169,8 +173,11 @@ nav{
 }
 .booking__container .form__group{
     display: flex;
-    align-items:center;
-    gap:1rem;
+    align-items:flex-start;
+    gap:0.3rem;
+    background-color: #638df0;
+    border-radius: 5px;
+    padding: 7px;
 }
 .booking__container .form__group span{
     padding:10px;
@@ -196,12 +203,13 @@ nav{
 }
 .booking__container input{
     width:100%;
-    padding: 10px 0;
+    padding: 10px ;
     font-size: 1rem;
     outline: none;
     border:none;
     border-bottom: 1px solid var(--primary-color);
     color: var(--text-dark);
+    border-radius: 10px;
 }
 .booking__container input:focus ~ label{
     font-size: 0.8rem;
@@ -209,12 +217,19 @@ nav{
     
 }
 .booking__container .form__group p{
-    margin-top: 0.5rem;
     font-size: 0.9rem;
     color:var(--text-dark)
 }
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .booking__container .btn{
-    padding: 1rem;
+    margin-top: 30px;
+    padding: 1rem 4rem;
     font-size: 1.5rem;
 }
 .plan__container .subheader{

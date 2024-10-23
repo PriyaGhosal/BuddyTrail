@@ -1,0 +1,61 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeIn {
+    animation-delay: 0.2s;
+}
+
+.animate__fadeInLeft, .animate__fadeInRight, .animate__fadeInUp {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(2) .animate__fadeInUp {
+    animation-delay: 0.6s;
+}
