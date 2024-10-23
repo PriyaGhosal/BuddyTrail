@@ -151,6 +151,8 @@
 ├── travelmap.css
 ├── travelmap.html
 ├── triundtrek.jpg
-└── update discussion forum
+├── update discussion forum
+├── visi.css
+└── visi.js
 ```
 <!-- END_STRUCTURE -->
