@@ -2159,13 +2159,13 @@ input#rate-5:checked ~ header:before {
 
 /* Deals */
 .deals-section {
-  padding: 90px 20px; /* Adjusted padding for smaller screens */
-  background-color: #f8f9fa;
+  padding: 20px; /* Adjusted padding for smaller screens */
+  background: linear-gradient(135deg, #d0ea80 0%, #4de1dc 100%);
 }
 
 .deals-section h2 {
   font-size: 2.2em;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   text-align: center;
 }
 

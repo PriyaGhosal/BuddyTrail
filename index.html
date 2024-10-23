@@ -30,6 +30,12 @@
       referrerpolicy= "no-referrer"
     />
     <link rel="stylesheet" href="chatbot.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>BuddyTrail</title>
     <style>
      .header1{
@@ -631,227 +637,69 @@
 });
 
 </script>
-        <!-- deals section -->
-        <section id="deals" class="deals-section">
-          <h2 class="deals-head">Exclusive Deals and Offers</h2>
-          <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
-        
-          <div class="carousel">
-            <div class="carousel-inner">
-              <!-- Deal 1: Flight Offer -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Flight to Dubai</h3>
-                  <p>Save 20% on round-trip flights to Dubai. Limited time offer!</p>
-                  <p><strong>Price:</strong> ₹20,000 <span class="discount">₹25,000 </span> per person</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 2: Hotel Offer -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Luxury Stay in Goa</h3>
-                  <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
-                  <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 3: Travel Package -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Kerala Backwaters Package</h3>
-                  <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
-                  <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span>per person</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 4: International Trip -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Paris Romantic Getaway</h3>
-                  <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
-                  <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 5: Adventure Trip -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3  class="carousel-h3">Adventure in Bali</h3>
-                  <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
-                  <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 6: Ski Trip in Switzerland -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Ski Trip in Switzerland</h3>
-                  <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
-                  <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-        
-              <!-- Deal 7: Wildlife Safari in Kenya -->
-              <div class="deal-item">
-                <div class="header1">
-                  <h3 class="carousel-h3">Wildlife Safari in Kenya</h3>
-                  <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
-                  <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
-                </div>
-                <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
-              </div>
-            </div>
-            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-          </div>
-        </section>
-        
-        <style>
-        /* Updated CSS with a Refined and Elegant Color Palette */
-        .deals-section {
-          text-align: center;
-          padding: 3rem 20px;
-          /* background: linear-gradient(135deg, #e6effc 0%, #d9f7be 100%); */
-          width: 90vw;
-          margin: 0 auto;
-          color:  #00467f;
-          font-family: 'Poppins', sans-serif;
-        }
-        
-        .deals-head{
-          font-size: xx-large;
-          margin-bottom: 1.5rem;
-          color: #00467f;
-        }
-        
-        p {
-          color: #3d3d3d;
-          font-size: 1.1rem;
-          margin-bottom: 1.2rem;
-        }
-        
-        /* Carousel Styling */
-        .carousel {
-          position: relative;
-          overflow: hidden;
-          width: 90vw;
-          max-width: 1000px;
-          margin: 0 auto;
-          height: 450px;
-          display: flex;
-          align-items: center;
-        }
-        
-        .carousel-inner {
-          display: flex;
-          transition: transform 0.5s ease;
-          gap: 20px;
-        }
-        
-        /* Deal Item Styling */
-        .deal-item {
-          min-width: 280px;
-          box-sizing: border-box;
-          padding: 25px;
-          background: #ffffff;
-          border: 2px solid  #00467f ;
-          border-radius: 12px;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-          transform: scale(1);
-          transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease, background-color 0.4s ease;
-          cursor: pointer;
-          background-color: #f0f0f5;
-        }
-        
-        .deal-item:hover {
-          transform: scale(1.1);
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-          /* background: linear-gradient(135deg, #b4c5e4 0%, #ffffff 100%); */
-          background-color: #f0f0f5;
-          border: 2px solid yellow;
-        }
-        
-        .deal-item:hover .discount {
-          color: #ff4d4f;
-        }
-  
-        
-        /* Carousel Button Styles */
-        .carousel-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(0, 0, 0, 0.5);
-          border: none;
-          padding: 15px;
-          border-radius: 50%;
-          font-size: 2rem;
-          color: #fff;
-          cursor: pointer;
-          transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .prev {
-          left: 10px;
-        }
-        
-        .next {
-          right: 10px;
-        }
-        
-        .carousel-button:hover {
-          background-color: #3498db;
-          transform: scale(1.1);
-        }
-        
-        /* Deal Title and Price Styling */
-        .carousel-h3 {
-          font-size: 1.8rem;
-          color:#00467f;
-          margin-bottom: 0.8rem;
-          transition: color 0.4s ease;
-        }
-        
-        p {
-          transition: color 0.4s ease;
-        }
-        
-        .discount {
-          text-decoration: line-through;
-          color: #ff6f61;
-        }
-        </style>
-        
-        <script>
-          let currentSlide = 0;
-          
-          function moveSlide(direction) {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const items = document.querySelectorAll('.deal-item');
-            const totalItems = items.length;
-          
-            currentSlide += direction;
-          
-            if (currentSlide < 0) {
-              currentSlide = totalItems - 1;
-            } else if (currentSlide >= totalItems) {
-              currentSlide = 0;
-            }
-          
-            const offset = -currentSlide * (items[0].offsetWidth + 20);
-            carouselInner.style.transform = `translateX(${offset}px)`;
-          }
-          </script>
+<!-- deals section -->
+<section id="deals" class="deals-section">
+  <h2 class="deals-head" style="text-align: center; color: black;">Exclusive Deals and Offers</h2>
+  <p style="text-align: center; color: black;">Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
-        
-       
+  <div class="swiper-container" style="width: 100%; height: 600px">
+    <div class="swiper-wrapper">
+      <!-- Deal 1: Flight Offer -->
+      <div class="swiper-slide" style="display: flex; align-items: center; justify-content: center; background-image: url('/img/flight.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; padding: 20px; border-radius: 8px; position: relative;">
+        <div style="text-align: center; max-width: 500px; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+          <div>
+            <h3 style="font-size: 2em; margin-bottom: 10px; color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Flight to Dubai</h3>
+            <p style="color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Save 20% on round-trip flights to Dubai. Limited time offer!</p>
+            <p style="color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);"><strong>Price:</strong> ₹20,000 <span style="color: red; text-decoration: line-through;">₹25,000</span> per person</p>
+          </div>
+          <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px;" onclick="window.location.href='book.html'">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Deal 2: Hotel Offer -->
+      <div class="swiper-slide" style="display: flex; align-items: center; justify-content: center; background-image: url('img/goa-hotel.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; padding: 20px; border-radius: 8px; position: relative;">
+        <div style="text-align: center; max-width: 500px; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+          <div>
+            <h3 style="font-size: 2em; margin-bottom: 10px; color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Luxury Stay in Goa</h3>
+            <p style="color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
+            <p style="color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);"><strong>Price:</strong> ₹10,500 <span style="color: red; text-decoration: line-through;">₹15,000</span> per night</p>
+          </div>
+          <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px;" onclick="window.location.href='book.html'">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed... -->
+    </div>
+
+    <!-- Add Navigation Arrows -->
+    <div class="swiper-button-next" 
+     style="color: white; background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 50%; z-index: 1000; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
+    </div>
+
+    <div class="swiper-button-prev" 
+        style="color: white; background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 50%; z-index: 1000; position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">
+    </div>
+
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+    effect: 'slide',
+  });
+</script>
+
+
         
   
 
