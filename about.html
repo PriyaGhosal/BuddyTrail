@@ -7,10 +7,117 @@
     <title>About Us - BuddyTrail</title>
     <link rel="stylesheet" href="about.css" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-</head>
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="loader-wrapper">
+          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+          <div class="loader-globe"></div>
+        </div>
+        <div id="loading-text">Ready to Explore the World...</div>
+      </div>
+      <style>
+      /* Preloader Container */
+      #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+  
+  /* Wrapper for the logo and loader */
+  .loader-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Logo Styling */
+  #logo {
+    width: 140px;
+    position: relative;
+    z-index: 10; /* Ensures logo stays above the loader */
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  /* Circular Loader surrounding the logo */
+  .loader-globe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-left-color: white;
+    border-right-color: white;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Loading Text */
+  #loading-text {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    animation: textGlow 2s ease-in-out infinite;
+  }
+  
+  /* Keyframes Animations */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes textGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+      </style>
+      <script>
+        // Function to hide preloader and show content once the page has fully loaded
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        const content = document.getElementById('content');
+    
+        // Set a small timeout for better user experience
+        setTimeout(function() {
+            // Hide preloader
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 1s ease-in-out';
+    
+            // Show content after preloader fades out
+            setTimeout(function() {
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+                content.classList.add('show');  // Trigger fade-in transition
+            }, 1000); // Match the transition duration
+        }, 2000);  // Adjust to the length of your spinner animation
+    });
+    
+      </script>
+
     <header>
         <div class="container">
             <nav>
