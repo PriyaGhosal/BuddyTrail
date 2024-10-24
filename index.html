@@ -1417,7 +1417,7 @@ select {
     <style>
       /* Recommendations Section Styling */
 #recommendations {
-  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%)/* Light background for eye comfort */
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
   padding: 40px; /* Increased padding for more spacing */
   border-radius: 10px;
   max-width: 1200px;
@@ -1894,302 +1894,133 @@ nav.hi ul li.NAVI i:hover  {
   </style>
 
   <main>
-   <style>
-     #destinations {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-  }
+    <style>
+      /* Main container styling */
+      #destinations {
+          display: flex;
+          flex-direction: row; /* Side-by-side layout for the form and image */
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1000px; /* Expanded width */
+          margin: 0 auto;
+          padding: 40px;
+          background-color: #ffffff; /* Set background color to white */
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0.1, 0.2);
+      }
   
-  .post-container {
-      width: 100%;
-  }
+      /* Form container */
+      .post-container {
+          width: 60%; /* Adjusted width */
+          background-color: #ffffff; /* White background for the form container */
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+      }
   
-  #postForm {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-  }
+      /* Form structure */
+      #postForm {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+      }
   
-  #postContent {
-      width: 100%;
-      min-height: 100px;
-      margin-bottom: 10px;
-      padding: 10px;
-  }
+      /* Text area styling */
+      #postContent {
+          width: 90%;
+          min-height: 120px;
+          margin-bottom: 15px;
+          padding: 15px;
+          border: 2px solid #c5def8;
+          border-radius: 6px;
+          font-size: 18px;
+          background-color: #b4d7fc;
+          transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
   
-  button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-  }
+      #postContent:focus {
+          border-color: #007bff;
+          box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+          outline: none;
+          background-color: #fff;
+      }
   
-  #posts {
-      width: 100%;
-  }
+      /* Button styling */
+      button[type="submit"] {
+          padding: 12px 25px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+  
+      button[type="submit"]:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+      }
+  
+      /* Hover effect on the post container */
+      .post-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+  
+      /* Right image container */
+      .destination-image-container {
+          width: 35%; /* Adjust the size of the image container */
+          height: 320px;
+          border-radius: 10px;
+          overflow: hidden; /* Ensures the image fits inside the container */
+          
+      }
+  
+      /* Image styling to cover the container */
+      .destination-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+      }
+  
+      /* Responsive layout for smaller screens */
+      @media (max-width: 768px) {
+          #destinations {
+              flex-direction: column; /* Stacks the form and image vertically on small screens */
+          }
+  
+          .destination-image-container {
+              width: 90%; /* Full width image for small screens */
+              margin-top: 20px;
+          }
+      }
   </style>
-      <section id="destinations">
-          <h2>Destination Guides</h2>
-          <div class="post-container">
-              <h3>Share Your Experiences</h3>
-              <form id="postForm">
-                  <textarea id="postContent" placeholder="Write your post here..." required></textarea>
-                  <button type="submit">Submit</button>
-              </form>
-          </div>
-      </section>
-
+  <h1 style="padding-left:40%;color:#022f5e;padding-top:2px">Destination Guide</h1>
+  <section id="destinations">
+  
+      <div class="post-container">
+        
+          <h3>Share Your Experiences</h3>
+          <form id="postForm">
+            <p>Share your experience and guidence</p>
+              <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+      
+      <!-- Right image of a destination inside a container -->
+      <div class="destination-image-container">
+          <img src="https://img.freepik.com/free-vector/tour-vacation-guide-concept-tourists-listening-history-city-attractions-tour-entertainment-idea-traveling-learning-isolated-vector-illustration_613284-3036.jpg?semt=ais_hybrid" alt="Destination Image" class="destination-image">
+      </div>
+  </section>
+  
 
       <!-- Add more sections for other categories -->
   </main>
-  <style>
-    /* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-
-  transition: background-color 0.3s ease;
-}
-
-
-
-h2 {
-  font-size: 2.2rem;
-  text-align: center;
-color:#4C51BF;
-  margin-bottom: 2rem;
-  letter-spacing: 2px;
-
-  animation: fadeInDown 1s ease-out;
-}
-
-#destinations {
-  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease;
-}
-
-#destinations:hover {
-  transform: scale(1.02);
-}
-
-.post-container {
-  background-color: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.7s ease-out;
-}
-
-h3 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-  
-  text-align: center;
-  letter-spacing: 1px;
-
-  transition: color 0.3s ease;
-}
-
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  animation: fadeIn 0.8s ease-out;
-}
-
-textarea {
-  min-height: 150px;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: box-shadow 0.4s ease, background-color 0.3s ease;
-}
-
-textarea:focus {
-  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
-  background-color: #f0f8ff;
-  outline: none;
-}
-
-button {
-  padding: 12px 18px;
-  font-size: 1.1rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-button:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.6s ease;
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-}
-
-button:hover:before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-#posts {
-  margin-top: 2rem;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-}
-
-#posts > div {
-  background-color: white;
-  margin-bottom: 15px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  position: relative;
-  animation: fadeInUp 0.8s ease-out;
-}
-
-#posts > div:hover {
-  background-color: #f0f8ff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-/* Animation Keyframes */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-
-  #destinations {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  textarea {
-    min-height: 120px;
-  }
-
-  button {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
-}
-
-  </style>
-  <script src="script.js"></script>
-
-    <style>
-      .recommendation-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .recommendation-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-/*       styling to handle improper alignment of get in touch section */
-      .section-title{
-        width:100%;
-      }
-      .contact-grid{
-        margin: 0 40px;
-      }
-      .contact-info, .contact-form{
-        padding:4rem;
-      }
-      button[type="submit"] {
-        align-self: center;
-        width: 200px;
-        height: 60px;
-        padding: 2rem;
-        font-size: 16px;
-      }
-    </style>
-
+ 
     <!-- Map Section -->
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
