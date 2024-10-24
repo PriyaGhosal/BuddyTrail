@@ -1,3 +1,15 @@
+//Smooth scrolling JS Code 
+const lenis = new Lenis();
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+
 // // Get the toggle button and the body element
 // const themeToggle = document.getElementById('theme-toggle');
 // const bodyElement = document.body;
