@@ -1512,7 +1512,7 @@ select {
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
-      <p>In case of an emergency, press the button to send your current location to your emergency contacts.</p>
+      <p id="emergency-text">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
@@ -1538,6 +1538,26 @@ select {
         </section>
       </main>
     </div>
+    
+    <script>
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+
+      toggleButton.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+});
+    </script>
+
+    <style>
+      body.dark-mode #emergency-text {
+        color: white;
+
+      #emergency-text {
+        color: black;
+}
+}
+    </style>
+
     <style>
     
     
