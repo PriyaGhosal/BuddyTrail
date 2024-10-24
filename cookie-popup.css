@@ -1,25 +1,29 @@
 .cookie-container {
-    position: fixed;
-    bottom: 80px;
-    left: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 13px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 220px;
-    height: 220px;
     display: none;
-    font-size: 10px;
-    font-weight: 400;
+    position: fixed;
+    max-width: 320px;
+    padding: 1rem !important;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+    bottom: 4em;
+    right: 5em;
+    z-index: 9999999;
 }
 
-.cookie-container p {
-    margin: 10px 0;
-    color: black;
+#cookie-title{
+    font-weight: 600;
+    color: rgb(31 41 55);
 }
 
-.cookie-container a {
+.cookie-description {
+    margin-top: 1rem !important;
+    font-size: 1.12rem;
+    line-height: 1.25rem;
+    color: rgb(75 85 99);
+}
+
+.cookie-description a {
     color: #007bff;
     text-decoration: none;
 }
@@ -32,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .button-container button {
