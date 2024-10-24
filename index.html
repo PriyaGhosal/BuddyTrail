@@ -2123,15 +2123,15 @@ nav.hi ul li.NAVI i:hover  {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                <i class="fas fa-user"></i><input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                                <i class="fas fa-message"></i><input type="email" id="email" class="form-control" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                <i class="fas fa-comment"></i><textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
                             <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
                         </form>
@@ -2140,6 +2140,11 @@ nav.hi ul li.NAVI i:hover  {
             </div>
         </section>
         <style>
+
+
+
+
+
 /* General Section Styles */
 .contact-section {
     background-color: #f9f9f9;
@@ -2588,6 +2593,7 @@ textarea.form-control {
           margin-bottom: 10px;
           padding: 8px;
           box-sizing: border-box;
+          padding-left: 6%;   /* padding for fa-icon*/
       }
       button[type="submit"] {
           width: 100px;
