@@ -154,14 +154,18 @@ nav{
     border-radius: 5px;
     cursor:pointer;
 }
-.booking__nav span:nth-child(2){
-    color:var(--white);
+.bg_blue_selected {
+    color:white;
     background-color: var(--primary-color);
 }
+.bg_blue_selected p {
+  color: white;
+}
+
 .booking__container form{
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(3,2fr) auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:1rem;
 }
 .booking__container .input__content{
@@ -169,8 +173,11 @@ nav{
 }
 .booking__container .form__group{
     display: flex;
-    align-items:center;
-    gap:1rem;
+    align-items:flex-start;
+    gap:0.3rem;
+    background-color: #638df0;
+    border-radius: 5px;
+    padding: 7px;
 }
 .booking__container .form__group span{
     padding:10px;
@@ -196,12 +203,13 @@ nav{
 }
 .booking__container input{
     width:100%;
-    padding: 10px 0;
+    padding: 10px ;
     font-size: 1rem;
     outline: none;
     border:none;
     border-bottom: 1px solid var(--primary-color);
     color: var(--text-dark);
+    border-radius: 10px;
 }
 .booking__container input:focus ~ label{
     font-size: 0.8rem;
@@ -209,12 +217,19 @@ nav{
     
 }
 .booking__container .form__group p{
-    margin-top: 0.5rem;
     font-size: 0.9rem;
     color:var(--text-dark)
 }
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .booking__container .btn{
-    padding: 1rem;
+    margin-top: 30px;
+    padding: 1rem 4rem;
     font-size: 1.5rem;
 }
 .plan__container .subheader{
@@ -437,12 +452,18 @@ nav{
   }
   .footer {
     background-color: #011758;
+    padding: 20px 0;
+  
   }
   
   .footer__container {
     display: grid;
     grid-template-columns: 2fr repeat(2, 1fr);
     gap: 5rem;
+    text-align: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the footer container */
   }
   
   .footer__col h3 {
@@ -459,6 +480,12 @@ nav{
     margin-bottom: 1rem;
   }
   
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+  }
+
   .footer__col p {
     color: var(--extra-light);
     margin-bottom: 1rem;
@@ -469,7 +496,26 @@ nav{
   .footer__col p:hover {
     color: var(--white);
   }
+  .footer__col a{
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    margin: 0.5rem 0; /* Adds space between the links */
+    transition: 0.3s;
+  }
+
+  .footer__col a:hover{
+    color: grey;
+  }
   
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
   .footer__bar {
     padding: 0.5rem;
     display: flex;
@@ -494,7 +540,9 @@ nav{
     font-size: 1.2rem;
     color: var(--extra-light);
   }
-  
+  .socials i:hover{
+    color: grey;
+  }
   
   
   

@@ -209,6 +209,39 @@
 .btn-view-itinerary:hover {
     background-color: #0056b3; 
 }
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General hidden state and transition for smooth animation */
+.itinerary, .service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state triggered when the element comes into view */
+.itinerary.inview, .service-card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
  
 .circle {
       position: absolute;
@@ -411,7 +444,7 @@
             <button type="submit" id="signup-btn">Sign Up</button>
           </form>
           <a href="#" id="no-thanks">No thanks</a>
-          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="" style="text-decoration: underline;">Privacy Policy</a></p>
+          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="privacypolicy.html" style="text-decoration: underline;">Privacy Policy</a></p>
       </div>
   </div>
 </div>
@@ -500,10 +533,20 @@
       
        
 
-        <h3>
-          We handle everything, from finding the ideal travel buddy to
-          selecting your perfect hotel, flight, and destination.
-        </h3>
+      <h3 style="
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      color: white; 
+      padding-top: 1rem;
+      font-weight: bold; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+      background-image: linear-gradient(to right, #6a11cb, #2575fc);
+    ">
+      We handle everything, from finding the ideal travel buddy to
+      selecting your perfect hotel, flight, and destination.
+    </h3>
 
       </header>
     </section>
@@ -519,69 +562,74 @@
 <div class="cards" style="height: 384px;">
 
   <!-- Travel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Travel Icon -->
-      <div class="card-icon">
-        <img src="/icons/route-solid.svg" alt="Travel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Travel</h4>
-      <!-- Card Description -->
-      <p>
-        Discover budget-friendly getaways for families and friends! From serene
-        mountains to sunny beaches, find your next adventure without breaking the
-        bank. Start exploring now!
-      </p>
-      <!-- Button Link for Travel -->
-      <a href="travel.html" class="btn" style="color: white;">Explore more</a>
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/route-solid.svg" alt="Travel Icon">
     </div>
+    <h4>Travel</h4>
+    <p>
+      Discover budget-friendly getaways for families and friends! From serene
+      mountains to sunny beaches, find your next adventure without breaking the
+      bank. Start exploring now!
+    </p>
+    <a href="travel.html" class="btn" style="color: white;">Explore more</a>
   </div>
-  <!-- End of Travel Card -->
+</div>
 
-  <!-- Hotel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Hotel Icon -->
-      <div class="card-icon">
-        <img src="./icons/bed-solid.svg" alt="Hotel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Hotel</h4>
-      <!-- Card Description -->
-      <p>
-        We've handpicked top-rated options that offer exceptional value. Book your
-        perfect stay today and enjoy premium accommodations without the premium
-        price tag!
-      </p>
-      <!-- Button Link for Hotels -->
-      <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
+<!-- Hotel Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="./icons/bed-solid.svg" alt="Hotel Icon">
     </div>
+    <h4>Hotel</h4>
+    <p>
+      We've handpicked top-rated options that offer exceptional value. Book your
+      perfect stay today and enjoy premium accommodations without the premium
+      price tag!
+    </p>
+    <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
   </div>
-  <!-- End of Hotel Card -->
+</div>
 
-  <!-- Fly Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Fly Icon -->
-      <div class="card-icon">
-        <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Fly</h4>
-      <!-- Card Description -->
-      <p>
-        Fly to your dream destination without breaking the bank! We offer the best
-        flight deals, combining comfort and affordability for perfect journey.
-        Book now and take off for less!
-      </p>
-      <!-- Button Link for Flights -->
-      <a href="fly.html" class="btn" style="color: white;">See Flights</a>
+<!-- Fly Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
     </div>
+    <h4>Fly</h4>
+    <p>
+      Fly to your dream destination without breaking the bank! We offer the best
+      flight deals, combining comfort and affordability for perfect journey.
+      Book now and take off for less!
+    </p>
+    <a href="fly.html" class="btn" style="color: white;">See Flights</a>
   </div>
-  <!-- End of Fly Card -->
+</div>
 
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("inview");
+      } else {
+        entry.target.classList.remove("inview"); // Remove the class when it goes out of view
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+</script>
 <!-- End of Cards Container -->
 
 <!-- CSS for the buttons (Move this to your CSS file) -->
@@ -928,7 +976,7 @@ p {
             guides that include must-see attractions and activities for all
             ages.
           </p>
-          <button>View Itinerary</button>
+          <a href="./Travel-Itineraries.html"><button>View Itinerary</button></a>
         </div>
       </div>
 
@@ -939,7 +987,7 @@ p {
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
-          <button>View Itinerary</button>
+          <a href="./solo-adventure.html"><button>View Itinerary</button></a>
         </div></div>
         <div class="itinerary">
           <div class="header1"> 
@@ -948,7 +996,7 @@ p {
             Plan the perfect romantic escape with itineraries that include
             serene locations, romantic dinners, and memorable experiences.
           </p>
-          <button>View Itinerary</button>
+          <a href="./romantic-gateway.html"><button>View Itinerary</button></a>
         </div>
       </div>
       </div>
@@ -962,43 +1010,100 @@ p {
       <div class="services-container">
         <!-- Service Card: Interactive Travel Map -->
         <div class="service-card">
-          <div class="icon">
+          <a href="travelmap.html"><div class="icon">
             <i class="fas fa-map-marker-alt"></i>
+
           </div>
           <h3 id="h1darkbtn">Travel Map</h3>
+
+          </div></a>
+         <a href="travelmap.html"> <h3>Travel Map</h3></a>
+
           <p>Explore popular destinations across India and the world. Click on markers to learn more about each location.
           </p>
         </div>
     
         <!-- Service Card: Hotel Finder -->
         <div class="service-card">
-          <div class="icon">
+          <a href="hotel.html"> <div class="icon">
             <i class="fas fa-hotel"></i>
+
           </div>
           <h3 id="h1darkbtn">Hotel Finder</h3>
+
+          </div></a>
+         <a href="hotel.html"> <h3>Hotel Finder</h3></a>
+
           <p>Find the best hotels at affordable rates, handpicked to suit your budget and preferences.</p>
         </div>
     
         <!-- Service Card: Flight Booking -->
         <div class="service-card">
-          <div class="icon">
+          <a href="fly.html"> <div class="icon">
             <i class="fas fa-plane"></i>
+
           </div>
           <h3 id="h1darkbtn">Flight Booking</h3>
+
+          </div></a>
+          <a href="fly.html"><h3>Flight Booking</h3></a>
+
           <p>Book flights at the best prices, with options tailored to your travel needs.</p>
         </div>
     
         <!-- Service Card: Travel Blog -->
         <div class="service-card">
-          <div class="icon">
+          <a href="blog.html">
+            <div class="icon">
             <i class="fas fa-pen"></i>
+
           </div>
           <h3 id="h1darkbtn">Travel Blog</h3>
+
+          </div></a>
+         <a href="blog.html"><h3>Travel Blog</h3></a>
+
           <p>Read tips, guides, and personal stories from seasoned travelers.</p>
         </div>
-      </div>
+
+         <!-- Local Guide Connection -->
+          <div class="service-card">
+            <a href="guide.html"> <div class="icon">
+              <i class="fa-solid fa-person"></i>
+            </div></a>
+            <a href="guide.html"><h3>Local Guide Connection</h3></a>
+            <p>Partner with local guides and tour providers, allowing to book personalized tours or experiences led by locals for an authentic travel experience.</p>
+          </div>
+        </div>
+      
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const itineraries = document.querySelectorAll(".itinerary");
+        const serviceCards = document.querySelectorAll(".service-card");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("inview");
+            } else {
+              entry.target.classList.remove("inview"); // Remove class when out of view
+            }
+          });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        // Observe both itineraries and service cards
+        itineraries.forEach(itinerary => {
+          observer.observe(itinerary);
+        });
+
+        serviceCards.forEach(card => {
+          observer.observe(card);
+        });
+      });
+
+    </script>
     <!-- Cab or Auto Booking -->
     <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
@@ -1220,7 +1325,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"],
 select {
-    width: 200px; /* Increased width for text inputs */
+    width: 100%; /* Increased width for text inputs */
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -1297,7 +1402,7 @@ select {
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='goa-resort.html'">
             Explore More
           </button>
         </div></div>
@@ -1309,7 +1414,7 @@ select {
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='rajasthan.html'">
             Explore More
           </button>
         </div></div>
@@ -1321,12 +1426,108 @@ select {
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='himachal.html'">
             Explore More
           </button>
         </div></div>
       </div>
     </section>
+
+    <style>
+      /* Recommendations Section Styling */
+#recommendations {
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%)/* Light background for eye comfort */
+  padding: 40px; /* Increased padding for more spacing */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#recommendations h2 {
+  text-align: center;
+  color: #2c2b2b;
+  font-size: 4rem;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+/* Recommendations List */
+.recommendation-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap for larger cards */
+  flex-wrap: wrap;
+}
+
+/* Recommendation Item with Gradient Background and Increased Size */
+.recommendation-item {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Gradient 1 */
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  padding: 25px; /* Increased padding */
+  flex: 1 1 calc(33.333% - 30px); /* Adjust size to fit more content */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower hover effect */
+  cursor: pointer;
+  height: 320px; /* Fixed height for consistency */
+}
+
+.recommendation-item:nth-child(2) {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Gradient 2 */
+}
+
+.recommendation-item:nth-child(3) {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); /* Gradient 3 */
+}
+
+/* Hover Effects: Larger scale and deeper shadow */
+.recommendation-item:hover {
+  transform: scale(1.08); /* Larger scaling effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.recommendation-item h3 {
+  color: #1e293b; /* Darker text for readability */
+  font-size: 2.5rem; /* Slightly larger text */
+  margin-bottom: 15px;
+}
+
+.recommendation-item p {
+  color: #555555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.recommendation-item button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px; /* Increased button size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.recommendation-item button:hover {
+  background-color: #1e40af; /* Darker button on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Section Responsiveness */
+@media (max-width: 768px) {
+  .recommendation-list {
+    flex-direction: column;
+  }
+
+  .recommendation-item {
+    margin-bottom: 20px;
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+    </style>
+
+
+
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
@@ -1556,32 +1757,32 @@ main.main_blogs {
               <li class="NAVI">
                 <!-- added favicon for destinations -->
                 <i class="fa-solid fa-location-dot"></i>
-                <a href="#destinations">Destinations</a>
+                <a href="destinationform.html">Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
                 <i class="fa-solid fa-earth-americas"></i>
-                <a href="#travel-planning">Travel Planning</a>
+                <a href="traveldisscussionform.html">Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
                 <i class="fa-regular fa-face-smile"></i>
-                <a href="#experiences">Travel Experiences</a>
+                <a href="experience.html">Travel Experiences</a>
               </li>
               <li class="NAVI">
                 <i class="fa-solid fa-gear"></i>
                 <!-- added favicon for travel gear -->
-                <a href="#gear">Travel Gear</a>
+                <a href="gear.html">Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
                 <i class="fa-solid fa-shield"></i>
-                <a href="#safety">Travel Safety</a>
+                <a href="travelsafety.html">Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
                 <i class="fa-solid fa-seedling"></i>
-                <a href="#sustainable">Sustainable Travel</a>
+                <a href="sustainabeltravel.html">Sustainable Travel</a>
               </li>
           </ul>
       </nav>
@@ -2447,7 +2648,7 @@ textarea.form-control {
           
 
   <!-- Chatbot icon -->
-  <div id="chat-icon">🤖</div>
+  
 
   <!-- Chatbot container -->
   <div id="chatbot">
@@ -2463,14 +2664,23 @@ textarea.form-control {
   </div>
   
   <script src="chatbot.js"></script>
-      <div class="fixed bottom-0 right-2 scroll-container">
-        <button class="scroll-button group" id="scrollTopBtn">
-          <span class="tooltip-text-scroll">
-            <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
-           
-          </span>
-        </button>
-      </div>
+  <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
+    <button class="scroll-button group" id="scrollTopBtn">
+      <span class="tooltip-text-scroll">
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+      </span>
+    </button>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollContainer = document.getElementById('scrollContainer');
+      if (window.scrollY > 0) {
+        scrollContainer.style.display = 'block';
+      } else {
+        scrollContainer.style.display = 'none';
+      }
+    });
+  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -2489,7 +2699,7 @@ textarea.form-control {
         <li><a href="#home">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html" class="faq-link">FAQs</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="servicespage.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="contributor/contributor.html">Our Contributor</a></li>
@@ -2849,7 +3059,52 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       });
     
     </script>
- 
+  <body>
+    <div class="container">
+        <!-- Your existing content -->
+
+        <!-- Chatbot Icon -->
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            🗨️ <!-- You can replace this with an actual image/icon -->
+        </div>
+
+        <!-- Chatbot Iframe -->
+        <div class="chatbot-container" id="chatbotContainer">
+            <iframe src="https://www.chatbase.co/chatbot-iframe/GtcyNsebrd_nrDUEQz53T" 
+                    width="350" 
+                    height="500" 
+                    style="border:none;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+            } else {
+                chatbotContainer.style.display = 'none';
+            }
+        }
+         
+    </script>
+    <br /><br />
+    <link rel="stylesheet" href="visi.css">
+    <!-- ############### Footer ############### -->
+    <div class="visitor-counter">
+      <div>Visitor</div>
+      <div class="website-counter"></div>
+    </div>
+    <script src="path/to/visitorCounter.js"></script>
+    <script src="./assets/css/visitors.css"></script>
+    
+      <script src="visi.js"></script>
+    
+    
+</body>
  
 </body>
 

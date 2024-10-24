@@ -59,9 +59,65 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 });
 
 function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Regular expression for stricter email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Check for the basic format
+    if (!emailRegex.test(email)) {
+        return false;
+    }
+
+    // Split the email into local part and domain part
+    const [localPart, domainPart] = email.split('@');
+
+    // Ensure local part and domain part exist and aren't too long
+    if (localPart.length > 64 || domainPart.length > 255) {
+        return false;
+    }
+
+    // Ensure domain part has a valid format
+    const domainParts = domainPart.split('.');
+    if (domainParts.some(part => part.length > 63)) {
+        return false;
+    }
+
+    // Additional checks for edge cases
+    if (localPart.startsWith('.') || localPart.endsWith('.') || localPart.includes('..')) {
+        return false;
+    }
+
+    return true;
 }
+
 
 function isValidPhone(phone) {
     return /^\+?[1-9]\d{1,14}$/.test(phone); // e.g., +1234567890
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+
+    // Check if the user has a saved mode preference
+    const currentMode = localStorage.getItem('mode');
+    if (currentMode === 'dark') {
+        document.body.classList.add('dark-mode');
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+    }
+
+    // Toggle the mode when the button is clicked
+    modeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+            localStorage.setItem('mode', 'dark'); // Save the user's preference
+        } else {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+            localStorage.setItem('mode', 'light'); // Save the user's preference
+        }
+    });
+});

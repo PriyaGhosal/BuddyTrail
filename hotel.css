@@ -245,6 +245,8 @@ footer {
     flex: 1 1 25%; /* Each column takes up about 25% of the width */
     padding: 10px 20px;
     min-width: 200px; /* Ensures columns don't get too small */
+    text-align: center;
+    line-height: 2;
 }
 
 .footer-column h3 {
@@ -260,39 +262,53 @@ footer {
     font-size: 14px;
     margin: 5px 0;
     margin-bottom: 0; /* Remove bottom margin */
+    list-style: none;
 }
 
 .footer-column ul {
-    list-style-type: none;
     padding: 0;
 }
 
 .footer-column ul li {
     margin: 8px 0;
-    list-style: none;
+
+}
+.footer-column a {
+    text-decoration: none;
+    color: #fff5f5;
+    transition: color 0.3s ease;
+}
+
+.footer-column  a:hover {
+    color: #f9c3c3;
 }
 .social-icons{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
 }
-.footer-column ul li a {
-    text-decoration: none;
-    color: #555;
+
+.social-icons a {
+    margin-right: 15px; /* Space between icons */
+    margin: 0 15px;
+}
+
+.social-icons i {
+    font-size: 24px; /* Icon size */
+    color: #fff; /* Icon color (you can change this) */
     transition: color 0.3s ease;
-    list-style: none;
 }
 
-.footer-column ul li a:hover {
-    color: #000;
-    list-style: none;
+.social-icons i:hover {
+    color: #f9c3c3; /* Hover effect color */
 }
-
 .footer-column img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
     transition: opacity 0.3s ease;
+
 }
 
 .footer-column img:hover {

@@ -19,6 +19,14 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 </head>
 <style>
     
@@ -327,6 +335,34 @@ body {
   height: auto;
   display: block; /* Ensure it doesn't stretch outside the button */
 }
+.footer-column.newsletter {
+    max-width: 300px;
+    text-align: center;
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+#subscription-message {
+    font-size: 14px;
+    margin-top: 10px;
+}
 
 </style>
 <body>
@@ -376,16 +412,6 @@ body {
             </div>
         </section>
     </main>
-
-    <!-- Footer Include -->
-    <footer>
-        <!-- Include your footer here -->
-
-    <footer id="footer">
-    <div class="footer-container" id="footer">
-    <div class="footer-column">
-        
-
     <footer id="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -395,11 +421,11 @@ body {
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="faq.html" class="faq-link">FAQs</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="team.html">Team</a></l>
                     <li><a href="contributor/contributor.html">Our Contributor</a></li>
 
@@ -408,11 +434,11 @@ body {
             <div class="footer-column">
                 <h3>Legal Links</h3>
                 <ul>
-                    <li><a href="#"></a>Terms of Service</li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Copyright Notice</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="terms_of_service.html">Terms of Service</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="copyright.html">Copyright Notice</a></li>
+                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
 
                     </ul>
             </div>
@@ -430,24 +456,111 @@ body {
                     <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-    <!-- Newsletter Form -->
-    <div class="newsletter" id="newsletter">
-        <form id="newsletter-form">
-        <h3>Newsletter Form</h3>
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-        </form>
-        <p id="subscription-message"></p>
-    </div>
+          </div>
+      
+          <!-- Newsletter Form Section -->
+          <style>
+            .social-icons {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+    
+            .social-icons a {
+                color: #E2E8F0;
+                transition: color 0.3s ease, transform 0.2s ease;
+            }
+    
+            .social-icons a:hover {
+                color: #4C51BF;
+                transform: translateY(-2px);
+            }
 
-    </div>
+/* for facebook */
+.social-icons .fa-discord {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-discord:hover {
+    color: #4267b2;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  /* for twitter */
+  .social-icons .fa-x-twitter {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-x-twitter:hover {
+    color: black;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  /* for instagram */
+  .social-icons .fa-github {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-github:hover {
+    color: #c32aa3;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  /* for instagram */
+  .social-icons .fa-linkedin-in {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons .fa-linkedin-in:hover {
+    color: #0a66c2;
+    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+  }
+    
+            
+            .footer-column.newsletter {
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #newsletter-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #email {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button[type="submit"] {
+                width: 100px;
+                padding: 6px;
+                font-size: 14px;
+                height: 50px;
+                background-color: #007bff;
+            }
+            #subscription-message {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+          <div class="footer-column newsletter" id="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="newsletter-form">
+              <input type="email" id="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscription-message"></p>
+          </div>
+        </div>
+      
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+        </div>
+      </footer>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-    </div>
-  </footer>
-    </footer>
-
+      
     <script>
         const ownerName = "PriyaGhosal";
 const repoName = "BuddyTrail";
