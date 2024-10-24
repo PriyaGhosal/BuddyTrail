@@ -198,27 +198,98 @@
     </div>
 
 <footer id="footer">
-    <div class="footer-container">
-      <!-- About Us Section -->
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-      </div>
-  
-      <!-- Quick Links Section -->
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: info@buddytrail.com</p>
-        <p>Phone: +123 456 7890</p>
+<footer>
+  <div class="footer-container">
+    <!-- About Us Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>
+        Discover and plan affordable trips with BuddyTrail's travel
+        companion tools.
+      </p>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Links Section -->
+    <div class="footer-column">
+      <h3>Legal Links</h3>
+      <ul>
+        <li><a href="terms_of_service.html">Terms of Service</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="copyright.html">Copyright Notice</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@buddytrail.com">info@buddytrail.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
-  
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2023 BuddyTrail. All rights reserved.</p>
-    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 BuddyTrail. All rights reserved.</p>
+  </div>
 </footer>
-  
-    <script src="./contact.js"></script>
+
+<!-- Scripts -->
+<script>
+  window.gtranslateSettings = {
+    "default_language": "en",
+    "detect_browser_language": true,
+    "wrapper_selector": ".gtranslate_wrapper"
+  };
+</script>
+
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<script src="./contact.js"></script>
+
+<script>
+  window.onscroll = function() {
+    var header = document.querySelector("header");
+    if (window.pageYOffset > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+</script>
+
 </body>
 </html>
