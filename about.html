@@ -8,27 +8,131 @@
     <link rel="stylesheet" href="about.css" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --header-bg: #1a1a2e;
+            --header-text: #ffffff;
+        }
+       .header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .header.scrolled {
+            background-color: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+        }
+       nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--header-text);
+        }
+
+        #nav-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        #nav-list li {
+            margin-left: 2rem;
+        }
+
+        #nav-list a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        #nav-list a:hover, #nav-list a.active {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--header-text);
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            #nav-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            #nav-list.show {
+                display: flex;
+            }
+
+            #nav-list li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-                    <h1 id="logo">BuddyTrail</h1>
-                </div>
-                <button class="hamburger" id="hamburger">☰</button>
-                <ul class="nav-links" id="nav-links">
-                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About Us</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="BuddyTrail Logo">
+                <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#locations">Location</a></li>
+                <li><a href="index.html#itineraries">Travel Itineraries</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="auth.html">Sign In</a></li>
+                <li><a href="#" class="active">Blog</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="about">
@@ -526,6 +630,17 @@
                 navList.classList.remove("active");
             });
         });
+
+        // Mobile menu toggle
+    function setupMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navList = document.getElementById('nav-list');
+
+            hamburger.addEventListener('click', () => {
+                navList.classList.toggle('show');
+            });
+        }
+        setupMobileMenu();
     </script>
 
 </body>

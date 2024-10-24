@@ -25,39 +25,6 @@ body {
     padding: 2rem 3rem;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    height: 83px;
-    padding: 7px;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-
-}
-
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: -10rem;
-}
-
 #logo-web {
     height: 80px;
     width: 125px;
