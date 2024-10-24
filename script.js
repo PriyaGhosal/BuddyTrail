@@ -316,6 +316,7 @@
     
 // }
 /*SOS*/
+
 function sendSOS() {
     const statusDiv = document.getElementById("sos-status");
     

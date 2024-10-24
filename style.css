@@ -262,9 +262,23 @@ input,
 p {
   font-size: 1rem;
 }
+.go-top-btn{
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  height:70px;
+  width:70px;
+  background: #007bff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 1000;
 
+}
 button {
-  padding: 2rem 6rem;
   background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
