@@ -81,6 +81,37 @@
     return null; // Return null if all conditions are met
   }
 
+  //e-mail validation function
+  function isValidEmail(email) {
+    // Regular expression for stricter email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Check for the basic format
+    if (!emailRegex.test(email)) {
+        return false;
+    }
+
+    // Split the email into local part and domain part
+    const [localPart, domainPart] = email.split('@');
+
+    // Ensure local part and domain part exist and aren't too long
+    if (localPart.length > 64 || domainPart.length > 255) {
+        return false;
+    }
+
+    // Ensure domain part has a valid format
+    const domainParts = domainPart.split('.');
+    if (domainParts.some(part => part.length > 63)) {
+        return false;
+    }
+
+    // Additional checks for edge cases
+    if (localPart.startsWith('.') || localPart.endsWith('.') || localPart.includes('..')) {
+        return false;
+    }
+
+    return true;
+}
   function loginWithEmailAndPassword(email, password) {
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
@@ -113,6 +144,11 @@
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
         return;
+    }
+    //validate e-mail
+    if(!isValidEmail(email)){
+      alert("Please enter a valid email address.");
+      return;
     }
     const passwordError = validatePassword(password);
       if (passwordError) {
