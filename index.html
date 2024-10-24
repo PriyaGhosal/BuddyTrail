@@ -560,7 +560,7 @@
         </h3>
       </header>
       <!-- Start of Cards Container -->
-<div class="cards" style="height: 384px;">
+<div class="cards" >
 
   <!-- Travel Card -->
 <div class="card">
@@ -958,7 +958,7 @@ p {
         </script>
 
     <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section">
+    <section id="itineraries" class="itineraries-section" style="height: 100%;">
       <h2 id="h1darkbtn">Travel Itineraries</h2>
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
@@ -1091,12 +1091,12 @@ p {
       <div class="booking-container">
         <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
@@ -1114,7 +1114,7 @@ p {
           "
         >
           
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
           <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
             <strong>Vehicle Type</strong>
           </label>
@@ -1133,7 +1133,7 @@ p {
           </select>
         </div>
 
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
           <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
           <input type="date" id="travel-date" name="travel-date" required min="" />
 
@@ -1145,7 +1145,7 @@ p {
           </script>
 
         </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>

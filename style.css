@@ -2804,9 +2804,7 @@ input#rate-5:checked ~ header:before {
   flex-direction: column;
 }
 @media (max-width: 900px) {
-  .review-form {
-    width: 60vw;
-  }
+
   .form {
     width: 50vw;
   }
