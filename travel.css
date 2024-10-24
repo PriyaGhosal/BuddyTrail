@@ -2,6 +2,10 @@ body {
     background-color: #f8f9fa;
 }
 
+.space {
+    height: 100px;
+}
+
 .destination-card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
