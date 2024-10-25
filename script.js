@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /*SOS*/
+
 function sendSOS() {
     const statusDiv = document.getElementById("sos-status");
 

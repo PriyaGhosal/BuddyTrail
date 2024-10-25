@@ -544,7 +544,7 @@
         </h3>
       </header>
       <!-- Start of Cards Container -->
-<div class="cards" style="height: 384px;">
+<div class="cards" >
 
   <!-- Travel Card -->
 <div class="card">
@@ -942,7 +942,7 @@ p {
         </script>
 
     <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section">
+    <section id="itineraries" class="itineraries-section" style="height: 100%;">
       <h2 id="h1darkbtn">Travel Itineraries</h2>
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
@@ -1075,12 +1075,12 @@ p {
       <div class="booking-container">
         <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
@@ -1098,7 +1098,7 @@ p {
           "
         >
 
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
           <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
             <strong>Vehicle Type</strong>
           </label>
@@ -1117,7 +1117,7 @@ p {
           </select>
         </div>
 
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
           <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
           <input type="date" id="travel-date" name="travel-date" required min="" />
 
@@ -1129,7 +1129,7 @@ p {
           </script>
 
         </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
@@ -2205,6 +2205,30 @@ nav.hi ul li.NAVI i:hover  {
     color: #333;
 }
 
+.dark-mode .contact-section{
+  background: #666;
+}
+
+.dark-mode .contact-form h3{
+  color: #ffa500;
+}
+
+.dark-mode .info-content h3{
+  color: #ffa500;
+}
+
+.dark-mode .info-content p{
+  color: #fff;
+}
+
+.dark-mode .contact-form{
+  background-color: #0e0e0e;
+}
+
+.dark-mode .contact-info{
+  background-color: #0e0e0e;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -2214,7 +2238,7 @@ nav.hi ul li.NAVI i:hover  {
     padding: 10px;
     font-size: 16px;
     color: #ffffff;
-    border: 1px solid #ddd;
+    border: 2px solid rgb(187, 124, 202);
     border-radius: 5px;
     background-color: #f9f9f9;
     outline: none;
@@ -2393,8 +2417,8 @@ textarea.form-control {
 
   <!--Cookie pop up-->
   <div id="cookie-popup" class="cookie-container">
-    <p>We value your privacy</p>
-    <p>
+    <p id="cookie-title">We value your privacy</p>
+    <p class="cookie-description">
         We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
         By clicking "Accept", you consent to our use of cookies.
         <a href="cookie_policy.html">Cookie Policy</a>
@@ -2539,10 +2563,10 @@ textarea.form-control {
     <div class="footer-column">
       <h3>Follow Us</h3>
       <div class="social-icons">
-        <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
-        <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
 

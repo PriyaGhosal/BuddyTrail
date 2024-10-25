@@ -11,6 +11,7 @@
 ├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
+├── arrow_upper.png
 ├── auth.css
 ├── auth.html
 ├── auth.js
@@ -139,6 +140,7 @@
 ├── project_structure.txt
 ├── rajasthan.css
 ├── rajasthan.html
+├── rajasthan.js
 ├── reviews.html
 ├── romantic-gateway.css
 ├── romantic-gateway.html
