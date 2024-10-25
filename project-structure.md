@@ -11,6 +11,7 @@
 ├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
+├── arrow_upper.png
 ├── auth.css
 ├── auth.html
 ├── auth.js
@@ -29,6 +30,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.css
 ├── blog.html
 ├── book.html
 ├── boy.png
@@ -89,6 +91,7 @@
 │   ├── HELP-IMG.jpg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
+│   ├── Microsoft_Logo.png
 │   ├── PROJECT-LEADER.png
 │   ├── Premium Photo _ Vibrant mesh gradient with magenta and blue colors high quality image for backgrounds and web.jpeg
 │   ├── Presentation1-removebg-preview.png
@@ -99,6 +102,8 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── df1.jpg
+│   ├── df2.jpg
 │   ├── download.jpeg
 │   ├── google.png
 │   ├── googleLogo.png
@@ -131,7 +136,6 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
-├── map.html
 ├── moon.png
 ├── package-lock.json
 ├── package.json
@@ -140,6 +144,7 @@
 ├── project_structure.txt
 ├── rajasthan.css
 ├── rajasthan.html
+├── rajasthan.js
 ├── reviews.html
 ├── romantic-gateway.css
 ├── romantic-gateway.html
