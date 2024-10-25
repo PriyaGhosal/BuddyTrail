@@ -168,8 +168,9 @@ You can find the project structure in the [Project Structure](project-structure.
  <h3>Thank you for contributing to our repository</h3>
       
 <p align="center">
-    <img src="https://api.vaunt.dev/v1/github/entities/PriyaGhosal/repositories/BuddyTrail/contributors?format=svg&limit=54" width="700" height="250" />
+    <img src="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors" width="700" height="250" />
 </p>
+
 
 #### A Big Thank You to Our Contributors! 🎉👏
 
