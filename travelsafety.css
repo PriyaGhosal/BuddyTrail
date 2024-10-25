@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-primary:hover,
+.btn-outline-info:hover,
+.btn-outline-danger:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+#map {
+    border-radius: 4px;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+}

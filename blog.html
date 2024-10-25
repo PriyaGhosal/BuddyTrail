@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="blog.css" />
-
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
@@ -825,10 +824,16 @@
             <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
             <div class="content">
                 <p>${post.content.substring(0, 150)}...</p>
+             </div>
+            <div class="full-content" style="display: none;">
+                <p>${marked(post.content)}</p>
+            </div>
+
             </div>
             <div class="full-content" style="display: none;">
                 <p>${marked(post.content)}</p>
             </div>
+            
             <a href="#" class="read-more" data-id="${post.id}">Read More</a>
             <div class="comments-section">
                 <h3>Comments (${post.comments.length})</h3>
@@ -847,7 +852,7 @@
             </div>
         `;
                 container.appendChild(article);
-            });
+ });
 
             addEventListeners();
         }
@@ -1023,6 +1028,182 @@
             }
         }
 
+=
+            });
+
+            addEventListeners();
+        }
+
+        function addEventListeners() {
+            // Add event listeners for read more links
+            document.querySelectorAll('.read-more').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const article = e.target.closest('.blog-post');
+                    const content = article.querySelector('.content');
+                    const fullContent = article.querySelector('.full-content');
+
+                    if (content.style.display !== 'none') {
+                        content.style.display = 'none';
+                        fullContent.style.display = 'block';
+                        e.target.textContent = 'Read Less';
+                    } else {
+                        content.style.display = 'block';
+                        fullContent.style.display = 'none';
+                        e.target.textContent = 'Read More';
+                    }
+                });
+            });
+
+            // Add event listeners for comment forms
+            document.querySelectorAll('.comment-form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const postId = parseInt(e.target.getAttribute('data-post-id'));
+                    const comment = e.target.querySelector('textarea').value;
+                    addComment(postId, comment);
+                    e.target.reset();
+                });
+            });
+        }
+
+        function populateFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            const categories = getLocalData('categories');
+            const tags = getLocalData('tags');
+
+            categoryFilter.innerHTML = '<option value="">All Categories</option>';
+            tagFilter.innerHTML = '<option value="">All Tags</option>';
+
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+
+            tags.forEach(tag => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = tag;
+                tagFilter.appendChild(option);
+            });
+
+            // Add event listeners for filters
+            categoryFilter.addEventListener('change', filterPosts);
+            tagFilter.addEventListener('change', filterPosts);
+        }
+
+        function filterPosts() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            const selectedTag = document.getElementById('tagFilter').value;
+            const posts = getLocalData('blogPosts');
+
+            const filteredPosts = posts.filter(post => {
+                const categoryMatch = !selectedCategory || post.category === selectedCategory;
+                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+                return categoryMatch && tagMatch;
+            });
+
+            renderFilteredPosts(filteredPosts);
+        }
+
+        function renderFilteredPosts(filteredPosts) {
+            const container = document.querySelector('.blog-container');
+            container.innerHTML = '';
+
+            filteredPosts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post';
+                article.innerHTML = `
+            <h2>${post.title}</h2>
+            <div class="meta">Posted on ${post.date} by ${post.author}</div>
+            <div class="category">${post.category}</div>
+            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="content">
+                <p>${post.content.substring(0, 150)}...</p>
+            </div>
+            <div class="full-content" style="display: none;">
+                <p>${marked(post.content)}</p>
+            </div>
+            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+            <div class="comments-section">
+                <h3>Comments (${post.comments.length})</h3>
+                <div class="comments">
+                    ${post.comments.slice(0, 2).map(comment => `
+                        <div class="comment">
+                            <p>${comment.text}</p>
+                            <small>${comment.date}</small>
+                        </div>
+                    `).join('')}
+                </div>
+                <form class="comment-form" data-post-id="${post.id}">
+                    <textarea placeholder="Add a comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        `;
+                container.appendChild(article);
+            });
+
+            addEventListeners();
+        }
+
+        function viewFullPost(postId) {
+            const posts = getLocalData('blogPosts');
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>${post.title}</h2>
+                <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                <div class="category">${post.category}</div>
+                <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                <div class="content">
+                    <p>${marked(post.content)}</p>
+                </div>
+                <div class="comments-section">
+                    <h3>Comments (${post.comments.length})</h3>
+                    <div class="comments">
+                        ${post.comments.map(comment => `
+                            <div class="comment">
+                                <p>${comment.text}</p>
+                                <small>${comment.date}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <form class="comment-form" data-post-id="${post.id}">
+                        <textarea placeholder="Add a comment"></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        `;
+                document.body.appendChild(modal);
+
+                // Close modal when clicking on the close button or outside the modal
+                modal.querySelector('.close').addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        document.body.removeChild(modal);
+                    }
+                });
+
+                // Add event listener for comment form in modal
+                modal.querySelector('.comment-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const comment = e.target.querySelector('textarea').value;
+                    addComment(postId, comment);
+                    e.target.reset();
+                });
+            }
+        }
         function addComment(postId, commentText) {
             const posts = getLocalData('blogPosts');
             const postIndex = posts.findIndex(p => p.id === postId);
@@ -1054,6 +1235,7 @@
             "wrapper_selector": ".gtranslate_wrapper"
         }
     </script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1113,6 +1295,7 @@ modeToggle.addEventListener("click", () => {
 });
 });
   </script>
+
 
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
