@@ -11,6 +11,7 @@
 ├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
+├── arrow_upper.png
 ├── auth.css
 ├── auth.html
 ├── auth.js
