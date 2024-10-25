@@ -30,6 +30,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── blog.css
 ├── blog.html
 ├── book.html
 ├── boy.png
