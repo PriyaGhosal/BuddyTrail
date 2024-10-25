@@ -283,7 +283,7 @@ button {
   transition: background-color 0.3s;
 }
 .heading-contributors h2{
-  color: transparent;
+  color: black;
 }
 
 #btn a {
