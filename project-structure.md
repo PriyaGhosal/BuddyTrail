@@ -132,7 +132,6 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
-├── map.html
 ├── moon.png
 ├── package-lock.json
 ├── package.json
