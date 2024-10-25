@@ -488,18 +488,27 @@
       document.body.classList.toggle('light-mode');
       const darkelem = document.querySelectorAll('#darkbtn');
       const h1dark = document.querySelectorAll('#h1darkbtn');
+      const navele = document.querySelectorAll('#nav-list li a');
+      const head = document.querySelector('.main-head');
+      const logoname = document.querySelector('#logo a');
       const cardbtn = document.querySelectorAll('#btn a');
       
       if (document.body.classList.contains('dark-mode')) {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
         localStorage.setItem('theme', 'dark');
+        head.style.backgroundColor = 'white';
         darkelem.forEach((elem) => elem.style.color = 'white');
+        navele.forEach((elem)=> elem.style.color = 'black');
+        logoname.style.color = 'black';
         cardbtn.forEach((elem) => elem.style.color = 'white');
         h1dark.forEach((darkbtn) => darkbtn.style.color = '#FFA500');
       } else {
         sunIcon.style.display = 'inline-block';
         moonIcon.style.display = 'none';
+        head.style.backgroundColor = '#00000087';
+        navele.forEach((elem)=> elem.style.color = 'white');
+        logoname.style.color = 'white';
         localStorage.setItem('theme', 'light');
         darkelem.forEach((elem) => elem.style.color = 'gray');
         h1dark.forEach((darkbtn) => darkbtn.style.color = '#0057B3');
@@ -1473,7 +1482,7 @@ select {
 
 .recommendation-item p {
   color: #555555;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
@@ -1486,7 +1495,6 @@ select {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1.5rem;
 }
 
 .recommendation-item button:hover {
