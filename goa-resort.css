@@ -1,0 +1,114 @@
+/* Body Styling */
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+/* Heading and Quote Styling */
+h1.display-3 {
+    font-family: 'Arial', sans-serif;
+    color: #ff6347; /* Warm color like the sun */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p.lead {
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 3rem;
+    font-style: italic;
+}
+/* Color Changing Text */
+.color-changing-text {
+    animation: color-change 5s linear infinite;
+}
+
+/* Color Changing Animation */
+@keyframes color-change {
+    0% {
+        color: #ff6347; /* Tomato */
+    }
+    25% {
+        color: #ff4500; /* Orange Red */
+    }
+    50% {
+        color: #1e90ff; /* Dodger Blue */
+    }
+    75% {
+        color: #32cd32; /* Lime Green */
+    }
+    100% {
+        color: #ff6347; /* Back to Tomato */
+    }
+}
+
+
+/* Carousel Styling */
+.carousel-item {
+    height: 500px;
+    background-color: #000;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+/* Resort Card Styling */
+.resort-card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resort-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.btn-primary:hover {
+    background-color: #3a7bc8;
+    border-color: #3a7bc8;
+}
+
+/* Star Rating Color */
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Icon Sizing */
+.bi {
+    font-size: 1.2rem;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}

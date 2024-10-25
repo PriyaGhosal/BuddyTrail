@@ -19,6 +19,7 @@
 .rating-wrap {
     width: 30%; /* Adjust width as needed */
     text-align: left;
+    transition: all;
 }
 
 .center {
@@ -37,7 +38,11 @@
 
 .rating {
     border: none;
-    float:right;
+    display: flex; /* Use flexbox for better layout */
+    justify-content: center; /* Center the stars horizontally */
+    align-items: center; /* Vertically align them */
+    gap: 5px; /* Add a small gap between stars */
+    padding: 10px 0; /* Optional: add padding for spacing */
 }
 
 .rating > input {
@@ -51,6 +56,7 @@
     font-size: 1.5rem;
     display: inline-block;
     cursor: pointer;
+    transition: color 0.2s ease-in-out; /* Smooth color transition */
 }
 
 .rating > .half:before {
@@ -64,6 +70,20 @@
     float: right;
     cursor: pointer;
 }
+
+
+/* Highlight stars when checked */
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+    color: rgb(230, 166, 17); /* Gold color for selected stars */
+}
+
+/* Highlight stars on hover */
+.rating > label:hover,
+.rating > label:hover ~ label {
+    color: rgb(239, 127, 6); /* Brighter orange on hover */
+}
+
 
 /* Filled stars on hover and selection */
 .rating > input:checked ~ label,
@@ -79,5 +99,5 @@
 
 .rating > label:hover ~ label,
 .rating > label:hover {
-    color:rgb(230, 166, 17); /* Green hover effect */
+    color:rgb(239, 127, 6); /* Green hover effect */
 }
