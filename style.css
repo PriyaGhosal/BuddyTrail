@@ -774,7 +774,31 @@ h2 {
 
 .form-group {
   margin-bottom: 15px;
+  position: relative;
 }
+
+/* fa form contact-form icon */
+.form-group .form-control{
+  padding-left: 6%;
+}
+.fas{
+  position: absolute;
+  font-size: 14px;
+  color: grey;
+}
+.fa-user{
+  left:2.5rem;
+  top:3.57rem;
+}
+.fa-envelope{
+  left: 2.5rem;
+  top: 3.6rem;
+}
+.fa-comment{
+  left: 2.5rem;
+  top: 3.7rem;
+}
+/* fa icon end */
 
 .form-group label {
   display: block;
@@ -796,6 +820,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  padding-left: 12px;
 }
 
 .btn {
@@ -1128,7 +1153,6 @@ body {
  issue
 
 h2 {
-main
 
   font-size:  2.5em;
   font-weight:  700;
