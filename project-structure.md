@@ -11,6 +11,7 @@
 ├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
+├── arrow_upper.png
 ├── auth.css
 ├── auth.html
 ├── auth.js
@@ -131,6 +132,7 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
+├── map.html
 ├── moon.png
 ├── package-lock.json
 ├── package.json
