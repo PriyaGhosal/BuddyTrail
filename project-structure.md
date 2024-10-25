@@ -132,7 +132,6 @@
 │   ├── u4.jpg
 │   └── u5.jpg
 ├── index.html
-├── map.html
 ├── moon.png
 ├── package-lock.json
 ├── package.json
@@ -141,6 +140,7 @@
 ├── project_structure.txt
 ├── rajasthan.css
 ├── rajasthan.html
+├── rajasthan.js
 ├── reviews.html
 ├── romantic-gateway.css
 ├── romantic-gateway.html
