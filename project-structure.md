@@ -102,6 +102,8 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── df1.jpg
+│   ├── df2.jpg
 │   ├── download.jpeg
 │   ├── google.png
 │   ├── googleLogo.png
