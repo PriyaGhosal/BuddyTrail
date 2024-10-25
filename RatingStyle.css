@@ -101,3 +101,65 @@
 .rating > label:hover {
     color:rgb(239, 127, 6); /* Green hover effect */
 }
+/* Booking Form Section */
+#booking-form {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #booking-form:hover {
+    border-color: #2e2e2f;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Form Inputs */
+  #booking-form input[type="text"],
+  #booking-form input[type="date"],
+  #booking-form select {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  #booking-form input[type="text"]:hover,
+  #booking-form input[type="date"]:hover,
+  #booking-form select:hover {
+    border-color: #007bff;
+  }
+  
+  /* Form Input Focus State */
+  #booking-form input[type="text"]:focus,
+  #booking-form input[type="date"]:focus,
+  #booking-form select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button Styling */
+  #booking-form .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #booking-form .btn:hover {
+    background-color: #0056b3;
+  }
+
+  #bookingForm{
+    border:2px solid #74787b;
+  }
+  #bookingForm:hover{
+    border:2px solid #2b2b2c;
+  }
+  
