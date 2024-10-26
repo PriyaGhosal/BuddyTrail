@@ -1780,9 +1780,9 @@ Light mode styles body.light-mode {
 .rating {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Maximum width of the rating widget */
+  width: 180px; /* Maximum width of the rating widget */
   background: #f5f1e6; /* Background color */
-  padding: 6px 12px; /* Padding around the content */
+  padding: 2px 12px; /* Padding around the content */
   border-radius: 10px; /* Rounded corners */
   display: flex; /* Use flexbox for layout */
   align-items: right; /* Center items vertically */
