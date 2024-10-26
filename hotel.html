@@ -1,371 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation">
-    <meta name="robots" content="index,follow">
-    <link rel="stylesheet" href="hotel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="/icons/airplane.svg">
-    <title>Hotel Booking - BuddyTrail</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="hotel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/icons/airplane.svg">
+  <title>Hotel Booking - BuddyTrail</title>
 </head>
+
 <body>
-    <header class="main-head">
-        <nav>
-            <div class="logo">
-                <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
-                <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-            </div>
-            <ul id="nav-list">
-          <span class="dropdown-close-btn" id="closeBtn">×</span>
-          <li><a href="index.html" class="navhover">Home</a></li>
-          <li><a href="team.html" class="navhover">Team</a></li>
-          <li>
-            <a href="index.html#deals" class="navhover">Exclusive Deals</a>
-          </li>
-          <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-          <li><a href="about.html" class="navhover">About</a></li>
-          <li>
-            <a href="index.html#itineraries" class="navhover"
-              >Travel Itineraries</a
-            >
-          </li>
-          <li><a href="./contact.html" class="navhover">Contact</a></li>
-          <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-          <li><a href="auth.html" class="navhover">Sign In</a></li>
-        </ul>
-            <div style="display: flex;">
-            <button class="hamburger" id="hamburger" style="margin-right: 10px;">☰</button>
-            <button class="mode-toggle" id="modeToggle">
-                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-            </button>
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="filter-section">
-            <h1 class="header1">Find Your Perfect Stay</h1>
-            <div class="filter-bar">
-                <label for="location-filter">Location:</label>
-                <select id="location-filter" onchange="filterHotels()">
-                    <option value="all">All</option>
-                    <option value="hill">Nature Retreats</option>
-                    <option value="city">Urban Hotels</option>
-                </select>
-
-                <label for="price-filter">Price Range:</label>
-                <select id="price-filter" onchange="filterHotels()">
-                    <option value="all">All</option>
-                    <option value="budget">Budget ($0 - $100)</option>
-                    <option value="mid-range">Mid-range ($101 - $200)</option>
-                    <option value="luxury">Luxury ($201+)</option>
-                </select>
-
-                <label for="rating-filter">Rating:</label>
-                <select id="rating-filter" onchange="filterHotels()">
-                    <option value="all">All</option>
-                    <option value="5">5 Stars</option>
-                    <option value="4">4 Stars & Up</option>
-                    <option value="3">3 Stars & Up</option>
-                </select>
-            </div>
-        </section>
-
-        <section class="hotel-tiles">
-            <!-- Nature Retreats -->
-                <!-- Nature Retreats -->
-                <div class="hotel-tile hill">
-                    <img src="img/n5.jpg" alt="Mountain Bliss Resort">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$120/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile hill">
-                    <img src="img/n4.jpg" alt="Lakeview Haven">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️</span>
-                            <span class="price">$150/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile hill">
-                    <img src="img/n3.jpg" alt="Forest Retreat">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$250/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile hill">
-                    <img src="img/n2.jpg" alt="Green Valley Lodge">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$90/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile hill">
-                    <img src="img/n1.jpg" alt="Peaceful Heights">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️</span>
-                            <span class="price">$50/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <!-- Urban Hotels -->
-                <div class="hotel-tile city">
-                    <img src="img/u1.jpg" alt="Urban Stay Hotel">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️</span>
-                            <span class="price">$120/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile city">
-                    <img src="img/u2.jpg" alt="Metropolitan Hub">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$90/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile city">
-                    <img src="img/c3.jpg" alt="City Lights Inn">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$90/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-            
-                <div class="hotel-tile city">
-                    <img src="img/u4.jpg" alt="Urban Oasis">
-                    <div class="hotel-info">
-                        <h2>Urban Stay Hotel</h2>
-                        <p>Delhi, India</p>
-                        <div class="hotel-details">
-                            <span class="rating">⭐️⭐️⭐️⭐️</span>
-                            <span class="price">$90/night</span>
-                        </div>
-                        <a href="#book" class="btn book-now">Book Now</a>
-                    </div>
-                </div>
-    
-            <!-- Add more hotel tiles here with appropriate data attributes -->
-
-            <!-- Urban Hotels -->
-            <div class="hotel-tile city" data-price="90" data-rating="4">
-                <img src="img/u1.jpg" alt="Urban Stay Hotel">
-                <div class="hotel-info">
-                    <h2>Urban Stay Hotel</h2>
-                    <p>Delhi, India</p>
-                    <div class="hotel-details">
-                        <span class="rating">⭐️⭐️⭐️⭐️</span>
-                        <span class="price">$90/night</span>
-                    </div>
-                    <a href="#book" class="btn book-now">Book Now</a>
-                </div>
-            </div>
-
-            <!-- Add more hotel tiles here -->
-
-        </section>
-    </main>
-    
-<footer>
-  <div class="footer-container">
-    <div style="display: flex">
-      <!-- About Us Section -->
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>We are a team of passionate developers creating amazing web experiences.</p>
+  <header class="main-head">
+    <nav>
+      <div class="logo">
+        <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
+        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
       </div>
+      <ul id="nav-list">
+        <span class="dropdown-close-btn" id="closeBtn">×</span>
+        <li><a href="index.html" class="navhover">Home</a></li>
+        <li><a href="team.html" class="navhover">Team</a></li>
+        <li>
+          <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+        </li>
+        <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+        <li><a href="about.html" class="navhover">About</a></li>
+        <li>
+          <a href="index.html#itineraries" class="navhover">Travel Itineraries</a>
+        </li>
+        <li><a href="./contact.html" class="navhover">Contact</a></li>
+        <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+        <li><a href="auth.html" class="navhover">Sign In</a></li>
+      </ul>
+      <div style="display: flex;">
+        <button class="hamburger" id="hamburger" style="margin-right: 10px;">☰</button>
+        <button class="mode-toggle" id="modeToggle">
+          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-      <!-- Quick Links Section -->
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <div>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <main>
+    <section class="filter-section">
+      <h1 class="header1">Find Your Perfect Stay</h1>
+      <div class="filter-bar">
+        <label for="location-filter">Location:</label>
+        <select id="location-filter" onchange="filterHotels()">
+          <option value="all">All</option>
+          <option value="hill">Nature Retreats</option>
+          <option value="city">Urban Hotels</option>
+        </select>
+
+        <label for="price-filter">Price Range:</label>
+        <select id="price-filter" onchange="filterHotels()">
+          <option value="all">All</option>
+          <option value="budget">Budget ($0 - $100)</option>
+          <option value="mid-range">Mid-range ($101 - $200)</option>
+          <option value="luxury">Luxury ($201+)</option>
+        </select>
+
+        <label for="rating-filter">Rating:</label>
+        <select id="rating-filter" onchange="filterHotels()">
+          <option value="all">All</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars & Up</option>
+          <option value="3">3 Stars & Up</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="hotel-tiles">
+      <!-- Nature Retreats -->
+      <!-- Nature Retreats -->
+      <div class="hotel-tile hill">
+        <img src="img/n5.jpg" alt="Mountain Bliss Resort">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            <span class="price">$120/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
         </div>
       </div>
 
-      <!-- Contact Us Section -->
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-      </div>
-
-      <!-- Follow Us Section -->
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <div class="hotel-tile hill">
+        <img src="img/n4.jpg" alt="Lakeview Haven">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️</span>
+            <span class="price">$150/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
         </div>
       </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+      <div class="hotel-tile hill">
+        <img src="img/n3.jpg" alt="Forest Retreat">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            <span class="price">$250/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <div class="hotel-tile hill">
+        <img src="img/n2.jpg" alt="Green Valley Lodge">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            <span class="price">$90/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <div class="hotel-tile hill">
+        <img src="img/n1.jpg" alt="Peaceful Heights">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️</span>
+            <span class="price">$50/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Urban Hotels -->
+      <div class="hotel-tile city">
+        <img src="img/u1.jpg" alt="Urban Stay Hotel">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️</span>
+            <span class="price">$120/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <div class="hotel-tile city">
+        <img src="img/u2.jpg" alt="Metropolitan Hub">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️</span>
+            <span class="price">$90/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <div class="hotel-tile city">
+        <img src="img/c3.jpg" alt="City Lights Inn">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️</span>
+            <span class="price">$90/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <div class="hotel-tile city">
+        <img src="img/u4.jpg" alt="Urban Oasis">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️</span>
+            <span class="price">$90/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Add more hotel tiles here with appropriate data attributes -->
+
+      <!-- Urban Hotels -->
+      <div class="hotel-tile city" data-price="90" data-rating="4">
+        <img src="img/u1.jpg" alt="Urban Stay Hotel">
+        <div class="hotel-info">
+          <h2>Urban Stay Hotel</h2>
+          <p>Delhi, India</p>
+          <div class="hotel-details">
+            <span class="rating">⭐️⭐️⭐️⭐️</span>
+            <span class="price">$90/night</span>
+          </div>
+          <a href="#book" class="btn book-now">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Add more hotel tiles here -->
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div style="display: flex">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>We are a team of passionate developers creating amazing web experiences.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
+
   </div>
-</footer>
-
-            </div>
-          </div>
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: info@example.com</p>
-            <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-            <h3>Follow Us</h3>
-            <ul class="social-icons">
-              <li>
-                <a href="https://twitter.com/PriyaGhosa39968"
-                  ><img src="icons/twitter.svg" alt="Twitter"
-                /></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-                  ><img src="icons/instagram.svg" alt="Instagram"
-                /></a>
-              </li>
-              <li>
-                <a href="#"><img src="icons/youtube.svg" alt="YouTube" /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+  </div>
+  <div class="footer-column">
+    <h3>Contact Us</h3>
+    <p>Email: <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a></p>
+    <p>Phone: <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a></p>
+  </div>
+  <div class="footer-column">
+    <h3>Follow Us</h3>
+    <ul class="social-icons">
+      <li>
+        <a href="https://twitter.com/PriyaGhosa39968"><img src="icons/twitter.svg" alt="Twitter" /></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><img src="icons/instagram.svg"
+            alt="Instagram" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="icons/youtube.svg" alt="YouTube" /></a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+  </div>
+  </div>
+  </footer>
 
 
-    <script>
-        function filterHotels() {
-            const locationFilter = document.getElementById("location-filter").value;
-            const priceFilter = document.getElementById("price-filter").value;
-            const ratingFilter = document.getElementById("rating-filter").value;
-            const hotels = document.querySelectorAll(".hotel-tile");
+  <script>
+    function filterHotels() {
+      const locationFilter = document.getElementById("location-filter").value;
+      const priceFilter = document.getElementById("price-filter").value;
+      const ratingFilter = document.getElementById("rating-filter").value;
+      const hotels = document.querySelectorAll(".hotel-tile");
 
-            hotels.forEach(hotel => {
-                const locationMatch = locationFilter === "all" || hotel.classList.contains(locationFilter);
-                const price = parseInt(hotel.dataset.price);
-                const rating = parseInt(hotel.dataset.rating);
+      hotels.forEach(hotel => {
+        const locationMatch = locationFilter === "all" || hotel.classList.contains(locationFilter);
+        const price = parseInt(hotel.dataset.price);
+        const rating = parseInt(hotel.dataset.rating);
 
-                let priceMatch = true;
-                if (priceFilter === "budget") priceMatch = price <= 100;
-                else if (priceFilter === "mid-range") priceMatch = price > 100 && price <= 200;
-                else if (priceFilter === "luxury") priceMatch = price > 200;
+        let priceMatch = true;
+        if (priceFilter === "budget") priceMatch = price <= 100;
+        else if (priceFilter === "mid-range") priceMatch = price > 100 && price <= 200;
+        else if (priceFilter === "luxury") priceMatch = price > 200;
 
-                const ratingMatch = ratingFilter === "all" || rating >= parseInt(ratingFilter);
+        const ratingMatch = ratingFilter === "all" || rating >= parseInt(ratingFilter);
 
-                if (locationMatch && priceMatch && ratingMatch) {
-                    hotel.style.display = "block";
-                } else {
-                    hotel.style.display = "none";
-                }
-            });
+        if (locationMatch && priceMatch && ratingMatch) {
+          hotel.style.display = "block";
+        } else {
+          hotel.style.display = "none";
         }
+      });
+    }
 
-        // Add event listeners for hamburger menu and mode toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navList = document.getElementById('nav-list');
-            const closeBtn = document.getElementById('closeBtn');
-            const modeToggle = document.getElementById('modeToggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
+    // Add event listeners for hamburger menu and mode toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navList = document.getElementById('nav-list');
+      const closeBtn = document.getElementById('closeBtn');
+      const modeToggle = document.getElementById('modeToggle');
+      const sunIcon = document.querySelector('.sun-icon');
+      const moonIcon = document.querySelector('.moon-icon');
 
-            hamburger.addEventListener('click', function() {
-                navList.classList.toggle('show');
-            });
+      hamburger.addEventListener('click', function () {
+        navList.classList.toggle('show');
+      });
 
-            closeBtn.addEventListener('click', function() {
-                navList.classList.remove('show');
-            });
+      closeBtn.addEventListener('click', function () {
+        navList.classList.remove('show');
+      });
 
-            modeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                sunIcon.style.display = sunIcon.style.display === 'none' ? 'inline' : 'none';
-                moonIcon.style.display = moonIcon.style.display === 'none' ? 'inline' : 'none';
-            });
-        });
-    </script>
-    
+      modeToggle.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+        sunIcon.style.display = sunIcon.style.display === 'none' ? 'inline' : 'none';
+        moonIcon.style.display = moonIcon.style.display === 'none' ? 'inline' : 'none';
+      });
+    });
+  </script>
+
   <div class="gtranslate_wrapper"></div>
 
   <script>
 
-  window.gtranslateSettings = {
-    "default_language":"en",
-    "detect_browser_language":true,
-    "wrapper_selector":".gtranslate_wrapper"
-  }
+    window.gtranslateSettings = {
+      "default_language": "en",
+      "detect_browser_language": true,
+      "wrapper_selector": ".gtranslate_wrapper"
+    }
 
   </script>
 
-  <script 
-    src="https://cdn.gtranslate.net/widgets/latest/float.js"
-    defer
-  ></script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 </body>
+
 </html>
