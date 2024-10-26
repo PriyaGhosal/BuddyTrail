@@ -288,13 +288,13 @@ button {
 }
 #btn {
   display: inline-block;
-  background-color: #007bff;
+  background-color: rgba(255,255,255,0.1);
   color: white;
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: all 0.4s ease;
 }
 .heading-contributors h2{
   color: black;
@@ -304,8 +304,10 @@ button {
   color: white;
 }
 #btn:hover {
-  background-color: #2c5282;
-  transform: scale(0.95);
+  background-color: rgba(255,255,255,0.6);
+  transform: scale(1.1);
+  color: black;
+  font-weight: 700;
 }
 #btn:hover a {
   color: black;
@@ -322,7 +324,7 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px;s
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -432,8 +434,7 @@ nav {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("./img/landing-page.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -443,6 +444,36 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% transparent black */
+  z-index: 0;
 }
 
 .hero button {
@@ -1001,7 +1032,7 @@ body {
 }
 #About {
   padding: 60px;
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
@@ -1056,7 +1087,7 @@ body {
 }
 /* Light mode for #About */
 .light-mode #About {
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
 }
 
@@ -2241,7 +2272,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button {
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -2252,7 +2283,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button:hover {
-  background-color: #218838;
+  background-color: #0351a4;
 }
 
 #deals {
@@ -2979,7 +3010,7 @@ textarea {
 
   .dark-mode .service-card{
     background-color: #1e1e1e; /* Darker background for service cards */
-    color: #e0e0e0; /* Light grey text color */
+    color: #e0e0e000; /* Light grey text color */
   }
 
 html,

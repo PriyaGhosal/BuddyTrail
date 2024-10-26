@@ -4,159 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="terms.css">
     <title>Disclaimer - BuddyTrail</title>
-    <style>
-        /* Resetting margin and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   
+</head>
+<style>
+     /* Resetting margin and padding */
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        /* Body styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
+    /* Body styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
 
-        /* Full-width container for page */
+    /* Full-width container for page */
+    .container {
+        display: flex;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    /* Table of contents styling */
+    .toc {
+        flex-basis: 25%;
+        background-color: #e9ecef;
+        padding:70px 20px;
+        border-radius: 8px;
+        margin-right: 20px;
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+    }
+
+    .toc h2 {
+        font-size: 1.5rem;
+        color: #004085;
+    }
+
+    .toc ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .toc ul li {
+        margin-bottom: 10px;
+    }
+
+    .toc ul li a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .toc ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Main content styling */
+    .main-content {
+        flex-basis: 75%;
+    }
+
+    h1, h2 {
+        color: #004085;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 53px 0;
+        border-bottom: 2px solid #004085;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        margin-left: 20px;
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    /* Button styling for links */
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Smooth scrolling for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         .container {
-            display: flex;
-            width: 100%;
-            
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            flex-direction: column;
         }
 
-        /* Table of contents styling */
         .toc {
-            flex-basis: 25%;
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin-right: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 20px;
+            margin-bottom: 20px;
+            margin-right: 0;
+            width: 100%;
+            position: relative; /* Changed to relative to make TOC non-sticky */
         }
 
-        .toc h2 {
-            font-size: 1.5rem;
-            color: #004085;
-        }
-
-        .toc ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .toc ul li {
-            margin-bottom: 10px;
-        }
-
-        .toc ul li a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .toc ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main content styling */
         .main-content {
-            flex-basis: 75%;
-        }
-
-        h1, h2 {
-            color: #004085;
+            width: 100%;
         }
 
         h1 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #004085;
-            padding-bottom: 10px;
+            font-size: 1.8rem;
         }
 
         h2 {
-            font-size: 1.8rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            font-size: 1.4rem;
         }
 
         p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
-
-        ul {
-            margin-left: 20px;
-            padding-left: 20px;
-            list-style: disc;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        /* Button styling for links */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .toc {
-                margin-bottom: 20px;
-                margin-right: 0;
-                width: 100%;
-                position: relative; /* Changed to relative to make TOC non-sticky */
-            }
-
-            .main-content {
-                width: 100%;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
-</head>
+    }
+    :root {
+      --bg-color: #fff;
+      --text-color: #333;
+      --toc-bg: #e9ecef;
+      --link-color: #007bff;
+  }
+  
+  body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+  }
+  
+  a {
+      color: var(--link-color);
+  }
+  
+  /* Dark Mode Variables */
+  body.dark-mode {
+      --bg-color: #000;
+      --text-color: #fff;
+      --toc-bg: #333;
+      --link-color: #90caf9;
+  }
+  
+  .dark-mode .container {
+      background-color: var(--bg-color);
+  }
+  
+  .dark-mode-toc {
+      background-color: var(--toc-bg);
+  }
+  
+  .dark-mode-toc ul li a,
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode p,
+  .dark-mode ul li {
+      color: var(--text-color);
+  }
+  
+  .dark-mode-content {
+      background-color: var(--bg-color);
+  }
+  
+  .dark-mode-content h1,
+  .dark-mode-content h2,
+  .dark-mode-content p,
+  .dark-mode-content li {
+      color: var(--text-color);
+  }
+  
+</style>
 <body>
+    <header>
+        <div class="container3">
+          <nav>
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+              <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+              <button class="dropdown-close-btn" id="closeBtn">✖</button>
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link active">About Us</a></li>
+              <li><a href="team.html" class="nav-link">Team</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+              <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+            </ul>
+            <button class="mode-toggle" id="modeToggle">
+              <span class="sun-icon glow"
+                ><img src="day-mode.png" alt="Light mode"
+              /></span>
+              <span class="moon-icon glow" style="display: none"
+                ><img src="moon.png" alt="Dark mode"
+              /></span>
+            </button>
+          </nav>
+        </div>
+      </header>
 
     <div class="container">
         
@@ -202,9 +281,21 @@
             <h2 id="section6">6. Contact Us</h2>
             <p>If you have any questions or concerns about this Disclaimer, please contact us:</p>
             <p>Email: <a href="mailto:support@buddytrail.com">support@buddytrail.com</a></p>
-            <p>Phone: +1-800-555-1234</p>
+            <p>Phone: <a href="tel:+1234567890" style="color: rgb(103, 115, 212); text-decoration: none;">+123 456 7890</a></p>
         </div>
     </div>
-
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+        const toc = document.querySelector('.toc');
+        const mainContent = document.querySelector('.main-content');
+    
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toc.classList.toggle('dark-mode-toc');
+            mainContent.classList.toggle('dark-mode-content');
+        });
+    </script>
+    
 </body>
 </html>
