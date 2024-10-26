@@ -103,19 +103,7 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-⚙️ Getting Started with the Code:
-1. Fork this Repository  🍴 
-2. Clone to your local machine 🧩 using:
-    git clone https://github.com/Your-Username/BuddyTrail.git
-3. Create a new branch:
-    git branch -c "Feature-Name"
-4. Navigate to the branch:
-    git checkout Feature-Name
-5. Add changes and Commit:
-    git commit -m "Add Changes message"
-6. Push to the branch:
-    git push origin Feature-Name
-7. Submit Pull Request 
+
 
 
 ## 🛠️ Technologies Used
@@ -138,11 +126,18 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 Join the list. **We are waiting** <br/>
 Here's how you can contribute to the repository:
 
-1. **Fork the repository.**
-2. **Create a new feature branch.**
-3. **Commit your changes.**
-4. **Push to the branch.**
-5. **Open a Pull Request.**
+1. Fork this Repository  🍴 
+2. Clone to your local machine 🧩 using:
+    git clone https://github.com/Your-Username/BuddyTrail.git
+3. Create a new branch:
+    git branch -c "Feature-Name"
+4. Navigate to the branch:
+    git checkout Feature-Name
+5. Add changes and Commit:
+    git commit -m "Add Changes message"
+6. Push to the branch:
+    git push origin Feature-Name
+7. Submit Pull Request 
 
 We welcome all contributions to improve **BuddyTrail**! If you would like to contribute, please follow the [Contributing.md](./Contributing.md) for more details on how to get started.
 
