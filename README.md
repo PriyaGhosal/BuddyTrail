@@ -165,17 +165,21 @@ You can find the project structure in the [Project Structure](project-structure.
 <div>
   <h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Our Contributors</h2>
   <div align="center">
-    <h3>Thank you for contributing to our repository</h3>
+    <h3>Thank you for contributing to our repository</h3
+
+
+
       
 <p align="center">
       <a href="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors">
         <img src="https://api.vaunt.dev/v1/github/entities/PriyaGhosal/repositories/BuddyTrail/contributors?format=svg&limit=54" width="700" height="250" />
       </a>
     </p>
+<a href="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PriyaGhosal/BuddyTrail&max=300" />
+</a>
     
-#### A Big Thank You to Our Contributors! 🎉👏
 
-We want to extend our heartfelt gratitude to all the amazing contributors who have dedicated their time and effort to make BuddyTrail a success! Your hard work and commitment to excellence are what drive this project forward. Together, we are building something great! Thank you for being a part of our community! ❤️✨
 
   </div>
 </div>
