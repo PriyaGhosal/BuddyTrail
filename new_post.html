@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Blog Post</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container form {
+            margin: 30px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5c67f2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4c57e0;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+        form {
+            padding-right: 20px;
+        }
+    </style>
+    <title>BuddyTrail Blog - Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="blog.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href= "RatingStyle.css">
+        <link rel="stylesheet" href="button-ui.css">
+        <link rel="stylesheet" href= "style.css" />
+        <link rel="stylesheet" href= "./styles/popup.css">
+        <link rel="stylesheet" href= "cookie-popup.css">
+        <link rel="preconnect" href= "https://fonts.googleapis.com" />
+        <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
+    
+        <link
+          href= "https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+          rel= "stylesheet"
+        />
+        <link rel="icon" href="/icons/airplane.svg" />
+        <link
+          rel= "stylesheet"
+          href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity= "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin= "anonymous"
+          referrerpolicy= "no-referrer"
+        />
+        <link rel="stylesheet" href="chatbot.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --header-bg: #1a1a2e;
+            --header-text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-top: 150px;
+            margin-bottom: 50px;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 4rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-head {
+            background-color: var(--header-bg);
+
+        }
+
+        header.scrolled {
+            background-color: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--header-text);
+        }
+
+        #nav-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        #nav-list li {
+            margin-left: 2rem;
+        }
+
+        #nav-list a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        #nav-list a:hover,
+        #nav-list a.active {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--header-text);
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 0px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: auto;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+            color:white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cms-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .cms-controls button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cms-controls button:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .blog-filters select {
+            padding: 0.7rem;
+            margin: 0 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background-color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-filters select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-post h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .category {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .tag:hover {
+            background-color: #d0d0d0;
+        }
+
+        .content {
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: auto;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #2980b9;
+        }
+
+        .comments-section {
+            margin-top: 1.5rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .comment:hover {
+            background-color: #f0f0f0;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .comment-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .comment-form button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            color: var(--header-text);
+            padding: 3rem 0;
+            /* Increased padding for more space */
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            /* Increased gap between social icons */
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: var(--header-text);
+            font-size: 1.8rem;
+            /* Increased size for icons */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+            /* Scale effect on hover */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            /* Softer border color */
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            /* Softer footer text color */
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                /* Center align items on mobile */
+                gap: 1.5rem;
+                /* Adjusted gap for mobile layout */
+            }
+
+            .footer-column {
+                min-width: unset;
+                /* Remove min-width on smaller screens */
+                text-align: center;
+                /* Center align text on mobile */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            #nav-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            #nav-list.show {
+                display: flex;
+            }
+
+            #nav-list li {
+                margin: 0.5rem 0;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+
+        /* New styles for modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Form styles */
+        .modal-form input[type="text"],
+        .modal-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .modal-form input[type="text"]:focus,
+        .modal-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .modal-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .modal-form button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* List styles for categories and tags */
+        .item-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .item-list li {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 0.7rem 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .item-list li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.7rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        .thank-you-message {
+            font-size: 3em;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    </script>
+
+    <script src="script.js"></script>
+    <header class="main-head">
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="#home" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="blog.html" class="navhover">Blogs</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+     
+    </ul>
+
+    <!-- Toggle Button -->
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
+  </nav>
+</header>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </header>
+
+<div class="container">
+    <h1>Add New Blog Post</h1>
+    <form id="postForm">
+        <div class="error" id="error"></div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content" rows="10" required></textarea>
+
+        <label for="image">Image</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+        Thank you, your submission has been received!
+    </div>
+</div>
+
+<script>
+        document.getElementById("postForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Get form data
+        const title = document.getElementById("title").value.trim();
+        const content = document.getElementById("content").value.trim();
+
+        // Form validation
+        if (!title || !content) {
+            document.getElementById("error").textContent = "Please fill out all required fields.";
+            return;
+        }
+
+        // Hide form and show thank-you message
+        document.getElementById("postForm").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+    });
+</script>
+
+<footer id="footer">
+    <div class="footer-container">
+      <!-- About Us Section -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html" class="faq-link">FAQs</a></li>
+          <li><a href="servicespage.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contributor/contributor.html">Our Contributor</a></li> 
+        </ul>
+      </div>
+  
+      <!-- Legal Links Section -->
+      <div class="footer-column">
+        <h3>Legal Links</h3>
+        <ul>
+          <li><a href="terms_of_service.html">Terms of Service</a></li>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="copyright.html">Copyright Notice</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="cookie_policy.html">Cookie Policy</a></li>
+  
+          
+  
+        </ul>
+      </div>
+  
+      <!-- Contact Us Section -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      </div>
+  
+      <!-- Follow Us Section -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+  
+      <!-- Newsletter Form Section -->
+      <style>
+        .footer-column.newsletter {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #email {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 6px;
+            font-size: 14px;
+        }
+        #subscription-message {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+      <div class="footer-column newsletter" id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navList = document.getElementById("nav-links");
+      const closeBtn = document.getElementById("closeBtn");
+
+      hamburger.addEventListener("click", function () {
+        navList.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        navList.classList.remove("active");
+      });
+    });
+
+   document.addEventListener("DOMContentLoaded", function() {
+     const modeToggle = document.getElementById("modeToggle");
+     const sunIcon = document.querySelector(".sun-icon");
+     const moonIcon = document.querySelector(".moon-icon");
+
+     // Check saved theme in localStorage and apply it
+     const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+     } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+    }
+
+// Toggle between light and dark mode on button click
+modeToggle.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+
+    // Apply dark mode styles to relevant sections
+    const sections = document.querySelectorAll('.about, .core-values, .team');
+    sections.forEach(section => {
+        if (isDarkMode) {
+            section.classList.add('dark-mode');
+        } else {
+            section.classList.remove('dark-mode');
+        }
+    });
+
+    // Update icons and local storage
+    if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+    }
+});
+});
+  </script>
+</body>
+
+</html>
