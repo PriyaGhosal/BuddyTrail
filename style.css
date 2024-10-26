@@ -288,13 +288,13 @@ button {
 }
 #btn {
   display: inline-block;
-  background-color: #007bff;
+  background-color: rgba(255,255,255,0.1);
   color: white;
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: all 0.4s ease;
 }
 .heading-contributors h2{
   color: black;
@@ -304,8 +304,10 @@ button {
   color: white;
 }
 #btn:hover {
-  background-color: #2c5282;
-  transform: scale(0.95);
+  background-color: rgba(255,255,255,0.6);
+  transform: scale(1.1);
+  color: black;
+  font-weight: 700;
 }
 #btn:hover a {
   color: black;
@@ -322,7 +324,7 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px;s
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
