@@ -1770,7 +1770,7 @@ Light mode styles body.light-mode {
   background-color: #f9f9f9;
 }
 
-.star-rating {
+-rating {
   color: #f1c40f;
   font-size: 1.4em;
   letter-spacing: 3px;
@@ -1832,7 +1832,7 @@ input#rate-5:checked ~ label {
   font-size: 19px;
   color: rgb(4, 4, 4); /* Color for the header text */
   font-weight: 500;
-  margin: 5px 0 20px 0; /* Margin for spacing */
+  margin: 5px 0 5px 0; /* Margin for spacing */
   text-align: center; /* Center the text */
   transition: all 0.2s ease; /* Smooth transition for changes */
 }
