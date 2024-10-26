@@ -1780,7 +1780,7 @@ Light mode styles body.light-mode {
 .rating {
   position: relative;
   width: 100%;
-  width: 180px; /* Maximum width of the rating widget */
+  width: 180px; /* Width of the rating widget */
   background: #f5f1e6; /* Background color */
   padding: 2px 12px; /* Padding around the content */
   border-radius: 10px; /* Rounded corners */
