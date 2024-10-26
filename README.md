@@ -208,15 +208,11 @@ We want to extend our heartfelt gratitude to all the amazing contributors who ha
 
 ## 👥 Team
 
-## 👥 Team
-
 | ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
 |:--:|
 | **Priya Ghosal** <br> <sub>Project Admin</sub> | 
-| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) [LinkedIn](https://www.linkedin.com/in/priya-ghosal-785771286/) | 
-| [![Discord](https://img.shields.io/badge/Discord-7289DA?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/priyaghosal) [Discord](https://discord.com/invite/priyaghosal) | 
-| [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PriyaGhosal/BuddyTrail) [GitHub](https://github.com/PriyaGhosal/BuddyTrail) | 
-| [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=x&logoColor=white)](https://x.com/PriyaGhosa39968) [X (Twitter)](https://x.com/PriyaGhosa39968) |
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) [![Discord](https://img.icons8.com/fluency/32/000000/discord.png)](https://discord.com/invite/priyaghosal) [![Twitter](https://img.icons8.com/fluency/32/000000/twitter.png)](https://twitter.com/PriyaGhosa39968) [![GitHub](https://img.icons8.com/fluency/32/000000/github.png)](https://github.com/PriyaGhosal/BuddyTrail) |
+
 
 
 For any inquiries or feedback, please contact. Happy Contributing 🫡
