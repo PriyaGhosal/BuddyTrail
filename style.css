@@ -564,7 +564,7 @@ video {
 h2 {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color:  rgba(188, 188, 177, 0.953);
 }
 .location-cards {
   display: flex;
