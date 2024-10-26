@@ -134,7 +134,8 @@
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
-│   └── u5.jpg
+│   ├── u5.jpg
+│   └── x-logo.png
 ├── index.html
 ├── moon.png
 ├── new_post.html
