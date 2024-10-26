@@ -270,7 +270,7 @@
     <div
       style="
         width: 100%;
-        height: 110px;
+        height: 125px;
         background-color: #333;
         margin-top: -20px;
       "
@@ -285,6 +285,7 @@
       "
       src="img/HELP-IMG.jpg"
       alt="image"
+      id="clipart-img1"
     />
     <img
       style="
@@ -296,6 +297,7 @@
       "
       src="img/download.jpeg"
       alt="image"
+      id="clipart-img2";
     />
     <div class="faq-container">
       <!-- About Our Website Section -->
@@ -355,6 +357,7 @@
             <p style="color: white;">Thank you! Your suggestion has been submitted.</p>
         </div>
     </div>
+  </div>
 </section>
 
 
@@ -403,12 +406,14 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
-        padding: 20px;
+        padding: 0px;
       }
 
       .faq-container {
         max-width: 800px;
         margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
@@ -536,6 +541,7 @@
         background-color: #ffe0b2;
       }
     </style>
+ main
   
 <!-- Circles -->
 <div class="circle"></div>
@@ -606,5 +612,170 @@
     animateCircles();
   </script>
 
+
+    
+
+  <footer id="footer">
+    <div class="footer-container">
+      <!-- About Us Section -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html" class="faq-link">FAQs</a></li>
+          <li><a href="servicespage.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contributor/contributor.html">Our Contributor</a></li>
+        </ul>
+      </div>
+  
+      <!-- Legal Links Section -->
+      <div class="footer-column">
+        <h3>Legal Links</h3>
+        <ul>
+          <li><a href="terms_of_service.html">Terms of Service</a></li>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="copyright.html">Copyright Notice</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="cookie_policy.html">Cookie Policy</a></li>
+  
+          
+  
+        </ul>
+      </div>
+  
+      <!-- Contact Us Section -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      </div>
+  
+      <!-- Follow Us Section -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+  
+      <!-- Newsletter Form Section -->
+      <style>
+        .footer-column.newsletter {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #email {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 6px;
+            font-size: 14px;
+        }
+        #subscription-message {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+      <div class="footer-column newsletter" id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navList = document.getElementById("nav-links");
+      const closeBtn = document.getElementById("closeBtn");
+
+      hamburger.addEventListener("click", function () {
+        navList.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        navList.classList.remove("active");
+      });
+    });
+
+   document.addEventListener("DOMContentLoaded", function() {
+     const modeToggle = document.getElementById("modeToggle");
+     const sunIcon = document.querySelector(".sun-icon");
+     const moonIcon = document.querySelector(".moon-icon");
+
+     // Check saved theme in localStorage and apply it
+     const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+
+     } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+    }
+
+// Toggle between light and dark mode on button click
+modeToggle.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+
+    // Apply dark mode styles to relevant sections
+    const sections = document.querySelectorAll('.about, .core-values, .team');
+    sections.forEach(section => {
+        if (isDarkMode) {
+            section.classList.add('dark-mode');
+        } else {
+            section.classList.remove('dark-mode');
+        }
+    });
+
+    // Update icons and local storage
+    if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+        document.getElementById("clipart-img1").style.visibility = "hidden";
+        document.getElementById("clipart-img2").style.visibility = "hidden";
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+        document.getElementById("clipart-img1").style.visibility = "visible";
+        document.getElementById("clipart-img2").style.visibility = "visible";
+    }
+});
+});
+  </script>
+ main
 </body>
 </html>

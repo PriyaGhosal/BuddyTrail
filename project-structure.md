@@ -134,9 +134,12 @@
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
-│   └── u5.jpg
+│   ├── u5.jpg
+│   └── x-logo.png
 ├── index.html
+├── manifest.json
 ├── moon.png
+├── new_post.html
 ├── package-lock.json
 ├── package.json
 ├── privacypolicy.html
@@ -152,6 +155,7 @@
 │   └── popup.js
 ├── script.js
 ├── security.md
+├── service-worker.js
 ├── service.css
 ├── service.html
 ├── servicespage.html
