@@ -244,7 +244,9 @@ You can find the project structure in the [Project Structure](project-structure.
 | ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
 |:--:|
 | **Priya Ghosal** <br> <sub>Project Admin</sub> | 
-| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) |
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) [![Discord](https://img.icons8.com/fluency/32/000000/discord.png)](https://discord.com/invite/priyaghosal) [![Twitter](https://img.icons8.com/fluency/32/000000/twitter.png)](https://twitter.com/PriyaGhosa39968) [![GitHub](https://img.icons8.com/fluency/32/000000/github.png)](https://github.com/PriyaGhosal/BuddyTrail) |
+
+
 
 For any inquiries or feedback, please contact. Happy Contributing 🫡
 
