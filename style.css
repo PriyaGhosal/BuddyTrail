@@ -1793,11 +1793,11 @@ Light mode styles body.light-mode {
   height: 60px; /* Allow height to adjust based on content */
 }
 
-.rating -widget input {
+.rating .star-widget input {
   display: none;
 }
 
--widget label {
+.star-widget label {
   font-size: 17px;
   color: #444;
   padding: 6px;
@@ -1827,7 +1827,7 @@ input#rate-5:checked ~ label {
   text-shadow: 0 0 20px #952;
 }
 
--widget header {
+.star-widget header {
   width: 100%;
   font-size: 19px;
   color: rgb(4, 4, 4); /* Color for the header text */
