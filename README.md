@@ -166,6 +166,23 @@ All responses are in JSON format. Ensure to handle errors appropriately.
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+# 🛤️ Project Roadmap
+
+Our roadmap outlines the future features and enhancements planned for BuddyTrail. We are committed to continuously improving your travel experience! 🚀
+
+| Quarter | Feature                         | Description                                                                                   | Status       |
+|---------|---------------------------------|-----------------------------------------------------------------------------------------------|--------------|
+| Q4 2024 | 🌍 Enhanced Destination Search   | Introduce advanced filters and suggestions for popular travel destinations.                  | In Progress  |
+| Q1 2025 | ✈️ Flight Comparison Tool       | Allow users to compare flight options side-by-side to find the best deals.                  | Planned      |
+| Q2 2025 | 🏨 Hotel Booking Integration    | Integrate with hotel booking platforms for real-time availability and pricing.               | Planned      |
+| Q3 2025 | 📱 Mobile App Launch            | Launch a mobile app version of BuddyTrail for on-the-go planning and booking.               | Planned      |
+| Q4 2025 | 🌐 Multi-Language Support       | Expand language options to cater to a broader international audience.                        | Planned      |
+| Q1 2026 | 📖 Travel Blog Feature          | Implement a community-driven travel blog where users can share experiences and tips.        | Future       |
+
+Stay tuned for updates as we work to bring these features to life! 🎉
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
