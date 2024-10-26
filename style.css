@@ -1770,7 +1770,7 @@ Light mode styles body.light-mode {
   background-color: #f9f9f9;
 }
 
--rating {
+.star-rating {
   color: #f1c40f;
   font-size: 1.4em;
   letter-spacing: 3px;
@@ -1793,11 +1793,11 @@ Light mode styles body.light-mode {
   height: 60px; /* Allow height to adjust based on content */
 }
 
-.rating .star-widget input {
+.rating -widget input {
   display: none;
 }
 
-.star-widget label {
+-widget label {
   font-size: 17px;
   color: #444;
   padding: 6px;
@@ -1827,7 +1827,7 @@ input#rate-5:checked ~ label {
   text-shadow: 0 0 20px #952;
 }
 
-.star-widget header {
+-widget header {
   width: 100%;
   font-size: 19px;
   color: rgb(4, 4, 4); /* Color for the header text */
