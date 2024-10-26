@@ -711,6 +711,10 @@ h2 {
   line-height: inherit;
 }
 
+.card p {
+  font-size: 1.5rem;
+}
+
 .card-icon {
   border-radius: 10px;
   background: #8b66b6;
