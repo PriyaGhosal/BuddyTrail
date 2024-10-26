@@ -1647,6 +1647,12 @@ Light mode styles body.light-mode {
 .dark-mode .review-p {
   color: whitesmoke;
 }
+.dark-mode #darkbtn {
+  color: whitesmoke;
+}
+ #darkbtn{
+  color: #000000;
+ }
 .reviews-section h2 {
   font-size: 3em;
   margin-bottom: 20px;
