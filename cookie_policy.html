@@ -162,6 +162,57 @@
                 font-size: 0.95rem;
             }
         }
+        :root {
+          --bg-color: #fff;
+          --text-color: #333;
+          --toc-bg: #e9ecef;
+          --link-color: #007bff;
+      }
+      
+      body {
+          background-color: var(--bg-color);
+          color: var(--text-color);
+      }
+      
+      a {
+          color: var(--link-color);
+      }
+      
+      /* Dark Mode Variables */
+      body.dark-mode {
+          --bg-color: #000;
+          --text-color: #fff;
+          --toc-bg: #333;
+          --link-color: #90caf9;
+      }
+      
+      .dark-mode .container {
+          background-color: var(--bg-color);
+      }
+      
+      .dark-mode-toc {
+          background-color: var(--toc-bg);
+      }
+      
+      .dark-mode-toc ul li a,
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode p,
+      .dark-mode ul li {
+          color: var(--text-color);
+      }
+      
+      .dark-mode-content {
+          background-color: var(--bg-color);
+      }
+      
+      .dark-mode-content h1,
+      .dark-mode-content h2,
+      .dark-mode-content p,
+      .dark-mode-content li {
+          color: var(--text-color);
+      }
+      
     </style>
 </head>
 <body>
@@ -319,6 +370,18 @@
         };
       </script>
       <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
+      <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+        const toc = document.querySelector('.toc');
+        const mainContent = document.querySelector('.main-content');
+    
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toc.classList.toggle('dark-mode-toc');
+            mainContent.classList.toggle('dark-mode-content');
+        });
+    </script>
+    
 </body>
 </html>
