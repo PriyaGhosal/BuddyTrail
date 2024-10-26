@@ -60,7 +60,7 @@
 
 input[type="email"] {
   width: 100%;
-  border: 1px solid #ccc;
+  border: 2px solid rgb(187, 124, 202);
   border-radius: 5px;
   font-size: 16px;
 }
