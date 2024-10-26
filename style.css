@@ -324,13 +324,14 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;s
+  padding: 17px;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
   justify-content: space-between; /* Adjusted to space-between for better layout */
   align-items: center;
   transition: background-color 0.3s ease, height 0.3s ease;
+  backdrop-filter: blur(1px);
 }
 
 .main-head.shadow {

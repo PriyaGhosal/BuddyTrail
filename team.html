@@ -223,7 +223,7 @@ body {
     margin-bottom: 40px; /* Add some bottom margin to separate from other elements */
 }
 
-.main-head {
+/* .main-head {
   position: fixed;
   top: 0;
   left: 0;
@@ -231,13 +231,40 @@ body {
   z-index: 5;
   padding: 15px;
   height: 90px;
-  background-color: #000; /* Initially black */
+  background-color: #000; 
   color: white;
   display: flex;
-  justify-content:space-evenly; /* Adjusted to space-between for better layout */
+  justify-content:space-evenly; 
   align-items: center;
   transition: background-color 0.3s ease, height 0.3s ease;
+} */
+
+/* edited */
+
+.main-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 17px;
+  background-color: #00000087; /* Initially black */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Adjusted to space-between for better layout */
+  align-items: center;
+  transition: background-color 0.3s ease, height 0.3s ease;
+  backdrop-filter: blur(1px);
 }
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+} */
+
+/*  */
 
 #nav-list {
   display: flex;
@@ -369,15 +396,15 @@ button[type="submit"] {
 <body>
 
     <!-- Header Include -->
-     <div class="main-head">
+     <!-- <div class="main-head">
         <div class="logo">
             <img src="img/logo.png" id="logo-web">
             <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
           </div>
       
-          <ul id="nav-list">
+          <ul id="nav-list"> -->
             <!-- Close button for dropdown -->
-            <li><a href="index.html" class="navhover">Home</a></li>
+            <!-- <li><a href="index.html" class="navhover">Home</a></li>
             <li><a href="team.html" class="navhover">Team</a></li>
             <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
             <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
@@ -388,15 +415,51 @@ button[type="submit"] {
             <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
             <li><a href="auth.html" class="navhover">Sign In</a></li>
            
-          </ul>
+          </ul> -->
       
         <!-- Toggle Button -->
-        <button class="mode-toggle" id="modeToggle">
+        <!-- <button class="mode-toggle" id="modeToggle">
             <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
             <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
         </button>
         </div>
+    </div> -->
+    <!-- edited  -->
+     <header class="main-head">
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
     </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+       <span class="dropdown-close-btn" id="closeBtn">×</span> 
+      <li><a href="index.html" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+
+    </ul> 
+
+    <!-- Toggle Button -->
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
+  </nav>
+</header>
     <!-- Sidebar Include -->
     <aside>
         <!-- Include your sidebar here -->

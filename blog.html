@@ -42,7 +42,7 @@
             padding: 0 20px;
         }
 
-        header {
+        header:not(.main-head) {
             background-color: var(--header-bg);
             color: var(--header-text);
             padding: 1rem 0;
@@ -82,13 +82,55 @@
             font-weight: 700;
             color: var(--header-text);
         }
-
+        
+        /* edited */
         #nav-list {
+            list-style: none;
+            align-items: center;
+        }
+        nav ul {
             display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
             list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
         }
 
-        #nav-list li {
+        .navhover {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease, color 0.3s;
+        }
+
+        #nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            white-space: nowrap;
+            /* font-size: 1.8rem; */
+        }
+        li {
+            font-size: 1rem;
+        }
+        @media (min-width: 769px) {
+            .dropdown-close-btn {
+                display: none;
+            }
+        }
+        .navhover:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            
+        }
+
+        /*  */
+        /* #nav-list li {
             margin-left: 2rem;
         }
 
@@ -97,12 +139,12 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-        }
+        } */
 
-        #nav-list a:hover,
+        /* #nav-list a:hover,
         #nav-list a.active {
             color: var(--secondary-color);
-        }
+        } */
 
         .hamburger {
             display: none;
@@ -153,6 +195,11 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        @media screen and (max-width: 932px) {
+            nav ul {
+                text-align: center;
             }
         }
 
@@ -656,6 +703,48 @@
     justify-content: center;
     align-items: center;
   }
+
+  /* editing nav */
+.main-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 17px;
+    background-color: #00000087; /* Initially black */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Adjusted to space-between for better layout */
+    align-items: center;
+    transition: background-color 0.3s ease, height 0.3s ease;
+    backdrop-filter: blur(1px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-web {
+    height: 50px;
+    width: 70px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+  
+  /*  */
   
   /* Logo Styling */
   #logo {
@@ -726,7 +815,7 @@
     });
     
       </script>
-    <header>
+    <!-- <header>
         <nav>
             <div class="logo">
                 <img src="img/logo.png" alt="BuddyTrail Logo">
@@ -748,7 +837,45 @@
                   </button>
             </ul>
         </nav>
-    </header>
+    </header> -->
+
+    <!-- edited -->
+    <header class="main-head">
+        <nav>
+          <div class="logo">
+            <img src="img/logo.png" id="logo-web">
+            <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+          </div>
+      
+          <!-- Hamburger button for mobile -->
+          <button class="hamburger" id="hamburger">☰</button>
+      
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="index.html#locations">Location</a></li>
+            <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="#" class="navhover">Blogs</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+            <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+      
+          </ul>
+      
+          <!-- Toggle Button -->
+           <div class="toggle-button">
+             <button class="mode-toggle" id="modeToggle">
+               <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+               <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+             </button>
+           </div>
+        </nav>
+      </header>
+     <!--  -->
 
     <main>
         <section class="hero">
