@@ -141,7 +141,8 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
+                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo"
+                        style="transition: transform 0.3s ease;" />
                     <h1 id="logo">BuddyTrail</h1>
                 </div>
                 <button class="hamburger" id="hamburger">☰</button>
@@ -156,7 +157,17 @@
             </nav>
         </div>
     </header>
+    <script>
+        const logo = document.getElementById("logo-web");
 
+        logo.addEventListener("mouseenter", () => {
+            logo.style.transform = "rotateY(20deg) scale(1.1)";
+        });
+
+        logo.addEventListener("mouseleave", () => {
+            logo.style.transform = "rotateY(0) scale(1)";
+        });
+    </script>
     <section class="about">
         <div class="container">
             <h1>About BuddyTrail</h1>
@@ -556,6 +567,7 @@
 
         }
 
+ 
         .hover-color {
             transition: color 0.3s ease;
             /* Smooth transition for color change */
@@ -564,6 +576,43 @@
         .hover-color:hover {
             color: rgb(199, 59, 159);
             /* Change color on hover */
+=======
+        /* Navbar style */
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: whitesmoke;
+            /* Adjust the color as needed */
+            padding: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            /* Adjust based on padding */
+            width: 100%;
+            height: 2px;
+            /* Thickness of the underline */
+            background-color: #007BFF;
+            /* Adjust underline color */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #007BFF;
+            /* Change text color on hover, if desired */
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+ 
         }
     </style>
 
