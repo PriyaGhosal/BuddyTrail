@@ -224,4 +224,19 @@ If you find this project helpful, please consider giving it a ⭐ on GitHub! You
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+## 📞 Contact Us
+
+We'd love to hear from you! Reach out to us through our social media platforms:
+
+| Social Media Platform | Link |
+|-----------------------|------|
+| Discord               | [![Discord](https://img.shields.io/badge/Discord-7289DA?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/priyaghosal) |
+| LinkedIn              | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/priya-ghosal-785771286/) |
+| GitHub                | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PriyaGhosal/BuddyTrail) |
+| X (Twitter)          | [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=x&logoColor=white)](https://x.com/PriyaGhosa39968) |
+
+
+✨ "Your feedback is the compass that guides us!" ✨
+
+
 # Thanks for reading!!!
