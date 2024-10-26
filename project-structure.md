@@ -137,6 +137,7 @@
 │   └── u5.jpg
 ├── index.html
 ├── moon.png
+├── new_post.html
 ├── package-lock.json
 ├── package.json
 ├── privacypolicy.html
