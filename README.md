@@ -121,6 +121,40 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+## 📡 API Documentation
+
+### Overview
+The BuddyTrail API allows you to interact with travel data, including destinations, hotels, and flights. 
+
+### Endpoints
+
+#### 🌍 Get Destinations
+- **URL:** `/api/destinations`
+- **Method:** `GET`
+- **Description:** Fetch a list of popular travel destinations.
+
+#### 🏨 Get Hotels
+- **URL:** `/api/hotels`
+- **Method:** `GET`
+- **Description:** Retrieve available hotels for a specified destination.
+
+#### ✈️ Book Flight
+- **URL:** `/api/book-flight`
+- **Method:** `POST`
+- **Description:** Book a flight with the provided travel details.
+
+### Usage Example
+```bash
+curl -X GET "https://api.buddytrail.com/api/destinations"
+```
+### 📜 Response Format
+All responses are in JSON format. Ensure to handle errors appropriately.
+
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+
 ## 🎉 Welcome Contributors!! 👨‍💻👋
 
 Join the list. **We are waiting** <br/>
