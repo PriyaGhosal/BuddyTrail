@@ -324,18 +324,32 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;s
-  background-color: #00000087; /* Initially black */
+  padding: 17px;
+  background-color: black; /* For Reflective background change back-ground to #00000087*/ 
   color: white;
   display: flex;
-  justify-content: space-between; /* Adjusted to space-between for better layout */
+  justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, height 0.3s ease;
 }
 
 .main-head.shadow {
-  background-color: rgba(0, 0, 0, 0.7); /* Becomes transparent when scrolled */
+  background-color: rgba(0, 0, 0, 0.7); /* Becomes more transparent when scrolled */
   backdrop-filter: blur(8px);
+}
+
+/* Reflection Effect */
+.main-head:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.1); /* Light reflection effect */
+  transform: scaleY(-1); /* Flip the reflection */
+  opacity: 0.1; /* Adjust opacity for the reflection */
+  pointer-events: none; /* Allow clicks to pass through */
 }
 
 nav {
@@ -352,6 +366,8 @@ nav {
 #nav-list {
   list-style: none;
   align-items: center;
+  display: flex; /* Ensure items are aligned horizontally */
+  padding: 0; /* Reset default padding */
 }
 
 #nav-list li a {
@@ -360,6 +376,12 @@ nav {
   font-weight: 400;
   white-space: nowrap;
   font-size: 1.8rem;
+  padding: 10px 15px; /* Add padding for better click area */
+  transition: color 0.3s ease; 
+}
+
+#nav-list li a:hover {
+  color: #ffde59; 
 }
 
 .hamburger {
