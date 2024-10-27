@@ -85,7 +85,7 @@
 }
 
 .rating {
-  height: 50px;
+  height: auto;
 }
 
 .rating:hover {
@@ -521,8 +521,8 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <nav >
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
       <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -1063,7 +1063,8 @@ p {
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section" style="height: 100%;">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
+      
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -1487,114 +1488,55 @@ select {
 
 
     <!-- recommendations -->
+    <section id="recommendations" class="recommendations-section">
+      <h2 id="h1darkbtn">Personalized Recommendations</h2>
+      <p>
+        We’ve picked these destinations, hotels, and activities just for you,
+        based on your preferences.
+      </p>
+
+      <div class="recommendation-list">
+        <!-- Example Recommendation -->
+        <div class="recommendation-item">
+          <div class="header1">
+          <h3 id="h1darkbtn">Beach Resort in Goa</h3>
+          <p>
+            Based on your love for sunny destinations, we recommend this
+            beachfront resort in Goa for a perfect getaway.
+          </p>
+          <button onclick="window.location.href='goa-resort.html'">
+            Explore More
+          </button>
+        </div></div>
+
+        <div class="recommendation-item">
+          <div class="header2">
+          <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
+          <p>
+            Explore the rich cultural heritage of Rajasthan. This tour is
+            highly recommended based on your interest in historical places.
+          </p>
+          <button onclick="window.location.href='rajasthan.html'">
+            Explore More
+          </button>
+        </div></div>
+
+        <div class="recommendation-item">
+          <div class="header1">
+          <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
+          <p>
+            For the adventure lover in you, we recommend a thrilling trek in
+            the mountains of Himachal Pradesh.
+          </p>
+          <button onclick="window.location.href='himachal.html'">
+            Explore More
+          </button>
+        </div></div>
+      </div>
+    </section>
+
     <style>
-/* Recommendations Section Styling */
-#recommendations {
-  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);
-  padding: 40px;
-  border-radius: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-#recommendations h2 {
-  text-align: center;
-  color: #2c2b2b;
-  font-size: 4rem;
-  margin-bottom: 30px;
-}
-
-/* Recommendations List */
-.recommendation-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* Recommendation Item */
-.recommendation-item {
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  flex: 1 1 calc(33.333% - 30px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  height: 320px;
-  position: relative; /* Added for button positioning */
-  display: flex; /* Added for vertical alignment */
-  flex-direction: column; /* Added for vertical alignment */
-}
-
-.recommendation-item:nth-child(2) {
-  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-}
-
-.recommendation-item:nth-child(3) {
-  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
-}
-
-/* Content Container */
-.header1, .header2 {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Hover Effects */
-.recommendation-item:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.recommendation-item h3 {
-  color: #1e293b;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.recommendation-item p {
-  color: #555555;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  flex-grow: 1; /* Allows content to push button to bottom */
-}
-
-/* Buttons Styling */
-.recommendation-item button {
-  background-color: #3b82f6;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1.5rem;
-  margin-top: auto; /* Pushes button to bottom */
-  align-self: flex-start; /* Aligns button to the left */
-}
-
-.recommendation-item button:hover {
-  background-color: #1e40af;
-  transform: translateY(-5px);
-}
-
-/* Section Responsiveness */
-@media (max-width: 768px) {
-  .recommendation-list {
-    flex-direction: column;
-  }
-
-  .recommendation-item {
-    margin-bottom: 20px;
-    height: auto;
-    min-height: 320px; /* Ensures minimum height while allowing expansion */
-  }
-}
-</style>
-<style>
-/* Recommendations Section Styling */
+      /* Recommendations Section Styling */
 #recommendations {
   background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);
   padding: 40px;
@@ -2244,6 +2186,9 @@ nav.hi ul li.NAVI i:hover  {
       h1#h1darkbtn:hover {
           color: #ffcc00; /* Changes the color when hovered */
       }
+      p#darkbtn {
+        font-size: large;
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -2524,23 +2469,27 @@ nav.hi ul li.NAVI i:hover  {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+
                             </div>
                             <div class="form-group">
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+                            <button class="book-btn" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
         <style>
+
+
+
 /* General Section Styles */
 .contact-section {
     background-color: #f9f9f9;
@@ -2928,6 +2877,52 @@ textarea.form-control {
       </span>
     </button>
   </div>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Create an object with the form data
+                const formData = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+
+                console.log('Form Data:', formData); // Debugging statement
+
+                try {
+                    // Send the data to the backend
+                    const response = await fetch('http://localhost:5000/api/contact/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Check if the response is ok (status code 200-299)
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message); // Show success message
+                        // Optionally reset the form
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message}`); // Show error message
+                    }
+                } catch (error) {
+                    alert('Failed to send message. Please try again later.'); // Handle network errors
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
   <script>
     window.addEventListener('scroll', function() {
       const scrollContainer = document.getElementById('scrollContainer');
@@ -3097,34 +3092,34 @@ textarea.form-control {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
     };
   </script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  // <script>
+  //   document.getElementById('contactForm').addEventListener('submit', function (e) {
+  //     e.preventDefault();
 
-      // Submit the form data using fetch
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        // Show the confirmation popup
-        document.getElementById('confirmationPopup').style.display = 'block';
-        // Reset the form
-        this.reset();
-      }).catch(error => {
-        console.error('Error:', error);
-        // Still show the confirmation popup even if there's an error
-        document.getElementById('confirmationPopup').style.display = 'block';
-      });
-    });
+  //     // Submit the form data using fetch
+  //     fetch(this.action, {
+  //       method: 'POST',
+  //       body: new FormData(this),
+  //       headers: {
+  //         'Accept': 'application/json'
+  //       }
+  //     }).then(response => {
+  //       // Show the confirmation popup
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //       // Reset the form
+  //       this.reset();
+  //     }).catch(error => {
+  //       console.error('Error:', error);
+  //       // Still show the confirmation popup even if there's an error
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //     });
+  //   });
 
 
-    function closePopup() {
-      document.getElementById('confirmationPopup').style.display = 'none';
-    }
-  </script>
+  //   function closePopup() {
+  //     document.getElementById('confirmationPopup').style.display = 'none';
+  //   }
+  // </script>
   <script>
   document.getElementById('reviewForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents form submission
