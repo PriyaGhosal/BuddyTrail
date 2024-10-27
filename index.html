@@ -2251,23 +2251,27 @@ nav.hi ul li.NAVI i:hover  {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+
                             </div>
                             <div class="form-group">
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+                            <button class="book-btn" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
         <style>
+
+
+
 /* General Section Styles */
 .contact-section {
     background-color: #f9f9f9;
@@ -2655,6 +2659,52 @@ textarea.form-control {
       </span>
     </button>
   </div>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Create an object with the form data
+                const formData = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+
+                console.log('Form Data:', formData); // Debugging statement
+
+                try {
+                    // Send the data to the backend
+                    const response = await fetch('http://localhost:5000/api/contact/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Check if the response is ok (status code 200-299)
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message); // Show success message
+                        // Optionally reset the form
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message}`); // Show error message
+                    }
+                } catch (error) {
+                    alert('Failed to send message. Please try again later.'); // Handle network errors
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
   <script>
     window.addEventListener('scroll', function() {
       const scrollContainer = document.getElementById('scrollContainer');
@@ -2824,34 +2874,34 @@ textarea.form-control {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
     };
   </script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  // <script>
+  //   document.getElementById('contactForm').addEventListener('submit', function (e) {
+  //     e.preventDefault();
 
-      // Submit the form data using fetch
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        // Show the confirmation popup
-        document.getElementById('confirmationPopup').style.display = 'block';
-        // Reset the form
-        this.reset();
-      }).catch(error => {
-        console.error('Error:', error);
-        // Still show the confirmation popup even if there's an error
-        document.getElementById('confirmationPopup').style.display = 'block';
-      });
-    });
+  //     // Submit the form data using fetch
+  //     fetch(this.action, {
+  //       method: 'POST',
+  //       body: new FormData(this),
+  //       headers: {
+  //         'Accept': 'application/json'
+  //       }
+  //     }).then(response => {
+  //       // Show the confirmation popup
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //       // Reset the form
+  //       this.reset();
+  //     }).catch(error => {
+  //       console.error('Error:', error);
+  //       // Still show the confirmation popup even if there's an error
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //     });
+  //   });
 
 
-    function closePopup() {
-      document.getElementById('confirmationPopup').style.display = 'none';
-    }
-  </script>
+  //   function closePopup() {
+  //     document.getElementById('confirmationPopup').style.display = 'none';
+  //   }
+  // </script>
   <script>
   document.getElementById('reviewForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents form submission
