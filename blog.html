@@ -12,6 +12,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="RatingStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/icons/airplane.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="chatbot.css" />
     <style>
         :root {
             --primary-color: #3498db;
@@ -40,6 +59,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            margin-bottom: 85px;
         }
 
         header {
@@ -126,13 +146,15 @@
             margin-bottom: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: auto;
         }
 
         .hero h2 {
-            font-family: 'Playfair Display', serif;
+
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
+            color: white;
+            -webkit-text-stroke: 0px;
         }
 
         .hero p {
@@ -337,146 +359,7 @@
             transform: translateY(-2px);
         }
 
-        footer {
-            background-color: var(--header-bg);
-            color: var(--header-text);
-            padding: 3rem 0;
-            /* Increased padding for more space */
-            margin-top: 2rem;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            /* Added gap for better spacing between columns */
-        }
-
-        .footer-column {
-            flex: 1;
-            margin-bottom: 2rem;
-            /* Increased margin for better spacing */
-            min-width: 250px;
-            /* Increased min-width for more balance */
-        }
-
-        .footer-column h3 {
-            margin-bottom: 1.5rem;
-            /* Increased spacing for better layout */
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            /* Increased font size for headings */
-            color: var(--secondary-color);
-            /* Color added for contrast */
-        }
-
-        .footer-column ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-            /* Increased spacing for a cleaner look */
-        }
-
-        .footer-column a {
-            color: var(--header-text);
-            text-decoration: none;
-            font-size: 1.1rem;
-            /* Increased font size for better readability */
-            transition: color 0.3s ease, transform 0.3s ease;
-            /* Added hover effect */
-        }
-
-        .footer-column a:hover {
-            color: var(--secondary-color);
-            /* Smooth color transition */
-            transform: translateX(5px);
-            /* Slight movement on hover */
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1.5rem;
-            /* Increased gap between social icons */
-            margin-top: 1.5rem;
-        }
-
-        .social-icons a {
-            color: var(--header-text);
-            font-size: 1.8rem;
-            /* Increased size for icons */
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--secondary-color);
-            transform: scale(1.1);
-            /* Scale effect on hover */
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            /* Softer border color */
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            /* Softer footer text color */
-        }
-
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-                /* Center align items on mobile */
-                gap: 1.5rem;
-                /* Adjusted gap for mobile layout */
-            }
-
-            .footer-column {
-                min-width: unset;
-                /* Remove min-width on smaller screens */
-                text-align: center;
-                /* Center align text on mobile */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            #nav-list {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--header-bg);
-                flex-direction: column;
-                padding: 1rem 0;
-            }
-
-            #nav-list.show {
-                display: flex;
-            }
-
-            #nav-list li {
-                margin: 0.5rem 0;
-            }
-
-            .blog-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                flex-direction: column;
-            }
-        }
+        
 
         /* New styles for modals */
         .modal {
@@ -726,29 +609,46 @@
     });
     
       </script>
-    <header>
+    <header class="main-head">
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+        </div>
         <nav>
-            <div class="logo">
-                <img src="img/logo.png" alt="BuddyTrail Logo">
-                <h1 id="logo">BuddyTrail</h1>
-            </div>
-            <button class="hamburger" id="hamburger">☰</button>
-            <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#locations">Location</a></li>
-                <li><a href="index.html#itineraries">Travel Itineraries</a></li>
-                <li><a href="index.html#reviews">Reviews</a></li>
-                <li><a href="index.html#benefits">Benefits</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="auth.html">Sign In</a></li>
-                <li><a href="#" class="active">Blog</a></li>
-                <button class="mode-toggle" id="modeToggle">
-                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                  </button>
-            </ul>
+          <ul id="nav-list">
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li>
+              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+            </li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li>
+              <a href="index.html#itineraries" class="navhover"
+                >Travel Itineraries</a
+              >
+            </li>
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+          </ul>
         </nav>
-    </header>
+        <!-- Toggle Button -->
+        <div class="toggle">
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"
+              ><img src="day-mode.png" alt="Light mode"
+            /></span>
+            <span class="moon-icon glow" style="display: none"
+              ><img src="moon.png" alt="Dark mode"
+            /></span>
+          </button>
+        </div>
+  
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
+      </header>
 
     <main>
         <section class="hero">
@@ -777,55 +677,104 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>About Us</h3>
-                    <p>We are a team of passionate travelers creating amazing experiences for adventurers worldwide.</p>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#locations">Locations</a></li>
-                        <li><a href="index.html#itineraries">Itineraries</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@buddytrail.com</p>
-                    <p>Phone: +1 (123) 456-7890</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                     <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/PriyaGhosal/BuddyTrail"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+    <footer id="footer">
+        <div class="footer-container">
+          <!-- About Us Section -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html" class="faq-link">FAQs</a></li>
+              <li><a href="servicespage.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contributor/contributor.html">Our Contributor</a></li>
+            </ul>
+          </div>
+      
+          <!-- Legal Links Section -->
+          <div class="footer-column">
+            <h3>Legal Links</h3>
+            <ul>
+              <li><a href="terms_of_service.html">Terms of Service</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="copyright.html">Copyright Notice</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      
+              
+      
+            </ul>
+          </div>
+      
+          <!-- Contact Us Section -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          </div>
+      
+          <!-- Follow Us Section -->
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+              <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-            </div>
+          </div>
+      
+          <!-- Newsletter Form Section -->
+          <style>
+            .footer-column.newsletter {
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #newsletter-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #email {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button[type="submit"] {
+                width: 100px;
+                padding: 6px;
+                font-size: 14px;
+            }
+            #subscription-message {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+          <div class="footer-column newsletter" id="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="newsletter-form">
+              <input type="email" id="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscription-message"></p>
+          </div>
         </div>
-    </footer>
+      
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+        </div>
+      </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
     <script>
         // Initialize data in localStorage if it doesn't exist
