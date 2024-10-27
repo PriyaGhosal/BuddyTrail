@@ -91,7 +91,7 @@ nav {
     color: #CBD5E0;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
-    background: linear-gradient(to right, midnightblue, rgb(120, 120, 184) 50%, rgb(255, 255, 255) 50%);
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(120, 120, 184) 50%, rgb(255, 255, 255) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -105,6 +105,10 @@ nav {
     background-color: rgba(76, 95, 191, 0.2);
     color: #E2E8F0;
     background-position: 0 100%;
+}
+.logo a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -126,7 +130,7 @@ nav {
 	left: -2px;
 	top: -2px;
 	background: linear-gradient(45deg, 
-		#0000ff, #7997c1,#ae44d2, #f2eded,#0000ff, #7997c1,#ae44d2, #f2eded);
+		#ffffff, #7997c1,#ae44d2, #f2eded,#0000ff, #7997c1,#ae44d2, #f2eded);
 	background-size: 400%;
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
@@ -191,7 +195,7 @@ nav {
 }
 
 h1, h2 {
-    color: #2D3748;
+    color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
@@ -211,7 +215,7 @@ h1::after {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, #4C51BF, #667EEA);
+    background: linear-gradient(90deg, #ffffff, #ffffff);
     transition: width 0.3s ease;
 }
 
@@ -223,7 +227,7 @@ h2 {
     font-size: 2.25rem;
     font-weight: 700;
     margin-top: 2.5rem;
-    color: #4C51BF;
+    color: #ffffff;
 }
 
 p {
@@ -255,7 +259,7 @@ p {
 
 .value-item i {
     font-size: 2.5rem;
-    color: #4C51BF;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
