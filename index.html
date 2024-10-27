@@ -30,6 +30,10 @@
       referrerpolicy= "no-referrer"
     />
     <link rel="stylesheet" href="chatbot.css">
+
+    <!-- Link to manifest file for enabling PWA -->
+    <link rel="manifest" href="/manifest.json">
+
     <title>BuddyTrail</title>
     <style>
      .header1{
@@ -781,7 +785,7 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2>Exclusive Deals and Offers</h2>
+        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
         <div class="carousel">
@@ -873,7 +877,7 @@
 .deals-section {
   text-align: center;
   padding: 3rem 20px;
-  background: linear-gradient(135deg, #d0ea80 0%, #4de1dc 100%); /* Light aqua gradient background */
+  background: linear-gradient(135deg, #a4cdf9 0%, #007bff 100%); /* Light aqua gradient background */
   width: 90vw;
   margin: 0 auto;
   color: #2e573e;
@@ -918,7 +922,7 @@ p {
   padding: 25px;
   background: #ffffff; /* Start with a clean white background */
   border: 2px solid transparent;
-  background-color: #82699d;
+  background-color: #d3d3d3;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transform: scale(1);
@@ -929,8 +933,9 @@ p {
 .deal-item:hover {
   transform: scale(1.1); /* Enlarge on hover */
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
-  border: 2px solid #662f8b; /* Appear border on hover */
+  background: #f9f9f9
+  /* background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
+  /* border: 2px solid #662f8b; /* Appear border on hover */
 }
 
 
@@ -1714,7 +1719,7 @@ select {
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
-      <p id="emergency-text">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
+      <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
@@ -2211,18 +2216,30 @@ nav.hi ul li.NAVI i:hover  {
           }
       }
   </style>
-  <h1 style="padding-left:40%;color:#022f5e;padding-top:2px">Destination Guide</h1>
+  <h1 style="padding-left:40%;color: rgba(255, 255, 248, 0.953);padding-top:8px ; margin: 5px 0 2px;">Destination Guide</h1>
   <section id="destinations">
 
       <div class="post-container">
 
           <h3>Share Your Experiences</h3>
           <form id="postForm">
-            <p>Share your experience and guidence</p>
               <textarea id="postContent" placeholder="Write your post here..." required></textarea>
               <button type="submit">Submit</button>
           </form>
-      </div>
+      </div> 
+      <style>
+
+    .post-container {
+    background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
+    
+    border-radius: 8px; 
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    
+}
+
+
+        </style>
 
       <!-- Right image of a destination inside a container -->
       <div class="destination-image-container">
@@ -2237,7 +2254,7 @@ nav.hi ul li.NAVI i:hover  {
     <!-- Map Section -->
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
-      <p>Click on the markers to learn more about each destination.</p>
+      <p style="color: whitesmoke;">Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
@@ -2455,7 +2472,7 @@ nav.hi ul li.NAVI i:hover  {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    color: #ffffff;
+    color: #000000;
     border: 2px solid rgb(187, 124, 202);
     border-radius: 5px;
     background-color: #f9f9f9;
@@ -2521,7 +2538,7 @@ textarea.form-control {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading" >Testimonials</h2>
+    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2716,7 +2733,7 @@ textarea.form-control {
   <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
     <button class="scroll-button group" id="scrollTopBtn">
       <span class="tooltip-text-scroll">
-        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
       </span>
     </button>
   </div>

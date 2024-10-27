@@ -564,7 +564,7 @@ video {
 h2 {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color:  rgba(188, 188, 177, 0.953);
 }
 .location-cards {
   display: flex;
@@ -2163,7 +2163,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button {
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -2174,7 +2174,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button:hover {
-  background-color: #218838;
+  background-color: #0351a4;
 }
 
 #deals {
