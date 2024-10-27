@@ -324,7 +324,7 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;s
+  padding: 17px;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -679,6 +679,7 @@ h2 {
 
 .benefits h2 {
   text-align: center;
+  color: black;
 }
 
 .benefits ul {
@@ -688,6 +689,9 @@ h2 {
 .call-to-action {
   text-align: center;
   margin-top: 30px;
+}
+.call-to-action h3 {
+  color: rgb(94, 94, 90)yellow;
 }
 
 .benefits-head {
@@ -756,15 +760,21 @@ h2 {
   align-content: center;
   margin: auto;
   font-size: large;
-
-  background-color: #0000000d;
   padding: 50px 100px;
-  border-radius: 15px;
   font-size: 2.3rem;
+  backdrop-filter: blur(4px) saturate(66%);
+  -webkit-backdrop-filter: blur(4px) saturate(66%);
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .benifits-list li {
   font-size: 1em;
+  color: #6f6565;
+}
+.booking{
+  color:rgb(60, 56, 56) ;
 }
 
 /**** BOOKING FORM ****/
@@ -1159,7 +1169,6 @@ body {
  issue
 
 h2 {
-main
 
   font-size:  2.5em;
   font-weight:  700;
@@ -1321,6 +1330,12 @@ footer {
   color: #fffcfc;
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
+}
+/*for the copyright in the footer*/
+.footer-copy{
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
 }
 
 /* for facebook */
@@ -2416,7 +2431,7 @@ input#rate-5:checked ~ header:before {
   background-color: #121212; /* Dark background */
 }
 .dark-mode .recommendations-section p {
-  color: #e0e0e0; /* Lighter text color */
+  color: #594c4c; /* Lighter text color */
 }
 .dark-mode .recommendation-item {
   background-color: #1e1e1e; /* Darker background for items */
