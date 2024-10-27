@@ -55,260 +55,226 @@
       /* Darker color on hover */
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .container {
-      display: flex;
-      align-items: flex-start;
-      /* Align items at the start of the container */
-      justify-content: space-between;
-      /* Space between elements */
-      gap: 20px;
-      /* Optional gap between form and rating section */
-      height: auto;
-      /* Adjust height if necessary */
-    }
+.container {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the container */
+  justify-content: space-between; /* Space between elements */
+  gap: 20px; /* Optional gap between form and rating section */
+  height: auto; /* Adjust height if necessary */
+}
 
-    .form-section {
-      width: 70%;
-      /* Adjust width as needed */
-    }
+.form-section {
+  width: 70%; /* Adjust width as needed */
+}
 
-    .rating-wrap {
-      width: 30%;
-      /* Adjust width as needed */
-      text-align: left;
-    }
+.rating-wrap {
+  width: 30%; /* Adjust width as needed */
+  text-align: left;
+}
 
-    .center {
-      width: auto;
-      display: inline-flex;
-      /* Align stars and rating count in a row */
-      align-items: center;
-      gap: 10px;
-      /* Add some space between the stars and the count */
-    }
+.center {
+  width: auto;
+  display: inline-flex; /* Align stars and rating count in a row */
+  align-items: center;
+  gap: 10px; /* Add some space between the stars and the count */
+}
 
-    .rating {
-      height: 50px;
-    }
+.rating {
+  height: auto;
+}
 
-    .rating:hover {
-      cursor: pointer;
-    }
+.rating:hover {
+  cursor: pointer;
+}
 
-    #rating-value {
-      font-size: 1.2rem;
-      /* Adjust font size */
-      font-weight: bold;
-      color: black;
-      /* Optional: change the color to match the theme */
-    }
+#rating-value {
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold;
+  color: black; /* Optional: change the color to match the theme */
+}
 
-    .rating {
-      border: none;
-      float: right;
-    }
+.rating {
+  border: none;
+  float: right;
+}
 
-    .rating>input {
-      display: none;
-    }
+.rating > input {
+  display: none;
+}
 
-    .rating>label:before {
-      content: '\f005';
-      font-family: FontAwesome;
-      margin: 5px;
-      font-size: 1.5rem;
-      display: inline-block;
-      cursor: pointer;
-    }
+.rating > label:before {
+  content: '\f005';
+  font-family: FontAwesome;
+  margin: 5px;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
 
-    .rating>.half:before {
-      content: '\f089';
-      position: absolute;
-      cursor: pointer;
-    }
+.rating > .half:before {
+  content: '\f089';
+  position: absolute;
+  cursor: pointer;
+}
 
-    .rating>label {
-      color: #ddd;
-      /* Empty stars initially */
-      float: right;
-      cursor: pointer;
-    }
+.rating > label {
+  color: #ddd; /* Empty stars initially */
+  float: right;
+  cursor: pointer;
+}
 
-    /* Filled stars on hover and selection */
-    .rating>input:checked~label,
-    .rating:not(:checked)>label {
-      color: #ddd;
-      /* Keep stars empty until interaction */
-    }
+/* Filled stars on hover and selection */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label {
+  color: #ddd; /* Keep stars empty until interaction */
+}
 
-    .rating>input:checked~label,
-    .rating>input:checked~label:hover,
-    .rating>input:checked~label:hover~label {
-      color: rgb(230, 166, 17);
-      /* Green for filled stars */
-    }
+.rating > input:checked ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label {
+  color: rgb(230, 166, 17); /* Green for filled stars */
+}
 
-    .rating>label:hover~label,
-    .rating>label:hover {
-      color: rgb(230, 166, 17);
-      /* Green hover effect */
-    }
+.rating > label:hover ~ label,
+.rating > label:hover {
+  color: rgb(230, 166, 17); /* Green hover effect */
+}
 
-    .chatbot-container {
-      position: fixed;
-      bottom: 20px;
-      /* Adjust as needed */
-      right: 20px;
-      /* Adjust as needed */
-      z-index: 1000;
-      /* Ensure it appears above other elements */
-    }
+.chatbot-container {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
 
-    .chatbot-button {
-      background-color: #007bff;
-      /* Change to your preferred color */
-      border: none;
-      border-radius: 50%;
-      padding: 5px;
-      /* Smaller padding */
-      cursor: pointer;
-      position: relative;
-      width: 50px;
-      /* Adjusted size */
-      height: 50px;
-      /* Adjusted size */
-    }
+.chatbot-button {
+  background-color: #007bff; /* Change to your preferred color */
+  border: none;
+  border-radius: 50%;
+  padding: 5px; /* Smaller padding */
+  cursor: pointer;
+  position: relative;
+  width: 50px; /* Adjusted size */
+  height: 50px; /* Adjusted size */
+}
 
-    .chatbot-button img {
-      width: 30px;
-      /* Adjusted image size */
-      height: 30px;
-      /* Adjusted image size */
-    }
+.chatbot-button img {
+  width: 30px; /* Adjusted image size */
+  height: 30px; /* Adjusted image size */
+}
 
-    .tooltip-text {
-      display: none;
-      /* Hide by default */
-      position: absolute;
-      top: -10%;
-      /* Position above the button */
-      left: -230px;
-      transform: translateX(-230px, -50%);
-      background-color: #333;
-      /* Background color for tooltip */
-      color: #fff;
-      /* Tooltip text color */
-      padding: 5px;
-      border-radius: 5px;
-      white-space: nowrap;
-      /* Prevent text from wrapping */
-    }
+.tooltip-text {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: -10%; /* Position above the button */
+  left: -230px;
+  transform: translateX(-230px, -50%);
+  background-color: #333; /* Background color for tooltip */
+  color: #fff; /* Tooltip text color */
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
 
-    .chatbot-button:hover .tooltip-text {
-      display: block;
-      /* Show on hover */
-    }
+.chatbot-button:hover .tooltip-text {
+  display: block; /* Show on hover */
+}
 
-    .logo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-    .card:hover {
-      cursor: pointer;
-    }
+.card:hover {
+  cursor: pointer;
+}
 
-    @media (max-width: 768px) {
-      .itinerary-list {
-        flex-direction: column;
-        align-items: center;
-      }
+@media (max-width: 768px) {
+  .itinerary-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .itinerary {
-        margin-bottom: 20px;
-        width: 90%;
-      }
+  .itinerary {
+    margin-bottom: 20px;
+    width: 90%;
+  }
 
-      .itinerary {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-    }
+  .itinerary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
 
-    .itinerary:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.itinerary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .btn-view-itinerary:hover {
-      background-color: #0056b3;
-    }
+.btn-view-itinerary:hover {
+  background-color: #0056b3;
+}
 
-    .cards {
-      display: flex;
-      gap: 20px;
-    }
+.cards {
+  display: flex;
+  gap: 20px;
+}
 
-    .card {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    .card.inview {
-      opacity: 1;
-      transform: translateY(0);
+.card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    }
+.card.inview header1 {
+  padding: 10px 8px 4px 8px;
+}
 
-    .card.inview header1 {
-      padding: 10px 8px 4px 8px;
-    }
+/* General hidden state and transition for smooth animation */
+.itinerary,
+.service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    /* General hidden state and transition for smooth animation */
-    .itinerary,
-    .service-card {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
+/* Visible state triggered when the element comes into view */
+.itinerary.inview,
+.service-card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* Visible state triggered when the element comes into view */
-    .itinerary.inview,
-    .service-card.inview {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+  transition: transform 0.1s, left 0.1s, top 0.1s;
+}
 
-
-
-
-
-    .circle {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-    }
-
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
+.circle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
@@ -849,8 +815,9 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-      <h2>Exclusive Deals and Offers</h2>
-      <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
+<h2 style="color: #000000;">Exclusive Deals and Offers</h2>
+<p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
+
 
       <div class="carousel">
         <div class="carousel-inner">
@@ -1139,7 +1106,8 @@
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section" style="height: 100%;">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
+      
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -2141,6 +2109,9 @@
         color: #ffcc00;
         /* Changes the color when hovered */
       }
+      p#darkbtn {
+        font-size: large;
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -2535,14 +2506,35 @@
         margin-bottom: 20px;
         color: #333;
       }
+</style>
+<h1 style="padding-left: 40%; color: rgba(255, 255, 248, 0.953); padding-top: 8px; margin: 5px 0 2px;">Destination Guide</h1>
+<section id="destinations">
+
 
       .dark-mode .contact-section {
         background: #666;
       }
 
-      .dark-mode .contact-form h3 {
-        color: #ffa500;
-      }
+<div class="post-container">
+  <h3 style="color: #ffa500;">Share Your Experiences</h3>
+  <form id="postForm">
+    <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div> 
+
+<style>
+  .dark-mode .contact-form h3 {
+    color: #ffa500;
+  }
+
+  .post-container {
+    background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
+    border-radius: 8px; 
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  }
+</style>
 
       .dark-mode .info-content h3 {
         color: #ffa500;
@@ -2633,7 +2625,8 @@
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading">Testimonials</h2>
+<h2 class="testimonials-heading" style="color: rgba(255, 255, 248, 0.953);">Testimonials</h2>
+
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2830,7 +2823,7 @@
   <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
     <button class="scroll-button group" id="scrollTopBtn">
       <span class="tooltip-text-scroll">
-        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
       </span>
     </button>
   </div>
