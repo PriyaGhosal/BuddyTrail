@@ -160,18 +160,32 @@ All responses are in JSON format. Ensure to handle errors appropriately.
 Join the list. **We are waiting** <br/>
 Here's how you can contribute to the repository:
 
-1. Fork this Repository  🍴 
-2. Clone to your local machine 🧩 using:
-    git clone https://github.com/Your-Username/BuddyTrail.git
-3. Create a new branch:
-    git branch -c "Feature-Name"
-4. Navigate to the branch:
-    git checkout Feature-Name
-5. Add changes and Commit:
-    git commit -m "Add Changes message"
-6. Push to the branch:
-    git push origin Feature-Name
-7. Submit Pull Request 
+1. **Fork this Repository** 🍴 
+2. **Clone to your local machine** 🧩 using:
+```bash
+git clone https://github.com/Your-Username/BuddyTrail.git
+```
+3. **Create a new branch**:
+```bash
+git branch -c "Feature-Name"
+```
+
+4. **Navigate to the branch**:
+```bash
+git checkout Feature-Name
+```
+
+5. **Add changes and Commit**:
+```bash
+git commit -m "Add Changes message"
+```
+
+6. **Push to the branch**:
+```bash
+git push origin Feature-Name
+```
+
+7. **Submit Pull Request**
 
 We welcome all contributions to improve **BuddyTrail**! If you would like to contribute, please follow the [Contributing.md](./Contributing.md) for more details on how to get started.
 
