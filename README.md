@@ -50,8 +50,8 @@
    </tr>
    <tr>
       <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/gssocextd1.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
-      <td>GirlScript Summer of Code 2024</td>
-      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+      <td>GirlScript Summer of Code Extended 2024</td>
+      <td>GirlScript Summer of Code Extended is a month-long Open Source Program conducted by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
    </tr>
     <tr>
       <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/hacktoberfest1.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
