@@ -912,7 +912,7 @@ p {
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 90vw;
+  width: 940px;
   max-width: 1000px;
   margin: 0 auto;
   height: 450px;
@@ -928,7 +928,8 @@ p {
 
 /* Deal Item Styling */
 .deal-item {
-  min-width: 280px;
+  min-width: 300px;
+  flex: 0 0 300px;
   box-sizing: border-box;
   padding: 25px;
   background: #ffffff; /* Start with a clean white background */
@@ -1052,7 +1053,7 @@ p {
 
           // Update the transform to show the correct slides
           const carouselInner = document.querySelector('.carousel-inner');
-          carouselInner.style.transform = `translateX(-${currentSlide * (100 / slidesToShow)}%)`;
+          carouselInner.style.transform = `translateX(-${currentSlide * (129.5 / slidesToShow)}%)`;
 
           // Remove highlight class from all cards
           slides.forEach(slide => slide.classList.remove('highlight'));
