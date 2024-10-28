@@ -684,19 +684,19 @@
       <div id="progress-bar"></div>
       <!-- funcioning of progress bar -->
       <script>
-    window.addEventListener("scroll", function () {
-      // Calculate the scroll progress
-      const scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrollPercent = (scrollTop / scrollHeight) * 100;
+          window.addEventListener("scroll", function () {
+            // Calculate the scroll progress
+            const scrollTop =
+              document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight =
+              document.documentElement.scrollHeight -
+              document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-      // Update the width of the progress bar
-      document.getElementById("progress-bar").style.width =
-        scrollPercent + "%";
-    });
+            // Update the width of the progress bar
+            document.getElementById("progress-bar").style.width =
+              scrollPercent + "%";
+          });
       </script>
       <main>
 
@@ -780,23 +780,23 @@
 
       </div>
       <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cards = document.querySelectorAll(".card");
+          document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".card");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("inview");
-          } else {
-            entry.target.classList.remove("inview"); // Remove the class when it goes out of view
-          }
-        });
-      }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("inview");
+                } else {
+                  entry.target.classList.remove("inview"); // Remove the class when it goes out of view
+                }
+              });
+            }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
 
-      cards.forEach(card => {
-        observer.observe(card);
-      });
-    });
+            cards.forEach(card => {
+              observer.observe(card);
+            });
+          });
 
       </script>
       <!-- End of Cards Container -->
@@ -1106,36 +1106,36 @@
     </style>
 
     <script>
-    let currentSlide = 0;
+          let currentSlide = 0;
 
-    function moveSlide(direction) {
-      const slides = document.querySelectorAll('.deal-item');
-      const totalSlides = slides.length;
-      const slidesToShow = 3; // Number of cards to show at once
+          function moveSlide(direction) {
+            const slides = document.querySelectorAll('.deal-item');
+            const totalSlides = slides.length;
+            const slidesToShow = 3; // Number of cards to show at once
 
-      // Calculate the new slide index
-      currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
+            // Calculate the new slide index
+            currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
 
-      // Update the transform to show the correct slides
-      const carouselInner = document.querySelector('.carousel-inner');
-      carouselInner.style.transform = `translateX(-${currentSlide * (129.5 / slidesToShow)}%)`;
+            // Update the transform to show the correct slides
+            const carouselInner = document.querySelector('.carousel-inner');
+            carouselInner.style.transform = `translateX(-${currentSlide * (129.5 / slidesToShow)}%)`;
 
-      // Remove highlight class from all cards
-      slides.forEach(slide => slide.classList.remove('highlight'));
+            // Remove highlight class from all cards
+            slides.forEach(slide => slide.classList.remove('highlight'));
 
-      // Calculate the index of the center card
-      const centerCardIndex = currentSlide * slidesToShow + Math.floor(slidesToShow / 2);
-      // Add highlight class to the center card
-      if (centerCardIndex < totalSlides) {
-        slides[centerCardIndex].classList.add('highlight');
-      }
-    }
+            // Calculate the index of the center card
+            const centerCardIndex = currentSlide * slidesToShow + Math.floor(slidesToShow / 2);
+            // Add highlight class to the center card
+            if (centerCardIndex < totalSlides) {
+              slides[centerCardIndex].classList.add('highlight');
+            }
+          }
 
-    // Initial highlight
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.deal-item');
-      slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
-    });
+          // Initial highlight
+          document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.deal-item');
+            slides[Math.floor(slides.length / 2)].classList.add('highlight'); // Highlight the initial center card
+          });
     </script>
 
     <!-- travel itineraries -->
@@ -1284,29 +1284,29 @@
     </section>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const itineraries = document.querySelectorAll(".itinerary");
-      const serviceCards = document.querySelectorAll(".service-card");
+          document.addEventListener("DOMContentLoaded", function () {
+            const itineraries = document.querySelectorAll(".itinerary");
+            const serviceCards = document.querySelectorAll(".service-card");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("inview");
-          } else {
-            entry.target.classList.remove("inview"); // Remove class when out of view
-          }
-        });
-      }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("inview");
+                } else {
+                  entry.target.classList.remove("inview"); // Remove class when out of view
+                }
+              });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
 
-      // Observe both itineraries and service cards
-      itineraries.forEach(itinerary => {
-        observer.observe(itinerary);
-      });
+            // Observe both itineraries and service cards
+            itineraries.forEach(itinerary => {
+              observer.observe(itinerary);
+            });
 
-      serviceCards.forEach(card => {
-        observer.observe(card);
-      });
-    });
+            serviceCards.forEach(card => {
+              observer.observe(card);
+            });
+          });
 
     </script>
     <!-- Cab or Auto Booking -->
@@ -1362,8 +1362,8 @@
               <!--Logic To prevent the user from selecting an old date  -->
 
               <script>
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('travel-date').setAttribute('min', today);
+          const today = new Date().toISOString().split('T')[0];
+          document.getElementById('travel-date').setAttribute('min', today);
               </script>
 
             </div>
@@ -2365,7 +2365,8 @@
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
       async defer></script>
 
 
@@ -2780,49 +2781,49 @@
   </div>
 
   <script>document.addEventListener("DOMContentLoaded", function () {
-      const cookiePopup = document.getElementById("cookie-popup");
-      const acceptBtn = document.getElementById("accept-btn");
-      const rejectBtn = document.getElementById("reject-btn");
-      const customizeBtn = document.getElementById("customize-btn");
+            const cookiePopup = document.getElementById("cookie-popup");
+            const acceptBtn = document.getElementById("accept-btn");
+            const rejectBtn = document.getElementById("reject-btn");
+            const customizeBtn = document.getElementById("customize-btn");
 
-      // Function to get the value of a cookie
-      function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-      }
+            // Function to get the value of a cookie
+            function getCookie(name) {
+              const value = `; ${document.cookie}`;
+              const parts = value.split(`; ${name}=`);
+              if (parts.length === 2) return parts.pop().split(';').shift();
+              return null;
+            }
 
-      // Function to set a cookie
-      function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = `${name}=${value}; ${expires}; path=/`;
-      }
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+              const date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+              const expires = "expires=" + date.toUTCString();
+              document.cookie = `${name}=${value}; ${expires}; path=/`;
+            }
 
-      // Check if the user consent cookie exists
-      if (!getCookie("userConsent")) {
-        cookiePopup.style.display = "block"; // Show popup if no cookie is found
-      }
+            // Check if the user consent cookie exists
+            if (!getCookie("userConsent")) {
+              cookiePopup.style.display = "block"; // Show popup if no cookie is found
+            }
 
-      // Set the cookie and hide the popup when "Accept All" button is clicked
-      acceptBtn.addEventListener("click", function () {
-        setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
-        cookiePopup.style.display = "none"; // Hide popup after accepting
-      });
+            // Set the cookie and hide the popup when "Accept All" button is clicked
+            acceptBtn.addEventListener("click", function () {
+              setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
+              cookiePopup.style.display = "none"; // Hide popup after accepting
+            });
 
-      // Set the cookie and hide the popup when "Reject All" button is clicked
-      rejectBtn.addEventListener("click", function () {
-        setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
-        cookiePopup.style.display = "none"; // Hide popup after rejecting
-      });
+            // Set the cookie and hide the popup when "Reject All" button is clicked
+            rejectBtn.addEventListener("click", function () {
+              setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
+              cookiePopup.style.display = "none"; // Hide popup after rejecting
+            });
 
-      // Handle Customize button (this can be expanded with further functionality)
-      customizeBtn.addEventListener("click", function () {
-        alert("Customization options can be added here.");
-      });
-    });
+            // Handle Customize button (this can be expanded with further functionality)
+            customizeBtn.addEventListener("click", function () {
+              alert("Customization options can be added here.");
+            });
+          });
   </script>
 
 
@@ -2853,59 +2854,59 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('contactForm').addEventListener('submit', async function (event) {
-        event.preventDefault(); // Prevent the default form submission
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contactForm').addEventListener('submit', async function (event) {
+              event.preventDefault(); // Prevent the default form submission
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+              const name = document.getElementById('name').value;
+              const email = document.getElementById('email').value;
+              const message = document.getElementById('message').value;
 
-        // Create an object with the form data
-        const formData = {
-          name: name,
-          email: email,
-          message: message
-        };
+              // Create an object with the form data
+              const formData = {
+                name: name,
+                email: email,
+                message: message
+              };
 
-        console.log('Form Data:', formData); // Debugging statement
+              console.log('Form Data:', formData); // Debugging statement
 
-        try {
-          // Send the data to the backend
-          const response = await fetch('http://localhost:5000/api/contact/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
+              try {
+                // Send the data to the backend
+                const response = await fetch('http://localhost:5000/api/contact/', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(formData)
+                });
+
+                // Check if the response is ok (status code 200-299)
+                if (response.ok) {
+                  const result = await response.json();
+                  alert(result.message); // Show success message
+                  // Optionally reset the form
+                  document.getElementById('contactForm').reset();
+                } else {
+                  const errorData = await response.json();
+                  alert(`Error: ${errorData.message}`); // Show error message
+                }
+              } catch (error) {
+                alert('Failed to send message. Please try again later.'); // Handle network errors
+                console.error('Error:', error);
+              }
+            });
           });
-
-          // Check if the response is ok (status code 200-299)
-          if (response.ok) {
-            const result = await response.json();
-            alert(result.message); // Show success message
-            // Optionally reset the form
-            document.getElementById('contactForm').reset();
-          } else {
-            const errorData = await response.json();
-            alert(`Error: ${errorData.message}`); // Show error message
-          }
-        } catch (error) {
-          alert('Failed to send message. Please try again later.'); // Handle network errors
-          console.error('Error:', error);
-        }
-      });
-    });
   </script>
   <script>
-    window.addEventListener('scroll', function () {
-      const scrollContainer = document.getElementById('scrollContainer');
-      if (window.scrollY > 0) {
-        scrollContainer.style.display = 'block';
-      } else {
-        scrollContainer.style.display = 'none';
-      }
-    });
+          window.addEventListener('scroll', function () {
+            const scrollContainer = document.getElementById('scrollContainer');
+            if (window.scrollY > 0) {
+              scrollContainer.style.display = 'block';
+            } else {
+              scrollContainer.style.display = 'none';
+            }
+          });
   </script>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
@@ -3037,93 +3038,93 @@
   <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
   <!-- this script is for twitter icon  ends -->
   <script>
-    // script.js
+          // script.js
 
-    // change the color of navbar while  scrolling to make it visible
+          // change the color of navbar while  scrolling to make it visible
 
-    window.addEventListener("scroll", function () {
-      const navbar = document.querySelector(".main-head");
-      if (window.scrollY > 0) {
-        navbar.classList.add("sticky"); // Add class when scrolled
-      } else {
-        navbar.classList.remove("sticky"); // Remove class when at the top
-      }
-    });
+          window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".main-head");
+            if (window.scrollY > 0) {
+              navbar.classList.add("sticky"); // Add class when scrolled
+            } else {
+              navbar.classList.remove("sticky"); // Remove class when at the top
+            }
+          });
 
-    window.onscroll = function () {
-      toggleScrollTopButton();
-    };
+          window.onscroll = function () {
+            toggleScrollTopButton();
+          };
 
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
+          const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-    function toggleScrollTopButton() {
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        scrollTopBtn.style.display = "block"; // Show button after scrolling down
-      } else {
-        scrollTopBtn.style.display = "none"; // Hide button when at the top
-      }
+          function toggleScrollTopButton() {
+            if (
+              document.body.scrollTop > 100 ||
+              document.documentElement.scrollTop > 100
+            ) {
+              scrollTopBtn.style.display = "block"; // Show button after scrolling down
+            } else {
+              scrollTopBtn.style.display = "none"; // Hide button when at the top
+            }
 
-    }
+          }
 
-    scrollTopBtn.onclick = function () {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-    };
+          scrollTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+          };
   </script>
   //
   <script>
-    //   document.getElementById('contactForm').addEventListener('submit', function (e) {
-    //     e.preventDefault();
+          //   document.getElementById('contactForm').addEventListener('submit', function (e) {
+          //     e.preventDefault();
 
-    //     // Submit the form data using fetch
-    //     fetch(this.action, {
-    //       method: 'POST',
-    //       body: new FormData(this),
-    //       headers: {
-    //         'Accept': 'application/json'
-    //       }
-    //     }).then(response => {
-    //       // Show the confirmation popup
-    //       document.getElementById('confirmationPopup').style.display = 'block';
-    //       // Reset the form
-    //       this.reset();
-    //     }).catch(error => {
-    //       console.error('Error:', error);
-    //       // Still show the confirmation popup even if there's an error
-    //       document.getElementById('confirmationPopup').style.display = 'block';
-    //     });
-    //   });
+          //     // Submit the form data using fetch
+          //     fetch(this.action, {
+          //       method: 'POST',
+          //       body: new FormData(this),
+          //       headers: {
+          //         'Accept': 'application/json'
+          //       }
+          //     }).then(response => {
+          //       // Show the confirmation popup
+          //       document.getElementById('confirmationPopup').style.display = 'block';
+          //       // Reset the form
+          //       this.reset();
+          //     }).catch(error => {
+          //       console.error('Error:', error);
+          //       // Still show the confirmation popup even if there's an error
+          //       document.getElementById('confirmationPopup').style.display = 'block';
+          //     });
+          //   });
 
 
-    //   function closePopup() {
-    //     document.getElementById('confirmationPopup').style.display = 'none';
-    //   }
-    // </script>
+          //   function closePopup() {
+          //     document.getElementById('confirmationPopup').style.display = 'none';
+          //   }
+          // </script>
   <script>
-    document.getElementById('reviewForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevents form submission
+          document.getElementById('reviewForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents form submission
 
-      // Show custom alert message
-      const customAlert = document.createElement('div');
-      customAlert.className = 'custom-alert';
-      customAlert.innerHTML = `
+            // Show custom alert message
+            const customAlert = document.createElement('div');
+            customAlert.className = 'custom-alert';
+            customAlert.innerHTML = `
     <p><b>Thank you! </b><br>We use BuddyTrail to collect and manage all your feedback because we are absolutely committed to making you a happy customer.<br>We will read your feedback, and we'll take it seriously.</p>
   `;
-      document.body.appendChild(customAlert);
+            document.body.appendChild(customAlert);
 
-      // Remove alert on click
-      customAlert.addEventListener('click', () => {
-        customAlert.remove();
-      });
+            // Remove alert on click
+            customAlert.addEventListener('click', () => {
+              customAlert.remove();
+            });
 
-      this.reset(); // Clears the form fields
-    });
+            this.reset(); // Clears the form fields
+          });
 
-    function closePopup() {
-      document.getElementById('confirmationPopup').style.display = 'none';
-    }
+          function closePopup() {
+            document.getElementById('confirmationPopup').style.display = 'none';
+          }
   </script>
 
 
@@ -3131,11 +3132,11 @@
 
   <script>
 
-    window.gtranslateSettings = {
-      "default_language": "en",
-      "detect_browser_language": true,
-      "wrapper_selector": ".gtranslate_wrapper"
-    }
+          window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+          }
 
   </script>
 
@@ -3143,18 +3144,18 @@
   <!-- Adding scroll progressBar-->
   <script>
 
-    window.onscroll = function () {
-      updateProgressBar();
-    };
+          window.onscroll = function () {
+            updateProgressBar();
+          };
 
 
-    function updateProgressBar() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPercent = (scrollTop / scrollHeight) * 100;
+          function updateProgressBar() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPercent = (scrollTop / scrollHeight) * 100;
 
-      document.getElementById("progressBar").style.width = scrollPercent + "%";
-    }
+            document.getElementById("progressBar").style.width = scrollPercent + "%";
+          }
 
   </script>
   <style>
@@ -3222,27 +3223,27 @@
   </style>
   </script>
   <script src="script.js">
-    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent the default form submission
+          document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
 
-      const email = document.getElementById('email').value.trim(); // Get the email value
-      const messageElement = document.getElementById('subscription-message'); // Get the message display element
+            const email = document.getElementById('email').value.trim(); // Get the email value
+            const messageElement = document.getElementById('subscription-message'); // Get the message display element
 
-      // Regular expression to validate email format
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // Regular expression to validate email format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (emailPattern.test(email)) {
-        // Simulate a successful subscription
-        messageElement.textContent = 'Subscribed successfully!'; // Show success message
-        messageElement.style.color = 'green'; // Change message color to green
+            if (emailPattern.test(email)) {
+              // Simulate a successful subscription
+              messageElement.textContent = 'Subscribed successfully!'; // Show success message
+              messageElement.style.color = 'green'; // Change message color to green
 
-        // Clear the input field after successful submission
-        document.getElementById('email').value = '';
-      } else {
-        messageElement.textContent = 'Please enter a valid email address.'; // Show error message
-        messageElement.style.color = 'red'; // Change message color to red
-      }
-    });
+              // Clear the input field after successful submission
+              document.getElementById('email').value = '';
+            } else {
+              messageElement.textContent = 'Please enter a valid email address.'; // Show error message
+              messageElement.style.color = 'red'; // Change message color to red
+            }
+          });
   </script>
 
   <div class="gtranslate_wrapper"></div>
@@ -3251,42 +3252,42 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const coords = { x: 0, y: 0 };
-      const circles = document.querySelectorAll(".circle");
+          document.addEventListener("DOMContentLoaded", function () {
+            const coords = { x: 0, y: 0 };
+            const circles = document.querySelectorAll(".circle");
 
-      circles.forEach(function (circle) {
-        circle.x = 0;
-        circle.y = 0;
-      });
+            circles.forEach(function (circle) {
+              circle.x = 0;
+              circle.y = 0;
+            });
 
-      window.addEventListener("mousemove", function (e) {
-        coords.x = e.pageX;
-        coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-      });
+            window.addEventListener("mousemove", function (e) {
+              coords.x = e.pageX;
+              coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+            });
 
-      function animateCircles() {
-        let x = coords.x;
-        let y = coords.y;
+            function animateCircles() {
+              let x = coords.x;
+              let y = coords.y;
 
-        circles.forEach(function (circle, index) {
-          circle.style.left = `${x - 12}px`;
-          circle.style.top = `${y - 12}px`;
-          circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+              circles.forEach(function (circle, index) {
+                circle.style.left = `${x - 12}px`;
+                circle.style.top = `${y - 12}px`;
+                circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
 
-          const nextCircle = circles[index + 1] || circles[0];
-          circle.x = x;
-          circle.y = y;
+                const nextCircle = circles[index + 1] || circles[0];
+                circle.x = x;
+                circle.y = y;
 
-          x += (nextCircle.x - x) * 0.3;
-          y += (nextCircle.y - y) * 0.3;
-        });
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+              });
 
-        requestAnimationFrame(animateCircles);
-      }
+              requestAnimationFrame(animateCircles);
+            }
 
-      animateCircles();
-    });
+            animateCircles();
+          });
 
   </script>
 
@@ -3310,14 +3311,14 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     <script>
-    function toggleChatbot() {
-      const chatbotContainer = document.getElementById('chatbotContainer');
-      if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
-        chatbotContainer.style.display = 'block';
-      } else {
-        chatbotContainer.style.display = 'none';
-      }
-    }
+          function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+              chatbotContainer.style.display = 'block';
+            } else {
+              chatbotContainer.style.display = 'none';
+            }
+          }
 
     </script>
     <br /><br />
