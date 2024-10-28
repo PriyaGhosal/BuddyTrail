@@ -229,7 +229,7 @@ body {
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
 }
 
 h2 {
@@ -242,7 +242,7 @@ h3 {
 
 h4,
 h5 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 #logo-web {
@@ -262,9 +262,23 @@ input,
 p {
   font-size: 1rem;
 }
+.go-top-btn{
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  height:70px;
+  width:70px;
+  background: #007bff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 1000;
 
+}
 button {
-  padding: 2rem 6rem;
   background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
@@ -274,24 +288,26 @@ button {
 }
 #btn {
   display: inline-block;
-  background-color: #007bff;
+  background-color: rgba(255,255,255,0.1);
   color: white;
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: all 0.4s ease;
 }
 .heading-contributors h2{
-  color: transparent;
+  color: black;
 }
 
 #btn a {
   color: white;
 }
 #btn:hover {
-  background-color: #2c5282;
-  transform: scale(0.95);
+  background-color: rgba(255,255,255,0.6);
+  transform: scale(1.1);
+  color: black;
+  font-weight: 700;
 }
 #btn:hover a {
   color: black;
@@ -308,7 +324,7 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px;s
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -353,6 +369,14 @@ nav {
   color: white;
   font-size: 3.5em;
   cursor: pointer;
+}
+
+.toggle-button{
+  width: 7%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mode-toggle {
@@ -410,8 +434,7 @@ nav {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url("./img/landing-page.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -421,6 +444,36 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% transparent black */
+  z-index: 0;
 }
 
 .hero button {
@@ -502,14 +555,16 @@ nav {
 /**** LOCATIONS PAGE ****/
 
 #locations {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   overflow: hidden;
+  color: white; /* Ensures the text remains visible over the darker gradient */
 }
+
 
 h2 {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color:  rgba(188, 188, 177, 0.953);
 }
 .location-cards {
   display: flex;
@@ -685,6 +740,10 @@ h2 {
 .card p {
   padding: 1rem;
   line-height: inherit;
+}
+
+.card p {
+  font-size: 1.5rem;
 }
 
 .card-icon {
@@ -973,7 +1032,7 @@ body {
 }
 #About {
   padding: 60px;
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
@@ -1028,7 +1087,7 @@ body {
 }
 /* Light mode for #About */
 .light-mode #About {
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
 }
 
@@ -1102,7 +1161,7 @@ body {
 }
 
  issue
- 
+
 h2 {
 main
 
@@ -1110,9 +1169,9 @@ main
   font-weight:  700;
   margin:  10px 0; /* Margin adjustment */
   color:  #007bff;
-   
+
 }
- 
+
 p {
   font-size: 1.5em;
   color: #666; /* Paragraph color */
@@ -1439,7 +1498,9 @@ Light mode styles body.light-mode {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: bold;
-  color: black;
+  color: rgb(11, 7, 7);
+
+
 }
 
 .itinerary-list {
@@ -1477,9 +1538,12 @@ Light mode styles body.light-mode {
 }
 
 .itineraries-section h2 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   margin-bottom: 20px;
   font-weight: bold;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  text-shadow: 0 1px;
+
 }
 
 .itinerary-list {
@@ -1756,9 +1820,9 @@ Light mode styles body.light-mode {
 .rating {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Maximum width of the rating widget */
+  width: 180px; /* Width of the rating widget */
   background: #f5f1e6; /* Background color */
-  padding: 6px 12px; /* Padding around the content */
+  padding: 2px 12px; /* Padding around the content */
   border-radius: 10px; /* Rounded corners */
   display: flex; /* Use flexbox for layout */
   align-items: right; /* Center items vertically */
@@ -1808,7 +1872,7 @@ input#rate-5:checked ~ label {
   font-size: 19px;
   color: rgb(4, 4, 4); /* Color for the header text */
   font-weight: 500;
-  margin: 5px 0 20px 0; /* Margin for spacing */
+  margin: 5px 0 5px 0; /* Margin for spacing */
   text-align: center; /* Center the text */
   transition: all 0.2s ease; /* Smooth transition for changes */
 }
@@ -2213,7 +2277,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button {
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -2224,7 +2288,7 @@ input#rate-5:checked ~ header:before {
 }
 
 .deal-item button:hover {
-  background-color: #218838;
+  background-color: #0351a4;
 }
 
 #deals {
@@ -2794,9 +2858,7 @@ input#rate-5:checked ~ header:before {
   flex-direction: column;
 }
 @media (max-width: 900px) {
-  .review-form {
-    width: 60vw;
-  }
+
   .form {
     width: 50vw;
   }
@@ -2929,6 +2991,33 @@ textarea {
   line-height: 1.5;
 }
 
+/* Dark mode for Service */
+.dark-mode #services {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
+  }
+
+  .dark-mode #services h1 {
+    color: #ffa500; /* Orange color for the main heading in dark mode */
+  }
+
+  .dark-mode #services h2 {
+    color: #ffa500; /* Bright yellow subheading in dark mode */
+  }
+
+  .dark-mode #services p {
+    color: #e0e0e0; /* darker grey for paragraph text in dark mode */
+  }
+
+  .dark-mode #services p strong {
+    color: #ffa500; /* Yellow highlight for important text in dark mode */
+  }
+
+  .dark-mode .service-card{
+    background-color: #1e1e1e; /* Darker background for service cards */
+    color: #e0e0e000; /* Light grey text color */
+  }
+
 html,
 body {
   margin: 0;
@@ -2947,4 +3036,24 @@ body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+}
+.chatbot-container {
+  position: fixed;
+  bottom: 70px; /* Adjust for vertical spacing above the icon */
+  right: 20px;  /* Adjust for horizontal spacing */
+  z-index: 1000;
+  display: none; /* Initially hide the chatbot */
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust for positioning */
+  right: 20px;  /* Adjust for positioning */
+  z-index: 1001; /* Ensure icon is above the chatbot */
+  cursor: pointer; /* Change cursor to pointer */
+  background-color: #007bff; /* Optional: add a background color */
+  color: white; /* Optional: icon color */
+  padding: 18px; /* Optional: padding for better click area */
+  border-radius: 50%; /* Optional: make it circular */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Experience Sharing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="experience.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5 animate__animated animate__fadeIn">Share Your Travel Experience</h1>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <form class="animate__animated animate__fadeInLeft">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <select class="form-select" id="location" required>
+                            <option value="" selected disabled>Select location</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="tokyo">Tokyo, Japan</option>
+                            <option value="newyork">New York, USA</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="startDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="endDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="experience" class="form-label">Your Experience</label>
+                        <textarea class="form-control" id="experience" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit 🌍</button>
+                </form>
+            </div>
+            
+            <div class="col-md-6">
+                <h2 class="mb-4 animate__animated animate__fadeInRight">Sample Experiences</h2>
+                <div class="card mb-3 animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">Emma Thompson</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Paris, France</h6>
+                        <p class="card-text">My trip to Paris was absolutely magical! The Eiffel Tower at night is a sight to behold. I enjoyed strolling along the Seine and visiting the Louvre. The food was exquisite, especially the croissants!</p>
+                        <p class="card-text"><small class="text-muted">May 15, 2023 - May 22, 2023</small></p>
+                    </div>
+                </div>
+                <div class="card mb-3 animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">James Wilson</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Tokyo, Japan</h6>
+                        <p class="card-text">Tokyo is a city that never sleeps! I was amazed by the blend of traditional culture and modern technology. The sushi at Tsukiji market was the best I've ever had. Don't miss out on a visit to the peaceful Meiji Shrine.</p>
+                        <p class="card-text"><small class="text-muted">June 10, 2023 - June 20, 2023</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

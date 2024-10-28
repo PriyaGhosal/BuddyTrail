@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.itinerary-card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+#searchInput:focus,
+#filterSelect:focus,
+#sortSelect:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #80bdff;
+}
+
+.form-control,
+.form-select {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .form-control,
+    .form-select {
+        margin-bottom: 0;
+    }
+}

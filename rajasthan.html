@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Tours in Rajasthan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="rajasthan.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Rajasthan Tours</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tours">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5">
+        <h1 class="text-center mb-5 text-primary">Cultural Tours in Rajasthan</h1>
+
+        <!-- Image Carousel -->
+        <div id="tourCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://plus.unsplash.com/premium_photo-1697730426227-9056296a0315?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Rajasthan Landscape">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1676444490527-cf8f7894e9f0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Rajasthan Fort">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1718570265593-8e46d7ef65ae?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Rajasthan Culture">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#tourCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tourCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="row mb-4" id="tours">
+            <div class="col-md-6 mb-3">
+                <select class="form-select" id="sortSelect">
+                    <option selected>Sort by...</option>
+                    <option value="price">Price</option>
+                    <option value="duration">Duration</option>
+                    <option value="popularity">Popularity</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <select class="form-select" id="filterSelect">
+                    <option selected>Filter by...</option>
+                    <option value="location">Location</option>
+                    <option value="duration">Duration</option>
+                    <option value="type">Type of Tour</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="tourCards">
+            <div class="col-md-4 mb-4">
+                <div class="card tour-card h-100 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1723036811966-c958eae1ca4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amFpcHVyJTIwaGVyaXRhZ2V8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Jaipur City Palace">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaipur Heritage Tour</h5>
+                        <p class="card-text">Duration: 3 days</p>
+                        <p class="card-text">Price: $299</p>
+                        <p class="card-text">Experience the Pink City's royal heritage.</p>
+                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#tourModal1">More Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card tour-card h-100 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1664241689244-ea76002ec956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHVkYWlwdXIlMjBsYWtlfGVufDB8fDB8fHww" class="card-img-top" alt="Udaipur Lake Palace">
+                    <div class="card-body">
+                        <h5 class="card-title">Udaipur Lake Tour</h5>
+                        <p class="card-text">Duration: 2 days</p>
+                        <p class="card-text">Price: $249</p>
+                        <p class="card-text">Explore the Venice of the East.</p>
+                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#tourModal2">More Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card tour-card h-100 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1545321945-7edd9bf1331a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGpvZGhwdXIlMjBibHVlJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Jodhpur Blue City">
+                    <div class="card-body">
+                        <h5 class="card-title">Jodhpur Blue City Tour</h5>
+                        <p class="card-text">Duration: 2 days</p>
+                        <p class="card-text">Price: $199</p>
+                        <p class="card-text">Discover the charm of the Blue City.</p>
+                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#tourModal3">More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info d-none" role="alert">
+            No tours match your current criteria. Please try different filters or sorting options.
+        </div>
+
+        <!-- Featured Tours Section -->
+        <div class="my-5">
+            <h2 class="text-center text-primary mb-4">Featured Tours</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-warning">
+                        <div class="card-body">
+                            <h5 class="card-title">Special Diwali Tour</h5>
+                            <p class="card-text">Join us for a festive experience during Diwali.</p>
+                            <p class="card-text">Price: $349</p>
+                            <a href="#" class="btn btn-dark">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Adventure Tour in Rajasthan</h5>
+                            <p class="card-text">Experience the thrill of desert safaris.</p>
+                            <p class="card-text">Price: $399</p>
+                            <a href="#" class="btn btn-dark">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Culinary Tour</h5>
+                            <p class="card-text">Taste the rich flavors of Rajasthani cuisine.</p>
+                            <p class="card-text">Price: $299</p>
+                            <a href="#" class="btn btn-dark">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="contact" class="my-5">
+            <h2 class="text-center text-primary mb-4">Contact Us</h2>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+
+        <div id="noResults" class="alert alert-info d-none" role="alert">
+            No tours match your current criteria. Please try different filters or sorting options.
+        </div>
+
+    </div>
+
+    <!-- Tour Modals -->
+    <!-- Tour Modal 1 -->
+    <div class="modal fade" id="tourModal1" tabindex="-1" aria-labelledby="tourModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourModal1Label">Jaipur Heritage Tour</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Itinerary:</h6>
+                    <ul>
+                        <li>Day 1: City Palace, Jantar Mantar</li>
+                        <li>Day 2: Amber Fort, Hawa Mahal</li>
+                        <li>Day 3: Local markets, Craft workshops</li>
+                    </ul>
+                    <h6>Inclusions:</h6>
+                    <p>Hotel accommodation, Guided tours, Entry tickets</p>
+                    <h6>Exclusions:</h6>
+                    <p>Flights, Personal expenses, Tips</p>
+                    <h6>Reviews:</h6>
+                    <p>"Amazing experience!" - John D.</p>
+                    <p>"Unforgettable journey through history" - Sarah M.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tour Modal 2 -->
+    <div class="modal fade" id="tourModal2" tabindex="-1" aria-labelledby="tourModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourModal2Label">Udaipur Lake Tour</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Itinerary:</h6>
+                    <ul>
+                        <li>Day 1: City Palace, Boat ride on Lake Pichola</li>
+                        <li>Day 2: Jagdish Temple, Vintage car museum</li>
+                    </ul>
+                    <h6>Inclusions:</h6>
+                    <p>Hotel accommodation, Boat rides, Guided tours</p>
+                    <h6>Exclusions:</h6>
+                    <p>Flights, Personal expenses, Tips</p>
+                    <h6>Reviews:</h6>
+                    <p>"Romantic and beautiful" - Emily R.</p>
+                    <p>"A serene experience" - Michael T.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tour Modal 3 -->
+    <div class="modal fade" id="tourModal3" tabindex="-1" aria-labelledby="tourModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourModal3Label">Jodhpur Blue City Tour</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Itinerary:</h6>
+                    <ul>
+                        <li>Day 1: Mehrangarh Fort, Jaswant Thada</li>
+                        <li>Day 2: Clock Tower market, Blue City walk</li>
+                    </ul>
+                    <h6>Inclusions:</h6>
+                    <p>Hotel accommodation, Guided tours, Entry tickets</p>
+                    <h6>Exclusions:</h6>
+                    <p>Flights, Personal expenses, Tips</p>
+                    <h6>Reviews:</h6>
+                    <p>"Fascinating blue landscapes" - David L.</p>
+                    <p>"Rich in culture and history" - Anna K.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 py-4 bg-light">
+        <p>Follow us on social media:</p>
+        <a href="#" class="me-3">Facebook</a>
+        <a href="#" class="me-3">Twitter</a>
+        <a href="#" class="me-3">Instagram</a>
+        <p>&copy; 2024 Rajasthan Tours. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

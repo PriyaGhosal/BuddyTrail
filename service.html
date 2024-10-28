@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="service.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <h1 class="display-4">Travel Services</h1>
+            <p class="lead">Discover our range of travel services</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#hotels">Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flights">Flights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cars">Car Rentals</a></li>
+                    <li>
+                        <button class="mode-toggle" id="modeToggle">
+                            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                          </button>
+                        </li>
+            
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <select class="form-select" aria-label="Sort services">
+                    <option selected>Sort by</option>
+                    <option value="1">Price: Low to High</option>
+                    <option value="2">Price: High to Low</option>
+                    <option value="3">Rating</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search services" aria-label="Search services">
+                    <button class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="hotels" class="mb-5">
+            <h2 class="mb-4">Hotel Bookings</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" class="card-img-top" alt="Luxury hotel room">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Hotels</h5>
+                            <p class="card-text">Experience unparalleled comfort in our handpicked luxury hotels.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" class="card-img-top" alt="Budget hotel room">
+                        <div class="card-body">
+                            <h5 class="card-title">Budget Stays</h5>
+                            <p class="card-text">Comfortable accommodations that don't break the bank.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd" class="card-img-top" alt="Boutique hotel lobby">
+                        <div class="card-body">
+                            <h5 class="card-title">Boutique Hotels</h5>
+                            <p class="card-text">Unique and stylish accommodations for the discerning traveler.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flights" class="mb-5">
+            <h2 class="mb-4">Flight Reservations</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05" class="card-img-top" alt="Airplane wing view">
+                        <div class="card-body">
+                            <h5 class="card-title">International Flights</h5>
+                            <p class="card-text">Connect to destinations around the world with our international flight options.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="/img/df1.jpg" class="card-img-top" alt="Domestic flight">
+                        <div class="card-body">
+                            <h5 class="card-title">Domestic Flights</h5>
+                            <p class="card-text">Explore your country with our extensive network of domestic flights.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad" class="card-img-top" alt="Private jet">
+                        <div class="card-body">
+                            <h5 class="card-title">Private Charters</h5>
+                            <p class="card-text">Experience luxury and convenience with our private jet charter services.</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cars" class="mb-5">
+            <h2 class="mb-4">Car Rentals</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1546614042-7df3c24c9e5d" class="card-img-top" alt="Economy car">
+                        <div class="card-body">
+                            <h5 class="card-title">Economy Cars</h5>
+                            <p class="card-text">Affordable and fuel-efficient options for budget-conscious travelers.</p>
+                            <a href="#" class="btn btn-primary">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027" class="card-img-top" alt="Luxury car">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Vehicles</h5>
+                            <p class="card-text">Travel in style with our premium and luxury car rental options.</p>
+                            <a href="#" class="btn btn-primary">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="img/df2.jpg" class="card-img-top" alt="SUV">
+                        <div class="card-body">
+                            <h5 class="card-title">SUVs & Vans</h5>
+                            <p class="card-text">Perfect for group travel or those needing extra space.</p>
+                            <a href="#" class="btn btn-primary">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form" class="bg-light p-4 rounded">
+            <h2 class="mb-4">Quick Booking</h2>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="service-type" class="form-label">Service Type</label>
+                        <select id="service-type" class="form-select" required>
+                            <option value="" selected disabled>Choose a service</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="flight">Flight</option>
+                            <option value="car">Car Rental</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="check-in" class="form-label">Check-in / Start Date</label>
+                        <input type="date" class="form-control" id="check-in" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="check-out" class="form-label">Check-out / End Date</label>
+                        <input type="date" class="form-control" id="check-out" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="guests" class="form-label">Number of Guests / Passengers</label>
+                    <input type="number" class="form-control" id="guests" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Search Availability</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are dedicated to providing the best travel experiences for our customers.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: info@travelservices.com<br>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-white me-2">Facebook</a>
+                    <a href="#" class="text-white me-2">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.getElementById("hamburger");
+          const navList = document.getElementById("nav-links");
+          const closeBtn = document.getElementById("closeBtn");
+    
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+    
+          closeBtn.addEventListener("click", function () {
+            navList.classList.remove("active");
+          });
+        });
+    
+       document.addEventListener("DOMContentLoaded", function() {
+         const modeToggle = document.getElementById("modeToggle");
+         const sunIcon = document.querySelector(".sun-icon");
+         const moonIcon = document.querySelector(".moon-icon");
+    
+         // Check saved theme in localStorage and apply it
+         const currentTheme = localStorage.getItem("theme") || "light";
+          if (currentTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+         } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+        }
+    
+    // Toggle between light and dark mode on button click
+    modeToggle.addEventListener("click", () => {
+        const isDarkMode = document.body.classList.toggle("dark-mode");
+    
+        // Apply dark mode styles to relevant sections
+        const sections = document.querySelectorAll('.about, .core-values, .team');
+        sections.forEach(section => {
+            if (isDarkMode) {
+                section.classList.add('dark-mode');
+            } else {
+                section.classList.remove('dark-mode');
+            }
+        });
+    
+        // Update icons and local storage
+        if (isDarkMode) {
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+            localStorage.setItem("theme", "dark");
+        } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+            localStorage.setItem("theme", "light");
+        }
+    });
+    });
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover India - Your Ultimate Travel Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="travelmap.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">🇮🇳 Discover India</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#benefits">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Explore the Wonders of India</h1>
+        <p class="lead">Discover breathtaking destinations, rich culture, and unforgettable experiences</p>
+    </header>
+
+    <main class="container my-5">
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for destinations..." aria-label="Search for destinations" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">🔍 Search</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" aria-label="Filter destinations">
+                        <option selected>Filter by category</option>
+                        <option value="1">Historical</option>
+                        <option value="2">Natural</option>
+                        <option value="3">Cultural</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-4">Featured Destinations</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da" class="card-img-top" alt="Taj Mahal">
+                        <div class="card-body">
+                            <h5 class="card-title">Taj Mahal, Agra</h5>
+                            <p class="card-text">A stunning symbol of love and architectural marvel.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                </div>
+                                <small class="text-muted">⭐⭐⭐⭐⭐</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245" class="card-img-top" alt="Jaipur City Palace">
+                        <div class="card-body">
+                            <h5 class="card-title">City Palace, Jaipur</h5>
+                            <p class="card-text">Experience the grandeur of Rajasthani architecture.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                </div>
+                                <small class="text-muted">⭐⭐⭐⭐</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073" class="card-img-top" alt="Kerala Backwaters">
+                        <div class="card-body">
+                            <h5 class="card-title">Kerala Backwaters</h5>
+                            <p class="card-text">Serene waterways and lush greenery await you.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                </div>
+                                <small class="text-muted">⭐⭐⭐⭐⭐</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-4">Explore India</h2>
+            <div id="map" class="mb-4" style="height: 400px; background-color: #e9ecef;"></div>
+            <p class="text-center">Interactive map coming soon! Explore India's diverse landscapes and cultures.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-4">Plan Your Adventure</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Popular Categories</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Historical Monuments
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Beach Getaways
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Mountain Retreats
+                            <span class="badge bg-primary rounded-pill">10</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Travel Tips</h3>
+                    <div class="accordion" id="travelTips">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Best Time to Visit
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelTips">
+                                <div class="accordion-body">
+                                    The best time to visit India depends on the region. Generally, October to March is ideal for most parts of the country.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Visa Information
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelTips">
+                                <div class="accordion-body">
+                                    Most visitors need a visa to enter India. E-Visas are available for many nationalities. Check the official Indian government website for details.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h2 class="mb-4">Ready to Explore?</h2>
+            <a href="#" class="btn btn-primary btn-lg">Plan Your Trip Now 🧳</a>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Discover India</h5>
+                    <p>Embark on a journey through the diverse landscapes and rich cultural heritage of India.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="about.html" class="text-dark" target="_blank">About Us</a></li>
+                        <li><a href="contact.html" class="text-dark" target="_blank">Contact</a></li>
+                        <li><a href="terms_of_service.html" class="text-dark" target="_blank">Terms of Service</a></li>
+                        <li><a href="privacypolicy.html" class="text-dark" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-dark">Facebook</a></li>
+                        <li><a href="#!" class="text-dark">Twitter</a></li>
+                        <li><a href="#!" class="text-dark">Instagram</a></li>
+                        <li><a href="#!" class="text-dark">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Discover India. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

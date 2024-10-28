@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #ff69b4;
+}
+
+.btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+.btn-primary:hover {
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+.btn-outline-primary {
+    color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#map img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
