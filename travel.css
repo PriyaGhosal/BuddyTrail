@@ -3,6 +3,22 @@ body {
   background-color: #f8f9fa;
 }
 
+.main-head{
+  background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  color: #000000;  
+  border-radius: 8px;    
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
 .space {
     height: 100px;
 }
