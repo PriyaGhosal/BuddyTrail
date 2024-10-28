@@ -2560,7 +2560,7 @@ textarea.form-control {
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
             <div class="form-button">
-              <button type="submit">Send</button>
+              <button type="submit" onclick="submitFeedback(event)">Send</button>
             </div>
           </form>
 
@@ -2573,6 +2573,50 @@ textarea.form-control {
       </div>
     </div>
   </section>
+
+  <script>
+  async function submitFeedback(event) {
+  event.preventDefault();
+  const form = document.getElementById('reviewForm');
+  
+  // Collecting form data
+  const Name = form.elements['name'].value;
+  const Destination = form.elements['destination'].value;
+  const Rating = form.querySelector('input[name="rate"]:checked')?.id.split('-')[1];
+  const Review = form.elements['review'].value;
+  const Complaint = form.elements['complaint'].value;
+
+  // Creating the payload
+  const feedbackData = {
+    Name,
+    Destination,
+    Rating,
+    Review,
+    Complaint,
+  };
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedbackData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert('Feedback submitted successfully');
+    } else {
+      alert(`Error: ${result.message}`);
+    }
+  } catch (error) {
+    console.error('Error submitting feedback:', error);
+    alert('An error occurred while submitting feedback.');
+  }
+}
+
+  </script>
 
 
   <!--Cookie pop up-->
