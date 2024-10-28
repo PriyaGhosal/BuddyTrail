@@ -3,7 +3,8 @@ body {
     color: #333;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #ff69b4;
 }
 
@@ -39,6 +40,12 @@ h1, h2 {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {

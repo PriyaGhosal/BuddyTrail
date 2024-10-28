@@ -242,7 +242,7 @@ h3 {
 
 h4,
 h5 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 #logo-web {
@@ -740,6 +740,10 @@ h2 {
 .card p {
   padding: 1rem;
   line-height: inherit;
+}
+
+.card p {
+  font-size: 1.5rem;
 }
 
 .card-icon {
