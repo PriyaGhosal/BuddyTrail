@@ -903,4 +903,9 @@ hr {
         gap: 10px;
 
     }
+    .logo a {
+        text-decoration: none;
+        color: white;
+
+    }
 }
