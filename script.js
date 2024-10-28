@@ -595,4 +595,3 @@ if ('serviceWorker' in navigator) {
         });
     });
   }
-  
