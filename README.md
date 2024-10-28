@@ -50,8 +50,8 @@
    </tr>
    <tr>
       <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/gssocextd1.jpg" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
-      <td>GirlScript Summer of Code 2024</td>
-      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+      <td>GirlScript Summer of Code Extended 2024</td>
+      <td>GirlScript Summer of Code Extended is a month-long Open Source Program conducted by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
    </tr>
     <tr>
       <td><img src="https://github.com/Annapoornaaradhya/BuddyTrail/blob/Video/img/hacktoberfest1.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
@@ -64,6 +64,20 @@
 <br />
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+# 📋 Table of Contents
+
+- [🏞️ BuddyTrail](#-buddytrail)
+- [🌟 Project Badges](#-project-badges)
+- [📸 Website Preview](#-website-preview)
+- [🚀 Features](#-features)
+- [⚙️ Getting Started with the Code](#-getting-started-with-the-code)
+- [🛠️ Technologies Used](#-technologies-used)
+- [🎉 Welcome Contributors!!](#-welcome-contributors-)
+- [📁 Project Structure](#project-structure-)
+- [❤️ Our Contributors](#-our-contributors)
+- [👥 Team](#-team)
+- [⭐️ Support the Project](#-support-the-project)
 
 # 📸 Website Preview
 

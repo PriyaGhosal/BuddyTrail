@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
+
     <style>
         :root {
             --primary-color: #3498db;
@@ -339,333 +340,380 @@
             padding-top: 1rem;
         }
 
-        .comment {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
 
-        .comment:hover {
-            background-color: #f0f0f0;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .comment-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            resize: vertical;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-        }
+.logo img {
+    height: 45px;
+    transition: transform 0.3s ease;
+}
 
-        .comment-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
+.logo:hover img {
+    transform: scale(1.05);
+}
 
-        .comment-form button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 0.5rem;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
+#logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--header-text);
+    letter-spacing: -1px;
+    position: relative;
+}
 
-        .comment-form button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
+/* Enhanced Navigation */
+#nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    align-items: center;
+}
 
-        footer {
-            background-color: var(--header-bg);
-            color: var(--header-text);
-            padding: 3rem 0;
-            /* Increased padding for more space */
-            margin-top: 2rem;
-        }
+#nav-list a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
 
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            /* Added gap for better spacing between columns */
-        }
+#nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--header-text);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
 
-        .footer-column {
-            flex: 1;
-            margin-bottom: 2rem;
-            /* Increased margin for better spacing */
-            min-width: 250px;
-            /* Increased min-width for more balance */
-        }
+#nav-list a:hover::after {
+    width: 100%;
+}
 
-        .footer-column h3 {
-            margin-bottom: 1.5rem;
-            /* Increased spacing for better layout */
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            /* Increased font size for headings */
-            color: var(--secondary-color);
-            /* Color added for contrast */
-        }
+/* Enhanced Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .footer-column ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
 
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-            /* Increased spacing for a cleaner look */
-        }
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
 
-        .footer-column a {
-            color: var(--header-text);
-            text-decoration: none;
-            font-size: 1.1rem;
-            /* Increased font size for better readability */
-            transition: color 0.3s ease, transform 0.3s ease;
-            /* Added hover effect */
-        }
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
 
-        .footer-column a:hover {
-            color: var(--secondary-color);
-            /* Smooth color transition */
-            transform: translateX(5px);
-            /* Slight movement on hover */
-        }
+/* Enhanced Blog Container */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-        .social-icons {
-            display: flex;
-            gap: 1.5rem;
-            /* Increased gap between social icons */
-            margin-top: 1.5rem;
-        }
+.blog-post {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .social-icons a {
-            color: var(--header-text);
-            font-size: 1.8rem;
-            /* Increased size for icons */
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+.blog-post:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 
-        .social-icons a:hover {
-            color: var(--secondary-color);
-            transform: scale(1.1);
-            /* Scale effect on hover */
-        }
+.blog-post h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            /* Softer border color */
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            /* Softer footer text color */
-        }
+/* Enhanced Categories and Tags */
+.category {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
 
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-                /* Center align items on mobile */
-                gap: 1.5rem;
-                /* Adjusted gap for mobile layout */
-            }
+.category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-            .footer-column {
-                min-width: unset;
-                /* Remove min-width on smaller screens */
-                text-align: center;
-                /* Center align text on mobile */
-            }
-        }
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
 
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
+.tag {
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
 
-            #nav-list {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--header-bg);
-                flex-direction: column;
-                padding: 1rem 0;
-            }
+.tag:hover {
+    background-color: var(--secondary-color);
+    color: var(--header-text);
+    transform: translateY(-2px);
+}
 
-            #nav-list.show {
-                display: flex;
-            }
+/* Enhanced Buttons */
+.cms-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
 
-            #nav-list li {
-                margin: 0.5rem 0;
-            }
+button {
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
 
-            .blog-container {
-                grid-template-columns: 1fr;
-            }
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 
-            .footer-container {
-                flex-direction: column;
-            }
-        }
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
 
-        /* New styles for modals */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            animation: fadeIn 0.3s;
-        }
+button:hover::after {
+    width: 300%;
+    height: 300%;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+/* Enhanced Footer */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 5rem 0 3rem;
+    margin-top: 6rem;
+    text-align: center;
+}
 
-            to {
-                opacity: 1;
-            }
-        }
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
-        .modal-content {
-            background-color: var(--card-bg);
-            margin: 10% auto;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 600px;
-            animation: slideIn 0.3s;
-        }
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
+.footer-column h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
 
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--header-text);
+}
 
-        .modal-content h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
-        }
+.footer-column a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+.footer-column a:hover {
+    color: var(--header-text);
+    transform: translateX(5px);
+}
 
-        .close:hover,
-        .close:focus {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
 
-        /* Form styles */
-        .modal-form input[type="text"],
-        .modal-form textarea {
-            width: 100%;
-            padding: 0.7rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s ease;
-        }
+.social-icons a {
+    color: var(--header-text);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
 
-        .modal-form input[type="text"]:focus,
-        .modal-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: var(--header-text);
+}
 
-        .modal-form button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
+/* Enhanced Modal */
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 5% auto;
+    text-align: center;
+}
 
-        .modal-form button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.modal-form input,
+.modal-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
 
-        /* List styles for categories and tags */
-        .item-list {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 1.5rem;
-        }
+.modal-form input:focus,
+.modal-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
 
-        .item-list li {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 0.7rem 1rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
 
-        .item-list li:hover {
-            background-color: #f0f0f0;
-        }
+    nav {
+        padding: 0 1.5rem;
+    }
 
-        .delete-btn {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 0.3rem 0.7rem;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
-        }
+    .hero {
+        padding: 4rem 1.5rem;
+    }
 
-        .delete-btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-1px);
-        }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    #nav-list {
+        background-color: var(--header-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+        display: none;
+    }
+
+    #nav-list.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--header-text);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
     </style>
 </head>
 
@@ -792,6 +840,209 @@ nav a {
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
   }
+  /* Blog Card Styles */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.blog-card:hover .post-image {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .image-overlay {
+    opacity: 0;
+}
+
+/* Category Badge */
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Content */
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.post-meta i {
+    margin-right: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.blog-card:hover .post-title {
+    color: #2563eb;
+}
+
+.post-excerpt {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: #f3f4f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    color: #666;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag:hover {
+    background: #e5e7eb;
+}
+
+/* Read More Button */
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: gap 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Comments Section */
+.comments-section {
+    padding: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.comment {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.comment-form {
+    margin-top: 1rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.comment-form button {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
       </style>
       <script>
         // Function to hide preloader and show content once the page has fully loaded
@@ -817,25 +1068,24 @@ nav a {
       </script>
     <!-- <header>
         <nav>
-            <div class="logo">
-                <img src="img/logo.png" alt="BuddyTrail Logo">
-                <h1 id="logo">BuddyTrail</h1>
-            </div>
-            <button class="hamburger" id="hamburger">☰</button>
-            <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#locations">Location</a></li>
-                <li><a href="index.html#itineraries">Travel Itineraries</a></li>
-                <li><a href="index.html#reviews">Reviews</a></li>
-                <li><a href="index.html#benefits">Benefits</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="auth.html">Sign In</a></li>
-                <li><a href="#" class="active">Blog</a></li>
-                <button class="mode-toggle" id="modeToggle">
-                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                  </button>
-            </ul>
+          <ul id="nav-list">
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li>
+              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+            </li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li>
+              <a href="index.html#itineraries" class="navhover"
+                >Travel Itineraries</a
+              >
+            </li>
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+          </ul>
         </nav>
     </header> -->
 
@@ -877,6 +1127,23 @@ nav a {
       </header>
      <!--  -->
 
+        <!-- Toggle Button -->
+        <div class="toggle">
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"
+              ><img src="day-mode.png" alt="Light mode"
+            /></span>
+            <span class="moon-icon glow" style="display: none"
+              ><img src="moon.png" alt="Dark mode"
+            /></span>
+          </button>
+        </div>
+  
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
+      </header>
+
+
     <main>
         <section class="hero">
             <h2>Discover Travel Tips, Stories, and Inspiration</h2>
@@ -904,55 +1171,104 @@ nav a {
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>About Us</h3>
-                    <p>We are a team of passionate travelers creating amazing experiences for adventurers worldwide.</p>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#locations">Locations</a></li>
-                        <li><a href="index.html#itineraries">Itineraries</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@buddytrail.com</p>
-                    <p>Phone: +1 (123) 456-7890</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                     <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/PriyaGhosal/BuddyTrail"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+    <footer id="footer">
+        <div class="footer-container">
+          <!-- About Us Section -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html" class="faq-link">FAQs</a></li>
+              <li><a href="servicespage.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contributor/contributor.html">Our Contributor</a></li>
+            </ul>
+          </div>
+      
+          <!-- Legal Links Section -->
+          <div class="footer-column">
+            <h3>Legal Links</h3>
+            <ul>
+              <li><a href="terms_of_service.html">Terms of Service</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="copyright.html">Copyright Notice</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      
+              
+      
+            </ul>
+          </div>
+      
+          <!-- Contact Us Section -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          </div>
+      
+          <!-- Follow Us Section -->
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+              <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-            </div>
+          </div>
+      
+          <!-- Newsletter Form Section -->
+          <style>
+            .footer-column.newsletter {
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #newsletter-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #email {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button[type="submit"] {
+                width: 100px;
+                padding: 6px;
+                font-size: 14px;
+            }
+            #subscription-message {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+          <div class="footer-column newsletter" id="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="newsletter-form">
+              <input type="email" id="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscription-message"></p>
+          </div>
         </div>
-    </footer>
+      
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+        </div>
+      </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
     <script>
         // Initialize data in localStorage if it doesn't exist
@@ -1038,54 +1354,70 @@ nav a {
         function setLocalData(key, data) {
             localStorage.setItem(key, JSON.stringify(data));
         }
-
         function renderPosts() {
-            const container = document.querySelector('.blog-container');
-            container.innerHTML = '';
-            const posts = getLocalData('blogPosts');
+    const container = document.querySelector('.blog-container');
+    container.innerHTML = '';
+    const posts = getLocalData('blogPosts');
 
-            posts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                article.innerHTML = `
-            <h2>${post.title}</h2>
-            <div class="meta">Posted on ${post.date} by ${post.author}</div>
-            <div class="category">${post.category}</div>
-            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="content">
-                <p>${post.content.substring(0, 150)}...</p>
-             </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-
-            </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-            
-            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-            <div class="comments-section">
-                <h3>Comments (${post.comments.length})</h3>
-                <div class="comments">
-                    ${post.comments.slice(0, 2).map(comment => `
-                        <div class="comment">
-                            <p>${comment.text}</p>
-                            <small>${comment.date}</small>
-                        </div>
-                    `).join('')}
+    posts.forEach(post => {
+        const article = document.createElement('article');
+        article.className = 'blog-post';
+        article.innerHTML = `
+            <div class="blog-card">
+                <div class="image-container">
+                    <img src="https://source.unsplash.com/800x600/?${post.category.toLowerCase()}" alt="${post.title}" class="post-image">
+                    <div class="image-overlay"></div>
+                    <span class="category-badge">${post.category}</span>
                 </div>
-                <form class="comment-form" data-post-id="${post.id}">
-                    <textarea placeholder="Add a comment"></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="date"><i class="far fa-calendar"></i> ${post.date}</span>
+                        <span class="author"><i class="far fa-user"></i> ${post.author}</span>
+                        <span class="comments"><i class="far fa-comment"></i> ${post.comments.length} comments</span>
+                    </div>
+                    <h2 class="post-title">${post.title}</h2>
+                    <div class="post-excerpt">
+                        <p>${post.content.substring(0, 150)}...</p>
+                    </div>
+                    <div class="tags-container">
+                        ${post.tags.map(tag => `
+                            <span class="tag">
+                                <i class="fas fa-tag"></i> ${tag}
+                            </span>
+                        `).join('')}
+                    </div>
+                    <div class="post-footer">
+                        <button class="read-more-btn" data-id="${post.id}">
+                            Read More 
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="full-content" style="display: none;">
+                    <p>${marked(post.content)}</p>
+                </div>
+                <div class="comments-section">
+                    <h3>Comments (${post.comments.length})</h3>
+                    <div class="comments">
+                        ${post.comments.slice(0, 2).map(comment => `
+                            <div class="comment">
+                                <p>${comment.text}</p>
+                                <small>${comment.date}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <form class="comment-form" data-post-id="${post.id}">
+                        <textarea placeholder="Add a comment"></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
             </div>
         `;
-                container.appendChild(article);
- });
+        container.appendChild(article);
+    });
 
-            addEventListeners();
-        }
+    addEventListeners();
+}
 
         function addEventListeners() {
             // Add event listeners for read more links

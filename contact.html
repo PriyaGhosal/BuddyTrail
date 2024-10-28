@@ -65,6 +65,7 @@
         max-width: 100%;
         height: auto;
         max-height: 500px;
+        margin-top: 60px;
     }
     
     .form-group {
@@ -137,6 +138,34 @@
             min-width: 100%;
         }
     }
+     /* .form-group { 
+    position: relative;
+}  */
+
+.tooltip {
+    visibility: hidden;
+    background-color:  black;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    /* bottom: 30%; Position above the input field */
+    top: 41%;
+    left: 60%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.form-group:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 </style>
 <body>
@@ -222,22 +251,26 @@
                         <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="Your name">
+                                <input type="text" id="fullname" name="fullname" placeholder="Your name" required>
+                                <div class="tooltip">Please enter your full name here.</div> 
                                 <span class="error-message" id="nameError"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email">
+                                <input type="email" id="email" name="email" placeholder="Your email" required>
+                                <div class="tooltip">Please enter a valid email like example@mail.com.</div>
                                 <span class="error-message" id="emailError"></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                                <div class="tooltip">Please enter your phone number(10 digits).</div>
                                 <span class="error-message" id="phoneError"></span>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                                <div class="tooltip">Feel free to describe your message in detail.</div>
                                 <span class="error-message" id="messageError"></span>
                             </div>
                             <button type="submit">Send</button>

@@ -41,7 +41,7 @@
        border-radius:8px;
        padding: 10px 8px 4px 8px;
      }
-      
+
     /* Button Styling */
     .btn {
       background-color: #007bff; /* Primary button color */
@@ -85,7 +85,7 @@
 }
 
 .rating {
-  height: 50px;
+  height: auto;
 }
 
 .rating:hover {
@@ -230,7 +230,7 @@
 .card.inview {
   opacity: 1;
   transform: translateY(0);
-  
+
 }
 .card.inview header1 {
       padding: 10px 8px 4px 8px;
@@ -312,7 +312,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
   }
-  
+
   /* Wrapper for the logo and loader */
   .loader-wrapper {
     position: relative;
@@ -322,7 +322,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   /* Logo Styling */
   #logo {
     width: 140px;
@@ -330,7 +330,7 @@
     z-index: 10; /* Ensures logo stays above the loader */
     animation: pulse 2s infinite ease-in-out;
   }
-  
+
   /* Circular Loader surrounding the logo */
   .loader-globe {
     position: absolute;
@@ -342,7 +342,7 @@
     border-right-color: white;
     animation: spin 2s linear infinite;
   }
-  
+
   /* Loading Text */
   #loading-text {
     margin-top: 20px;
@@ -352,18 +352,18 @@
     letter-spacing: 1px;
     animation: textGlow 2s ease-in-out infinite;
   }
-  
+
   /* Keyframes Animations */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
+
   @keyframes textGlow {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
   }
-  
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -375,13 +375,13 @@
     window.addEventListener('load', function() {
         const preloader = document.getElementById('preloader');
         const content = document.getElementById('content');
-    
+
         // Set a small timeout for better user experience
         setTimeout(function() {
             // Hide preloader
             preloader.style.opacity = '0';
             preloader.style.transition = 'opacity 1s ease-in-out';
-    
+
             // Show content after preloader fades out
             setTimeout(function() {
                 preloader.style.display = 'none';
@@ -390,7 +390,7 @@
             }, 1000); // Match the transition duration
         }, 2000);  // Adjust to the length of your spinner animation
     });
-    
+
       </script>
 
     <!-- Google Translate Button -->
@@ -521,8 +521,8 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <nav >
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
       <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -714,6 +714,17 @@
 </div>
 
 </div>
+<style>
+    .dark-mode .card{
+      background: #0e0e0e;
+    }
+    .dark-mode .card h4{
+      color: #f39c12;
+    }
+    .dark-mode .card p{
+      color: #fff;
+    }
+</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".card");
@@ -785,7 +796,7 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2>Exclusive Deals and Offers</h2>
+        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
         <div class="carousel">
@@ -951,7 +962,7 @@ button {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 }
 
@@ -1063,7 +1074,8 @@ p {
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section" style="height: 100%;">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
+      
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -1489,7 +1501,7 @@ select {
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
       <h2 id="h1darkbtn">Personalized Recommendations</h2>
-      <p>
+      <p style="font-size: 20px;"> 
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
       </p>
@@ -1499,7 +1511,7 @@ select {
         <div class="recommendation-item">
           <div class="header1">
           <h3 id="h1darkbtn">Beach Resort in Goa</h3>
-          <p>
+          <p style="color : gray ;">
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
           </p>
@@ -1511,7 +1523,7 @@ select {
         <div class="recommendation-item">
           <div class="header2">
           <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
-          <p>
+          <p style="color : gray ;">
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
           </p>
@@ -1523,7 +1535,7 @@ select {
         <div class="recommendation-item">
           <div class="header1">
           <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
-          <p>
+          <p style="color : gray ;">
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
           </p>
@@ -1654,7 +1666,7 @@ select {
 
         <section id="content">
           <h2>Content</h2>
-          <input id="content-input" type="text">
+          <textarea id="content-input"></textarea>
           <ul id="content-list"></ul>
         </section>
       </main>
@@ -1691,6 +1703,7 @@ select {
   width: 100%; /* Ensure full width inside the container */
   border-radius: 8px;
   outline: none;
+  resize: vertical;
 }
 
 /* Header styling */
@@ -1967,6 +1980,9 @@ nav.hi ul li.NAVI i:hover  {
       h1#h1darkbtn:hover {
           color: #ffcc00; /* Changes the color when hovered */
       }
+      p#darkbtn {
+        font-size: large;
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -2130,18 +2146,30 @@ nav.hi ul li.NAVI i:hover  {
           }
       }
   </style>
-  <h1 style="padding-left:40%;color:#022f5e;padding-top:2px">Destination Guide</h1>
+  <h1 style="padding-left:40%;color: rgba(255, 255, 248, 0.953);padding-top:8px ; margin: 5px 0 2px;">Destination Guide</h1>
   <section id="destinations">
 
       <div class="post-container">
 
           <h3>Share Your Experiences</h3>
           <form id="postForm">
-            <p>Share your experience and guidence</p>
               <textarea id="postContent" placeholder="Write your post here..." required></textarea>
               <button type="submit">Submit</button>
           </form>
       </div>
+      <style>
+
+    .post-container {
+    background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
+
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+        </style>
 
       <!-- Right image of a destination inside a container -->
       <div class="destination-image-container">
@@ -2160,19 +2188,8 @@ nav.hi ul li.NAVI i:hover  {
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
       async defer></script>
-
-
-
-      <!-- Map Section -->
-
-      <!-- Google Maps JavaScript API -->
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
-        async
-        defer
-      ></script>
 
     <!-- CONTACT US-->
     <style>
@@ -2235,23 +2252,27 @@ nav.hi ul li.NAVI i:hover  {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+
                             </div>
                             <div class="form-group">
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+                            <button class="book-btn" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
         <style>
+
+
+
 /* General Section Styles */
 .contact-section {
     background-color: #f9f9f9;
@@ -2440,7 +2461,7 @@ textarea.form-control {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading" >Testimonials</h2>
+    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2635,10 +2656,56 @@ textarea.form-control {
   <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
     <button class="scroll-button group" id="scrollTopBtn">
       <span class="tooltip-text-scroll">
-        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
       </span>
     </button>
   </div>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Create an object with the form data
+                const formData = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+
+                console.log('Form Data:', formData); // Debugging statement
+
+                try {
+                    // Send the data to the backend
+                    const response = await fetch('http://localhost:5000/api/contact/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Check if the response is ok (status code 200-299)
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message); // Show success message
+                        // Optionally reset the form
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message}`); // Show error message
+                    }
+                } catch (error) {
+                    alert('Failed to send message. Please try again later.'); // Handle network errors
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
   <script>
     window.addEventListener('scroll', function() {
       const scrollContainer = document.getElementById('scrollContainer');
@@ -2808,34 +2875,34 @@ textarea.form-control {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
     };
   </script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  // <script>
+  //   document.getElementById('contactForm').addEventListener('submit', function (e) {
+  //     e.preventDefault();
 
-      // Submit the form data using fetch
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        // Show the confirmation popup
-        document.getElementById('confirmationPopup').style.display = 'block';
-        // Reset the form
-        this.reset();
-      }).catch(error => {
-        console.error('Error:', error);
-        // Still show the confirmation popup even if there's an error
-        document.getElementById('confirmationPopup').style.display = 'block';
-      });
-    });
+  //     // Submit the form data using fetch
+  //     fetch(this.action, {
+  //       method: 'POST',
+  //       body: new FormData(this),
+  //       headers: {
+  //         'Accept': 'application/json'
+  //       }
+  //     }).then(response => {
+  //       // Show the confirmation popup
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //       // Reset the form
+  //       this.reset();
+  //     }).catch(error => {
+  //       console.error('Error:', error);
+  //       // Still show the confirmation popup even if there's an error
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //     });
+  //   });
 
 
-    function closePopup() {
-      document.getElementById('confirmationPopup').style.display = 'none';
-    }
-  </script>
+  //   function closePopup() {
+  //     document.getElementById('confirmationPopup').style.display = 'none';
+  //   }
+  // </script>
   <script>
   document.getElementById('reviewForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents form submission
