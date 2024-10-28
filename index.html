@@ -2506,71 +2506,111 @@ textarea.form-control {
   <section id="reviews" class="reviews-section">
     <div class="review">
       <div class="review-form">
-        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
-        <p class="review-p">
-          Read what others have to say about their experiences with various
-          destinations, hotels, flights, and activities. Share your own reviews
-          and help fellow travelers make informed decisions.
-        </p>
+  <h2 id="h1darkbtn">Rate your experience</h2>
+  <p class="review-p">
+    Read what others have to say about their experiences with various destinations, hotels, flights, and activities.
+    Share your own reviews and help fellow travelers make informed decisions.
+  </p>
 
-        <div style="display: flex;">
-          <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
-            <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
-            placeholder="Enter your name"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
+  <div style="display: flex;">
+    <form class="form" id="reviewForm">
+      <label for="name" class="label">Your Name:</label>
+      <input type="text" id="name" name="name" required="" pattern="[a-zA-Z ]+" placeholder="Enter your name"
+             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+             oninput="this.setCustomValidity('')">
 
-            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
-            placeholder="Enter your destination or service"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
+      <label for="destination" class="label">Destination/Service:</label>
+      <input type="text" id="destination" name="destination" required="" pattern="[a-zA-Z ]+" 
+             placeholder="Enter your destination or service"
+             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')" oninput="this.setCustomValidity('')">
 
-            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
-           <!-- <select id="rating" class="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>-->
-
-            <div class="rating" name="rating">
-              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->
-              <div class="star-widget">
-               <input type="radio" name="rate" id="rate-5">
-               <label for="rate-5"  class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-4">
-               <label for="rate-4" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-3">
-               <label for="rate-3" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-2">
-               <label for="rate-2" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-1">
-               <label for="rate-1" class="fas fa-star"></label>
-               <header></header>
-            </div>
-           </div>
-
-            <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
-            <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
-            <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please provide details"></textarea>
-
-            <div class="form-button">
-              <button type="submit">Send</button>
-            </div>
-          </form>
-
-          <!-- Thank You Message -->
-          <div id="thankYouMessage" style="display: none; margin-top: 20px;">
-            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
-              committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
-          </div>
+      <label for="rating" class="label">Rating:</label>
+      <div class="rating">
+        <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5">
+          <label for="rate-5" class="star fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-4">
+          <label for="rate-4" class="star fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-3">
+          <label for="rate-3" class="star fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-2">
+          <label for="rate-2" class="star fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-1">
+          <label for="rate-1" class="star fas fa-star"></label>
         </div>
       </div>
+
+      <label for="review" class="label">Your Review:</label>
+      <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
+
+      <label for="complaint" class="label">Complaint (if any):</label>
+      <textarea id="complaint" name="complaint" rows="3"
+                placeholder="Describe any issue with the staff here. Please provide details"></textarea>
+
+      <div class="form-button">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" style="display: none; margin-top: 20px;">
+      <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely committed
+         to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CSS for High Contrast and Night Mode Compatibility -->
+<style>
+  /* Default styling */
+  .review-form {
+    color: #333;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+
+  .label, .form-button button {
+    color: #000;
+  }
+
+  .rating .star {
+    color: #0057B3;
+  }
+
+  /* Night Mode styling */
+  body.night-mode .review-form {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  body.night-mode .label {
+    color: #e0e0e0;
+  }
+
+  body.night-mode .form-button button {
+    color: #fff;
+    background-color: #0057B3;
+  }
+
+  body.night-mode .rating .star {
+    color: #e0e0e0;
+  }
+
+  /* High contrast focus for accessibility */
+  input[type="text"]:focus, textarea:focus, button:focus {
+    outline: 2px solid #0057B3;
+    outline-offset: 2px;
+  }
+</style>
+
+<!-- JavaScript for Night Mode Toggling -->
+<script>
+  const toggleNightMode = () => {
+    document.body.classList.toggle('night-mode');
+  };
+</script>
     </div>
   </section>
 
