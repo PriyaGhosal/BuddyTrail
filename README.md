@@ -82,7 +82,14 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## 🚀 Features
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [API Documentation](#api-documentation)
+- [Welcome Contributors](#welcome-contributors)
+- [Project structure](#project-strucutre)
+
+## Features
 
 **🗺️ Interactive Travel Map:** Explore popular destinations across India and around the world. Click on markers to learn more about each location.
 
@@ -106,7 +113,7 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 
 
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 **📝 HTML/CSS:** For building and styling the website structure.
 
@@ -121,7 +128,7 @@ https://github.com/user-attachments/assets/35baa356-0d03-4aa8-9f79-db78244397ee
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## 📡 API Documentation
+## API Documentation
 
 ### Overview
 The BuddyTrail API allows you to interact with travel data, including destinations, hotels, and flights. 
@@ -155,7 +162,7 @@ All responses are in JSON format. Ensure to handle errors appropriately.
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 
-## 🎉 Welcome Contributors!! 👨‍💻👋
+## Welcome Contributors!! 
 
 Join the list. **We are waiting** <br/>
 Here's how you can contribute to the repository:
@@ -184,7 +191,7 @@ To maintain quality and consistency, please adhere to the following guidelines:
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Project-strucutre 📁
+## Project-strucutre 
 
 You can find the project structure in the [Project Structure](project-structure.md) file. It contains the details of the project structure and the files present in the project. It will help you to understand the project structure better. 🗂️
 
