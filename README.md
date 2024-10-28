@@ -65,6 +65,20 @@
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+# 📋 Table of Contents
+
+- [🏞️ BuddyTrail](#-buddytrail)
+- [🌟 Project Badges](#-project-badges)
+- [📸 Website Preview](#-website-preview)
+- [🚀 Features](#-features)
+- [⚙️ Getting Started with the Code](#-getting-started-with-the-code)
+- [🛠️ Technologies Used](#-technologies-used)
+- [🎉 Welcome Contributors!!](#-welcome-contributors-)
+- [📁 Project Structure](#project-structure-)
+- [❤️ Our Contributors](#-our-contributors)
+- [👥 Team](#-team)
+- [⭐️ Support the Project](#-support-the-project)
+
 # 📸 Website Preview
 
 
