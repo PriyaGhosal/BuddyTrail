@@ -205,14 +205,25 @@ You can find the project structure in the [Project Structure](project-structure.
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
+## 👥 Team
+
+| ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
+|:--:|
+| **Priya Ghosal** <br> <sub>Project Admin</sub> | 
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) [![Discord](https://img.icons8.com/fluency/32/000000/discord.png)](https://discord.com/invite/priyaghosal) [![Twitter](https://img.icons8.com/fluency/32/000000/twitter.png)](https://twitter.com/PriyaGhosa39968) [![GitHub](https://img.icons8.com/fluency/32/000000/github.png)](https://github.com/PriyaGhosal/BuddyTrail) |
+
+
+
+For any inquiries or feedback, please contact. Happy Contributing 🫡
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 <div>
   <h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Our Contributors</h2>
   <div align="center">
     <h3>Thank you for contributing to our repository</h3
 
 
-
-      
 <p align="center">
       <a href="https://github.com/PriyaGhosal/BuddyTrail/graphs/contributors">
         <img src="https://api.vaunt.dev/v1/github/entities/PriyaGhosal/repositories/BuddyTrail/contributors?format=svg&limit=54" width="700" height="250" />
@@ -243,26 +254,19 @@ You can find the project structure in the [Project Structure](project-structure.
 
 </div>
 
-
+<picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=PriyaGhosal/BuddyTrail&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=PriyaGhosal/BuddyTrail&type=Date" />
+      <img align="center" alt="Star History Chart" src="https://api.star-history.com/svg?repos=PriyaGhosal/BuddyTrail&type=Date" />
+    </picture>
+    
 <div align="right">
     <a href="#top">
         <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
     </a>
 </div>
 
-<!--Line-->
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## 👥 Team
-
-| ![Priya Ghosal](https://avatars.githubusercontent.com/u/162816363?v=4&s=80) |
-|:--:|
-| **Priya Ghosal** <br> <sub>Project Admin</sub> | 
-| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/priya-ghosal-785771286/) [![Discord](https://img.icons8.com/fluency/32/000000/discord.png)](https://discord.com/invite/priyaghosal) [![Twitter](https://img.icons8.com/fluency/32/000000/twitter.png)](https://twitter.com/PriyaGhosa39968) [![GitHub](https://img.icons8.com/fluency/32/000000/github.png)](https://github.com/PriyaGhosal/BuddyTrail) |
-
-
-
-For any inquiries or feedback, please contact. Happy Contributing 🫡
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
