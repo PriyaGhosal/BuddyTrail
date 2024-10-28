@@ -21,6 +21,28 @@
         <div id="loading-text">Ready to Explore the World...</div>
     </div>
     <style>
+
+
+    .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+
         /* Preloader Container */
         #preloader {
             position: fixed;
@@ -616,6 +638,10 @@
         }
     </style>
 
+<button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+
+
     <div class="footer-responsive">
 
         <footer>
@@ -717,6 +743,26 @@
         });
     </script>
 
+<script>
+    // Show the button when the user scrolls down 100px from the top
+window.onscroll = function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+};
+
+// Scroll to the top when the button is clicked
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+</script>
 </body>
 
 </html>
