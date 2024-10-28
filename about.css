@@ -523,4 +523,8 @@ footer {
         .logo a{
         text-decoration: none;
         color: white;
+        
+        }
+        .logo a :hover{
+            color: #000;
         }
