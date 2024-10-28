@@ -1,502 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    />
+    <meta name="description"
+        content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation" />
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="RatingStyle.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet" />
     <link rel="icon" href="/icons/airplane.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Book Now - BuddyTrail</title>
     <style>
-      .error {
-        color: red;
-        font-size: 1.2rem;
-        margin-top: 5px;
-      }
-      /* General navigation styles */
-      nav {
-        display: flex;
-        justify-content: space-evenly; /* Aligns nav items evenly */
-      }
+        .error {
+            color: red;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
 
-      nav ul {
-        list-style-type: none; /* Removes bullet points */
-        padding: 0; /* Removes padding */
-      }
+        /* General navigation styles */
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            /* Aligns nav items evenly */
+        }
 
-      /* Navigation link styles */
-      nav ul li {
-        display: inline; /* Displays list items in a row */
-      }
+        nav ul {
+            list-style-type: none;
+            /* Removes bullet points */
+            padding: 0;
+            /* Removes padding */
+        }
 
-      nav ul li a {
-        font-size: 2.5rem; /* Font size for nav links */
-        color: #fffdfd; /* Default color */
-        transition: color 0.3s ease; /* Smooth color transition */
-      }
+        /* Navigation link styles */
+        nav ul li {
+            display: inline;
+            /* Displays list items in a row */
+        }
 
-      /* Hover and active link styles */
-      nav ul li a:hover,
-      nav ul li a:active {
-        color: #ff5733; /* Color on hover or active state */
-      }
+        nav ul li a {
+            font-size: 2.5rem;
+            /* Font size for nav links */
+            color: #fffdfd;
+            /* Default color */
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
 
-      /* Optional: Style for icons specifically */
-      .social-icons a {
-        color: #ffffff; /* Default color for social icons */
-        transition: color 0.3s ease; /* Smooth color transition */
-      }
+        /* Hover and active link styles */
+        nav ul li a:hover,
+        nav ul li a:active {
+            color: #ff5733;
+            /* Color on hover or active state */
+        }
 
-      .social-icons a:hover,
-      .social-icons a:active {
-        color: #ff5733; /* Color for social icons on hover or active state */
-      }
+        /* Optional: Style for icons specifically */
+        .social-icons a {
+            color: #ffffff;
+            /* Default color for social icons */
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
 
-      /* Additional styles */
-      .nav-elem {
-        font-size: 1.8rem; /* Font size for additional navigation elements */
-        width: 80vw; /* Full viewport width */
-        margin-left: 20px; /* Left margin */
-        display: flex; /* Flexbox display */
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 20px;
-        /* Even spacing between items */
-      }
+        .popular-destination {
+            color: initial;
+            /* or any default color */
+        }
 
-      .logo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
+        /* Dark mode styles */
+        .dark-mode .popular-destinations {
+            color: #ffa500;
+        }
 
-      .locations_ h2 {
-        font-size: 4rem; /* Font size for location headings */
-        color: black; /* Color for location headings */
-      }
+        /* Ensure the welcome text remains unchanged */
+        .dark-mode .welcome-text {
+            color: initial !important;
+            /* or any default color */
+        }
 
-      .benefits {
-        color: #f9f9f9; /* Color for benefits text */
-      }
+        .social-icons a:hover,
+        .social-icons a:active {
+            color: #ff5733;
+            /* Color for social icons on hover or active state */
+        }
 
-      .benefits h2 {
-        font-size: 4rem; /* Font size for benefits headings */
-        margin-bottom: 50px; /* Margin below benefits headings */
-        text-shadow: 0 0 2px rgb(110, 110, 110); /* Text shadow for benefits headings */
-      }
+        /* Additional styles */
+        .nav-elem {
+            font-size: 1.8rem;
+            /* Font size for additional navigation elements */
+            width: 80vw;
+            /* Full viewport width */
+            margin-left: 20px;
+            /* Left margin */
+            display: flex;
+            /* Flexbox display */
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+            /* Even spacing between items */
+        }
 
-      footer {
-        padding-top: 50px; /* Top padding for footer */
-        padding-bottom: 20px; /* Bottom padding for footer */
-      }
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
-      .footer-bottom {
-        margin-top: 20px;
-      }
+        .locations_ h2 {
+            font-size: 4rem;
+            /* Font size for location headings */
+            color: black;
+            /* Color for location headings */
+        }
+
+        .benefits {
+            color: #f9f9f9;
+            /* Color for benefits text */
+        }
+
+        .benefits h2 {
+            font-size: 4rem;
+            /* Font size for benefits headings */
+            margin-bottom: 50px;
+            /* Margin below benefits headings */
+            text-shadow: 0 0 2px rgb(110, 110, 110);
+            /* Text shadow for benefits headings */
+        }
+
+        footer {
+            padding-top: 50px;
+            /* Top padding for footer */
+            padding-bottom: 20px;
+            /* Bottom padding for footer */
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="main-head">
-      <nav>
-        <div class="logo">
-          <img src="img/logo.png" id="logo-web" />
-          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
-        </div>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web" />
+                <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+            </div>
 
-        <ul id="nav-list">
-          <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <ul id="nav-list">
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
 
-          <li><a href="./index.html" class="navhover">Home</a></li>
-          <li><a href="./team.html" class="navhover">Team</a></li>
-          <li><a href="./blog.html" class="navhover">Blog</a></li>
-          <li><a href="./F&Q.html" class="navhover">F&Q</a></li>
-          <li><a href="#locations_" class="navhover">Location</a></li>
-          <li><a href="#benefits" class="navhover">Benefits</a></li>
-          <li><a href="contact.html" class="navhover">Contact</a></li>
-          <li><a href="#booking-form" class="navhover">Book Now</a></li>
-          <li><a href="./auth.html" class="navhover">SignIn</a></li>
-        </ul>
-      </nav>
+                <li><a href="./index.html" class="navhover">Home</a></li>
+                <li><a href="./team.html" class="navhover">Team</a></li>
+                <li><a href="./blog.html" class="navhover">Blog</a></li>
+                <li><a href="./F&Q.html" class="navhover">F&Q</a></li>
+                <li><a href="#locations_" class="navhover">Location</a></li>
+                <li><a href="#benefits" class="navhover">Benefits</a></li>
+                <li><a href="contact.html" class="navhover">Contact</a></li>
+                <li><a href="#booking-form" class="navhover">Book Now</a></li>
+                <li><a href="./auth.html" class="navhover">SignIn</a></li>
+                <button class="mode-toggle" id="modeToggle">
+                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                </button>
+            </ul>
+        </nav>
 
-      <!-- Hamburger button for mobile -->
-      <button class="hamburger" id="hamburger">☰</button>
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
     </header>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.getElementById("hamburger");
-        const navList = document.getElementById("nav-list");
-        const closeBtn = document.getElementById("closeBtn");
-        const mainHead = document.querySelector(".main-head"); // Selecting the header
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navList = document.getElementById("nav-list");
+            const closeBtn = document.getElementById("closeBtn");
+            const mainHead = document.querySelector(".main-head"); // Selecting the header
 
-        // Hamburger menu functionality
-        hamburger.addEventListener("click", function () {
-          navList.classList.toggle("active");
+            // Hamburger menu functionality
+            hamburger.addEventListener("click", function () {
+                navList.classList.toggle("active");
+            });
+
+            closeBtn.addEventListener("click", function () {
+                navList.classList.remove("active");
+            });
+
+            // Scroll event to handle header transparency
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    // If scrolled more than 50px
+                    mainHead.classList.add("shadow");
+                } else {
+                    mainHead.classList.remove("shadow");
+                }
+            });
+
+            // Dark and light mode toggle logic
+            const modeToggle = document.getElementById("modeToggle");
+            const sunIcon = document.querySelector(".sun-icon");
+            const moonIcon = document.querySelector(".moon-icon");
+
+            modeToggle.addEventListener("click", function () {
+                document.body.classList.toggle("dark-mode");
+                document.body.classList.toggle("light-mode");
+                const darkelem = document.querySelectorAll("#darkbtn");
+                const h1dark = document.querySelectorAll("#h1darkbtn");
+                const cardbtn = document.querySelectorAll("#btn a");
+
+                if (document.body.classList.contains("dark-mode")) {
+                    sunIcon.style.display = "none";
+                    moonIcon.style.display = "inline-block";
+                    localStorage.setItem("theme", "dark");
+                    darkelem.forEach((elem) => (elem.style.color = "white"));
+                    cardbtn.forEach((elem) => (elem.style.color = "white"));
+                    h1dark.forEach((darkbtn) => (darkbtn.style.color = "#FFA500"));
+                } else {
+                    sunIcon.style.display = "inline-block";
+                    moonIcon.style.display = "none";
+                    localStorage.setItem("theme", "light");
+                    darkelem.forEach((elem) => (elem.style.color = "gray"));
+                    h1dark.forEach((darkbtn) => (darkbtn.style.color = "#0057B3"));
+                    cardbtn.forEach((elem) => (elem.style.color = "black"));
+                }
+            });
         });
-
-        closeBtn.addEventListener("click", function () {
-          navList.classList.remove("active");
-        });
-
-        // Scroll event to handle header transparency
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 50) {
-            // If scrolled more than 50px
-            mainHead.classList.add("shadow");
-          } else {
-            mainHead.classList.remove("shadow");
-          }
-        });
-
-        // Dark and light mode toggle logic
-        const modeToggle = document.getElementById("modeToggle");
-        const sunIcon = document.querySelector(".sun-icon");
-        const moonIcon = document.querySelector(".moon-icon");
-
-        modeToggle.addEventListener("click", function () {
-          document.body.classList.toggle("dark-mode");
-          document.body.classList.toggle("light-mode");
-          const darkelem = document.querySelectorAll("#darkbtn");
-          const h1dark = document.querySelectorAll("#h1darkbtn");
-          const cardbtn = document.querySelectorAll("#btn a");
-
-          if (document.body.classList.contains("dark-mode")) {
-            sunIcon.style.display = "none";
-            moonIcon.style.display = "inline-block";
-            localStorage.setItem("theme", "dark");
-            darkelem.forEach((elem) => (elem.style.color = "white"));
-            cardbtn.forEach((elem) => (elem.style.color = "white"));
-            h1dark.forEach((darkbtn) => (darkbtn.style.color = "#FFA500"));
-          } else {
-            sunIcon.style.display = "inline-block";
-            moonIcon.style.display = "none";
-            localStorage.setItem("theme", "light");
-            darkelem.forEach((elem) => (elem.style.color = "gray"));
-            h1dark.forEach((darkbtn) => (darkbtn.style.color = "#0057B3"));
-            cardbtn.forEach((elem) => (elem.style.color = "black"));
-          }
-        });
-      });
     </script>
 
     <!-- Header ends -->
     <main>
-      <section class="hero">
-        <h2>Welcome to BuddyTrail</h2>
-      </section>
+        <section class="hero">
+            <h2 class="welcome-text">Welcome to BuddyTrail</h2>
+        </section>
 
-      <section id="locations_" class="locations_">
-        <h2>Popular Destinations</h2>
-        <div class="location-cards">
-          <div
-            class="location-card"
-            style="
+        <section id="locations_" class="locations_">
+            <h2 class="popular-destinations">Popular Destinations</h2>
+            <div class="location-cards">
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1489516408517-0c0a15662682?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Dubai</h3>
-            <ul>
-              <li>Flight To Dubai</li>
-              <li>
-                Save 20% on round-trip flights to Dubai. Limited time offer!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹20,000 <del>₹25,000</del></p>
-          </div>
-          <div
-            class="location-card"
-            style="
+            ">
+                    <h3>Dubai</h3>
+                    <ul>
+                        <li>Flight To Dubai</li>
+                        <li>
+                            Save 20% on round-trip flights to Dubai. Limited time offer!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹20,000 <del>₹25,000</del></p>
+                </div>
+                <div class="location-card" style="
               background-image: url('https://plus.unsplash.com/premium_photo-1697729701846-e34563b06d47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Goa</h3>
-            <ul>
-              <li>Luxury Stay in Goa</li>
-              <li>
-                Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
-                luxury at an affordable price!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
-          <div
-            class="location-card"
-            style="
+            ">
+                    <h3>Goa</h3>
+                    <ul>
+                        <li>Luxury Stay in Goa</li>
+                        <li>
+                            Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
+                            luxury at an affordable price!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1679022579345-72dc76a518f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Kerala</h3>
-            <ul>
-              <li>Kerala Backwaters Package</li>
-              <li>
-                Experience the serene beauty of Kerala's backwaters with a
-                4-day, 3-night package. All-inclusive deal!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
-          <div
-            class="location-card"
-            style="
+            ">
+                    <h3>Kerala</h3>
+                    <ul>
+                        <li>Kerala Backwaters Package</li>
+                        <li>
+                            Experience the serene beauty of Kerala's backwaters with a
+                            4-day, 3-night package. All-inclusive deal!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Paris</h3>
-            <ul>
-              <li>Paris Romantic Getaway</li>
-              <li>
-                Enjoy a romantic trip to Paris with your loved one. Special
-                package for couples!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
-          <div
-            class="location-card"
-            style="
+            ">
+                    <h3>Paris</h3>
+                    <ul>
+                        <li>Paris Romantic Getaway</li>
+                        <li>
+                            Enjoy a romantic trip to Paris with your loved one. Special
+                            package for couples!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Bali</h3>
-            <ul>
-              <li>Adventure in Bali</li>
-              <li>
-                Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
-                luxury at an affordable price!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
+            ">
+                    <h3>Bali</h3>
+                    <ul>
+                        <li>Adventure in Bali</li>
+                        <li>
+                            Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of
+                            luxury at an affordable price!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
 
-          <div
-            class="location-card"
-            style="
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1547131303-543b40443e96?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Switzerland</h3>
-            <ul>
-              <li>Adventure Switzerland</li>
-              <li>
-                Get 30% off on a 5-star hotel stay in Switzerland. Enjoy the
-                best of luxury at an affordable price!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
+            ">
+                    <h3>Switzerland</h3>
+                    <ul>
+                        <li>Adventure Switzerland</li>
+                        <li>
+                            Get 30% off on a 5-star hotel stay in Switzerland. Enjoy the
+                            best of luxury at an affordable price!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
 
-          <div
-            class="location-card"
-            style="
+                <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Italy</h3>
-            <ul>
-              <li>Italy Most beautiful countries in the world</li>
-              <li>
-                Enjoy a romantic trip to Italy with your loved one. Special
-                package for couples!
-              </li>
-            </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
+            ">
+                    <h3>Italy</h3>
+                    <ul>
+                        <li>Italy Most beautiful countries in the world</li>
+                        <li>
+                            Enjoy a romantic trip to Italy with your loved one. Special
+                            package for couples!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
 
-          <div
-            class="location-card"
-            style="
+                <div class="location-card" style="
               background-image: url('https://plus.unsplash.com/premium_photo-1661963145672-a2bd28eba0fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            "
-          >
-            <h3>Greece</h3>
-            <ul>
-              <li>Greece has the longest coastline in Europe</li>
-              <li>
-                Get 30% off on a 5-star hotel stay in Switzerland. Enjoy the
-                best of luxury at an affordable price!
-              </li>
+            ">
+                    <h3>Greece</h3>
+                    <ul>
+                        <li>Greece has the longest coastline in Europe</li>
+                        <li>
+                            Get 30% off on a 5-star hotel stay in Switzerland. Enjoy the
+                            best of luxury at an affordable price!
+                        </li>
+                    </ul>
+                    <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <h2>Why Travel with BuddyTrail?</h2>
+            <ul class="benifits-list">
+                <li>Exclusive discounts and travel packages</li>
+                <li>24/7 customer support for a hassle-free experience</li>
+                <li>Handpicked destinations and personalized itineraries</li>
+                <li>Safe and secure travel arrangements</li>
             </ul>
-            <p><strong>Price:</strong> ₹10,500 <del>₹15,000</del> </p>
-          </div>
-        </div>
-      </section>
+            <div class="call-to-action">
+                <h2>Ready to embark on your next adventure?</h2>
+                <h2>Let BuddyTrail take you there!</h2>
+            </div>
+        </section>
 
-      <section id="benefits" class="benefits">
-        <h2>Why Travel with BuddyTrail?</h2>
-        <ul class="benifits-list">
-          <li>Exclusive discounts and travel packages</li>
-          <li>24/7 customer support for a hassle-free experience</li>
-          <li>Handpicked destinations and personalized itineraries</li>
-          <li>Safe and secure travel arrangements</li>
-        </ul>
-        <div class="call-to-action">
-          <h2>Ready to embark on your next adventure?</h2>
-          <h2>Let BuddyTrail take you there!</h2>
-        </div>
-      </section>
-
-      <section id="booking-form" class="booking-form">
-        <h2>Book Your Trip</h2>
-        <form
-          id="bookingForm"
-          action="#"
-          method="post"
-          onsubmit="return validateForm()"
-          novalidate
-        >
-          <div class="form-group">
-            <label for="place">Place of Visit:</label>
-            <input
-              type="text"
-              id="place"
-              name="place"
-              placeholder="Enter your destination"
-              required
-            />
-            <div class="error" id="placeError"></div>
-          </div>
-          <div class="form-group">
-            <label for="dates">Dates of Staying:</label>
-            <input type="date" id="dates" name="dates" required />
-            <div class="error" id="datesError"></div>
-          </div>
-          <div class="form-group">
-            <label for="transport">Mode of Transport:</label>
-            <select id="transport" name="transport" required>
-              <option value="" disabled selected>
-                Select mode of transport
-              </option>
-              <option value="air">Air</option>
-              <option value="train">Train</option>
-              <option value="bus">Bus</option>
-              <option value="car">Car</option>
-            </select>
-            <div class="error" id="transportError"></div>
-          </div>
-          <button type="submit" class="btn">Book Now</button>
-        </form>
-      </section>
+        <section id="booking-form" class="booking-form">
+            <h2>Book Your Trip</h2>
+            <form id="bookingForm" action="#" method="post" onsubmit="return validateForm()" novalidate>
+                <div class="form-group">
+                    <label for="place">Place of Visit:</label>
+                    <input type="text" id="place" name="place" placeholder="Enter your destination" required />
+                    <div class="error" id="placeError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="dates">Dates of Staying:</label>
+                    <input type="date" id="dates" name="dates" required />
+                    <div class="error" id="datesError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="transport">Mode of Transport:</label>
+                    <select id="transport" name="transport" required>
+                        <option value="" disabled selected>
+                            Select mode of transport
+                        </option>
+                        <option value="air">Air</option>
+                        <option value="train">Train</option>
+                        <option value="bus">Bus</option>
+                        <option value="car">Car</option>
+                    </select>
+                    <div class="error" id="transportError"></div>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>About Us</h3>
-          <p>
-            We are a team of passionate developers creating amazing web
-            experiences.
-          </p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>
+                    We are a team of passionate developers creating amazing web
+                    experiences.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="./book.html">Book</a></li>
+                    <li><a href="./F&Q.html">F&Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://discord.com/invite/priyaghosal"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="./book.html">Book</a></li>
-            <li><a href="./F&Q.html">F&Q</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <p>Email: info@example.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="footer-column">
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="https://discord.com/invite/priyaghosal"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
-            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="https://github.com/PriyaGhosal/BuddyTrail"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-      </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-      </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
+        </div>
     </footer>
     <script>
-      function validateForm() {
-        let valid = true;
+        function validateForm() {
+            let valid = true;
 
-        // Clear previous error messages
-        document.getElementById("placeError").innerText = "";
-        document.getElementById("datesError").innerText = "";
-        document.getElementById("transportError").innerText = "";
+            // Clear previous error messages
+            document.getElementById("placeError").innerText = "";
+            document.getElementById("datesError").innerText = "";
+            document.getElementById("transportError").innerText = "";
 
-        // Validate Place of Visit
-        const place = document.getElementById("place").value.trim();
-        if (place === "") {
-          document.getElementById("placeError").innerText =
-            "Please enter a place of visit.";
-          valid = false;
+            // Validate Place of Visit
+            const place = document.getElementById("place").value.trim();
+            if (place === "") {
+                document.getElementById("placeError").innerText =
+                    "Please enter a place of visit.";
+                valid = false;
+            }
+
+            // Validate Dates of Staying
+            const dates = document.getElementById("dates").value;
+            if (dates === "") {
+                document.getElementById("datesError").innerText =
+                    "Please select your dates of stay.";
+                valid = false;
+            }
+
+            // Validate Mode of Transport
+            const transport = document.getElementById("transport").value;
+            if (transport === "") {
+                document.getElementById("transportError").innerText =
+                    "Please select a mode of transport.";
+                valid = false;
+            }
+
+            return valid;
         }
-
-        // Validate Dates of Staying
-        const dates = document.getElementById("dates").value;
-        if (dates === "") {
-          document.getElementById("datesError").innerText =
-            "Please select your dates of stay.";
-          valid = false;
-        }
-
-        // Validate Mode of Transport
-        const transport = document.getElementById("transport").value;
-        if (transport === "") {
-          document.getElementById("transportError").innerText =
-            "Please select a mode of transport.";
-          valid = false;
-        }
-
-        return valid;
-      }
     </script>
 
-  <div class="gtranslate_wrapper"></div>
+    <div class="gtranslate_wrapper"></div>
 
-  <script>
+    <script>
 
-  window.gtranslateSettings = {
-    "default_language":"en",
-    "detect_browser_language":true,
-    "wrapper_selector":".gtranslate_wrapper"
-  }
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+        }
 
-  </script>
+    </script>
 
-  <script
-    src="https://cdn.gtranslate.net/widgets/latest/float.js"
-    defer
-  ></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-  </body>
+</body>
+
 </html>
