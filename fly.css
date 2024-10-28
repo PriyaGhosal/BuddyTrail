@@ -51,6 +51,11 @@
     transform: translateX(0);
   }
 }
+.preview-image {
+  width: 100%;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+}
 
 .btn {
   padding: 10px 20px;
