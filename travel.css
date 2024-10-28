@@ -62,7 +62,6 @@ body {
   border-color: #0056b3;
 }
 
-/* Footer styles (unchanged) */
 footer {
   background-color: #000000;
   padding: 30px 0;
@@ -84,9 +83,9 @@ footer {
 }
 
 .footer-column {
-  flex: 1 1 25%; /* Each column takes up about 25% of the width */
+  flex: 1 1 25%;
   padding: 10px 20px;
-  min-width: 200px; /* Ensures columns don't get too small */
+  min-width: 200px;
   text-align: center;
   line-height: 2;
 }
@@ -131,18 +130,18 @@ footer {
 }
 
 .social-icons a {
-  margin-right: 15px; /* Space between icons */
+  margin-right: 15px;
   margin: 0 15px;
 }
 
 .social-icons i {
-  font-size: 24px; /* Icon size */
-  color: #fff; /* Icon color (you can change this) */
+  font-size: 24px;
+  color: #fff; 
   transition: color 0.3s ease;
 }
 
 .social-icons i:hover {
-  color: #f9c3c3; /* Hover effect color */
+  color: #f9c3c3; 
 }
 .footer-column img {
   width: 24px;
