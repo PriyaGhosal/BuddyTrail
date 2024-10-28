@@ -1816,9 +1816,9 @@ Light mode styles body.light-mode {
 .rating {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Maximum width of the rating widget */
+  width: 180px; /* Width of the rating widget */
   background: #f5f1e6; /* Background color */
-  padding: 6px 12px; /* Padding around the content */
+  padding: 2px 12px; /* Padding around the content */
   border-radius: 10px; /* Rounded corners */
   display: flex; /* Use flexbox for layout */
   align-items: right; /* Center items vertically */
@@ -1868,7 +1868,7 @@ input#rate-5:checked ~ label {
   font-size: 19px;
   color: rgb(4, 4, 4); /* Color for the header text */
   font-weight: 500;
-  margin: 5px 0 20px 0; /* Margin for spacing */
+  margin: 5px 0 5px 0; /* Margin for spacing */
   text-align: center; /* Center the text */
   transition: all 0.2s ease; /* Smooth transition for changes */
 }
