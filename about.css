@@ -73,6 +73,9 @@ nav {
     line-height: 1;
 }
 
+
+
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -102,23 +105,86 @@ nav {
 .nav-link.active {
     color: #4C51BF;
     font-weight: bold;
-}
+} 
+
+ 
+
 
 .btn-primary {
-    margin-right: -10rem;
     display: inline-block;
-    padding: 0.625rem 1.25rem;
-    background-color: #4C51BF;
-    color: white;
-    text-decoration: none;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid transparent;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    position: relative;
 }
 
 .btn-primary:hover {
-    background-color: #667EEA;
-    transform: translateY(-2px);
+    background: linear-gradient(90deg, #00BFFF, #007BFF);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+    border-color: #fff;
 }
+
+.btn-primary:active {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.btn-primary:hover::after {
+    opacity: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    z-index: -1;
+    transition: border-color 0.3s ease;
+}
+
+.btn-primary:hover::before {
+    border-color: #fff;
+    animation: borderExpand 0.4s forwards;
+}
+
+@keyframes borderExpand {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 .main-content {
     flex-grow: 1;
@@ -310,7 +376,7 @@ footer {
     font-size: 1.125rem;
 }
 
-.social-icons {
+/* .social-icons {
     display: flex;
     gap: 1rem;
     margin-top: 0.5rem;
@@ -324,6 +390,73 @@ footer {
 .social-icons a:hover {
     color: #4C51BF;
     transform: translateY(-2px);
+} */
+
+ 
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Adjust spacing between icons */
+    position: relative; /* Ensure the positioning context for the pseudo-elements */
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    color: #000; /* Default color for the icons */
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, 0.6); /* Blue background */
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+    z-index: -1; /* Send the background behind the icon */
+}
+
+.social-icons a:hover::before {
+    width: 120%; /* Slightly larger than the icon for a better effect */
+    height: 120%; /* Slightly larger than the icon */
+    top: -10%; /* Adjust position to keep it centered */
+    left: -10%; /* Adjust position to keep it centered */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff; /* Change icon color on hover */
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size of the X logo */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Optional: Additional hover effects for individual icons */
+.social-icons a.discord:hover::before {
+    background: linear-gradient(45deg, #7289da, #61dafb); /* Discord gradient */
+}
+
+.social-icons a.github:hover::before {
+    background: linear-gradient(45deg, #333, #fff); /* GitHub gradient */
+}
+
+.social-icons a.linkedin:hover::before {
+    background: linear-gradient(45deg, #0077b5, #fff); /* LinkedIn gradient */
+}
+
+.social-icons a.twitter:hover::before {
+    background: linear-gradient(45deg, #1da1f2, #fff); /* Twitter gradient */
 }
 
 .copyright {
@@ -332,16 +465,6 @@ footer {
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-
-
-
-
-
-
-
-
-
 
 footer {
     width: 100%;
@@ -470,6 +593,10 @@ form button .fas {
     background: #fff;
     margin-right: 15px;
     cursor: pointer;
+
+    & :hover{
+         background-color: #61dafb;
+    }
 }
 
 hr {
@@ -510,6 +637,48 @@ hr {
     left: 10px;
     animation: moving 2s linear infinite;
 }
+
+ 
+
+.footer-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-links li {
+   
+    margin-right: 20px; /* Space between links */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove default underline */
+    color: whitesmoke;  
+    position: relative;  
+    transition: color 0.3s ease;  
+}
+
+.footer-links a::after {
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    bottom: -5px;  
+    width: 100%;  
+    height: 2px;  
+    background: blue;  
+    transform: scaleX(0);  
+    transition: transform 0.3s ease;  
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+.footer-links a:hover {
+    color: blue; /* Change text color on hover */
+}
+
+
+ 
 
 @keyframes moving {
 

@@ -1,0 +1,22 @@
+{
+    "name": "BuddyTrail - Travel Agency",
+    "short_name": "BuddyTrail",
+    "description": "BuddyTrail is a travel agency website that helps you pick out your holiday vacation",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#00467f",
+    "icons": [
+      {
+        "src": "/images/logo2.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/logo2.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

@@ -30,6 +30,10 @@
       referrerpolicy= "no-referrer"
     />
     <link rel="stylesheet" href="chatbot.css">
+
+    <!-- Link to manifest file for enabling PWA -->
+    <link rel="manifest" href="/manifest.json">
+
     <title>BuddyTrail</title>
     <style>
      .header1{
@@ -37,7 +41,7 @@
        border-radius:8px;
        padding: 10px 8px 4px 8px;
      }
-      
+
     /* Button Styling */
     .btn {
       background-color: #007bff; /* Primary button color */
@@ -81,7 +85,7 @@
 }
 
 .rating {
-  height: 50px;
+  height: auto;
 }
 
 .rating:hover {
@@ -226,7 +230,7 @@
 .card.inview {
   opacity: 1;
   transform: translateY(0);
-  
+
 }
 .card.inview header1 {
       padding: 10px 8px 4px 8px;
@@ -308,7 +312,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
   }
-  
+
   /* Wrapper for the logo and loader */
   .loader-wrapper {
     position: relative;
@@ -318,7 +322,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   /* Logo Styling */
   #logo {
     width: 140px;
@@ -326,7 +330,7 @@
     z-index: 10; /* Ensures logo stays above the loader */
     animation: pulse 2s infinite ease-in-out;
   }
-  
+
   /* Circular Loader surrounding the logo */
   .loader-globe {
     position: absolute;
@@ -338,7 +342,7 @@
     border-right-color: white;
     animation: spin 2s linear infinite;
   }
-  
+
   /* Loading Text */
   #loading-text {
     margin-top: 20px;
@@ -348,18 +352,18 @@
     letter-spacing: 1px;
     animation: textGlow 2s ease-in-out infinite;
   }
-  
+
   /* Keyframes Animations */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
+
   @keyframes textGlow {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
   }
-  
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -371,13 +375,13 @@
     window.addEventListener('load', function() {
         const preloader = document.getElementById('preloader');
         const content = document.getElementById('content');
-    
+
         // Set a small timeout for better user experience
         setTimeout(function() {
             // Hide preloader
             preloader.style.opacity = '0';
             preloader.style.transition = 'opacity 1s ease-in-out';
-    
+
             // Show content after preloader fades out
             setTimeout(function() {
                 preloader.style.display = 'none';
@@ -386,7 +390,7 @@
             }, 1000); // Match the transition duration
         }, 2000);  // Adjust to the length of your spinner animation
     });
-    
+
       </script>
 
     <!-- Google Translate Button -->
@@ -517,8 +521,8 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <nav >
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
       <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -710,6 +714,17 @@
 </div>
 
 </div>
+<style>
+    .dark-mode .card{
+      background: #0e0e0e;
+    }
+    .dark-mode .card h4{
+      color: #f39c12;
+    }
+    .dark-mode .card p{
+      color: #fff;
+    }
+</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".card");
@@ -781,7 +796,7 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2>Exclusive Deals and Offers</h2>
+        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
         <div class="carousel">
@@ -947,7 +962,7 @@ button {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 }
 
@@ -1059,7 +1074,8 @@ p {
 
     <!-- travel itineraries -->
     <section id="itineraries" class="itineraries-section" style="height: 100%;">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
+      
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -1485,7 +1501,7 @@ select {
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
       <h2 id="h1darkbtn">Personalized Recommendations</h2>
-      <p>
+      <p style="font-size: 20px;"> 
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
       </p>
@@ -1495,7 +1511,7 @@ select {
         <div class="recommendation-item">
           <div class="header1">
           <h3 id="h1darkbtn">Beach Resort in Goa</h3>
-          <p>
+          <p style="color : gray ;">
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
           </p>
@@ -1507,7 +1523,7 @@ select {
         <div class="recommendation-item">
           <div class="header2">
           <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
-          <p>
+          <p style="color : gray ;">
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
           </p>
@@ -1519,7 +1535,7 @@ select {
         <div class="recommendation-item">
           <div class="header1">
           <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
-          <p>
+          <p style="color : gray ;">
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
           </p>
@@ -1629,7 +1645,7 @@ select {
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
-      <p id="emergency-text">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
+      <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
@@ -1650,7 +1666,7 @@ select {
 
         <section id="content">
           <h2>Content</h2>
-          <input id="content-input" type="text">
+          <textarea id="content-input"></textarea>
           <ul id="content-list"></ul>
         </section>
       </main>
@@ -1687,6 +1703,7 @@ select {
   width: 100%; /* Ensure full width inside the container */
   border-radius: 8px;
   outline: none;
+  resize: vertical;
 }
 
 /* Header styling */
@@ -1963,6 +1980,9 @@ nav.hi ul li.NAVI i:hover  {
       h1#h1darkbtn:hover {
           color: #ffcc00; /* Changes the color when hovered */
       }
+      p#darkbtn {
+        font-size: large;
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -2126,18 +2146,30 @@ nav.hi ul li.NAVI i:hover  {
           }
       }
   </style>
-  <h1 style="padding-left:40%;color:#022f5e;padding-top:2px">Destination Guide</h1>
+  <h1 style="padding-left:40%;color: rgba(255, 255, 248, 0.953);padding-top:8px ; margin: 5px 0 2px;">Destination Guide</h1>
   <section id="destinations">
 
       <div class="post-container">
 
           <h3>Share Your Experiences</h3>
           <form id="postForm">
-            <p>Share your experience and guidence</p>
               <textarea id="postContent" placeholder="Write your post here..." required></textarea>
               <button type="submit">Submit</button>
           </form>
       </div>
+      <style>
+
+    .post-container {
+    background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
+
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+        </style>
 
       <!-- Right image of a destination inside a container -->
       <div class="destination-image-container">
@@ -2152,23 +2184,12 @@ nav.hi ul li.NAVI i:hover  {
     <!-- Map Section -->
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
-      <p>Click on the markers to learn more about each destination.</p>
+      <p style="color: whitesmoke;">Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
       async defer></script>
-
-
-
-      <!-- Map Section -->
-
-      <!-- Google Maps JavaScript API -->
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
-        async
-        defer
-      ></script>
 
     <!-- CONTACT US-->
     <style>
@@ -2440,7 +2461,7 @@ textarea.form-control {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading" >Testimonials</h2>
+    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2484,13 +2505,55 @@ textarea.form-control {
 
   <section id="reviews" class="reviews-section">
     <div class="review">
-        <div class="review-form">
-            <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
-            <p class="review-p">
-                Read what others have to say about their experiences with various
-                destinations, hotels, flights, and activities. Share your own reviews
-                and help fellow travelers make informed decisions.
-            </p>
+
+      <div class="review-form">
+        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
+        <p class="review-p">
+          Read what others have to say about their experiences with various
+          destinations, hotels, flights, and activities. Share your own reviews
+          and help fellow travelers make informed decisions.
+        </p>
+
+        <div style="display: flex;">
+          <form class="form" id="reviewForm">
+            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
+            <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
+            placeholder="Enter your name"
+            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+            oninput="this.setCustomValidity('')"/>
+
+            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
+            <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            placeholder="Enter your destination or service"
+            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+            oninput="this.setCustomValidity('')"/>
+
+            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
+           <!-- <select id="rating" class="rating" name="rating">
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>-->
+
+            <div class="rating" name="rating">
+              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->
+              <div class="star-widget">
+               <input type="radio" name="rate" id="rate-5">
+               <label for="rate-5"  class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-4">
+               <label for="rate-4" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-3">
+               <label for="rate-3" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-2">
+               <label for="rate-2" class="fas fa-star"></label>
+               <input type="radio" name="rate" id="rate-1">
+               <label for="rate-1" class="fas fa-star"></label>
+               <header></header>
+            </div>
+           </div>
+
 
             <div style="display: flex;">
                 <form class="form" id="reviewForm">
@@ -2689,7 +2752,7 @@ textarea.form-control {
   <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
     <button class="scroll-button group" id="scrollTopBtn">
       <span class="tooltip-text-scroll">
-        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
       </span>
     </button>
   </div>
