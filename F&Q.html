@@ -641,6 +641,43 @@ body.dark-mode .navbar a:hover {
       <div class="footer-column">
         <h3>About Us</h3>
         <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+              <!-- Newsletter Form Section -->
+      <style>
+        .footer-column.newsletter {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #email {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 6px;
+            font-size: 14px;
+            background-color: #007bff;
+        }
+        #subscription-message {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+      <div class="footer-column newsletter" id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+      </div>
       </div>
   
       <!-- Quick Links Section -->
@@ -677,9 +714,7 @@ body.dark-mode .navbar a:hover {
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
         <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-      </div>
-  
-      <!-- Follow Us Section -->
+        <!-- Follow Us Section -->
       <div class="footer-column">
         <h3>Follow Us</h3>
         <div class="social-icons">
@@ -689,42 +724,6 @@ body.dark-mode .navbar a:hover {
           <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-  
-      <!-- Newsletter Form Section -->
-      <style>
-        .footer-column.newsletter {
-            max-width: 300px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        #newsletter-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #email {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button[type="submit"] {
-            width: 100px;
-            padding: 6px;
-            font-size: 14px;
-        }
-        #subscription-message {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-    </style>
-      <div class="footer-column newsletter" id="newsletter">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form id="newsletter-form">
-          <input type="email" id="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p id="subscription-message"></p>
       </div>
     </div>
   

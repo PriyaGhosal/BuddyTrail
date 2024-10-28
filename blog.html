@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuddyTrail Blog - Discover Your Next Adventure</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="blog.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="RatingStyle.css" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="RatingStyle.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/popup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,1325 +35,1360 @@
     />
     <link rel="stylesheet" href="chatbot.css" />
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2ecc71;
-            --background-color: #f4f4f4;
-            --text-color: #333;
-            --card-bg: #ffffff;
-            --header-bg: #1a1a2e;
-            --header-text: #ffffff;
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #f4f4f4;
+        --text-color: #333;
+        --card-bg: #ffffff;
+        --header-bg: #1a1a2e;
+        --header-text: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        margin-bottom: 85px;
+      }
+
+      header {
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+      }
+
+      header.scrolled {
+        background-color: rgba(26, 26, 46, 0.9);
+        backdrop-filter: blur(10px);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      #logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--header-text);
+      }
+
+      #nav-list {
+        display: flex;
+        list-style-type: none;
+      }
+
+      #nav-list li {
+        margin-left: 2rem;
+      }
+
+      #nav-list a {
+        color: var(--header-text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      #nav-list a:hover,
+      #nav-list a.active {
+        color: var(--secondary-color);
+      }
+
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--header-text);
+        cursor: pointer;
+      }
+
+      main {
+        margin-top: 80px;
+        padding: 2rem 0;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #3498db, #2ecc71);
+        color: white;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        min-height: auto;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: white;
+        -webkit-text-stroke: 0px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        animation: fadeInUp 1s ease-out 0.3s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .cms-controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .cms-controls button {
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        margin: 0 0.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .cms-controls button:hover {
+        background-color: #27ae60;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .blog-filters {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .blog-filters select {
+        padding: 0.7rem;
+        margin: 0 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        background-color: white;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .blog-filters select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      .blog-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .blog-post {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .blog-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .blog-post h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+      }
+
+      .meta {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 1rem;
+      }
+
+      .category {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.2rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .tags {
+        margin-bottom: 1rem;
+      }
+
+      .tag {
+        display: inline-block;
+        background-color: #e0e0e0;
+        color: #333;
+        padding: 0.2rem 0.5rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .tag:hover {
+        background-color: #d0d0d0;
+      }
+
+      .content {
+        margin-bottom: 1rem;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: auto;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .read-more:hover {
+        color: #2980b9;
+      }
+
+      .comments-section {
+        margin-top: 1.5rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+      }
+
+      .comment {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .comment:hover {
+        background-color: #f0f0f0;
+      }
+
+      .comment-form textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        resize: vertical;
+        font-family: "Poppins", sans-serif;
+        transition: all 0.3s ease;
+      }
+
+      .comment-form textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      .comment-form button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .comment-form button:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+      }
+
+      /* New styles for modals */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        animation: fadeIn 0.3s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal-content {
+        background-color: var(--card-bg);
+        margin: 10% auto;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 600px;
+        animation: slideIn 0.3s;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            margin-bottom: 85px;
+        to {
+          transform: translateY(0);
+          opacity: 1;
         }
+      }
 
-        header {
-            background-color: var(--header-bg);
-            color: var(--header-text);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
+      .modal-content h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-family: "Playfair Display", serif;
+      }
 
-        header.scrolled {
-            background-color: rgba(26, 26, 46, 0.9);
-            backdrop-filter: blur(10px);
-        }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
+      .close:hover,
+      .close:focus {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+      /* Form styles */
+      .modal-form input[type="text"],
+      .modal-form textarea {
+        width: 100%;
+        padding: 0.7rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        transition: border-color 0.3s ease;
+      }
 
-        .logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
+      .modal-form input[type="text"]:focus,
+      .modal-form textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
 
-        #logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--header-text);
-        }
+      .modal-form button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
 
-        #nav-list {
-            display: flex;
-            list-style-type: none;
-        }
+      .modal-form button:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-        #nav-list li {
-            margin-left: 2rem;
-        }
+      /* List styles for categories and tags */
+      .item-list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
 
-        #nav-list a {
-            color: var(--header-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+      .item-list li {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 0.7rem 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
 
-        #nav-list a:hover,
-        #nav-list a.active {
-            color: var(--secondary-color);
-        }
+      .item-list li:hover {
+        background-color: #f0f0f0;
+      }
 
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--header-text);
-            cursor: pointer;
-        }
+      .delete-btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 0.3rem 0.7rem;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.8rem;
+      }
 
-        main {
-            margin-top: 80px;
-            padding: 2rem 0;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #3498db, #2ecc71);
-            color: white;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            min-height: auto;
-        }
-
-        .hero h2 {
-
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            -webkit-text-stroke: 0px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease-out 0.3s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .cms-controls {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .cms-controls button {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            margin: 0 0.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .cms-controls button:hover {
-            background-color: #27ae60;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .blog-filters {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .blog-filters select {
-            padding: 0.7rem;
-            margin: 0 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            background-color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .blog-filters select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-
-        .blog-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-post {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .blog-post h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-        }
-
-        .meta {
-            font-size: 0.9rem;
-            color: #777;
-            margin-bottom: 1rem;
-        }
-
-        .category {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.2rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .tags {
-            margin-bottom: 1rem;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: #e0e0e0;
-            color: #333;
-            padding: 0.2rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .tag:hover {
-            background-color: #d0d0d0;
-        }
-
-        .content {
-            margin-bottom: 1rem;
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: auto;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: #2980b9;
-        }
-
-        .comments-section {
-            margin-top: 1.5rem;
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
-        }
-
-        .comment {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .comment:hover {
-            background-color: #f0f0f0;
-        }
-
-        .comment-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            resize: vertical;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        .comment-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-
-        .comment-form button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 0.5rem;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .comment-form button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-
-        
-
-        /* New styles for modals */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .modal-content {
-            background-color: var(--card-bg);
-            margin: 10% auto;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 600px;
-            animation: slideIn 0.3s;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-content h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Form styles */
-        .modal-form input[type="text"],
-        .modal-form textarea {
-            width: 100%;
-            padding: 0.7rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-
-        .modal-form input[type="text"]:focus,
-        .modal-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-
-        .modal-form button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .modal-form button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* List styles for categories and tags */
-        .item-list {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 1.5rem;
-        }
-
-        .item-list li {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 0.7rem 1rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .item-list li:hover {
-            background-color: #f0f0f0;
-        }
-
-        .delete-btn {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 0.3rem 0.7rem;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
-        }
-
-        .delete-btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-1px);
-        }
+      .delete-btn:hover {
+        background-color: #c0392b;
+        transform: translateY(-1px);
+      }
     </style>
-</head>
+  </head>
 
-<body>
-      <!-- Preloader -->
-      <div id="preloader">
-        <div class="loader-wrapper">
-          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
-          <div class="loader-globe"></div>
-        </div>
-        <div id="loading-text">Ready to Explore the World...</div>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader-wrapper">
+        <img src="img/logo.png" alt="Travel Website Logo" id="logo" />
+        <div class="loader-globe"></div>
       </div>
-      <style>
+      <div id="loading-text">Ready to Explore the World...</div>
+    </div>
+    <style>
       /* Preloader Container */
       #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-  }
-  
-  /* Wrapper for the logo and loader */
-  .loader-wrapper {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Logo Styling */
-  #logo {
-    width: 140px;
-    position: relative;
-    z-index: 10; /* Ensures logo stays above the loader */
-    animation: pulse 2s infinite ease-in-out;
-  }
-  
-  /* Circular Loader surrounding the logo */
-  .loader-globe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 8px solid transparent;
-    border-left-color: white;
-    border-right-color: white;
-    animation: spin 2s linear infinite;
-  }
-  
-  /* Loading Text */
-  #loading-text {
-    margin-top: 20px;
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-    animation: textGlow 2s ease-in-out infinite;
-  }
-  
-  /* Keyframes Animations */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes textGlow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-      </style>
-      <script>
-        // Function to hide preloader and show content once the page has fully loaded
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        const content = document.getElementById('content');
-    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+      }
+
+      /* Wrapper for the logo and loader */
+      .loader-wrapper {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Logo Styling */
+      #logo {
+        width: 140px;
+        position: relative;
+        z-index: 10; /* Ensures logo stays above the loader */
+        animation: pulse 2s infinite ease-in-out;
+      }
+
+      /* Circular Loader surrounding the logo */
+      .loader-globe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        border-left-color: white;
+        border-right-color: white;
+        animation: spin 2s linear infinite;
+      }
+
+      /* Loading Text */
+      #loading-text {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+        animation: textGlow 2s ease-in-out infinite;
+      }
+
+      /* Keyframes Animations */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes textGlow {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <script>
+      // Function to hide preloader and show content once the page has fully loaded
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        const content = document.getElementById("content");
+
         // Set a small timeout for better user experience
-        setTimeout(function() {
-            // Hide preloader
-            preloader.style.opacity = '0';
-            preloader.style.transition = 'opacity 1s ease-in-out';
-    
-            // Show content after preloader fades out
-            setTimeout(function() {
-                preloader.style.display = 'none';
-                content.style.display = 'block';
-                content.classList.add('show');  // Trigger fade-in transition
-            }, 1000); // Match the transition duration
-        }, 2000);  // Adjust to the length of your spinner animation
-    });
-    
-      </script>
+        setTimeout(function () {
+          // Hide preloader
+          preloader.style.opacity = "0";
+          preloader.style.transition = "opacity 1s ease-in-out";
+
+          // Show content after preloader fades out
+          setTimeout(function () {
+            preloader.style.display = "none";
+            content.style.display = "block";
+            content.classList.add("show"); // Trigger fade-in transition
+          }, 1000); // Match the transition duration
+        }, 2000); // Adjust to the length of your spinner animation
+      });
+    </script>
     <header class="main-head">
-        <div class="logo">
-          <img src="img/logo.png" id="logo-web" />
-          <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-        </div>
-        <nav>
-          <ul id="nav-list">
-            <span class="dropdown-close-btn" id="closeBtn">×</span>
-            <li><a href="index.html" class="navhover">Home</a></li>
-            <li><a href="team.html" class="navhover">Team</a></li>
-            <li>
-              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
-            </li>
-            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-            <li><a href="about.html" class="navhover">About</a></li>
-            <li>
-              <a href="index.html#itineraries" class="navhover"
-                >Travel Itineraries</a
-              >
-            </li>
-            <li><a href="./contact.html" class="navhover">Contact</a></li>
-            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-            <li><a href="auth.html" class="navhover">Sign In</a></li>
-          </ul>
-        </nav>
-        <!-- Toggle Button -->
-        <div class="toggle">
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"
-              ><img src="day-mode.png" alt="Light mode"
-            /></span>
-            <span class="moon-icon glow" style="display: none"
-              ><img src="moon.png" alt="Dark mode"
-            /></span>
-          </button>
-        </div>
-  
-        <!-- Hamburger button for mobile -->
-        <button class="hamburger" id="hamburger">☰</button>
-      </header>
+      <div class="logo">
+        <img src="img/logo.png" id="logo-web" />
+        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+      </div>
+      <nav>
+        <ul id="nav-list">
+          <span class="dropdown-close-btn" id="closeBtn">×</span>
+          <li><a href="index.html" class="navhover">Home</a></li>
+          <li><a href="team.html" class="navhover">Team</a></li>
+          <li>
+            <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+          </li>
+          <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li>
+            <a href="index.html#itineraries" class="navhover"
+              >Travel Itineraries</a
+            >
+          </li>
+          <li><a href="./contact.html" class="navhover">Contact</a></li>
+          <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
+      </nav>
+      <!-- Toggle Button -->
+      <div class="toggle">
+        <button class="mode-toggle" id="modeToggle">
+          <span class="sun-icon glow"
+            ><img src="day-mode.png" alt="Light mode"
+          /></span>
+          <span class="moon-icon glow" style="display: none"
+            ><img src="moon.png" alt="Dark mode"
+          /></span>
+        </button>
+      </div>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">☰</button>
+    </header>
 
     <main>
-        <section class="hero">
-            <h2>Discover Travel Tips, Stories, and Inspiration</h2>
-            <p>Welcome to the BuddyTrail Blog, your go-to destination for all things travel!</p>
-        </section>
+      <section class="hero">
+        <h2>Discover Travel Tips, Stories, and Inspiration</h2>
+        <p>
+          Welcome to the BuddyTrail Blog, your go-to destination for all things
+          travel!
+        </p>
+      </section>
 
-        <div class="container">
-            <div class="cms-controls">
-                <button onclick="window.location='new_post.html'" id="newPostBtn">New Post</button>
-                <button id="manageCategoriesBtn">Manage Categories</button>
-                <button id="manageTagsBtn">Manage Tags</button>
-            </div>
-
-            <div class="blog-filters">
-                <select id="categoryFilter">
-                    <option value="">All Categories</option>
-                </select>
-                <select id="tagFilter">
-                    <option value="">All Tags</option>
-                </select>
-            </div>
-
-            <div class="blog-container">
-                <!-- Blog posts will be dynamically generated here -->
-            </div>
+      <div class="container">
+        <div class="cms-controls">
+          <button onclick="window.location='new_post.html'" id="newPostBtn">
+            New Post
+          </button>
+          <button id="manageCategoriesBtn">Manage Categories</button>
+          <button id="manageTagsBtn">Manage Tags</button>
         </div>
+
+        <div class="blog-filters">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+          </select>
+          <select id="tagFilter">
+            <option value="">All Tags</option>
+          </select>
+        </div>
+
+        <div class="blog-container">
+          <!-- Blog posts will be dynamically generated here -->
+        </div>
+      </div>
     </main>
     <footer id="footer">
-        <div class="footer-container">
-          <!-- About Us Section -->
-          <div class="footer-column">
-            <h3>About Us</h3>
-            <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-          </div>
-      
-          <!-- Quick Links Section -->
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="faq.html" class="faq-link">FAQs</a></li>
-              <li><a href="servicespage.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contributor/contributor.html">Our Contributor</a></li>
-            </ul>
-          </div>
-      
-          <!-- Legal Links Section -->
-          <div class="footer-column">
-            <h3>Legal Links</h3>
-            <ul>
-              <li><a href="terms_of_service.html">Terms of Service</a></li>
-              <li><a href="privacypolicy.html">Privacy Policy</a></li>
-              <li><a href="copyright.html">Copyright Notice</a></li>
-              <li><a href="disclaimer.html">Disclaimer</a></li>
-              <li><a href="cookie_policy.html">Cookie Policy</a></li>
-      
-              
-      
-            </ul>
-          </div>
-      
-          <!-- Contact Us Section -->
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-          </div>
-      
-          <!-- Follow Us Section -->
-          <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-              <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-      
+      <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            Discover and plan affordable trips with BuddyTrail's travel
+            companion tools.
+          </p>
           <!-- Newsletter Form Section -->
           <style>
             .footer-column.newsletter {
-                max-width: 300px;
-                margin: 0 auto;
-                text-align: center;
+              max-width: 300px;
+              margin: 0 auto;
+              text-align: center;
             }
             #newsletter-form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
             #email {
-                width: 100%;
-                margin-bottom: 10px;
-                padding: 8px;
-                box-sizing: border-box;
+              width: 100%;
+              margin-bottom: 10px;
+              padding: 8px;
+              box-sizing: border-box;
             }
             button[type="submit"] {
-                width: 100px;
-                padding: 6px;
-                font-size: 14px;
+              width: 100px;
+              padding: 6px;
+              font-size: 14px;
+              background-color: #007bff;
             }
             #subscription-message {
-                font-size: 14px;
-                margin-top: 10px;
+              font-size: 14px;
+              margin-top: 10px;
             }
-        </style>
+          </style>
           <div class="footer-column newsletter" id="newsletter">
             <h3>Subscribe to Our Newsletter</h3>
             <form id="newsletter-form">
-              <input type="email" id="email" placeholder="Enter your email" required />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
               <button type="submit">Subscribe</button>
             </form>
             <p id="subscription-message"></p>
           </div>
         </div>
-      
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="servicespage.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+          </ul>
         </div>
-      </footer>
+
+        <!-- Legal Links Section -->
+        <div class="footer-column">
+          <h3>Legal Links</h3>
+          <ul>
+            <li><a href="terms_of_service.html">Terms of Service</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="copyright.html">Copyright Notice</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="cookie_policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          <!-- Follow Us Section -->
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://discord.com/invite/priyaghosal" target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a
+                href="https://x.com/https://twitter.com/PriyaGhosa39968"
+                target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://github.com/PriyaGhosal/BuddyTrail"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
     <script>
-        // Initialize data in localStorage if it doesn't exist
-        if (!localStorage.getItem('blogPosts')) {
-            localStorage.setItem('blogPosts', JSON.stringify([
-                {
-                    id: 1,
-                    title: "10 Must-Visit Destinations for 2024",
-                    content: "As we enter 2024, the world of travel continues to evolve. Here are our top picks for must-visit destinations:\n\n1. Kyoto, Japan: Experience the perfect blend of ancient traditions and modern innovations.\n2. Galapagos Islands, Ecuador: Witness unique wildlife in their natural habitat.\n3. Dubrovnik, Croatia: Explore the stunning medieval architecture and crystal-clear Adriatic waters.\n4. Machu Picchu, Peru: Discover the mysteries of this ancient Incan citadel.\n5. Santorini, Greece: Enjoy breathtaking sunsets and picturesque white-washed buildings.\n6. Banff National Park, Canada: Immerse yourself in the pristine wilderness of the Canadian Rockies.\n7. Marrakech, Morocco: Get lost in the vibrant souks and experience rich Moroccan culture.\n8. Reykjavik, Iceland: Chase the Northern Lights and relax in geothermal hot springs.\n9. Queenstown, New Zealand: Indulge in adrenaline-pumping activities amidst stunning landscapes.\n10. Petra, Jordan: Step back in time at this ancient wonder carved into rose-red cliffs.\n\nEach of these destinations offers unique experiences that will create lasting memories. Whether you're seeking cultural immersion, natural wonders, or adventure, these places have something special to offer every type of traveler in 2024.",
-                    author: "Travel Expert",
-                    date: "May 15, 2024",
-                    category: "Destinations",
-                    tags: ["2024", "travel", "destinations"],
-                    comments: []
-                },
-                {
-                    id: 2,
-                    title: "Exploring the Hidden Gems of Bali",
-                    content: "Bali, known for its stunning beaches and vibrant culture, offers much more than meets the eye. Venture beyond the popular tourist spots to discover hidden waterfalls, ancient temples, and serene rice terraces. Don't miss the sacred Tirta Empul temple or the breathtaking Sekumpul Waterfall. For a unique experience, visit the lesser-known Nusa Penida island for its dramatic cliffs and pristine beaches.",
-                    author: "Island Explorer",
-                    date: "June 1, 2024",
-                    category: "Destinations",
-                    tags: ["Bali", "hidden gems", "adventure"],
-                    comments: []
-                },
-                {
-                    id: 3,
-                    title: "The Majestic Landscapes of Patagonia",
-                    content: "Patagonia, straddling Chile and Argentina, is a must-visit destination for nature lovers and adventure seekers. Witness the towering peaks of Torres del Paine, trek on the massive Perito Moreno Glacier, and explore the enchanting Tierra del Fuego. The region's diverse wildlife, including guanacos and Andean condors, adds to its allure. Plan your visit between December and February for the best weather conditions.",
-                    author: "Adventure Junkie",
-                    date: "June 15, 2024",
-                    category: "Destinations",
-                    tags: ["Patagonia", "nature", "trekking"],
-                    comments: []
-                },
-                {
-                    id: 4,
-                    title: "Uncovering the Magic of Marrakech",
-                    content: "Marrakech, the Red City of Morocco, is a sensory delight that should be on every traveler's bucket list. Lose yourself in the winding alleys of the medina, bargain for treasures in the bustling souks, and marvel at the intricate architecture of the Bahia Palace. Don't miss the chance to experience a traditional hammam or enjoy a sunset camel ride in the nearby Agafay Desert. The vibrant Jardin Majorelle and the historic Koutoubia Mosque are also must-see attractions.",
-                    author: "Culture Enthusiast",
-                    date: "July 1, 2024",
-                    category: "Destinations",
-                    tags: ["Marrakech", "culture", "history"],
-                    comments: []
-                },
-                {
-                    id: 5,
-                    title: "The Natural Wonders of Iceland",
-                    content: "Iceland, the land of fire and ice, offers a unique landscape that seems almost otherworldly. From the ethereal Northern Lights to the powerful geysers and hot springs, nature's spectacles are on full display here. Take a dip in the Blue Lagoon, witness the beauty of Gullfoss waterfall, and explore the black sand beaches of Vik. For the adventurous, a trip to the Vatnajökull glacier or a tour of the Golden Circle is a must. Don't forget to visit in summer for the midnight sun or in winter for the best chances to see the aurora borealis.",
-                    author: "Nature Photographer",
-                    date: "July 15, 2024",
-                    category: "Destinations",
-                    tags: ["Iceland", "natural wonders", "photography"],
-                    comments: []
-                },
-                {
-                    id: 6,
-                    title: "The Ancient Wonders of Petra, Jordan",
-                    content: "Petra, the ancient city carved into rose-red cliffs, is a testament to human ingenuity and one of the world's most impressive archaeological sites. Walk through the narrow Siq to reach the iconic Treasury, then explore the vast complex of tombs, temples, and the Roman-style theatre. For a truly magical experience, visit Petra by Night when the site is illuminated by thousands of candles. Don't miss the opportunity to hike up to the Monastery for panoramic views of the surrounding landscape. Petra is not just a destination; it's a journey through time that will leave you in awe.",
-                    author: "History Buff",
-                    date: "August 1, 2024",
-                    category: "Destinations",
-                    tags: ["Petra", "archaeology", "history"],
-                    comments: []
-                }
-            ]));
-        }
+              // Initialize data in localStorage if it doesn't exist
+              if (!localStorage.getItem('blogPosts')) {
+                  localStorage.setItem('blogPosts', JSON.stringify([
+                      {
+                          id: 1,
+                          title: "10 Must-Visit Destinations for 2024",
+                          content: "As we enter 2024, the world of travel continues to evolve. Here are our top picks for must-visit destinations:\n\n1. Kyoto, Japan: Experience the perfect blend of ancient traditions and modern innovations.\n2. Galapagos Islands, Ecuador: Witness unique wildlife in their natural habitat.\n3. Dubrovnik, Croatia: Explore the stunning medieval architecture and crystal-clear Adriatic waters.\n4. Machu Picchu, Peru: Discover the mysteries of this ancient Incan citadel.\n5. Santorini, Greece: Enjoy breathtaking sunsets and picturesque white-washed buildings.\n6. Banff National Park, Canada: Immerse yourself in the pristine wilderness of the Canadian Rockies.\n7. Marrakech, Morocco: Get lost in the vibrant souks and experience rich Moroccan culture.\n8. Reykjavik, Iceland: Chase the Northern Lights and relax in geothermal hot springs.\n9. Queenstown, New Zealand: Indulge in adrenaline-pumping activities amidst stunning landscapes.\n10. Petra, Jordan: Step back in time at this ancient wonder carved into rose-red cliffs.\n\nEach of these destinations offers unique experiences that will create lasting memories. Whether you're seeking cultural immersion, natural wonders, or adventure, these places have something special to offer every type of traveler in 2024.",
+                          author: "Travel Expert",
+                          date: "May 15, 2024",
+                          category: "Destinations",
+                          tags: ["2024", "travel", "destinations"],
+                          comments: []
+                      },
+                      {
+                          id: 2,
+                          title: "Exploring the Hidden Gems of Bali",
+                          content: "Bali, known for its stunning beaches and vibrant culture, offers much more than meets the eye. Venture beyond the popular tourist spots to discover hidden waterfalls, ancient temples, and serene rice terraces. Don't miss the sacred Tirta Empul temple or the breathtaking Sekumpul Waterfall. For a unique experience, visit the lesser-known Nusa Penida island for its dramatic cliffs and pristine beaches.",
+                          author: "Island Explorer",
+                          date: "June 1, 2024",
+                          category: "Destinations",
+                          tags: ["Bali", "hidden gems", "adventure"],
+                          comments: []
+                      },
+                      {
+                          id: 3,
+                          title: "The Majestic Landscapes of Patagonia",
+                          content: "Patagonia, straddling Chile and Argentina, is a must-visit destination for nature lovers and adventure seekers. Witness the towering peaks of Torres del Paine, trek on the massive Perito Moreno Glacier, and explore the enchanting Tierra del Fuego. The region's diverse wildlife, including guanacos and Andean condors, adds to its allure. Plan your visit between December and February for the best weather conditions.",
+                          author: "Adventure Junkie",
+                          date: "June 15, 2024",
+                          category: "Destinations",
+                          tags: ["Patagonia", "nature", "trekking"],
+                          comments: []
+                      },
+                      {
+                          id: 4,
+                          title: "Uncovering the Magic of Marrakech",
+                          content: "Marrakech, the Red City of Morocco, is a sensory delight that should be on every traveler's bucket list. Lose yourself in the winding alleys of the medina, bargain for treasures in the bustling souks, and marvel at the intricate architecture of the Bahia Palace. Don't miss the chance to experience a traditional hammam or enjoy a sunset camel ride in the nearby Agafay Desert. The vibrant Jardin Majorelle and the historic Koutoubia Mosque are also must-see attractions.",
+                          author: "Culture Enthusiast",
+                          date: "July 1, 2024",
+                          category: "Destinations",
+                          tags: ["Marrakech", "culture", "history"],
+                          comments: []
+                      },
+                      {
+                          id: 5,
+                          title: "The Natural Wonders of Iceland",
+                          content: "Iceland, the land of fire and ice, offers a unique landscape that seems almost otherworldly. From the ethereal Northern Lights to the powerful geysers and hot springs, nature's spectacles are on full display here. Take a dip in the Blue Lagoon, witness the beauty of Gullfoss waterfall, and explore the black sand beaches of Vik. For the adventurous, a trip to the Vatnajökull glacier or a tour of the Golden Circle is a must. Don't forget to visit in summer for the midnight sun or in winter for the best chances to see the aurora borealis.",
+                          author: "Nature Photographer",
+                          date: "July 15, 2024",
+                          category: "Destinations",
+                          tags: ["Iceland", "natural wonders", "photography"],
+                          comments: []
+                      },
+                      {
+                          id: 6,
+                          title: "The Ancient Wonders of Petra, Jordan",
+                          content: "Petra, the ancient city carved into rose-red cliffs, is a testament to human ingenuity and one of the world's most impressive archaeological sites. Walk through the narrow Siq to reach the iconic Treasury, then explore the vast complex of tombs, temples, and the Roman-style theatre. For a truly magical experience, visit Petra by Night when the site is illuminated by thousands of candles. Don't miss the opportunity to hike up to the Monastery for panoramic views of the surrounding landscape. Petra is not just a destination; it's a journey through time that will leave you in awe.",
+                          author: "History Buff",
+                          date: "August 1, 2024",
+                          category: "Destinations",
+                          tags: ["Petra", "archaeology", "history"],
+                          comments: []
+                      }
+                  ]));
+              }
 
-        if (!localStorage.getItem('categories')) {
-            localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable Travel", "Budget Travel", "Solo Travel", "Food"]));
-        }
+              if (!localStorage.getItem('categories')) {
+                  localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable Travel", "Budget Travel", "Solo Travel", "Food"]));
+              }
 
-        if (!localStorage.getItem('tags')) {
-            localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food", "Bali", "hidden gems", "adventure", "Patagonia", "nature", "trekking", "Marrakech", "culture", "history", "Iceland", "natural wonders", "photography", "Petra", "archaeology"]));
-        }
+              if (!localStorage.getItem('tags')) {
+                  localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food", "Bali", "hidden gems", "adventure", "Patagonia", "nature", "trekking", "Marrakech", "culture", "history", "Iceland", "natural wonders", "photography", "Petra", "archaeology"]));
+              }
 
-        // Function to get data from localStorage
-        function getLocalData(key) {
-            return JSON.parse(localStorage.getItem(key));
-        }
+              // Function to get data from localStorage
+              function getLocalData(key) {
+                  return JSON.parse(localStorage.getItem(key));
+              }
 
-        // Function to set data in localStorage
-        function setLocalData(key, data) {
-            localStorage.setItem(key, JSON.stringify(data));
-        }
+              // Function to set data in localStorage
+              function setLocalData(key, data) {
+                  localStorage.setItem(key, JSON.stringify(data));
+              }
 
-        function renderPosts() {
-            const container = document.querySelector('.blog-container');
-            container.innerHTML = '';
-            const posts = getLocalData('blogPosts');
+              function renderPosts() {
+                  const container = document.querySelector('.blog-container');
+                  container.innerHTML = '';
+                  const posts = getLocalData('blogPosts');
 
-            posts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                article.innerHTML = `
-            <h2>${post.title}</h2>
-            <div class="meta">Posted on ${post.date} by ${post.author}</div>
-            <div class="category">${post.category}</div>
-            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="content">
-                <p>${post.content.substring(0, 150)}...</p>
-             </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
+                  posts.forEach(post => {
+                      const article = document.createElement('article');
+                      article.className = 'blog-post';
+                      article.innerHTML = `
+                  <h2>${post.title}</h2>
+                  <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                  <div class="category">${post.category}</div>
+                  <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                  <div class="content">
+                      <p>${post.content.substring(0, 150)}...</p>
+                   </div>
+                  <div class="full-content" style="display: none;">
+                      <p>${marked(post.content)}</p>
+                  </div>
 
-            </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-            
-            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-            <div class="comments-section">
-                <h3>Comments (${post.comments.length})</h3>
-                <div class="comments">
-                    ${post.comments.slice(0, 2).map(comment => `
-                        <div class="comment">
-                            <p>${comment.text}</p>
-                            <small>${comment.date}</small>
-                        </div>
-                    `).join('')}
-                </div>
-                <form class="comment-form" data-post-id="${post.id}">
-                    <textarea placeholder="Add a comment"></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
-            </div>
-        `;
-                container.appendChild(article);
- });
+                  </div>
+                  <div class="full-content" style="display: none;">
+                      <p>${marked(post.content)}</p>
+                  </div>
 
-            addEventListeners();
-        }
+                  <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+                  <div class="comments-section">
+                      <h3>Comments (${post.comments.length})</h3>
+                      <div class="comments">
+                          ${post.comments.slice(0, 2).map(comment => `
+                              <div class="comment">
+                                  <p>${comment.text}</p>
+                                  <small>${comment.date}</small>
+                              </div>
+                          `).join('')}
+                      </div>
+                      <form class="comment-form" data-post-id="${post.id}">
+                          <textarea placeholder="Add a comment"></textarea>
+                          <button type="submit">Post Comment</button>
+                      </form>
+                  </div>
+              `;
+                      container.appendChild(article);
+       });
 
-        function addEventListeners() {
-            // Add event listeners for read more links
-            document.querySelectorAll('.read-more').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const article = e.target.closest('.blog-post');
-                    const content = article.querySelector('.content');
-                    const fullContent = article.querySelector('.full-content');
+                  addEventListeners();
+              }
 
-                    if (content.style.display !== 'none') {
-                        content.style.display = 'none';
-                        fullContent.style.display = 'block';
-                        e.target.textContent = 'Read Less';
-                    } else {
-                        content.style.display = 'block';
-                        fullContent.style.display = 'none';
-                        e.target.textContent = 'Read More';
-                    }
-                });
-            });
+              function addEventListeners() {
+                  // Add event listeners for read more links
+                  document.querySelectorAll('.read-more').forEach(link => {
+                      link.addEventListener('click', (e) => {
+                          e.preventDefault();
+                          const article = e.target.closest('.blog-post');
+                          const content = article.querySelector('.content');
+                          const fullContent = article.querySelector('.full-content');
 
-            // Add event listeners for comment forms
-            document.querySelectorAll('.comment-form').forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const postId = parseInt(e.target.getAttribute('data-post-id'));
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
-            });
-        }
+                          if (content.style.display !== 'none') {
+                              content.style.display = 'none';
+                              fullContent.style.display = 'block';
+                              e.target.textContent = 'Read Less';
+                          } else {
+                              content.style.display = 'block';
+                              fullContent.style.display = 'none';
+                              e.target.textContent = 'Read More';
+                          }
+                      });
+                  });
 
-        function populateFilters() {
-            const categoryFilter = document.getElementById('categoryFilter');
-            const tagFilter = document.getElementById('tagFilter');
-            const categories = getLocalData('categories');
-            const tags = getLocalData('tags');
+                  // Add event listeners for comment forms
+                  document.querySelectorAll('.comment-form').forEach(form => {
+                      form.addEventListener('submit', (e) => {
+                          e.preventDefault();
+                          const postId = parseInt(e.target.getAttribute('data-post-id'));
+                          const comment = e.target.querySelector('textarea').value;
+                          addComment(postId, comment);
+                          e.target.reset();
+                      });
+                  });
+              }
 
-            categoryFilter.innerHTML = '<option value="">All Categories</option>';
-            tagFilter.innerHTML = '<option value="">All Tags</option>';
+              function populateFilters() {
+                  const categoryFilter = document.getElementById('categoryFilter');
+                  const tagFilter = document.getElementById('tagFilter');
+                  const categories = getLocalData('categories');
+                  const tags = getLocalData('tags');
 
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categoryFilter.appendChild(option);
-            });
+                  categoryFilter.innerHTML = '<option value="">All Categories</option>';
+                  tagFilter.innerHTML = '<option value="">All Tags</option>';
 
-            tags.forEach(tag => {
-                const option = document.createElement('option');
-                option.value = tag;
-                option.textContent = tag;
-                tagFilter.appendChild(option);
-            });
+                  categories.forEach(category => {
+                      const option = document.createElement('option');
+                      option.value = category;
+                      option.textContent = category;
+                      categoryFilter.appendChild(option);
+                  });
 
-            // Add event listeners for filters
-            categoryFilter.addEventListener('change', filterPosts);
-            tagFilter.addEventListener('change', filterPosts);
-        }
+                  tags.forEach(tag => {
+                      const option = document.createElement('option');
+                      option.value = tag;
+                      option.textContent = tag;
+                      tagFilter.appendChild(option);
+                  });
 
-        function filterPosts() {
-            const selectedCategory = document.getElementById('categoryFilter').value;
-            const selectedTag = document.getElementById('tagFilter').value;
-            const posts = getLocalData('blogPosts');
+                  // Add event listeners for filters
+                  categoryFilter.addEventListener('change', filterPosts);
+                  tagFilter.addEventListener('change', filterPosts);
+              }
 
-            const filteredPosts = posts.filter(post => {
-                const categoryMatch = !selectedCategory || post.category === selectedCategory;
-                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
-                return categoryMatch && tagMatch;
-            });
+              function filterPosts() {
+                  const selectedCategory = document.getElementById('categoryFilter').value;
+                  const selectedTag = document.getElementById('tagFilter').value;
+                  const posts = getLocalData('blogPosts');
 
-            renderFilteredPosts(filteredPosts);
-        }
+                  const filteredPosts = posts.filter(post => {
+                      const categoryMatch = !selectedCategory || post.category === selectedCategory;
+                      const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+                      return categoryMatch && tagMatch;
+                  });
 
-        function renderFilteredPosts(filteredPosts) {
-            const container = document.querySelector('.blog-container');
-            container.innerHTML = '';
+                  renderFilteredPosts(filteredPosts);
+              }
 
-            filteredPosts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                article.innerHTML = `
-            <h2>${post.title}</h2>
-            <div class="meta">Posted on ${post.date} by ${post.author}</div>
-            <div class="category">${post.category}</div>
-            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="content">
-                <p>${post.content.substring(0, 150)}...</p>
-            </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-            <div class="comments-section">
-                <h3>Comments (${post.comments.length})</h3>
-                <div class="comments">
-                    ${post.comments.slice(0, 2).map(comment => `
-                        <div class="comment">
-                            <p>${comment.text}</p>
-                            <small>${comment.date}</small>
-                        </div>
-                    `).join('')}
-                </div>
-                <form class="comment-form" data-post-id="${post.id}">
-                    <textarea placeholder="Add a comment"></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
-            </div>
-        `;
-                container.appendChild(article);
-            });
+              function renderFilteredPosts(filteredPosts) {
+                  const container = document.querySelector('.blog-container');
+                  container.innerHTML = '';
 
-            addEventListeners();
-        }
+                  filteredPosts.forEach(post => {
+                      const article = document.createElement('article');
+                      article.className = 'blog-post';
+                      article.innerHTML = `
+                  <h2>${post.title}</h2>
+                  <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                  <div class="category">${post.category}</div>
+                  <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                  <div class="content">
+                      <p>${post.content.substring(0, 150)}...</p>
+                  </div>
+                  <div class="full-content" style="display: none;">
+                      <p>${marked(post.content)}</p>
+                  </div>
+                  <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+                  <div class="comments-section">
+                      <h3>Comments (${post.comments.length})</h3>
+                      <div class="comments">
+                          ${post.comments.slice(0, 2).map(comment => `
+                              <div class="comment">
+                                  <p>${comment.text}</p>
+                                  <small>${comment.date}</small>
+                              </div>
+                          `).join('')}
+                      </div>
+                      <form class="comment-form" data-post-id="${post.id}">
+                          <textarea placeholder="Add a comment"></textarea>
+                          <button type="submit">Post Comment</button>
+                      </form>
+                  </div>
+              `;
+                      container.appendChild(article);
+                  });
 
-        function viewFullPost(postId) {
-            const posts = getLocalData('blogPosts');
-            const post = posts.find(p => p.id === postId);
-            if (post) {
-                const modal = document.createElement('div');
-                modal.className = 'modal';
-                modal.innerHTML = `
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>${post.title}</h2>
-                <div class="meta">Posted on ${post.date} by ${post.author}</div>
-                <div class="category">${post.category}</div>
-                <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-                <div class="content">
-                    <p>${marked(post.content)}</p>
-                </div>
-                <div class="comments-section">
-                    <h3>Comments (${post.comments.length})</h3>
-                    <div class="comments">
-                        ${post.comments.map(comment => `
-                            <div class="comment">
-                                <p>${comment.text}</p>
-                                <small>${comment.date}</small>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <form class="comment-form" data-post-id="${post.id}">
-                        <textarea placeholder="Add a comment"></textarea>
-                        <button type="submit">Post Comment</button>
-                    </form>
-                </div>
-            </div>
-        `;
-                document.body.appendChild(modal);
+                  addEventListeners();
+              }
 
-                // Close modal when clicking on the close button or outside the modal
-                modal.querySelector('.close').addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        document.body.removeChild(modal);
-                    }
-                });
+              function viewFullPost(postId) {
+                  const posts = getLocalData('blogPosts');
+                  const post = posts.find(p => p.id === postId);
+                  if (post) {
+                      const modal = document.createElement('div');
+                      modal.className = 'modal';
+                      modal.innerHTML = `
+                  <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h2>${post.title}</h2>
+                      <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                      <div class="category">${post.category}</div>
+                      <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                      <div class="content">
+                          <p>${marked(post.content)}</p>
+                      </div>
+                      <div class="comments-section">
+                          <h3>Comments (${post.comments.length})</h3>
+                          <div class="comments">
+                              ${post.comments.map(comment => `
+                                  <div class="comment">
+                                      <p>${comment.text}</p>
+                                      <small>${comment.date}</small>
+                                  </div>
+                              `).join('')}
+                          </div>
+                          <form class="comment-form" data-post-id="${post.id}">
+                              <textarea placeholder="Add a comment"></textarea>
+                              <button type="submit">Post Comment</button>
+                          </form>
+                      </div>
+                  </div>
+              `;
+                      document.body.appendChild(modal);
 
-                // Add event listener for comment form in modal
-                modal.querySelector('.comment-form').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
-            }
-        }
+                      // Close modal when clicking on the close button or outside the modal
+                      modal.querySelector('.close').addEventListener('click', () => {
+                          document.body.removeChild(modal);
+                      });
+                      modal.addEventListener('click', (e) => {
+                          if (e.target === modal) {
+                              document.body.removeChild(modal);
+                          }
+                      });
 
-=
-            });
+                      // Add event listener for comment form in modal
+                      modal.querySelector('.comment-form').addEventListener('submit', (e) => {
+                          e.preventDefault();
+                          const comment = e.target.querySelector('textarea').value;
+                          addComment(postId, comment);
+                          e.target.reset();
+                      });
+                  }
+              }
 
-            addEventListeners();
-        }
+      =
+                  });
 
-        function addEventListeners() {
-            // Add event listeners for read more links
-            document.querySelectorAll('.read-more').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const article = e.target.closest('.blog-post');
-                    const content = article.querySelector('.content');
-                    const fullContent = article.querySelector('.full-content');
+                  addEventListeners();
+              }
 
-                    if (content.style.display !== 'none') {
-                        content.style.display = 'none';
-                        fullContent.style.display = 'block';
-                        e.target.textContent = 'Read Less';
-                    } else {
-                        content.style.display = 'block';
-                        fullContent.style.display = 'none';
-                        e.target.textContent = 'Read More';
-                    }
-                });
-            });
+              function addEventListeners() {
+                  // Add event listeners for read more links
+                  document.querySelectorAll('.read-more').forEach(link => {
+                      link.addEventListener('click', (e) => {
+                          e.preventDefault();
+                          const article = e.target.closest('.blog-post');
+                          const content = article.querySelector('.content');
+                          const fullContent = article.querySelector('.full-content');
 
-            // Add event listeners for comment forms
-            document.querySelectorAll('.comment-form').forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const postId = parseInt(e.target.getAttribute('data-post-id'));
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
-            });
-        }
+                          if (content.style.display !== 'none') {
+                              content.style.display = 'none';
+                              fullContent.style.display = 'block';
+                              e.target.textContent = 'Read Less';
+                          } else {
+                              content.style.display = 'block';
+                              fullContent.style.display = 'none';
+                              e.target.textContent = 'Read More';
+                          }
+                      });
+                  });
 
-        function populateFilters() {
-            const categoryFilter = document.getElementById('categoryFilter');
-            const tagFilter = document.getElementById('tagFilter');
-            const categories = getLocalData('categories');
-            const tags = getLocalData('tags');
+                  // Add event listeners for comment forms
+                  document.querySelectorAll('.comment-form').forEach(form => {
+                      form.addEventListener('submit', (e) => {
+                          e.preventDefault();
+                          const postId = parseInt(e.target.getAttribute('data-post-id'));
+                          const comment = e.target.querySelector('textarea').value;
+                          addComment(postId, comment);
+                          e.target.reset();
+                      });
+                  });
+              }
 
-            categoryFilter.innerHTML = '<option value="">All Categories</option>';
-            tagFilter.innerHTML = '<option value="">All Tags</option>';
+              function populateFilters() {
+                  const categoryFilter = document.getElementById('categoryFilter');
+                  const tagFilter = document.getElementById('tagFilter');
+                  const categories = getLocalData('categories');
+                  const tags = getLocalData('tags');
 
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categoryFilter.appendChild(option);
-            });
+                  categoryFilter.innerHTML = '<option value="">All Categories</option>';
+                  tagFilter.innerHTML = '<option value="">All Tags</option>';
 
-            tags.forEach(tag => {
-                const option = document.createElement('option');
-                option.value = tag;
-                option.textContent = tag;
-                tagFilter.appendChild(option);
-            });
+                  categories.forEach(category => {
+                      const option = document.createElement('option');
+                      option.value = category;
+                      option.textContent = category;
+                      categoryFilter.appendChild(option);
+                  });
 
-            // Add event listeners for filters
-            categoryFilter.addEventListener('change', filterPosts);
-            tagFilter.addEventListener('change', filterPosts);
-        }
+                  tags.forEach(tag => {
+                      const option = document.createElement('option');
+                      option.value = tag;
+                      option.textContent = tag;
+                      tagFilter.appendChild(option);
+                  });
 
-        function filterPosts() {
-            const selectedCategory = document.getElementById('categoryFilter').value;
-            const selectedTag = document.getElementById('tagFilter').value;
-            const posts = getLocalData('blogPosts');
+                  // Add event listeners for filters
+                  categoryFilter.addEventListener('change', filterPosts);
+                  tagFilter.addEventListener('change', filterPosts);
+              }
 
-            const filteredPosts = posts.filter(post => {
-                const categoryMatch = !selectedCategory || post.category === selectedCategory;
-                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
-                return categoryMatch && tagMatch;
-            });
+              function filterPosts() {
+                  const selectedCategory = document.getElementById('categoryFilter').value;
+                  const selectedTag = document.getElementById('tagFilter').value;
+                  const posts = getLocalData('blogPosts');
 
-            renderFilteredPosts(filteredPosts);
-        }
+                  const filteredPosts = posts.filter(post => {
+                      const categoryMatch = !selectedCategory || post.category === selectedCategory;
+                      const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+                      return categoryMatch && tagMatch;
+                  });
 
-        function renderFilteredPosts(filteredPosts) {
-            const container = document.querySelector('.blog-container');
-            container.innerHTML = '';
+                  renderFilteredPosts(filteredPosts);
+              }
 
-            filteredPosts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                article.innerHTML = `
-            <h2>${post.title}</h2>
-            <div class="meta">Posted on ${post.date} by ${post.author}</div>
-            <div class="category">${post.category}</div>
-            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="content">
-                <p>${post.content.substring(0, 150)}...</p>
-            </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-            <div class="comments-section">
-                <h3>Comments (${post.comments.length})</h3>
-                <div class="comments">
-                    ${post.comments.slice(0, 2).map(comment => `
-                        <div class="comment">
-                            <p>${comment.text}</p>
-                            <small>${comment.date}</small>
-                        </div>
-                    `).join('')}
-                </div>
-                <form class="comment-form" data-post-id="${post.id}">
-                    <textarea placeholder="Add a comment"></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
-            </div>
-        `;
-                container.appendChild(article);
-            });
+              function renderFilteredPosts(filteredPosts) {
+                  const container = document.querySelector('.blog-container');
+                  container.innerHTML = '';
 
-            addEventListeners();
-        }
+                  filteredPosts.forEach(post => {
+                      const article = document.createElement('article');
+                      article.className = 'blog-post';
+                      article.innerHTML = `
+                  <h2>${post.title}</h2>
+                  <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                  <div class="category">${post.category}</div>
+                  <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                  <div class="content">
+                      <p>${post.content.substring(0, 150)}...</p>
+                  </div>
+                  <div class="full-content" style="display: none;">
+                      <p>${marked(post.content)}</p>
+                  </div>
+                  <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+                  <div class="comments-section">
+                      <h3>Comments (${post.comments.length})</h3>
+                      <div class="comments">
+                          ${post.comments.slice(0, 2).map(comment => `
+                              <div class="comment">
+                                  <p>${comment.text}</p>
+                                  <small>${comment.date}</small>
+                              </div>
+                          `).join('')}
+                      </div>
+                      <form class="comment-form" data-post-id="${post.id}">
+                          <textarea placeholder="Add a comment"></textarea>
+                          <button type="submit">Post Comment</button>
+                      </form>
+                  </div>
+              `;
+                      container.appendChild(article);
+                  });
 
-        function viewFullPost(postId) {
-            const posts = getLocalData('blogPosts');
-            const post = posts.find(p => p.id === postId);
-            if (post) {
-                const modal = document.createElement('div');
-                modal.className = 'modal';
-                modal.innerHTML = `
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>${post.title}</h2>
-                <div class="meta">Posted on ${post.date} by ${post.author}</div>
-                <div class="category">${post.category}</div>
-                <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-                <div class="content">
-                    <p>${marked(post.content)}</p>
-                </div>
-                <div class="comments-section">
-                    <h3>Comments (${post.comments.length})</h3>
-                    <div class="comments">
-                        ${post.comments.map(comment => `
-                            <div class="comment">
-                                <p>${comment.text}</p>
-                                <small>${comment.date}</small>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <form class="comment-form" data-post-id="${post.id}">
-                        <textarea placeholder="Add a comment"></textarea>
-                        <button type="submit">Post Comment</button>
-                    </form>
-                </div>
-            </div>
-        `;
-                document.body.appendChild(modal);
+                  addEventListeners();
+              }
 
-                // Close modal when clicking on the close button or outside the modal
-                modal.querySelector('.close').addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        document.body.removeChild(modal);
-                    }
-                });
+              function viewFullPost(postId) {
+                  const posts = getLocalData('blogPosts');
+                  const post = posts.find(p => p.id === postId);
+                  if (post) {
+                      const modal = document.createElement('div');
+                      modal.className = 'modal';
+                      modal.innerHTML = `
+                  <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h2>${post.title}</h2>
+                      <div class="meta">Posted on ${post.date} by ${post.author}</div>
+                      <div class="category">${post.category}</div>
+                      <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                      <div class="content">
+                          <p>${marked(post.content)}</p>
+                      </div>
+                      <div class="comments-section">
+                          <h3>Comments (${post.comments.length})</h3>
+                          <div class="comments">
+                              ${post.comments.map(comment => `
+                                  <div class="comment">
+                                      <p>${comment.text}</p>
+                                      <small>${comment.date}</small>
+                                  </div>
+                              `).join('')}
+                          </div>
+                          <form class="comment-form" data-post-id="${post.id}">
+                              <textarea placeholder="Add a comment"></textarea>
+                              <button type="submit">Post Comment</button>
+                          </form>
+                      </div>
+                  </div>
+              `;
+                      document.body.appendChild(modal);
 
-                // Add event listener for comment form in modal
-                modal.querySelector('.comment-form').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
-            }
-        }
-        function addComment(postId, commentText) {
-            const posts = getLocalData('blogPosts');
-            const postIndex = posts.findIndex(p => p.id === postId);
-            if (postIndex !== -1) {
-                posts[postIndex].comments.push({
-                    text: commentText,
-                    date: new Date().toLocaleString()
-                });
-                setLocalData('blogPosts', posts);
-                renderPosts();
-            }
-        }
+                      // Close modal when clicking on the close button or outside the modal
+                      modal.querySelector('.close').addEventListener('click', () => {
+                          document.body.removeChild(modal);
+                      });
+                      modal.addEventListener('click', (e) => {
+                          if (e.target === modal) {
+                              document.body.removeChild(modal);
+                          }
+                      });
 
-        // Initialize the blog
-        function initializeBlog() {
-            renderPosts();
-        }
+                      // Add event listener for comment form in modal
+                      modal.querySelector('.comment-form').addEventListener('submit', (e) => {
+                          e.preventDefault();
+                          const comment = e.target.querySelector('textarea').value;
+                          addComment(postId, comment);
+                          e.target.reset();
+                      });
+                  }
+              }
+              function addComment(postId, commentText) {
+                  const posts = getLocalData('blogPosts');
+                  const postIndex = posts.findIndex(p => p.id === postId);
+                  if (postIndex !== -1) {
+                      posts[postIndex].comments.push({
+                          text: commentText,
+                          date: new Date().toLocaleString()
+                      });
+                      setLocalData('blogPosts', posts);
+                      renderPosts();
+                  }
+              }
 
-        // Initialize the blog when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', initializeBlog);
+              // Initialize the blog
+              function initializeBlog() {
+                  renderPosts();
+              }
+
+              // Initialize the blog when the DOM is fully loaded
+              document.addEventListener('DOMContentLoaded', initializeBlog);
     </script>
 
     <div class="gtranslate_wrapper"></div>
 
     <script>
-        window.gtranslateSettings = {
-            "default_language": "en",
-            "detect_browser_language": true,
-            "wrapper_selector": ".gtranslate_wrapper"
-        }
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+      };
     </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-links");
+        const closeBtn = document.getElementById("closeBtn");
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const hamburger = document.getElementById("hamburger");
-      const navList = document.getElementById("nav-links");
-      const closeBtn = document.getElementById("closeBtn");
+        hamburger.addEventListener("click", function () {
+          navList.classList.toggle("active");
+        });
 
-      hamburger.addEventListener("click", function () {
-        navList.classList.toggle("active");
+        closeBtn.addEventListener("click", function () {
+          navList.classList.remove("active");
+        });
       });
 
-      closeBtn.addEventListener("click", function () {
-        navList.classList.remove("active");
-      });
-    });
+      document.addEventListener("DOMContentLoaded", function () {
+        const modeToggle = document.getElementById("modeToggle");
+        const sunIcon = document.querySelector(".sun-icon");
+        const moonIcon = document.querySelector(".moon-icon");
 
-   document.addEventListener("DOMContentLoaded", function() {
-     const modeToggle = document.getElementById("modeToggle");
-     const sunIcon = document.querySelector(".sun-icon");
-     const moonIcon = document.querySelector(".moon-icon");
-
-     // Check saved theme in localStorage and apply it
-     const currentTheme = localStorage.getItem("theme") || "light";
-      if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-     } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-    }
-
-// Toggle between light and dark mode on button click
-modeToggle.addEventListener("click", () => {
-    const isDarkMode = document.body.classList.toggle("dark-mode");
-
-    // Apply dark mode styles to relevant sections
-    const sections = document.querySelectorAll('.about, .core-values, .team');
-    sections.forEach(section => {
-        if (isDarkMode) {
-            section.classList.add('dark-mode');
+        // Check saved theme in localStorage and apply it
+        const currentTheme = localStorage.getItem("theme") || "light";
+        if (currentTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          sunIcon.style.display = "none";
+          moonIcon.style.display = "inline-block";
         } else {
-            section.classList.remove('dark-mode');
+          sunIcon.style.display = "inline-block";
+          moonIcon.style.display = "none";
         }
-    });
 
-    // Update icons and local storage
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-    }
-});
-});
-  </script>
+        // Toggle between light and dark mode on button click
+        modeToggle.addEventListener("click", () => {
+          const isDarkMode = document.body.classList.toggle("dark-mode");
 
+          // Apply dark mode styles to relevant sections
+          const sections = document.querySelectorAll(
+            ".about, .core-values, .team"
+          );
+          sections.forEach((section) => {
+            if (isDarkMode) {
+              section.classList.add("dark-mode");
+            } else {
+              section.classList.remove("dark-mode");
+            }
+          });
 
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+          // Update icons and local storage
+          if (isDarkMode) {
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+            localStorage.setItem("theme", "dark");
+          } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
 
-</body>
-
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+  </body>
 </html>
