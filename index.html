@@ -585,7 +585,6 @@
 
 <!-- JS to handle hamburger and close button -->
 <script>
-
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navList = document.getElementById("nav-list");
@@ -609,8 +608,9 @@
         mainHead.classList.remove("shadow");
       }
     });
-
+  }); // Added closing brace for DOMContentLoaded
 </script>
+
 
 <script src="./script/popup.js"></script>
 
@@ -1499,131 +1499,254 @@ select {
 
 
     <!-- recommendations -->
-    <section id="recommendations" class="recommendations-section">
-      <h2 id="h1darkbtn">Personalized Recommendations</h2>
-      <p style="font-size: 20px;"> 
-        We’ve picked these destinations, hotels, and activities just for you,
-        based on your preferences.
-      </p>
-
-      <div class="recommendation-list">
-        <!-- Example Recommendation -->
-        <div class="recommendation-item">
-          <div class="header1">
-          <h3 id="h1darkbtn">Beach Resort in Goa</h3>
-          <p style="color : gray ;">
-            Based on your love for sunny destinations, we recommend this
-            beachfront resort in Goa for a perfect getaway.
-          </p>
-          <button onclick="window.location.href='goa-resort.html'">
-            Explore More
-          </button>
-        </div></div>
-
-        <div class="recommendation-item">
-          <div class="header2">
-          <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
-          <p style="color : gray ;">
-            Explore the rich cultural heritage of Rajasthan. This tour is
-            highly recommended based on your interest in historical places.
-          </p>
-          <button onclick="window.location.href='rajasthan.html'">
-            Explore More
-          </button>
-        </div></div>
-
-        <div class="recommendation-item">
-          <div class="header1">
-          <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
-          <p style="color : gray ;">
-            For the adventure lover in you, we recommend a thrilling trek in
-            the mountains of Himachal Pradesh.
-          </p>
-          <button onclick="window.location.href='himachal.html'">
-            Explore More
-          </button>
-        </div></div>
-      </div>
-    </section>
-
     <style>
       /* Recommendations Section Styling */
-#recommendations {
-  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
-  padding: 40px; /* Increased padding for more spacing */
-  border-radius: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-#recommendations h2 {
-  text-align: center;
-  color: #2c2b2b;
-  font-size: 4rem;
-  margin-bottom: 30px; /* Increased margin for better spacing */
-}
-
-/* Recommendations List */
-.recommendation-list {
+      #recommendations {
+        background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      #recommendations h2 {
+        text-align: center;
+        color: #2c2b2b;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+      
+      #recommendations > p {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #2c2b2b;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      /* Recommendations List */
+      .recommendation-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      
+      /* Recommendation Item */
+      .recommendation-item {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        flex: 1 1 calc(33.333% - 30px);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+        height: 400px; /* Increased height */
+        position: relative;
+      }
+      
+      .recommendation-item:nth-child(2) {
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      }
+      
+      .recommendation-item:nth-child(3) {
+        background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+      }
+      
+      /* Content Container */
+      .header1, .header2 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .recommendation-item h3 {
+        color: #1e293b;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+      
+      .recommendation-item p {
+        color: #555555;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        flex-grow: 1;
+        margin-bottom: 20px;
+      }
+      
+      /* Button Styling */
+      .recommendation-item button {
+        background-color: #3b82f6;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: auto;
+        width: fit-content;
+      }
+      
+      .recommendation-item button:hover {
+        background-color: #1e40af;
+        transform: translateY(-5px);
+      }
+      
+      /* Hover Effects */
+      .recommendation-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        #recommendations {
+          padding: 30px;
+        }
+        
+        .recommendation-item {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        #recommendations h2 {
+          font-size: 3rem;
+        }
+        
+        .recommendation-list {
+          flex-direction: column;
+        }
+        
+        .recommendation-item {
+          width: 100%;
+          margin-bottom: 20px;
+          height: auto;
+          min-height: 350px;
+        }
+        
+        .recommendation-item h3 {
+          font-size: 2.5rem;
+        }
+        
+        .recommendation-item p {
+          font-size: 1.6rem;
+        }
+        
+        .recommendation-item button {
+          font-size: 1.6rem;
+          padding: 12px 25px;
+        }
+      }
+      </style>
+      
+      <section id="recommendations" class="recommendations-section">
+        <h2 id="h1darkbtn">Personalized Recommendations</h2>
+        <p>
+          We've picked these destinations, hotels, and activities just for you,
+          based on your preferences.
+        </p>
+        
+        <div class="recommendation-list">
+          <div class="recommendation-item">
+            <div class="header1">
+              <h3 id="h1darkbtn">Beach Resort in Goa</h3>
+              <p>
+                Based on your love for sunny destinations, we recommend this
+                beachfront resort in Goa for a perfect getaway.
+              </p>
+              <button onclick="window.location.href='goa-resort.html'">
+                Explore More
+              </button>
+            </div>
+          </div>
+          
+          <div class="recommendation-item">
+            <div class="header2">
+              <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
+              <p>
+                Explore the rich cultural heritage of Rajasthan. This tour is
+                highly recommended based on your interest in historical places.
+              </p>
+              <button onclick="window.location.href='rajasthan.html'">
+                Explore More
+              </button>
+            </div>
+          </div>
+          
+          <div class="recommendation-item">
+            <div class="header1">
+              <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
+              <p>
+                For the adventure lover in you, we recommend a thrilling trek in
+                the mountains of Himachal Pradesh.
+              </p>
+              <button onclick="window.location.href='himachal.html'">
+                Explore More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+/* Content Container */
+.header1, .header2 {
   display: flex;
-  justify-content: space-between;
-  gap: 30px; /* Increased gap for larger cards */
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text content */
 }
 
-/* Recommendation Item with Gradient Background and Increased Size */
-.recommendation-item {
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Gradient 1 */
-  border-radius: 12px; /* Slightly rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow */
-  padding: 25px; /* Increased padding */
-  flex: 1 1 calc(33.333% - 30px); /* Adjust size to fit more content */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower hover effect */
-  cursor: pointer;
-  height: 320px; /* Fixed height for consistency */
-}
-
-.recommendation-item:nth-child(2) {
-  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Gradient 2 */
-}
-
-.recommendation-item:nth-child(3) {
-  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); /* Gradient 3 */
-}
-
-/* Hover Effects: Larger scale and deeper shadow */
+/* Hover Effects */
 .recommendation-item:hover {
-  transform: scale(1.08); /* Larger scaling effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .recommendation-item h3 {
-  color: #1e293b; /* Darker text for readability */
-  font-size: 2.5rem; /* Slightly larger text */
+  color: #1e293b;
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  width: 100%; /* Ensure full width for proper centering */
 }
 
 .recommendation-item p {
   color: #555555;
   font-size: 1.5rem;
   margin-bottom: 20px;
+  flex-grow: 1;
+  width: 100%; /* Ensure full width for proper centering */
 }
 
 /* Buttons Styling */
 .recommendation-item button {
   background-color: #3b82f6;
   color: white;
-  padding: 12px 25px; /* Increased button size */
+  padding: 12px 25px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-size: 1.5rem;
+  margin-top: auto;
+  /* Remove align-self and add these properties for center alignment */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .recommendation-item button:hover {
-  background-color: #1e40af; /* Darker button on hover */
-  transform: translateY(-5px); /* Slight lift effect */
+  background-color: #1e40af;
+  transform: translateY(-5px);
 }
 
 /* Section Responsiveness */
@@ -1634,14 +1757,212 @@ select {
 
   .recommendation-item {
     margin-bottom: 20px;
-    height: auto; /* Allow height to adjust */
+    height: auto;
+    min-height: 320px;
+  }
+}
+</style>
+<style>
+/* Recommendations Section Styling */
+#recommendations {
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);
+  padding: 60px; /* Increased padding */
+  border-radius: 15px; /* Slightly larger border radius */
+  max-width: 1400px; /* Increased max-width */
+  margin: 0 auto;
+}
+
+#recommendations h2 {
+  text-align: center;
+  color: #2c2b2b;
+  font-size: 5rem; /* Increased from 4rem */
+  margin-bottom: 40px; /* Increased margin */
+  font-weight: bold;
+}
+
+/* Recommendations List */
+.recommendation-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Increased gap */
+  flex-wrap: wrap;
+}
+
+/* Recommendation Item */
+.recommendation-item {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 35px; /* Increased padding */
+  flex: 1 1 calc(33.333% - 40px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  height: 450px; /* Increased height */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation-item:nth-child(2) {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.recommendation-item:nth-child(3) {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+/* Content Container */
+.header1, .header2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover Effects */
+.recommendation-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-item h3 {
+  color: #1e293b;
+  font-size: 3.5rem; /* Increased from 2.5rem */
+  margin-bottom: 25px; /* Increased margin */
+  width: 100%;
+  font-weight: bold;
+  line-height: 1.2; /* Added for better readability */
+}
+
+.recommendation-item p {
+  color: #555555;
+  font-size: 2rem; /* Increased from 1.5rem */
+  margin-bottom: 30px;
+  flex-grow: 1;
+  width: 100%;
+  line-height: 1.5; /* Added for better readability */
+}
+
+/* Buttons Styling */
+.recommendation-item button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 16px 35px; /* Increased padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 2rem; /* Increased from 1.5rem */
+  margin-top: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.recommendation-item button:hover {
+  background-color: #1e40af;
+  transform: translateY(-5px);
+}
+
+/* Section Responsiveness */
+@media (max-width: 1200px) {
+  #recommendations h2 {
+    font-size: 4rem;
+  }
+  
+  .recommendation-item h3 {
+    font-size: 3rem;
+  }
+  
+  .recommendation-item p {
+    font-size: 1.8rem;
+  }
+  
+  .recommendation-item button {
+    font-size: 1.8rem;
   }
 }
 
-    </style>
+@media (max-width: 768px) {
+  .recommendation-list {
+    flex-direction: column;
+  }
 
+  .recommendation-item {
+    margin-bottom: 30px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  #recommendations h2 {
+    font-size: 3.5rem;
+  }
+  
+  .recommendation-item h3 {
+    font-size: 2.8rem;
+  }
+  
+  .recommendation-item p {
+    font-size: 1.6rem;
+  }
+  
+  .recommendation-item button {
+    font-size: 1.6rem;
+    padding: 14px 30px;
+  }
+}
+</style>
 
-
+<section id="recommendations" class="recommendations-section">
+  <h2 id="h1darkbtn">Personalized Recommendations</h2>
+  <p>
+    We've picked these destinations, hotels, and activities just for you,
+    based on your preferences.
+  </p>
+  
+  <div class="recommendation-list">
+    <div class="recommendation-item">
+      <div class="header1">
+        <h3 id="h1darkbtn">Beach Resort in Goa</h3>
+        <p>
+          Based on your love for sunny destinations, we recommend this
+          beachfront resort in Goa for a perfect getaway.
+        </p>
+        <button onclick="window.location.href='goa-resort.html'">
+          Explore More
+        </button>
+      </div>
+    </div>
+    
+    <div class="recommendation-item">
+      <div class="header2">
+        <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
+        <p>
+          Explore the rich cultural heritage of Rajasthan. This tour is
+          highly recommended based on your interest in historical places.
+        </p>
+        <button onclick="window.location.href='rajasthan.html'">
+          Explore More
+        </button>
+      </div>
+    </div>
+    
+    <div class="recommendation-item">
+      <div class="header1">
+        <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
+        <p>
+          For the adventure lover in you, we recommend a thrilling trek in
+          the mountains of Himachal Pradesh.
+        </p>
+        <button onclick="window.location.href='himachal.html'">
+          Explore More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
@@ -2517,11 +2838,13 @@ textarea.form-control {
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
+            placeholder="Enter your name"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
             <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            placeholder="Enter your destination or service"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
