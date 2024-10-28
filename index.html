@@ -2517,11 +2517,13 @@ textarea.form-control {
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
+            placeholder="Enter your name"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
             <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            placeholder="Enter your destination or service"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
