@@ -41,7 +41,7 @@
        border-radius:8px;
        padding: 10px 8px 4px 8px;
      }
-      
+
     /* Button Styling */
     .btn {
       background-color: #007bff; /* Primary button color */
@@ -230,7 +230,7 @@
 .card.inview {
   opacity: 1;
   transform: translateY(0);
-  
+
 }
 .card.inview header1 {
       padding: 10px 8px 4px 8px;
@@ -327,7 +327,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
   }
-  
+
   /* Wrapper for the logo and loader */
   .loader-wrapper {
     position: relative;
@@ -337,7 +337,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   /* Logo Styling */
   #logo {
     width: 140px;
@@ -345,7 +345,7 @@
     z-index: 10; /* Ensures logo stays above the loader */
     animation: pulse 2s infinite ease-in-out;
   }
-  
+
   /* Circular Loader surrounding the logo */
   .loader-globe {
     position: absolute;
@@ -357,7 +357,7 @@
     border-right-color: white;
     animation: spin 2s linear infinite;
   }
-  
+
   /* Loading Text */
   #loading-text {
     margin-top: 20px;
@@ -367,18 +367,18 @@
     letter-spacing: 1px;
     animation: textGlow 2s ease-in-out infinite;
   }
-  
+
   /* Keyframes Animations */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
+
   @keyframes textGlow {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
   }
-  
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -390,13 +390,13 @@
     window.addEventListener('load', function() {
         const preloader = document.getElementById('preloader');
         const content = document.getElementById('content');
-    
+
         // Set a small timeout for better user experience
         setTimeout(function() {
             // Hide preloader
             preloader.style.opacity = '0';
             preloader.style.transition = 'opacity 1s ease-in-out';
-    
+
             // Show content after preloader fades out
             setTimeout(function() {
                 preloader.style.display = 'none';
@@ -405,7 +405,7 @@
             }, 1000); // Match the transition duration
         }, 2000);  // Adjust to the length of your spinner animation
     });
-    
+
       </script>
 
     <!-- Google Translate Button -->
@@ -718,6 +718,17 @@
 </div>
 
 </div>
+<style>
+    .dark-mode .card{
+      background: #0e0e0e;
+    }
+    .dark-mode .card h4{
+      color: #f39c12;
+    }
+    .dark-mode .card p{
+      color: #fff;
+    }
+</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".card");
@@ -1659,7 +1670,7 @@ select {
 
         <section id="content">
           <h2>Content</h2>
-          <input id="content-input" type="text">
+          <textarea id="content-input"></textarea>
           <ul id="content-list"></ul>
         </section>
       </main>
@@ -1696,6 +1707,7 @@ select {
   width: 100%; /* Ensure full width inside the container */
   border-radius: 8px;
   outline: none;
+  resize: vertical;
 }
 
 /* Header styling */
@@ -2148,16 +2160,16 @@ nav.hi ul li.NAVI i:hover  {
               <textarea id="postContent" placeholder="Write your post here..." required></textarea>
               <button type="submit">Submit</button>
           </form>
-      </div> 
+      </div>
       <style>
 
     .post-container {
     background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
-    
-    border-radius: 8px; 
+
+    border-radius: 8px;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -2180,19 +2192,8 @@ nav.hi ul li.NAVI i:hover  {
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
       async defer></script>
-
-
-
-      <!-- Map Section -->
-
-      <!-- Google Maps JavaScript API -->
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
-        async
-        defer
-      ></script>
 
     <!-- CONTACT US-->
     <style>
@@ -2520,11 +2521,13 @@ textarea.form-control {
           <form class="form" id="reviewForm">
             <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
+            placeholder="Enter your name"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
             <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            placeholder="Enter your destination or service"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
