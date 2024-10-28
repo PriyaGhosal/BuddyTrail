@@ -605,6 +605,16 @@
 
         }
 
+ 
+        .hover-color {
+            transition: color 0.3s ease;
+            /* Smooth transition for color change */
+        }
+
+        .hover-color:hover {
+            color: rgb(199, 59, 159);
+            /* Change color on hover */
+=======
         /* Navbar style */
 
         .nav-link {
@@ -640,6 +650,7 @@
         .nav-link:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
+ 
         }
     </style>
 
@@ -652,7 +663,9 @@
                         <img src="img/logo.png" alt="BuddyTrail Logo" />
                         <h1 id="logo">BuddyTrail</h1>
                     </div>
-                    <p>Welcome to BuddyTrail - your premier travel companion! Whether you're planning a family vacation
+                    <p class="hover-color">Welcome to BuddyTrail - your premier travel companion! Whether you're
+                        planning a
+                        family vacation
                         or a
                         getaway with friends, BuddyTrail is here to help you discover and explore incredible
                         destinations.
@@ -674,7 +687,7 @@
                 <div class="col">
                     <h3>Links <div class="underline"><span></span></div>
                     </h3>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
                         <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
                         <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
