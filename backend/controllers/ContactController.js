@@ -26,7 +26,7 @@ exports.sendEmail = async (req, resp) => {
 
   const mailOptions = {
     from: req.body.Email,
-    to: "taskmaster991@gmail.com",
+    to: "your email id",
     subject: "BuddyTrail user message",
     text: `
       Name: ${req.body.Name}
