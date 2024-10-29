@@ -1239,7 +1239,7 @@ textarea:focus {
   background-color: rgba(18, 18, 18, 0.9); /* Dark background for section */
 }
 .dark-mode h2 {
-  color: #ffa500; /* Bright color for heading */
+  color: #000000; /* Bright color for heading */
 }
 
 /**** FOOTER ****/
