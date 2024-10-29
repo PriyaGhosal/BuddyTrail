@@ -283,14 +283,10 @@ body.dark-mode .navbar a:hover {
         </ul>
       </nav>
       <!-- Toggle Button -->
-      <div class="toggle">
+      <div class="toggle-button">
         <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow"
-            ><img src="day-mode.png" alt="Light mode"
-          /></span>
-          <span class="moon-icon glow" style="display: none"
-            ><img src="moon.png" alt="Dark mode"
-          /></span>
+          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
         </button>
       </div>
 
@@ -516,19 +512,21 @@ body.dark-mode .navbar a:hover {
 
       /* Button Styling */
       button {
-        background-color: #0056b3;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
+      background-color: #ba5ae0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    }
 
-      button:hover {
-        background-color: #004494;
-        transform: translateY(-3px);
-      }
+    button:hover {
+      background-color: #19181a; /* Bright yellow on hover */
+      color: #e9e8ea;
+      transform: translateY(-3px);
+      border: 2px solid #7f6e60;
+}
 
       /* Form Section Background */
       #suggestions-form {
