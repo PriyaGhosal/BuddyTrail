@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            background-color: #393E46;
+            color: #EEEEEE;
+            font-family: 'poppins', sans-serif;
+        }
+
+        footer {
+            background-color: #00ADB5;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <a href="# ">Home</a>
+            <a href="#">Skills</a>
+            <a href="#Experience">Experience</a>
+            <a href="#project">Projects</a>
+            <a href="#footer">Contact Me</a>
+        </div>
+    </nav>
+    <main>
+        <section id="#">
+            <div class="firsthomepage">
+                <div class="lefthome">
+                    <h1>
+                        Hi<br> I'm<span id="name"><br>&nbsp;Dilshad Alam.</span>
+                    </h1>
+                    <h3><span id="element"></span></h3>
+                    <p>Passionate and highly motivated fresher with a strong foundation <br>in web development,
+                        proficient
+                        in HTML, CSS, and skilled in Python and C++.<br>Eager to apply my technical skills to create
+                        dynamic
+                        and user-friendly websites,<br> and contribute effectively to a dynamic team.</p>
+                    <a href="resume.htm" target="_blank"><button id="butn">Download Resume</button></a>
+                </div>
+                <div class="righthome">
+                    <img src="work logo/dev.png" alt="img error">
+                </div>
+            </div>
+        </section>
+
+        <section id="Experience">
+            <hr id="hr">
+            <div id="exp">
+                <span class="label">What i have done so far!</span>
+                <h2>Work Experience</h2>
+                <div class="boxes">
+                    <div class="vertical">
+                        <img class="imgtop" src="work logo/html.png" alt="error">
+                        <div class="vertitle">
+                            HTML&amp;CSS Developer Intern-Bharat Intern<br>(2022-23)
+                        </div>
+                        <div class="verdesc">
+                            I Worked here 4-week as a Web-Developer Intern. I built projects (Netflix-Homepage Clone, My
+                            Portfolio).
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="work logo/python.png" alt="error">
+                        <div class="vertitle">
+                            PYTHON Developer Intern-CodSoft<br>(2022-23)
+                        </div>
+                        <div class="verdesc">
+                            I Worked here 4-week as a Python-Development Intern. I built projects (Simple Calculator,
+                            ToDo-List, Rock-Paper-Scissor Game).
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="work logo/python.png" alt="error">
+                        <div class="vertitle">
+                            PYTHON Developer <br>Intern
+                            -B.tech Walleh<br>(2022-23)
+                        </div>
+                        <div class="verdesc">
+                            I Worked here 4-week as a Python-Development Intern. I built projects (Task Manager App).
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="work logo/hackfest.png" alt="error">
+                        <div class="vertitle">
+                            HacktoberFest Winner<br>
+                            (2022-23)
+                        </div>
+                        <div class="verdesc">
+                            I Participated in HacktoberFest-2023 where My all 4 PR/MR Accepted by Maintainers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="project">
+            <hr id="hr2">
+            <div class="projects">
+                <span class="label">What i have Built till Now!</span>
+                <h2>Projects</h2>
+                <div class="boxes">
+                    <div class="vertical">
+                        <img class="imgtop" src="project imgs/netflix.png" alt="error">
+                        <div class="vertitle">
+                            Netflix-Homepage
+                        </div>
+                        <div class="verdesc">
+                            In this Project I have Built A simple website having similar homepage
+                            that of Netflix using, using HTML&CSS.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop pf" src="project imgs/pf.png" alt="error">
+                        <div class="vertitle">
+                            My Portfolio
+                        </div>
+                        <div class="verdesc">
+                            In this project I have build A Portgolio Website made up of HTML&CSS telling about Me and My
+                            accomplishments.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="project imgs/rps.png" alt="error">
+                        <div class="vertitle">
+                            Rock-Paper-Scissor
+                        </div>
+                        <div class="verdesc">
+                            In this project I have Build A Game using Python language. Where You Can Play
+                            Rock-Paper-Scissor With Computer by using different Keys as Mentioned in Game.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="project imgs/todo.png" alt="error">
+                        <div class="vertitle">
+                            ToDo-List
+                        </div>
+                        <div class="verdesc">
+                            In this project I have Build A To-Do List application which is a useful project that helps
+                            users manage and organize their tasks efficiently. This project aims to create a
+                            command-line application using Python, allowing users to create, update, and track their
+                            to-do lists.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="project imgs/vm.jpg" alt="error">
+                        <div class="vertitle">
+                            Virtual Mouse
+                        </div>
+                        <div class="verdesc">
+                            In this (A.I.) Group Project We have Build A Virtual Mouse that track Movement of fingers
+                            and Move Cursor accordingly using Python.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="imgtop" src="project imgs/bulls.png " alt="error" style="background-color: white;">
+                        <div class="vertitle">
+                            Booming-Bulls
+                        </div>
+                        <div class="verdesc">
+                            In this (M.L.) Group project We have Build A Stock-Market Price Prediction WebApp using
+                            Python, that predict price of future 100 days for stocks based on previous 600 days
+                            data(Closing price) from Yahoo Fincance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr id="hrb">
+    </main>
+
+    <footer id="footer">
+        <div class="touch">Get In Touch</div>
+        <div class="Collab">Let's Collab and Do Projects</div>
+        <span class="contact">Contact Me</span>
+        <div id="social">
+            <a class="img" href="https://www.linkedin.com/in/d/" target="_blank"><img
+                    src="contacts/LinkedIn.webp" alt=""></a>
+            <a class="img" href="https://github.com/Dilshd" target="_blank"><img src="contacts/git.png"
+                    alt=""></a>
+            <a class="img" href="mailto:Dils123@gmail.com" target="_blank"> <img src="contacts/gm2.png" alt=""></a>
+            <a class="img" href="https://twitter.com/DI16" target="_blank"><img src="contacts/xt.png"
+                    alt=""></a>
+            <a class="img" href="https://www.instagram.com/dilsd_/" target="_blank"><img
+                    src="contacts/isnta.png" alt=""></a>
+        </div>
+        <div class="p2023">&copy; 2023 Portfolio.</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>HTML &amp; CSS </i> Developer.', '<i>C++ &nbsp;&amp;&nbsp; Python</i> Developer.'],
+            typeSpeed: 40,
+        });
+    </script>
+</body>
+
+</html>
