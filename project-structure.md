@@ -47,6 +47,9 @@
 ├── contact.html
 ├── contact.js
 ├── contributor
+│   ├── Contributors.css
+│   ├── Contributors.html
+│   ├── Contributors.js
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
