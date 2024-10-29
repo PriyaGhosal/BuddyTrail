@@ -679,6 +679,7 @@ h2 {
 
 .benefits h2 {
   text-align: center;
+  color: #ffffff;
 }
 
 .benefits ul {
@@ -2867,6 +2868,10 @@ label {
   margin-bottom: 8px;
   font-size: 16px;
   color: #5e2b9f; /* Purple color for labels */
+}
+
+.dark-mode label {
+  color: #e0e0e0; /* Light grey text */
 }
 
 input[type="text"],
