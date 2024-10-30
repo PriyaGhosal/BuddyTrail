@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Guide Connection</title>
+    <link rel="stylesheet" href="about.css" />
     <style>
         /* General Reset */
         * {
@@ -26,6 +27,7 @@
         }
 
         /* Header Styles */
+ main
         header {
             background-color: #0066cc;
             padding: 20px;
@@ -57,6 +59,9 @@
             font-size: 16px;
         }
 
+
+        
+ main
         /* Hero Section */
         .hero {
             height: 80vh;
@@ -112,27 +117,30 @@
         }
 
         form {
+            display: block;
             max-width: 600px;
             margin: 0 auto;
+            margin-bottom:5px ;
             background-color: #fff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+      
 
-        .form-group {
+        .forms-group {
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        .forms-group label {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
             color: #333;
         }
 
-        .form-group input,
-        .form-group select {
+        .forms-group input,
+        .forms-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -221,18 +229,37 @@
     </head>
 <body>
 
-    <!-- Header -->
     <header>
-        <nav>
-            <h1>Local Guide Connection</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo"
+                        style="transition: transform 0.3s ease;" />
+                    <h1 id="logo">BuddyTrail</h1>
+                </div>
+                <button class="hamburger" id="hamburger">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    <script>
+        const logo = document.getElementById("logo-web");
+
+        logo.addEventListener("mouseenter", () => {
+            logo.style.transform = "rotateY(20deg) scale(1.1)";
+        });
+
+        logo.addEventListener("mouseleave", () => {
+            logo.style.transform = "rotateY(0) scale(1)";
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -247,15 +274,15 @@
     <section id="book" class="booking-section">
         <h2>Book a Personalized Tour</h2>
         <form id="bookingForm">
-            <div class="form-group">
+            <div class="forms-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required>
             </div>
-            <div class="form-group">
+            <div class="forms-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" required>
             </div>
-            <div class="form-group">
+            <div class="forms-group">
                 <label for="destination">Choose Destination:</label>
                 <select id="destination" required>
                     <option value="">Select...</option>
@@ -264,7 +291,7 @@
                     <option value="tokyo">Tokyo</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="forms-group">
                 <label for="tourDate">Preferred Tour Date:</label>
                 <input type="date" id="tourDate" required>
             </div>
@@ -310,9 +337,91 @@
     </div>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Local Guide Connection. All Rights Reserved.</p>
-    </footer>
+    <div class="footer-responsive">
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <div class="logo-footer">
+                        <img src="img/logo.png" alt="BuddyTrail Logo" />
+                        <h1 id="logo">BuddyTrail</h1>
+                    </div>
+                    <p class="hover-color">Welcome to BuddyTrail - your premier travel companion! Whether you're
+                        planning a
+                        family vacation
+                        or a
+                        getaway with friends, BuddyTrail is here to help you discover and explore incredible
+                        destinations.
+                        Our platform makes it easy to find the best hotels and book affordable flights, ensuring a
+                        seamless
+                        travel experience.</p>
+
+                </div>
+                <div class="col">
+                    <h3>Office <div class="underline"><span></span></div>
+                    </h3>
+                    <p>123 Fake Street</p>
+                    <p>Near XYZ Mall, Sample City</p>
+                    <p>Fake State, PIN 12345, India</p>
+                   
+                    <h3>
+                        <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a><br>
+                        <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
+                    </h3>
+                    
+                </div>
+                <div class="col">
+                    <h3>Links <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="footer-links">
+                        <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
+                        <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
+                        <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
+                        <li><a href="https://buddytrail.netlify.app/faq" target="_blank">FAQs</a></li>
+                        <li><a href="https://buddytrail.netlify.app/team" target="_blank">Our Team</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contributor/contributor"
+                                target="_blank">Contributors</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <form>
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://discord.com/invite/priyaghosal" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://x.com/i/flow/login?redirect_after_login=%2FPriyaGhosa39968" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="img/x-logo.png" alt="X logo" class="fab">
+                            </a>
+
+
+                            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> © 2024 BuddyTrail | All Rights Reserved</p>
+        </footer>
+    </div>
+
 
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
