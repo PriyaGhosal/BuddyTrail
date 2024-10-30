@@ -320,11 +320,12 @@ a {
 /* Header Styles */
 .main-head {
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 98%;
+  top: 20px;
+  left: 1%;
   right: 0;
   z-index: 5;
-  padding: 17px;s
+  padding: 17px;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
