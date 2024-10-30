@@ -8,6 +8,7 @@
     <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">
     <!-- <link rel="stylesheet" href="style.css"> -->
      
+    <link rel="icon" href="/icons/airplane.svg" />
     <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/popup.css">
@@ -307,30 +308,24 @@ body {
   margin-right: 20px;
 }
 
-.mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  width: 40px; /* Define a fixed width for the button */
-  height: 60px; /* Define a fixed height for the button */
-  background: none;
+button {
+  background-color: #ba5ae0;
+  color: white;
   border: none;
-  cursor: pointer;
-  outline: none;
-  z-index: 5; /* Ensure it doesn't interfere with the rest of the navbar */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; /* Ensure hover effect is rounded around the button */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 }
 
-/* Confine hover effect to the button area only */
-.mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Confined hover background */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-  border-radius: 50%; /* Keep it circular */
+button:hover {
+  background-color: #19181a; /* Bright yellow on hover */
+  color: #e9e8ea;
+  transform: translateY(-3px);
+  border: 2px solid #7f6e60;
 }
 
+ 
 .mode-toggle img {
   width: 30px; /* Icon size */
   height: auto;
@@ -391,10 +386,12 @@ button[type="submit"] {
           </ul>
       
         <!-- Toggle Button -->
-        <button class="mode-toggle" id="modeToggle">
+        <div class="toggle-button">
+          <button class="mode-toggle" id="modeToggle">
             <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
             <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-        </button>
+          </button>
+        </div>
         </div>
     </div>
     <!-- Sidebar Include -->

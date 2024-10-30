@@ -26,6 +26,7 @@
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
+│   │   ├── Feedback.js
 │   │   └── User.js
 │   ├── package-lock.json
 │   ├── package.json
@@ -34,6 +35,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── bali.html
 ├── blog.css
 ├── blog.html
 ├── book.html
@@ -47,6 +49,9 @@
 ├── contact.html
 ├── contact.js
 ├── contributor
+│   ├── Contributors.css
+│   ├── Contributors.html
+│   ├── Contributors.js
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
@@ -61,6 +66,7 @@
 ├── destinationform.html
 ├── disclaimer.css
 ├── disclaimer.html
+├── dubai.html
 ├── exclusivedeals.css
 ├── exclusivedeals.html
 ├── experience.css
@@ -146,6 +152,7 @@
 ├── new_post.html
 ├── package-lock.json
 ├── package.json
+├── paris.html
 ├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt

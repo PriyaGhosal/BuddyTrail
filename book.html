@@ -121,16 +121,19 @@
         }
 
         .benefits {
-            color: #f9f9f9;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    
             /* Color for benefits text */
         }
 
         .benefits h2 {
+            color: #FFFFFF;
             font-size: 4rem;
             /* Font size for benefits headings */
             margin-bottom: 50px;
             /* Margin below benefits headings */
-            text-shadow: 0 0 2px rgb(110, 110, 110);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             /* Text shadow for benefits headings */
         }
 
@@ -246,7 +249,7 @@
             <div class="location-cards">
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1489516408517-0c0a15662682?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            "  onclick="location.href='dubai.html'">
                     <h3>Dubai</h3>
                     <ul>
                         <li>Flight To Dubai</li>
@@ -258,7 +261,7 @@
                 </div>
                 <div class="location-card" style="
               background-image: url('https://plus.unsplash.com/premium_photo-1697729701846-e34563b06d47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='goa-resort.html'">
                     <h3>Goa</h3>
                     <ul>
                         <li>Luxury Stay in Goa</li>
@@ -284,7 +287,7 @@
                 </div>
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='paris.html'">
                     <h3>Paris</h3>
                     <ul>
                         <li>Paris Romantic Getaway</li>
@@ -297,7 +300,7 @@
                 </div>
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='bali.html'">
                     <h3>Bali</h3>
                     <ul>
                         <li>Adventure in Bali</li>
@@ -380,6 +383,39 @@
                     <input type="date" id="dates" name="dates" required />
                     <div class="error" id="datesError"></div>
                 </div>
+
+<script>
+            // Function to set the minimum date to today
+            function setMinDate() {
+                const today = new Date();
+                const dd = String(today.getDate()).padStart(2, '0');
+                const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+                const yyyy = today.getFullYear();
+
+                // Format the date as YYYY-MM-DD
+                const minDate = yyyy + '-' + mm + '-' + dd;
+                document.getElementById("dates").setAttribute("min", minDate);
+            }
+
+            // Call the function when the document is loaded
+            document.addEventListener("DOMContentLoaded", setMinDate);
+
+            // Optional: Validate the date on form submission
+            document.querySelector("form").addEventListener("submit", function(event) {
+                const selectedDate = new Date(document.getElementById("dates").value);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+
+                if (selectedDate < today) {
+                    event.preventDefault(); // Prevent form submission
+                    document.getElementById("datesError").innerText = "Please select a date that is today or in the future.";
+                } else {
+                    document.getElementById("datesError").innerText = ""; // Clear any previous error message
+                }
+            });
+        </script>
+
+                
                 <div class="form-group">
                     <label for="transport">Mode of Transport:</label>
                     <select id="transport" name="transport" required>
