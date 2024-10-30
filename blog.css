@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.mode-toggle {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+}
+
+.mode-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #4C51BF;
+    transform: translateY(-2px);
+}

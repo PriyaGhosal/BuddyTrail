@@ -6,13 +6,14 @@
     <meta
       name="description"
       content="BuddyTrail is a travel agency website that helps you pick out your holiday vacation"
-    /> 
+    />
     <meta name="robots" content= "index,follow" />
 
     <link rel="stylesheet" href= "RatingStyle.css">
     <link rel="stylesheet" href="button-ui.css">
     <link rel="stylesheet" href= "style.css" />
     <link rel="stylesheet" href= "./styles/popup.css">
+    <link rel="stylesheet" href= "cookie-popup.css">
     <link rel="preconnect" href= "https://fonts.googleapis.com" />
     <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
 
@@ -29,13 +30,18 @@
       referrerpolicy= "no-referrer"
     />
     <link rel="stylesheet" href="chatbot.css">
+
+    <!-- Link to manifest file for enabling PWA -->
+    <link rel="manifest" href="/manifest.json">
+
     <title>BuddyTrail</title>
     <style>
      .header1{
        /* background-color:white; */
        border-radius:8px;
-       padding: 4px 8px 4px 8px;
+       padding: 10px 8px 4px 8px;
      }
+
     /* Button Styling */
     .btn {
       background-color: #007bff; /* Primary button color */
@@ -44,7 +50,7 @@
       color: white; /* White text */
       border-radius: 5px; /* Rounded corners */
     }
-  
+
     /* Hover Effect for Buttons */
     .btn:hover {
       background-color: #0056b3; /* Darker color on hover */
@@ -79,7 +85,7 @@
 }
 
 .rating {
-  height: 50px;
+  height: auto;
 }
 
 .rating:hover {
@@ -207,9 +213,45 @@
 }
 
 .btn-view-itinerary:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
- 
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.inview {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+.card.inview header1 {
+      padding: 10px 8px 4px 8px;
+}
+/* General hidden state and transition for smooth animation */
+.itinerary, .service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state triggered when the element comes into view */
+.itinerary.inview, .service-card.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
 .circle {
       position: absolute;
       width: 25px;
@@ -228,12 +270,128 @@
       pointer-events: none;
       z-index: 9999;
     }
- 
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
+    <script>
+        (function() {
+            const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.add(savedTheme === 'dark' ? 'dark-mode' : 'light-mode');
+            } else if (userPrefersDark) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+
   </head>
   <body class="light-mode">
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="loader-wrapper">
+          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+          <div class="loader-globe"></div>
+        </div>
+        <div id="loading-text">Ready to Explore the World...</div>
+      </div>
+      <style>
+      /* Preloader Container */
+      #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+
+  /* Wrapper for the logo and loader */
+  .loader-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Logo Styling */
+  #logo {
+    width: 140px;
+    position: relative;
+    z-index: 10; /* Ensures logo stays above the loader */
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  /* Circular Loader surrounding the logo */
+  .loader-globe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-left-color: white;
+    border-right-color: white;
+    animation: spin 2s linear infinite;
+  }
+
+  /* Loading Text */
+  #loading-text {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  /* Keyframes Animations */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes textGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+      </style>
+      <script>
+        // Function to hide preloader and show content once the page has fully loaded
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        const content = document.getElementById('content');
+
+        // Set a small timeout for better user experience
+        setTimeout(function() {
+            // Hide preloader
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 1s ease-in-out';
+
+            // Show content after preloader fades out
+            setTimeout(function() {
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+                content.classList.add('show');  // Trigger fade-in transition
+            }, 1000); // Match the transition duration
+        }, 2000);  // Adjust to the length of your spinner animation
+    });
+
+      </script>
 
     <!-- Google Translate Button -->
     <!-- <div class="translate-container">
@@ -322,11 +480,11 @@
   </script>
 
   <script src="script.js"></script>
- 
-  
+
+
 
 <script src="cursor.js" defer="defer"></script>
-  
+
 <div id="progress-bar"></div>
   <!-- funcioning of progress bar -->
   <script>
@@ -347,6 +505,14 @@
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
       </h3>
+      <div class="video-background">
+        <video autoplay muted loop>
+            <!-- Replace this video source with your live waterfall video or another hosted video -->
+            <source src="waterfall.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
       <a href="book.html" id="btn">Book now</a>
     </section>
 
@@ -355,8 +521,8 @@
     </script>
 
     <script src="script.js"></script>
-    <header class="main-head">
-  <nav>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <nav >
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
       <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -374,18 +540,20 @@
       <li><a href="blog.html" class="navhover">Blogs</a></li>
       <li><a href="about.html" class="navhover">About</a></li>
       <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-     
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
       <li><a href="./contact.html" class="navhover">Contact</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
+
     </ul>
 
     <!-- Toggle Button -->
-    <button class="mode-toggle" id="modeToggle">
-      <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-      <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-    </button>
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
   </nav>
 </header>
 
@@ -404,12 +572,12 @@
           <h1>Ready for Your Next Adventure?</h1>
           <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
           <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
-          <form id="emailForm">
+          <form id="emailForm" >
             <input type="email" id="email" placeholder="Enter your email" required>
             <button type="submit" id="signup-btn">Sign Up</button>
           </form>
           <a href="#" id="no-thanks">No thanks</a>
-          <p id="terms">By signing up, you agree to our <a id="link" href="#1">Terms of Service</a> and <a id="link" href="#1">Privacy Policy</a></p>
+          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="privacypolicy.html" style="text-decoration: underline;">Privacy Policy</a></p>
       </div>
   </div>
 </div>
@@ -442,35 +610,6 @@
       }
     });
 
-    // Dark and light mode toggle logic
-    const modeToggle = document.getElementById('modeToggle');
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.querySelector('.moon-icon');
-    
-    modeToggle.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      document.body.classList.toggle('light-mode');
-      const darkelem = document.querySelectorAll('#darkbtn');
-      const h1dark = document.querySelectorAll('#h1darkbtn');
-      const cardbtn = document.querySelectorAll('#btn a');
-      
-      if (document.body.classList.contains('dark-mode')) {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'inline-block';
-        localStorage.setItem('theme', 'dark');
-        darkelem.forEach((elem) => elem.style.color = 'white');
-        cardbtn.forEach((elem) => elem.style.color = 'white');
-        h1dark.forEach((darkbtn) => darkbtn.style.color = '#FFA500');
-      } else {
-        sunIcon.style.display = 'inline-block';
-        moonIcon.style.display = 'none';
-        localStorage.setItem('theme', 'light');
-        darkelem.forEach((elem) => elem.style.color = 'gray');
-        h1dark.forEach((darkbtn) => darkbtn.style.color = '#0057B3');
-        cardbtn.forEach((elem) => elem.style.color = 'black');
-      }
-    });
-  });
 </script>
 
 <script src="./script/popup.js"></script>
@@ -495,13 +634,23 @@
       });
     </script>
     <main>
-      
-       
 
-        <h3>
-          We handle everything, from finding the ideal travel buddy to
-          selecting your perfect hotel, flight, and destination.
-        </h3>
+
+
+      <h3 style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding-top: 1rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      background-image: linear-gradient(to right, #6a11cb, #2575fc);
+    ">
+      We handle everything, from finding the ideal travel buddy to
+      selecting your perfect hotel, flight, and destination.
+    </h3>
 
       </header>
     </section>
@@ -514,72 +663,88 @@
         </h3>
       </header>
       <!-- Start of Cards Container -->
-<div class="cards" style="height: 384px;">
+<div class="cards" >
 
   <!-- Travel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Travel Icon -->
-      <div class="card-icon">
-        <img src="/icons/route-solid.svg" alt="Travel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Travel</h4>
-      <!-- Card Description -->
-      <p>
-        Discover budget-friendly getaways for families and friends! From serene
-        mountains to sunny beaches, find your next adventure without breaking the
-        bank. Start exploring now!
-      </p>
-      <!-- Button Link for Travel -->
-      <a href="travel.html" class="btn" style="color: white;">Explore more</a>
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/route-solid.svg" alt="Travel Icon">
     </div>
+    <h4>Travel</h4>
+    <p>
+      Discover budget-friendly getaways for families and friends! From serene
+      mountains to sunny beaches, find your next adventure without breaking the
+      bank. Start exploring now!
+    </p>
+    <a href="travel.html" class="btn" style="color: white;">Explore more</a>
   </div>
-  <!-- End of Travel Card -->
+</div>
 
-  <!-- Hotel Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Hotel Icon -->
-      <div class="card-icon">
-        <img src="./icons/bed-solid.svg" alt="Hotel Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Hotel</h4>
-      <!-- Card Description -->
-      <p>
-        We've handpicked top-rated options that offer exceptional value. Book your
-        perfect stay today and enjoy premium accommodations without the premium
-        price tag!
-      </p>
-      <!-- Button Link for Hotels -->
-      <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
+<!-- Hotel Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="./icons/bed-solid.svg" alt="Hotel Icon">
     </div>
+    <h4>Hotel</h4>
+    <p>
+      We've handpicked top-rated options that offer exceptional value. Book your
+      perfect stay today and enjoy premium accommodations without the premium
+      price tag!
+    </p>
+    <a href="hotel.html" class="btn" style="color: white;">See Hotels</a>
   </div>
-  <!-- End of Hotel Card -->
+</div>
 
-  <!-- Fly Card -->
-  <div class="card">
-    <div class="header1">
-      <!-- Fly Icon -->
-      <div class="card-icon">
-        <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
-      </div>
-      <!-- Card Title -->
-      <h4>Fly</h4>
-      <!-- Card Description -->
-      <p>
-        Fly to your dream destination without breaking the bank! We offer the best
-        flight deals, combining comfort and affordability for perfect journey.
-        Book now and take off for less!
-      </p>
-      <!-- Button Link for Flights -->
-      <a href="fly.html" class="btn" style="color: white;">See Flights</a>
+<!-- Fly Card -->
+<div class="card">
+  <div class="header1">
+    <div class="card-icon">
+      <img src="/icons/plane-departure-solid.svg" alt="Fly Icon">
     </div>
+    <h4>Fly</h4>
+    <p>
+      Fly to your dream destination without breaking the bank! We offer the best
+      flight deals, combining comfort and affordability for perfect journey.
+      Book now and take off for less!
+    </p>
+    <a href="fly.html" class="btn" style="color: white;">See Flights</a>
   </div>
-  <!-- End of Fly Card -->
+</div>
 
 </div>
+<style>
+    .dark-mode .card{
+      background: #0e0e0e;
+    }
+    .dark-mode .card h4{
+      color: #f39c12;
+    }
+    .dark-mode .card p{
+      color: #fff;
+    }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("inview");
+      } else {
+        entry.target.classList.remove("inview"); // Remove the class when it goes out of view
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+</script>
 <!-- End of Cards Container -->
 
 <!-- CSS for the buttons (Move this to your CSS file) -->
@@ -599,7 +764,7 @@
           </p>
           <button id="btn"><a href="travel.html "> Explore more</a></button></div>
         </div>
-        
+
         <div class="card">
           <div class="header1">
           <div class="card-icon">
@@ -613,7 +778,7 @@
           </p>
           <button id="btn" style="margin-bottom: 1px;"><a href="hotel.html ">See Hotels</a></button></div>
         </div>
-        
+
         <div class="card">
           <div class="header1">
           <div class="card-icon">
@@ -631,13 +796,13 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2>Exclusive Deals and Offers</h2>
+        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
-      
+
         <div class="carousel">
           <div class="carousel-inner">
             <!-- Deal 1: Flight Offer -->
-            
+
             <div class="deal-item">
               <div class="header1">
               <h3>Flight to Dubai</h3>
@@ -646,68 +811,68 @@
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
           </div>
-      
+
             <!-- Deal 2: Hotel Offer -->
-            
+
             <div class="deal-item" >
-              <div class="header1"> 
+              <div class="header1">
               <h3>Luxury Stay in Goa</h3>
               <p>Get 30% off on a 5-star hotel stay in Goa. Enjoy the best of luxury at an affordable price!</p>
               <p><strong>Price:</strong> ₹10,500 <span class="discount"> ₹15,000</span> per night</p>
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
           </div>
-      
+
             <!-- Deal 3: Travel Package -->
             <div class="deal-item">
-              <div class="header1"> 
+              <div class="header1">
               <h3>Kerala Backwaters Package</h3>
               <p>Experience the serene beauty of Kerala's backwaters with a 4-day, 3-night package. All-inclusive deal!</p>
               <p><strong>Price:</strong> ₹40,000 <span class="discount">₹50,000</span></p>
-              
+
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
           </div>
-      
+
             <!-- Deal 4: International Trip -->
             <div class="deal-item">
-              <div class="header1"> 
+              <div class="header1">
               <h3>Paris Romantic Getaway</h3>
               <p>Enjoy a romantic trip to Paris with your loved one. Special package for couples!</p>
               <p><strong>Price:</strong> ₹1,20,000 <span class="discount"> ₹1,50,000</span> per couple</p>
-              
+
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
           </div>
-      
+
             <!-- Deal 5: Adventure Trip -->
             <div class="deal-item">
-              <div class="header1"> 
+              <div class="header1">
               <h3>Adventure in Bali</h3>
               <p>Book an adventure trip to Bali with activities like snorkeling, trekking, and more. Discount available for groups!</p>
               <p><strong>Price:</strong> ₹48,000 <span class="discount">₹60,000</span> per person</p>
-              
+
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button>
           </div>
 
             <!-- Deal 6: Ski Trip in Switzerland -->
             <div class="deal-item">
-              <div class="header1"> 
+              <div class="header1">
               <h3>Ski Trip in Switzerland</h3>
               <p>Hit the slopes with an amazing package for skiing in the Swiss Alps. All equipment included!</p>
               <p><strong>Price:</strong> ₹75,000 <span class="discount">₹90,000</span> per person</p>
-              
+
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button></div>
 
             <!-- Deal 7: Wildlife Safari in Kenya -->
             <div class="deal-item">
-              <div class="header1"> 
+              <div class="header1">
               <h3>Wildlife Safari in Kenya</h3>
               <p>Experience the thrill of a wildlife safari in Kenya. See the Big Five!</p>
               <p><strong>Price:</strong> ₹1,00,000 <span class="discount">₹1,20,000</span> per person</p>
-              
+
             </div>
             <button class="btn-book-now" onclick="window.location.href='book.html'">Book Now</button></div>
           </div>
@@ -716,14 +881,14 @@
         </div>
       </section>
 
-      
+
         <style>
 
           /* Updated CSS with Nature-Inspired Colors and Enhanced Hover Effects */
 .deals-section {
   text-align: center;
   padding: 3rem 20px;
-  background: linear-gradient(135deg, #d0ea80 0%, #4de1dc 100%); /* Light aqua gradient background */
+  background: linear-gradient(135deg, #a4cdf9 0%, #007bff 100%); /* Light aqua gradient background */
   width: 90vw;
   margin: 0 auto;
   color: #2e573e;
@@ -768,7 +933,7 @@ p {
   padding: 25px;
   background: #ffffff; /* Start with a clean white background */
   border: 2px solid transparent;
-  background-color: #82699d;
+  background-color: #d3d3d3;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transform: scale(1);
@@ -779,8 +944,9 @@ p {
 .deal-item:hover {
   transform: scale(1.1); /* Enlarge on hover */
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
-  border: 2px solid #662f8b; /* Appear border on hover */
+  background: #f9f9f9
+  /* background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
+  /* border: 2px solid #662f8b; /* Appear border on hover */
 }
 
 
@@ -796,7 +962,7 @@ button {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 }
 
@@ -872,25 +1038,25 @@ p {
 }
 
         </style>
-        
+
         <script>
         let currentSlide = 0;
-        
+
         function moveSlide(direction) {
           const slides = document.querySelectorAll('.deal-item');
           const totalSlides = slides.length;
           const slidesToShow = 3; // Number of cards to show at once
-        
+
           // Calculate the new slide index
           currentSlide = (currentSlide + direction + Math.ceil(totalSlides / slidesToShow)) % Math.ceil(totalSlides / slidesToShow);
-        
+
           // Update the transform to show the correct slides
           const carouselInner = document.querySelector('.carousel-inner');
           carouselInner.style.transform = `translateX(-${currentSlide * (100 / slidesToShow)}%)`;
-        
+
           // Remove highlight class from all cards
           slides.forEach(slide => slide.classList.remove('highlight'));
-        
+
           // Calculate the index of the center card
           const centerCardIndex = currentSlide * slidesToShow + Math.floor(slidesToShow / 2);
           // Add highlight class to the center card
@@ -898,7 +1064,7 @@ p {
             slides[centerCardIndex].classList.add('highlight');
           }
         }
-        
+
         // Initial highlight
         document.addEventListener('DOMContentLoaded', () => {
           const slides = document.querySelectorAll('.deal-item');
@@ -907,8 +1073,9 @@ p {
         </script>
 
     <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section">
-      <h2 id="h1darkbtn">Travel Itineraries</h2>
+    <section id="itineraries" class="itineraries-section" style="height: 100%;">
+      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
+      
       <p id="darkbtn">
         Plan your trips effortlessly with our curated travel itineraries
         tailored for different types of adventures. Whether you're planning a
@@ -917,103 +1084,156 @@ p {
       </p>
 
       <div class="itinerary-list">
-         
+
         <div class="itinerary">
-          <div class="header1"> 
+          <div class="header1">
           <h3>Family Vacation</h3>
           <p>
             Explore the best family-friendly destinations with day-by-day
             guides that include must-see attractions and activities for all
             ages.
           </p>
-          <button>View Itinerary</button>
+          <a href="./Travel-Itineraries.html"><button>View Itinerary</button></a>
         </div>
       </div>
 
         <div class="itinerary">
-          <div class="header1"> 
+          <div class="header1">
           <h3>Solo Adventure</h3>
           <p>
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
-          <button>View Itinerary</button>
+          <a href="./solo-adventure.html"><button>View Itinerary</button></a>
         </div></div>
         <div class="itinerary">
-          <div class="header1"> 
+          <div class="header1">
           <h3>Romantic Getaway</h3>
           <p>
             Plan the perfect romantic escape with itineraries that include
             serene locations, romantic dinners, and memorable experiences.
           </p>
-          <button>View Itinerary</button>
+          <a href="./romantic-gateway.html"><button>View Itinerary</button></a>
         </div>
       </div>
       </div>
     </section>
-
+    <style>
+      .dark-mode #itineraries h2{
+          color: #ffa500;
+      }
+      .dark-mode #itineraries h3{
+          color: #ffa500;
+      }
+      .dark-mode #itineraries p{
+          color: #fff;
+      }
+      .dark-mode .itinerary{
+        background-color: #0e0e0e;
+      }
+      .dark-mode .itinerary p{
+        color: #2c2fdf;
+      }
+    </style>
     <!-- Our Services Section -->
     <section class="services" id="services">
       <h2>Our Services</h2>
       <p>Travel smarter with our curated services designed to make your trips effortless and enjoyable.</p>
-    
+
       <div class="services-container">
         <!-- Service Card: Interactive Travel Map -->
         <div class="service-card">
-          <div class="icon">
+          <a href="travelmap.html"><div class="icon">
             <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h3>Travel Map</h3>
+          </div></a>
+         <a href="travelmap.html"> <h3>Travel Map</h3></a>
           <p>Explore popular destinations across India and the world. Click on markers to learn more about each location.
           </p>
         </div>
-    
+
         <!-- Service Card: Hotel Finder -->
         <div class="service-card">
-          <div class="icon">
+          <a href="hotel.html"> <div class="icon">
             <i class="fas fa-hotel"></i>
-          </div>
-          <h3>Hotel Finder</h3>
+          </div></a>
+         <a href="hotel.html"> <h3>Hotel Finder</h3></a>
           <p>Find the best hotels at affordable rates, handpicked to suit your budget and preferences.</p>
         </div>
-    
+
         <!-- Service Card: Flight Booking -->
         <div class="service-card">
-          <div class="icon">
+          <a href="fly.html"> <div class="icon">
             <i class="fas fa-plane"></i>
-          </div>
-          <h3>Flight Booking</h3>
+          </div></a>
+          <a href="fly.html"><h3>Flight Booking</h3></a>
           <p>Book flights at the best prices, with options tailored to your travel needs.</p>
         </div>
-    
+
         <!-- Service Card: Travel Blog -->
         <div class="service-card">
-          <div class="icon">
+          <a href="blog.html">
+            <div class="icon">
             <i class="fas fa-pen"></i>
-          </div>
-          <h3>Travel Blog</h3>
+          </div></a>
+         <a href="blog.html"><h3>Travel Blog</h3></a>
           <p>Read tips, guides, and personal stories from seasoned travelers.</p>
         </div>
-      </div>
+
+         <!-- Local Guide Connection -->
+          <div class="service-card">
+            <a href="guide.html"> <div class="icon">
+              <i class="fa-solid fa-person"></i>
+            </div></a>
+            <a href="guide.html"><h3>Local Guide Connection</h3></a>
+            <p>Partner with local guides and tour providers, allowing to book personalized tours or experiences led by locals for an authentic travel experience.</p>
+          </div>
+        </div>
+
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const itineraries = document.querySelectorAll(".itinerary");
+        const serviceCards = document.querySelectorAll(".service-card");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("inview");
+            } else {
+              entry.target.classList.remove("inview"); // Remove class when out of view
+            }
+          });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        // Observe both itineraries and service cards
+        itineraries.forEach(itinerary => {
+          observer.observe(itinerary);
+        });
+
+        serviceCards.forEach(card => {
+          observer.observe(card);
+        });
+      });
+
+    </script>
     <!-- Cab or Auto Booking -->
     <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode">
       <div class="booking-container">
         <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
         <form action="/book-cab" method="POST">
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
             <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
             <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
-        
+
         <form
           action="/book-cab"
           method="POST"
@@ -1025,16 +1245,16 @@ p {
             flex-direction: column;
           "
         >
-          
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+
+        <div style="display: flex; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
           <label style="font-size: 1.5em; margin-right: 35px;" for="vehicle-type">
             <strong>Vehicle Type</strong>
           </label>
-          
-          <select 
-          id="vehicle-type" 
-          name="vehicle-type" 
-          style="width: 150px; height: 35px; padding: 5px;" 
+
+          <select
+          id="vehicle-type"
+          name="vehicle-type"
+          style="width: 150px; height: 35px; padding: 5px;"
           required >
             <option value="cab">Cab</option>
             <option value="auto">Auto</option>
@@ -1045,7 +1265,7 @@ p {
           </select>
         </div>
 
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
           <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
           <input type="date" id="travel-date" name="travel-date" required min="" />
 
@@ -1057,12 +1277,12 @@ p {
           </script>
 
         </div>
-          <div class="form-group">
+          <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
 
-          
+
 
           <!-- <button class="book-btn" type="submit" style="padding: 15px; font-size:20px;background-color: #ba5ae0;color: white;font-size: large;font-weight: bolder;">Book now</button> -->
 
@@ -1072,7 +1292,7 @@ p {
           </button>
         </div>
         </section>
-          
+
   <style>
     /* Main Section Styling */
 .cab-booking-section {
@@ -1218,7 +1438,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"],
 select {
-    width: 200px; /* Increased width for text inputs */
+    width: 100%; /* Increased width for text inputs */
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -1274,14 +1494,14 @@ select {
 }
 
   </style>
-          
-    
+
+
 
 
     <!-- recommendations -->
     <section id="recommendations" class="recommendations-section">
       <h2 id="h1darkbtn">Personalized Recommendations</h2>
-      <p>
+      <p style="font-size: 20px;"> 
         We’ve picked these destinations, hotels, and activities just for you,
         based on your preferences.
       </p>
@@ -1289,46 +1509,143 @@ select {
       <div class="recommendation-list">
         <!-- Example Recommendation -->
         <div class="recommendation-item">
-          <div class="header1"> 
+          <div class="header1">
           <h3 id="h1darkbtn">Beach Resort in Goa</h3>
-          <p>
+          <p style="color : gray ;">
             Based on your love for sunny destinations, we recommend this
             beachfront resort in Goa for a perfect getaway.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='goa-resort.html'">
             Explore More
           </button>
         </div></div>
 
         <div class="recommendation-item">
-          <div class="header2"> 
+          <div class="header2">
           <h3 id="h1darkbtn">Cultural Tour in Rajasthan</h3>
-          <p>
+          <p style="color : gray ;">
             Explore the rich cultural heritage of Rajasthan. This tour is
             highly recommended based on your interest in historical places.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='rajasthan.html'">
             Explore More
           </button>
         </div></div>
 
         <div class="recommendation-item">
-          <div class="header1"> 
+          <div class="header1">
           <h3 id="h1darkbtn">Adventure Trek in Himachal</h3>
-          <p>
+          <p style="color : gray ;">
             For the adventure lover in you, we recommend a thrilling trek in
             the mountains of Himachal Pradesh.
           </p>
-          <button onclick="window.location.href='#book-now'">
+          <button onclick="window.location.href='himachal.html'">
             Explore More
           </button>
         </div></div>
       </div>
     </section>
+
+    <style>
+      /* Recommendations Section Styling */
+#recommendations {
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
+  padding: 40px; /* Increased padding for more spacing */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#recommendations h2 {
+  text-align: center;
+  color: #2c2b2b;
+  font-size: 4rem;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+/* Recommendations List */
+.recommendation-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap for larger cards */
+  flex-wrap: wrap;
+}
+
+/* Recommendation Item with Gradient Background and Increased Size */
+.recommendation-item {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Gradient 1 */
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  padding: 25px; /* Increased padding */
+  flex: 1 1 calc(33.333% - 30px); /* Adjust size to fit more content */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower hover effect */
+  cursor: pointer;
+  height: 320px; /* Fixed height for consistency */
+}
+
+.recommendation-item:nth-child(2) {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Gradient 2 */
+}
+
+.recommendation-item:nth-child(3) {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); /* Gradient 3 */
+}
+
+/* Hover Effects: Larger scale and deeper shadow */
+.recommendation-item:hover {
+  transform: scale(1.08); /* Larger scaling effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.recommendation-item h3 {
+  color: #1e293b; /* Darker text for readability */
+  font-size: 2.5rem; /* Slightly larger text */
+  margin-bottom: 15px;
+}
+
+.recommendation-item p {
+  color: #555555;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.recommendation-item button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px; /* Increased button size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.recommendation-item button:hover {
+  background-color: #1e40af; /* Darker button on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Section Responsiveness */
+@media (max-width: 768px) {
+  .recommendation-list {
+    flex-direction: column;
+  }
+
+  .recommendation-item {
+    margin-bottom: 20px;
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+    </style>
+
+
+
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
-      <p>In case of an emergency, press the button to send your current location to your emergency contacts.</p>
+      <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
@@ -1337,7 +1654,7 @@ select {
       <header class="posts_blog">
         <h1>POSTS AND VLOGS</h1>
       </header>
-    
+
       <main class="main_blogs">
         <section id="upload">
           <h2>Upload Content</h2>
@@ -1346,17 +1663,28 @@ select {
             <button id="submit" type="submit">Upload</button>
           </form>
         </section>
-    
+
         <section id="content">
           <h2>Content</h2>
-          <input id="content-input" type="text">
+          <textarea id="content-input"></textarea>
           <ul id="content-list"></ul>
         </section>
       </main>
     </div>
+
     <style>
-    
-    
+      body.dark-mode #emergency-text {
+        color: white;
+
+      #emergency-text {
+        color: black;
+}
+}
+    </style>
+
+    <style>
+
+
 
        /* Container for the posts and vlogs section */
 #posts {
@@ -1375,6 +1703,7 @@ select {
   width: 100%; /* Ensure full width inside the container */
   border-radius: 8px;
   outline: none;
+  resize: vertical;
 }
 
 /* Header styling */
@@ -1427,7 +1756,7 @@ main.main_blogs {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+
 }
 
 #file-input {
@@ -1554,32 +1883,32 @@ main.main_blogs {
               <li class="NAVI">
                 <!-- added favicon for destinations -->
                 <i class="fa-solid fa-location-dot"></i>
-                <a href="#destinations">Destinations</a>
+                <a href="destinationform.html">Destinations</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel planning -->
                 <i class="fa-solid fa-earth-americas"></i>
-                <a href="#travel-planning">Travel Planning</a>
+                <a href="traveldisscussionform.html">Travel Planning</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel experience -->
                 <i class="fa-regular fa-face-smile"></i>
-                <a href="#experiences">Travel Experiences</a>
+                <a href="experience.html">Travel Experiences</a>
               </li>
               <li class="NAVI">
                 <i class="fa-solid fa-gear"></i>
                 <!-- added favicon for travel gear -->
-                <a href="#gear">Travel Gear</a>
+                <a href="gear.html">Travel Gear</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for travel safety -->
                 <i class="fa-solid fa-shield"></i>
-                <a href="#safety">Travel Safety</a>
+                <a href="travelsafety.html">Travel Safety</a>
               </li>
               <li class="NAVI">
                 <!-- added favicon for sustainable travel -->
                 <i class="fa-solid fa-seedling"></i>
-                <a href="#sustainable">Sustainable Travel</a>
+                <a href="sustainabeltravel.html">Sustainable Travel</a>
               </li>
           </ul>
       </nav>
@@ -1615,11 +1944,11 @@ nav.hi ul li.NAVI a {
 }
 /*  not needed as styling for nav,li,a is handled at lower */
 /* nav.hi ul li.NAVI a:hover {
-    border-color: #ffcc00; 
-    background-color: #ffffff; 
+    border-color: #ffcc00;
+    background-color: #ffffff;
     color: #1e88e5;
 } */
-    
+
 /* Added styling for favicon */
 nav.hi ul li.NAVI i:hover  {
     color: #ffcc00; /* color change on hover */
@@ -1651,6 +1980,9 @@ nav.hi ul li.NAVI i:hover  {
       h1#h1darkbtn:hover {
           color: #ffcc00; /* Changes the color when hovered */
       }
+      p#darkbtn {
+        font-size: large;
+      }
 
       /* Navigation Styles */
       nav.hi ul {
@@ -1679,9 +2011,9 @@ nav.hi ul li.NAVI i:hover  {
           background-color: #ffcc00; /* Background highlight on hover */
           color: #1e88e5; /* Text color change on hover */
       }
-    
+
       nav.hi ul li.NAVI a:hover::after {
-          width: 100%; 
+          width: 100%;
       }
 
       /* Responsive Design */
@@ -1710,322 +2042,154 @@ nav.hi ul li.NAVI i:hover  {
   </style>
 
   <main>
-   <style>
-     #destinations {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-  }
-  
-  .post-container {
-      width: 100%;
-  }
-  
-  #postForm {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-  }
-  
-  #postContent {
-      width: 100%;
-      min-height: 100px;
-      margin-bottom: 10px;
-      padding: 10px;
-  }
-  
-  button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-  }
-  
-  #posts {
-      width: 100%;
-  }
+    <style>
+      /* Main container styling */
+      #destinations {
+          display: flex;
+          flex-direction: row; /* Side-by-side layout for the form and image */
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1000px; /* Expanded width */
+          margin: 0 auto;
+          padding: 40px;
+          background-color: #ffffff; /* Set background color to white */
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0.1, 0.2);
+      }
+
+      /* Form container */
+      .post-container {
+          width: 60%; /* Adjusted width */
+          background-color: #ffffff; /* White background for the form container */
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+      }
+
+      /* Form structure */
+      #postForm {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+      }
+
+      /* Text area styling */
+      #postContent {
+          width: 90%;
+          min-height: 120px;
+          margin-bottom: 15px;
+          padding: 15px;
+          border: 2px solid #c5def8;
+          border-radius: 6px;
+          font-size: 18px;
+          background-color: #b4d7fc;
+          transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+
+      #postContent:focus {
+          border-color: #007bff;
+          box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+          outline: none;
+          background-color: #fff;
+      }
+
+      /* Button styling */
+      button[type="submit"] {
+          padding: 12px 25px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+      }
+
+      /* Hover effect on the post container */
+      .post-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Right image container */
+      .destination-image-container {
+          width: 35%; /* Adjust the size of the image container */
+          height: 320px;
+          border-radius: 10px;
+          overflow: hidden; /* Ensures the image fits inside the container */
+
+      }
+
+      /* Image styling to cover the container */
+      .destination-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+      }
+
+      /* Responsive layout for smaller screens */
+      @media (max-width: 768px) {
+          #destinations {
+              flex-direction: column; /* Stacks the form and image vertically on small screens */
+          }
+
+          .destination-image-container {
+              width: 90%; /* Full width image for small screens */
+              margin-top: 20px;
+          }
+      }
   </style>
-      <section id="destinations">
-          <h2>Destination Guides</h2>
-          <div class="post-container">
-              <h3>Share Your Experiences</h3>
-              <form id="postForm">
-                  <textarea id="postContent" placeholder="Write your post here..." required></textarea>
-                  <button type="submit">Submit</button>
-              </form>
-          </div>
-      </section>
+  <h1 style="padding-left:40%;color: rgba(255, 255, 248, 0.953);padding-top:8px ; margin: 5px 0 2px;">Destination Guide</h1>
+  <section id="destinations">
+
+      <div class="post-container">
+
+          <h3>Share Your Experiences</h3>
+          <form id="postForm">
+              <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+      <style>
+
+    .post-container {
+    background: linear-gradient(135deg, #f0cac0, #c7dcf7); /* Gradient background */
+
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+        </style>
+
+      <!-- Right image of a destination inside a container -->
+      <div class="destination-image-container">
+          <img src="https://img.freepik.com/free-vector/tour-vacation-guide-concept-tourists-listening-history-city-attractions-tour-entertainment-idea-traveling-learning-isolated-vector-illustration_613284-3036.jpg?semt=ais_hybrid" alt="Destination Image" class="destination-image">
+      </div>
+  </section>
 
 
       <!-- Add more sections for other categories -->
   </main>
-  <style>
-    /* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-
-  transition: background-color 0.3s ease;
-}
-
-
-
-h2 {
-  font-size: 2.2rem;
-  text-align: center;
-
-  margin-bottom: 2rem;
-  letter-spacing: 2px;
-
-  animation: fadeInDown 1s ease-out;
-}
-
-#destinations {
-  background: linear-gradient(145deg, #e0e4e7, #f4f4f9);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease;
-}
-
-#destinations:hover {
-  transform: scale(1.02);
-}
-
-.post-container {
-  background-color: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.7s ease-out;
-}
-
-h3 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-
-  text-align: center;
-  letter-spacing: 1px;
-
-  transition: color 0.3s ease;
-}
-
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  animation: fadeIn 0.8s ease-out;
-}
-
-textarea {
-  min-height: 150px;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: box-shadow 0.4s ease, background-color 0.3s ease;
-}
-
-textarea:focus {
-  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
-  background-color: #f0f8ff;
-  outline: none;
-}
-
-button {
-  padding: 12px 18px;
-  font-size: 1.1rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-button:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.6s ease;
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-}
-
-button:hover:before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-#posts {
-  margin-top: 2rem;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-}
-
-#posts > div {
-  background-color: white;
-  margin-bottom: 15px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  position: relative;
-  animation: fadeInUp 0.8s ease-out;
-}
-
-#posts > div:hover {
-  background-color: #f0f8ff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-/* Animation Keyframes */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-
-  #destinations {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  textarea {
-    min-height: 120px;
-  }
-
-  button {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
-}
-
-  </style>
-  <script src="script.js"></script>
-
-    <style>
-      .recommendation-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .recommendation-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-/*       styling to handle improper alignment of get in touch section */
-      .section-title{
-        width:100%;
-      }
-      .contact-grid{
-        margin: 0 40px;
-      }
-      .contact-info, .contact-form{
-        padding:4rem;
-      }
-      button[type="submit"] {
-        align-self: center;
-        width: 200px;
-        height: 60px;
-        padding: 2rem;
-        font-size: 16px;
-      }
-    </style>
 
     <!-- Map Section -->
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
-      <p>Click on the markers to learn more about each destination.</p>
+      <p style="color: whitesmoke;">Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
     </section>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
       async defer></script>
-
-    
-
-      <!-- Map Section -->
-    
-      <!-- Google Maps JavaScript API -->
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&callback=initMap"
-        async
-        defer
-      ></script>
 
     <!-- CONTACT US-->
     <style>
@@ -2088,24 +2252,194 @@ button:hover:before {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required required pattern="[a-zA-Z ]+"
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+
                             </div>
                             <div class="form-group">
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <button class="book-btn" type="submit" style="padding: 15px 30px; font-size: 16px; width: 200px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+                            <button class="book-btn" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-  
-    
+        <style>
+
+
+
+/* General Section Styles */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Contact Info and Form */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 48%;
+}
+
+.contact-form {
+    width: 48%;
+}
+
+/* Contact Info Item */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    color: #1a73e8;
+}
+
+.info-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* About BuddyTrail */
+.about-buddytrail {
+    margin-top: 30px;
+}
+
+.about-buddytrail h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.about-buddytrail p {
+    font-size: 16px;
+    color: #fefefe;
+}
+
+/* Contact Form */
+.contact-form h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dark-mode .contact-section{
+  background: #666;
+}
+
+.dark-mode .contact-form h3{
+  color: #ffa500;
+}
+
+.dark-mode .info-content h3{
+  color: #ffa500;
+}
+
+.dark-mode .info-content p{
+  color: #fff;
+}
+
+.dark-mode .contact-form{
+  background-color: #0e0e0e;
+}
+
+.dark-mode .contact-info{
+  background-color: #0e0e0e;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #000000;
+    border: 2px solid rgb(187, 124, 202);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #1a73e8;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.btn-submit {
+    background-color: #1a73e8;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #155ab7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+        </style>
+
       <!-- Add this custom popup HTML -->
       <div id="confirmationPopup" class="popup" style="display: none;">
         <div class="popup-content">
@@ -2127,10 +2461,10 @@ button:hover:before {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading" >Testimonials</h2>
-     
+    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
+
     <div class="testimonials-container">
-      <div class="header1 test"> 
+      <div class="header1 test">
       <figure class="snip1533">
         <figcaption>
           <blockquote>
@@ -2141,9 +2475,9 @@ button:hover:before {
         </figcaption>
       </figure>
       </div>
-      <div class="header2 test"> 
+      <div class="header2 test">
       <figure class="snip1533">
-         
+
         <figcaption>
           <blockquote>
             <p>Finding the perfect travel group was so easy with Buddy Trail. Unforgettable trips, hassle-free planning!
@@ -2154,9 +2488,9 @@ button:hover:before {
         </figcaption>
       </figure>
     </div>
-    <div class="header1 test"> 
+    <div class="header1 test">
       <figure class="snip1533">
-         
+
         <figcaption>
           <blockquote>
             <p>I found great travel buddies for my Europe trip! The platform is intuitive and made my adventure even
@@ -2170,7 +2504,7 @@ button:hover:before {
   </section>
 
   <section id="reviews" class="reviews-section">
-    <div class="review">  
+    <div class="review">
       <div class="review-form">
         <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
@@ -2181,17 +2515,19 @@ button:hover:before {
 
         <div style="display: flex;">
           <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn">Your Name:</label>
+            <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
             <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
+            placeholder="Enter your name"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="destination" id="darkbtn">Destination/Service:</label>
+            <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
             <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
+            placeholder="Enter your destination or service"
             oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
             oninput="this.setCustomValidity('')"/>
 
-            <label for="rating" id="darkbtn">Rating:</label>
+            <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
            <!-- <select id="rating" class="rating" name="rating">
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
@@ -2201,7 +2537,7 @@ button:hover:before {
             </select>-->
 
             <div class="rating" name="rating">
-              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->   
+              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->
               <div class="star-widget">
                <input type="radio" name="rate" id="rate-5">
                <label for="rate-5"  class="fas fa-star"></label>
@@ -2217,9 +2553,9 @@ button:hover:before {
             </div>
            </div>
 
-            <label for="review" id="darkbtn">Your Review:</label>
+            <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
             <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn">Complaint (if any):</label>
+            <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
@@ -2239,8 +2575,71 @@ button:hover:before {
   </section>
 
 
+  <!--Cookie pop up-->
+  <div id="cookie-popup" class="cookie-container">
+    <p id="cookie-title">We value your privacy</p>
+    <p class="cookie-description">
+        We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
+        By clicking "Accept", you consent to our use of cookies.
+        <a href="cookie_policy.html">Cookie Policy</a>
+    </p>
+    <div class="button-container">
+        <button id="customize-btn">Customize</button>
+        <button id="reject-btn">Reject</button>
+        <button id="accept-btn">Accept</button>
+    </div>
+</div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const cookiePopup = document.getElementById("cookie-popup");
+    const acceptBtn = document.getElementById("accept-btn");
+    const rejectBtn = document.getElementById("reject-btn");
+    const customizeBtn = document.getElementById("customize-btn");
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    // Check if the user consent cookie exists
+    if (!getCookie("userConsent")) {
+        cookiePopup.style.display = "block"; // Show popup if no cookie is found
+    }
+
+    // Set the cookie and hide the popup when "Accept All" button is clicked
+    acceptBtn.addEventListener("click", function () {
+        setCookie("userConsent", "accepted", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after accepting
+    });
+
+    // Set the cookie and hide the popup when "Reject All" button is clicked
+    rejectBtn.addEventListener("click", function () {
+        setCookie("userConsent", "rejected", 365); // Set cookie to last 1 year
+        cookiePopup.style.display = "none"; // Hide popup after rejecting
+    });
+
+    // Handle Customize button (this can be expanded with further functionality)
+    customizeBtn.addEventListener("click", function () {
+        alert("Customization options can be added here.");
+    });
+});
+</script>
+
+
+
   <!-- Chatbot icon -->
-  <div id="chat-icon">🤖</div>
+
 
   <!-- Chatbot container -->
   <div id="chatbot">
@@ -2254,16 +2653,71 @@ button:hover:before {
       <input type="text" id="user-input" placeholder="Type your message here..." />
       <button id="send-button">Send</button>
   </div>
-  
+
   <script src="chatbot.js"></script>
-      <div class="fixed bottom-0 right-2 scroll-container">
-        <button class="scroll-button group" id="scrollTopBtn">
-          <span class="tooltip-text-scroll">
-            <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up"></i></div>
-           
-          </span>
-        </button>
-      </div>
+  <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
+    <button class="scroll-button group" id="scrollTopBtn">
+      <span class="tooltip-text-scroll">
+        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
+      </span>
+    </button>
+  </div>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Create an object with the form data
+                const formData = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+
+                console.log('Form Data:', formData); // Debugging statement
+
+                try {
+                    // Send the data to the backend
+                    const response = await fetch('http://localhost:5000/api/contact/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Check if the response is ok (status code 200-299)
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message); // Show success message
+                        // Optionally reset the form
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message}`); // Show error message
+                    }
+                } catch (error) {
+                    alert('Failed to send message. Please try again later.'); // Handle network errors
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollContainer = document.getElementById('scrollContainer');
+      if (window.scrollY > 0) {
+        scrollContainer.style.display = 'block';
+      } else {
+        scrollContainer.style.display = 'none';
+      }
+    });
+  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -2282,10 +2736,10 @@ button:hover:before {
         <li><a href="#home">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html" class="faq-link">FAQs</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="servicespage.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+        <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
       </ul>
     </div>
 
@@ -2294,25 +2748,12 @@ button:hover:before {
       <h3>Legal Links</h3>
       <ul>
         <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-
-
-
-        
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
         <li><a href="copyright.html">Copyright Notice</a></li>
-
-      
-
-        
-
-       
-
         <li><a href="disclaimer.html">Disclaimer</a></li>
-        
-
         <li><a href="cookie_policy.html">Cookie Policy</a></li>
 
-        
+
 
       </ul>
     </div>
@@ -2328,10 +2769,10 @@ button:hover:before {
     <div class="footer-column">
       <h3>Follow Us</h3>
       <div class="social-icons">
-        <a href="https://discord.com/invite/priyaghosal"><i class="fab fa-discord"></i></a>
-        <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
 
@@ -2379,7 +2820,7 @@ button:hover:before {
   </div>
 </footer>
 
-  
+
   <!-- Deals and Offers Popup
   <div id="dealsPopup" class="popup">
     <div class="popup-content">
@@ -2436,35 +2877,34 @@ button:hover:before {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
     };
   </script>
-  <!-- Add this at the end of the body, just before the closing </body> tag -->
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  // <script>
+  //   document.getElementById('contactForm').addEventListener('submit', function (e) {
+  //     e.preventDefault();
 
-      // Submit the form data using fetch
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        // Show the confirmation popup
-        document.getElementById('confirmationPopup').style.display = 'block';
-        // Reset the form
-        this.reset();
-      }).catch(error => {
-        console.error('Error:', error);
-        // Still show the confirmation popup even if there's an error
-        document.getElementById('confirmationPopup').style.display = 'block';
-      });
-    });
+  //     // Submit the form data using fetch
+  //     fetch(this.action, {
+  //       method: 'POST',
+  //       body: new FormData(this),
+  //       headers: {
+  //         'Accept': 'application/json'
+  //       }
+  //     }).then(response => {
+  //       // Show the confirmation popup
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //       // Reset the form
+  //       this.reset();
+  //     }).catch(error => {
+  //       console.error('Error:', error);
+  //       // Still show the confirmation popup even if there's an error
+  //       document.getElementById('confirmationPopup').style.display = 'block';
+  //     });
+  //   });
 
 
-    function closePopup() {
-      document.getElementById('confirmationPopup').style.display = 'none';
-    }
-  </script>
+  //   function closePopup() {
+  //     document.getElementById('confirmationPopup').style.display = 'none';
+  //   }
+  // </script>
   <script>
   document.getElementById('reviewForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents form submission
@@ -2489,7 +2929,7 @@ button:hover:before {
         document.getElementById('confirmationPopup').style.display = 'none';
       }
     </script>
- 
+
 
  <div class="gtranslate_wrapper"></div>
 
@@ -2503,7 +2943,7 @@ button:hover:before {
 
  </script>
 
- <script 
+ <script
    src="https://cdn.gtranslate.net/widgets/latest/float.js"
    defer
  ></script>
@@ -2513,16 +2953,16 @@ button:hover:before {
   window.onscroll = function() {
     updateProgressBar();
   };
-  
-  
+
+
   function updateProgressBar() {
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrollPercent = (scrollTop / scrollHeight) * 100;
-  
+
       document.getElementById("progressBar").style.width = scrollPercent + "%";
   }
-  
+
   </script>
      <style>
       .popup {
@@ -2537,18 +2977,18 @@ button:hover:before {
         align-items: center;
         z-index: 1000;
       }
-  
+
       .popup-content {
         background-color: white;
         padding: 20px;
         border-radius: 5px;
         text-align: center;
       }
-  
+
       .popup-content h2 {
         margin-top: 0;
       }
-  
+
       .popup-content button {
         margin-top: 10px;
         padding: 5px 10px;
@@ -2558,7 +2998,7 @@ button:hover:before {
         border-radius: 3px;
         cursor: pointer;
       }
-  
+
       .custom-alert {
         position: fixed;
         top: 50%;
@@ -2566,7 +3006,7 @@ button:hover:before {
         transform: translate(-50%, -50%);
         max-width: 400px;
         padding: 20px;
-        background-color: black; 
+        background-color: black;
         border: 1px solid white;
         color: #fff;
         font-size: 16px;
@@ -2578,10 +3018,10 @@ button:hover:before {
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
       }
-  
+
   .custom-alert p {
 /*     white color text on black background will look nice */
-    color:white; 
+    color:white;
     margin: 0;
     line-height: 1.5;
   }
@@ -2609,54 +3049,97 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         messageElement.style.color =  'red'; // Change message color to red
     }
 });
-    </script>   
-    
+    </script>
+
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
- 
- 
+
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const coords = { x: 0, y: 0 };
         const circles = document.querySelectorAll(".circle");
-    
+
         circles.forEach(function (circle) {
           circle.x = 0;
           circle.y = 0;
         });
-    
+
         window.addEventListener("mousemove", function (e) {
           coords.x = e.pageX;
           coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
         });
-    
+
         function animateCircles() {
           let x = coords.x;
           let y = coords.y;
-    
+
           circles.forEach(function (circle, index) {
             circle.style.left = `${x - 12}px`;
             circle.style.top = `${y - 12}px`;
             circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-    
+
             const nextCircle = circles[index + 1] || circles[0];
             circle.x = x;
             circle.y = y;
-    
+
             x += (nextCircle.x - x) * 0.3;
             y += (nextCircle.y - y) * 0.3;
           });
-    
+
           requestAnimationFrame(animateCircles);
         }
-    
+
         animateCircles();
       });
-    
+
     </script>
- 
- 
+  <body>
+    <div class="container">
+        <!-- Your existing content -->
+
+        <!-- Chatbot Icon -->
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            🗨️ <!-- You can replace this with an actual image/icon -->
+        </div>
+
+        <!-- Chatbot Iframe -->
+        <div class="chatbot-container" id="chatbotContainer">
+            <iframe src="https://www.chatbase.co/chatbot-iframe/GtcyNsebrd_nrDUEQz53T"
+                    width="350"
+                    height="500"
+                    style="border:none;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+            } else {
+                chatbotContainer.style.display = 'none';
+            }
+        }
+
+    </script>
+    <br /><br />
+    <link rel="stylesheet" href="visi.css">
+
+    <div class="visitor-counter">
+      <div>Visitor</div>
+      <div class="website-counter"></div>
+    </div>
+    <script src="path/to/visitorCounter.js"></script>
+    <script src="./assets/css/visitors.css"></script>
+
+      <script src="visi.js"></script>
+      <script src="script.js"></script>
+
 </body>
 
 </html>

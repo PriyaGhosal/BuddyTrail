@@ -1,285 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link rel="stylesheet" href="fly.css">
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fly.css" />
     <title>BuddyTrail</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        
-        <div class="nav__logo">
-            <img src="img/logo.png" alt="Logo" class="logo-image" />BuddyTrail</div>
-        
-        <ul class="nav__links">
-            <li class="link"><a href="#welcome">Welcome</a></li>
-            <li class="link"><a href="#our story">Our Story</a></li>
-            <li class="link"><a href="#travel support">Travel Support</a></li>
-            <li class="link"><a href="#aeroseat">AeroSeat</a></li>
-            <li class="link"><a href="#explore destination">Explore Destination</a></li>
-        </ul>
-        <button class="btn">Contact</button>
+      <div class="nav__logo">
+        <img src="img/logo.png" alt="Logo" class="logo-image" />BuddyTrail
+      </div>
+
+      <ul class="nav__links">
+        <li class="link"><a href="#welcome">Welcome</a></li>
+        <li class="link"><a href="about.html">Our Story</a></li>
+        <li class="link"><a href="#travel support">Travel Support</a></li>
+        <li class="link"><a href="#aeroseat">AeroSeat</a></li>
+        <li class="link">
+          <a href="#explore destination">Explore Destination</a>
+        </li>
+      </ul>
+     <a href="contact.html">
+  <button class="btn">Contact</button>
+</a>
+
     </nav>
     <header id="welcome" class="section__container header__container">
-        <h1 class="section__header">
-            <span class="fly-in">Explore & Book Your Ride</span><br />
-            <span class="fly-in">Nestle into Comfort</span> </h1>
-        <div style="display: flex; justify-content: center;">
-  <img src="img/Presentation1-removebg-preview.png"  style="width: 2000px;; height:500px ;" alt="header" />
-</div>
-
-       
+      <h1 class="section__header">
+        <span class="fly-in">Explore & Book Your Ride</span><br />
+        <span class="fly-in">Nestle into Comfort</span>
+      </h1>
+      <div style="display: flex; justify-content: center">
+        <img
+          src="img/Presentation1-removebg-preview.png"
+         class="preview-image"
+          alt="header"
+        />
+      </div>
     </header>
     <section id="aeroseat" class="section__container booking__container">
-        <div class="booking__nav">
-        <span>First Class
-        </span>
-        <span>Economy Class
-        </span>
-        <span>Business Class
-        </span>
-    </div>
-    <form>
-        <div class="form__group">
-            <span><i class="ri-map-pin-line"></i></span>
-            <div class="input__content">
-                <div class="input__group">
-                    <input type="text" >
-                    <label> &nbsp; &nbsp; &nbsp; &nbsp;  Travel Spot</label>
-                </div>
-                <p>Where to</p>
+<div class="booking__nav">
+  <span id="1st_class" class=""><p>First Class</p></span>
+  <span id="eco_class" class="bg_blue_selected"><p>Economy Class</p></span>
+  <span id="bsn_class" class=""><p>Business Class</p></span>
+</div>
+<form>
 
+        <div class="form__group">
+          <span><i class="ri-map-pin-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label> &nbsp; &nbsp; &nbsp; &nbsp; Travel Spot</label>
             </div>
+            <p>Where to</p>
+          </div>
         </div>
         <div class="form__group">
-            <span><i class="ri-user-line"></i></span>
-            <div class="input__content">
-                <div class="input__group">
-                    <input type="text" >
-                    <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Explorers</label>
-                </div>
-                <p>Travelers Count</p>
-
+          <span><i class="ri-user-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Explorers</label>
             </div>
+            <p>Travelers Count</p>
+          </div>
         </div>
         <div class="form__group">
-            <span><i class="ri-calendar-2-line"></i></span>
-            <div class="input__content">
-                <div class="input__group">
-                    <input type="text" >
-                    <label>&nbsp; &nbsp; &nbsp; &nbsp; Takeoff Date</label>
-                </div>
-                <p>Set Off On</p>
-
+          <span><i class="ri-calendar-2-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>&nbsp; &nbsp; &nbsp; &nbsp; Takeoff Date</label>
             </div>
+            <p>Set Off On</p>
+          </div>
         </div>
         <div class="form__group">
-            <span><i class="ri-calendar-2-line"></i></span>
-            <div class="input__content">
-                <div class="input__group">
-                    <input type="text" >
-                    <label>&nbsp; &nbsp; &nbsp; Wrap-up Date</label>
-                </div>
-                <p>Back By</p>
-
+          <span><i class="ri-calendar-2-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>&nbsp; &nbsp; &nbsp; Wrap-up Date</label>
             </div>
+            <p>Back By</p>
+          </div>
         </div>
-        <button class="btn"><i class="ri-search-line"></i></button>
+</form>
+<div class="btn-container">
+  <button class="btn"><i class="ri-search-line"></i> Search</button>
+</div>
 
-    </form>
     </section>
     <section class="section__container plan__container" id="travel support">
-        <p class="subheader" style="font-size: 3rem;">TRAVEL SUPPORT</p>
-        <h2 class="section__header" style="font-size: 2rem;">Plan your travel with confidence</h2>
-        <p class="description">
-            Find help with your bookings and travel plans and see what to expect along the journey.
-        </p>
-        <div class="plan__grid">
-            <div class="plan__content">
-                <span class="number">01</span>
-                <h4>Essential Travel Requirements at Your Fingertips</h4>
-                <p>
-                    "Access all the necessary travel documentation, health requirements, and customs regulations in one place, so you can plan your trip with ease and confidence."
-
-                </p>
-                <span class="number">02</span>
-                <h4>Prepare for a Seamless Journey</h4>
-                <p>
-                    "From the moment you book to when you land, we provide all the essential details to ensure your travel experience is smooth and stress-free."
-
-                </p>
-                <span class="number">03</span>
-                <h4>Stay Informed with the Latest Travel Guidelines</h4>
-                <p>
-                    "Ensure your travel plans go off without a hitch by staying up to date on the latest entry protocols, local advisories, and safety measures for your destination."
-
-                </p>
-            </div>
-            <div class="plan__image">
-                <img src="img/plan-3.jpeg" alt="plan">
-                <img src="img/plan-3.jpeg" alt="plan">
-                <img src="img/plan-3.jpeg" alt="plan">
-            </div>
+      <p class="subheader" style="font-size: 3rem">TRAVEL SUPPORT</p>
+      <h2 class="section__header" style="font-size: 2rem">
+        Plan your travel with confidence
+      </h2>
+      <p class="description">
+        Find help with your bookings and travel plans and see what to expect
+        along the journey.
+      </p>
+      <div class="plan__grid">
+        <div class="plan__content">
+          <span class="number">01</span>
+          <h4>Essential Travel Requirements at Your Fingertips</h4>
+          <p>
+            "Access all the necessary travel documentation, health requirements,
+            and customs regulations in one place, so you can plan your trip with
+            ease and confidence."
+          </p>
+          <span class="number">02</span>
+          <h4>Prepare for a Seamless Journey</h4>
+          <p>
+            "From the moment you book to when you land, we provide all the
+            essential details to ensure your travel experience is smooth and
+            stress-free."
+          </p>
+          <span class="number">03</span>
+          <h4>Stay Informed with the Latest Travel Guidelines</h4>
+          <p>
+            "Ensure your travel plans go off without a hitch by staying up to
+            date on the latest entry protocols, local advisories, and safety
+            measures for your destination."
+          </p>
         </div>
+        <div class="plan__image">
+          <img src="img/plan-3.jpeg" alt="plan" />
+          <img src="img/plan-3.jpeg" alt="plan" />
+          <img src="img/plan-3.jpeg" alt="plan" />
+        </div>
+      </div>
     </section>
     <section class="memories">
-        <div class="section__container memories__container">
-          <div class="memories__header">
-            <h2 class="section__header">
-              Travel to make memories all around the world
-            </h2>
-            <button class="view__all" style="background-color: white;" >View All</button>
-          </div>
-          <div class="memories__grid">
-            <div class="memories__card">
-              <span><i class="ri-calendar-2-line"></i></span>
-              <h4>Book & Unwind</h4>
-              <p>
-                Let us handle all the details while you sit back, relax, and enjoy the journey. With 'Book & Unwind,' your travel experience is stress-free from start to finish.
-              </p>
-            </div>
-            <div class="memories__card">
-              <span><i class="ri-shield-check-line"></i></span>
-              <h4>Effortless Travel Checklist</h4>
-              <p>
-                Stay organized with our Smart Checklist, a cutting-edge tool designed to streamline your travel planning, ensuring you never miss a step.
-              </p>
-            </div>
-            <div class="memories__card">
-              <span><i class="ri-bookmark-2-line"></i></span>
-              <h4>Maximize Your Savings</h4>
-              <p>
-                Enjoy unbeatable fares, special offers, and promotions tailored to help you save more, all while experiencing premium service and comfort on every flight.
-              </p>
-            </div>
-          </div>
+      <div class="section__container memories__container">
+        <div class="memories__header">
+          <h2 class="section__header">
+            Travel to make memories all around the world
+          </h2>
+          <button class="view__all" style="background-color: white">
+            View All
+          </button>
         </div>
-      </section>
-      <section class="section__container safety__container">
-        <div class="safety__image">
-            <img src="img/safety.jpg" alt="safety" />
-            
-          </div>
-        <div class="safety__content">
-          <h2 class="section__header" style="font-size: 3rem;">Your Health & Safety: Our Top Priority</h2>
-          <div class="safety__grid">
-            <div class="safety__details">
-              <h4>Rigorous Hygiene Protocols</h4>
-              <p>
-                We have implemented enhanced cleaning procedures across all touchpoints, from check-in to in-flight services. Our aircraft are thoroughly disinfected before each flight, ensuring a safe and clean environment for every traveler.
-              </p>
-            </div>
-            <div class="safety__details">
-              <h4>Contactless Services</h4>
-              <p>
-                Enjoy a seamless travel experience with our contactless check-in and boarding processes. From digital boarding passes to mobile payments, we prioritize your comfort and safety every step of the way.
-              </p>
-            </div>
-            <div class="safety__details">
-              <h4>Health Screenings</h4>
-              <p>
-                To ensure a safe travel environment, we conduct health screenings for all passengers before boarding. This includes temperature checks and health declarations to monitor and safeguard the well-being of everyone on board.
-              </p>
-            </div>
-            <div class="safety__details">
-              <h4>In-flight Safety Measures</h4>
-              <p>
-                Our in-flight safety protocols are designed to keep you safe, featuring mandatory mask policies, social distancing measures, and availability of sanitizing wipes and hand sanitizers for your use during the flight.
-              </p>
-            </div>
-            <div class="safety__details">
-              <h4>Dedicated Support</h4>
-              <p>
-                Our customer service team is here to assist you with any questions or concerns regarding your health and safety while traveling. We provide timely information and support to ensure you feel confident on your journey.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section__container travellers__container">
-        <h1 class="section__header" id="explore destination" style="font-size: 4rem;">Best Destinations</h1>
-        <div class="travellers__grid">
-          <div class="travellers__card">
-            <img src="img/DUBAI.jpeg" alt="destination" />
-            
-            
-          </div>
-          <div class="travellers__card">
-            <img src="img/INDIA.jpg"  alt="destination" />
-            
-           
-          </div>
-          
-          <div class="travellers__card">
-            <img src="img/USA.jpeg"  alt="destination" />
-           
-           
-          </div>
-          <div class="travellers__card">
-            <img src="img/maldives1.jpg"  alt="destination" />
-           
-           </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="section__container footer__container">
-          <div class="footer__col">
-            <h3>BuddyTrail</h3>
+        <div class="memories__grid">
+          <div class="memories__card">
+            <span><i class="ri-calendar-2-line"></i></span>
+            <h4>Book & Unwind</h4>
             <p>
-                Connecting Destinations, Enriching Lives. Let BuddyTrail elevate your travel experience.
-            </p>
-            <p>
-                Fly with Confidence, Arrive with Joy. Choose BuddyTrail for your next adventure.
+              Let us handle all the details while you sit back, relax, and enjoy
+              the journey. With 'Book & Unwind,' your travel experience is
+              stress-free from start to finish.
             </p>
           </div>
-          <div class="footer__col">
-            <h4>INFORMATION</h4>
-            <p>Welcome</p>
-            <p>Our Story</p>
-            <p>Exclusive Deals</p>
-            <p>AeroSeats</p>
-            <p>Explore Destination</p>
+          <div class="memories__card">
+            <span><i class="ri-shield-check-line"></i></span>
+            <h4>Effortless Travel Checklist</h4>
+            <p>
+              Stay organized with our Smart Checklist, a cutting-edge tool
+              designed to streamline your travel planning, ensuring you never
+              miss a step.
+            </p>
           </div>
-          <div class="footer__col">
-            <h4>CONTACT</h4>
-            <p>Support</p>
-            <p>Media</p>
-            <p>Socials</p>
-          </div>
-        </div>
-        <div class="section__container footer__bar">
-          <p>Copyright © 2024 BuddyTrail All rights reserved.</p>
-          <div class="socials">
-            <span><i class="ri-facebook-fill"></i></span>
-            <span><i class="ri-twitter-fill"></i></span>
-            <span><i class="ri-instagram-line"></i></span>
-            <span><i class="ri-youtube-fill"></i></span>
+          <div class="memories__card">
+            <span><i class="ri-bookmark-2-line"></i></span>
+            <h4>Maximize Your Savings</h4>
+            <p>
+              Enjoy unbeatable fares, special offers, and promotions tailored to
+              help you save more, all while experiencing premium service and
+              comfort on every flight.
+            </p>
           </div>
         </div>
-      </footer>
-      
+      </div>
+    </section>
+    <section class="section__container safety__container">
+      <div class="safety__image">
+        <img src="img/safety.jpg" alt="safety" />
+      </div>
+      <div class="safety__content">
+        <h2 class="section__header" style="font-size: 3rem">
+          Your Health & Safety: Our Top Priority
+        </h2>
+        <div class="safety__grid">
+          <div class="safety__details">
+            <h4>Rigorous Hygiene Protocols</h4>
+            <p>
+              We have implemented enhanced cleaning procedures across all
+              touchpoints, from check-in to in-flight services. Our aircraft are
+              thoroughly disinfected before each flight, ensuring a safe and
+              clean environment for every traveler.
+            </p>
+          </div>
+          <div class="safety__details">
+            <h4>Contactless Services</h4>
+            <p>
+              Enjoy a seamless travel experience with our contactless check-in
+              and boarding processes. From digital boarding passes to mobile
+              payments, we prioritize your comfort and safety every step of the
+              way.
+            </p>
+          </div>
+<div class="safety__details">
+  <h4>Health Screenings</h4>
+  <p>
+    To ensure a safe travel environment, we conduct health screenings for all passengers before boarding. This includes temperature checks and health declarations to monitor and safeguard the well-being of everyone on board.
+  </p>
+</div>
+<div class="safety__details">
+  <h4>In-flight Safety Measures</h4>
+  <p>
+    Our in-flight safety protocols are designed to keep you safe, featuring mandatory mask policies, social distancing measures, and availability of sanitizing wipes and hand sanitizers for your use during the flight.
+  </p>
+</div>
 
-      <div class="gtranslate_wrapper"></div>
+<div class="footer__col">
+  <h4>INFORMATION</h4>
+  <a href="#welcome" target="_blank">Welcome</a>
+  <a href="about.html" target="_blank">Our Story</a>
+  <a href="/index.html#deals" target="_blank">Exclusive Deals</a>
+  <a href="#aeroseat" target="_blank">AeroSeats</a>
+  <a href="#explore destination" target="_blank">Explore Destination</a>
+</div>
+<div class="footer__col">
+  <h4>CONTACT</h4>
+  <a href="contact.html" target="_blank">Support</a>
+  <a href="index.html" target="_blank">Media</a>
+  <a href="#index.html" target="_blank">Socials</a>
+</div>
 
-      <script>
-    
-      window.gtranslateSettings = {
-        "default_language":"en",
-        "detect_browser_language":true,
-        "wrapper_selector":".gtranslate_wrapper"
-      }
-    
-      </script>
-    
-      <script 
-        src="https://cdn.gtranslate.net/widgets/latest/float.js"
-        defer
-      ></script>
-    
-</body>
+          </div>
+          <div class="safety__details">
+            <h4>Dedicated Support</h4>
+            <p>
+              Our customer service team is here to assist you with any questions
+              or concerns regarding your health and safety while traveling. We
+              provide timely information and support to ensure you feel
+              confident on your journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section__container travellers__container">
+      <h1
+        class="section__header"
+        id="explore destination"
+        style="font-size: 4rem"
+      >
+        Best Destinations
+      </h1>
+      <div class="travellers__grid">
+        <div class="travellers__card">
+          <img src="img/DUBAI.jpeg" alt="destination" />
+        </div>
+        <div class="travellers__card">
+          <img src="img/INDIA.jpg" alt="destination" />
+        </div>
+
+        <div class="travellers__card">
+          <img src="img/USA.jpeg" alt="destination" />
+        </div>
+        <div class="travellers__card">
+          <img src="img/maldives1.jpg" alt="destination" />
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>BuddyTrail</h3>
+          <p>
+            Connecting Destinations, Enriching Lives. Let BuddyTrail elevate
+            your travel experience.
+          </p>
+          <p>
+            Fly with Confidence, Arrive with Joy. Choose BuddyTrail for your
+            next adventure.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="/index.html#services">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li>
+              <a href="contributor/contributor.html">Our Contributor</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+         <a href="contact.html">Support</a> 
+         <a href="blog.html">Media</a> 
+         <a href="#">Social</a> 
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>Copyright © 2024 BuddyTrail All rights reserved.</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="gtranslate_wrapper"></div>
+
+    <script>
+  window.gtranslateSettings = {
+    default_language: "en",
+    detect_browser_language: true,
+    wrapper_selector: ".gtranslate_wrapper",
+  };
+</script>
+
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+<script>
+  // Toggle class selection for flight classes
+  const first = document.getElementById('1st_class');
+  const eco = document.getElementById('eco_class');
+  const bsn = document.getElementById('bsn_class');
+
+  first.addEventListener('click', () => {
+    first.classList.add('bg_blue_selected');
+    eco.classList.remove('bg_blue_selected');
+    bsn.classList.remove('bg_blue_selected');
+  });
+
+  eco.addEventListener('click', () => {
+    first.classList.remove('bg_blue_selected');
+    eco.classList.add('bg_blue_selected');
+    bsn.classList.remove('bg_blue_selected');
+  });
+
+  bsn.addEventListener('click', () => {
+    first.classList.remove('bg_blue_selected');
+    eco.classList.remove('bg_blue_selected');
+    bsn.classList.add('bg_blue_selected');
+  });
+</script>
+
+  </body>
 </html>
+

@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-    
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
           <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
-            
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" />
@@ -28,11 +26,15 @@
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
-          
-          <p class="social-text">OR</p>
-            <p class="social-text">Sign in with social platforms</p>
-            <div class="social-media"> 
-              <button class="social-icon">
+            <a href="/forgot_password.html" style="text-decoration: none; color: black;"><p>Forgot Password?</p></a>
+            <p class="social-text">OR<br>Sign in with social platforms</p>
+
+            <div class="social-media">
+              <button class="social-icon" id="microsoft-icon">
+                <img src="img/Microsoft_Logo.png" alt="Microsoft Icon" style="width: 25px; height: 25px;">
+              </button>
+              <button class="social-icon" id="google-icon">
+
                 <img src="./img/google.png" alt="Google Icon" style="width: 30px; height: 30px;">
               </button>
               <button class="social-icon" id="githubSignInBtn">
@@ -40,40 +42,80 @@
               </button>
             </div>
           </form>
-            
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" id="signup-password" />
-              <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
-            </div>
-            <div class="password-strength">
-              <div id="strength-weak"></div>
-              <div id="strength-medium"></div>
-              <div id="strength-strong"></div>
-            </div>
-            <input type="submit" class="btn" value="Sign up" />           
-          </form>
+<form action="#" class="sign-up-form" onsubmit="return validateForm()">
+  <h2 class="title">Sign up</h2>
+
+  <!-- Username Field -->
+  <div class="input-field">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Username" id="username" required />
+  </div>
+
+  <!-- Email Field -->
+  <div class="input-field">
+    <i class="fas fa-envelope"></i>
+    <input type="email" placeholder="Email" id="email" required />
+  </div>
+
+  <!-- Password Field -->
+  <div class="input-field">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" id="signup-password" required />
+    <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
+  </div>
+
+  <!-- Password Strength Bars -->
+  <div class="password-strength">
+    <div id="strength-weak"></div>
+    <div id="strength-medium"></div>
+    <div id="strength-strong"></div>
+  </div>
+
+  <input type="submit" class="btn" value="Sign up" />
+</form>
+<p id="error-message" style="color: red; display: none;"></p>
+
         </div>
       </div>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
-    <script src="firebase.js"></script>
-    <script>
-      // Home button
-      document.getElementById('home-btn').addEventListener('click', function() {
-        window.location.href = "index.html";
-      });
-    </script>
+
+      <script>
+      function validateForm() {
+  const password = document.getElementById('signup-password').value;
+  const email = document.getElementById('email').value;
+  const username = document.getElementById('username').value;
+
+  // Password length validation
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return false;
+  }
+
+  // Password hexadecimal validation
+  const hexRegex = /^[0-9A-Fa-f]+$/;
+  if (!hexRegex.test(password)) {
+    alert("Password must contain only hexadecimal digits (0-9, A-F).");
+    return false;
+  }
+
+  // Validate if username is provided
+  if (username.trim() === "") {
+    alert("Please enter a valid username.");
+    return false;
+  }
+
+  // Validate if email is provided and valid
+  if (!email.includes("@")) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  // If all validations pass
+  return true;
+}
+
+
+      </script>
+
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -105,9 +147,38 @@
       <i class="fas fa-home"></i>
     </a>
     <div id="toast-container"></div>
-    
+
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script>
+      const signUpBtn = document.getElementById('sign-up-btn');
+      const signInBtn = document.getElementById('sign-in-btn');
+      const container = document.querySelector('.container');
+
+      signUpBtn.addEventListener('click', () => {
+        container.classList.add('sign-up-mode');
+      });
+
+      signInBtn.addEventListener('click', () => {
+        container.classList.remove('sign-up-mode');
+      });
+
+      function togglePassword(id, element) {
+        const passwordInput = document.getElementById(id);
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          element.classList.add('active');
+        } else {
+          passwordInput.type = 'password';
+          element.classList.remove('active');
+        }
+      }
+    </script>
     <script type="module" src="auth.js" defer></script>
-    <!-- <script type="module" src="SignUpWithGoogle.js"></script> -->
+
+    <script type="module" src="SignUpWithGoogle.js"></script>
+
     <script type="module" src="SignIn-Up-withGithub.js"></script>
 
   <div class="gtranslate_wrapper"></div>
@@ -122,7 +193,7 @@
 
   </script>
 
-  <script 
+  <script
     src="https://cdn.gtranslate.net/widgets/latest/float.js"
     defer
   ></script>
