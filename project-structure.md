@@ -26,6 +26,7 @@
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
+│   │   ├── Feedback.js
 │   │   └── User.js
 │   ├── package-lock.json
 │   ├── package.json
@@ -34,6 +35,7 @@
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── bali.html
 ├── blog.css
 ├── blog.html
 ├── book.html
@@ -150,6 +152,7 @@
 ├── new_post.html
 ├── package-lock.json
 ├── package.json
+├── paris.html
 ├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
