@@ -14,12 +14,23 @@ const app = express();
 connectDB();
 
 // CORS configuration
-app.use(
-  cors({
-    origin: "http://127.0.0.1:5505", // Correct: specify the base URL only
-    credentials: true, // Allow credentials (cookies) to be sent with requests
-  })
-);
+
+const allowedOrigins = [
+    'http://127.0.0.1:5505',
+    'https://deploy-preview-1740--buddytrail.netlify.app'
+];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true  // Allow credentials (cookies) to be sent with requests
+}));
+
 
 // Middleware
 app.use(express.json()); // Parse JSON bodies
