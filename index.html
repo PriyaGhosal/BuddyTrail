@@ -2535,7 +2535,6 @@ textarea.form-control {
 
   <section id="reviews" class="reviews-section">
     <div class="review">
-
       <div class="review-form">
         <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
         <p class="review-p">
@@ -2584,126 +2583,26 @@ textarea.form-control {
             </div>
            </div>
 
-
             <label for="review" id="darkbtn" >Your Review:</label>
             <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
             <label for="complaint" id="darkbtn" >Complaint (if any):</label>
             <textarea id="complaint" name="complaint" rows="3"
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
-
-            <div style="display: flex;">
-                <form class="form" id="reviewForm">
-                    <label for="name" id="darkbtn" style="color: black;">Your Name:</label>
-                    <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
-                        oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-                        oninput="this.setCustomValidity('')" />
-
-                    <label for="destination" id="darkbtn" style="color: black;">Destination/Service:</label>
-                    <input type="text" id="destination" name="destination" required pattern="[a-zA-Z ]+"
-                        oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-                        oninput="this.setCustomValidity('')" />
-
-                    <label for="rating" id="darkbtn" style="color: black;">Rating:</label>
-                    <div class="rating">
-                        <div class="star-widget">
-                            <input type="radio" name="rate" id="rate-5">
-                            <label for="rate-5" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-4">
-                            <label for="rate-4" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-3">
-                            <label for="rate-3" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-2">
-                            <label for="rate-2" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-1">
-                            <label for="rate-1" class="fas fa-star"></label>
-                            <header></header>
-                        </div>
-                    </div>
-
-                    <label for="review" id="darkbtn" style="color: black;">Your Review:</label>
-                    <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-                    <label for="complaint" id="darkbtn" style="color: black;">Complaint (if any):</label>
-                    <textarea id="complaint" name="complaint" rows="3"
-                        placeholder="Describe any issue with the staff here. Please provide details"></textarea>
-
-                    <div class="form-button">
-                        <button type="submit">Send</button>
-                    </div>
-                </form>
-
-                <!-- Thank You Message -->
-                <div id="thankYouMessage" style="display: none; margin-top: 20px;">
-                    <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
-                        committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
-                </div>
+            <div class="form-button">
+              <button type="submit">Send</button>
             </div>
+          </form>
+
+          <!-- Thank You Message -->
+          <div id="thankYouMessage" style="display: none; margin-top: 20px;">
+            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
+              committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById('reviewForm').addEventListener('submit', async function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            const name = document.getElementById('name').value;
-            const destination = document.getElementById('destination').value;
-            const rating = document.querySelector('input[name="rate"]:checked')?.id.split('-')[1]; // Get selected rating
-            const review = document.getElementById('review').value;
-            const complaint = document.getElementById('complaint').value;
-
-            // Check if rating is selected
-            if (!rating) {
-                alert('Please select a rating before submitting.');
-                return;
-            }
-
-            // Create an object with the form data
-            const formData = {
-                name: name,
-                destination: destination,
-                rating: rating,
-                review: review,
-                complaint: complaint
-            };
-
-            console.log('Form Data:', formData); // Debugging statement
-
-            try {
-                // Send the data to the backend
-                const response = await fetch('http://localhost:5000/api/rating/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                // Check if the response is ok (status code 200-299)
-                if (response.ok) {
-                    const result = await response.json();
-                    showThankYouMessage(result.message); // Show success message
-                    // Optionally reset the form
-                    document.getElementById('reviewForm').reset();
-                } else {
-                    const errorData = await response.json();
-                    alert(`Error: ${errorData.message}`); // Show error message
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Failed to send your rating. Please try again later.'); // Show error in popup
-            }
-        });
-    });
-
-    function showThankYouMessage(message) {
-        const thankYouMessage = document.getElementById('thankYouMessage');
-        thankYouMessage.innerHTML = `<p>${message}</p>`;
-        thankYouMessage.style.display = 'block';
-    }
-</script>
-
+  </section>
 
 
   <!--Cookie pop up-->
