@@ -1510,6 +1510,7 @@ Light mode styles body.light-mode {
   gap: 20px;
   color: #003366;
   margin-top: 60px;
+  height: 320px;
 }
 
 .itinerary {
@@ -1544,15 +1545,6 @@ Light mode styles body.light-mode {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   text-shadow: 0 1px;
 
-}
-
-.itinerary-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  color: #003366;
-  margin-top: 20px;
 }
 
 .itinerary {
