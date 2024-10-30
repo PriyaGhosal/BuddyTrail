@@ -324,7 +324,7 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  padding: 17px;s
+  padding: 17px;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -1031,7 +1031,7 @@ body {
   }
 }
 #About {
-  padding: 60px;
+  padding: 100px;
   background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
@@ -1040,6 +1040,7 @@ body {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
 
 #About h1 {
   font-size: 3.5em;
@@ -1097,6 +1098,14 @@ body {
   color: #e0e0e0; /* Light grey text */
 }
 
+.dark-mode .core-values{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+.dark-mode .team{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
 .light-mode #About h1 {
   color: #007bff; /* Blue color for the main heading in light mode */
 }
