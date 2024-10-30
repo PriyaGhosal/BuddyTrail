@@ -850,6 +850,7 @@ nav {
 
 .footer__col h3,
 .footer__col h4 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: #f39c12;
@@ -861,6 +862,12 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+
+/*.footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
 
 .footer__col p,
 .footer__col a {
@@ -883,6 +890,17 @@ nav {
   gap: 1rem;
   border-top: 1px solid var(--extra-light);
 }
+
+/*
+.footer__bar {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid var(--extra-light);
+}
+*/
 
 
 .footer__bar p {
