@@ -246,7 +246,7 @@
             <div class="location-cards">
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1489516408517-0c0a15662682?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            "  onclick="location.href='dubai.html'">
                     <h3>Dubai</h3>
                     <ul>
                         <li>Flight To Dubai</li>
@@ -380,6 +380,39 @@
                     <input type="date" id="dates" name="dates" required />
                     <div class="error" id="datesError"></div>
                 </div>
+
+<script>
+            // Function to set the minimum date to today
+            function setMinDate() {
+                const today = new Date();
+                const dd = String(today.getDate()).padStart(2, '0');
+                const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+                const yyyy = today.getFullYear();
+
+                // Format the date as YYYY-MM-DD
+                const minDate = yyyy + '-' + mm + '-' + dd;
+                document.getElementById("dates").setAttribute("min", minDate);
+            }
+
+            // Call the function when the document is loaded
+            document.addEventListener("DOMContentLoaded", setMinDate);
+
+            // Optional: Validate the date on form submission
+            document.querySelector("form").addEventListener("submit", function(event) {
+                const selectedDate = new Date(document.getElementById("dates").value);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+
+                if (selectedDate < today) {
+                    event.preventDefault(); // Prevent form submission
+                    document.getElementById("datesError").innerText = "Please select a date that is today or in the future.";
+                } else {
+                    document.getElementById("datesError").innerText = ""; // Clear any previous error message
+                }
+            });
+        </script>
+
+                
                 <div class="form-group">
                     <label for="transport">Mode of Transport:</label>
                     <select id="transport" name="transport" required>
