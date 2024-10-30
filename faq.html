@@ -1,245 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuddyTrail</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="about.css" />
-    <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
+    <link rel="stylesheet" href="copyright.css" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-      header {
-            background-color: #2D3748;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      #faq {
+        padding-top: 80px;
+        padding-top: 70px;
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: rgb(203, 203, 220);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 2 10px 8px rgba(255, 254, 254, 0.1);
+      }
+
+      .faq-title {
+        text-align: center;
+        font-size: 2.2em;
+        color: #161515;
+        margin-bottom: 20px;
+      }
+
+      .faq {
+        margin-bottom: 15px;
+      }
+
+      .faq input[type="checkbox"] {
+        display: none;
+      }
+
+      .faq-question {
+        padding: 15px;
+        font-size: 1.8em;
+        background-color: #1477da;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        /* display: block; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #0680fa;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        font-size: 1.6em;
+        padding: 0 15px;
+        background-color: #f3f1ef;
+        color: #333;
+        border-left: 4px solid #0f0f10;
+        transition: all 0.6s ease;
+      }
+
+      .faq input[type="checkbox"]:checked ~ .faq-answer {
+        max-height: 150px;
+        padding: 15px;
+      }
+      .arrow {
+        margin-top: -3px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+      }
+      /* Rotate arrow on FAQ open */
+      .faq input[type="checkbox"]:checked + label .arrow {
+        transform: rotate(225deg);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .faq-title {
+          font-size: 1.8em; /* Smaller title size */
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
+        .faq-question {
+          font-size: 1.5em; /* Smaller question size */
+          padding: 12px; /* Adjust padding */
         }
-            #faq{
-                padding-top: 80px;
-                padding-top: 70px;
-              }
-                              
-                
-                .faq-container {
-                  max-width: 900px;
-                  margin: 40px auto;
-                  padding: 20px;
-                  background-color: rgb(203, 203, 220);
-                  border: 1px solid #ddd;
-                  border-radius: 10px;
-                  box-shadow: 2 10px 8px rgba(255, 254, 254, 0.1);
-                }
-                
-                .faq-title {
-                  text-align: center;
-                  font-size: 1.8em;
-                  color: #161515;
-                  margin-bottom: 20px;
-                }
-                
-                .faq {
-                  margin-bottom: 15px;
-                }
-                
-                .faq input[type="checkbox"] {
-                  display: none;
-                }
-                
-                .faq-question {
-                  padding: 15px;
-                  font-size: 1.2em;
-                  background-color: #1477da;
-                  color: #fff;
-                  border: none;
-                  border-radius: 5px;
-                  cursor: pointer;
-                  /* display: block; */
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  transition: background-color 0.3s ease;
-                }
-                
-                .faq-question:hover {
-                  background-color: #0680fa;
-                }
-                
-                .faq-answer {
-                  max-height: 0;
-                  overflow: hidden;
-                  padding: 0 15px;
-                  background-color: #f3f1ef;
-                  color: #333;
-                  border-left: 4px solid #0f0f10;
-                  transition: all 0.6s ease;
-                }
-                
-                .faq input[type="checkbox"]:checked ~ .faq-answer {
-                  max-height: 150px;
-                  padding: 15px;
-                }
-                .arrow {
-                  margin-top: -3px;
-                  display: inline-block;
-                  width: 12px;
-                  height: 12px;
-                  border-right: 2px solid #fff;
-                  border-bottom: 2px solid #fff;
-                  transform: rotate(45deg);
-                  transition: transform 0.3s ease;
-                }
-                /* Rotate arrow on FAQ open */
-                .faq input[type="checkbox"]:checked + label .arrow {
-                  transform: rotate(225deg);
-                }
-              
-            </style>
 
+        .faq-answer {
+          font-size: 1.4em; /* Smaller answer size */
+          padding: 0 12px; /* Adjust padding */
+        }
 
-</head>
-<body>
-  <header>
-    <div class="container">
+        .arrow {
+          width: 10px; /* Smaller arrow */
+          height: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-head">
       <nav>
         <div class="logo">
-          <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-          <h1 id="logo">BuddyTrail</h1>
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="team.html" class="nav-link">Team</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <ul id="nav-list">
+          <!-- Close button for dropdown -->
+          <li><a href="index.html" class="navhover">Home</a></li>
+          <li><a href="team.html" class="navhover">Team</a></li>
+          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+          <li><a href="blog.html" class="navhover">Blogs</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li>
+            <a href="#itineraries" class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+          <li><a href="./contact.html" class="navhover">Contact</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
-<!-- FAQ Section -->
-<section id="faq">          
-  <div class="faq-container">
-      <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>  
-      
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq1">
-          <label for="faq1" class="faq-question">1. What is BuddyTrail? <span class="arrow"></span></label>
+    </header>
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="faq-container">
+        <h1 class="faq-title" data-aos="fade-right">
+          Frequently Asked Questions
+        </h1>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq1" />
+          <label for="faq1" class="faq-question"
+            >1. What is BuddyTrail? <span class="arrow"></span
+          ></label>
           <div class="faq-answer">
-              BuddyTrail is your all-in-one travel assistant, helping you discover new destinations, find the best hotels, and book flights with ease. Whether you're traveling solo, with family, or friends, BuddyTrail offers personalized suggestions to make your trip unforgettable.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq2">
-          <label for="faq2" class="faq-question">2. How can BuddyTrail help me plan my trip? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              BuddyTrail offers destination guides, hotel recommendations, and flight booking tools all in one platform. We make it easy to compare prices, explore local attractions, and plan the perfect itinerary based on your preferences.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq3">
-          <label for="faq3" class="faq-question">3. Does BuddyTrail offer travel deals and discounts? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              Yes! BuddyTrail partners with various airlines, hotels, and travel services to bring you exclusive discounts and offers. Be sure to check our deals section for the latest promotions on flights, accommodations, and vacation packages.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq4">
-          <label for="faq4" class="faq-question">4. Can I customize my trip on BuddyTrail? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              Absolutely! You can customize every aspect of your trip from choosing destinations, hotels, and flights, to adding local experiences. BuddyTrail provides a flexible travel planning experience to suit your needs.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq5">
-          <label for="faq5" class="faq-question">5. How do I track my bookings? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              Once you've booked a flight or hotel through BuddyTrail, you'll receive a confirmation email with a link to track and manage your bookings. You can also access your bookings via your BuddyTrail account.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq6">
-          <label for="faq6" class="faq-question">6. What if I need to cancel or change my booking? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              Cancellations and changes are allowed based on the policy of the airline or hotel. You can manage your booking through BuddyTrail, and our support team is available to assist you if you encounter any issues.
-          </div>
-      </div>
-
-      <div class="faq" data-aos="fade-right">
-          <input type="checkbox" id="faq7">
-          <label for="faq7" class="faq-question">7. Does BuddyTrail offer support for group bookings? <span class="arrow"></span></label>
-          <div class="faq-answer">
-              Yes! Whether you're planning a family trip or a getaway with friends, BuddyTrail makes group bookings easy. You can book flights and hotels for multiple travelers and receive group discounts where applicable.
-          </div>
-      </div>
-  </div>
-</section>
-
-
-<div class="gtranslate_wrapper"></div>
-
-<script>
-
-window.gtranslateSettings = {
-  "default_language":"en",
-  "detect_browser_language":true,
-  "wrapper_selector":".gtranslate_wrapper"
-}
-
-</script>
-
-<script 
-  src="https://cdn.gtranslate.net/widgets/latest/float.js"
-  defer
-></script>
-
- 
-
-    <!-- Footer Include -->
-  
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column-l">
-            <h3>Contact Us</h3>
-            <p>Email: info@example.com</p>
-            <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column-r">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+            BuddyTrail is your all-in-one travel assistant, helping you discover
+            new destinations, find the best hotels, and book flights with ease.
+            Whether you're traveling solo, with family, or friends, BuddyTrail
+            offers personalized suggestions to make your trip unforgettable.
           </div>
         </div>
-        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq2" />
+          <label for="faq2" class="faq-question"
+            >2. How can BuddyTrail help me plan my trip?
+            <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            BuddyTrail offers destination guides, hotel recommendations, and
+            flight booking tools all in one platform. We make it easy to compare
+            prices, explore local attractions, and plan the perfect itinerary
+            based on your preferences.
+          </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq3" />
+          <label for="faq3" class="faq-question"
+            >3. Does BuddyTrail offer travel deals and discounts?
+            <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            Yes! BuddyTrail partners with various airlines, hotels, and travel
+            services to bring you exclusive discounts and offers. Be sure to
+            check our deals section for the latest promotions on flights,
+            accommodations, and vacation packages.
+          </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq4" />
+          <label for="faq4" class="faq-question"
+            >4. Can I customize my trip on BuddyTrail?
+            <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            Absolutely! You can customize every aspect of your trip from
+            choosing destinations, hotels, and flights, to adding local
+            experiences. BuddyTrail provides a flexible travel planning
+            experience to suit your needs.
+          </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq5" />
+          <label for="faq5" class="faq-question"
+            >5. How do I track my bookings? <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            Once you've booked a flight or hotel through BuddyTrail, you'll
+            receive a confirmation email with a link to track and manage your
+            bookings. You can also access your bookings via your BuddyTrail
+            account.
+          </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq6" />
+          <label for="faq6" class="faq-question"
+            >6. What if I need to cancel or change my booking?
+            <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            Cancellations and changes are allowed based on the policy of the
+            airline or hotel. You can manage your booking through BuddyTrail,
+            and our support team is available to assist you if you encounter any
+            issues.
+          </div>
+        </div>
+
+        <div class="faq" data-aos="fade-right">
+          <input type="checkbox" id="faq7" />
+          <label for="faq7" class="faq-question"
+            >7. Does BuddyTrail offer support for group bookings?
+            <span class="arrow"></span
+          ></label>
+          <div class="faq-answer">
+            Yes! Whether you're planning a family trip or a getaway with
+            friends, BuddyTrail makes group bookings easy. You can book flights
+            and hotels for multiple travelers and receive group discounts where
+            applicable.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            Discover and plan affordable trips with BuddyTrail's travel
+            companion tools.
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="servicespage.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links Section -->
+        <div class="footer-column">
+          <h3>Legal Links</h3>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="cookie_policy.html">Cookie Policy</a></li>
+            <li><a href="terms_of_service.html">Terms of Service</a></li>
+            <li><a href="copyright.html">Copyright Notice</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-column newsletter" id="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscription-message"></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
       </div>
     </footer>
-</body>
+    <div class="gtranslate_wrapper"></div>
+
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+      };
+    </script>
+
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+  </body>
 </html>

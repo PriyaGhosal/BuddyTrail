@@ -10,7 +10,6 @@
 
 /* Body styling */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
@@ -58,13 +57,15 @@ html {
   left: 0;
   right: 0;
   z-index: 5;
+  /* padding: 17px; */
   padding: 10px;
+  /* background-color: #00000087;  */
   background-color: black;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Adjusted to space-between for better layout */
   align-items: center;
-  transition: background-color 0.3s ease, height 0.3s ease;
+  /* transition: background-color 0.3s ease, height 0.3s ease; */
 }
 
 nav {
@@ -84,7 +85,7 @@ nav {
   text-decoration: none;
   font-weight: 400;
   white-space: nowrap;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 .hamburger {
@@ -96,20 +97,16 @@ nav {
   cursor: pointer;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #1e88e5;
-}
-
 /* Full-width container for page */
 .container {
   display: flex;
   width: 100%;
-  /* margin: 20px auto; */
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin-top: 120px;
 }
 
 /* Table of contents styling */
@@ -121,12 +118,15 @@ h1 {
   margin-right: 20px;
   height: fit-content;
   position: sticky;
-  top: 20px;
+  /* top: 20px; */
+  top: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .toc h2 {
   font-size: 1.5rem;
   color: #004085;
+  margin-top: 10px;
 }
 
 .toc ul {
@@ -175,7 +175,7 @@ h2 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #555;
   margin-bottom: 20px;
 }
@@ -188,52 +188,42 @@ ul {
 
 li {
   margin-bottom: 10px;
-}
-
-/* Button styling for links */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-/*  */
-.main-container {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #007bff;
-  text-align: center;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  text-align: justify;
+  font-size: 1.5rem;
 }
 
 a {
-  color: #007bff;
+  /* color: white; */
+  color: #555;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-top-btn {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 80px; /* Adjust this value to move the button left */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.scroll-top-btn:hover {
+  background-color: #2c445e;
 }
 
 /* Footer Styles */
 footer {
   background-color: #232323;
+  color: #ffffff;
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -242,10 +232,12 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  /* gap: 50px; */
   gap: 20px;
   max-width: 1200px;
   height: 550px;
   margin: auto;
+  /* margin-left: 100px; */
 }
 
 .footer-column {
@@ -271,7 +263,7 @@ footer {
 
 .footer-column h3 {
   margin-bottom: 5px;
-  font-size: 18px !important;
+  font-size: 18px;
   color: #f39c12;
   cursor: pointer;
 }
@@ -296,6 +288,7 @@ footer {
 
 .footer-column ul li a:hover {
   color: #f39c12;
+  /* text-decoration: underline; */
 }
 
 .social-icons a {
@@ -309,7 +302,7 @@ footer {
   color: #f39c12;
 }
 
-/* for discord */
+/* for facebook */
 .social-icons .fa-discord {
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -328,7 +321,7 @@ footer {
   transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
 }
-/* for github */
+/* for instagram */
 .social-icons .fa-github {
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -338,7 +331,7 @@ footer {
   transform: scale(1.2) translateY(-5px);
 }
 
-/* for likedin */
+/* for instagram */
 .social-icons .fa-linkedin-in {
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -350,8 +343,9 @@ footer {
 
 .footer-column.newsletter {
   max-width: 300px;
+  /* margin: 0 auto; */
   margin-left: 80px;
-  margin-top: -50px;
+  margin-top: -30px;
   text-align: center;
 }
 #newsletter-form {
@@ -388,53 +382,20 @@ button[type="submit"]:hover {
 }
 
 .footer-bottom {
-  margin-top: -40px;
-  margin-bottom: -40px;
+  margin-top: -20px;
 }
-
 .footer-bottom .copyright-b {
   color: #fffcfc;
   font-size: 1.5rem;
   /* margin-bottom: 1.2rem; */
 }
 
-/* Responsive Design */
-/* Responsive Design */
+/* Responsive Styles for screens smaller than 768px */
 @media (max-width: 768px) {
-  /* Adjust font sizes */
-  h1 {
-    font-size: 1.8rem; /* Slightly larger for better readability */
-  }
-
-  h2 {
-    font-size: 1.6rem; /* Reduced size */
-  }
-
-  p {
-    font-size: 0.9rem; /* Consistent size */
-  }
-
-  /* Navbar adjustments */
-  .main-head {
-    flex-direction: column; /* Stack items vertically */
-    padding: 15px; /* Increased padding for touch targets */
-  }
-
-  #nav-list {
-    flex-direction: column; /* Stack nav items */
-    align-items: center; /* Center items */
-  }
-
-  #nav-list li {
-    margin: 5px 0; /* Space between nav items */
-  }
-
-  .hamburger {
-    display: block; /* Show hamburger on smaller screens */
-  }
-
+  /* Adjusting margins for main content and table of contents */
   .container {
-    flex-direction: column; /* Stack toc and main content */
+    margin-top: 80px; /* Reduced margin for smaller screens */
+    flex-direction: column; /* Stack elements vertically */
     padding: 10px; /* Reduced padding */
   }
 
@@ -442,35 +403,81 @@ button[type="submit"]:hover {
     flex-basis: 100%; /* Full width for toc */
     margin-right: 0; /* Remove margin */
     margin-bottom: 20px; /* Space below toc */
+    top: 100px; /* Adjust sticky position */
   }
 
   .main-content {
     flex-basis: 100%; /* Full width for main content */
+    margin-top: 20px; /* Reduced margin */
+  }
+
+  /* Adjusting font sizes for headings and paragraphs */
+  h1 {
+    font-size: 1.8rem; /* Smaller size for headings */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller size for subheadings */
+  }
+
+  p {
+    font-size: 1.2rem; /* Smaller paragraph text */
+  }
+
+  li {
+    font-size: 1.2rem; /* Smaller list items */
+  }
+
+  #nav-list li a {
+    font-size: 1.5rem; /* Adjust nav links font size */
+  }
+
+  /* Navbar adjustments */
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items */
+    align-items: center; /* Center nav items */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Space between nav items */
   }
 
   /* Footer adjustments */
+  .footer-container {
+    flex-direction: column; /* Stack footer columns */
+    align-items: center; /* Center footer content */
+  }
+
   .footer-column {
     flex-basis: 100%; /* Full width for footer columns */
     margin: 10px 0; /* Space between footer items */
   }
 
-  /* Newsletter form */
   .footer-column.newsletter {
     margin-left: 0; /* Remove left margin */
     margin-top: 20px; /* Space above */
   }
 
+  /* Newsletter form adjustments */
   #newsletter-form {
     flex-direction: column; /* Stack email and button */
     align-items: stretch; /* Full width for inputs */
   }
 
   #email {
-    width: 100%; /* Full width */
-    margin-bottom: 10px; /* Space below */
+    width: 100%; /* Full width for email input */
   }
 
   button[type="submit"] {
-    width: 100%; /* Full width for the button */
+    width: 100%; /* Full width for submit button */
+  }
+
+  /* Adjust scroll button positioning */
+  .scroll-top-btn {
+    right: 20px; /* Adjust position */
   }
 }

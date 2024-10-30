@@ -1,295 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./contact.css">
-    <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="copyright.css" />
     <link
-      rel= "stylesheet"
-      href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity= "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin= "anonymous"
-      referrerpolicy= "no-referrer"
+      rel="icon"
+      href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000"
     />
-</head>
-<style>
-    .card {
-        width: 80%; 
-        margin: 30px auto; 
-        padding: 20px;
-        margin-bottom: 70px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        background-color: #fff; 
-    }
-    
-    .card-header h2{
-        color: #fff;
-        padding: 15px;
-        margin-bottom: 20px;
-        text-align: center;
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-        border-radius: 6px;
-        text-shadow: 2px 2px 10px gray;
-    }
-    
-    .card-body {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap; 
-        gap: 20px; 
-    }
-    
-    .form-section {
-        flex: 1;
-        min-width: 45%; 
-        color: #121111;
-    }
-    
-    .image-section {
-        flex: 1;
-        min-width: 45%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .image-section img {
-        max-width: 100%;
-        height: auto;
-        max-height: 500px;
-    }
-    
-    .form-group {
-        margin-bottom: 20px;
-        color: #fff; 
-    }
-    
-    label {
-        display: block;
-        margin-bottom: 10px;
-        color: #1e1e1e; 
-    }
-    
-    input, textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        color: #121212; 
-    }
-    
-    textarea {
-        height: 120px;
-    }
-    
-    button[type="submit"] {
-        background-color: rgb(27, 27, 27);
-        color: #fff;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
-    
-    button[type="submit"]:hover {
-        background-color: black;
-    }
-
-    .error-message {
-        color: red;
-        font-size: 0.9em;
-        margin-top: 5px;
-        display: none;
-    }
-
-    @media (max-width: 768px) {
-        .card-body {
-            flex-direction: column; 
-        }
-
-        .form-section, .image-section {
-            width: 100%; 
-            min-width: 100%;
-        }
-    }
-
-</style>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="container-fluid">
-        <header style="background-color: black;height:85px;">
-            <nav style="padding: 5px;width:90%;">
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web">
-                    <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-                </div>
+      <header style="background-color: black; height: 85px">
+        <nav style="padding: 5px; width: 90%; margin-left: 20px">
+          <div class="logo">
+            <img src="img/logo.png" id="logo-web" />
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+          </div>
 
-            <!-- Hamburger button for mobile -->
-            <button class="hamburger" id="hamburger">☰</button>
-        
-            <ul id="nav-list">
-              <!-- Close button for dropdown -->
-              <span class="dropdown-close-btn" id="closeBtn">×</span>
-              <li><a href="./index.html" class="navhover">Home</a></li>
-              <li><a href="team.html" class="navhover">Team</a></li>
-              <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
-              <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-              <li><a href="about.html" class="navhover">About</a></li>
-              <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
-              
-              <li><a href="./contact.html" class="navhover">Contact</a></li>
-              <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-              <li><a href="auth.html" class="navhover">Sign In</a></li>
-            </ul>
-        
-            <!-- Toggle Button -->
-            <button class="mode-toggle" id="modeToggle">
-                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-            </button>
-          </nav>
-        </header>
-        
-        <section id="contactus">
-            <div class="card pb-5 pt-1">
-                <div class="card-header">
-                    <h2>Contact Us</h2>
+          <!-- Hamburger button for mobile -->
+          <button class="hamburger" id="hamburger">☰</button>
+
+          <ul id="nav-list">
+            <!-- Close button for dropdown -->
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="./index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li>
+              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+            </li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li>
+              <a href="index.html#itineraries" class="navhover"
+                >Travel Itineraries</a
+              >
+            </li>
+
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+          </ul>
+
+          <!-- Toggle Button -->
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"
+              ><img src="day-mode.png" alt="Light mode"
+            /></span>
+            <span class="moon-icon glow" style="display: none"
+              ><img src="moon.png" alt="Dark mode"
+            /></span>
+          </button>
+        </nav>
+      </header>
+
+      <section id="contactus">
+        <div class="card pb-5 pt-1">
+          <div class="card-header">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="card-body">
+            <div class="form-section">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Your name"
+                  />
+                  <span class="error-message" id="nameError"></span>
                 </div>
-                <div class="card-body">
-                    <div class="form-section">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="Your name">
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email">
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-                                <span class="error-message" id="phoneError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                <span class="error-message" id="messageError"></span>
-                            </div>
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-                    <div class="image-section">
-                        <img src="./image.png" alt="Contact Image" style="max-width: 80%; height: auto; max-height: 500px;">
-                    </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your email"
+                  />
+                  <span class="error-message" id="emailError"></span>
                 </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your phone number"
+                  />
+                  <span class="error-message" id="phoneError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your message"
+                  ></textarea>
+                  <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit">Send</button>
+              </form>
             </div>
-        </section>
+            <div class="image-section">
+              <img
+                src="./image.png"
+                alt="Contact Image"
+                style="max-width: 80%; height: auto; max-height: 500px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-<footer id="footer">
-<footer>
-  <div class="footer-container">
-    <!-- About Us Section -->
-    <div class="footer-column">
-      <h3>About Us</h3>
-      <p>
-        Discover and plan affordable trips with BuddyTrail's travel
-        companion tools.
-      </p>
-    </div>
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            Discover and plan affordable trips with BuddyTrail's travel
+            companion tools.
+          </p>
+        </div>
 
-    <!-- Quick Links Section -->
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html" class="faq-link">FAQs</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contributor/contributor.html">Our Contributor</a></li>
-      </ul>
-    </div>
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="servicespage.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+          </ul>
+        </div>
 
-    <!-- Legal Links Section -->
-    <div class="footer-column">
-      <h3>Legal Links</h3>
-      <ul>
-        <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-        <li><a href="copyright.html">Copyright Notice</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="cookie_policy.html">Cookie Policy</a></li>
-      </ul>
-    </div>
+        <!-- Legal Links Section -->
+        <div class="footer-column">
+          <h3>Legal Links</h3>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="cookie_policy.html">Cookie Policy</a></li>
+            <li><a href="terms_of_service.html">Terms of Service</a></li>
+            <li><a href="copyright.html">Copyright Notice</a></li>
+          </ul>
+        </div>
 
-    <!-- Contact Us Section -->
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@buddytrail.com">info@buddytrail.com</a></p>
-      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-    </div>
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
 
-    <!-- Follow Us Section -->
-    <div class="footer-column">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://discord.com/invite/priyaghosal">
-          <i class="fab fa-discord"></i>
-        </a>
-        <a href="https://x.com/https://twitter.com/PriyaGhosa39968">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://github.com/PriyaGhosal/BuddyTrail">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+        <!-- Follow Us Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-column newsletter" id="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscription-message"></p>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Footer Bottom Section -->
-  <div class="footer-bottom">
-    <p>&copy; 2024 BuddyTrail. All rights reserved.</p>
-  </div>
-</footer>
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+      </div>
+    </footer>
 
-<!-- Scripts -->
-<script>
-  window.gtranslateSettings = {
-    "default_language": "en",
-    "detect_browser_language": true,
-    "wrapper_selector": ".gtranslate_wrapper"
-  };
-</script>
-
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-<script src="./contact.js"></script>
-
-<script>
-  window.onscroll = function() {
-    var header = document.querySelector("header");
-    if (window.pageYOffset > 0) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  };
-</script>
-
-</body>
+    <!-- Scripts -->
+    <div class="gtranslate_wrapper"></div>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+      };
+    </script>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+    <script src="./contact.js"></script>
+    <script>
+      window.onscroll = function () {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > 0) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      };
+    </script>
+  </body>
 </html>

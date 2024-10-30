@@ -6,190 +6,51 @@
     <title>Terms of Services - BuddyTrail</title>
     <link rel="stylesheet" href="terms.css" />
     <link
-      rel="icon"
-      href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000"
-    />
-    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <style>
-      /* Resetting margin and padding */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Body styling */
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8f9fa;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      /* Full-width container for page */
-
-      /* Table of contents styling */
-      .toc {
-        flex-basis: 25%;
-        background-color: #e9ecef;
-        padding: 20px;
-        border-radius: 8px;
-        margin-right: 20px;
-        height: fit-content;
-        position: sticky;
-        top: 80px;
-      }
-
-      .toc h2 {
-        font-size: 1.5rem;
-        color: #004085;
-      }
-
-      .toc ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .toc ul li {
-        margin-bottom: 10px;
-      }
-
-      .toc ul li a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-      }
-
-      .toc ul li a:hover {
-        text-decoration: underline;
-      }
-
-      /* Main content styling */
-
-      h1,
-      h2 {
-        color: #004085;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-        text-align: center;
-        margin-bottom: 30px;
-        border-bottom: 2px solid #004085;
-        padding-bottom: 10px;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 20px;
-      }
-
-      ul {
-        margin-left: 20px;
-        padding-left: 20px;
-        list-style: disc;
-      }
-
-      li {
-        margin-bottom: 10px;
-        color: #555;
-      }
-
-      /* Button styling for links */
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Smooth scrolling for anchor links */
-      html {
-        scroll-behavior: smooth;
-      }
-      .container {
-        display: flex;
-        width: 100%;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .toc {
-          margin-bottom: 20px;
-          margin-right: 0;
-          width: 100%;
-        }
-
-        .main-content {
-          width: 100%;
-        }
-
-        h1 {
-          font-size: 1.8rem;
-        }
-
-        h2 {
-          font-size: 1.4rem;
-        }
-
-        p {
-          font-size: 0.95rem;
-        }
-      }
-    </style>
   </head>
   <body>
-    <header>
-      <div class="container3">
-        <nav>
-          <div class="logo">
-            <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-            <h1 id="logo">BuddyTrail</h1>
-          </div>
-          <button class="hamburger" id="hamburger">☰</button>
-          <ul class="nav-links" id="nav-links">
-            <button class="dropdown-close-btn" id="closeBtn">✖</button>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link active">About Us</a></li>
-            <li><a href="team.html" class="nav-link">Team</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="auth.html" class="btn-primary">Sign In</a></li>
-          </ul>
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"
-              ><img src="day-mode.png" alt="Light mode"
-            /></span>
-            <span class="moon-icon glow" style="display: none"
-              ><img src="moon.png" alt="Dark mode"
-            /></span>
-          </button>
-        </nav>
-      </div>
+    <header class="main-head">
+      <nav>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+        </div>
+
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <ul id="nav-list">
+          <button class="dropdown-close-btn" id="closeBtn">✖</button>
+          <!-- Close button for dropdown -->
+          <li><a href="index.html" class="navhover">Home</a></li>
+          <li><a href="team.html" class="navhover">Team</a></li>
+          <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+          <li><a href="blog.html" class="navhover">Blogs</a></li>
+          <li><a href="about.html" class="navhover">About</a></li>
+          <li>
+            <a href="#itineraries" class="navhover">Travel Itineraries</a>
+          </li>
+          <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+          <li><a href="./contact.html" class="navhover">Contact</a></li>
+          <li><a href="#reviews" class="navhover">Reviews</a></li>
+          <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
+        <button class="mode-toggle" id="modeToggle">
+          <span class="sun-icon glow"
+            ><img src="day-mode.png" alt="Light mode"
+          /></span>
+          <span class="moon-icon glow" style="display: none"
+            ><img src="moon.png" alt="Dark mode"
+          /></span>
+        </button>
+      </nav>
     </header>
+
     <div class="container">
       <!-- Table of contents on the left side -->
       <div class="toc">
@@ -343,61 +204,89 @@
         <p>Phone: +1-800-555-1234</p>
       </div>
     </div>
-    <footer>
-      <div class="container2">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>About Us</h3>
-            <p>
-              Discover and plan affordable trips with BuddyTrail's travel
-              companion tools.
-            </p>
-          </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="faq.html" class="faq-link">FAQs</a></li>
-              <li><a href="/#services">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li>
-                <a href="contributor/contributor.html">Our Contributor</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: info@example.com</p>
-            <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/PriyaGhosal/BuddyTrail"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            Discover and plan affordable trips with BuddyTrail's travel
+            companion tools.
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="servicespage.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links Section -->
+        <div class="footer-column">
+          <h3>Legal Links</h3>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="cookie_policy.html">Cookie Policy</a></li>
+            <li><a href="terms_of_service.html">Terms of Service</a></li>
+            <li><a href="copyright.html">Copyright Notice</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
-        <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+
+        <div class="footer-column newsletter" id="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscription-message"></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
       </div>
     </footer>
-
     <div class="gtranslate_wrapper"></div>
     <script>
       window.gtranslateSettings = {
