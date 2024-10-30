@@ -150,6 +150,7 @@
 ├── new_post.html
 ├── package-lock.json
 ├── package.json
+├── paris.html
 ├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt

@@ -201,14 +201,24 @@ footer {
 }
 
 /* for twitter */
-.social-icons .fa-x-twitter {
+/* .social-icons .fa-x-twitter {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons .fa-x-twitter:hover {
   color: black;
   transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
+} */
+.x-logo-link .x-logo-image {
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.x-logo-link:hover .x-logo-image {
+  color: aqua;
+  transform: scale(1.2) translateY(-5px); /* Scale and move up */
+  filter: brightness(0.8); /* Darken slightly on hover (optional) */
+}
+
 /* for instagram */
 .social-icons .fa-github {
   transition: color 0.3s ease, transform 0.3s ease;
