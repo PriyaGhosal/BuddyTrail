@@ -3057,3 +3057,53 @@ body {
   border-radius: 50%; /* Optional: make it circular */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }
+
+
+
+
+
+/* Star Rating Container */
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffbf2;
+  padding: 10px;
+  border-radius: 5px;
+  width: max-content;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the radio buttons */
+.star-widget input[type="radio"] {
+  display: none;
+}
+
+/* Styling for each star */
+.star-widget label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent; /* Default no border */
+  padding: 2px; /* Minimal padding to match star size */
+}
+
+/* Change color on hover */
+.star-widget label:hover,
+.star-widget label:hover ~ label {
+  color: #f39c12;
+}
+
+/* Color the selected stars */
+.star-widget input[type="radio"]:checked ~ label,
+.star-widget input[type="radio"]:checked ~ label ~ label {
+  color: #f39c12;
+}
+
+/* Apply blue border to the selected star */
+.star-widget input[type="radio"]:checked + label {
+  border-color: #0057B3; /* Blue border when clicked */
+  padding: 2px; /* Make sure padding is consistent to match star size */
+}
