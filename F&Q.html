@@ -257,7 +257,13 @@ body.dark-mode .navbar a:hover {
   </head>
   <body>
     <script src="script.js"></script>
+    <script>
+      
+    </script>
     <header class="main-head">
+      <button class="go-top-btn">
+        <img height="45px" width="50px" src="arrow_upper.png " alt="arrow up">
+      </button>
       <div class="logo">
         <img src="img/logo.png" id="logo-web" />
         <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -365,13 +371,13 @@ body.dark-mode .navbar a:hover {
     <h2>Suggestions/Questions</h2>
     <form id="suggestionForm" action="/submit-suggestion" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -418,6 +424,22 @@ body.dark-mode .navbar a:hover {
             modal.style.display = 'none';
         }
     });
+
+    const goTopBtn= document.querySelector('.go-top-btn');
+  window.addEventListener('scroll',checkHeight)
+  function checkHeight(){
+    if(window.scrollY > 200){
+goTopBtn.style.display="flex"
+    } else{
+      goTopBtn.style.display="none"
+    }
+  }
+  goTopBtn.addEventListener('click', () =>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  })
 </script>
 
   
@@ -630,7 +652,7 @@ body.dark-mode .navbar a:hover {
   });
     </script>  
   </body>
-=======
+ 
     
 
   <footer id="footer">
@@ -728,7 +750,7 @@ body.dark-mode .navbar a:hover {
   
     <!-- Footer Bottom Section -->
     <div class="footer-bottom">
-      <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+      <p class="copyright-b" style="font-size: medium;">&copy; 2024 BuddyTrail. All rights reserved.</p>
     </div>
   </footer>
   <script>
@@ -791,7 +813,7 @@ modeToggle.addEventListener("click", () => {
         document.getElementById("clipart-img1").style.visibility = "visible";
         document.getElementById("clipart-img2").style.visibility = "visible";
     }
-});
+  });
 });
   </script>
 </body>
