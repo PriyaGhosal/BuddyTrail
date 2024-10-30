@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Cookie Policy - BuddyTrail</title>
     <link rel="Stylesheet" href="cookie_policy.css" />
+     <link rel="icon" href="/icons/airplane.svg" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -14,6 +23,43 @@
       referrerpolicy="no-referrer"
     />
   </head>
+  <style>
+     /* Dark Mode Variables */
+      body.dark-mode {
+          --bg-color: #000;
+          --text-color: #fff;
+          --toc-bg: #333;
+          --link-color: #90caf9;
+      }
+      
+      .dark-mode .container {
+          background-color: var(--bg-color);
+      }
+      
+      .dark-mode-toc {
+          background-color: var(--toc-bg);
+      }
+      
+      .dark-mode-toc ul li a,
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode p,
+      .dark-mode ul li {
+          color: var(--text-color);
+      }
+      
+      .dark-mode-content {
+          background-color: var(--bg-color);
+      }
+      
+      .dark-mode-content h1,
+      .dark-mode-content h2,
+      .dark-mode-content p,
+      .dark-mode-content li {
+          color: var(--text-color);
+      }
+      
+    </style>
   <body>
     <header class="main-head">
       <nav>
@@ -40,6 +86,14 @@
           <li><a href="#reviews" class="navhover">Reviews</a></li>
           <li><a href="auth.html" class="navhover">Sign In</a></li>
         </ul>
+         <button class="mode-toggle" id="modeToggle">
+              <span class="sun-icon glow"
+                ><img src="day-mode.png" alt="Light mode"
+              /></span>
+              <span class="moon-icon glow" style="display: none"
+                ><img src="moon.png" alt="Dark mode"
+              /></span>
+            </button>
       </nav>
     </header>
 
@@ -238,5 +292,17 @@
       src="https://cdn.gtranslate.net/widgets/latest/float.js"
       defer
     ></script>
+     <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+        const toc = document.querySelector('.toc');
+        const mainContent = document.querySelector('.main-content');
+    
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toc.classList.toggle('dark-mode-toc');
+            mainContent.classList.toggle('dark-mode-content');
+        });
+    </script>
   </body>
 </html>

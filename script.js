@@ -18,7 +18,7 @@
 // themeToggle.addEventListener('click', () => {
 //     const isDarkMode = bodyElement.classList.toggle('dark-mode');
 //     updateButtonText(isDarkMode);
-    
+
 //     // Save the user's preference in localStorage
 //     localStorage.setItem('theme', isDarkMode ? 'dark' : 'bright');
 // });
@@ -31,7 +31,7 @@
 //     updateButtonText(isDarkMode);
 // }
 
-    
+
 // function initMap() {
 //     // Initialize the map centered around India
 //     var map = new google.maps.Map(document.getElementById('map'), {
@@ -313,12 +313,64 @@
 //             });
 
 
-    
+
 // }
+
+/* Detect system default's theme */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('modeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    const body = document.body;
+
+    // Function to apply the theme
+    function applyTheme(isDarkMode) {
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'inline-block';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+            sunIcon.style.display = 'inline-block';
+            moonIcon.style.display = 'none';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Check the system's color scheme preference
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        applyTheme(savedTheme === 'dark');
+    } else {
+        applyTheme(userPrefersDark);
+    }
+
+    // Listen for changes to the system's color scheme
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        applyTheme(event.matches);
+    });
+
+    // Toggle the theme on button click
+    modeToggle.addEventListener('click', () => {
+        const isDarkMode = body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode', !isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        applyTheme(isDarkMode);
+    });
+});
+
+
 /*SOS*/
+
 function sendSOS() {
     const statusDiv = document.getElementById("sos-status");
-    
+
     // Check if Geolocation is available
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -348,7 +400,7 @@ function sendSOS() {
 
 document.getElementById('postForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     const postContent = document.getElementById('postContent').value;
     if (postContent.trim() === '') return;
 
@@ -402,7 +454,7 @@ uploadForm.addEventListener('submit', async (event) => {
 
 window.addEventListener("scroll", function () {
     let navbar = document.getElementById("main-head");
-    if (window.scrollY > 100) navbar.classList.add("shadow"); 
+    if (window.scrollY > 100) navbar.classList.add("shadow");
     else navbar.classList.remove("shadow");
 });
 
@@ -454,7 +506,7 @@ function initMap() {
 //     console.log('Toggle clicked'); // Log when the button is clicked
 //     document.body.classList.toggle('dark-mode');
 //     document.body.classList.toggle('light-mode');
-    
+
 //     if (document.body.classList.contains('dark-mode')) {
 //         console.log('Switching to dark mode');
 //         sunIcon.style.display = 'none';  // Hide sun icon
@@ -512,7 +564,7 @@ modeToggle.addEventListener('click', () => {
 // google translator
 document.getElementById('languageToggle').addEventListener('click', function() {
     var translateElement = document.getElementById('google_translate_element');
-    
+
     // Toggle visibility of the Google Translate element
     if (translateElement.style.display === 'none' || translateElement.style.display === '') {
         translateElement.style.display = 'block';
@@ -531,4 +583,15 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
-
+// Script to detect service workers for enabling PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch((error) => {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    });
+  }

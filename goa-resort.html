@@ -7,158 +7,823 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="goa-resort.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css" />
 </head>
 <body>
+    <!-- Preloader -->
+         <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-wrapper">
+            <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+            <div class="loader-globe"></div>
+        </div>
+        <div id="loading-text">Ready to Explore the World...</div>
+    </div>
+    <style>
+        /* Preloader Container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        /* Wrapper for the logo and loader */
+        .loader-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        #logo {
+            width: 140px;
+            position: relative;
+            z-index: 10;
+            /* Ensures logo stays above the loader */
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* Circular Loader surrounding the logo */
+        .loader-globe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-left-color: white;
+            border-right-color: white;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Loading Text */
+        #loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        /* Keyframes Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script>
+        // Function to hide preloader and show content once the page has fully loaded
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+
+            // Set a small timeout for better user experience
+            setTimeout(function () {
+                // Hide preloader
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease-in-out';
+
+                // Show content after preloader fades out
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                    content.style.display = 'block';
+                    content.classList.add('show');  // Trigger fade-in transition
+                }, 1000); // Match the transition duration
+            }, 2000);  // Adjust to the length of your spinner animation
+        });
+
+    </script>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo"
+                        style="transition: transform 0.3s ease;" />
+                    <h1 id="logo">BuddyTrail</h1>
+                </div>
+                <button class="hamburger" id="hamburger">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+
     <div class="container-fluid bg-light py-5">
-        <h1 class="text-center mb-5">Goa Beach Resorts</h1>
-        <div class="row mb-4">
-            <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" placeholder="Search resorts..." aria-label="Search resorts">
+        <h1 class="text-center display-3 mb-3 color-changing-text">GOA</h1>
+        <p class="text-center lead mb-5 color-changing-text">"Where the Sun Kisses the Sea and the Soul Feels Free."</p>
+    </div>
+    
+    
+    <div class="container-fluid bg-light py-5">
+        <!-- Image Carousel -->
+        <div id="resortCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#resortCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#resortCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#resortCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="col-md-3 mb-3">
-                <select class="form-select" aria-label="Sort resorts">
-                    <option selected>Sort by</option>
-                    <option value="price">Price</option>
-                    <option value="rating">Rating</option>
-                    <option value="popularity">Popularity</option>
-                </select>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://plus.unsplash.com/premium_photo-1697729701846-e34563b06d47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Goa Beach Image 1" style="height: 500px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Beautiful Beaches</h5>
+                        <p>Relax on the white sands of Goa.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" class="d-block w-100" alt="Goa Beach Image 2" style="height: 500px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Luxurious Resorts</h5>
+                        <p>Experience the luxury of world-class resorts.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="d-block w-100" alt="Goa Beach Image 3" style="height: 500px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Stunning Sunsets</h5>
+                        <p>Enjoy breathtaking views from your room.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 mb-3">
-                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
-                    Filter
-                </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#resortCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#resortCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container-fluid bg-light py-5">
+            <h1 class="text-center mb-5">Goa Beach Resorts</h1>
+            <div class="row mb-4">
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="Search resorts..." aria-label="Search resorts">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <select class="form-select" aria-label="Sort resorts">
+                        <option selected>Sort by</option>
+                        <option value="price">Price</option>
+                        <option value="rating">Rating</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+                        Filter
+                    </button>
+                </div>
+            </div>
+            <div class="collapse mb-4" id="filterCollapse">
+                <div class="card card-body">
+                    <h5 class="mb-3">Filter by amenities:</h5>
+                    <div class="row">
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="poolFilter">
+                                <label class="form-check-label" for="poolFilter">
+                                    Swimming Pool
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="spaFilter">
+                                <label class="form-check-label" for="spaFilter">
+                                    Spa
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="beachFilter">
+                                <label class="form-check-label" for="beachFilter">
+                                    Beach Access
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="restaurantFilter">
+                                <label class="form-check-label" for="restaurantFilter">
+                                    Restaurant
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="resortGrid">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 resort-card">
+                        <img src="https://images.unsplash.com/photo-1582610116397-edb318620f90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk3Nw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Sunset Beach Resort">
+                        <div class="card-body">
+                            <h5 class="card-title">Sunset Beach Resort</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Calangute, Goa</p>
+                            <p class="card-text">Experience luxury by the sea with stunning sunset views.</p>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <div class="mb-3">
+                                <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                                <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                                <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                                <i class="bi bi-flower1 me-2" title="Spa"></i>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 resort-card">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk5MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Palm Grove Resort">
+                        <div class="card-body">
+                            <h5 class="card-title">Palm Grove Resort</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Baga, Goa</p>
+                            <p class="card-text">Relax in our tropical paradise surrounded by palm trees.</p>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </div>
+                            <div class="mb-3">
+                                <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                                <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                                <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 resort-card">
+                        <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUxMDAwMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Azure Bay Resort">
+                        <div class="card-body">
+                            <h5 class="card-title">Azure Bay Resort</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Palolem, Goa</p>
+                            <p class="card-text">Discover serenity in our private bay with crystal clear waters.</p>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <div class="mb-3">
+                                <i class="bi bi-water me-2" title="Swimming Pool"></i>
+                                <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
+                                <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
+                                <i class="bi bi-flower1 me-2" title="Spa"></i>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="collapse mb-4" id="filterCollapse">
-            <div class="card card-body">
-                <h5 class="mb-3">Filter by amenities:</h5>
+        <div class="modal fade" id="resortModal" tabindex="-1" aria-labelledby="resortModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resortModalLabel">Resort Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Detailed information about the resort will be displayed here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+        <!-- footer -->
+        <style>
+            /* Global Styles */
+    
+            /* CTA Button */
+    
+            .align1 {
+                width: 255px;
+                height: 50px;
+                display: flex;
+                align-self: flex-end;
+                justify-content: center;
+                margin: 56px auto 56px;
+    
+            }
+    
+            #cta-button {
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+                /* Adjust padding for button size */
+                background-color: #000;
+                /* Background color black */
+                color: #fff;
+                /* Text color white */
+                text-align: center;
+                font-size: 18px;
+                text-decoration: none;
+                border-radius: 5px;
+                /* Rounded corners */
+                width: 250px;
+                /* Fixed width */
+                height: 45px;
+                /* Fixed height */
+                line-height: 35px;
+                /* Vertically center text */
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+    
+            /* Hover Effect */
+            #cta-button:hover {
+                background-color: #333;
+                /* Darker black on hover */
+                transform: scale(1.05);
+                /* Slightly enlarge button */
+            }
+    
+            .team-description {
+    
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                background-color: #eef5f9;
+                border-radius: 10px;
+                padding: auto;
+                width: 680px;
+                height: 23rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+                border: 2px solid transparent;
+    
+            }
+    
+            .team-description:hover {
+                background: linear-gradient(45deg, #ff66b2, #c0c0c0);
+                /* Pink-silver gradient */
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                border-color: #007BFF;
+            }
+    
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f9fa;
+                color: #333;
+                line-height: 1.6;
+            }
+    
+            .container {
+                width: 85%;
+                margin: 0 auto;
+            }
+    
+            /* About Section */
+            .about {
+                background-color: #fff;
+                padding: 60px 0;
+                text-align: center;
+                position: relative;
+            }
+    
+            .about p {
+                font-size: 18px;
+                color: #666;
+                max-width: 800px;
+                margin: 0 auto;
+                transition: color 0.4s ease;
+            }
+    
+            .about h1 {
+                font-size: 36px;
+                color: #007BFF;
+                margin-bottom: 20px;
+                position: relative;
+                transition: color 0.3s ease;
+            }
+    
+            .about h1::after {
+                content: '';
+                display: block;
+                width: 80px;
+                height: 3px;
+                background-color: #007BFF;
+                margin: 10px auto;
+                transition: width 0.3s ease;
+            }
+    
+            .about:hover h1 {
+                color: #0056b3;
+            }
+    
+            .about:hover h1::after {
+                width: 120px;
+            }
+    
+            .about:hover p {
+                color: #333;
+            }
+    
+            /* Core Values Section */
+            .core-values {
+                background-color: #eef5f9;
+                padding: 40px 0;
+            }
+    
+            .core-values h2 {
+                margin-top: -1rem;
+                text-align: center;
+                margin-bottom: 40px;
+                color: #007BFF;
+                font-size: 32px;
+                transition: color 0.3s ease;
+            }
+    
+            .core-values h2:hover {
+                color: #0056b3;
+            }
+    
+            .core-values .values {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            .core-values .value-item {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 30px;
+                margin: 20px;
+                width: 45%;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+                border: 2px solid transparent;
+            }
+    
+            .core-values .value-item:hover {
+                background: rgb(83, 180, 215);
+                background: linear-gradient(0deg, rgba(83, 180, 215, 1) 15%, rgba(28, 103, 130, 1) 75%);
+                /* Pink-silver gradient */
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                border-color: #7ac9a6;
+            }
+    
+            .core-values .value-item h3 {
+                color: #007BFF;
+                margin-bottom: 20px;
+                font-size: 24px;
+                transition: color 0.3s ease;
+            }
+    
+            .core-values .value-item:hover h3 {
+                background: #ffffff;
+                background: linear-gradient(to right, #C7C7C7 0%, #CED9D3 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+                /* Text color changes to white on hover */
+            }
+    
+            .core-values .value-item p {
+                color: #555;
+                transition: color 0.3s ease;
+            }
+    
+            .core-values .value-item:hover p {
+                color: #f0f0f0;
+                /* Subtle text color change on hover */
+            }
+    
+            /* Team Section */
+            .team {
+                background-color: #fff;
+                padding: 60px 0;
+            }
+    
+            .team h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                margin-top: -2rem;
+                font-size: 32px;
+                color: #007BFF;
+                transition: color 0.3s ease;
+            }
+    
+            .team h2:hover {
+                color: #0056b3;
+            }
+    
+            .team .team-members {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+    
+    
+            .team .team-member {
+                background-color: #eef5f9;
+                padding: 30px;
+                border-radius: 10px;
+                width: 57%;
+                text-align: center;
+                margin: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+                border: 2px solid transparent;
+            }
+    
+            .team .team-member:hover {
+                background: rgb(83, 180, 215);
+                background: linear-gradient(0deg, rgba(83, 180, 215, 1) 15%, rgba(28, 103, 130, 1) 75%);
+                /* Pink-silver gradient */
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                border-color: #007BFF;
+            }
+    
+            .team .team-member img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                transition: transform 0.4s ease, border 0.3s ease;
+                border: 4px solid #fff;
+            }
+    
+            .team .team-member:hover img {
+                transform: scale(1.1);
+                border: 4px solid #007BFF;
+            }
+    
+            .team .team-member h3 {
+                margin-top: 20px;
+                font-size: 22px;
+                color: #007BFF;
+                transition: color 0.3s ease;
+            }
+    
+            .team .team-member:hover h3 {
+                color: #fff;
+                /* Text color changes to white on hover */
+            }
+    
+            .team .team-member p {
+                color: #555;
+                transition: color 0.3s ease;
+            }
+    
+            .team .team-member:hover p {
+                color: #f0f0f0;
+                /* Subtle text color change on hover */
+            }
+    
+            /* Button Styling (If you use any) */
+            button {
+                padding: 12px 24px;
+                background-color: #007BFF;
+                color: #fff;
+                border: 2px solid transparent;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+            }
+    
+            button:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+                border-color: #fff;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+    
+                .core-values .value-item,
+                .team .team-member {
+                    width: 100%;
+                }
+            }
+    
+            /* Team Description Paragraph */
+            .team-description p {
+                font-size: 18px;
+                color: #333;
+                text-align: center;
+                max-width: 900px;
+                margin: 40px auto;
+                transition: color 0.3s ease, text-decoration 0.3s ease;
+                cursor: pointer;
+            }
+    
+            .team-description p:hover {
+                color: #9000ff;
+                /* Change text color on hover */
+    
+            }
+    
+     
+            .hover-color {
+                transition: color 0.3s ease;
+                /* Smooth transition for color change */
+            }
+    
+            .hover-color:hover {
+                color: rgb(199, 59, 159);
+                /* Change color on hover */
+    =======
+            /* Navbar style */
+    
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                color: whitesmoke;
+                /* Adjust the color as needed */
+                padding: 0 5px;
+                transition: color 0.3s ease;
+            }
+    
+            .nav-link::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                /* Adjust based on padding */
+                width: 100%;
+                height: 2px;
+                /* Thickness of the underline */
+                background-color: #007BFF;
+                /* Adjust underline color */
+                transform: scaleX(0);
+                transform-origin: bottom right;
+                transition: transform 0.3s ease;
+            }
+    
+            .nav-link:hover {
+                color: #007BFF;
+                /* Change text color on hover, if desired */
+            }
+    
+            .nav-link:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+     
+            }
+        </style>
+    
+        <div class="footer-responsive">
+    
+            <footer>
                 <div class="row">
-                    <div class="col-md-3 col-6 mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="poolFilter">
-                            <label class="form-check-label" for="poolFilter">
-                                Swimming Pool
-                            </label>
+                    <div class="col">
+                        <div class="logo-footer">
+                            <img src="img/logo.png" alt="BuddyTrail Logo" />
+                            <h1 id="logo">BuddyTrail</h1>
                         </div>
+                        <p class="hover-color">Welcome to BuddyTrail - your premier travel companion! Whether you're
+                            planning a
+                            family vacation
+                            or a
+                            getaway with friends, BuddyTrail is here to help you discover and explore incredible
+                            destinations.
+                            Our platform makes it easy to find the best hotels and book affordable flights, ensuring a
+                            seamless
+                            travel experience.</p>
+    
                     </div>
-                    <div class="col-md-3 col-6 mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="spaFilter">
-                            <label class="form-check-label" for="spaFilter">
-                                Spa
-                            </label>
-                        </div>
+                    <div class="col">
+                        <h3>Office <div class="underline"><span></span></div>
+                        </h3>
+                        <p>123 Fake Street</p>
+                        <p>Near XYZ Mall, Sample City</p>
+                        <p>Fake State, PIN 12345, India</p>
+                        <p class="email-id">info@example.com</p>
+                        <h4>+123 456 7890</h4>
+    
                     </div>
-                    <div class="col-md-3 col-6 mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="beachFilter">
-                            <label class="form-check-label" for="beachFilter">
-                                Beach Access
-                            </label>
-                        </div>
+                    <div class="col">
+                        <h3>Links <div class="underline"><span></span></div>
+                        </h3>
+                        <ul class="footer-links">
+                            <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
+                            <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
+                            <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
+                            <li><a href="https://buddytrail.netlify.app/faq" target="_blank">FAQs</a></li>
+                            <li><a href="https://buddytrail.netlify.app/team" target="_blank">Our Team</a></li>
+                            <li><a href="https://buddytrail.netlify.app/contributor/contributor"
+                                    target="_blank">Contributors</a></li>
+                            <li><a href="https://buddytrail.netlify.app/contact">Contact Us</a></li>
+    
+                        </ul>
                     </div>
-                    <div class="col-md-3 col-6 mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="restaurantFilter">
-                            <label class="form-check-label" for="restaurantFilter">
-                                Restaurant
-                            </label>
+                    <div class="col">
+                        <h3>Follow Us <div class="underline"><span></span></div>
+                        </h3>
+                        <form>
+                            <i class="far fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email id" required>
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                        <div>
+                            <div class="social-icons">
+                                <a href="https://discord.com/invite/priyaghosal" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                                <a href="https://x.com/i/flow/login?redirect_after_login=%2FPriyaGhosa39968" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="img/x-logo.png" alt="X logo" class="fab">
+                                </a>
+    
+    
+                                <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" id="resortGrid">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 resort-card">
-                    <img src="https://images.unsplash.com/photo-1582610116397-edb318620f90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk3Nw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Sunset Beach Resort">
-                    <div class="card-body">
-                        <h5 class="card-title">Sunset Beach Resort</h5>
-                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Calangute, Goa</p>
-                        <p class="card-text">Experience luxury by the sea with stunning sunset views.</p>
-                        <div class="mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-half text-warning"></i>
-                        </div>
-                        <div class="mb-3">
-                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
-                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
-                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
-                            <i class="bi bi-flower1 me-2" title="Spa"></i>
-                        </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 resort-card">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUwOTk5MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Palm Grove Resort">
-                    <div class="card-body">
-                        <h5 class="card-title">Palm Grove Resort</h5>
-                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Baga, Goa</p>
-                        <p class="card-text">Relax in our tropical paradise surrounded by palm trees.</p>
-                        <div class="mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star text-warning"></i>
-                        </div>
-                        <div class="mb-3">
-                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
-                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
-                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
-                        </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+    
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 resort-card">
-                    <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmVhY2ggcmVzb3J0fHx8fHx8MTY4ODUxMDAwMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" class="card-img-top" alt="Azure Bay Resort">
-                    <div class="card-body">
-                        <h5 class="card-title">Azure Bay Resort</h5>
-                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> Palolem, Goa</p>
-                        <p class="card-text">Discover serenity in our private bay with crystal clear waters.</p>
-                        <div class="mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                        <div class="mb-3">
-                            <i class="bi bi-water me-2" title="Swimming Pool"></i>
-                            <i class="bi bi-umbrella-fill me-2" title="Beach Access"></i>
-                            <i class="bi bi-cup-hot-fill me-2" title="Restaurant"></i>
-                            <i class="bi bi-flower1 me-2" title="Spa"></i>
-                        </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="resortModal" tabindex="-1" aria-labelledby="resortModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="resortModalLabel">Resort Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Detailed information about the resort will be displayed here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Book Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                <hr>
+                <p class="copyright"> © 2024 BuddyTrail | All Rights Reserved</p>
+            </footer>
+
+            <div class="gtranslate_wrapper"></div>
+            <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+            <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+   
+    </body>
+    </html>

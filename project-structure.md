@@ -1,5 +1,6 @@
 <!-- START_STRUCTURE -->
 ```
+├── Booknow.css
 ├── CONTRIBUTING.md
 ├── Code_of_Conduct.md
 ├── F&Q.html
@@ -11,6 +12,7 @@
 ├── Travel-Itineraries.html
 ├── about.css
 ├── about.html
+├── arrow_upper.png
 ├── auth.css
 ├── auth.html
 ├── auth.js
@@ -19,16 +21,22 @@
 │   │   ├── config.js
 │   │   └── db.js
 │   ├── controllers
+│   │   ├── ContactController.js
 │   │   └── authController.js
 │   ├── index.js
 │   ├── models
+│   │   ├── ContactUs.js
+│   │   ├── Feedback.js
 │   │   └── User.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
+│   │   ├── ContactRoutes.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
+├── bali.html
+├── blog.css
 ├── blog.html
 ├── book.html
 ├── boy.png
@@ -41,6 +49,9 @@
 ├── contact.html
 ├── contact.js
 ├── contributor
+│   ├── Contributors.css
+│   ├── Contributors.html
+│   ├── Contributors.js
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
@@ -55,6 +66,7 @@
 ├── destinationform.html
 ├── disclaimer.css
 ├── disclaimer.html
+├── dubai.html
 ├── exclusivedeals.css
 ├── exclusivedeals.html
 ├── experience.css
@@ -89,6 +101,7 @@
 │   ├── HELP-IMG.jpg
 │   ├── INDIA.jpg
 │   ├── MALDIVES.jpeg
+│   ├── Microsoft_Logo.png
 │   ├── PROJECT-LEADER.png
 │   ├── Premium Photo _ Vibrant mesh gradient with magenta and blue colors high quality image for backgrounds and web.jpeg
 │   ├── Presentation1-removebg-preview.png
@@ -99,6 +112,8 @@
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
+│   ├── df1.jpg
+│   ├── df2.jpg
 │   ├── download.jpeg
 │   ├── google.png
 │   ├── googleLogo.png
@@ -129,16 +144,21 @@
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
-│   └── u5.jpg
+│   ├── u5.jpg
+│   └── x-logo.png
 ├── index.html
+├── manifest.json
 ├── moon.png
+├── new_post.html
 ├── package-lock.json
 ├── package.json
+├── paris.html
 ├── privacypolicy.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── rajasthan.css
 ├── rajasthan.html
+├── rajasthan.js
 ├── reviews.html
 ├── romantic-gateway.css
 ├── romantic-gateway.html
@@ -146,6 +166,7 @@
 │   └── popup.js
 ├── script.js
 ├── security.md
+├── service-worker.js
 ├── service.css
 ├── service.html
 ├── servicespage.html
@@ -174,6 +195,7 @@
 ├── triundtrek.jpg
 ├── update discussion forum
 ├── visi.css
-└── visi.js
+├── visi.js
+└── waterfall.mp4
 ```
 <!-- END_STRUCTURE -->
