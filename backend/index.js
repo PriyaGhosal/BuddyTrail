@@ -1,4 +1,4 @@
-// Import required modules
+
 const express = require('express');
 const connectDB = require('./config/db');  // Database connection
 const authRoutes = require('./routes/authRoutes');  // Authentication routes
@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');  // Middleware for parsing cookie
 const config = require('./config/config');  // Config file for environment variables
 const cors = require('cors');  // Middleware for Cross-Origin Resource Sharing
 
+
 // Initialize express app
 const app = express();
 
@@ -15,22 +16,25 @@ const app = express();
 connectDB();
 
 // CORS configuration
-app.use(cors({
-    origin: 'http://127.0.0.1:5504',  // Correct: specify the base URL only
-    credentials: true  // Allow credentials (cookies) to be sent with requests
-}));
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5505", // Correct: specify the base URL only
+    credentials: true, // Allow credentials (cookies) to be sent with requests
+  })
+);
 
 // Middleware
-app.use(express.json());  // Parse JSON bodies
-app.use(cookieParser());  // Enable cookie parsing
+app.use(express.json()); // Parse JSON bodies
+app.use(cookieParser()); // Enable cookie parsing
 
-// API routes
+//API routes
 app.use('/api/auth', authRoutes); 
 app.use('/api/contact', ContactRoutes); 
 app.use('/api/rating', RatingRoutes); 
 
+
 // Server listening on configured port
-const PORT = config.port || 5000;  // Use config for port, default to 5000 if undefined
+const PORT = config.port || 5000; // Use config for port, default to 5000 if undefined
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

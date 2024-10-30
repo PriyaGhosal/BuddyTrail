@@ -257,7 +257,13 @@ body.dark-mode .navbar a:hover {
   </head>
   <body>
     <script src="script.js"></script>
+    <script>
+      
+    </script>
     <header class="main-head">
+      <button class="go-top-btn">
+        <img height="45px" width="50px" src="arrow_upper.png " alt="arrow up">
+      </button>
       <div class="logo">
         <img src="img/logo.png" id="logo-web" />
         <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -422,6 +428,22 @@ body.dark-mode .navbar a:hover {
             modal.style.display = 'none';
         }
     });
+
+    const goTopBtn= document.querySelector('.go-top-btn');
+  window.addEventListener('scroll',checkHeight)
+  function checkHeight(){
+    if(window.scrollY > 200){
+goTopBtn.style.display="flex"
+    } else{
+      goTopBtn.style.display="none"
+    }
+  }
+  goTopBtn.addEventListener('click', () =>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  })
 </script>
 
   
