@@ -10,30 +10,6 @@
     
     <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
- main
- main
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-<style>
-          /* circle styles */
-          .circle {
-            height: 24px;
-            width: 24px;
-            border-radius: 24px;
-            background-color: rgb(255, 0, 0);
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 99999999;
-          }
-        </style>  
-    </head>
-
- main
-
-
-    <link rel="stylesheet" href= "style.css" />
- main
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -46,7 +22,8 @@
         </div>
         <div id="loading-text">Ready to Explore the World...</div>
     </div>
-    <!-- <style>
+
+    <style>
         /* Preloader Container */
         #preloader {
             position: fixed;
@@ -71,9 +48,6 @@
             justify-content: center;
             align-items: center;
         }
-
-        /* Logo Styling */
-        
 
         /* Circular Loader surrounding the logo */
         .loader-globe {
@@ -109,7 +83,6 @@
         }
 
         @keyframes textGlow {
-
             0%,
             100% {
                 opacity: 1;
@@ -119,21 +92,7 @@
                 opacity: 0.5;
             }
         }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style> -->
+    </style>
     <script>
         // Function to hide preloader and show content once the page has fully loaded
         window.addEventListener('load', function () {
@@ -155,42 +114,111 @@
             }, 2000);  // Adjust to the length of your spinner animation
         });
 
+        // Get the mode toggle button and icon elements
+        const modeToggle = document.getElementById('modeToggle');
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        // Function to update styles for dark/light mode
+        function updateStyles(isDark) {
+            const root = document.documentElement;
+            if (isDark) {
+                root.style.setProperty('--bg-color', '#1a1a1a');
+                root.style.setProperty('--text-color', '#ffffff');
+                root.style.setProperty('--heading-color', '#ffffff');
+                document.body.style.backgroundColor = '#1a1a1a';
+                document.body.style.color = '#ffffff';
+                
+                // Update all text elements to light color in dark mode
+                document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+                    element.style.color = '#ffffff';
+                });
+            } else {
+                root.style.setProperty('--bg-color', '#ffffff');
+                root.style.setProperty('--text-color', '#000000');
+                root.style.setProperty('--heading-color', '#000000');
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#000000';
+                
+                // Update all text elements to dark color in light mode
+                document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+                    element.style.color = '#000000';
+                });
+            }
+        }
+
+        // Toggle dark/light mode
+        modeToggle.addEventListener('click', function () {
+            const isDark = document.body.style.backgroundColor === 'rgb(26, 26, 26)';
+            updateStyles(!isDark);
+            sunIcon.style.display = isDark ? 'inline' : 'none';
+            moonIcon.style.display = isDark ? 'none' : 'inline';
+        });
+
+        // Check for saved user preference in localStorage
+        const currentMode = localStorage.getItem('mode') || 'light';
+        if (currentMode === 'dark') {
+            document.body.classList.add('dark-mode');
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+            updateStyles(true);
+        }
+
+        // Toggle between light and dark mode
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            
+            // Toggle icon visibility
+            if (isDarkMode) {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                localStorage.setItem('mode', 'dark');
+            } else {
+                sunIcon.style.display = 'block'; 
+                moonIcon.style.display = 'none';
+                localStorage.setItem('mode', 'light');
+            }
+
+            // Update page styles
+            updateStyles(isDarkMode);
+        });
     </script>
 
-    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-  <nav >
-    <div class="logo">
-      <img src="img/logo.png" id="logo-web">
-      <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
-    </div>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web">
+                <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+            </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" id="hamburger">☰</button>
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
 
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="index.html" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="blog.html" class="navhover">Blogs</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
-      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
+            <ul id="nav-list">
+                <!-- Close button for dropdown -->
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="index.html" class="navhover">Home</a></li>
+                <li><a href="team.html" class="navhover">Team</a></li>
+                <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+                <li><a href="blog.html" class="navhover">Blogs</a></li>
+                <li><a href="about.html" class="navhover">About</a></li>
+                <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+                <li><a href="./contact.html" class="navhover">Contact</a></li>
+                <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
 
-    </ul>
-
-    <!-- Toggle Button -->
-     <div class="toggle-button">
-       <button class="mode-toggle" id="modeToggle">
-         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-       </button>
-     </div>
-  </nav>
+            <!-- Toggle Button -->
+            <div class="toggle-button">
+                <button class="mode-toggle" id="modeToggle">
+                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 </header>
 <!-- JS to handle hamburger and close button -->
 <script>
@@ -219,6 +247,366 @@
       }
     });
   })
+
+    const logo = document.getElementById("logo-web");
+
+    logo.addEventListener("mouseenter", () => {
+        logo.style.transform = "rotateY(20deg) scale(1.1)";
+    });
+
+    logo.addEventListener("mouseleave", () => {
+        logo.style.transform = "rotateY(0) scale(1)";
+    });
+    </script>
+    <section class="about">
+        <div class="container">
+            <h1>About BuddyTrail</h1>
+
+            <p>Welcome to BuddyTrail, where we turn your travel dreams into reality. We provide exceptional travel
+                planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free
+                and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that
+                meet your unique travel preferences.</p>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <div class="container" id="container-Core-values">
+            <h2>Our Core Values</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We are committed to ensuring that every client receives the best possible travel experience with
+                        personalized service and attention to detail.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Transparency</h3>
+                    <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden
+                        fees, ensuring you know exactly what you're paying for.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Reliability</h3>
+                    <p>We offer trusted services with a dedicated support team available 24/7 to assist you during your
+                        travels.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Innovation</h3>
+                    <p>We continuously update our services with the latest travel trends and technology, offering our
+                        clients a modern and seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div id="team-members" class="team-members">
+                <div class="team-member">
+                    <img src="img/PROJECT-LEADER.png" alt="Team Member 1">
+                    <h3>PRIYA Ghosal</h3>
+                    <p>CEO & Founder</p>
+                    <P>I'm Priya Ghosal, a sophomore at NSEC (IT) '27, embarking on an exciting journey in the world of
+                        technology and coding.
+                    </P>
+                </div>
+                <div class="team-description">
+                    <p style="color: rgb(79, 78, 78);"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech
+                        innovators, and customer experience experts.
+                        United by our love for exploration and commitment to excellence, we work tirelessly to ensure
+                        your journey with
+                        us is seamless, inspiring, and unforgettable.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - BuddyTrail</title>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="icon" href="/icons/airplane.svg" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-wrapper">
+            <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+            <div class="loader-globe"></div>
+        </div>
+        <div id="loading-text">Ready to Explore the World...</div>
+    </div>
+
+    <style>
+        /* Preloader Container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        /* Wrapper for the logo and loader */
+        .loader-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Circular Loader surrounding the logo */
+        .loader-globe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-left-color: white;
+            border-right-color: white;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Loading Text */
+        #loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        /* Keyframes Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes textGlow {
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+    <script>
+        // Function to hide preloader and show content once the page has fully loaded
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+
+            // Set a small timeout for better user experience
+            setTimeout(function () {
+                // Hide preloader
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease-in-out';
+
+                // Show content after preloader fades out
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                    content.style.display = 'block';
+                    content.classList.add('show');  // Trigger fade-in transition
+                }, 1000); // Match the transition duration
+            }, 2000);  // Adjust to the length of your spinner animation
+        });
+
+        // Get the mode toggle button and icon elements
+        const modeToggle = document.getElementById('modeToggle');
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        // Function to update styles for dark/light mode
+        function updateStyles(isDark) {
+            const root = document.documentElement;
+            if (isDark) {
+                root.style.setProperty('--bg-color', '#1a1a1a');
+                root.style.setProperty('--text-color', '#ffffff');
+                root.style.setProperty('--heading-color', '#ffffff');
+                document.body.style.backgroundColor = '#1a1a1a';
+                document.body.style.color = '#ffffff';
+                
+                // Update all text elements to light color in dark mode
+                document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+                    element.style.color = '#ffffff';
+                });
+            } else {
+                root.style.setProperty('--bg-color', '#ffffff');
+                root.style.setProperty('--text-color', '#000000');
+                root.style.setProperty('--heading-color', '#000000');
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#000000';
+                
+                // Update all text elements to dark color in light mode
+                document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+                    element.style.color = '#000000';
+                });
+            }
+        }
+
+        // Toggle dark/light mode
+        modeToggle.addEventListener('click', function () {
+            const isDark = document.body.style.backgroundColor === 'rgb(26, 26, 26)';
+            updateStyles(!isDark);
+            sunIcon.style.display = isDark ? 'inline' : 'none';
+            moonIcon.style.display = isDark ? 'none' : 'inline';
+        });
+    </script>
+
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" id="logo-web">
+                <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+            </div>
+
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+
+            <ul id="nav-list">
+                <!-- Close button for dropdown -->
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="index.html" class="navhover">Home</a></li>
+                <li><a href="team.html" class="navhover">Team</a></li>
+                <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+                <li><a href="blog.html" class="navhover">Blogs</a></li>
+                <li><a href="about.html" class="navhover">About</a></li>
+                <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+                <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+                <li><a href="./contact.html" class="navhover">Contact</a></li>
+                <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
+
+            <!-- Toggle Button -->
+            <div class="toggle-button">
+                <button class="mode-toggle" id="modeToggle">
+                    <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                    <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+</header>
+<!-- JS to handle hamburger and close button -->
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+    const closeBtn = document.getElementById("closeBtn");
+    const mainHead = document.querySelector('.main-head'); // Selecting the header
+
+    // Hamburger menu functionality
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      navList.classList.remove("active");
+    });
+
+    // Scroll event to handle header transparency
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) { // If scrolled more than 50px
+        mainHead.classList.add("shadow");
+      } else {
+        mainHead.classList.remove("shadow");
+      }
+    });
+  })
+
+ 
+
+  // Function to update styles for dark/light mode
+  function updateStyles(isDark) {
+    const root = document.documentElement;
+    if (isDark) {
+      root.style.setProperty('--bg-color', '#1a1a1a');
+      root.style.setProperty('--text-color', '#ffffff');
+      root.style.setProperty('--heading-color', '#ffffff');
+      document.body.style.backgroundColor = '#1a1a1a';
+      document.body.style.color = '#ffffff';
+      
+      // Update all text elements to light color in dark mode
+      document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+        element.style.color = '#ffffff';
+      });
+      
+      // Update specific sections background
+      document.querySelectorAll('.about, .core-values, .team, .container').forEach(section => {
+        section.style.backgroundColor = '#1a1a1a';
+      });
+
+    } else {
+      root.style.setProperty('--bg-color', '#ffffff');
+      root.style.setProperty('--text-color', '#333333');
+      root.style.setProperty('--heading-color', '#000000');
+      document.body.style.backgroundColor = '#ffffff';
+      document.body.style.color = '#333333';
+      
+      // Reset all text elements to dark color in light mode
+      document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, li, a').forEach(element => {
+        element.style.color = '#333333';
+      });
+
+      // Reset specific sections background
+      document.querySelectorAll('.about, .core-values, .team, .container').forEach(section => {
+        section.style.backgroundColor = '#ffffff';
+      });
+    }
+  }
+
+  // Check for saved user preference in localStorage
+  const currentMode = localStorage.getItem('mode') || 'light';
+  if (currentMode === 'dark') {
+    document.body.classList.add('dark-mode');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+    updateStyles(true);
+  }
+
+  // Toggle between light and dark mode
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    // Toggle icon visibility
+    if (isDarkMode) {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+      localStorage.setItem('mode', 'dark');
+    } else {
+      sunIcon.style.display = 'block'; 
+      moonIcon.style.display = 'none';
+      localStorage.setItem('mode', 'light');
+    }
+
+    // Update page styles
+    updateStyles(isDarkMode);
+  });
+
+
 
 </script>
     <script>
@@ -640,9 +1028,8 @@
         .hover-color:hover {
             color: rgb(199, 59, 159);
             /* Change color on hover */
-
+=======
         /* Navbar style */
-        }
 
         .nav-link {
             position: relative;
@@ -680,74 +1067,6 @@
  
         }
     </style>
-
-    <!-- Scroll to top button -->
-    <button id="scrollToTopBtn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <style>
-        #scrollToTopBtn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            font-size: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #scrollToTopBtn:hover {
-            background-color: #333;
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-
-        #scrollToTopBtn i {
-            transition: transform 0.3s ease;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #scrollToTopBtn:hover i {
-            transform: translate(-50%, -50%) translateY(-3px);
-        }
-    </style>
-
-    <script>
-        // Scroll to top functionality
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-        // Show button when user scrolls down 300px
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-
-        // Smooth scroll to top when button is clicked
-        scrollToTopBtn.addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
 
     <div class="footer-responsive">
 
@@ -852,76 +1171,6 @@
             });
         });
     </script>
-
-
-<!-- Circles -->
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-
-<script>
-    // coordinates for the cursor :
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
-
-    const colors = [
-      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
-    ];
-
-    circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
-
-    // update the coordinates when the mouse moves:
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
-    });
-
-    // animation function to move the circles:
-    function animateCircles() {
-      let x = coords.x;
-      let y = coords.y;
-
-      circles.forEach(function (circle, index) {
-       
-
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
-        circle.style.scale = (circles.length - index) / circles.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
-
-      requestAnimationFrame(animateCircles);
-    }
-    
-    animateCircles();
-  </script>
 
 </body>
 

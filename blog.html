@@ -776,6 +776,44 @@
                 margin-top: 10px;
             }
         </style>
+
+        
+          <style>
+            #scrollUpButton {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              z-index: 1000;
+              display: none; /* Hidden by default */
+              cursor: pointer;
+              padding: 10px;
+              border-radius: 50px; /* Changed to make the button rounded */
+              font-size: 20px;
+              color: white;
+              background-color: var(--primary-color); /* Primary color for light mode */
+              transition: background-color 0.3s ease-in-out;
+            }
+            /* Dark mode styles */
+            body.dark #scrollUpButton {
+              background-color: var(--secondary-color); /* Secondary color for dark mode */
+            }
+          </style>
+          <button id="scrollUpButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+          <script>
+            window.addEventListener('scroll', function() {
+              const scrollUpButton = document.getElementById('scrollUpButton');
+              if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollUpButton.style.display = 'block'; /* Show button after scrolling down */
+              } else {
+                scrollUpButton.style.display = 'none'; /* Hide button when at the top */
+              }
+            });
+          </script>
+          
+
+
           <div class="footer-column newsletter" id="newsletter">
             <h3>Subscribe to Our Newsletter</h3>
             <form id="newsletter-form">
