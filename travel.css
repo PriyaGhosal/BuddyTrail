@@ -3,6 +3,22 @@ body {
   background-color: #f8f9fa;
 }
 
+.main-head{
+  background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  color: #000000;  
+  border-radius: 8px;    
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
 .space {
     height: 100px;
 }
@@ -44,6 +60,113 @@ body {
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+footer {
+  background-color: #000000;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  color: #fff5f5;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container-top {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1 1 25%;
+  padding: 10px 20px;
+  min-width: 200px;
+  text-align: center;
+  line-height: 2;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f9c3c3;
+}
+
+.footer-column p,
+.footer-column li,
+.footer-bottom p {
+  font-size: 14px;
+  margin: 5px 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.footer-column ul {
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+
+}
+.footer-column a {
+  text-decoration: none;
+  color: #fff5f5;
+  transition: color 0.3s ease;
+}
+
+.footer-column  a:hover {
+  color: #f9c3c3;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  margin: 0 15px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: #fff; 
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #f9c3c3; 
+}
+.footer-column img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+
+}
+
+.footer-column img:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eaeaea;
+  font-size: 13px;
+  color: #e6dcdc;
+  background-color: #000000;
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0;
+
 }
 
 @media (max-width: 768px) {

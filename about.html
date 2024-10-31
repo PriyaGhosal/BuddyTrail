@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - BuddyTrail</title>
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
+ main
+ main
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
 
+ main
+
+
+    <link rel="stylesheet" href= "style.css" />
+ main
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -69,13 +95,7 @@
         }
 
         /* Logo Styling */
-        #logo {
-            width: 140px;
-            position: relative;
-            z-index: 10;
-            /* Ensures logo stays above the loader */
-            animation: pulse 2s infinite ease-in-out;
-        }
+        
 
         /* Circular Loader surrounding the logo */
         .loader-globe {
@@ -135,7 +155,7 @@
                 transform: scale(1);
             }
         }
-    </style>
+    </style> -->
     <script>
         // Function to hide preloader and show content once the page has fully loaded
         window.addEventListener('load', function () {
@@ -159,26 +179,70 @@
 
     </script>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo"
-                        style="transition: transform 0.3s ease;" />
-                    <h1 id="logo">BuddyTrail</h1>
-                </div>
-                <button class="hamburger" id="hamburger">☰</button>
-                <ul class="nav-links" id="nav-links">
-                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About Us</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <nav >
+    <div class="logo">
+      <img src="img/logo.png" id="logo-web">
+      <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <ul id="nav-list">
+      <!-- Close button for dropdown -->
+      <span class="dropdown-close-btn" id="closeBtn">×</span>
+      <li><a href="index.html" class="navhover">Home</a></li>
+      <li><a href="team.html" class="navhover">Team</a></li>
+      <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+      <li><a href="blog.html" class="navhover">Blogs</a></li>
+      <li><a href="about.html" class="navhover">About</a></li>
+      <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+      <li><a href="F&Q.html" class="navhover">FAQ</a></li>
+      <li><a href="./contact.html" class="navhover">Contact</a></li>
+      <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+      <li><a href="auth.html" class="navhover">Sign In</a></li>
+
+    </ul>
+
+    <!-- Toggle Button -->
+     <div class="toggle-button">
+       <button class="mode-toggle" id="modeToggle">
+         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+       </button>
+     </div>
+  </nav>
+</header>
+<!-- JS to handle hamburger and close button -->
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+    const closeBtn = document.getElementById("closeBtn");
+    const mainHead = document.querySelector('.main-head'); // Selecting the header
+
+    // Hamburger menu functionality
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      navList.classList.remove("active");
+    });
+
+    // Scroll event to handle header transparency
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) { // If scrolled more than 50px
+        mainHead.classList.add("shadow");
+      } else {
+        mainHead.classList.remove("shadow");
+      }
+    });
+  })
+
+</script>
     <script>
         const logo = document.getElementById("logo-web");
 
@@ -598,8 +662,9 @@
         .hover-color:hover {
             color: rgb(199, 59, 159);
             /* Change color on hover */
-=======
+
         /* Navbar style */
+        }
 
         .nav-link {
             position: relative;
@@ -641,6 +706,73 @@
 <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
 
 
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <style>
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        #scrollToTopBtn i {
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #scrollToTopBtn:hover i {
+            transform: translate(-50%, -50%) translateY(-3px);
+        }
+    </style>
+
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Show button when user scrolls down 300px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top when button is clicked
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 
     <div class="footer-responsive">
 
@@ -668,9 +800,12 @@
                     <p>123 Fake Street</p>
                     <p>Near XYZ Mall, Sample City</p>
                     <p>Fake State, PIN 12345, India</p>
-                    <p class="email-id">info@example.com</p>
-                    <h4>+123 456 7890</h4>
-
+                   
+                    <h3>
+                        <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a><br>
+                        <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
+                    </h3>
+                    
                 </div>
                 <div class="col">
                     <h3>Links <div class="underline"><span></span></div>
@@ -763,6 +898,76 @@ document.getElementById('scrollToTopBtn').addEventListener('click', function() {
 });
 
 </script>
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
 </body>
 
 </html>

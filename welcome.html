@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BuddyTrail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Background Animation */
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1e90ff, #ff6347, #ffb6c1);
+            background-size: 300% 300%;
+            animation: gradientAnimation 15s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Welcome Section */
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .welcome-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .welcome-text {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 1.5s;
+        }
+
+        .btn-start {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            background-color: #ff6347;
+            color: #fff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-start:hover {
+            background-color: #ff4500;
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Particle Effects */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.6;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .counters {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .counter-item {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .counter-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .counter-box {
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        padding: 20px 20px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .counter-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ff6347;
+    }
+
+    .counter-text {
+        font-size: 1rem;
+        color: #ffffff;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="background"></div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-container">
+        <h1 class="welcome-title">Welcome to BuddyTrail</h1>
+        <p class="welcome-text">Your ultimate travel companion – explore destinations, book hotels, and discover affordable flights effortlessly!</p>
+        <a href="./test.html" class="btn btn-start">Start Exploring</a>
+        <div class="counter-container">
+            <div class="counter-box">
+                <h2 id="registration-count" class="counter-number">+0</h2>
+                <p class="counter-text">Registrations</p>
+            </div>
+            <div class="counter-box">
+                <h2 id="user-count" class="counter-number">+0</h2>
+                <p class="counter-text">Active Users</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Particle Animation -->
+    <script>
+        const particleCount = 100;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            const size = Math.random() * 8 + 5;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.backgroundColor = `rgba(255, 255, 255, ${Math.random() * 0.8})`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(particle);
+        }
+    </script>
+    <script>
+        let registrationCount = 0;
+        let userCount = 0;
+    
+        // Start the interval and store its ID
+        const counterInterval = setInterval(incrementCounters, 20);
+    
+        function incrementCounters() {
+            // Stop incrementing if counters reach their caps
+            if (registrationCount >= 500 && userCount >= 2000) {
+                clearInterval(counterInterval);
+                return;
+            }
+    
+            // Increment counts only if they haven’t reached caps yet
+            if (registrationCount < 500) {
+                registrationCount += Math.floor(Math.random() * 10 + 1);
+                if (registrationCount > 500) registrationCount = 500; // Cap at 500
+            }
+            
+            if (userCount < 5000) {
+                userCount += Math.floor(Math.random() * 15 + 1);
+                if (userCount > 5000) userCount = 5000; // Cap at 5000
+            }
+    
+            document.getElementById('registration-count').textContent = `+${registrationCount}`;
+            document.getElementById('user-count').textContent = `+${userCount}`;
+        }
+    </script>
+    
+</body>
+
+</html>
