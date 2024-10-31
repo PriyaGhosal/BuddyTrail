@@ -181,6 +181,7 @@
 ├── team.html
 ├── terms.css
 ├── terms_of_service.html
+├── test.html
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
@@ -196,6 +197,7 @@
 ├── update discussion forum
 ├── visi.css
 ├── visi.js
-└── waterfall.mp4
+├── waterfall.mp4
+└── welcome.html
 ```
 <!-- END_STRUCTURE -->
