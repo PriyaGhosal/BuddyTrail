@@ -276,28 +276,19 @@
   transform: translateY(0);
 }
 
-
-
-
-
-.circle {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-    }
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
+ main
+  /* circle styles */
+    .circle {
+     height: 24px;
+     width: 24px;
+     border-radius: 24px;
+     background-color: rgb(255, 0, 0);
+     position: fixed;
+     top: 0;
+     left: 0;
+     pointer-events: none;
+     z-index: 99999999;
+       
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -427,38 +418,27 @@
       <div id="google_translate_element"></div>
     </div> -->
 
-    <div class="circle-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
+    <!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 
     <script>
       // Initialization function
@@ -637,8 +617,7 @@
         mainHead.classList.remove("shadow");
       }
     });
-  })
-
+  });
 </script>
 
 <script src="./script/popup.js"></script>
@@ -1118,7 +1097,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Family Vacation</h3>
-          <p>
+          <p style="font-size: 14px;">
             Explore the best family-friendly destinations with day-by-day
             guides that include must-see attractions and activities for all
             ages.
@@ -1130,7 +1109,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Solo Adventure</h3>
-          <p>
+          <p style="font-size: 14px;">
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
@@ -1139,7 +1118,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Romantic Getaway</h3>
-          <p>
+          <p style="font-size: 14px;">
             Plan the perfect romantic escape with itineraries that include
             serene locations, romantic dinners, and memorable experiences.
           </p>
@@ -1576,6 +1555,135 @@ select {
       </div>
     </section>
 
+  <!-- Packing Checklist Section -->
+<section id="packing-checklist" class="packing-checklist-section">
+  <h2>Packing Checklist</h2>
+  <p>🌍 Choose your travel style to receive a personalized packing checklist ✈️, curated from seasoned travelers 🧳!</p>
+  <div class="checklist-form">
+    <label for="travel-type">Choose your travel type:</label>
+    <select id="travel-type">
+      <option value="beach">Beach</option>
+      <option value="adventure">Adventure</option>
+      <option value="business">Business</option>
+    </select>
+    <button onclick="generateChecklist()">Download Checklist</button>
+  </div>
+</section>
+<style>
+  /* Packing Checklist Section CSS */
+.packing-checklist-section {
+  background: linear-gradient(135deg, #e6f7ff, #ccf2ff); 
+  padding: 40px 20px; 
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+  color: #333;
+}
+
+.packing-checklist-section h2 {
+  font-size: 28px;
+  color: #004085;
+  margin-bottom: 10px;
+}
+
+.packing-checklist-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.checklist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#travel-type {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.checklist-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.checklist-form button:hover {
+  background-color: #0056b3;
+}
+
+
+</style>
+<!-- Packing Checklist Section Script-->
+<script>
+  function generateChecklist() {
+  const travelType = document.getElementById("travel-type").value;
+  let checklistContent = "";
+
+  if (travelType === "beach") {
+    checklistContent = `
+      Beach Packing Checklist:
+      - Swimsuit
+      - Sunscreen
+      - Sunglasses
+      - Flip-flops
+      - Beach towel
+      - Water bottle
+      - Hat
+      - Snacks
+    `;
+  } else if (travelType === "adventure") {
+    checklistContent = `
+      Adventure Packing Checklist:
+      - Hiking boots
+      - Weather-resistant jacket
+      - First aid kit
+      - Flashlight
+      - Compass or GPS
+      - Energy bars
+      - Water bottle
+      - Map
+    `;
+  } else if (travelType === "business") {
+    checklistContent = `
+      Business Packing Checklist:
+      - Formal wear
+      - Laptop and charger
+      - Notepad and pen
+      - Business cards
+      - Toiletries
+      - Work documents
+      - Phone and charger
+      - Comfortable shoes
+    `;
+  }
+
+  // Create a downloadable text file
+  const blob = new Blob([checklistContent], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${travelType}_packing_checklist.txt`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+</script>
+
+
     <style>
       /* Recommendations Section Styling */
 #recommendations {
@@ -1673,12 +1781,14 @@ select {
 
 
     <!--Emergency-->
+    <section class="services" id="services">
     <div class="sos-container">
       <h2>Emergency SOS</h2>
       <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
+    </section>
     <!--posts section-->
     <div id="posts">
       <header class="posts_blog">
@@ -2212,10 +2322,12 @@ nav.hi ul li.NAVI i:hover  {
   </main>
 
     <!-- Map Section -->
+    <section class="services" id="services" style="border: 2px solid #FFFFFF; margin-top:5%">
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
       <p style="color: whitesmoke;">Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
+    </section>
     </section>
     <!-- Google Maps JavaScript API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
@@ -2590,7 +2702,7 @@ textarea.form-control {
               placeholder="Describe any issue with the staff here. Please provide details"></textarea>
 
             <div class="form-button">
-              <button type="submit">Send</button>
+              <button type="submit" onclick="submitFeedback(event)">Send</button>
             </div>
           </form>
 
@@ -2603,6 +2715,50 @@ textarea.form-control {
       </div>
     </div>
   </section>
+
+  <script>
+  async function submitFeedback(event) {
+  event.preventDefault();
+  const form = document.getElementById('reviewForm');
+  
+  // Collecting form data
+  const Name = form.elements['name'].value;
+  const Destination = form.elements['destination'].value;
+  const Rating = form.querySelector('input[name="rate"]:checked')?.id.split('-')[1];
+  const Review = form.elements['review'].value;
+  const Complaint = form.elements['complaint'].value;
+
+  // Creating the payload
+  const feedbackData = {
+    Name,
+    Destination,
+    Rating,
+    Review,
+    Complaint,
+  };
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedbackData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert('Feedback submitted successfully');
+    } else {
+      alert(`Error: ${result.message}`);
+    }
+  } catch (error) {
+    console.error('Error submitting feedback:', error);
+    alert('An error occurred while submitting feedback.');
+  }
+}
+
+  </script>
 
 
   <!--Cookie pop up-->
@@ -2768,6 +2924,7 @@ textarea.form-control {
         <li><a href="faq.html" class="faq-link">FAQs</a></li>
         <li><a href="servicespage.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="welcome.html">Testimonials</a></li>
         <li><a href="team.html">Team</a></li>
         <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
       </ul>
@@ -3087,6 +3244,52 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
 
 
     <script>
+ main
+      // coordinates for the cursor :
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+  
+      const colors = [
+        "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+      ];
+  
+      circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+      });
+  
+      // update the coordinates when the mouse moves:
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+      });
+  
+      // animation function to move the circles:
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+  
+        circles.forEach(function (circle, index) {
+         
+  
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+          circle.style.scale = (circles.length - index) / circles.length;
+  
+          circle.x = x;
+          circle.y = y;
+  
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+  
+        requestAnimationFrame(animateCircles);
+      }
+      
+      animateCircles();
+
       document.addEventListener("DOMContentLoaded", function () {
         const coords = { x: 0, y: 0 };
         const circles = document.querySelectorAll(".circle");
@@ -3124,14 +3327,16 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         animateCircles();
       });
 
+ main
     </script>
+  
   <body>
     <div class="container">
         <!-- Your existing content -->
 
         <!-- Chatbot Icon -->
         <div class="chatbot-icon" onclick="toggleChatbot()">
-            🗨️ <!-- You can replace this with an actual image/icon -->
+          🗨️ <!-- You can replace this with an actual image/icon -->
         </div>
 
         <!-- Chatbot Iframe -->

@@ -148,9 +148,28 @@
             margin-top: 20px;
         }
     </style>
+ main
+  <style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
+  <body>
+
 </head>
 
 <body>
+ main
     <header class="main-head">
         <nav>
             <div class="logo">
@@ -300,7 +319,7 @@
                 </div>
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='bali.html'">
                     <h3>Bali</h3>
                     <ul>
                         <li>Adventure in Bali</li>
@@ -314,7 +333,7 @@
 
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1547131303-543b40443e96?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='switzerland.html'">
                     <h3>Switzerland</h3>
                     <ul>
                         <li>Adventure Switzerland</li>
@@ -328,7 +347,7 @@
 
                 <div class="location-card" style="
               background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='italy.html'">
                     <h3>Italy</h3>
                     <ul>
                         <li>Italy Most beautiful countries in the world</li>
@@ -342,7 +361,7 @@
 
                 <div class="location-card" style="
               background-image: url('https://plus.unsplash.com/premium_photo-1661963145672-a2bd28eba0fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            ">
+            " onclick="location.href='greece.html'">
                     <h3>Greece</h3>
                     <ul>
                         <li>Greece has the longest coastline in Europe</li>
@@ -528,4 +547,78 @@
 
 </body>
 
+ main
+  
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+</body>
+
+ main
 </html>
