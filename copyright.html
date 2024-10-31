@@ -2,6 +2,49 @@
 <html lang="en">
 
 <head>
+ main
+ main
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Page</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copyright Policy - BuddyTrail</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="terms.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copyright Policy - BuddyTrail</title>
@@ -116,6 +159,7 @@
     }
 
     @media (max-width: 768px) {
+ main
       .container {
         flex-direction: column;
       }
@@ -145,6 +189,7 @@
   </style>
 </head>
 
+ main
 <body>
   <header>
     <div class="container3">
@@ -259,11 +304,14 @@
 
   </div>
   <footer>
-    <div class="container3">
+    <div class="container2">
       <div class="footer-content">
         <div class="footer-column">
           <h3>About Us</h3>
-          <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+          <p>
+            Discover and plan affordable trips with BuddyTrail's travel
+            companion tools.
+          </p>
         </div>
         <div class="footer-column">
           <h3>Quick Links</h3>
@@ -274,31 +322,159 @@
             <li><a href="/#services">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+            <li>
+              <a href="contributor/contributor.html">Our Contributor</a>
+            </li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Contact Us</h3>
-          <p>Email: <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a>
-          </p>
+          <p>Email: <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a></p>
           <p>Phone: <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a></p>
+ main
 
+ main
+    </div>
+ main
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+
+    <footer>
+        <div class="container3">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+
+ main
+
+          
+ main
         </div>
         <div class="footer-column">
           <h3>Follow Us</h3>
           <div class="social-icons">
-            <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
+            <a href="https://discord.com/invite/priyaghosal" target="_blank"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://github.com/PriyaGhosal/BuddyTrail"
+              target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
       </div>
       <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
     </div>
   </footer>
-
 
 
   <script>
@@ -327,6 +503,47 @@
         sunIcon.style.display = "none";
         moonIcon.style.display = "inline-block";
       }
+
+ main
+            modeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+                const isDarkMode = document.body.classList.contains("dark-mode");
+
+                if (isDarkMode) {
+                    sunIcon.style.display = "none";
+                    moonIcon.style.display = "inline-block";
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    sunIcon.style.display = "inline-block";
+                    moonIcon.style.display = "none";
+                    localStorage.setItem("theme", "light");
+                }
+            });
+
+            // Scroll animations
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1
+                }
+            );
+
+            document.querySelectorAll('h2, p, ul').forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(20px)";
+                el.style.transition = "all 0.6s ease";
+                observer.observe(el);
+            });
+        });
+    </script>
+ main
 
       modeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
@@ -366,6 +583,7 @@
       });
     });
   </script>
+ main
 </body>
 
 </html>

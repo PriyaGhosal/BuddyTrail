@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews, Testimonials & Popular Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            /* background-color: #2c3e50; */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10rem 0;
+            margin-bottom: 1rem;
+            margin-top: 10px;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 1rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .testimonial-grid, .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .testimonial, .service {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .testimonial:hover, .service:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial img, .service img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .testimonial h3, .service h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        .testimonial p, .service p {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .rating {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #1a252f;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .stat-item {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .features {
+            background-color: #ecf0f1;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature-item {
+            width: 30%;
+            min-width: 250px;
+            margin: 1rem;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #34495e;
+        }
+        header {
+            position: relative;  /* Add this to ensure proper positioning of the home button */
+        }
+        /* body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+        } */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 1rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .service-tab {
+            padding: 1rem 2rem;
+            background-color: #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .service-tab:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .services-grid, .scholarships-grid, .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .service-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .scholarship-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .job-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .amount-badge {
+            background-color: #2ecc71;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .deadline-badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .job-type {
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+        .stat-item {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
+            color: #fff;
+            border-radius: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #1a252f;
+        }
+        .rating {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .comment-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .comment-form input, .comment-form textarea {
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+        }
+        .comment-form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .comment-form button:hover {
+            background-color: #2980b9;
+        }
+        .comments {
+            margin-top: 2rem;
+        }
+        .comment {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .comment h4 {
+            margin: 0 0 0.5rem;
+            color: #2c3e50;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+<!--         <a href="index.html" class="home-button">◀ Back to Home</a> -->
+<h1>BuddyTrail Testimonials</h1>
+<p class="subtitle">Hear from our happy travelers!</p>
+</header>
+<div class="container">
+<h2>What Our Travelers Are Saying</h2>
+<div class="testimonial-grid">
+    <div class="testimonial">
+        <h3>Emily R.</h3>
+        <div class="rating">★★★★★</div>
+        <p>"BuddyTrail made planning our family vacation to Bali so easy! The recommendations were spot on!"</p>
+    </div>
+    <div class="testimonial">
+        <h3>Michael T.</h3>
+        <div class="rating">★★★★☆</div>
+        <p>"I loved how user-friendly the site is! I found amazing flight deals to Europe." </p>
+    </div>
+    <div class="testimonial">
+        <h3>Sarah K.</h3>
+        <div class="rating">★★★★★</div>
+        <p>"The hotel options were fantastic, and we had a great stay at the beach resort!"</p>
+    </div>
+    <div class="testimonial">
+        <h3>John D.</h3>
+        <div class="rating">★★★★☆</div>
+        <p>"Thanks to BuddyTrail, I discovered some hidden gems in Italy that made our trip unforgettable!"</p>
+    </div>
+    <div class="testimonial">
+        <h3>Sarah K.</h3>
+        <div class="rating">★★★★★</div>
+        <p>"As a beginner, I appreciate the tips and resources provided. I've gained so much confidence!"</p>
+    </div>
+    <div class="testimonial">
+        <h3>Emma L.</h3>
+        <div class="rating">★★★★★</div>
+        <p>"Buddy Trail not only helps me find trails but also connects me with amazing people!"</p>
+    </div>
+    <div class="testimonial">
+        <h3>Oliver D.</h3>
+        <div class="rating">★★★★★</div>
+        <p>"The app is user-friendly and has a wealth of information on local trails. Highly recommend!"</p>
+    </div>
+
+</div>
+<div class="comment-section">
+    <h2>Leave a Comment</h2>
+    <form class="comment-form" id="commentForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="comment" rows="4" placeholder="Your Comment" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="comments" id="comments">
+        <h2>User Comments</h2>
+    </div>
+</div>
+</div>
+
+<script src="/scripts/componentLoader.js"></script>
+<script>
+    prependComponent("Navbar");
+   prependComponent('Cursor');
+   prependComponent("ScrollToTop");
+   appendComponent('Footer');
+   appendComponent('ChatBot');
+   waitTillComponentsLoaded();
+ </script>
+<script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "7akUzokCgwR0gNp0m-qQF",
+      domain: "www.chatbase.co",
+    };
+  </script>
+  <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="7akUzokCgwR0gNp0m-qQF"
+    domain="www.chatbase.co"
+    defer
+  ></script>
+  
+  <div class="circle-container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <style>
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(73, 232, 247, 0.466), rgba(141, 38, 172, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+  
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+  
+      circles.forEach(function (circle) {
+        circle.x = 0;
+        circle.y = 0;
+      });
+  
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.pageX;
+        coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+      });
+  
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+  
+        circles.forEach(function (circle, index) {
+          circle.style.left = `${x - 12}px`;
+          circle.style.top = `${y - 12}px`;
+          circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+  
+          const nextCircle = circles[index + 1] || circles[0];
+          circle.x = x;
+          circle.y = y;
+  
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+  
+        requestAnimationFrame(animateCircles);
+      }
+  
+      animateCircles();
+    });
+  
+  
+  </script>
+  </body>
+  </html>

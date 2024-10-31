@@ -155,6 +155,63 @@
         p {
             font-size: 0.95rem;
         }
+ main
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .toc {
+                margin-bottom: 20px;
+                margin-right: 0;
+                width: 100%;
+                position: relative; /* Changed to relative to make TOC non-sticky */
+            }
+
+            .main-content {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
+
     }
     :root {
       --bg-color: #fff;
@@ -208,6 +265,7 @@
   }
   
 </style>
+ main
 <body>
     <header>
         <div class="container3">
@@ -284,6 +342,137 @@
             <p>Phone: <a href="tel:+1234567890" style="color: rgb(103, 115, 212); text-decoration: none;">+123 456 7890</a></p>
         </div>
     </div>
+main
+ main
+
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+
+
+    <footer>
+        <div class="container2">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <p>
+                Discover and plan affordable trips with BuddyTrail's travel
+                companion tools.
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li>
+                  <a href="contributor/contributor.html">Our Contributor</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Email: <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a></p>
+              <p>Phone: <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a></p>
+              
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="https://discord.com/invite/priyaghosal" target="_blank"
+                  ><i class="fab fa-discord"></i
+                ></a>
+                <a href="https://twitter.com/PriyaGhosa39968" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://github.com/PriyaGhosal/BuddyTrail"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <p class="copyright">&copy; 2024 BuddyTrail | All rights reserved.</p>
+        </div>
+      </footer>
+ main
     <script>
         const modeToggle = document.getElementById('modeToggle');
         const body = document.body;
@@ -297,5 +486,6 @@
         });
     </script>
     
+ main
 </body>
 </html>

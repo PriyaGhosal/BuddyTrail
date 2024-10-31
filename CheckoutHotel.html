@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout page for hotel bookings on BuddyTrail.">
+  <link rel="stylesheet" href="hotel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CheckoutHotel.css">
+  <link rel="icon" href="/icons/airplane.svg">
+  <title>Checkout - BuddyTrail</title>
+ 
+</head>
+
+<body>
+  <header class="main-head">
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo">
+            <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
+        </div>
+        <ul id="nav-list">
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+        </ul>
+        <div style="display: flex;">
+            <button class="hamburger" id="hamburger" style="margin-right: 10px;">☰</button>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+  <div class="checkout-container">
+      <h1>Checkout</h1>
+      <form id="checkout-form">
+          <div class="form-group">
+              <label for="full-name">Full Name:</label>
+              <input type="text" id="full-name" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" required placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" required placeholder="Enter your phone number">
+          </div>
+          <div class="form-group">
+              <label for="checkin-date">Check-in Date:</label>
+              <input type="date" id="checkin-date" required>
+          </div>
+          <div class="form-group">
+              <label for="checkout-date">Check-out Date:</label>
+              <input type="date" id="checkout-date" required>
+          </div>
+          <div class="form-group">
+              <label for="room-type">Room Type:</label>
+              <select id="room-type" required>
+                  <option value="">Select room type</option>
+                  <option value="single">Single Room</option>
+                  <option value="double">Double Room</option>
+                  <option value="suite">Suite</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="special-requests">Special Requests:</label>
+              <textarea id="special-requests" rows="4" placeholder="Any special requests?"></textarea>
+          </div>
+
+          <!-- New Payment Options Section -->
+          <div class="payment-options">
+              <h2>Select Payment Method</h2>
+              <div class="payment-option">
+                  <input type="radio" id="payment-cash" name="payment-method" value="cash" required>
+                  <label for="payment-cash">Cash</label>
+              </div>
+              <div class="payment-option">
+                  <input type="radio" id="payment-card" name="payment-method" value="card" required>
+                  <label for="payment-card">Credit/Debit Card</label>
+              </div>
+              <div class="payment-option">
+                  <input type="radio" id="payment-upi" name="payment-method" value="upi" required>
+                  <label for="payment-upi">UPI</label>
+              </div>
+          </div>
+
+          <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+  </div>
+</main>
+
+  <footer>
+    <div class="row">
+        <div class="col">
+            <div class="logo-footer">
+                <img src="img/logo.png" alt="BuddyTrail Logo" />
+                <h1 id="logo">BuddyTrail</h1>
+            </div>
+            <p class="hover-color">Welcome to BuddyTrail - your premier travel companion! Whether you're
+                planning a
+                family vacation
+                or a
+                getaway with friends, BuddyTrail is here to help you discover and explore incredible
+                destinations.
+                Our platform makes it easy to find the best hotels and book affordable flights, ensuring a
+                seamless
+                travel experience.</p>
+
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span></div>
+            </h3>
+            <p>123 Fake Street</p>
+            <p>Near XYZ Mall, Sample City</p>
+            <p>Fake State, PIN 12345, India</p>
+           
+            <h3>
+                <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a><br>
+                <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
+            </h3>
+            
+        </div>
+        <div class="col">
+            <h3>Links <div class="underline"><span></span></div>
+            </h3>
+            <ul class="footer-links">
+                <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
+                <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
+                <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
+                <li><a href="https://buddytrail.netlify.app/faq" target="_blank">FAQs</a></li>
+                <li><a href="https://buddytrail.netlify.app/team" target="_blank">Our Team</a></li>
+                <li><a href="https://buddytrail.netlify.app/contributor/contributor"
+                        target="_blank">Contributors</a></li>
+                <li><a href="https://buddytrail.netlify.app/contact">Contact Us</a></li>
+
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Follow Us <div class="underline"><span></span></div>
+            </h3>
+            <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <div>
+                <div class="social-icons">
+                    <a href="https://discord.com/invite/priyaghosal" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2FPriyaGhosa39968" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="img/x-logo.png" alt="X logo" class="fab">
+                    </a>
+
+
+                    <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <p class="copyright"> © 2024 BuddyTrail | All Rights Reserved</p>
+</footer>
+
+  <script>
+    document.getElementById('checkout-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Your booking has been confirmed!');
+      // Here you can add code to handle the form submission, e.g., send data to server
+    });
+
+    // Hamburger menu toggle
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navList = document.getElementById('nav-list');
+      navList.classList.toggle('show');
+    });
+  </script>
+</body>
+
+</html>
