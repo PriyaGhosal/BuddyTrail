@@ -22,16 +22,19 @@
 │   │   └── db.js
 │   ├── controllers
 │   │   ├── ContactController.js
-│   │   └── authController.js
+│   │   ├── authController.js
+│   │   └── ratingController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
+│   │   ├── Rating.js
 │   │   └── User.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
 │   │   ├── ContactRoutes.js
+│   │   ├── RatingRoutes.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
