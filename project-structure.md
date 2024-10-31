@@ -2,6 +2,8 @@
 ```
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── CheckoutHotel.css
+├── CheckoutHotel.html
 ├── Code_of_Conduct.md
 ├── F&Q.html
 ├── LICENSE
