@@ -1781,7 +1781,7 @@ select {
 
 
     <!--Emergency-->
-    <section class="services" id="services">
+    <section class="service" id="services">
     <div class="sos-container">
       <h2>Emergency SOS</h2>
       <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
@@ -1789,6 +1789,78 @@ select {
       <div id="sos-status"></div>
     </div>
     </section>
+
+    <style>
+.sos-container h2{
+  color: white;
+  font-size: 3.0rem;
+  text-decoration:underline;
+}
+      /* General Section Styling */
+.service {
+    padding: 40px;
+    background-color: #1a2a3a; /* Eye-comfort background color */
+    color: #f1f1f1; /* Text color for readability */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    border: 10px solid white;
+}
+
+.service:hover {
+    background-color: #2b3b4c; /* Slightly darker on hover */
+}
+
+/* SOS Button Styling */
+#sosButton {
+  width: 150px;
+  height: 60px;
+    margin-top: 40px;
+    background-color: #ff5555;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sosButton:hover {
+    background-color: #ff3333;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+#sosButton:active {
+    background-color: #ff1111;
+    transform: scale(0.98); /* Pressed button effect */
+}
+
+/* SOS Status and Emergency Text Styling */
+#emergency-text {
+    margin-top: 40px;
+    font-size: 1em;
+    margin-bottom: 16px;
+}
+
+#sos-status {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #eef2f5; /* Color to signify emergency status */
+}
+
+/* sos-container for additional styling */
+.sos-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+    </style>
+
+
     <!--posts section-->
     <div id="posts">
       <header class="posts_blog">
