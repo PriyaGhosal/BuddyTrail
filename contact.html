@@ -4,538 +4,325 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
+    
+    <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel= "stylesheet"
+      href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity= "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin= "anonymous"
+      referrerpolicy= "no-referrer"
+    />
 </head>
-<body>
-    <header>
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo" />
-                    <h1 id="logo">BuddyTrail</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="auth.html" class="nav-link">Sign In</a></li>
-                </ul>
-            </nav>
-    </header>
-
-    <div class="container">
-        <div class="item">
-            <div class="contact">
-                <div class="first-text">Let's get in touch</div>
-                <img src="conn.jpeg" alt="contact-us-image" class="image">
-                <div class="social-links">
-                    <span class="secnd-text">Connect with us:</span>
-                    <ul class="social-media">
-                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="submit-form">
-                <h4 class="third-text text">Contact Us</h4>
-                <form id="contactForm">
-                    <div class="input-box">
-                        <input type="text" class="input" required>
-                        <label for="fullname"  class="label common-label">Name</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" class="input" required>
-                        <label for="email"  class="label common-label">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" class="input" required>
-                        <label for="phone" class="label common-label">Phone</label>
-                    </div>
-                    <div class="input-box">
-                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
-                        <label for="message" class="label common-label">Message</label>
-                    </div>
-                    <input type="submit" class="btn" value="Submit">
-                </form>
-            </div>
-        </div>
-    </div>
-    <script src="contact.js"></script>
-</body>
-</html>
 <style>
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    .card {
+        width: 80%; 
+        margin: 30px auto; 
+        padding: 20px;
+        margin-bottom: 70px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff; 
+    }
+    
+    .card-header h2{
+        color: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        border-radius: 6px;
+        text-shadow: 2px 2px 10px gray;
+    }
+    
+    .card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap; 
+        gap: 20px; 
+    }
+    
+    .form-section {
+        flex: 1;
+        min-width: 45%; 
+        color: #121111;
+    }
+    
+    .image-section {
+        flex: 1;
+        min-width: 45%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+        margin-top: 60px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+        color: #fff; 
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #1e1e1e; 
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #121212; 
+    }
+    
+    textarea {
+        height: 120px;
+    }
+    
+    button[type="submit"] {
+        background-color: rgb(27, 27, 27);
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: black;
+    }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #3bb8c9, #50c065);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-}
+    .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: none;
+    }
 
-header {
-    width: 100%;
-    background: #00796b;
-    color: rgba(80, 79, 79, 0.614);
-    padding: 15px 0;
-}
+    @media (max-width: 768px) {
+        .card-body {
+            flex-direction: column; 
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
+        .form-section, .image-section {
+            width: 100%; 
+            min-width: 100%;
+        }
+    }
+     /* .form-group { 
+    position: relative;
+}  */
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-#logo-web {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: rgb(214, 12, 12);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-}
-
-.item {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    width: 100%;
-}
-
-.contact {
-    flex: 1; /* Takes up equal space */
+.tooltip {
+    visibility: hidden;
+    background-color:  black;
+    color: #fff;
+    width: 200px;
     text-align: center;
-    padding-right: 20px; /* Space between image and form */
-}
-
-.image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.first-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00796b;
-    margin-bottom: 10px;
-}
-
-.secnd-text {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-.social-links {
-    margin-bottom: 20px;
-}
-
-.social-media {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.social-media li {
-    margin: 0 10px;
-}
-
-.social-media a {
-    text-decoration: none;
-    font-size: 24px;
-    color: #00796b;
-    transition: color 0.3s;
-}
-
-.social-media a:hover {
-    color: #004d40;
-}
-
-.submit-form {
-    flex: 1; /* Takes up equal space */
-}
-
-.third-text {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #00796b; /* Make border more prominent */
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-}
-
-.input-box label {
+    padding: 3px;
+    border-radius: 5px;
     position: absolute;
-    left: 12px;
-    top: 12px;
-    transition: 0.3s;
-    color: #999;
-}
-
-.input:focus + label,
-.input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 5px;
+    z-index: 1;
+    /* bottom: 30%; Position above the input field */
+    top: 41%;
+    left: 60%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
     font-size: 12px;
-    color: #792600;
 }
 
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%; /* Full width for button */
+.form-group:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
-
-.btn:hover {
-    background-color: #004d40;
-}
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: rgba(80, 80, 80, 0.136);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-}
-
-.contact {
-    flex: 1; /* Takes up equal space */
-    text-align: center;
-    padding-right: 20px; /* Space between image and form */
-}
-
-.image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.first-text {
-    font-size: 28px; /* Increased font size for better visibility */
-    font-weight: bold;
-    color: #00796b;
-    margin-bottom: 15px;
-}
-
-.secnd-text {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #333; /* Darker color for better visibility */
-}
-
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input {
-    width: 100%;
-    padding: 14px; /* Increased padding for better touch targets */
-    border: 2px solid #00796b; /* Prominent border */
-    border-radius: 5px; /* Slightly larger border radius */
-    font-size: 16px;
-    transition: border 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-}
-
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 14px 20px; /* Increased padding for better touch targets */
-    border-radius: 5px; /* Slightly larger border radius */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%; /* Full width for button */
-}
-
-.btn:hover {
-    background-color: #004d40;
-}
-.input {
-    width: 100%;
-    padding: 14px;
-    border: 2px solid #00796b;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-}
-
-.input:focus {
-    border-color: #004d40; /* Darker border on focus */
-    outline: none;
-    background-color: #e0f2f1; /* Light background on focus */
-}
-
-.input:placeholder-shown + label {
-    color: #999; /* Placeholder color */
-}
-
-.input:focus + label,
-.input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 5px;
-    font-size: 12px;
-    color: #00796b;
-}
-
-.btn {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    width: 100%;
-}
-
-.btn:hover {
-    background-color: #004d40;
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-/* Optional: Add focus effect for button */
-.btn:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    background: #fff; /* White background for contrast */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Softer shadow */
-    padding: 20px;
-    max-width: 800px; /* Wider container for better layout */
-    width: 100%;
-    margin-top: 30px;
-    border: 2px solid #ff6f61; /* Baby pink border */
-}
-
-.item {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    width: 100%;
-}
-
-/* Optional: Add a subtle background gradient */
-.container {
-    background: linear-gradient(to right, #9cf78e, #d2e865); /* Light pink gradient */
-}.input-box {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%; /* Ensures input boxes take full available width */
-}
-
-.input {
-    width: calc(100% + 20px); /* Increase width beyond the container */
-    padding: 14px;
-    border: 2px solid #ff6e6100; /* Baby pink border */
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-    margin-left: -10px; /* Adjust left margin to balance increased width */
-}
-
-.btn {
-    background-color: #ff6f61; /* Baby pink button */
-    color: white;
-    border: 2px solid #c0c0c0; /* Silver border for button */
-    padding: 14px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s, border 0.3s;
-    width: calc(100% + 20px); /* Increase button width */
-    margin-left: 10px; /* Adjust left margin to balance increased width */
-}
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%; /* Ensures input boxes take full available width */
-}
-
-.label {
-    position: absolute;
-    left: 15px;
-    top: 14px;
-    transition: all 0.3s ease;
-    font-size: 16px; /* Initial font size for labels */
-    color: #d00d0d; /* Soft grey color for labels */
-    pointer-events: none; /* Prevents interaction */
-}
-
-.input {
-    width: calc(100% + 20px); /* Increase width */
-    padding: 14px;
-    border: 2px solid #575554; /* Baby pink border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Larger font for inputs */
-    transition: border 0.3s, background 0.3s;
-    background-color: #f9f9f9; /* Light background for inputs */
-    color: #333; /* Darker text color for visibility */
-    margin-left: -10px; /* Adjust left margin */
-}
-
-/* Change label styles on input focus or when text is present */
-.input:focus + .label,
-.input:not(:placeholder-shown) + .label {
-    top: -10px; /* Move label up */
-    left: 10px; /* Adjust left position */
-    font-size: 12px; /* Smaller font size for emphasis */
-    color: #ffffff; /* Change to baby pink when focused */
-    font-weight: bold; /* Make the label bold */
-}
-
-/* Style for the submit button */
-.btn {
-    background-color: #ff6f61; /* Baby pink button */
-    color: white;
-    border: 2px solid #c0c0c0; /* Silver border */
-    padding: 14px 20px;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    width: calc(100% + 20px); /* Increase button width */
-    margin-left: -10px; /* Adjust left margin */
-}
-
-/* Button hover effect */
-.btn:hover {
-    background-color: #c0c0c0; /* Silver on hover */
-    transform: scale(1.05); /* Slightly enlarge button */
-}
-.social-media li {
-    display: inline; /* Keep icons inline */
-    margin: 0 10px; /* Space between icons */
-}
-
-.social-media li a {
-    color: #333; /* Default color for icons */
-    font-size: 24px; /* Increase icon size */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-/* Hover effect for social media icons */
-.social-media li a:hover {
-    color: #ff6f61; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge icon on hover */
-}
-.social-media {
-    display: flex; /* Use flexbox for alignment */
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    margin: 15px 0; /* Add margin for spacing */
-}
-
-.social-media li {
-    margin: 0 15px; /* Space between icons */
-}
-
-.social-media li a {
-    color: #333; /* Default icon color */
-    font-size: 30px; /* Increase icon size for visibility */
-    transition: transform 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition */
-    display: inline-block; /* Make anchor tag behave like a block */
-    border-radius: 50%; /* Circular background */
-    padding: 10px; /* Padding for a larger clickable area */
-}
-
-/* Hover effect for social media icons */
-.social-media li a:hover {
-    color: #fff; /* Change text color to white on hover */
-    background-color: #ff6f61; /* Baby pink background on hover */
-    transform: scale(1.2); /* Enlarge icon on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-
 
 
 </style>
+<body>
+    <div class="container-fluid">
+        <header style="background-color: black;height:85px;">
+            <nav style="padding: 5px;width:100%;">
+                <div class="logo" style="align-items: center;">
+                    <img src="img/logo.png" id="logo-web">
+                    <h1 id="logo"><a href="#home" style="margin-left: 18px; margin-top: 5px;">BuddyTrail</a></h1>
+                </div>
+
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+        
+            <ul id="nav-list" style="margin-left: 65px;">
+              <!-- Close button for dropdown -->
+              <span class="dropdown-close-btn" id="closeBtn">×</span>
+              <li><a href="./index.html" class="navhover">Home</a></li>
+              <li><a href="team.html" class="navhover">Team</a></li>
+              <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+              <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+              <li><a href="about.html" class="navhover">About</a></li>
+              <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+              
+              <li><a href="./contact.html" class="navhover">Contact</a></li>
+              <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+              <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
+        
+            <!-- Toggle Button -->
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+          </nav>
+        </header>
+        
+        <section id="contactus">
+            <div class="card pb-5 pt-1">
+                <div class="card-header">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-section">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Your name" required>
+                                <div class="tooltip">Please enter your full name here.</div> 
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email" required>
+                                <div class="tooltip">Please enter a valid email like example@mail.com.</div>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                                <div class="tooltip">Please enter your phone number(10 digits).</div>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                                <div class="tooltip">Feel free to describe your message in detail.</div>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                    <div class="image-section">
+                        <img src="./image.png" alt="Contact Image" style="max-width: 80%; height: auto; max-height: 500px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<footer id="footer">
+<footer>
+  <div class="footer-container">
+    <!-- About Us Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>
+        Discover budget-friendly destinations and easily create itineraries with BuddyTrail’s innovative travel companion tools. Start exploring today and make your next trip both enjoyable and economical!</p>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contributor/contributor.html">Our Contributor</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Links Section -->
+    <div class="footer-column">
+      <h3>Legal Links</h3>
+      <ul>
+        <li><a href="terms_of_service.html">Terms of Service</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="copyright.html">Copyright Notice</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@buddytrail.com">info@buddytrail.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 BuddyTrail. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  window.gtranslateSettings = {
+    "default_language": "en",
+    "detect_browser_language": true,
+    "wrapper_selector": ".gtranslate_wrapper"
+  };
+</script>
+
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<script src="./contact.js"></script>
+
+<script>
+  window.onscroll = function() {
+    var header = document.querySelector("header");
+    if (window.pageYOffset > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+</script>
+
+</body>
+</html>

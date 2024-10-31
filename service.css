@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.service-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* dark mode */
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.mode-toggle {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+}
+
+.mode-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #4C51BF;
+    transform: translateY(-2px);
+}
+
+
+

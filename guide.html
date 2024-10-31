@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Guide Connection</title>
+    <link rel="stylesheet" href="about.css" />
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #0066cc;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: url('https://example.com/your-tour-image.jpg') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 102, 204, 0.7);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .overlay p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #008cff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0066cc;
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background-color: #f4f7f6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            font-size: 36px;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom:5px ;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      
+
+        .forms-group {
+            margin-bottom: 20px;
+        }
+
+        .forms-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .forms-group input,
+        .forms-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* FAQ and Blog Section Styles */
+        .faq-and-blog {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px; /* Space between FAQ and Blog sections */
+            padding: 50px;
+        }
+
+        .faq, .blog {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq {
+            max-width: 45%;
+        }
+
+        .blog {
+            max-width: 45%;
+        }
+
+        .faq-item, .blog-post {
+            margin-bottom: 20px;
+        }
+
+        .blog-post a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .faq-and-blog {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .faq, .blog {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" id="logo-web" alt="BuddyTrail Logo"
+                        style="transition: transform 0.3s ease;" />
+                    <h1 id="logo">BuddyTrail</h1>
+                </div>
+                <button class="hamburger" id="hamburger">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <button class="dropdown-close-btn" id="closeBtn">✖</button>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="auth.html" class="btn-primary">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const logo = document.getElementById("logo-web");
+
+        logo.addEventListener("mouseenter", () => {
+            logo.style.transform = "rotateY(20deg) scale(1.1)";
+        });
+
+        logo.addEventListener("mouseleave", () => {
+            logo.style.transform = "rotateY(0) scale(1)";
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+            <h2>Discover Authentic Local Experiences</h2>
+            <p>Partner with local guides and book personalized tours for a unique travel experience.</p>
+            <a href="#book" class="cta-button">Book a Tour</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="booking-section">
+        <h2>Book a Personalized Tour</h2>
+        <form id="bookingForm">
+            <div class="forms-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="forms-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="forms-group">
+                <label for="destination">Choose Destination:</label>
+                <select id="destination" required>
+                    <option value="">Select...</option>
+                    <option value="paris">Paris</option>
+                    <option value="new_york">New York</option>
+                    <option value="tokyo">Tokyo</option>
+                </select>
+            </div>
+            <div class="forms-group">
+                <label for="tourDate">Preferred Tour Date:</label>
+                <input type="date" id="tourDate" required>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </section>
+
+    <!-- FAQ and Blog Section aligned in one row -->
+    <div class="faq-and-blog">
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I book a tour?</h3>
+                <p>Simply fill out the booking form with your details and preferred date, and our team will handle the rest.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are the tours customizable?</h3>
+                <p>Yes! We work closely with our local guides to create a personalized itinerary for each traveler.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is your cancellation policy?</h3>
+                <p>You can cancel up to 48 hours before the tour for a full refund.</p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog">
+            <h2>Travel Tips & Blog</h2>
+            <div class="blog-post">
+                <h3><a href="#">5 Hidden Gems in Paris You Must See</a></h3>
+                <p>Discover the lesser-known spots that will make your Paris trip unforgettable.</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="#">How to Travel Like a Local in New York</a></h3>
+                <p>Get insider tips from local guides on experiencing New York authentically.</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="#">The Ultimate Guide to Exploring Tokyo</a></h3>
+                <p>Explore Tokyo's blend of traditional and modern culture with these essential tips.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-responsive">
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <div class="logo-footer">
+                        <img src="img/logo.png" alt="BuddyTrail Logo" />
+                        <h1 id="logo">BuddyTrail</h1>
+                    </div>
+                    <p class="hover-color">Welcome to BuddyTrail - your premier travel companion! Whether you're
+                        planning a
+                        family vacation
+                        or a
+                        getaway with friends, BuddyTrail is here to help you discover and explore incredible
+                        destinations.
+                        Our platform makes it easy to find the best hotels and book affordable flights, ensuring a
+                        seamless
+                        travel experience.</p>
+
+                </div>
+                <div class="col">
+                    <h3>Office <div class="underline"><span></span></div>
+                    </h3>
+                    <p>123 Fake Street</p>
+                    <p>Near XYZ Mall, Sample City</p>
+                    <p>Fake State, PIN 12345, India</p>
+                   
+                    <h3>
+                        <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a><br>
+                        <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
+                    </h3>
+                    
+                </div>
+                <div class="col">
+                    <h3>Links <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="footer-links">
+                        <li><a href="https://buddytrail.netlify.app/#home">Home</a></li>
+                        <li><a href="https://buddytrail.netlify.app/#services">Services</a></li>
+                        <li><a href="https://buddytrail.netlify.app/about">About Us</a></li>
+                        <li><a href="https://buddytrail.netlify.app/faq" target="_blank">FAQs</a></li>
+                        <li><a href="https://buddytrail.netlify.app/team" target="_blank">Our Team</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contributor/contributor"
+                                target="_blank">Contributors</a></li>
+                        <li><a href="https://buddytrail.netlify.app/contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <form>
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://discord.com/invite/priyaghosal" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://x.com/i/flow/login?redirect_after_login=%2FPriyaGhosa39968" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="img/x-logo.png" alt="X logo" class="fab">
+                            </a>
+
+
+                            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> © 2024 BuddyTrail | All Rights Reserved</p>
+        </footer>
+    </div>
+
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const destination = document.getElementById('destination').value;
+            const tourDate = document.getElementById('tourDate').value;
+
+            if (name && email && destination && tourDate) {
+                alert(`Thank you, ${name}! Your tour to ${destination} is booked for ${tourDate}.`);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+
+</body>
+</html>

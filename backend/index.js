@@ -1,24 +1,47 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const authRoutes = require('./routes/authRoutes');
-const cookieParser = require('cookie-parser');
-const config = require('./config/config'); // Import config
-const cors = require('cors'); // Import CORS
+// Import required modules
+const express = require("express");
+const connectDB = require("./config/db"); // Database connection
+const authRoutes = require("./routes/authRoutes"); // Authentication routes
+const ContactRoutes = require("./routes/ContactRoutes");
+const cookieParser = require("cookie-parser"); // Middleware for parsing cookies
+const config = require("./config/config"); // Config file for environment variables
+const cors = require("cors"); // Middleware for Cross-Origin Resource Sharing
 
+// Initialize express app
 const app = express();
+
+// Connect to MongoDB
 connectDB();
 
 // CORS configuration
+
+const allowedOrigins = [
+    'http://127.0.0.1:5505',
+    'https://deploy-preview-1740--buddytrail.netlify.app'
+];
+
 app.use(cors({
-    origin: 'http://your-frontend-domain.com', // Replace with your frontend URL
-    credentials: true, // Allow credentials (cookies) to be sent
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true  // Allow credentials (cookies) to be sent with requests
 }));
 
-app.use(express.json());
-app.use(cookieParser());
-app.use('/api/auth', authRoutes);
 
-const PORT = config.port; // Use config for port
+// Middleware
+app.use(express.json()); // Parse JSON bodies
+app.use(cookieParser()); // Enable cookie parsing
+
+// API routes
+app.use("/api/auth", authRoutes);
+app.use("/api/contact", ContactRoutes);
+
+// Server listening on configured port
+const PORT = config.port || 5000; // Use config for port, default to 5000 if undefined
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
