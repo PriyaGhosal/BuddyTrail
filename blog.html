@@ -17,6 +17,8 @@
     />
     <link rel="stylesheet" href="RatingStyle.css" />
     <link rel="stylesheet" href="style.css" />
+    
+    <link rel="icon" href="/icons/airplane.svg" />
     <link rel="stylesheet" href="./styles/popup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -503,14 +505,31 @@
         transform: translateY(-1px);
       }
     </style>
-  </head>
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
 
-  <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader-wrapper">
-        <img src="img/logo.png" alt="Travel Website Logo" id="logo" />
-        <div class="loader-globe"></div>
+<body>
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="loader-wrapper">
+          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+          <div class="loader-globe"></div>
+        </div>
+        <div id="loading-text">Ready to Explore the World...</div>
+
       </div>
       <div id="loading-text">Ready to Explore the World...</div>
     </div>
@@ -624,45 +643,46 @@
       });
     </script>
     <header class="main-head">
-      <div class="logo">
-        <img src="img/logo.png" id="logo-web" />
-        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-      </div>
-      <nav>
-        <ul id="nav-list">
-          <span class="dropdown-close-btn" id="closeBtn">×</span>
-          <li><a href="index.html" class="navhover">Home</a></li>
-          <li><a href="team.html" class="navhover">Team</a></li>
-          <li>
-            <a href="index.html#deals" class="navhover">Exclusive Deals</a>
-          </li>
-          <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-          <li><a href="about.html" class="navhover">About</a></li>
-          <li>
-            <a href="index.html#itineraries" class="navhover"
-              >Travel Itineraries</a
-            >
-          </li>
-          <li><a href="./contact.html" class="navhover">Contact</a></li>
-          <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-          <li><a href="auth.html" class="navhover">Sign In</a></li>
-        </ul>
-      </nav>
-      <!-- Toggle Button -->
-      <div class="toggle">
-        <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow"
-            ><img src="day-mode.png" alt="Light mode"
-          /></span>
-          <span class="moon-icon glow" style="display: none"
-            ><img src="moon.png" alt="Dark mode"
-          /></span>
-        </button>
-      </div>
 
-      <!-- Hamburger button for mobile -->
-      <button class="hamburger" id="hamburger">☰</button>
-    </header>
+        <div class="logo">
+          <img src="img/logo.png" id="logo-web" />
+          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+        </div>
+        <nav>
+          <ul id="nav-list">
+            <span class="dropdown-close-btn" id="closeBtn">×</span>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="team.html" class="navhover">Team</a></li>
+            <li>
+              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+            </li>
+            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+            <li><a href="about.html" class="navhover">About</a></li>
+            <li>
+              <a href="index.html#itineraries" class="navhover"
+                >Travel Itineraries</a
+              >
+            </li>
+            <li><a href="./contact.html" class="navhover">Contact</a></li>
+            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+            <li><a href="auth.html" class="navhover">Sign In</a></li>
+          </ul>
+        </nav>
+        <!-- Toggle Button -->
+        <div class="toggle">
+          <button class="mode-toggle" id="modeToggle">
+            <span class="sun-icon glow"
+              ><img src="day-mode.png" alt="Light mode"
+            /></span>
+            <span class="moon-icon glow" style="display: none"
+              ><img src="moon.png" alt="Dark mode"
+            /></span>
+          </button>
+        </div>
+  
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger">☰</button>
+      </header>
 
     <main>
       <section class="hero">
@@ -762,6 +782,122 @@
             <li><a href="contributor/contributor.html">Our Contributor</a></li>
           </ul>
         </div>
+
+
+            addEventListeners();
+
+        function addEventListeners() {
+            // Add event listeners for read more links
+            document.querySelectorAll('.read-more').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const article = e.target.closest('.blog-post');
+                    const content = article.querySelector('.content');
+                    const fullContent = article.querySelector('.full-content');
+
+                    if (content.style.display !== 'none') {
+                        content.style.display = 'none';
+                        fullContent.style.display = 'block';
+                        e.target.textContent = 'Read Less';
+                    } else {
+                        content.style.display = 'block';
+                        fullContent.style.display = 'none';
+                        e.target.textContent = 'Read More';
+                    }
+                });
+            });
+
+            // Add event listeners for comment forms
+            document.querySelectorAll('.comment-form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const postId = parseInt(e.target.getAttribute('data-post-id'));
+                    const comment = e.target.querySelector('textarea').value;
+                    addComment(postId, comment);
+                    e.target.reset();
+                });
+            });
+        }
+
+        function populateFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            const categories = getLocalData('categories');
+            const tags = getLocalData('tags');
+
+            categoryFilter.innerHTML = '<option value="">All Categories</option>';
+            tagFilter.innerHTML = '<option value="">All Tags</option>';
+
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+
+            tags.forEach(tag => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = tag;
+                tagFilter.appendChild(option);
+            });
+
+            // Add event listeners for filters
+            categoryFilter.addEventListener('change', filterPosts);
+            tagFilter.addEventListener('change', filterPosts);
+        }
+
+        function filterPosts() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            const selectedTag = document.getElementById('tagFilter').value;
+            const posts = getLocalData('blogPosts');
+
+            const filteredPosts = posts.filter(post => {
+                const categoryMatch = !selectedCategory || post.category === selectedCategory;
+                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+                return categoryMatch && tagMatch;
+            });
+
+            renderFilteredPosts(filteredPosts);
+        }
+
+        function renderFilteredPosts(filteredPosts) {
+            const container = document.querySelector('.blog-container');
+            container.innerHTML = '';
+
+            filteredPosts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post';
+                article.innerHTML = `
+            <h2>${post.title}</h2>
+            <div class="meta">Posted on ${post.date} by ${post.author}</div>
+            <div class="category">${post.category}</div>
+            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="content">
+                <p>${post.content.substring(0, 150)}...</p>
+            </div>
+            <div class="full-content" style="display: none;">
+                <p>${marked(post.content)}</p>
+            </div>
+            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+            <div class="comments-section">
+                <h3>Comments (${post.comments.length})</h3>
+                <div class="comments">
+                    ${post.comments.slice(0, 2).map(comment => `
+                        <div class="comment">
+                            <p>${comment.text}</p>
+                            <small>${comment.date}</small>
+                        </div>
+                    `).join('')}
+                </div>
+                <form class="comment-form" data-post-id="${post.id}">
+                    <textarea placeholder="Add a comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        `;
+                container.appendChild(article);
+            });
 
         <!-- Legal Links Section -->
         <div class="footer-column">
@@ -1352,43 +1488,97 @@
           sunIcon.style.display = "none";
           moonIcon.style.display = "inline-block";
         } else {
-          sunIcon.style.display = "inline-block";
-          moonIcon.style.display = "none";
+            section.classList.remove('dark-mode');
         }
+    });
 
-        // Toggle between light and dark mode on button click
-        modeToggle.addEventListener("click", () => {
-          const isDarkMode = document.body.classList.toggle("dark-mode");
+    // Update icons and local storage
+    if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+    }
+});
+});
+  </script>
 
-          // Apply dark mode styles to relevant sections
-          const sections = document.querySelectorAll(
-            ".about, .core-values, .team"
-          );
-          sections.forEach((section) => {
-            if (isDarkMode) {
-              section.classList.add("dark-mode");
-            } else {
-              section.classList.remove("dark-mode");
-            }
-          });
 
-          // Update icons and local storage
-          if (isDarkMode) {
-            sunIcon.style.display = "none";
-            moonIcon.style.display = "inline-block";
-            localStorage.setItem("theme", "dark");
-          } else {
-            sunIcon.style.display = "inline-block";
-            moonIcon.style.display = "none";
-            localStorage.setItem("theme", "light");
-          }
-        });
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
       });
-    </script>
 
-    <script
-      src="https://cdn.gtranslate.net/widgets/latest/float.js"
-      defer
-    ></script>
-  </body>
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+</body>
+
 </html>

@@ -4,25 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
+    
+    <link rel="icon" href="/icons/airplane.svg" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link
       rel="icon"
       href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000"
     />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <style>
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
+<style>
     .card {
       width: 80%;
       margin: 30px auto;
@@ -185,71 +192,46 @@
                 >Travel Itineraries</a
               >
             </li>
-
-            <li><a href="./contact.html" class="navhover">Contact</a></li>
-            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-            <li><a href="auth.html" class="navhover">Sign In</a></li>
-          </ul>
-
-          <!-- Toggle Button -->
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"
-              ><img src="day-mode.png" alt="Light mode"
-            /></span>
-            <span class="moon-icon glow" style="display: none"
-              ><img src="moon.png" alt="Dark mode"
-            /></span>
-          </button>
-        </nav>
-      </header>
-
-      <section id="contactus">
-        <div class="card pb-5 pt-1">
-          <div class="card-header">
-            <h2>Contact Us</h2>
-          </div>
-          <div class="card-body">
-            <div class="form-section">
-              <form id="contactForm">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Your name"
-                    required
-                  />
-                  <div class="tooltip">Please enter your full name here.</div>
-                  <span class="error-message" id="nameError"></span>
+</style>
+<body>
+    <div class="container-fluid">
+        <header style="background-color: black;height:85px;">
+            <nav style="padding: 5px;width:100%;">
+                <div class="logo" style="align-items: center;">
+                    <img src="img/logo.png" id="logo-web">
+                    <h1 id="logo"><a href="#home" style="margin-left: 18px; margin-top: 5px;">BuddyTrail</a></h1>
                 </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your email"
-                    required
-                  />
-                  <div class="tooltip">
-                    Please enter a valid email like example@mail.com.
-                  </div>
-                  <span class="error-message" id="emailError"></span>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Your phone number"
-                    required
-                  />
-                  <div class="tooltip">
-                    Please enter your phone number(10 digits).
-                  </div>
-                  <span class="error-message" id="phoneError"></span>
+
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger">☰</button>
+        
+            <ul id="nav-list" style="margin-left: 65px;">
+              <!-- Close button for dropdown -->
+              <span class="dropdown-close-btn" id="closeBtn">×</span>
+              <li><a href="./index.html" class="navhover">Home</a></li>
+              <li><a href="team.html" class="navhover">Team</a></li>
+              <li><a href="index.html#deals" class="navhover">Exclusive Deals</a></li>
+              <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+              <li><a href="about.html" class="navhover">About</a></li>
+              <li><a href="index.html#itineraries" class="navhover">Travel Itineraries</a></li>
+              
+              <li><a href="./contact.html" class="navhover">Contact</a></li>
+              <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+              <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
+        
+            <!-- Toggle Button -->
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+          </nav>
+        </header>
+        
+        <section id="contactus">
+            <div class="card pb-5 pt-1">
+                <div class="card-header">
+                    <h2>Contact Us</h2>
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
@@ -411,15 +393,86 @@
     ></script>
     <script src="./contact.js"></script>
 
-    <script>
-      window.onscroll = function () {
-        var header = document.querySelector("header");
-        if (window.pageYOffset > 0) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      };
-    </script>
-  </body>
+<script>
+  window.onscroll = function() {
+    var header = document.querySelector("header");
+    if (window.pageYOffset > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+</script>
+
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+</body>
 </html>

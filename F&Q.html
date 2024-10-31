@@ -254,10 +254,30 @@ body.dark-mode .navbar a:hover {
       
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  </head>
+  <style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
   <body>
     <script src="script.js"></script>
+    <script>
+      
+    </script>
     <header class="main-head">
+      <button class="go-top-btn">
+        <img height="45px" width="50px" src="arrow_upper.png " alt="arrow up">
+      </button>
       <div class="logo">
         <img src="img/logo.png" id="logo-web" />
         <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
@@ -283,14 +303,10 @@ body.dark-mode .navbar a:hover {
         </ul>
       </nav>
       <!-- Toggle Button -->
-      <div class="toggle">
+      <div class="toggle-button">
         <button class="mode-toggle" id="modeToggle">
-          <span class="sun-icon glow"
-            ><img src="day-mode.png" alt="Light mode"
-          /></span>
-          <span class="moon-icon glow" style="display: none"
-            ><img src="moon.png" alt="Dark mode"
-          /></span>
+          <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+          <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
         </button>
       </div>
 
@@ -369,13 +385,13 @@ body.dark-mode .navbar a:hover {
     <h2>Suggestions/Questions</h2>
     <form id="suggestionForm" action="/submit-suggestion" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -422,6 +438,22 @@ body.dark-mode .navbar a:hover {
             modal.style.display = 'none';
         }
     });
+
+    const goTopBtn= document.querySelector('.go-top-btn');
+  window.addEventListener('scroll',checkHeight)
+  function checkHeight(){
+    if(window.scrollY > 200){
+goTopBtn.style.display="flex"
+    } else{
+      goTopBtn.style.display="none"
+    }
+  }
+  goTopBtn.addEventListener('click', () =>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  })
 </script>
 
   
@@ -516,19 +548,21 @@ body.dark-mode .navbar a:hover {
 
       /* Button Styling */
       button {
-        background-color: #0056b3;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
+      background-color: #ba5ae0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    }
 
-      button:hover {
-        background-color: #004494;
-        transform: translateY(-3px);
-      }
+    button:hover {
+      background-color: #19181a; /* Bright yellow on hover */
+      color: #e9e8ea;
+      transform: translateY(-3px);
+      border: 2px solid #7f6e60;
+}
 
       /* Form Section Background */
       #suggestions-form {
@@ -571,6 +605,79 @@ body.dark-mode .navbar a:hover {
         background-color: #ffe0b2;
       }
     </style>
+ main
+ main
+  
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+
 
      <!-- dark theme -->
     <script>
@@ -632,7 +739,12 @@ body.dark-mode .navbar a:hover {
   });
     </script>  
   </body>
-=======
+ main
+
+ main
+
+ 
+ main
     
 
   <footer id="footer">
@@ -729,7 +841,7 @@ body.dark-mode .navbar a:hover {
   
     <!-- Footer Bottom Section -->
     <div class="footer-bottom">
-      <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+      <p class="copyright-b" style="font-size: medium;">&copy; 2024 BuddyTrail. All rights reserved.</p>
     </div>
   </footer>
   <script>
@@ -792,8 +904,9 @@ modeToggle.addEventListener("click", () => {
         document.getElementById("clipart-img1").style.visibility = "visible";
         document.getElementById("clipart-img2").style.visibility = "visible";
     }
-});
+  });
 });
   </script>
+ main
 </body>
 </html>
