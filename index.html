@@ -967,6 +967,133 @@
         </div></div>
       </div>
     </section>
+  <!-- Packing Checklist Section -->
+<section id="packing-checklist" class="packing-checklist-section">
+  <h2>Packing Checklist</h2>
+  <p>🌍 Choose your travel style to receive a personalized packing checklist ✈️, curated from seasoned travelers 🧳!</p>
+  <div class="checklist-form">
+    <label for="travel-type">Choose your travel type:</label>
+    <select id="travel-type">
+      <option value="beach">Beach</option>
+      <option value="adventure">Adventure</option>
+      <option value="business">Business</option>
+    </select>
+    <button onclick="generateChecklist()">Download Checklist</button>
+  </div>
+</section>
+<style>
+  /* Packing Checklist Section CSS */
+.packing-checklist-section {
+  background: linear-gradient(135deg, #e6f7ff, #ccf2ff); 
+  padding: 40px 20px; 
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+  color: #333;
+}
+
+.packing-checklist-section h2 {
+  font-size: 28px;
+  color: #004085;
+  margin-bottom: 10px;
+}
+
+.packing-checklist-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.checklist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#travel-type {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.checklist-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.checklist-form button:hover {
+  background-color: #0056b3;
+}
+
+
+</style>
+<!-- Packing Checklist Section Script-->
+<script>
+  function generateChecklist() {
+  const travelType = document.getElementById("travel-type").value;
+  let checklistContent = "";
+
+  if (travelType === "beach") {
+    checklistContent = `
+      Beach Packing Checklist:
+      - Swimsuit
+      - Sunscreen
+      - Sunglasses
+      - Flip-flops
+      - Beach towel
+      - Water bottle
+      - Hat
+      - Snacks
+    `;
+  } else if (travelType === "adventure") {
+    checklistContent = `
+      Adventure Packing Checklist:
+      - Hiking boots
+      - Weather-resistant jacket
+      - First aid kit
+      - Flashlight
+      - Compass or GPS
+      - Energy bars
+      - Water bottle
+      - Map
+    `;
+  } else if (travelType === "business") {
+    checklistContent = `
+      Business Packing Checklist:
+      - Formal wear
+      - Laptop and charger
+      - Notepad and pen
+      - Business cards
+      - Toiletries
+      - Work documents
+      - Phone and charger
+      - Comfortable shoes
+    `;
+  }
+
+  // Create a downloadable text file
+  const blob = new Blob([checklistContent], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${travelType}_packing_checklist.txt`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+</script>
     <!--Emergency-->
     <div class="sos-container">
       <h2>Emergency SOS</h2>
