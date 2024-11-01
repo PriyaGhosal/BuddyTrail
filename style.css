@@ -3045,6 +3045,7 @@ body {
 }
 
 .chatbot-icon {
+  height: 50px;
   position: fixed;
   bottom: 20px; /* Adjust for positioning */
   right: 20px;  /* Adjust for positioning */
