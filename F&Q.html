@@ -383,15 +383,15 @@ body.dark-mode .navbar a:hover {
 <!-- Suggestions/Questions Form Section -->
 <section id="suggestions-form">
     <h2>Suggestions/Questions</h2>
-    <form id="suggestionForm" action="/submit-suggestion" method="POST">
+    <form id="suggestionForm" >
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
+        <input type="text" id="name"  required placeholder="Your Name"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
+        <input type="email" id="email" required placeholder="Your Email"><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea><br><br>
+        <textarea id="message" rows="5" required placeholder="Your Message"></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -406,6 +406,38 @@ body.dark-mode .navbar a:hover {
   </div>
 </section>
 
+<script>
+  document.getElementById("suggestionForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  console.log(name,email,message);
+  try {
+    const response = await fetch("http://localhost:5000/api/contact/suggestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Suggestion recorded!");
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Internal server error");
+  }
+});
+
+</script>
 
         <script>
     // Get elements
@@ -455,6 +487,8 @@ goTopBtn.style.display="flex"
     })
   })
 </script>
+
+
 
   
 
