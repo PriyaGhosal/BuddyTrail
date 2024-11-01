@@ -12,26 +12,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="RatingStyle.css" />
+    <link rel="stylesheet" href="RatingStyle.css" />
     <link rel="stylesheet" href="style.css" />
-    
+
     <link rel="icon" href="/icons/airplane.svg" />
     <link rel="stylesheet" href="./styles/popup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet" />
     <link rel="icon" href="/icons/airplane.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="chatbot.css" />
     <style>
         :root {
@@ -361,7 +355,7 @@
             transform: translateY(-2px);
         }
 
-        
+
 
         /* New styles for modals */
         .modal {
@@ -505,9 +499,9 @@
             transform: translateY(-1px);
         }
     </style>
-<style>
-          /* circle styles */
-          .circle {
+    <style>
+        /* circle styles */
+        .circle {
             height: 24px;
             width: 24px;
             border-radius: 24px;
@@ -517,154 +511,194 @@
             left: 0;
             pointer-events: none;
             z-index: 99999999;
-          }
-        </style>  
-    </head>
+        }
+    </style>
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            width: 100rem;
+        }
+
+        #searchBar {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        #searchBar:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+    </style>
+</head>
 
 <body>
-      <!-- Preloader -->
-      <div id="preloader">
+    <!-- Preloader -->
+    <div id="preloader">
         <div class="loader-wrapper">
-          <img src="img/logo.png" alt="Travel Website Logo" id="logo">
-          <div class="loader-globe"></div>
+            <img src="img/logo.png" alt="Travel Website Logo" id="logo">
+            <div class="loader-globe"></div>
         </div>
         <div id="loading-text">Ready to Explore the World...</div>
-      </div>
-      <style>
-      /* Preloader Container */
-      #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-  }
-  
-  /* Wrapper for the logo and loader */
-  .loader-wrapper {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Logo Styling */
-  #logo {
-    width: 140px;
-    position: relative;
-    z-index: 10; /* Ensures logo stays above the loader */
-    animation: pulse 2s infinite ease-in-out;
-  }
-  
-  /* Circular Loader surrounding the logo */
-  .loader-globe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 8px solid transparent;
-    border-left-color: white;
-    border-right-color: white;
-    animation: spin 2s linear infinite;
-  }
-  
-  /* Loading Text */
-  #loading-text {
-    margin-top: 20px;
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-    animation: textGlow 2s ease-in-out infinite;
-  }
-  
-  /* Keyframes Animations */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes textGlow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-      </style>
-      <script>
+    </div>
+    <style>
+        /* Preloader Container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        /* Wrapper for the logo and loader */
+        .loader-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        #logo {
+            width: 140px;
+            position: relative;
+            z-index: 10;
+            /* Ensures logo stays above the loader */
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* Circular Loader surrounding the logo */
+        .loader-globe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-left-color: white;
+            border-right-color: white;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Loading Text */
+        #loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        /* Keyframes Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script>
         // Function to hide preloader and show content once the page has fully loaded
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        const content = document.getElementById('content');
-    
-        // Set a small timeout for better user experience
-        setTimeout(function() {
-            // Hide preloader
-            preloader.style.opacity = '0';
-            preloader.style.transition = 'opacity 1s ease-in-out';
-    
-            // Show content after preloader fades out
-            setTimeout(function() {
-                preloader.style.display = 'none';
-                content.style.display = 'block';
-                content.classList.add('show');  // Trigger fade-in transition
-            }, 1000); // Match the transition duration
-        }, 2000);  // Adjust to the length of your spinner animation
-    });
-    
-      </script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+
+            // Set a small timeout for better user experience
+            setTimeout(function () {
+                // Hide preloader
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease-in-out';
+
+                // Show content after preloader fades out
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                    content.style.display = 'block';
+                    content.classList.add('show');  // Trigger fade-in transition
+                }, 1000); // Match the transition duration
+            }, 2000);  // Adjust to the length of your spinner animation
+        });
+
+    </script>
     <header class="main-head">
         <div class="logo">
-          <img src="img/logo.png" id="logo-web" />
-          <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+            <img src="img/logo.png" id="logo-web" />
+            <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
         </div>
         <nav>
-          <ul id="nav-list">
-            <span class="dropdown-close-btn" id="closeBtn">×</span>
-            <li><a href="index.html" class="navhover">Home</a></li>
-            <li><a href="team.html" class="navhover">Team</a></li>
-            <li>
-              <a href="index.html#deals" class="navhover">Exclusive Deals</a>
-            </li>
-            <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
-            <li><a href="about.html" class="navhover">About</a></li>
-            <li>
-              <a href="index.html#itineraries" class="navhover"
-                >Travel Itineraries</a
-              >
-            </li>
-            <li><a href="./contact.html" class="navhover">Contact</a></li>
-            <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
-            <li><a href="auth.html" class="navhover">Sign In</a></li>
-          </ul>
+            <ul id="nav-list">
+                <span class="dropdown-close-btn" id="closeBtn">×</span>
+                <li><a href="index.html" class="navhover">Home</a></li>
+                <li><a href="team.html" class="navhover">Team</a></li>
+                <li>
+                    <a href="index.html#deals" class="navhover">Exclusive Deals</a>
+                </li>
+                <li><a href="index.html#benefits" class="navhover">Benefits</a></li>
+                <li><a href="about.html" class="navhover">About</a></li>
+                <li>
+                    <a href="index.html#itineraries" class="navhover">Travel Itineraries</a>
+                </li>
+                <li><a href="./contact.html" class="navhover">Contact</a></li>
+                <li><a href="index.html#reviews" class="navhover">Reviews</a></li>
+                <li><a href="auth.html" class="navhover">Sign In</a></li>
+            </ul>
         </nav>
         <!-- Toggle Button -->
         <div class="toggle">
-          <button class="mode-toggle" id="modeToggle">
-            <span class="sun-icon glow"
-              ><img src="day-mode.png" alt="Light mode"
-            /></span>
-            <span class="moon-icon glow" style="display: none"
-              ><img src="moon.png" alt="Dark mode"
-            /></span>
-          </button>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode" /></span>
+                <span class="moon-icon glow" style="display: none"><img src="moon.png" alt="Dark mode" /></span>
+            </button>
         </div>
-  
+
         <!-- Hamburger button for mobile -->
         <button class="hamburger" id="hamburger">☰</button>
-      </header>
+    </header>
 
     <main>
         <section class="hero">
@@ -678,7 +712,9 @@
                 <button id="manageCategoriesBtn">Manage Categories</button>
                 <button id="manageTagsBtn">Manage Tags</button>
             </div>
-
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search blog posts...">
+            </div>
             <div class="blog-filters">
                 <select id="categoryFilter">
                     <option value="">All Categories</option>
@@ -695,102 +731,109 @@
     </main>
     <footer id="footer">
         <div class="footer-container">
-          <!-- About Us Section -->
-          <div class="footer-column">
-            <h3>About Us</h3>
-            <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-          </div>
-      
-          <!-- Quick Links Section -->
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="faq.html" class="faq-link">FAQs</a></li>
-              <li><a href="servicespage.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contributor/contributor.html">Our Contributor</a></li>
-            </ul>
-          </div>
-      
-          <!-- Legal Links Section -->
-          <div class="footer-column">
-            <h3>Legal Links</h3>
-            <ul>
-              <li><a href="terms_of_service.html">Terms of Service</a></li>
-              <li><a href="privacypolicy.html">Privacy Policy</a></li>
-              <li><a href="copyright.html">Copyright Notice</a></li>
-              <li><a href="disclaimer.html">Disclaimer</a></li>
-              <li><a href="cookie_policy.html">Cookie Policy</a></li>
-      
-              
-      
-            </ul>
-          </div>
-      
-          <!-- Contact Us Section -->
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-          </div>
-      
-          <!-- Follow Us Section -->
-          <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-              <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <!-- About Us Section -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
             </div>
-          </div>
-      
-          <!-- Newsletter Form Section -->
-          <style>
-            .footer-column.newsletter {
-                max-width: 300px;
-                margin: 0 auto;
-                text-align: center;
-            }
-            #newsletter-form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            #email {
-                width: 100%;
-                margin-bottom: 10px;
-                padding: 8px;
-                box-sizing: border-box;
-            }
-            button[type="submit"] {
-                width: 100px;
-                padding: 6px;
-                font-size: 14px;
-            }
-            #subscription-message {
-                font-size: 14px;
-                margin-top: 10px;
-            }
-        </style>
-          <div class="footer-column newsletter" id="newsletter">
-            <h3>Subscribe to Our Newsletter</h3>
-            <form id="newsletter-form">
-              <input type="email" id="email" placeholder="Enter your email" required />
-              <button type="submit">Subscribe</button>
-            </form>
-            <p id="subscription-message"></p>
-          </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html" class="faq-link">FAQs</a></li>
+                    <li><a href="servicespage.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contributor/contributor.html">Our Contributor</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal Links Section -->
+            <div class="footer-column">
+                <h3>Legal Links</h3>
+                <ul>
+                    <li><a href="terms_of_service.html">Terms of Service</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="copyright.html">Copyright Notice</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
+
+
+
+                </ul>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Newsletter Form Section -->
+            <style>
+                .footer-column.newsletter {
+                    max-width: 300px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                #newsletter-form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                #email {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+
+                button[type="submit"] {
+                    width: 100px;
+                    padding: 6px;
+                    font-size: 14px;
+                }
+
+                #subscription-message {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            </style>
+            <div class="footer-column newsletter" id="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" id="email" placeholder="Enter your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscription-message"></p>
+            </div>
         </div>
-      
+
         <!-- Footer Bottom Section -->
         <div class="footer-bottom">
-          <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+            <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
         </div>
-      </footer>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
     <script>
         // Initialize data in localStorage if it doesn't exist
@@ -920,7 +963,7 @@
             </div>
         `;
                 container.appendChild(article);
- });
+            });
 
             addEventListeners();
         }
@@ -1097,7 +1140,7 @@
         }
 
 
-            addEventListeners();
+        addEventListeners();
 
         function addEventListeners() {
             // Add event listeners for read more links
@@ -1302,137 +1345,154 @@
     </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const hamburger = document.getElementById("hamburger");
-      const navList = document.getElementById("nav-links");
-      const closeBtn = document.getElementById("closeBtn");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navList = document.getElementById("nav-links");
+            const closeBtn = document.getElementById("closeBtn");
 
-      hamburger.addEventListener("click", function () {
-        navList.classList.toggle("active");
-      });
+            hamburger.addEventListener("click", function () {
+                navList.classList.toggle("active");
+            });
 
-      closeBtn.addEventListener("click", function () {
-        navList.classList.remove("active");
-      });
-    });
+            closeBtn.addEventListener("click", function () {
+                navList.classList.remove("active");
+            });
+        });
 
-   document.addEventListener("DOMContentLoaded", function() {
-     const modeToggle = document.getElementById("modeToggle");
-     const sunIcon = document.querySelector(".sun-icon");
-     const moonIcon = document.querySelector(".moon-icon");
+        document.addEventListener("DOMContentLoaded", function () {
+            const modeToggle = document.getElementById("modeToggle");
+            const sunIcon = document.querySelector(".sun-icon");
+            const moonIcon = document.querySelector(".moon-icon");
 
-     // Check saved theme in localStorage and apply it
-     const currentTheme = localStorage.getItem("theme") || "light";
-      if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-     } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-    }
+            // Check saved theme in localStorage and apply it
+            const currentTheme = localStorage.getItem("theme") || "light";
+            if (currentTheme === "dark") {
+                document.body.classList.add("dark-mode");
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "inline-block";
+            } else {
+                sunIcon.style.display = "inline-block";
+                moonIcon.style.display = "none";
+            }
 
-// Toggle between light and dark mode on button click
-modeToggle.addEventListener("click", () => {
-    const isDarkMode = document.body.classList.toggle("dark-mode");
+            // Toggle between light and dark mode on button click
+            modeToggle.addEventListener("click", () => {
+                const isDarkMode = document.body.classList.toggle("dark-mode");
 
-    // Apply dark mode styles to relevant sections
-    const sections = document.querySelectorAll('.about, .core-values, .team');
-    sections.forEach(section => {
-        if (isDarkMode) {
-            section.classList.add('dark-mode');
-        } else {
-            section.classList.remove('dark-mode');
-        }
-    });
+                // Apply dark mode styles to relevant sections
+                const sections = document.querySelectorAll('.about, .core-values, .team');
+                sections.forEach(section => {
+                    if (isDarkMode) {
+                        section.classList.add('dark-mode');
+                    } else {
+                        section.classList.remove('dark-mode');
+                    }
+                });
 
-    // Update icons and local storage
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-    }
-});
-});
-  </script>
+                // Update icons and local storage
+                if (isDarkMode) {
+                    sunIcon.style.display = "none";
+                    moonIcon.style.display = "inline-block";
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    sunIcon.style.display = "inline-block";
+                    moonIcon.style.display = "none";
+                    localStorage.setItem("theme", "light");
+                }
+            });
+        });
+    </script>
 
 
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 
-<!-- Circles -->
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
 
-<script>
-    // coordinates for the cursor :
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
+    <script>
+        // coordinates for the cursor :
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
 
-    const colors = [
-      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
-    ];
+        const colors = [
+            "#fc5720", "#fc6532", "#fc6532", "#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02",
+        ];
 
-    circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
 
-    // update the coordinates when the mouse moves:
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
-    });
+        // update the coordinates when the mouse moves:
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+        });
 
-    // animation function to move the circles:
-    function animateCircles() {
-      let x = coords.x;
-      let y = coords.y;
+        // animation function to move the circles:
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
 
-      circles.forEach(function (circle, index) {
-       
+            circles.forEach(function (circle, index) {
 
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
-        circle.style.scale = (circles.length - index) / circles.length;
 
-        circle.x = x;
-        circle.y = y;
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
 
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
+                circle.x = x;
+                circle.y = y;
 
-      requestAnimationFrame(animateCircles);
-    }
-    
-    animateCircles();
-  </script>
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBar = document.getElementById('searchBar');
+
+            searchBar.addEventListener('input', function () {
+                const query = searchBar.value.toLowerCase();
+                const posts = getLocalData('blogPosts');
+
+                const filteredPosts = posts.filter(post => {
+                    return post.title.toLowerCase().includes(query) || post.content.toLowerCase().includes(query);
+                });
+
+                renderFilteredPosts(filteredPosts);
+            });
+        });
+
+    </script>
 
 </body>
 
