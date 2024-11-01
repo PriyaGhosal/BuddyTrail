@@ -50,22 +50,42 @@
         padding-top: 120px;
       }
 
+
+      .top-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+      }
+
       .container {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: auto;
-        width: 100%;
+        width: 100vw;
+      }
+
+      .seach-container {
+        margin-right: 40px;
+      }
+
+      .sort-container {
+        margin-left: 40px;
       }
 
       .card-container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
+        width: 100vw;
+        height: 590px;
         align-items: center;
-        justify-content: space-evenly;
         margin: auto;
-        width: 100%;
+        margin-left: 100px;
+        margin-bottom: 50px;
       }
 
       h1 {
@@ -118,16 +138,6 @@
       .book-button:hover {
         background-color: #1a6d99;
       }
-
-      /*add respnsive for small screen*/
-      @media screen and (max-width:768px){
-        .card-container {
-        flex-direction: column;       
-        width: 90%;                      
-        margin: auto;                   
-        padding: 10px;                  
-        }
-      }
     </style>
   </head>
   <body>
@@ -138,9 +148,27 @@
     <br>
     <h1>Top Hotels in Bali</h1>
 
+        <!-- Search Bar -->
+        <div class="top-container">
+          <div class="search-container">
+            <label for="search">Search for hotels:</label>
+            <input type="search" id="search" placeholder="Search for a hotel..." />
+          </div>
+    
+          <div class="sort-container">
+            <label for="sort">Sort by Price:</label>
+            <select id="sort" name="sort">
+              <option value="featured">Featured</option>
+              <option value="low-to-high">Low to High</option>
+              <option value="high-to-low">High to Low</option>
+            </select>
+          </div>
+        </div>
+    
+        <!-- Hotels -->
     <div class="container">
         <div class="card-container">
-            <div class="hotel-card" id="card-1">
+            <div class="hotel-card">
               <img
                 src="https://thehoneydreamers.com/wp-content/uploads/2022/01/IMG_8449-2-819x1024.jpg"
                 alt="The Mulia, Nusa Dua, Bali"
@@ -150,7 +178,7 @@
               <p>Price per night: ₹25,990</p>
               <button class="book-button">Book Now</button>
             </div>
-            <div class="hotel-card" id="card-2">
+            <div class="hotel-card">
               <img
                 src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="The Laguna, a Luxury Collection Resort & Spa, Nusa Dua, Bali"
@@ -160,7 +188,7 @@
               <p>Price per night: ₹30,990</p>
               <button class="book-button">Book Now</button>
             </div>
-            <div class="hotel-card" id="card-3">
+            <div class="hotel-card">
               <img
                 src="https://www.travoh.com/wp-content/uploads/2021/12/003-The-Ritz-Carlton-Bali-Nusa-Dua-Hotel-Bali-Indonesia-Resort-Overhead-Aerial-View-e1640582829539.jpg"
                 alt="The Ritz-Carlton, Bali"
@@ -173,7 +201,7 @@
           </div>
 
       <div class="card-container">
-        <div class="hotel-card" id="card-4">
+        <div class="hotel-card">
           <img
             src="https://images.pexels.com/photos/19137452/pexels-photo-19137452/free-photo-of-aerial-view-of-four-seasons-resort-bali-at-sayan-in-indonesia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="Four Seasons Resort Bali at Jimbaran Bay"
@@ -183,7 +211,7 @@
           <p>Price per night: ₹40,990</p>
           <button class="book-button">Book Now</button>
         </div>
-        <div class="hotel-card" id="card-5">
+        <div class="hotel-card">
           <img
             src="https://d2mo2a5fvrklap.cloudfront.net/app/uploads/sites/3/2024/08/02165721/DPSAS-P0149-Woman-At-Infinity-Pool-900x1125-1.jpg"
             alt="Alila Seminyak, Bali"
@@ -193,7 +221,7 @@
           <p>Price per night: ₹28,990</p>
           <button class="book-button">Book Now</button>
         </div>
-        <div class="hotel-card" id="card-6">
+        <div class="hotel-card">
           <img
             src="https://laurenslighthouse.com/wp-content/uploads/2023/04/R5__0797.jpg"
             alt="The Oberoi, Bali"
@@ -206,7 +234,7 @@
       </div>
 
       <div class="card-container">
-        <div class="hotel-card" id="card-7">
+        <div class="hotel-card">
             <img
               src="https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/631ebc420ec05.jpg/1512x1512/fit/80/2231c8e87c596e02c97e9d15cfa6a019.jpg"
               alt="COMO Uma Ubud, Bali"
@@ -216,31 +244,109 @@
             <p>Price per night: ₹22,990</p>
             <button class="book-button">Book Now</button>
           </div>
-          <div class="hotel-card" id="card-8">
+          <div class="hotel-card">
             <img
               src="https://hautegrandeur.com/hotels/wp-content/uploads/2020/02/The-Griya-Villas-and-Spa-4.jpg"
               alt="The Griya Villas and Spa, Bali"
               class="hotel-image"
-              style="width:100%;height: 600px;"
             />
             <h2>The Griya Villas and Spa</h2>
             <p>Price per night: ₹25,990</p>
             <button class="book-button">Book Now</button>
           </div>
-          <div class="hotel-card" id="card-9">
+          <div class="hotel-card">
             <img
               src="https://www.theanvayabali.com/wp-content/uploads/2023/03/Sands-Deck-1440x960-1.jpg"
               alt="The Anvaya Beach Resorts, Bali"
               class="hotel-image"
-              style="width:100%;height: 600px;"
             />
             <h2>The Anvaya Beach Resorts</h2>
             <p>Price per night: ₹38,990</p>
             <button class="book-button">Book Now</button>
           </div>
           </div>
-          
       </div>
     </div>
+
+    <!-- Sorting Script -->
+    <script>
+      
+      const hotelCards = document.querySelectorAll(".hotel-card");
+      const sortSelect = document.getElementById("sort");
+      const searchInput = document.getElementById("search");
+
+      // Function to filter hotel cards based on search input
+      function filterHotels() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const matchedHotels = []; // Array to store matched hotel cards
+
+        hotelCards.forEach((hotelCard) => {
+          const hotelName = hotelCard
+            .querySelector("h2")
+            .textContent.toLowerCase();
+          if (hotelName.includes(searchTerm)) {
+            matchedHotels.push(hotelCard); // Add matching hotel card to the array
+          }
+        });
+
+        // Clear the card container
+        const cardContainer = document.querySelector(".card-container");
+        cardContainer.innerHTML = "";
+
+        // Append matched hotels to the card container in rows of three
+        matchedHotels.forEach((hotelCard) => {
+          cardContainer.appendChild(hotelCard);
+        });
+      }
+      // Add event listener to search input
+      searchInput.addEventListener("input", filterHotels);
+
+      sortSelect.addEventListener("change", () => {
+        const sortBy = sortSelect.value;
+        let sortedHotels;
+
+        if (sortBy === "featured") {
+          window.location.reload(true);
+          return false;
+        }
+
+        if (sortBy === "low-to-high") {
+          sortedHotels = [...hotelCards].sort((a, b) => {
+            const priceA = parseInt(
+              a
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            const priceB = parseInt(
+              b
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            return priceA - priceB;
+          });
+        } else if (sortBy === "high-to-low") {
+          sortedHotels = [...hotelCards].sort((a, b) => {
+            const priceA = parseInt(
+              a
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            const priceB = parseInt(
+              b
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            return priceB - priceA;
+          });
+        }
+
+        const cardContainer = document.querySelector(".card-container");
+        cardContainer.innerHTML = "";
+
+        sortedHotels.forEach((hotelCard) => {
+          cardContainer.appendChild(hotelCard);
+        });
+      });
+    </script>
   </body>
 </html>
