@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bali Travel - Hotels</title>
+    <title>Switzerland Travel - Hotels</title>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/popup.css">
@@ -38,7 +38,7 @@
         width: 100%;
         height: 300px;
         object-fit: cover;
-        background-image: url('https://images.pexels.com/photos/29120351/pexels-photo-29120351/free-photo-of-stunning-coastal-cliffs-in-nusa-penida.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-image: url('https://images.pexels.com/photos/2026454/pexels-photo-2026454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
         background-position: bottom;
       }
 
@@ -56,16 +56,18 @@
         flex-direction: column;
         align-items: center;
         margin: auto;
-        width: 100%;
+        width: 100vw;
       }
 
       .card-container {
         display: flex;
         flex-direction: row;
+        width: 100vw;
+        height: 590px;
         align-items: center;
-        justify-content: space-evenly;
         margin: auto;
-        width: 100%;
+        margin-left: 100px;
+        margin-bottom: 50px;
       }
 
       h1 {
@@ -118,128 +120,114 @@
       .book-button:hover {
         background-color: #1a6d99;
       }
-
-      /*add respnsive for small screen*/
-      @media screen and (max-width:768px){
-        .card-container {
-        flex-direction: column;       
-        width: 90%;                      
-        margin: auto;                   
-        padding: 10px;                  
-        }
-      }
     </style>
   </head>
   <body>
     <div class="main-image">
-        <h1 class="main-heading">Bali</h1>
+        <h1 class="main-heading">Switzerland</h1>
     </div>
     <br>
     <br>
-    <h1>Top Hotels in Bali</h1>
+    <h1>Top Hotels in Switzerland</h1>
 
     <div class="container">
         <div class="card-container">
-            <div class="hotel-card" id="card-1">
+            <div class="hotel-card">
               <img
-                src="https://thehoneydreamers.com/wp-content/uploads/2022/01/IMG_8449-2-819x1024.jpg"
-                alt="The Mulia, Nusa Dua, Bali"
+                src="https://static-new.lhw.com/HotelImages/Final/LW1626/lw1626_181060942_720x450.jpg"
+                alt="Baur au Lac, Zurich"
                 class="hotel-image"
               />
-              <h2>The Mulia, Nusa Dua, Bali</h2>
-              <p>Price per night: ₹25,990</p>
+              <h2>Baur au Lac, Zurich</h2>
+              <p>Price per night: ₹60,990</p>
               <button class="book-button">Book Now</button>
             </div>
-            <div class="hotel-card" id="card-2">
+            <div class="hotel-card">
               <img
-                src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="The Laguna, a Luxury Collection Resort & Spa, Nusa Dua, Bali"
+                src="https://www.thedoldergrand.com/app/uploads/2020/09/HIBR_D_00198588_send-scaled.jpg"
+                alt="The Dolder Grand, Zurich"
                 class="hotel-image"
               />
-              <h2>The Laguna</h2>
-              <p>Price per night: ₹30,990</p>
+              <h2>The Dolder Grand, Zurich</h2>
+              <p>Price per night: ₹65,990</p>
               <button class="book-button">Book Now</button>
             </div>
-            <div class="hotel-card" id="card-3">
+            <div class="hotel-card">
               <img
-                src="https://www.travoh.com/wp-content/uploads/2021/12/003-The-Ritz-Carlton-Bali-Nusa-Dua-Hotel-Bali-Indonesia-Resort-Overhead-Aerial-View-e1640582829539.jpg"
-                alt="The Ritz-Carlton, Bali"
+                src="https://www.lestroisrois.com/imagegen/960/media/465404/grand-hotel-les-trois-rois.jpg"
+                alt="Grand Hotel Les Trois Rois, Basel"
                 class="hotel-image"
               />
-              <h2>The Ritz-Carlton, Bali</h2>
-              <p>Price per night: ₹35,990</p>
+              <h2>Grand Hotel Les Trois Rois</h2>
+              <p>Price per night: ₹70,990</p>
               <button class="book-button">Book Now</button>
             </div>
           </div>
 
       <div class="card-container">
-        <div class="hotel-card" id="card-4">
+        <div class="hotel-card">
           <img
-            src="https://images.pexels.com/photos/19137452/pexels-photo-19137452/free-photo-of-aerial-view-of-four-seasons-resort-bali-at-sayan-in-indonesia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Four Seasons Resort Bali at Jimbaran Bay"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/352145450.jpg?k=fb0cf508198189d5b5668033541c5ca979319568ddac2876d52059aaf2f2d600&o=&hp=1"
+            alt="Hotel Eden Roc, Ascona"
             class="hotel-image"
           />
-          <h2>Four Seasons Resort Bali</h2>
-          <p>Price per night: ₹40,990</p>
+          <h2>Hotel Eden Roc, Ascona</h2>
+          <p>Price per night: ₹75,990</p>
           <button class="book-button">Book Now</button>
         </div>
-        <div class="hotel-card" id="card-5">
+        <div class="hotel-card">
           <img
-            src="https://d2mo2a5fvrklap.cloudfront.net/app/uploads/sites/3/2024/08/02165721/DPSAS-P0149-Woman-At-Infinity-Pool-900x1125-1.jpg"
-            alt="Alila Seminyak, Bali"
+            src="https://www.zermatterhof.ch/wp-content/uploads/2022/02/hotel-with-plaza.jpg.webp"
+            alt="Grand Hotel Zermatterhof, Zermatt"
             class="hotel-image"
           />
-          <h2>Alila Seminyak, Bali</h2>
-          <p>Price per night: ₹28,990</p>
+          <h2>Grand Hotel Zermatterhof</h2>
+          <p>Price per night: ₹80,990</p>
           <button class="book-button">Book Now</button>
         </div>
-        <div class="hotel-card" id="card-6">
+        <div class="hotel-card">
           <img
-            src="https://laurenslighthouse.com/wp-content/uploads/2023/04/R5__0797.jpg"
-            alt="The Oberoi, Bali"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/28531625.jpg?k=bf8603c957cf1f74594c14915de413a68db92b4508f7a52fe73d73f49a698195&o=&hp=1"
+            alt="The Omnia, Zermatt"
             class="hotel-image"
           />
-          <h2>The Oberoi, Bali</h2>
-          <p>Price per night: ₹32,990</p>
+          <h2>The Omnia, Zermatt</h2>
+          <p>Price per night: ₹85,990</p>
           <button class="book-button">Book Now</button>
         </div>
       </div>
-
       <div class="card-container">
-        <div class="hotel-card" id="card-7">
+        <div class="hotel-card">
             <img
-              src="https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/631ebc420ec05.jpg/1512x1512/fit/80/2231c8e87c596e02c97e9d15cfa6a019.jpg"
-              alt="COMO Uma Ubud, Bali"
+              src="https://static.prod.r53.tablethotels.com/media/hotels/slideshow_images_staged/large/1183264.jpg"
+              alt="Hotel Villa Honegg, Interlaken"
               class="hotel-image"
             />
-            <h2>COMO Uma Ubud, Bali</h2>
-            <p>Price per night: ₹22,990</p>
+            <h2>Hotel Villa Honegg</h2>
+            <p>Price per night: ₹55,990</p>
             <button class="book-button">Book Now</button>
           </div>
-          <div class="hotel-card" id="card-8">
+          <div class="hotel-card">
             <img
-              src="https://hautegrandeur.com/hotels/wp-content/uploads/2020/02/The-Griya-Villas-and-Spa-4.jpg"
-              alt="The Griya Villas and Spa, Bali"
+              src="https://www.victoria-jungfrau.ch/wp-content/uploads/2021/06/vj_aussen_sommer_03-2.jpg"
+              alt="Grand Hotel Victoria-Jungfrau, Interlaken"
               class="hotel-image"
-              style="width:100%;height: 600px;"
             />
-            <h2>The Griya Villas and Spa</h2>
-            <p>Price per night: ₹25,990</p>
+            <h2>Hotel Victoria-Jungfrau</h2>
+            <p>Price per night: ₹60,990</p>
             <button class="book-button">Book Now</button>
           </div>
-          <div class="hotel-card" id="card-9">
+          <div class="hotel-card">
             <img
-              src="https://www.theanvayabali.com/wp-content/uploads/2023/03/Sands-Deck-1440x960-1.jpg"
-              alt="The Anvaya Beach Resorts, Bali"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/67238818.jpg?k=1367e3860e357fdd67776c5e7cbbdcfcda79dc9428f065bf67b8d1510a700b83&o=&hp=1"
+              alt="Hotel Suisse, Geneva"
               class="hotel-image"
-              style="width:100%;height: 600px;"
             />
-            <h2>The Anvaya Beach Resorts</h2>
-            <p>Price per night: ₹38,990</p>
+            <h2>Hotel Suisse, Geneva</h2>
+            <p>Price per night: ₹65,990</p>
             <button class="book-button">Book Now</button>
           </div>
           </div>
-          
       </div>
     </div>
   </body>

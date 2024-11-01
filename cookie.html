@@ -248,7 +248,21 @@
             }
         }
     </style>
-</head>
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
 <body>
     <header>
         <div class="nav-container">
@@ -343,13 +357,40 @@
         </div>
     </div>
 
-    <script>
+<script>
         const modeToggle = document.getElementById('modeToggle');
         const body = document.body;
-
+        
         modeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
         });
+
+        // Circle animation script
+        const circles = Array.from({ length: 5 }, () => {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            document.body.appendChild(circle);
+            return circle;
+        });
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        const animateCircles = () => {
+            circles.forEach((circle, i) => {
+                setTimeout(() => {
+                    circle.style.left = `${mouseX}px`;
+                    circle.style.top = `${mouseY}px`;
+                }, i * 50);
+            });
+            requestAnimationFrame(animateCircles);
+        };
+        animateCircles();
     </script>
 </body>
 </html>
