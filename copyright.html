@@ -6,14 +6,33 @@
     <title>Copyright Page</title>
     <link rel="stylesheet" href="copyright.css" />
      <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+<head>
+<style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
+
+ 
+     
   </head>
    <style>
     * {
@@ -123,7 +142,9 @@
     }
 
     @media (max-width: 768px) {
+
       .Table-container {
+
         flex-direction: column;
       }
 
@@ -323,9 +344,79 @@
         <!-- Contact Us Section -->
         <div class="footer-column">
           <h3>Contact Us</h3>
+
           <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
           <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-        </div>
+    </div>
+ 
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
 
         <!-- Follow Us Section -->
         <div class="footer-column">
@@ -399,51 +490,45 @@
       const sunIcon = document.querySelector(".sun-icon");
       const moonIcon = document.querySelector(".moon-icon");
 
-      const currentTheme = localStorage.getItem("theme") || "light";
-      if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-      }
+ 
+            modeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+                const isDarkMode = document.body.classList.contains("dark-mode");
 
-      modeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        const isDarkMode = document.body.classList.contains("dark-mode");
+                if (isDarkMode) {
+                    sunIcon.style.display = "none";
+                    moonIcon.style.display = "inline-block";
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    sunIcon.style.display = "inline-block";
+                    moonIcon.style.display = "none";
+                    localStorage.setItem("theme", "light");
+                }
+            });
 
-        if (isDarkMode) {
-          sunIcon.style.display = "none";
-          moonIcon.style.display = "inline-block";
-          localStorage.setItem("theme", "dark");
-        } else {
-          sunIcon.style.display = "inline-block";
-          moonIcon.style.display = "none";
-          localStorage.setItem("theme", "light");
-        }
-      });
+            // Scroll animations
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1
+                }
+            );
 
-      // Scroll animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        {
-          threshold: 0.1
-        }
-      );
-
-      document.querySelectorAll('h2, p, ul').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-        el.style.transition = "all 0.6s ease";
-        observer.observe(el);
-      });
-    });
-  </script>
+            document.querySelectorAll('h2, p, ul').forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(20px)";
+                el.style.transition = "all 0.6s ease";
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
 

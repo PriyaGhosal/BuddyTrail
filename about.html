@@ -9,6 +9,9 @@
       rel="icon"
       href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000"
     />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="icon" href="/icons/airplane.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -21,13 +24,27 @@
       referrerpolicy="no-referrer"
     />
   </head>
+  <style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    
   <body>
     <header class="main-head">
       <nav>
         <div class="logo">
           <img src="img/logo.png" id="logo-web" />
           <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
-        </div>
 
         <!-- Hamburger button for mobile -->
         <button class="hamburger" id="hamburger">☰</button>
@@ -280,33 +297,8 @@
         });
 
     </script>
-    <script>
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.getElementById("nav-list");
-    const closeBtn = document.getElementById("closeBtn");
-    const mainHead = document.querySelector('.main-head'); // Selecting the header
-
-    // Hamburger menu functionality
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-
-    closeBtn.addEventListener("click", function () {
-      navList.classList.remove("active");
-    });
-
-    // Scroll event to handle header transparency
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) { // If scrolled more than 50px
-        mainHead.classList.add("shadow");
-      } else {
-        mainHead.classList.remove("shadow");
-      }
-    });
-  })
-
+ 
 </script>
      <script>
         const logo = document.getElementById("logo-web");
@@ -319,6 +311,683 @@
             logo.style.transform = "rotateY(0) scale(1)";
         });
     </script>
-  </body>
-</html>
+    <section class="about">
+        <div class="container">
+            <h1>About BuddyTrail</h1>
 
+            <p>Welcome to BuddyTrail, where we turn your travel dreams into reality. We provide exceptional travel
+                planning, hotel accommodations, and vacation packages, ensuring every aspect of your trip is hassle-free
+                and enjoyable. From luxurious getaways to budget-friendly vacations, we offer tailored services that
+                meet your unique travel preferences.</p>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <div class="container" id="container-Core-values">
+            <h2>Our Core Values</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We are committed to ensuring that every client receives the best possible travel experience with
+                        personalized service and attention to detail.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Transparency</h3>
+                    <p>Honesty is at the heart of everything we do. We provide clear, upfront pricing with no hidden
+                        fees, ensuring you know exactly what you're paying for.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Reliability</h3>
+                    <p>We offer trusted services with a dedicated support team available 24/7 to assist you during your
+                        travels.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Innovation</h3>
+                    <p>We continuously update our services with the latest travel trends and technology, offering our
+                        clients a modern and seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div id="team-members" class="team-members">
+                <div class="team-member">
+                    <img src="img/PROJECT-LEADER.png" alt="Team Member 1">
+                    <h3>PRIYA Ghosal</h3>
+                    <p>CEO & Founder</p>
+                    <P>I'm Priya Ghosal, a sophomore at NSEC (IT) '27, embarking on an exciting journey in the world of
+                        technology and coding.
+                    </P>
+                </div>
+                <div class="team-description">
+                    <p style="color: rgb(79, 78, 78);"> Behind BuddyTrail is a diverse team of travel enthusiasts, tech
+                        innovators, and customer experience experts.
+                        United by our love for exploration and commitment to excellence, we work tirelessly to ensure
+                        your journey with
+                        us is seamless, inspiring, and unforgettable.</p>
+                    <div class="align1">
+                        <a href="team.html" id="cta-button">The BuddyTrail Team</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <style>
+        /* Global Styles */
+
+        /* CTA Button */
+
+        .align1 {
+            width: 255px;
+            height: 50px;
+            display: flex;
+            align-self: flex-end;
+            justify-content: center;
+            margin: 56px auto 56px;
+
+        }
+
+        #cta-button {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            /* Adjust padding for button size */
+            background-color: #000;
+            /* Background color black */
+            color: #fff;
+            /* Text color white */
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            /* Rounded corners */
+            width: 250px;
+            /* Fixed width */
+            height: 45px;
+            /* Fixed height */
+            line-height: 35px;
+            /* Vertically center text */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover Effect */
+        #cta-button:hover {
+            background-color: #333;
+            /* Darker black on hover */
+            transform: scale(1.05);
+            /* Slightly enlarge button */
+        }
+
+        .team-description {
+
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            background-color: #eef5f9;
+            border-radius: 10px;
+            padding: auto;
+            width: 680px;
+            height: 23rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+            border: 2px solid transparent;
+
+        }
+
+        .team-description:hover {
+            background: linear-gradient(45deg, #ff66b2, #c0c0c0);
+            /* Pink-silver gradient */
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #007BFF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            transition: color 0.4s ease;
+        }
+
+        .about h1 {
+            font-size: 36px;
+            color: #007BFF;
+            margin-bottom: 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .about h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #007BFF;
+            margin: 10px auto;
+            transition: width 0.3s ease;
+        }
+
+        .about:hover h1 {
+            color: #0056b3;
+        }
+
+        .about:hover h1::after {
+            width: 120px;
+        }
+
+        .about:hover p {
+            color: #333;
+        }
+
+        /* Core Values Section */
+        .core-values {
+            background-color: #eef5f9;
+            padding: 40px 0;
+        }
+
+        .core-values h2 {
+            margin-top: -1rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007BFF;
+            font-size: 32px;
+            transition: color 0.3s ease;
+        }
+
+        .core-values h2:hover {
+            color: #0056b3;
+        }
+
+        .core-values .values {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .core-values .value-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            width: 45%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .core-values .value-item:hover {
+            background: rgb(83, 180, 215);
+            background: linear-gradient(0deg, rgba(83, 180, 215, 1) 15%, rgba(28, 103, 130, 1) 75%);
+            /* Pink-silver gradient */
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #7ac9a6;
+        }
+
+        .core-values .value-item h3 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .core-values .value-item:hover h3 {
+            background: #ffffff;
+            background: linear-gradient(to right, #C7C7C7 0%, #CED9D3 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Text color changes to white on hover */
+        }
+
+        .core-values .value-item p {
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .core-values .value-item:hover p {
+            color: #f0f0f0;
+            /* Subtle text color change on hover */
+        }
+
+        /* Team Section */
+        .team {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .team h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: -2rem;
+            font-size: 32px;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        .team h2:hover {
+            color: #0056b3;
+        }
+
+        .team .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+
+        .team .team-member {
+            background-color: #eef5f9;
+            padding: 30px;
+            border-radius: 10px;
+            width: 57%;
+            text-align: center;
+            margin: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .team .team-member:hover {
+            background: rgb(83, 180, 215);
+            background: linear-gradient(0deg, rgba(83, 180, 215, 1) 15%, rgba(28, 103, 130, 1) 75%);
+            /* Pink-silver gradient */
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #007BFF;
+        }
+
+        .team .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.4s ease, border 0.3s ease;
+            border: 4px solid #fff;
+        }
+
+        .team .team-member:hover img {
+            transform: scale(1.1);
+            border: 4px solid #007BFF;
+        }
+
+        .team .team-member h3 {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        .team .team-member:hover h3 {
+            color: #fff;
+            /* Text color changes to white on hover */
+        }
+
+        .team .team-member p {
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .team .team-member:hover p {
+            color: #f0f0f0;
+            /* Subtle text color change on hover */
+        }
+
+        /* Button Styling (If you use any) */
+        button {
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: #fff;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            border-color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .core-values .value-item,
+            .team .team-member {
+                width: 100%;
+            }
+        }
+
+        /* Team Description Paragraph */
+        .team-description p {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            max-width: 900px;
+            margin: 40px auto;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+            cursor: pointer;
+        }
+
+        .team-description p:hover {
+            color: #9000ff;
+            /* Change text color on hover */
+
+        }
+
+ 
+        .hover-color {
+            transition: color 0.3s ease;
+            /* Smooth transition for color change */
+        }
+
+        .hover-color:hover {
+            color: rgb(199, 59, 159);
+            /* Change color on hover */
+
+        /* Navbar style */
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: whitesmoke;
+            /* Adjust the color as needed */
+            padding: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            /* Adjust based on padding */
+            width: 100%;
+            height: 2px;
+            /* Thickness of the underline */
+            background-color: #007BFF;
+            /* Adjust underline color */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #007BFF;
+            /* Change text color on hover, if desired */
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+ 
+        }
+    </style>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <style>
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        #scrollToTopBtn i {
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #scrollToTopBtn:hover i {
+            transform: translate(-50%, -50%) translateY(-3px);
+        }
+    </style>
+
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Show button when user scrolls down 300px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top when button is clicked
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-column">
+          <!-- <h3>About Us</h3> -->
+          <div class="logo-right">
+            <div class="logo">
+              <img src="img/logo.png" id="logo-web" />
+              <h1 id="logo"><a href="index.html">BuddyTrail</a></h1>
+            </div>
+          </div>
+          <p>
+            123 Fake Street Near XYZ Mall, Sample City Fake State, PIN 12345,
+            India
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html" class="faq-link">FAQs</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="servicespage.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links Section -->
+        <div class="footer-column">
+          <h3>Legal Links</h3>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="cookie_policy.html">Cookie Policy</a></li>
+            <li><a href="terms_of_service.html">Terms of Service</a></li>
+            <li><a href="copyright.html">Copyright Notice</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p class="para">
+            Email: <a href="mailto:info@example.com">info@example.com</a>
+          </p>
+          <p class="para">Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-column newsletter" id="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscription-message"></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
+      </div>
+    </footer>
+
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
+
+</body>
+<html>

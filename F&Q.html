@@ -31,7 +31,21 @@
     <link rel="stylesheet" href="chatbot.css" />
     <title>BuddyTrail</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  </head>
+  <style>
+          /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style>  
+    </head>
   <body>
     <header class="main-head">
       <div class="logo">
@@ -304,7 +318,76 @@ goTopBtn.style.display="flex"
     })
   })
 </script>
- <div class="gtranslate_wrapper"></div>
+
+  
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<script>
+    // coordinates for the cursor :
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // update the coordinates when the mouse moves:
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
+
+    // animation function to move the circles:
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+       
+
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+    
+    animateCircles();
+  </script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",
@@ -331,48 +414,56 @@ goTopBtn.style.display="flex"
           navList.classList.remove("active");
         });
       });
-  
-     document.addEventListener("DOMContentLoaded", function() {
-       const modeToggle = document.getElementById("modeToggle");
-       const sunIcon = document.querySelector(".sun-icon");
-       const moonIcon = document.querySelector(".moon-icon");
-  
-       // Check saved theme in localStorage and apply it
-       const currentTheme = localStorage.getItem("theme") || "light";
-        if (currentTheme === "dark") {
-          document.body.classList.add("dark-mode");
-          sunIcon.style.display = "none";
-          moonIcon.style.display = "inline-block";
-       } else {
-          sunIcon.style.display = "inline-block";
-          moonIcon.style.display = "none";
-      }
-  
-  // Toggle between light and dark mode on button click
-  modeToggle.addEventListener("click", () => {
-      const isDarkMode = document.body.classList.toggle("dark-mode");
-  
-      // Apply dark mode styles to relevant sections
-      const sections = document.querySelectorAll('.about, .core-values, .team');
-      sections.forEach(section => {
-          if (isDarkMode) {
-              section.classList.add('dark-mode');
-          } else {
-              section.classList.remove('dark-mode');
-          }
-      });
-  
-      // Update icons and local storage
-      if (isDarkMode) {
-          sunIcon.style.display = "none";
-          moonIcon.style.display = "inline-block";
-          localStorage.setItem("theme", "dark");
-      } else {
-          sunIcon.style.display = "inline-block";
-          moonIcon.style.display = "none";
-          localStorage.setItem("theme", "light");
-      }
+ 
+
+   document.addEventListener("DOMContentLoaded", function() {
+     const modeToggle = document.getElementById("modeToggle");
+     const sunIcon = document.querySelector(".sun-icon");
+     const moonIcon = document.querySelector(".moon-icon");
+
+     // Check saved theme in localStorage and apply it
+     const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+
+     } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+    }
+
+// Toggle between light and dark mode on button click
+modeToggle.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+
+    // Apply dark mode styles to relevant sections
+    const sections = document.querySelectorAll('.about, .core-values, .team');
+    sections.forEach(section => {
+        if (isDarkMode) {
+            section.classList.add('dark-mode');
+        } else {
+            section.classList.remove('dark-mode');
+        }
+    });
+
+    // Update icons and local storage
+    if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+        document.getElementById("clipart-img1").style.visibility = "hidden";
+        document.getElementById("clipart-img2").style.visibility = "hidden";
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+        document.getElementById("clipart-img1").style.visibility = "visible";
+        document.getElementById("clipart-img2").style.visibility = "visible";
+    }
   });
-  });
-  </body>
+});
+  </script>
+
+</body>
 </html>
