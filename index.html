@@ -571,12 +571,13 @@
 
 <!-- Pop up HTML Starts Here -->
  <!-- Pop-up for BuddyTrail -->
-<div id="popup" class="popup">
+<div id="popup" class="popup"> 
   <div id="popup-content">
-      <div class="popup-left">
+    <div class="popup-left">
           <img if="popupimage" src="./img/popup1.jpg" alt="Travel Image">
       </div>
-      <div class="popup-right">
+      <div class="popup-right">   
+        <button id="cross-btn" class="cross-btn">&times;</button>
           <h1>Ready for Your Next Adventure?</h1>
           <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
           <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
@@ -589,6 +590,12 @@
       </div>
   </div>
 </div>
+<script>
+  document.getElementById("cross-btn").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+});
+
+</script>
 <!-- Pop up HTML ends Here -->
 
 <!-- JS to handle hamburger and close button -->
@@ -3166,6 +3173,7 @@ textarea.form-control {
       }
 
       .popup-content {
+        position: relative;
         background-color: white;
         padding: 20px;
         border-radius: 5px;
