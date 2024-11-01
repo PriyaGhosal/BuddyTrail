@@ -1,9 +1,8 @@
 const ContactUs = require("../models/ContactUs");
-
 const FeedbackModal = require("../models/Feedback");
-
 const nodemailer = require("nodemailer");
 
+// Submit Contact Form
 exports.submitContactForm = async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -11,7 +10,6 @@ exports.submitContactForm = async (req, res) => {
     const newContact = new ContactUs({ name, email, message });
     await newContact.save();
     return res.status(201).json({ message: "Message sent successfully!" });
-
   } catch (error) {
     console.error("Error saving contact form:", error);
     return res
@@ -20,15 +18,19 @@ exports.submitContactForm = async (req, res) => {
   }
 };
 
+// User Feedback
 exports.userfeedback = async (req, res) => {
   try {
     const { Name, Destination, Rating, Review, Complaint } = req.body;
+
+    // Check if all required fields are provided
     if (!Name || !Destination || !Rating || !Review) {
-      return res.status(400).send({
+      return res.status(400).json({
         message: "All fields are required",
       });
     }
-    const response = new FeedbackModal({
+
+    const feedbackData = new FeedbackModal({
       name: Name,
       destination: Destination,
       rating: Rating,
@@ -36,57 +38,50 @@ exports.userfeedback = async (req, res) => {
       complaint: Complaint,
     });
 
-    const feedback = await response.save();
-    if (response) {
-      res.status(201).send({
-        success: true,
-        message: "feedback recorded ",
-        feedback,
-      });
-    }
-  } catch (error) {
-    console.log(error);
-    res.status(500).send({
-      success: false,
-      message: "internal server error ",
+    const feedback = await feedbackData.save();
+    return res.status(201).json({
+      success: true,
+      message: "Feedback recorded",
+      feedback,
     });
-=======
   } catch (error) {
-    console.error("Error saving contact form:", error);
-    return res
-      .status(500)
-      .json({ message: "Failed to send message. Please try again later." });
-
+    console.error("Error saving feedback:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
 
-exports.sendEmail = async (req, resp) => {
+// Send Email
+exports.sendEmail = async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "your email id",
-      pass: "your password",
+      user: "your-email@gmail.com",
+      pass: "your-email-password",
     },
   });
 
   const mailOptions = {
     from: req.body.Email,
-    to: "your email id",
+    to: "your-email@gmail.com",
     subject: "BuddyTrail user message",
     text: `
       Name: ${req.body.Name}
-      Phone:${req.body.Phone}
+      Phone: ${req.body.Phone}
       Email: ${req.body.Email}
-      Message: ${req.body.Message}`,
+      Message: ${req.body.Message}
+    `,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log("Error sending email: " + error);
-      resp.status(500).send("Error sending email");
+      console.error("Error sending email:", error);
+      return res.status(500).send("Error sending email");
     } else {
-      console.log("Email sent: " + info.response);
-      resp.status(200).send("Form data sent successfully");
+      console.log("Email sent:", info.response);
+      return res.status(200).send("Form data sent successfully");
     }
   });
 };
