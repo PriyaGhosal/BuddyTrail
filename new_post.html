@@ -746,6 +746,99 @@
     </div>
 </div>
 
+<style>
+    /* Container Styling */
+.container {
+    max-width: 800px; /* Increase form width */
+    margin: 0 auto;
+    padding: 15px 20px; /* Reduce vertical padding */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin-top: 100px;
+}
+
+/* Title Styling */
+.container h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px; /* Reduce bottom margin */
+    color: #fff;
+}
+
+/* Form Section Backgrounds */
+.container .section {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+    border-radius: 10px;
+    padding: 10px 15px; /* Reduce padding */
+    margin-bottom: 10px; /* Reduce bottom margin */
+}
+
+/* Label Styling */
+.container label {
+    font-weight: bold;
+    color: #2d3748;
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Input and Textarea Styling */
+.container input[type="text"],
+.container textarea,
+.container select {
+    width:500px;
+    padding: 10px; /* Reduce padding */
+    margin-top: 5px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and Focus Effects */
+.container input[type="text"]:focus,
+.container textarea:focus,
+.container select:focus {
+    border-color: #38b2ac;
+    background-color: #e6fffa;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.container button[type="submit"] {
+    width: 100%;
+    padding: 10px; /* Reduce button padding */
+    font-size: 16px;
+    background-color: #b248b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #5255d8;
+    transform: translateY(-2px);
+}
+
+/* Map Embeds Styling */
+.map-container {
+    margin-top: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+</style>
+
+
+
 <script>
         document.getElementById("postForm").addEventListener("submit", function(event) {
         event.preventDefault();

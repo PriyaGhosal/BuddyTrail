@@ -2,6 +2,8 @@
 ```
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── CheckoutHotel.css
+├── CheckoutHotel.html
 ├── Code_of_Conduct.md
 ├── F&Q.html
 ├── LICENSE
@@ -22,16 +24,19 @@
 │   │   └── db.js
 │   ├── controllers
 │   │   ├── ContactController.js
-│   │   └── authController.js
+│   │   ├── authController.js
+│   │   └── ratingController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
+│   │   ├── Rating.js
 │   │   └── User.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
 │   │   ├── ContactRoutes.js
+│   │   ├── RatingRoutes.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
@@ -80,6 +85,7 @@
 ├── gear.html
 ├── goa-resort.css
 ├── goa-resort.html
+├── greece.html
 ├── guide.html
 ├── himachal.css
 ├── himachal.html
@@ -147,6 +153,7 @@
 │   ├── u5.jpg
 │   └── x-logo.png
 ├── index.html
+├── italy.html
 ├── manifest.json
 ├── moon.png
 ├── new_post.html
@@ -178,9 +185,11 @@
 │   └── popup.css
 ├── sustainabeltravel.html
 ├── sustanabletravel.css
+├── switzerland.html
 ├── team.html
 ├── terms.css
 ├── terms_of_service.html
+├── test.html
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
@@ -196,6 +205,7 @@
 ├── update discussion forum
 ├── visi.css
 ├── visi.js
-└── waterfall.mp4
+├── waterfall.mp4
+└── welcome.html
 ```
 <!-- END_STRUCTURE -->

@@ -1,0 +1,226 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8; /* Light background for elegance */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in total width */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Set box-sizing for all elements */
+}
+
+header {
+    background-color: #ffcc00; /* Header background */
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.navhover {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navhover:hover {
+    color: #ff6600; /* Hover color */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.checkout-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    animation: fadeIn 0.5s;
+}
+
+.checkout-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Darker text color for professionalism */
+    font-size: 2.5em; /* Larger heading */
+    font-weight: bold;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Light background for form fields */
+    border-radius: 8px;
+    padding: 15px; /* Padding inside form group */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: box-shadow 0.3s; /* Transition for focus effect */
+}
+
+.form-group:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Full width of the parent container */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em; /* Base font size for inputs */
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border: 1px solid #ff6600; /* Focus border color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5); /* Shadow on focus */
+}
+
+textarea {
+    resize: none; /* Prevent resizing */
+}
+
+/* Payment Options Styles */
+.payment-options {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light background for the payment options section */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.payment-options h2 {
+    margin-bottom: 15px;
+    color: #2c3e50; /* Consistent color for headings */
+    font-size: 1.8em; /* Slightly smaller heading size */
+    text-align: center;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-option input {
+    margin-right: 10px; /* Spacing between input and label */
+}
+
+/* Button styles */
+.btn {
+    background-color: #ff6600; /* Button color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size for buttons */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Added transform transition */
+    margin-top: 20px; /* More spacing above button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.btn:hover {
+    background-color: #e55b00; /* Hover button color */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* More padding for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .checkout-container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        font-size: 16px; /* Slightly smaller button text */
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .checkout-container {
+    background-color: #444;
+    box-shadow: none;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    border: 1px solid #666;
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus,
+body.dark-mode .form-group textarea:focus {
+    border: 1px solid #ff6600; /* Focus color */
+}
