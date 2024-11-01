@@ -321,11 +321,11 @@ a {
 .main-head {
   position: fixed;
   width: 98%;
-  top: 20px;
+  top: 5px;
   left: 1%;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px 0;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
