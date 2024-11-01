@@ -143,29 +143,35 @@
 }  */
 
 .tooltip {
-    visibility: hidden;
-    background-color:  black;
-    color: #fff;
-    width: 200px;
-    text-align: center;
-    padding: 3px;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 1;
-    /* bottom: 30%; Position above the input field */
-    top: 41%;
-    left: 60%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-}
+        visibility: hidden;
+        background-color: black;
+        color: #fff;
+        width: 200px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        top: -25px; /* Adjusts tooltip above input */
+        left: 0; /* Aligns tooltip to the input field */
+        transform: translateY(-100%); /* Ensures smooth positioning */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-.form-group:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
+    .form-group:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+    .form-group {
+        position: relative; /* Ensure .tooltip positions relative to this */
+        margin-bottom: 20px;
+        color: #fff; 
+    }
 
+    .form-group:hover .tooltip {
+        visibility: visible; /* Show on hover */
+        opacity: 1; /* Fade in */
+    }
 
 </style>
 <body>
@@ -202,6 +208,10 @@
             </button>
           </nav>
         </header>
+
+
+        <div id="google_translate_element" style="margin: 20px;"></div>
+        
         
         <section id="contactus">
             <div class="card pb-5 pt-1">
@@ -315,14 +325,22 @@
   </div>
 </footer>
 
-<!-- Scripts -->
 <script>
+
   window.gtranslateSettings = {
-    "default_language": "en",
-    "detect_browser_language": true,
-    "wrapper_selector": ".gtranslate_wrapper"
-  };
-</script>
+    "default_language":"en",
+    "detect_browser_language":true,
+    "wrapper_selector":".gtranslate_wrapper"
+  }
+ 
+  </script>
+ 
+  <script
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+<!-- Load Google Translate Script -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 <script src="./contact.js"></script>
