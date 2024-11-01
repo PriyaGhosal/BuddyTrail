@@ -1,0 +1,129 @@
+/* Loader styling */
+#loader {
+    position: absolute;
+    left: -100%; /* Start off-screen to the left */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #1971b0;
+    font-weight: bold;
+    animation: slideIn 1.5s forwards ease-in-out;
+}
+
+/* Keyframes for left-to-center animation */
+@keyframes slideIn {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Hide loader after animation */
+body.loaded #loader {
+    display: none;
+}
+
+.card {
+    width: 35%;
+    /* height: 50px; */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #3f4ab9;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 6px;
+    
+}
+.card-header h6{
+    color: rgb(214, 224, 232);
+    font-size: 20px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+}
+
+.form-section {
+    width: 100%; /* Full width within the card */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color: #121111;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color:#3f4ab9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d81f7;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+/* Input, Textarea, and Button Hover and Focus Styling */
+input, textarea, button[type="submit"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus and hover */
+}
+
+input:focus, textarea:focus, button[type="submit"]:focus,
+input:hover, textarea:hover, button[type="submit"]:hover {
+    border-color: #3f4ab9; /* Uniform border color on hover and focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(63, 74, 185, 0.5); /* Optional: Add subtle shadow for effect */
+}
+
+
+
+
+
+
