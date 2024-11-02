@@ -383,7 +383,7 @@ body.dark-mode .navbar a:hover {
 <!-- Suggestions/Questions Form Section -->
 <section id="suggestions-form">
     <h2>Suggestions/Questions</h2>
-    <form id="suggestionForm" action="/submit-suggestion" method="POST">
+    <form id="suggestionForm" action="/submit-suggestion" method="POST" onsubmit="return validateForm()">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
@@ -406,6 +406,55 @@ body.dark-mode .navbar a:hover {
   </div>
 </section>
 
+<script>
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+    
+        // Name validation - only letters and spaces
+        const namePattern = /^[A-Za-z\s]+$/;
+        if (!namePattern.test(name)) {
+            alert("Name should contain only letters.");
+            return false;
+        }
+    
+        // Email validation - stricter pattern and additional checks
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    
+        // Split the email into local part and domain part
+        const [localPart, domainPart] = email.split('@');
+        if (!domainPart || localPart.length > 64 || domainPart.length > 255) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    
+        // Ensure domain part has valid format
+        const domainParts = domainPart.split('.');
+        if (domainParts.some(part => part.length > 63)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    
+        // Additional checks for edge cases in the local part
+        if (localPart.startsWith('.') || localPart.endsWith('.') || localPart.includes('..')) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    
+        // Message length validation
+        if (message.length < 10 || message.length > 200) {
+            alert("Message should be between 10 and 200 characters.");
+            return false;
+        }
+    
+        return true; // Form is valid
+    }
+  </script>
 
         <script>
     // Get elements
@@ -416,7 +465,7 @@ body.dark-mode .navbar a:hover {
     // Handle form submission
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
-
+        if(validateForm()){
         // Simulate form submission (you can still process this with AJAX)
         setTimeout(function() {
             // Show the modal
@@ -424,7 +473,7 @@ body.dark-mode .navbar a:hover {
         }, 500);
 
         // Optionally reset form fields
-        event.target.reset();
+        event.target.reset();}
     });
 
     // Close the modal when the user clicks on the close button
