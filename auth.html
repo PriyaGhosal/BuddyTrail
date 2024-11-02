@@ -95,42 +95,39 @@
       </div>
 
       <script>
-      function validateForm() {
-  const password = document.getElementById('signup-password').value;
-  const email = document.getElementById('email').value;
-  const username = document.getElementById('username').value;
+        function validateForm() {
+            const password = document.getElementById('signup-password').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+    
+            // Sign-up validation logic
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+    
+            const hexRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]+$/;
+            if (!hexRegex.test(password)) {
+                alert("Password must contain at least one uppercase letter (A-Z), one number (0-9), and include only letters and numbers.");
+                return false;
+            }
+    
+            if (username.trim() === "") {
+                alert("Please enter a valid username.");
+                return false;
+            }
+    
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+             // Show submission message in a pop-up
+              alert("Sign up successful! Welcome, " + username + "!");
 
-  // Password length validation
-  if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
-    return false;
-  }
-
-  // Password hexadecimal validation
-  const hexRegex = /^[0-9A-Fa-f]+$/;
-  if (!hexRegex.test(password)) {
-    alert("Password must contain only hexadecimal digits (0-9, A-F).");
-    return false;
-  }
-
-  // Validate if username is provided
-  if (username.trim() === "") {
-    alert("Please enter a valid username.");
-    return false;
-  }
-
-  // Validate if email is provided and valid
-  if (!email.includes("@")) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-  // If all validations pass
-  return true;
-}
-
-
-      </script>
+          // clear the form after submission
+            document.querySelector(".sign-up-form").reset();
+        }
+    </script>
 
       <div class="panels-container">
         <div class="panel left-panel">
