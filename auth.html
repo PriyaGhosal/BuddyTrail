@@ -28,7 +28,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
-          <form action="#" class="sign-in-form">
+          <form action="#" class="sign-in-form" onsubmit="return validateSignInForm()">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -127,6 +127,32 @@
           // clear the form after submission
             document.querySelector(".sign-up-form").reset();
         }
+        function validateSignInForm() {
+                const username = document.querySelector('.sign-in-form input[type="text"]').value;
+                const password = document.querySelector('.sign-in-form input[type="password"]').value;
+        
+                // Sign-in validation logic
+                if (username.trim() === "") {
+                    alert("Please enter your username.");
+                    return false;
+                }
+        
+                if (password.trim() === "") {
+                    alert("Please enter your password.");
+                    return false;
+                }
+        
+                // Simulate successful login 
+                alert("You have successfully logged in to the website!");
+        
+                // Redirect to the home screen after a short delay
+                setTimeout(function() {
+                    window.location.href = "index.html"; 
+                }, 2000); // Redirect after 2 seconds
+        
+                // If all validations pass, return true to allow form submission
+                return false; // Prevent form submission since we are handling the redirect
+            };
     </script>
 
       <div class="panels-container">
