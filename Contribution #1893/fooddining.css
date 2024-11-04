@@ -1,0 +1,33 @@
+/* CSS for Food and Dining Recommendations */
+#food-dining {
+    padding: 20px;
+    background: #fff7e6;
+}
+
+.food-guide {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food-type {
+    width: 45%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.food-type img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.food-map {
+    margin-top: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    background: #eee;
+}
