@@ -1076,69 +1076,192 @@
             addEventListeners();
         }
 
-        function viewFullPost(postId) {
-            const posts = getLocalData('blogPosts');
-            const post = posts.find(p => p.id === postId);
-            if (post) {
-                const modal = document.createElement('div');
-                modal.className = 'modal';
-                modal.innerHTML = `
+       
+function sanitizeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+
+function formatDate(dateString) {
+    try {
+        const date = new Date(dateString);
+        return new Intl.DateTimeFormat('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        }).format(date);
+    } catch (error) {
+        console.error('Date formatting error:', error);
+        return dateString;
+    }
+}
+
+function viewFullPost(postId) {
+    try {
+       
+        if (!postId || typeof postId !== 'string') {
+            throw new Error('Invalid post ID');
+        }
+
+        const posts = getLocalData('blogPosts');
+        const post = posts.find(p => p.id === postId);
+        
+        if (!post) {
+            throw new Error('Post not found');
+        }
+
+        
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-labelledby', 'modal-title');
+        modal.setAttribute('aria-modal', 'true');
+
+       
+        modal.innerHTML = `
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>${post.title}</h2>
-                <div class="meta">Posted on ${post.date} by ${post.author}</div>
-                <div class="category">${post.category}</div>
-                <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-                <div class="content">
-                    <p>${marked(post.content)}</p>
+                <div class="modal-header">
+                    <h2 id="modal-title">${sanitizeHTML(post.title)}</h2>
+                    <button class="close" aria-label="Close modal">&times;</button>
                 </div>
-                <div class="comments-section">
-                    <h3>Comments (${post.comments.length})</h3>
-                    <div class="comments">
-                        ${post.comments.map(comment => `
-                            <div class="comment">
-                                <p>${comment.text}</p>
-                                <small>${comment.date}</small>
-                            </div>
-                        `).join('')}
+                <div class="modal-body">
+                    <div class="meta">
+                        Posted on ${formatDate(post.date)} by ${sanitizeHTML(post.author)}
                     </div>
-                    <form class="comment-form" data-post-id="${post.id}">
-                        <textarea placeholder="Add a comment"></textarea>
-                        <button type="submit">Post Comment</button>
-                    </form>
+                    <div class="category" aria-label="Category">
+                        ${sanitizeHTML(post.category)}
+                    </div>
+                    <div class="tags" aria-label="Tags">
+                        ${post.tags.map(tag => 
+                            `<span class="tag">${sanitizeHTML(tag)}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="content">
+                        ${marked(sanitizeHTML(post.content), {
+                            headerIds: false,
+                            breaks: true,
+                            sanitize: true
+                        })}
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments (${post.comments.length})</h3>
+                        <div class="comments">
+                            ${post.comments.map(comment => `
+                                <div class="comment">
+                                    <p>${sanitizeHTML(comment.text)}</p>
+                                    <small>${formatDate(comment.date)}</small>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <form class="comment-form" data-post-id="${sanitizeHTML(post.id)}">
+                            <div class="form-group">
+                                <label for="comment-text">Add a comment:</label>
+                                <textarea 
+                                    id="comment-text" 
+                                    name="comment" 
+                                    required 
+                                    minlength="2"
+                                    maxlength="1000"
+                                    placeholder="Share your thoughts..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Post Comment</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         `;
-                document.body.appendChild(modal);
 
-                // Close modal when clicking on the close button or outside the modal
-                modal.querySelector('.close').addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        document.body.removeChild(modal);
-                    }
-                });
+        
+        document.body.appendChild(modal);
+        modal.querySelector('textarea').focus();
 
-                // Add event listener for comment form in modal
-                modal.querySelector('.comment-form').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
+        
+        const focusableElements = modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+       
+        function closeModal() {
+            document.body.removeChild(modal);
+        }
+
+        
+        modal.querySelector('.close').addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
             }
-        }
+        });
 
-=
-            });
+       
+        modal.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+        });
 
-            addEventListeners();
-        }
+       
+        const commentForm = modal.querySelector('.comment-form');
+        commentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const textarea = e.target.querySelector('textarea');
+            const comment = textarea.value.trim();
+
+            if (!comment) {
+                return;
+            }
+
+            try {
+                await addComment(postId, comment);
+               
+                const updatedPost = getLocalData('blogPosts').find(p => p.id === postId);
+                const commentsContainer = modal.querySelector('.comments');
+                commentsContainer.innerHTML = updatedPost.comments.map(comment => `
+                    <div class="comment">
+                        <p>${sanitizeHTML(comment.text)}</p>
+                        <small>${formatDate(comment.date)}</small>
+                    </div>
+                `).join('');
+                textarea.value = '';
+                
+                
+                modal.querySelector('h3').textContent = `Comments (${updatedPost.comments.length})`;
+            } catch (error) {
+                console.error('Error adding comment:', error);
+                alert('Failed to add comment. Please try again.');
+            }
+        });
+
+    } catch (error) {
+        console.error('Error displaying post:', error);
+        alert('Failed to load post. Please try again.');
+    }
+}
+          
 
         function addEventListeners() {
-            // Add event listeners for read more links
+           
             document.querySelectorAll('.read-more').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -1158,7 +1281,7 @@
                 });
             });
 
-            // Add event listeners for comment forms
+        
             document.querySelectorAll('.comment-form').forEach(form => {
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
