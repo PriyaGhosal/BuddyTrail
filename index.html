@@ -2794,7 +2794,7 @@ textarea.form-control {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
+    <h2 class="testimonials-heading"  >Testimonials</h2>
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2835,6 +2835,100 @@ textarea.form-control {
       </figure></div>
     </div>
   </section>
+
+ <style>
+
+.testimonials-heading {
+    font-size: 3.8rem;
+    margin-bottom: 40px;
+    color: rgba(251, 253, 255, 0.95);
+    font-weight: bold;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.snip1533 {
+    background-color: #ffffff;
+    border-radius: 10%;
+    padding: 25px;
+    max-width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    perspective: 1000px;
+   
+    position: relative;
+}
+
+/* 3D Rotation and Shadow Effects */
+.snip1533:hover {
+ 
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+}
+
+/* Inner Shadow and Text Effect */
+.snip1533::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.snip1533:hover::before {
+    opacity: 1;
+}
+
+/* Text Styling */
+.snip1533 blockquote p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.snip1533 h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #00a894;
+    font-weight: bold;
+}
+
+.snip1533 h4 {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Hover Text Color Effect */
+.snip1533:hover h3 {
+    color: #7a15be;
+}
+
+.snip1533:hover h4 {
+    color: #004d40;
+}
+
+/* Glowing Border Animation */
+.snip1533:hover {
+    border: 2px solid rgba(0, 150, 136, 0.2);
+    box-shadow: 0 0 15px rgba(0, 150, 136, 0.4), 0 0 25px rgba(0, 150, 136, 0.2);
+}
+
+ </style>
+
+
 
   <section id="reviews" class="reviews-section">
     <div class="review">
