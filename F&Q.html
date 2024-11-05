@@ -383,15 +383,15 @@ body.dark-mode .navbar a:hover {
 <!-- Suggestions/Questions Form Section -->
 <section id="suggestions-form">
     <h2>Suggestions/Questions</h2>
-    <form id="suggestionForm" action="/submit-suggestion" method="POST">
+    <form id="suggestionForm" >
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
+        <input type="text" id="name"  required placeholder="Your Name"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
+        <input type="email" id="email" required placeholder="Your Email"><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea><br><br>
+        <textarea id="message" rows="5" required placeholder="Your Message"></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -406,6 +406,38 @@ body.dark-mode .navbar a:hover {
   </div>
 </section>
 
+<script>
+  document.getElementById("suggestionForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  console.log(name,email,message);
+  try {
+    const response = await fetch("http://localhost:5000/api/contact/suggestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Suggestion recorded!");
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Internal server error");
+  }
+});
+
+</script>
 
         <script>
     // Get elements
@@ -455,6 +487,8 @@ goTopBtn.style.display="flex"
     })
   })
 </script>
+
+
 
   
 
@@ -753,6 +787,43 @@ goTopBtn.style.display="flex"
       <div class="footer-column">
         <h3>About Us</h3>
         <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+              <!-- Newsletter Form Section -->
+      <style>
+        .footer-column.newsletter {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #email {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 6px;
+            font-size: 14px;
+            background-color: #007bff;
+        }
+        #subscription-message {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+      <div class="footer-column newsletter" id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-message"></p>
+      </div>
       </div>
   
       <!-- Quick Links Section -->
@@ -789,9 +860,7 @@ goTopBtn.style.display="flex"
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
         <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-      </div>
-  
-      <!-- Follow Us Section -->
+        <!-- Follow Us Section -->
       <div class="footer-column">
         <h3>Follow Us</h3>
         <div class="social-icons">
@@ -801,42 +870,6 @@ goTopBtn.style.display="flex"
           <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-  
-      <!-- Newsletter Form Section -->
-      <style>
-        .footer-column.newsletter {
-            max-width: 300px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        #newsletter-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #email {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button[type="submit"] {
-            width: 100px;
-            padding: 6px;
-            font-size: 14px;
-        }
-        #subscription-message {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-    </style>
-      <div class="footer-column newsletter" id="newsletter">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form id="newsletter-form">
-          <input type="email" id="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p id="subscription-message"></p>
       </div>
     </div>
   
