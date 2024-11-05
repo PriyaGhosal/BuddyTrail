@@ -1340,7 +1340,7 @@ footer {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons .fa-x-twitter:hover {
-  color: black;
+  color:whitesmoke;
   transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
 }
