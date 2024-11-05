@@ -157,6 +157,7 @@
 │   └── x-logo.png
 ├── index.html
 ├── italy.html
+├── kerala.html
 ├── manifest.json
 ├── moon.png
 ├── new_post.html
