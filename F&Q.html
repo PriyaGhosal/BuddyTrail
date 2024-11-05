@@ -100,7 +100,7 @@
       style="
         position: absolute;
         width: 250px;
-        top: 450px;
+        top: 370px;
         right: 1250px;
         mix-blend-mode: multiply;
       "
@@ -156,15 +156,15 @@
 <!-- Suggestions/Questions Form Section -->
 <section id="suggestions-form">
     <h2>Suggestions/Questions</h2>
-    <form id="suggestionForm" action="/submit-suggestion" method="POST">
+    <form id="suggestionForm" >
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <textarea id="message" name="message" rows="5"  placeholder="Your Message" required></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -239,7 +239,6 @@
             ></a>
           </div>
         </div>
-
         <div class="footer-column newsletter" id="newsletter">
           <h3>Subscribe to Our Newsletter</h3>
           <form id="newsletter-form">
@@ -260,7 +259,38 @@
         <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
       </div>
     </footer>
+<script>
+  document.getElementById("suggestionForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  console.log(name,email,message);
+  try {
+    const response = await fetch("http://localhost:5000/api/contact/suggestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Suggestion recorded!");
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Internal server error");
+  }
+});
+
+</script>
       <script>
     // Get elements
     const form = document.getElementById('suggestionForm');
@@ -319,7 +349,6 @@ goTopBtn.style.display="flex"
   })
 </script>
 
-  
 <!-- Circles -->
 <div class="circle"></div>
 <div class="circle"></div>
@@ -414,56 +443,50 @@ goTopBtn.style.display="flex"
           navList.classList.remove("active");
         });
       });
- 
 
-   document.addEventListener("DOMContentLoaded", function() {
-     const modeToggle = document.getElementById("modeToggle");
-     const sunIcon = document.querySelector(".sun-icon");
-     const moonIcon = document.querySelector(".moon-icon");
-
-     // Check saved theme in localStorage and apply it
-     const currentTheme = localStorage.getItem("theme") || "light";
-      if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-
-     } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-    }
-
-// Toggle between light and dark mode on button click
-modeToggle.addEventListener("click", () => {
-    const isDarkMode = document.body.classList.toggle("dark-mode");
-
-    // Apply dark mode styles to relevant sections
-    const sections = document.querySelectorAll('.about, .core-values, .team');
-    sections.forEach(section => {
-        if (isDarkMode) {
-            section.classList.add('dark-mode');
-        } else {
-            section.classList.remove('dark-mode');
-        }
-    });
-
-    // Update icons and local storage
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-        document.getElementById("clipart-img1").style.visibility = "hidden";
-        document.getElementById("clipart-img2").style.visibility = "hidden";
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-        document.getElementById("clipart-img1").style.visibility = "visible";
-        document.getElementById("clipart-img2").style.visibility = "visible";
-    }
+     document.addEventListener("DOMContentLoaded", function() {
+       const modeToggle = document.getElementById("modeToggle");
+       const sunIcon = document.querySelector(".sun-icon");
+       const moonIcon = document.querySelector(".moon-icon");
+  
+       // Check saved theme in localStorage and apply it
+       const currentTheme = localStorage.getItem("theme") || "light";
+        if (currentTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          sunIcon.style.display = "none";
+          moonIcon.style.display = "inline-block";
+       } else {
+          sunIcon.style.display = "inline-block";
+          moonIcon.style.display = "none";
+      }
+  
+  // Toggle between light and dark mode on button click
+  modeToggle.addEventListener("click", () => {
+      const isDarkMode = document.body.classList.toggle("dark-mode");
+  
+      // Apply dark mode styles to relevant sections
+      const sections = document.querySelectorAll('.about, .core-values, .team');
+      sections.forEach(section => {
+          if (isDarkMode) {
+              section.classList.add('dark-mode');
+          } else {
+              section.classList.remove('dark-mode');
+          }
+      });
+  
+      // Update icons and local storage
+      if (isDarkMode) {
+          sunIcon.style.display = "none";
+          moonIcon.style.display = "inline-block";
+          localStorage.setItem("theme", "dark");
+      } else {
+          sunIcon.style.display = "inline-block";
+          moonIcon.style.display = "none";
+          localStorage.setItem("theme", "light");
+      }
   });
-});
-  </script>
-
+  });
+    </script>  
+ 
 </body>
 </html>

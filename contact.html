@@ -23,8 +23,21 @@
       referrerpolicy="no-referrer"
     />
   </head>
+  <style>
+       /* circle styles */
+          .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+          }
+        </style> 
   <body>
-
     <div class="container-fluid">
       <header style="background-color: black; height: 85px">
         <nav style="padding: 5px; width: 90%; margin-left: 20px">
@@ -208,6 +221,7 @@
           <p id="subscription-message"></p>
         </div>
       </div>
+
       <!-- Footer Bottom Section -->
       <div class="footer-bottom">
         <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
@@ -239,6 +253,7 @@
       };
     </script>
 
+   
 <!-- Circles -->
 <div class="circle"></div>
 <div class="circle"></div>

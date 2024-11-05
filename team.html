@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Contributors</title>
     <link rel="stylesheet" href="communityStyle.css">
-    <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">     
-    <link rel="icon" href="/icons/airplane.svg" />
-    <link rel="stylesheet" href="RatingStyle.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=23332&format=png&color=000000">
+         <link rel="stylesheet" href="RatingStyle.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="team.css" />
     <link rel="stylesheet" href="./styles/popup.css">
@@ -26,8 +25,9 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
+
 </head>
-<style>
+  <style>
           /* circle styles */
           .circle {
             height: 24px;
@@ -41,263 +41,6 @@
             z-index: 99999999;
           }
         </style>  
-    </head>
-<style>
-    
-
-body {
-    background-color: #040b21;
-    padding-top: 100px;
-}
-
-h3 {
-    font-size: 36px;
-    margin-top: 20px;
-    border: 2.5px solid gray;
-}
-
-/* Button Styles */
-.home-btn {
-    height: 50px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-}
-
-/* Team Section Styles */
-.team-top {
-    text-align: center;
-}
-
-.team-members {
-    display: flex;
-    gap: 20px;
-    margin-top: 5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-member {
-    text-align: center;
-}
-
-.team-member img {
-    width: 180px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-    border: 4px solid #fff;
-    background-color: #000;
-}
-
-.team-member p {
-    font-size: 13px;
-    font-weight: bold;
-    color: rgb(241, 228, 228);
-}
-
-.team-member img:hover {
-    transform: scale(1.121);
-    border: 0;
-}
-
-.team-member p:nth-child(1) {
-    z-index: 999;
-}
-
-.team-member p:nth-child(2) {
-    border: 2px solid #333;
-    background-color: rgba(255, 255, 255, 0.29);
-    border-radius: 20px;
-    z-index: -1;
-}
-
-/* Flip Box Styles */
-.flip-box {
-    position: relative;
-    perspective: 1000px;
-}
-
-.common-flip-style {
-    width: 250px;
-    height: 250px;
-    cursor: pointer;
-}
-
-.common-box-style {
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-    border-radius: 10px;
-}
-
-.box-front {
-    z-index: 1;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.box-back {
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    transform: rotateY(-180deg);
-    background: #fff;
-    color: red;
-    border: 5px solid orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 50%;
-    padding: 10px;
-    overflow: hidden;
-}
-
-.box-back .box-content {
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.2;
-    font-size: 14px;
-}
-
-.flip-box:hover .box-front {
-    transform: rotateY(180deg);
-}
-
-.flip-box:hover .box-back {
-    transform: rotateY(0);
-}
-
-/* Heading Styles */
-.heading-contributors {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-    padding-bottom: 1px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 0.1px #140000;
-    background: url(img/Premium_Photo_Vibrant_mesh_gradient.jpeg);
-    background-position: 0 0;
-    animation: back 10s linear infinite;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-@keyframes back {
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-/* Navigation Styles */
-.main-head {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    padding: 15px;
-    height: 90px;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: background-color 0.3s ease, height 0.3s ease;
-}
-
-#nav-list {
-    display: flex;
-    gap: 0.3rem;
-    list-style: none;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-#nav-list li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-    white-space: nowrap;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.navhover:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Button Styles */
-button {
-    background-color: #ba5ae0;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
-}
-
-button:hover {
-    background-color: #19181a;
-    color: #e9e8ea;
-    transform: translateY(-3px);
-    border: 2px solid #7f6e60;
-}
-
-/* Mode Toggle Styles */
-.mode-toggle img {
-    width: 30px;
-    height: auto;
-    display: block;
-}
-
-/* Footer Styles */
-.footer-column.newsletter {
-    max-width: 300px;
-    text-align: center;
-}
-
-#newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#email {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
-    width: 100px;
-    padding: 6px;
-    font-size: 14px;
-}
-
-#subscription-message {
-    font-size: 14px;
-    margin-top: 10px;
-}
-
 <body>
     <!-- Header Include -->
      <div class="main-head">
@@ -322,12 +65,10 @@ button[type="submit"] {
           </ul>
       
         <!-- Toggle Button -->
-        <div class="toggle-button">
-          <button class="mode-toggle" id="modeToggle">
+        <button class="mode-toggle" id="modeToggle">
             <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
             <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-          </button>
-        </div>
+        </button>
         </div>
     </div>
     <!-- Sidebar Include -->
@@ -406,7 +147,6 @@ button[type="submit"] {
             <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-
           </div>
         </div>
 
@@ -530,7 +270,7 @@ fetch(apiURL)
         cardbtn.forEach((elem) => elem.style.color = 'black');
         }
     });
-
+    
     </script>
 
   <div class="gtranslate_wrapper"></div>
@@ -543,6 +283,13 @@ fetch(apiURL)
     "wrapper_selector":".gtranslate_wrapper"
   }
 
+  </script>
+
+  <script 
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+<script>
   const goTopBtn= document.querySelector('.go-top-btn');
   window.addEventListener('scroll',checkHeight)
   function checkHeight(){
@@ -559,10 +306,6 @@ goTopBtn.style.display="flex"
     })
   })
   </script>
-  <script 
-    src="https://cdn.gtranslate.net/widgets/latest/float.js"
-    defer
-  ></script>
 
 
 <!-- Circles -->
