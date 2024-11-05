@@ -321,11 +321,11 @@ a {
 .main-head {
   position: fixed;
   width: 98%;
-  top: 20px;
+  top: 5px;
   left: 1%;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px 0;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -1161,16 +1161,13 @@ body {
   color: black;
 }
 
- issue
+
 
 h2 {
-main
-
   font-size:  2.5em;
   font-weight:  700;
   margin:  10px 0; /* Margin adjustment */
-  color:  #007bff;
-
+  color: #007bff;
 }
 
 p {
@@ -1617,7 +1614,7 @@ Light mode styles body.light-mode {
 }
 
 #itineraries {
-  background-color: #f9f9f9; /* Light background */
+  background-color: #e1b7ed; /* Light background */
   border: 1px solid #007bff; /* Blue border */
 }
 
@@ -3057,3 +3054,35 @@ body {
   border-radius: 50%; /* Optional: make it circular */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }
+
+
+
+/* fa form contact-form icon */
+.form-group .form-control{
+  padding-left: 6%;
+}
+.fa-user{
+  position: absolute;
+  left:2.7rem;
+  top:3.50rem;
+  font-size: 14px;
+  color: grey;
+}
+.fa-envelope{
+  position: absolute;
+  left: 2.7rem;
+  top: 3.6rem;
+  font-size: 14px;
+  color: grey;
+}
+.fa-message{
+  position: absolute;
+  left: 2.7rem;
+  top: 3.8rem;
+  font-size: 14px;
+  color: grey;
+}
+.email-padding input[type="email"]{
+  padding-left: 30px; /* get in touch padding for icon*/
+}
+/* fa icon end */
