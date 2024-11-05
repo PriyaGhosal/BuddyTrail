@@ -2585,15 +2585,18 @@ nav.hi ul li.NAVI i:hover  {
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
+                              <i class="fas fa-user"></i>
+                              <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                             </div>
                             <div class="form-group">
-                              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                              <i class="fas fa-envelope"></i>
+                              <input type="email" id="email" class="form-control" placeholder="      Your Email" required>
 
                             </div>
                             <div class="form-group">
+                              <i class="fas fa-message"></i>
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                             </div>
                             <button class="book-btn" type="submit">Send Message</button>
