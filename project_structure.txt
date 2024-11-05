@@ -29,7 +29,8 @@
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
 │   │   ├── Rating.js
-│   │   └── User.js
+│   │   ├── User.js
+│   │   └── suggestion.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
