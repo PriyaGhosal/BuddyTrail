@@ -1,48 +1,33 @@
- // Delay in milliseconds 
- const popupDelay = 15000; 
 
- // Function to show the popup if it hasn't been shown yet in this session
- function showPopupIfNeeded() {
-     if (!sessionStorage.getItem('popupShown')) {
-         // Delay the popup display
-         setTimeout(() => {
-             document.getElementById('popup').style.display = 'flex';
-             sessionStorage.setItem('popupShown', 'true'); // Mark popup as shown
-         }, popupDelay);
-     }
- }
-
-    // Use pageshow to handle page loads and back navigation
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted || performance.getEntriesByType('navigation')[0].type === 'back_forward') {
-            // Detect browser back/forward navigation
-            showPopupIfNeeded();
-        } else {
-            // Handle normal page load
-            showPopupIfNeeded();
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the user has already subscribed
+    if (!localStorage.getItem('subscribed')) {
+      document.getElementById('popup-nl').style.display = 'flex'; // Show the popup immediately
+    }
+  
+    // Close the pop-up when the user clicks the close button
+    document.querySelector('.close-nl').addEventListener('click', function() {
+        document.getElementById('popup-nl').style.display = 'none';
     });
-
-    // Close the pop-up when the user clicks outside of it
-    window.onclick = function(event) {
-        if (event.target === document.getElementById('popup')) {
-            document.getElementById('popup').style.display = 'none';
-        }
-    };
-
+  
     // Handle form submission
-    document.getElementById('emailForm').addEventListener('submit', function(event) {
+    document.getElementById('emailForm-nl').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        const email = document.getElementById('email').value;
+  
+        const email = document.getElementById('email-nl').value;
         if (email) {
-            alert(`Thank you! A 20% discount code has been sent to ${email}`);
-            document.getElementById('popup').style.display = 'none';
+            alert(`Your email ID ${email} has been registered successfully for the newsletter.`);
+            document.getElementById('popup-nl').style.display = 'none'; // Hide the popup
+  
+            // Set the subscribed flag in localStorage
+            localStorage.setItem('subscribed', 'true');
         }
     });
-
-    // Handle "No thanks" button
-    document.getElementById('no-thanks').addEventListener('click', function(event) {
+  
+    // Handle "No thanks" link
+    document.querySelector('.no-thanks-nl').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup-nl').style.display = 'none';
     });
+  });
+  
