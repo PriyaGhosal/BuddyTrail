@@ -441,6 +441,104 @@ button[type="submit"] {
 <div class="footer-column">
   <h3>About Us</h3>
   <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+  <!-- Newsletter Form Section -->
+  <style>
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+        color: #E2E8F0;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+        color: #4C51BF;
+        transform: translateY(-2px);
+    }
+
+/* for facebook */
+.social-icons .fa-discord {
+transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-discord:hover {
+color: #4267b2;
+transform: scale(1.1);
+transform: scale(1.2) translateY(-5px);
+}
+
+/* for twitter */
+.social-icons .fa-x-twitter {
+transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-x-twitter:hover {
+color: black;
+transform: scale(1.1);
+transform: scale(1.2) translateY(-5px);
+}
+/* for instagram */
+.social-icons .fa-github {
+transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-github:hover {
+color: #c32aa3;
+transform: scale(1.1);
+transform: scale(1.2) translateY(-5px);
+}
+
+/* for instagram */
+.social-icons .fa-linkedin-in {
+transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa-linkedin-in:hover {
+color: #0a66c2;
+transform: scale(1.1);
+transform: scale(1.2) translateY(-5px);
+}
+
+    
+    .footer-column.newsletter {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #newsletter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #email {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    button[type="submit"] {
+        width: 100px;
+        padding: 6px;
+        font-size: 14px;
+        height: 50px;
+        background-color: #007bff;
+    }
+    #subscription-message {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+  
+</style>
+<button class="go-top-btn">
+  <img height="45px" width="50px" src="arrow_upper.png " alt="arrow up">
+</button>
+  <div class="footer-column newsletter" id="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <form id="newsletter-form">
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscription-message"></p>
+  </div>
 </div>
 
 <!-- Quick Links Section -->
@@ -474,9 +572,7 @@ button[type="submit"] {
   <h3>Contact Us</h3>
   <p>Email: <a href="mailto:info@example.com">info@example.com</a></p> <!-- Used anchor tags for better functionality -->
   <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-</div>
-
-<!-- Follow Us Section -->
+  <!-- Follow Us Section -->
 <div class="footer-column">
   <h3>Follow Us</h3>
   <div class="social-icons">
@@ -486,108 +582,14 @@ button[type="submit"] {
     <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
   </div>
 </div>
+</div>
+
+
 
             </div>
           </div>
       
-          <!-- Newsletter Form Section -->
-          <style>
-            .social-icons {
-                display: flex;
-                gap: 1rem;
-                margin-top: 0.5rem;
-            }
-    
-            .social-icons a {
-                color: #E2E8F0;
-                transition: color 0.3s ease, transform 0.2s ease;
-            }
-    
-            .social-icons a:hover {
-                color: #4C51BF;
-                transform: translateY(-2px);
-            }
-
-/* for facebook */
-.social-icons .fa-discord {
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-discord:hover {
-    color: #4267b2;
-    transform: scale(1.1);
-    transform: scale(1.2) translateY(-5px);
-  }
-  
-  /* for twitter */
-  .social-icons .fa-x-twitter {
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-x-twitter:hover {
-    color: black;
-    transform: scale(1.1);
-    transform: scale(1.2) translateY(-5px);
-  }
-  /* for instagram */
-  .social-icons .fa-github {
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-github:hover {
-    color: #c32aa3;
-    transform: scale(1.1);
-    transform: scale(1.2) translateY(-5px);
-  }
-  
-  /* for instagram */
-  .social-icons .fa-linkedin-in {
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons .fa-linkedin-in:hover {
-    color: #0a66c2;
-    transform: scale(1.1);
-    transform: scale(1.2) translateY(-5px);
-  }
-    
-            
-            .footer-column.newsletter {
-                max-width: 300px;
-                margin: 0 auto;
-                text-align: center;
-            }
-            #newsletter-form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            #email {
-                width: 100%;
-                margin-bottom: 10px;
-                padding: 8px;
-                box-sizing: border-box;
-            }
-            button[type="submit"] {
-                width: 100px;
-                padding: 6px;
-                font-size: 14px;
-                height: 50px;
-                background-color: #007bff;
-            }
-            #subscription-message {
-                font-size: 14px;
-                margin-top: 10px;
-            }
           
-        </style>
-        <button class="go-top-btn">
-          <img height="45px" width="50px" src="arrow_upper.png " alt="arrow up">
-        </button>
-          <div class="footer-column newsletter" id="newsletter">
-            <h3>Subscribe to Our Newsletter</h3>
-            <form id="newsletter-form">
-              <input type="email" id="email" placeholder="Enter your email" required />
-              <button type="submit">Subscribe</button>
-            </form>
-            <p id="subscription-message"></p>
-          </div>
         </div>
       
         <!-- Footer Bottom Section -->
