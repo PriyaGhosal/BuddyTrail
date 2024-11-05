@@ -10,8 +10,7 @@
     
     <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
- main
- main
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <style>
           /* circle styles */
@@ -26,14 +25,15 @@
             pointer-events: none;
             z-index: 99999999;
           }
+       
         </style>  
     </head>
 
- main
+
 
 
     <link rel="stylesheet" href= "style.css" />
- main
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -46,7 +46,29 @@
         </div>
         <div id="loading-text">Ready to Explore the World...</div>
     </div>
-    <!-- <style>
+    <style>
+
+
+    .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+
         /* Preloader Container */
         #preloader {
             position: fixed;
@@ -681,6 +703,9 @@
         }
     </style>
 
+<button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+
     <!-- Scroll to top button -->
     <button id="scrollToTopBtn" title="Go to top">
         <i class="fas fa-arrow-up"></i>
@@ -776,10 +801,10 @@
                     <p>Near XYZ Mall, Sample City</p>
                     <p>Fake State, PIN 12345, India</p>
                    
-                    <h3>
+                    <h5>
                         <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a><br>
-                        <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
-                    </h3>
+                      <br>  <a href="tel:+1234567890" style="color: white; text-decoration: none;">+123 456 7890</a>
+                    </h5>
                     
                 </div>
                 <div class="col">
@@ -853,6 +878,26 @@
         });
     </script>
 
+<script>
+    // Show the button when the user scrolls down 100px from the top
+window.onscroll = function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+};
+
+// Scroll to the top when the button is clicked
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+</script>
 
 <!-- Circles -->
 <div class="circle"></div>

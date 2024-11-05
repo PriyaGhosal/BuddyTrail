@@ -36,6 +36,11 @@ h1, h2 {
     height: 400px;
     object-fit: cover;
 }
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
 
 .modal-content {
     background-color: #ffffff;
