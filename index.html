@@ -274,6 +274,7 @@
 .itinerary.inview, .service-card.inview {
   opacity: 1;
   transform: translateY(0);
+  max-width: 95%;
 }
 
  main
@@ -1082,7 +1083,7 @@ p {
         </script>
 
     <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;" >
+    <!-- <section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;" >
       <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
       
       <p id="darkbtn">
@@ -1143,7 +1144,125 @@ p {
       .dark-mode .itinerary p{
         color: #2c2fdf;
       }
-    </style>
+    </style> -->
+
+       <!-- Travel Itineraries Section -->
+<section id="itineraries" class="itineraries-section" style="height: 100%; border: 2px solid #FFFFFF; position: relative;">
+  <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2>
+
+  <p id="darkbtn">
+      Plan your trips effortlessly with our curated travel itineraries tailored for different types of adventures. Whether you're planning a family vacation, a solo adventure, or a romantic getaway, we’ve got you covered!
+  </p>
+
+  <div class="itinerary-list" style="height: 1200px;">
+      <div class="itinerary" id="itinerary1">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Family Vacation</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Explore the best family-friendly destinations with day-by-day guides that include must-see attractions and activities for all ages.</p>
+              <a href="./Travel-Itineraries.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+
+      <div class="itinerary" id="itinerary2">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Solo Adventure</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Embark on a solo journey with our handpicked itineraries, offering exciting experiences and peaceful retreats just for you.</p>
+              <a href="./solo-adventure.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+
+      <div class="itinerary" id="itinerary3">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Romantic Getaway</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Plan the perfect romantic escape with itineraries that include serene locations, romantic dinners, and memorable experiences.</p>
+              <a href="./romantic-gateway.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* Itineraries Section Styling */
+  .itineraries-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: #ffffff;
+  }
+
+
+
+  .itineraries-section h2, .itineraries-section p, .itinerary-list {
+      position: relative;
+      z-index: 2;
+  }
+
+  /* Itinerary Styling */
+  .itinerary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      
+  }
+
+  .itinerary {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+
+    #itinerary1 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/family-vacation.avif');
+        background-size: cover;
+        background-position: center;
+
+    }
+    #itinerary2 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/solo-travel.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #itinerary3 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/romantic-travel3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+  .itinerary button {
+      background-color: #ffa500;
+      border: none;
+      color: #fff;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+
+  /* Dark Mode Styling */
+  .dark-mode #itineraries h2 {
+      color: #ffa500;
+  }
+  .dark-mode #itineraries h3 {
+      color: #ffa500;
+  }
+  .dark-mode #itineraries p {
+      color: #fff;
+  }
+  .dark-mode .itinerary {
+      background-color: #0e0e0e;
+  }
+  .dark-mode .itinerary p {
+      color: #2c2fdf;
+  }
+</style>
+
     <!-- Our Services Section -->
     <section class="services" id="services" style="border: 2px solid #FFFFFF;">
       <h2>Our Services</h2>
