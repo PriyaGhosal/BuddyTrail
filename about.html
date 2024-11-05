@@ -10,8 +10,7 @@
     
     <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=11808&format=png&color=000000">
- main
- main
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <style>
           /* circle styles */
@@ -26,14 +25,15 @@
             pointer-events: none;
             z-index: 99999999;
           }
+       
         </style>  
     </head>
 
- main
+
 
 
     <link rel="stylesheet" href= "style.css" />
- main
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
@@ -46,7 +46,29 @@
         </div>
         <div id="loading-text">Ready to Explore the World...</div>
     </div>
-    <!-- <style>
+    <style>
+
+
+    .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+
         /* Preloader Container */
         #preloader {
             position: fixed;
@@ -681,6 +703,9 @@
         }
     </style>
 
+<button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+
     <!-- Scroll to top button -->
     <button id="scrollToTopBtn" title="Go to top">
         <i class="fas fa-arrow-up"></i>
@@ -749,98 +774,75 @@
         });
     </script>
 
-    <footer id="footer">
-    <div class="footer-container">
-      <!-- About Us Section -->
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+<footer id="footer">
+  <div class="footer-container">
+    <!-- About Us Section -->
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+        <li><a href="servicespage.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="welcome.html">Testimonials</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Links Section -->
+    <div class="footer-column">
+      <h3>Legal Links</h3>
+      <ul>
+        <li><a href="terms_of_service.html">Terms of Service</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="copyright.html">Copyright Notice</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="cookie_policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Office: 123 Fake Street, Near XYZ Mall, Sample City, Fake State, PIN 12345, India</p>
+      <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-  
-      <!-- Quick Links Section -->
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html" class="faq-link">FAQs</a></li>
-          <li><a href="servicespage.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="welcome.html">Testimonials</a></li>
-          <li><a href="team.html">Team</a></li>
-          <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
-        </ul>
-      </div>
-  
-      <!-- Legal Links Section -->
-      <div class="footer-column">
-        <h3>Legal Links</h3>
-        <ul>
-          <li><a href="terms_of_service.html">Terms of Service</a></li>
-          <li><a href="privacypolicy.html">Privacy Policy</a></li>
-          <li><a href="copyright.html">Copyright Notice</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
-          <li><a href="cookie_policy.html">Cookie Policy</a></li>
-  
-  
-  
-        </ul>
-      </div>
-  
-      <!-- Contact Us Section -->
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-      </div>
-  
-      <!-- Follow Us Section -->
-      <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-  
-      <!-- Newsletter Form Section -->
-      <style>
-        .footer-column.newsletter {
-            max-width: 300px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        #newsletter-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #email {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button[type="submit"] {
-            width: 100px;
-            padding: 6px;
-            font-size: 14px;
-        }
-        #subscription-message {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-    </style>
-      <div class="footer-column newsletter" id="newsletter">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form id="newsletter-form">
-          <input type="email" id="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p id="subscription-message"></p>
-      </div>
+    </div>
+
+    <!-- Newsletter Form Section -->
+    <div class="footer-column newsletter" id="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscription-message"></p>
+    </div>
+  </div>
+
+  <hr>
+  <p class="copyright">© 2024 BuddyTrail | All Rights Reserved</p>
+</footer>
+
     </div>
   
     <!-- Footer Bottom Section -->
@@ -867,6 +869,26 @@
         });
     </script>
 
+<script>
+    // Show the button when the user scrolls down 100px from the top
+window.onscroll = function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+};
+
+// Scroll to the top when the button is clicked
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+</script>
 
 <!-- Circles -->
 <div class="circle"></div>
