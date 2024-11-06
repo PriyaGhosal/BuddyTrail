@@ -38,7 +38,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" id="sign-in-password" />
               <i class="fas fa-eye password-toggle" onclick="togglePassword('sign-in-password', this)"></i>
-            </div>
+            </div>           
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
@@ -283,6 +283,20 @@
     
     animateCircles();
   </script>
-
+  <!-- Dash eye icon script -->
+<script>
+  function togglePassword(id, element) {
+  const passwordInput = document.getElementById(id);
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    element.classList.remove('fa-eye');
+    element.classList.add('fa-eye-slash');
+  } else {
+    passwordInput.type = 'password';
+    element.classList.remove('fa-eye-slash');
+    element.classList.add('fa-eye');
+  }
+}
+</script>
 </body>
 </html>
