@@ -31,7 +31,8 @@
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
 │   │   ├── Rating.js
-│   │   └── User.js
+│   │   ├── User.js
+│   │   └── suggestion.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
@@ -121,6 +122,7 @@
 │   ├── df1.jpg
 │   ├── df2.jpg
 │   ├── download.jpeg
+│   ├── family-vacation.avif
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
@@ -143,10 +145,12 @@
 │   ├── popup1.jpg
 │   ├── popup2.jpg
 │   ├── popup3.jpg
+│   ├── romantic-travel3.jpg
 │   ├── safety.jpg
 │   ├── safety1.jpg
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
+│   ├── solo-travel.jpg
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
@@ -154,6 +158,7 @@
 │   └── x-logo.png
 ├── index.html
 ├── italy.html
+├── kerala.html
 ├── manifest.json
 ├── moon.png
 ├── new_post.html

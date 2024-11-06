@@ -1,5 +1,9 @@
 const ContactUs = require("../models/ContactUs");
 const FeedbackModal = require("../models/Feedback");
+
+const SuggestionModal = require("../models/suggestion");
+
+
 const nodemailer = require("nodemailer");
 
 // Submit Contact Form
@@ -84,4 +88,34 @@ exports.sendEmail = async (req, res) => {
       return res.status(200).send("Form data sent successfully");
     }
   });
+};
+
+exports.suggestion = async (req, resp) => {
+  try {
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) {
+      return resp.status(400).send({
+        success: false,
+        message: "all fields are required",
+      });
+    }
+
+    const suggestion = await new SuggestionModal({
+      name: name,
+      email: email,
+      message: message,
+    }).save();
+
+    if (suggestion) {
+      return resp.status(201).send({
+        success: true,
+        message: "suggestion recorded",
+      });
+    }
+  } catch (error) {
+    return resp.status(500).send({
+      success: false,
+      message: "intenral server error",
+    });
+  }
 };
