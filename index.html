@@ -274,30 +274,22 @@
 .itinerary.inview, .service-card.inview {
   opacity: 1;
   transform: translateY(0);
+  max-width: 95%;
 }
 
-
-
-
-
-.circle {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-    }
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
+ main
+  /* circle styles */
+    .circle {
+     height: 24px;
+     width: 24px;
+     border-radius: 24px;
+     background-color: rgb(255, 0, 0);
+     position: fixed;
+     top: 0;
+     left: 0;
+     pointer-events: none;
+     z-index: 99999999;
+       
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -427,38 +419,27 @@
       <div id="google_translate_element"></div>
     </div> -->
 
-    <div class="circle-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
+    <!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 
     <script>
       // Initialization function
@@ -637,8 +618,7 @@
         mainHead.classList.remove("shadow");
       }
     });
-  })
-
+  });
 </script>
 
 <script src="./script/popup.js"></script>
@@ -1103,7 +1083,7 @@ p {
         </script>
 
     <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;" >
+    <!-- <section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;" >
       <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2> 
       
       <p id="darkbtn">
@@ -1118,7 +1098,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Family Vacation</h3>
-          <p>
+          <p style="font-size: 14px;">
             Explore the best family-friendly destinations with day-by-day
             guides that include must-see attractions and activities for all
             ages.
@@ -1130,7 +1110,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Solo Adventure</h3>
-          <p>
+          <p style="font-size: 14px;">
             Embark on a solo journey with our handpicked itineraries, offering
             exciting experiences and peaceful retreats just for you.
           </p>
@@ -1139,7 +1119,7 @@ p {
         <div class="itinerary">
           <div class="header1">
           <h3>Romantic Getaway</h3>
-          <p>
+          <p style="font-size: 14px;">
             Plan the perfect romantic escape with itineraries that include
             serene locations, romantic dinners, and memorable experiences.
           </p>
@@ -1164,7 +1144,125 @@ p {
       .dark-mode .itinerary p{
         color: #2c2fdf;
       }
-    </style>
+    </style> -->
+
+       <!-- Travel Itineraries Section -->
+<section id="itineraries" class="itineraries-section" style="height: 100%; border: 2px solid #FFFFFF; position: relative;">
+  <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2>
+
+  <p id="darkbtn">
+      Plan your trips effortlessly with our curated travel itineraries tailored for different types of adventures. Whether you're planning a family vacation, a solo adventure, or a romantic getaway, we’ve got you covered!
+  </p>
+
+  <div class="itinerary-list" style="height: 1200px;">
+      <div class="itinerary" id="itinerary1">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Family Vacation</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Explore the best family-friendly destinations with day-by-day guides that include must-see attractions and activities for all ages.</p>
+              <a href="./Travel-Itineraries.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+
+      <div class="itinerary" id="itinerary2">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Solo Adventure</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Embark on a solo journey with our handpicked itineraries, offering exciting experiences and peaceful retreats just for you.</p>
+              <a href="./solo-adventure.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+
+      <div class="itinerary" id="itinerary3">
+          <div class="header1">
+              <h3 style="color: white; font-weight: 900; font-size: large;">Romantic Getaway</h3>
+              <p style="color: black; font-size: 18px; font-weight: 500;">Plan the perfect romantic escape with itineraries that include serene locations, romantic dinners, and memorable experiences.</p>
+              <a href="./romantic-gateway.html"><button>View Itinerary</button></a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* Itineraries Section Styling */
+  .itineraries-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: #ffffff;
+  }
+
+
+
+  .itineraries-section h2, .itineraries-section p, .itinerary-list {
+      position: relative;
+      z-index: 2;
+  }
+
+  /* Itinerary Styling */
+  .itinerary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      
+  }
+
+  .itinerary {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+
+    #itinerary1 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/family-vacation.avif');
+        background-size: cover;
+        background-position: center;
+
+    }
+    #itinerary2 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/solo-travel.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #itinerary3 {
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/romantic-travel3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+  .itinerary button {
+      background-color: #ffa500;
+      border: none;
+      color: #fff;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+
+  /* Dark Mode Styling */
+  .dark-mode #itineraries h2 {
+      color: #ffa500;
+  }
+  .dark-mode #itineraries h3 {
+      color: #ffa500;
+  }
+  .dark-mode #itineraries p {
+      color: #fff;
+  }
+  .dark-mode .itinerary {
+      background-color: #0e0e0e;
+  }
+  .dark-mode .itinerary p {
+      color: #2c2fdf;
+  }
+</style>
+
     <!-- Our Services Section -->
     <section class="services" id="services" style="border: 2px solid #FFFFFF;">
       <h2>Our Services</h2>
@@ -1576,6 +1674,135 @@ select {
       </div>
     </section>
 
+  <!-- Packing Checklist Section -->
+<section id="packing-checklist" class="packing-checklist-section">
+  <h2>Packing Checklist</h2>
+  <p>🌍 Choose your travel style to receive a personalized packing checklist ✈️, curated from seasoned travelers 🧳!</p>
+  <div class="checklist-form">
+    <label for="travel-type">Choose your travel type:</label>
+    <select id="travel-type">
+      <option value="beach">Beach</option>
+      <option value="adventure">Adventure</option>
+      <option value="business">Business</option>
+    </select>
+    <button onclick="generateChecklist()">Download Checklist</button>
+  </div>
+</section>
+<style>
+  /* Packing Checklist Section CSS */
+.packing-checklist-section {
+  background: linear-gradient(135deg, #e6f7ff, #ccf2ff); 
+  padding: 40px 20px; 
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+  color: #333;
+}
+
+.packing-checklist-section h2 {
+  font-size: 28px;
+  color: #004085;
+  margin-bottom: 10px;
+}
+
+.packing-checklist-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.checklist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#travel-type {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.checklist-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.checklist-form button:hover {
+  background-color: #0056b3;
+}
+
+
+</style>
+<!-- Packing Checklist Section Script-->
+<script>
+  function generateChecklist() {
+  const travelType = document.getElementById("travel-type").value;
+  let checklistContent = "";
+
+  if (travelType === "beach") {
+    checklistContent = `
+      Beach Packing Checklist:
+      - Swimsuit
+      - Sunscreen
+      - Sunglasses
+      - Flip-flops
+      - Beach towel
+      - Water bottle
+      - Hat
+      - Snacks
+    `;
+  } else if (travelType === "adventure") {
+    checklistContent = `
+      Adventure Packing Checklist:
+      - Hiking boots
+      - Weather-resistant jacket
+      - First aid kit
+      - Flashlight
+      - Compass or GPS
+      - Energy bars
+      - Water bottle
+      - Map
+    `;
+  } else if (travelType === "business") {
+    checklistContent = `
+      Business Packing Checklist:
+      - Formal wear
+      - Laptop and charger
+      - Notepad and pen
+      - Business cards
+      - Toiletries
+      - Work documents
+      - Phone and charger
+      - Comfortable shoes
+    `;
+  }
+
+  // Create a downloadable text file
+  const blob = new Blob([checklistContent], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${travelType}_packing_checklist.txt`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+</script>
+
+
     <style>
       /* Recommendations Section Styling */
 #recommendations {
@@ -1673,12 +1900,86 @@ select {
 
 
     <!--Emergency-->
+    <section class="service" id="services">
     <div class="sos-container">
       <h2>Emergency SOS</h2>
       <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
+    </section>
+
+    <style>
+.sos-container h2{
+  color: white;
+  font-size: 3.0rem;
+  text-decoration:underline;
+}
+      /* General Section Styling */
+.service {
+    padding: 40px;
+    background-color: #1a2a3a; /* Eye-comfort background color */
+    color: #f1f1f1; /* Text color for readability */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    border: 10px solid white;
+}
+
+.service:hover {
+    background-color: #2b3b4c; /* Slightly darker on hover */
+}
+
+/* SOS Button Styling */
+#sosButton {
+  width: 150px;
+  height: 60px;
+    margin-top: 40px;
+    background-color: #ff5555;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sosButton:hover {
+    background-color: #ff3333;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+#sosButton:active {
+    background-color: #ff1111;
+    transform: scale(0.98); /* Pressed button effect */
+}
+
+/* SOS Status and Emergency Text Styling */
+#emergency-text {
+    margin-top: 40px;
+    font-size: 1em;
+    margin-bottom: 16px;
+}
+
+#sos-status {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #eef2f5; /* Color to signify emergency status */
+}
+
+/* sos-container for additional styling */
+.sos-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+    </style>
+
+
     <!--posts section-->
     <div id="posts">
       <header class="posts_blog">
@@ -2212,10 +2513,12 @@ nav.hi ul li.NAVI i:hover  {
   </main>
 
     <!-- Map Section -->
+    <section class="services" id="services" style="border: 2px solid #FFFFFF; margin-top:5%">
     <section class="map-section" id="explore">
       <h2>Explore Popular Destinations</h2>
       <p style="color: whitesmoke;">Click on the markers to learn more about each destination.</p>
       <div id="map"></div>
+    </section>
     </section>
     <!-- Google Maps JavaScript API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcdQdpiSF7BjZl6JF_pyucrblrUCZMxc&loading=async&callback=initMap"
@@ -2282,14 +2585,19 @@ nav.hi ul li.NAVI i:hover  {
                         <h3 style="text-align: center;">Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
+
                               <div class="input-flex">
                                 <i>🏷️</i>Name
                                 <input type="text" id="name" class="form-control" placeholder="Your Name" style="margin-left:12px;margin-top:11px;border-radius: 20px;" required pattern="[a-zA-Z ]+"
+                              <i class="fas fa-user"></i>
+                              <input type="text" id="name" class="form-control" placeholder="Your Name" required pattern="[a-zA-Z ]+"
+
                                 oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
                                 oninput="this.setCustomValidity('')">
                               </div>
                             </div>
                             <div class="form-group">
+
                              <div class="input-flex">
                                <i class="far fa-envelope"></i> Email
                                <input type="email" id="email" class="form-control" placeholder="Your Email" style="margin-left:12px;border-radius: 20px;" required>
@@ -2300,6 +2608,14 @@ nav.hi ul li.NAVI i:hover  {
                                 <i>❓</i> Feedback
                                 <textarea id="message" class="form-control" rows="4" placeholder="Your Message"style="margin-left:12px;border-radius: 20px;" required></textarea>
                               </div>
+                              <i class="fas fa-envelope"></i>
+                              <input type="email" id="email" class="form-control" placeholder="      Your Email" required>
+
+                            </div>
+                            <div class="form-group">
+                              <i class="fas fa-message"></i>
+                                <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+
                             </div>
                             <button class="book-btn" type="submit">Send Message</button>
                         </form>
@@ -2510,7 +2826,7 @@ textarea.form-control {
   </main>
 
   <section id="testimonials" class="testimonials-section">
-    <h2 class="testimonials-heading"  style="color: rgba(255, 255, 248, 0.953)">Testimonials</h2>
+    <h2 class="testimonials-heading"  >Testimonials</h2>
 
     <div class="testimonials-container">
       <div class="header1 test">
@@ -2551,6 +2867,100 @@ textarea.form-control {
       </figure></div>
     </div>
   </section>
+
+ <style>
+
+.testimonials-heading {
+    font-size: 3.8rem;
+    margin-bottom: 40px;
+    color: rgba(251, 253, 255, 0.95);
+    font-weight: bold;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.snip1533 {
+    background-color: #ffffff;
+    border-radius: 10%;
+    padding: 25px;
+    max-width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    perspective: 1000px;
+   
+    position: relative;
+}
+
+/* 3D Rotation and Shadow Effects */
+.snip1533:hover {
+ 
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+}
+
+/* Inner Shadow and Text Effect */
+.snip1533::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.snip1533:hover::before {
+    opacity: 1;
+}
+
+/* Text Styling */
+.snip1533 blockquote p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.snip1533 h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #00a894;
+    font-weight: bold;
+}
+
+.snip1533 h4 {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Hover Text Color Effect */
+.snip1533:hover h3 {
+    color: #7a15be;
+}
+
+.snip1533:hover h4 {
+    color: #004d40;
+}
+
+/* Glowing Border Animation */
+.snip1533:hover {
+    border: 2px solid rgba(0, 150, 136, 0.2);
+    box-shadow: 0 0 15px rgba(0, 150, 136, 0.4), 0 0 25px rgba(0, 150, 136, 0.2);
+}
+
+ </style>
+
+
 
   <section id="reviews" class="reviews-section">
     <div class="review">
@@ -2820,56 +3230,7 @@ textarea.form-control {
     <div class="footer-column">
       <h3>About Us</h3>
       <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-    </div>
-
-    <!-- Quick Links Section -->
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html" class="faq-link">FAQs</a></li>
-        <li><a href="servicespage.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="team.html">Team</a></li>
-        <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
-      </ul>
-    </div>
-
-    <!-- Legal Links Section -->
-    <div class="footer-column">
-      <h3>Legal Links</h3>
-      <ul>
-        <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-        <li><a href="copyright.html">Copyright Notice</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="cookie_policy.html">Cookie Policy</a></li>
-
-
-
-      </ul>
-    </div>
-
-    <!-- Contact Us Section -->
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-    </div>
-
-    <!-- Follow Us Section -->
-    <div class="footer-column">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-
-    <!-- Newsletter Form Section -->
+      <!-- Newsletter Form Section -->
     <style>
       .footer-column.newsletter {
           max-width: 300px;
@@ -2904,6 +3265,54 @@ textarea.form-control {
         <button type="submit">Subscribe</button>
       </form>
       <p id="subscription-message"></p>
+    </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="faq-link">FAQs</a></li>
+        <li><a href="servicespage.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="welcome.html">Testimonials</a></li>
+        <li><a href="team.html">Team</a></li>
+        <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
+      </ul>
+    </div>
+
+    <!-- Legal Links Section -->
+    <div class="footer-column">
+      <h3>Legal Links</h3>
+      <ul>
+        <li><a href="terms_of_service.html">Terms of Service</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="copyright.html">Copyright Notice</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="cookie_policy.html">Cookie Policy</a></li>
+
+
+
+      </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      <!-- Follow Us Section -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
     </div>
   </div>
 
@@ -3150,6 +3559,52 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
 
 
     <script>
+ main
+      // coordinates for the cursor :
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+  
+      const colors = [
+        "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+      ];
+  
+      circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+      });
+  
+      // update the coordinates when the mouse moves:
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+      });
+  
+      // animation function to move the circles:
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+  
+        circles.forEach(function (circle, index) {
+         
+  
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+          circle.style.scale = (circles.length - index) / circles.length;
+  
+          circle.x = x;
+          circle.y = y;
+  
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+  
+        requestAnimationFrame(animateCircles);
+      }
+      
+      animateCircles();
+
       document.addEventListener("DOMContentLoaded", function () {
         const coords = { x: 0, y: 0 };
         const circles = document.querySelectorAll(".circle");
@@ -3187,14 +3642,16 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         animateCircles();
       });
 
+ main
     </script>
+  
   <body>
     <div class="container">
         <!-- Your existing content -->
 
         <!-- Chatbot Icon -->
         <div class="chatbot-icon" onclick="toggleChatbot()">
-            🗨️ <!-- You can replace this with an actual image/icon -->
+          🗨️ <!-- You can replace this with an actual image/icon -->
         </div>
 
         <!-- Chatbot Iframe -->

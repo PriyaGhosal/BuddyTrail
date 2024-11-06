@@ -1,14 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himachal Pradesh Adventure Treks</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="himachal.html">
-    <link rel="stylesheet" href="Booknow.css">
+    <link rel="stylesheet" href="himachal.css">
+    <style>
+        /* circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: rgb(255, 0, 0);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+        }
+    </style>
 </head>
+
+<link rel="stylesheet" href="Booknow.css">
+</head>
+
 <body>
     <div class="container-fluid py-5 trek-header">
         <h1 class="text-center text-white mb-4">Himachal Pradesh Adventure Treks</h1>
@@ -56,44 +73,53 @@
                     <img src="triundtrek.jpg" class="card-img-top" alt="Triund Trek">
                     <div class="card-body">
                         <h5 class="card-title">Triund Trek</h5>
-                        <p class="card-text">A beautiful 2-day trek near Dharamshala with stunning views of the Dhauladhar range.</p>
+                        <p class="card-text">A beautiful 2-day trek near Dharamshala with stunning views of the
+                            Dhauladhar range.</p>
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item"><strong>Duration:</strong> 2 days</li>
                             <li class="list-group-item"><strong>Difficulty:</strong> Easy to Moderate</li>
-                            <li class="list-group-item"><strong>Best Time:</strong> March to June, September to November</li>
+                            <li class="list-group-item"><strong>Best Time:</strong> March to June, September to November
+                            </li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View
+                        Details</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 trek-card">
-                    <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a" class="card-img-top" alt="Hampta Pass Trek">
+                    <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a" class="card-img-top"
+                        alt="Hampta Pass Trek">
                     <div class="card-body">
                         <h5 class="card-title">Hampta Pass Trek</h5>
-                        <p class="card-text">A diverse 5-day trek crossing from lush Kullu Valley to the arid Spiti region.</p>
+                        <p class="card-text">A diverse 5-day trek crossing from lush Kullu Valley to the arid Spiti
+                            region.</p>
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item"><strong>Duration:</strong> 5 days</li>
                             <li class="list-group-item"><strong>Difficulty:</strong> Moderate</li>
                             <li class="list-group-item"><strong>Best Time:</strong> June to September</li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View
+                        Details</button>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 trek-card">
-                    <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" class="card-img-top" alt="Bhrigu Lake Trek">
+                    <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" class="card-img-top"
+                        alt="Bhrigu Lake Trek">
                     <div class="card-body">
                         <h5 class="card-title">Bhrigu Lake Trek</h5>
-                        <p class="card-text">A 4-day trek to a high-altitude glacial lake near Manali with panoramic views.</p>
+                        <p class="card-text">A 4-day trek to a high-altitude glacial lake near Manali with panoramic
+                            views.</p>
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item"><strong>Duration:</strong> 4 days</li>
                             <li class="list-group-item"><strong>Difficulty:</strong> Moderate to Difficult</li>
                             <li class="list-group-item"><strong>Best Time:</strong> May to October</li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View Details</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trekModal">View
+                        Details</button>
                 </div>
             </div>
         </div>
@@ -113,17 +139,21 @@
                                 <img src="triundtrek.jpg" class="d-block w-100" alt="Trek Image 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a" class="d-block w-100" alt="Trek Image 2">
+                                <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a"
+                                    class="d-block w-100" alt="Trek Image 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" class="d-block w-100" alt="Trek Image 3">
+                                <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190"
+                                    class="d-block w-100" alt="Trek Image 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#trekCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#trekCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#trekCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#trekCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -160,23 +190,23 @@
                             <div class="modal-header1">Trek Booking Form</div>
                             <div class="modal-body1">
                                 <p>Please fill in your details:</p>
-                
+
                                 <!-- User Details Form -->
                                 <div class="input-field">
                                     <label for="name">Full Name</label>
                                     <input type="text" id="name" placeholder="Enter your name" required>
                                 </div>
-                
+
                                 <div class="input-field">
                                     <label for="email">Email</label>
                                     <input type="email" id="email" placeholder="Enter your email" required>
                                 </div>
-                
+
                                 <div class="input-field">
                                     <label for="phone">Phone Number</label>
                                     <input type="tel" id="phone" placeholder="Enter your phone number" required>
                                 </div>
-                
+
                                 <div class="dropdown">
                                     <label for="trekSelection">Select a Trek</label>
                                     <select id="trekSelection" onchange="updateTrekDetails()">
@@ -185,12 +215,12 @@
                                         <option value="Bhrigu Lake Trek">Bhrigu Lake Trek</option>
                                     </select>
                                 </div>
-                
+
                                 <!-- Trek Details Section -->
                                 <div id="trekDetails" class="trek-details">
                                     <!-- Trek details will be populated here based on the selection -->
                                 </div>
-                
+
                                 <button class="form-button" onclick="confirmBooking()">Confirm Booking</button>
                             </div>
                             <button class="close-btn1" onclick="closeModal()">Close</button>
@@ -271,5 +301,76 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <script>
+        // coordinates for the cursor :
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        const colors = [
+            "#fc5720", "#fc6532", "#fc6532", "#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02",
+        ];
+
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        // update the coordinates when the mouse moves:
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+        });
+
+        // animation function to move the circles:
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+
+
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+
 </body>
+
 </html>

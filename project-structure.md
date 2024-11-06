@@ -2,6 +2,8 @@
 ```
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── CheckoutHotel.css
+├── CheckoutHotel.html
 ├── Code_of_Conduct.md
 ├── F&Q.html
 ├── LICENSE
@@ -22,16 +24,20 @@
 │   │   └── db.js
 │   ├── controllers
 │   │   ├── ContactController.js
-│   │   └── authController.js
+│   │   ├── authController.js
+│   │   └── ratingController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
-│   │   └── User.js
+│   │   ├── Rating.js
+│   │   ├── User.js
+│   │   └── suggestion.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
 │   │   ├── ContactRoutes.js
+│   │   ├── RatingRoutes.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
@@ -80,6 +86,7 @@
 ├── gear.html
 ├── goa-resort.css
 ├── goa-resort.html
+├── greece.html
 ├── guide.html
 ├── himachal.css
 ├── himachal.html
@@ -115,6 +122,7 @@
 │   ├── df1.jpg
 │   ├── df2.jpg
 │   ├── download.jpeg
+│   ├── family-vacation.avif
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
@@ -137,16 +145,20 @@
 │   ├── popup1.jpg
 │   ├── popup2.jpg
 │   ├── popup3.jpg
+│   ├── romantic-travel3.jpg
 │   ├── safety.jpg
 │   ├── safety1.jpg
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
+│   ├── solo-travel.jpg
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
 │   ├── u5.jpg
 │   └── x-logo.png
 ├── index.html
+├── italy.html
+├── kerala.html
 ├── manifest.json
 ├── moon.png
 ├── new_post.html
@@ -178,9 +190,11 @@
 │   └── popup.css
 ├── sustainabeltravel.html
 ├── sustanabletravel.css
+├── switzerland.html
 ├── team.html
 ├── terms.css
 ├── terms_of_service.html
+├── test.html
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
@@ -196,6 +210,7 @@
 ├── update discussion forum
 ├── visi.css
 ├── visi.js
-└── waterfall.mp4
+├── waterfall.mp4
+└── welcome.html
 ```
 <!-- END_STRUCTURE -->
