@@ -2435,7 +2435,7 @@ input#rate-5:checked ~ header:before {
 
 .navhover {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 18px;
   display: inline-block;
   padding: 10px 15px; /* Adds padding around the text */
@@ -2447,6 +2447,8 @@ input#rate-5:checked ~ header:before {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
   color: white; /* Changes text color on hover */
+  border-bottom:1px solid wheat;
+
 }
 
 #social-icons {
