@@ -1,134 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuddyTrail Contributors</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="contributor.css">
-    
-    <!-- fontAwsome cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" />
+  <link rel="icon" href="../image/ml-fusion-lab-logo.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuddyTrail</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./contributor.css" />
+
+  <style>
+
+  </style>
 </head>
+
 <body>
-  <header class="main-head">
-    <nav>
-      <div class="logo">
-        <img src="/img/logo.png" id="logo-web">
-        <h1 id="logo"><a href="#home">BuddyTrail</a></h1>
-      </div>
-  
-      <!-- Hamburger button for mobile -->
-      <button class="hamburger" id="hamburger">☰</button>
-  
-     <ul id="nav-list">
-        <!-- Close button for dropdown -->
-        <span class="dropdown-close-btn" id="closeBtn">×</span>
+    <a href="../index.html" class="homeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" viewBox="0 0 25 24">
+            <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>          
+    </a>
 
-        <li><a href="/index.html" class="navhover">Home</a></li>
-        <li><a href="/team.html" class="navhover">Team</a></li>
-        <li><a href="/index.html#deals" class="navhover">Exclusive Deals</a></li>
-        <li><a href="/index.html#benefits" class="navhover">Benefits</a></li>
-        <li><a href="/about.html" class="navhover">About</a></li>
-        <li><a href="/index.html#itineraries" class="navhover">Travel Itineraries</a></li>
-        
-        <li><a href="./contact.html" class="navhover">Contact</a></li>
-        <li><a href="/index.html#reviews" class="navhover">Reviews</a></li>
-        <li><a href="/auth.html" class="navhover">Sign In</a></li>
-       
-      </ul>
-  
-      <!-- Toggle Button -->
-      
-    </nav>
-  </header>
-  <div class="contributor-container">
-    <!-- Hero Section -->
-    <section class="contributor-hero">
-        <div class="contributor-hero-content">
-            <h1>Welcome to BuddyTrail</h1>
-            <p>Empowering writers, one commit at a time</p>
-            <button class="contributor-btn contributor-btn-primary" onclick="scrollToContribute()">Become a Contributor</button>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
     <section class="contributor-stats">
-        <h2>Project Statistics</h2>
-        <div class="contributor-stats-grid" id="statsGrid">
-            <!-- Stats will be dynamically inserted here -->
-        </div>
-    </section>
+      <h2>Project Statistics</h2>
+      <div class="contributor-stats-grid" id="statsGrid">
+    <div class="contributor-stat-card">
+        <div class="contributor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        <h3>191</h3>
+        <p>Contributors</p>
+    </div>
 
-    <!-- Contributors Grid -->
-    <section class="contributor-contributors">
-        <h2>Meet Our Contributors</h2>
-        <div class="contributor-contributors-grid" id="contributorsGrid">
-            <!-- Contributors will be dynamically inserted here -->
-        </div>
-        <div id="loading" class="contributor-loading">
-            <div class="contributor-spinner"></div>
-        </div>
-    </section>
+    <div class="contributor-stat-card">
+        <div class="contributor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg></div>
+        <h3>1327</h3>
+        <p>Total Contributions</p>
+    </div>
 
-    <!-- Call to Action -->
-    <section id="contribute" class="contributor-cta">
-        <h2>Ready to Make an Impact?</h2>
-        <p>Join our community and help shape the future of BuddyTrail.</p>
-        <form id="subscribeForm">
-            <input type="email" id="emailInput" placeholder="Enter your email" required>
-            <button type="submit" class="contributor-btn contributor-btn-secondary">Get Started</button>
-        </form>
-        <div id="notification" class="contributor-notification contributor-hidden"></div>
-    </section>
+    <div class="contributor-stat-card">
+        <div class="contributor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+        <h3>136</h3>
+        <p>GitHub Stars</p>
+    </div>
+
+    <div class="contributor-stat-card">
+        <div class="contributor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" y="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+        <h3>348</h3>
+        <p>Forks</p>
+    </div>
+</div>
+  </section>
+
+  <div class="container">
+    <h1 class="title">Our Contributors</h1>
   </div>
-    <footer id="footer">
-      <div class="footer-container">
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
+  <div id="contributors" class="contributors-grid"></div>
+  s<style>
+    @property --angle{
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
 
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/index.html">Services</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/team.html">Team</a></li>
-                <li><a href="contributor/contributor.html">Our Contributor</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Contact Us</h3>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123 456 7890</p>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="https://discord.com/invite/priyaghosal" ><i class="fab fa-discord"></i></a>
-                  <a href="https://x.com/https://twitter.com/PriyaGhosa39968"><i class="fa-brands fa-x-twitter"></i></i></a>
-                  <a href="https://github.com/PriyaGhosal/BuddyTrail"><i class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/priya-ghosal-785771286/"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          </div>
-     
+    .contributor-card::after, .contributor-card::before{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      padding: 4px;
+      top: -1.5%;
+      border-radius: 10px;
+    }
+
+    .contributor-card:hover::before,
+    .contributor-card:hover::after {
+      animation: spin 0.75s linear infinite;
+      background-image: conic-gradient(from var(--angle),#00a5e3,#8dd7bf,#ff96c5,#ff5768,#ffbf65,#00a5e3)
+    }
+    
+    .contributor-card::before{
+      filter: blur(3rem);
+      opacity: 0.5;
+    }
+    
+    @keyframes spin{
+      from{
+        --angle:0deg;
+      }
+      to{
+        --angle:360deg;
+      }
+    }
+  </style>
+
+  <script src="./contributor.js"></script>
+
   
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
-    </div>
-  </footer>
-
-    <script src="contributor.js"></script>
 </body>
+
 </html>
