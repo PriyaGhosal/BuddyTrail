@@ -38,7 +38,8 @@ body {
 }
 
 .trek-card img {
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 3/2;
     object-fit: cover;
 }
 
