@@ -80,6 +80,13 @@
     <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
   </div>
 
+    <!-- Confirm Password Field -->
+    <div class="input-field">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Confirm Password" id="confirm-password" required />
+      <i class="fas fa-eye password-toggle" onclick="togglePassword('confirm-password', this)"></i>
+    </div>
+
   <!-- Password Strength Bars -->
   <div class="password-strength">
     <div id="strength-weak"></div>
@@ -97,6 +104,7 @@
       <script>
       function validateForm() {
   const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById("confirm-password").value;
   const email = document.getElementById('email').value;
   const username = document.getElementById('username').value;
 
@@ -123,6 +131,11 @@
   if (!email.includes("@")) {
     alert("Please enter a valid email address.");
     return false;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return false; // Prevent form submission
   }
 
   // If all validations pass
