@@ -19,6 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BuddyTrail - Your Travel Companion">
   <meta name="twitter:description" content="Join BuddyTrail to explore the world, plan your trips, and connect with a community of travelers.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -2930,124 +2931,315 @@ textarea.form-control {
 }
 
  </style>
-
-
-
-  <section id="reviews" class="reviews-section">
-    <div class="review">
-      <div class="review-form">
-        <h2 style="color: #0057B3;" id="h1darkbtn">Rate your experience</h2>
-        <p class="review-p">
-          Read what others have to say about their experiences with various
-          destinations, hotels, flights, and activities. Share your own reviews
-          and help fellow travelers make informed decisions.
-        </p>
-
-        <div style="display: flex;">
-          <form class="form" id="reviewForm">
-            <label for="name" id="darkbtn" >Your Name:</label>
-            <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+"
-            placeholder="Enter your name"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
-
-            <label for="destination" id="darkbtn">Destination/Service:</label>
-            <input type="text" id="destination" name="destination" required  required pattern="[a-zA-Z ]+"
-            placeholder="Enter your destination or service"
-            oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
-            oninput="this.setCustomValidity('')"/>
-
-            <label for="rating" id="darkbtn">Rating:</label>
-           <!-- <select id="rating" class="rating" name="rating">
-              <option value="5">⭐⭐⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="1">⭐</option>
-            </select>-->
-
-            <div class="rating" name="rating">
-              <!--<h3 style="font-weight: bold; font-size: 15px; text-align: left;">Your rating:</h3>  -->
-              <div class="star-widget">
-               <input type="radio" name="rate" id="rate-5">
-               <label for="rate-5"  class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-4">
-               <label for="rate-4" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-3">
-               <label for="rate-3" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-2">
-               <label for="rate-2" class="fas fa-star"></label>
-               <input type="radio" name="rate" id="rate-1">
-               <label for="rate-1" class="fas fa-star"></label>
-               <header></header>
-            </div>
-           </div>
-
-            <label for="review" id="darkbtn" >Your Review:</label>
-            <textarea id="review" name="review" rows="3" placeholder="Write your review here..."></textarea>
-            <label for="complaint" id="darkbtn" >Complaint (if any):</label>
-            <textarea id="complaint" name="complaint" rows="3"
-              placeholder="Describe any issue with the staff here. Please provide details"></textarea>
-
-            <div class="form-button">
-              <button type="submit" onclick="submitFeedback(event)">Send</button>
-            </div>
-          </form>
-
-          <!-- Thank You Message -->
-          <div id="thankYouMessage" style="display: none; margin-top: 20px;">
-            <p>Thank you! We use CustomerSure to collect and manage all your feedback because we are absolutely
-              committed to making you a happy customer. We will read your feedback, and we'll take it seriously.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-  async function submitFeedback(event) {
-  event.preventDefault();
-  const form = document.getElementById('reviewForm');
-  
-  // Collecting form data
-  const Name = form.elements['name'].value;
-  const Destination = form.elements['destination'].value;
-  const Rating = form.querySelector('input[name="rate"]:checked')?.id.split('-')[1];
-  const Review = form.elements['review'].value;
-  const Complaint = form.elements['complaint'].value;
-
-  // Creating the payload
-  const feedbackData = {
-    Name,
-    Destination,
-    Rating,
-    Review,
-    Complaint,
-  };
-
-  try {
-    const response = await fetch('http://localhost:5000/api/contact/feedback', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(feedbackData),
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      alert('Feedback submitted successfully');
-    } else {
-      alert(`Error: ${result.message}`);
-    }
-  } catch (error) {
-    console.error('Error submitting feedback:', error);
-    alert('An error occurred while submitting feedback.');
+<title>Feedback Form</title>
+<style>
+  /* Simple CSS for layout and modal */
+  .form-group {
+    margin-bottom: 15px;
   }
+
+  .form-label {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-button {
+    margin-left: 35%;
+    margin-top: 35px;
+    width: 150px;
+    font-size: 22px;
+    height: 70px;
+    border-radius: 40px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .form-button:hover {
+    background-color: #b3d6f9;
+    color: black;
+    transform: scale(0.95);
+  }
+
+  .emojis label {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .modal-header {
+    margin-bottom: 10px;
+  }
+
+  .modal-message {
+    margin-bottom: 20px;
+  }
+
+  .modal-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .modal-button:hover {
+    background-color: #218838;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  #feedback-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+  }
+
+  #feedback-container label i {
+    margin-right: 8px;
+    color: #555;
+  }
+
+  #submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #submit-button:hover {
+    background-color: #45a049;
+  }
+
+  #success-message {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #2c7a7b;
+    background-color: #e6fffa;
+    border: 1px solid #b2f5ea;
+    border-radius: 4px;
+    display: none;
+    /* Initially hidden */
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+  <section class="feedback-section">
+    <div class="feedback-container">
+        <h2>We'd Love Your Feedback!</h2>
+        <form action="#" method="POST" class="feedback-form">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="feedback">Your Feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <div class="form-field">
+                <label for="rating">Rating</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+        <div class="thank-you-message">
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+<style>
+ /* Feedback Section */
+.feedback-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #7b56d1, #4f87ff); /* Elegant linear gradient */
+    font-family: 'Arial', sans-serif;
 }
 
-  </script>
+.feedback-container {
+    background: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
 
+.feedback-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-field label {
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    border-color: #7b56d1; /* Focus color matches gradient */
+    box-shadow: 0 0 5px rgba(123, 86, 209, 0.5);
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffcc00;
+}
+
+.star-rating label:hover {
+    color: #ffcc00;
+}
+
+.submit-btn {
+    margin-left: 220px;
+    width: 300px;
+    padding: 12px 25px;
+    background: #7b56d1; /* Button matches gradient colors */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4f87ff; /* Hover effect on button */
+}
+
+.thank-you-message p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+    display: none;
+}
+
+.feedback-form.submitted .thank-you-message {
+    display: block;
+}
+
+</style>
+<script>
+  document.querySelector('.feedback-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    this.classList.add('submitted');
+});
+</script>
 
   <!--Cookie pop up-->
   <div id="cookie-popup" class="cookie-container">
