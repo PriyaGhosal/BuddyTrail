@@ -1,0 +1,11 @@
+/* CSS for AR Experiences */
+#ar-experience {
+    padding: 20px;
+    background: #e0f7fa;
+    text-align: center;
+}
+
+#ar-view img {
+    width: 50%;
+    margin-top: 10px;
+}

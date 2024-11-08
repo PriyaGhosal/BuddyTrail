@@ -1,0 +1,27 @@
+/* CSS for Local Attraction Highlights */
+#local-attractions {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.attraction {
+    width: 45%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.attraction img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.itinerary, .seasonal-events {
+    margin-top: 20px;
+}
