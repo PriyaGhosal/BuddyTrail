@@ -2438,7 +2438,7 @@ input#rate-5:checked ~ header:before {
   color: black;
   font-size: 18px;
   display: inline-block;
-  padding: 10px 15px; /* Adds padding around the text */
+  padding: 10px 7px; /* Adds padding around the text */
   border-radius: 20px; /* Creates rounded corners */
   transition: all 0.3s ease, color 0.3s; /* Smooth transition */
 }
