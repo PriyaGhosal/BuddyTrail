@@ -507,10 +507,9 @@ footer {
 }
 
 .logo-footer img {
-    width: 80px;
+    width: 85px;
     /* Set image width */
-    margin-right: 15px;
-    /* Space between logo and text */
+    margin-top: -15px;
 }
 
 #logo {

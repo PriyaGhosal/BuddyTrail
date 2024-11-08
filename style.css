@@ -348,6 +348,7 @@ nav {
 
 .logo {
   display: flex;
+  margin-left: 0;
 }
 
 #nav-list {
@@ -1171,7 +1172,7 @@ h2 {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 15px;
   color: #666; /* Paragraph color */
 }
 
