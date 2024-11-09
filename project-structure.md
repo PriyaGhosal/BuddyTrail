@@ -25,6 +25,7 @@
 │   ├── controllers
 │   │   ├── ContactController.js
 │   │   ├── authController.js
+│   │   ├── image.png
 │   │   └── ratingController.js
 │   ├── index.js
 │   ├── models
