@@ -784,7 +784,8 @@
         </div>
 
 
-            addEventListeners();
+        <!-- Was creating a code leak -->
+            <!-- addEventListeners();
 
         function addEventListeners() {
             // Add event listeners for read more links
@@ -897,7 +898,7 @@
             </div>
         `;
                 container.appendChild(article);
-            });
+            }); -->
 
         <!-- Legal Links Section -->
         <div class="footer-column">
@@ -1253,11 +1254,6 @@
                   }
               }
 
-      =
-                  });
-
-                  addEventListeners();
-              }
 
               function addEventListeners() {
                   // Add event listeners for read more links
@@ -1502,8 +1498,6 @@
         moonIcon.style.display = "none";
         localStorage.setItem("theme", "light");
     }
-});
-});
   </script>
 
 
