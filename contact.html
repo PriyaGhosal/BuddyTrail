@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Form</title>
+     <!-- External Stylesheets -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./contact.css" />
     <link rel="stylesheet" href="copyright.css" />
+    <!-- Icons and Fonts -->
+    <link rel="icon" href="/icons/airplane.svg" />
     <link
       rel="icon"
       href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000"
@@ -15,6 +18,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+  <!--Fontwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -22,6 +26,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+      <!-- External Stylesheets -->
   </head>
   <style>
        /* circle styles */
@@ -128,8 +133,7 @@
                     placeholder="Your message"
                   ></textarea>
                   <span class="error-message" id="messageError"></span>
-                </div>
-                <button type="submit">Send</button>
+                      <button type="submit">Send</button>
               </form>
             </div>
             <div class="image-section">
@@ -144,7 +148,9 @@
       </section>
     </div>
 
+    <!-- Footer Section -->
     <footer id="footer">
+
       <div class="footer-container">
         <!-- About Us Section -->
         <div class="footer-column">
@@ -221,13 +227,14 @@
           <p id="subscription-message"></p>
         </div>
       </div>
-
-      <!-- Footer Bottom Section -->
-      <div class="footer-bottom">
-        <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
-      </div>
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+        </div>
     </footer>
-
     <!-- Scripts -->
     <div class="gtranslate_wrapper"></div>
     <script>
@@ -322,6 +329,5 @@
     
     animateCircles();
   </script>
-
 </body>
 </html>
