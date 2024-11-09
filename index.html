@@ -290,7 +290,7 @@
      pointer-events: none;
      z-index: 99999999;
        
-
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -1345,28 +1345,55 @@ p {
       });
 
     </script>
+    
     <!-- Cab or Auto Booking -->
+
     <img style="position: absolute;height: 450px;left: 1250px;z-index:10;top: 4200px;mix-blend-mode: multiply;" src="img/BOOK-img.avif" alt="image">
     <section id="cab-booking" class="cab-booking-section light-mode" style="border: 2px solid #FFFFFF;">
       <div class="booking-container">
         <h1 style="color: white; font-size: xx-large;">Book a Cab or Auto</h1>
-        <form action="/book-cab" method="POST">
-          <div class="form-group" style="display: flex; flex-wrap: wrap;">
+        <!-- <form action="/book-cab" method="POST"> -->
+            
+            <!--Make sure the form has the autocomplete function switched off:-->
+          <div class="autocomplete-container">
+              <form autocomplete="off" action="/action_page.php" style="position: relative;">
+              <div class="autocomplete " >
+                <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
+                <input id="myInput" type="text" name="myCountry" placeholder="Enter pickup location" >
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
+            </form>
+          </div>
+          <div class="autocomplete-container">
+            <form autocomplete="off" action="/action_page.php" style="position: relative;">
+              <div class="autocomplete " >
+                <label for="pickup-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
+                <input id="myInput" type="text" name="myCountry" placeholder="Enter drop location" >
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
+            </form>
+          </div>
+            
+            
+            
+          <!-- <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="pickup-location" style="font-size: 15px;"><strong>Pickup Location</strong></label>
-            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required />
+            <input type="text" id="pickup-location" onkeyup="changeInput(this.value)" class="form-control form-control-lg search" name="pickup-location" placeholder="Enter pickup location" required style="padding-left: 12px;" />
+            <div id="result1" class="list-group" >
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
           </div>
           <div class="form-group" style="display: flex; flex-wrap: wrap;">
             <label for="drop-location" style="font-size: 15px;"><strong>Drop Location</strong></label>
-            <input type="text" id="drop-location" name="drop-location" placeholder="Enter drop location" required />
+            <input type="text" id="drop-location" onkeyup="changeInput(this.value)" class="form-control form-control-lg search" name="drop-location" placeholder="Enter drop location" required style="padding-left: 12px;"/>
+            <div id="result2" class="list-group">
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="60" frameborder="0" style="border:0"></iframe>
-          </div>
+           </div> -->
 
         <form
-          action="/book-cab"
+          action="/action_page.php"
           method="POST"
           style="
-            margin-left: 40px;
+            /* margin-left: 40px; */
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -1393,7 +1420,7 @@ p {
           </select>
         </div>
 
-          <div class="form-group" style="display: flex; flex-wrap: wrap;">
+          <div class=" form-group" style="display: flex; flex-wrap: wrap; width: 100%;">
           <label for="travel-date" style="font-size: 15px;"><strong>Travel Date</strong></label>
           <input type="date" id="travel-date" name="travel-date" required min="" />
 
@@ -1405,7 +1432,7 @@ p {
           </script>
 
         </div>
-          <div class="form-group" style="display: flex; flex-wrap: wrap;">
+          <div class="form-group" style="display: flex; flex-wrap: wrap; width: 100%;">
             <label for="travel-time" style="font-size: 15px;"><strong>Travel Time</strong></label>
             <input type="time" id="travel-time" name="travel-time" required />
           </div>
@@ -3660,6 +3687,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
 
       <script src="visi.js"></script>
       <script src="script.js"></script>
+      <script src="map autofill.js"></script>
 
 </body>
 
