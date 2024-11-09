@@ -721,54 +721,45 @@
         <!-- About Us Section -->
         <div class="footer-column">
           <h3>About Us</h3>
-          <p>
-            Discover and plan affordable trips with BuddyTrail's travel
-            companion tools.
-          </p>
+          <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
           <!-- Newsletter Form Section -->
-          <style>
-            .footer-column.newsletter {
+        <style>
+          .footer-column.newsletter {
               max-width: 300px;
               margin: 0 auto;
               text-align: center;
-            }
-            #newsletter-form {
+          }
+          #newsletter-form {
               display: flex;
               flex-direction: column;
               align-items: center;
-            }
-            #email {
+          }
+          #email {
               width: 100%;
               margin-bottom: 10px;
               padding: 8px;
               box-sizing: border-box;
-            }
-            button[type="submit"] {
+          }
+          button[type="submit"] {
               width: 100px;
               padding: 6px;
               font-size: 14px;
-              background-color: #007bff;
-            }
-            #subscription-message {
+          }
+          #subscription-message {
               font-size: 14px;
               margin-top: 10px;
-            }
-          </style>
-          <div class="footer-column newsletter" id="newsletter">
-            <h3>Subscribe to Our Newsletter</h3>
-            <form id="newsletter-form">
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
-              <button type="submit">Subscribe</button>
-            </form>
-            <p id="subscription-message"></p>
-          </div>
+          }
+      </style>
+        <div class="footer-column newsletter" id="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscription-message"></p>
         </div>
-
+        </div>
+    
         <!-- Quick Links Section -->
         <div class="footer-column">
           <h3>Quick Links</h3>
@@ -778,127 +769,11 @@
             <li><a href="faq.html" class="faq-link">FAQs</a></li>
             <li><a href="servicespage.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="welcome.html">Testimonials</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="contributor/contributor.html">Our Contributor</a></li>
+            <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
           </ul>
         </div>
-
-
-        <!-- Was creating a code leak -->
-            <!-- addEventListeners();
-
-        function addEventListeners() {
-            // Add event listeners for read more links
-            document.querySelectorAll('.read-more').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const article = e.target.closest('.blog-post');
-                    const content = article.querySelector('.content');
-                    const fullContent = article.querySelector('.full-content');
-
-                    if (content.style.display !== 'none') {
-                        content.style.display = 'none';
-                        fullContent.style.display = 'block';
-                        e.target.textContent = 'Read Less';
-                    } else {
-                        content.style.display = 'block';
-                        fullContent.style.display = 'none';
-                        e.target.textContent = 'Read More';
-                    }
-                });
-            });
-
-            // Add event listeners for comment forms
-            document.querySelectorAll('.comment-form').forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const postId = parseInt(e.target.getAttribute('data-post-id'));
-                    const comment = e.target.querySelector('textarea').value;
-                    addComment(postId, comment);
-                    e.target.reset();
-                });
-            });
-        }
-
-        function populateFilters() {
-            const categoryFilter = document.getElementById('categoryFilter');
-            const tagFilter = document.getElementById('tagFilter');
-            const categories = getLocalData('categories');
-            const tags = getLocalData('tags');
-
-            categoryFilter.innerHTML = '<option value="">All Categories</option>';
-            tagFilter.innerHTML = '<option value="">All Tags</option>';
-
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categoryFilter.appendChild(option);
-            });
-
-            tags.forEach(tag => {
-                const option = document.createElement('option');
-                option.value = tag;
-                option.textContent = tag;
-                tagFilter.appendChild(option);
-            });
-
-            // Add event listeners for filters
-            categoryFilter.addEventListener('change', filterPosts);
-            tagFilter.addEventListener('change', filterPosts);
-        }
-
-        function filterPosts() {
-            const selectedCategory = document.getElementById('categoryFilter').value;
-            const selectedTag = document.getElementById('tagFilter').value;
-            const posts = getLocalData('blogPosts');
-
-            const filteredPosts = posts.filter(post => {
-                const categoryMatch = !selectedCategory || post.category === selectedCategory;
-                const tagMatch = !selectedTag || post.tags.includes(selectedTag);
-                return categoryMatch && tagMatch;
-            });
-
-            renderFilteredPosts(filteredPosts);
-        }
-
-        function renderFilteredPosts(filteredPosts) {
-            const container = document.querySelector('.blog-container');
-            container.innerHTML = '';
-
-            filteredPosts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                article.innerHTML = `
-            <h2>${post.title}</h2>
-            <div class="meta">Posted on ${post.date} by ${post.author}</div>
-            <div class="category">${post.category}</div>
-            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
-            <div class="content">
-                <p>${post.content.substring(0, 150)}...</p>
-            </div>
-            <div class="full-content" style="display: none;">
-                <p>${marked(post.content)}</p>
-            </div>
-            <a href="#" class="read-more" data-id="${post.id}">Read More</a>
-            <div class="comments-section">
-                <h3>Comments (${post.comments.length})</h3>
-                <div class="comments">
-                    ${post.comments.slice(0, 2).map(comment => `
-                        <div class="comment">
-                            <p>${comment.text}</p>
-                            <small>${comment.date}</small>
-                        </div>
-                    `).join('')}
-                </div>
-                <form class="comment-form" data-post-id="${post.id}">
-                    <textarea placeholder="Add a comment"></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
-            </div>
-        `;
-                container.appendChild(article);
-            }); -->
 
         <!-- Legal Links Section -->
         <div class="footer-column">
@@ -909,46 +784,36 @@
             <li><a href="copyright.html">Copyright Notice</a></li>
             <li><a href="disclaimer.html">Disclaimer</a></li>
             <li><a href="cookie_policy.html">Cookie Policy</a></li>
+    
+    
+    
           </ul>
         </div>
-
+    
         <!-- Contact Us Section -->
         <div class="footer-column">
           <h3>Contact Us</h3>
           <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
           <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
           <!-- Follow Us Section -->
-          <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="https://discord.com/invite/priyaghosal" target="_blank"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a
-                href="https://x.com/https://twitter.com/PriyaGhosa39968"
-                target="_blank"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/PriyaGhosal/BuddyTrail"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/priya-ghosal-785771286/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://discord.com/invite/priyaghosal" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://x.com/https://twitter.com/PriyaGhosa39968" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://github.com/PriyaGhosal/BuddyTrail" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/priya-ghosal-785771286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
+        </div>
       </div>
-
+    
       <!-- Footer Bottom Section -->
       <div class="footer-bottom">
         <p class="copyright-b">&copy; 2024 BuddyTrail. All rights reserved.</p>
       </div>
     </footer>
+<!-- <<<<<<< second-branch -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
     <script>
               // Initialize data in localStorage if it doesn't exist
@@ -1470,109 +1335,276 @@
         closeBtn.addEventListener("click", function () {
           navList.classList.remove("active");
         });
+
       });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const modeToggle = document.getElementById("modeToggle");
-        const sunIcon = document.querySelector(".sun-icon");
-        const moonIcon = document.querySelector(".moon-icon");
-
-        // Check saved theme in localStorage and apply it
-        const currentTheme = localStorage.getItem("theme") || "light";
-        if (currentTheme === "dark") {
-          document.body.classList.add("dark-mode");
-          sunIcon.style.display = "none";
-          moonIcon.style.display = "inline-block";
+    
+      this.reset(); // Clears the form fields
+    });
+    
+          function closePopup() {
+            document.getElementById('confirmationPopup').style.display = 'none';
+          }
+        </script>
+    
+    
+     <div class="gtranslate_wrapper"></div>
+    
+     <script>
+    
+     window.gtranslateSettings = {
+       "default_language":"en",
+       "detect_browser_language":true,
+       "wrapper_selector":".gtranslate_wrapper"
+     }
+    
+     </script>
+    
+     <script
+       src="https://cdn.gtranslate.net/widgets/latest/float.js"
+       defer
+     ></script>
+    <!-- Adding scroll progressBar-->
+     <script>
+    
+      window.onscroll = function() {
+        updateProgressBar();
+      };
+    
+    
+      function updateProgressBar() {
+          var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrollPercent = (scrollTop / scrollHeight) * 100;
+    
+          document.getElementById("progressBar").style.width = scrollPercent + "%";
+      }
+    
+      </script>
+         <style>
+          .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(24, 23, 24, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
+    
+          .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+          }
+    
+          .popup-content h2 {
+            margin-top: 0;
+          }
+    
+          .popup-content button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+    
+          .custom-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 400px;
+            padding: 20px;
+            background-color: black;
+            border: 1px solid white;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+    
+      .custom-alert p {
+    /*     white color text on black background will look nice */
+        color:white;
+        margin: 0;
+        line-height: 1.5;
+      }
+        </style>
+      </script>
+      <script src="script.js">
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission
+    
+        const email = document.getElementById('email').value.trim(); // Get the email value
+        const messageElement = document.getElementById('subscription-message'); // Get the message display element
+    
+        // Regular expression to validate email format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        if (emailPattern.test(email)) {
+            // Simulate a successful subscription
+            messageElement.textContent = 'Subscribed successfully!'; // Show success message
+            messageElement.style.color = 'green'; // Change message color to green
+    
+            // Clear the input field after successful submission
+            document.getElementById('email').value = '';
         } else {
-            section.classList.remove('dark-mode');
+            messageElement.textContent =  'Please enter a valid email address.'; // Show error message
+            messageElement.style.color =  'red'; // Change message color to red
         }
     });
+        </script>
 
-    // Update icons and local storage
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-    }
-  </script>
-
-
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
-
-<!-- Circles -->
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-
-<script>
-    // coordinates for the cursor :
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
-
-    const colors = [
-      "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
-    ];
-
-    circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
-
-    // update the coordinates when the mouse moves:
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
-    });
-
-    // animation function to move the circles:
-    function animateCircles() {
-      let x = coords.x;
-      let y = coords.y;
-
-      circles.forEach(function (circle, index) {
-       
-
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
-        circle.style.scale = (circles.length - index) / circles.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
-
-      requestAnimationFrame(animateCircles);
-    }
     
-    animateCircles();
-  </script>
-
-</body>
-
-</html>
+        <div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    
+    
+        <script>
+     main
+          // coordinates for the cursor :
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+      
+          const colors = [
+            "#fc5720", "#fc6532", "#fc6532","#fd8b65", "#d5585c", "#fac3b1", "#f4d5cb", "#fefefe", "#fefefe", "#cdf2c5", "#b2eca5", "#95e283", "#7dda68", "#4adc2d", "#69d451", "#54c939", "#34b916", "#28b309", "#1e9c02", 
+          ];
+      
+          circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+          });
+      
+          // update the coordinates when the mouse moves:
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+          });
+      
+          // animation function to move the circles:
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+      
+            circles.forEach(function (circle, index) {
+             
+      
+              circle.style.left = x - 12 + "px";
+              circle.style.top = y - 12 + "px";
+              circle.style.scale = (circles.length - index) / circles.length;
+      
+              circle.x = x;
+              circle.y = y;
+      
+              const nextCircle = circles[index + 1] || circles[0];
+              x += (nextCircle.x - x) * 0.3;
+              y += (nextCircle.y - y) * 0.3;
+            });
+      
+            requestAnimationFrame(animateCircles);
+          }
+          
+          animateCircles();
+    
+          document.addEventListener("DOMContentLoaded", function () {
+            const coords = { x: 0, y: 0 };
+            const circles = document.querySelectorAll(".circle");
+    
+            circles.forEach(function (circle) {
+              circle.x = 0;
+              circle.y = 0;
+            });
+    
+            window.addEventListener("mousemove", function (e) {
+              coords.x = e.pageX;
+              coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+            });
+    
+            function animateCircles() {
+              let x = coords.x;
+              let y = coords.y;
+    
+              circles.forEach(function (circle, index) {
+                circle.style.left = `${x - 12}px`;
+                circle.style.top = `${y - 12}px`;
+                circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+                const nextCircle = circles[index + 1] || circles[0];
+                circle.x = x;
+                circle.y = y;
+    
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+              });
+    
+              requestAnimationFrame(animateCircles);
+            }
+    
+            animateCircles();
+          });
+    
+     main
+        </script>
+      
+      <body>
+        <div class="container">
+            <!-- Your existing content -->
+    
+            <!-- Chatbot Icon -->
+            <div class="chatbot-icon" onclick="toggleChatbot()">
+              🗨️ <!-- You can replace this with an actual image/icon -->
+            </div>
+    
+            <!-- Chatbot Iframe -->
+            <div class="chatbot-container" id="chatbotContainer">
+                <iframe src="https://www.chatbase.co/chatbot-iframe/GtcyNsebrd_nrDUEQz53T"
+                        width="350"
+                        height="500"
+                        style="border:none;">
+                </iframe>
+            </div>
+        </div>
+    
+        <!-- Scripts -->
+        <script src="script.js"></script>
+        <script>
+            function toggleChatbot() {
+                const chatbotContainer = document.getElementById('chatbotContainer');
+                if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                    chatbotContainer.style.display = 'block';
+                } else {
+                    chatbotContainer.style.display = 'none';
+                }
+            }
+          
+        </script>
+        <br /><br />
+        <link rel="stylesheet" href="visi.css">
+    
+        <div class="visitor-counter">
+          <div>Visitor</div>
+          <div class="website-counter"></div>
+        </div>
+        <script src="path/to/visitorCounter.js"></script>
+        <script src="./assets/css/visitors.css"></script>
+    
+          <script src="visi.js"></script>
+          <script src="script.js"></script>
+    
+    </body>
+    
+    </html>
