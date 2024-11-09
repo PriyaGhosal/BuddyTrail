@@ -20,6 +20,20 @@
   <meta name="twitter:title" content="BuddyTrail - Your Travel Companion">
   <meta name="twitter:description" content="Join BuddyTrail to explore the world, plan your trips, and connect with a community of travelers.">
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker2.js')
+              .then(registration => {
+                  console.log('ServiceWorker registration successful');
+              })
+              .catch(err => {
+                  console.log('ServiceWorker registration failed: ', err);
+              });
+      });
+    }
+  </script>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
