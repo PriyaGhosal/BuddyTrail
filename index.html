@@ -3232,12 +3232,50 @@ textarea.form-control {
     <div class="footer-column newsletter" id="newsletter">
       <h3>Subscribe to Our Newsletter</h3>
       <form id="newsletter-form">
-        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="email" id="email1" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
       </form>
       <p id="subscription-message"></p>
     </div>
     </div>
+    <script>
+      document.getElementById("newsletter-form").addEventListener("submit", async function(event) {
+  event.preventDefault(); // Prevent the form from refreshing the page
+
+  const email = document.getElementById("email1").value;
+  const subscriptionMessage = document.getElementById("subscription-message");
+
+  try {
+    console.log(email)
+    // Call the API to subscribe the user to the newsletter
+    const response = await fetch("http://localhost:5000/api/contact/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      // Show success message
+      subscriptionMessage.textContent = "Thank you for subscribing!";
+      subscriptionMessage.style.color = "green";
+      document.getElementById("email").value = ""; // Clear the email input
+    } else {
+      // Show error message from the server
+      subscriptionMessage.textContent = result.message || "Subscription failed. Please try again.";
+      subscriptionMessage.style.color = "red";
+    }
+  } catch (error) {
+    // Show a generic error message if the API call fails
+    subscriptionMessage.textContent = "An error occurred. Please try again.";
+    subscriptionMessage.style.color = "red";
+  }
+});
+
+    </script>
 
     <!-- Quick Links Section -->
     <div class="footer-column">
@@ -3500,7 +3538,7 @@ textarea.form-control {
   }
     </style>
   </script>
-  <script src="script.js">
+  <!-- <script src="script.js">
 document.getElementById('newsletter-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
 
@@ -3522,7 +3560,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         messageElement.style.color =  'red'; // Change message color to red
     }
 });
-    </script>
+    </script> -->
 
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
