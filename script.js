@@ -481,7 +481,17 @@ function initMap() {
         {lat: -8.3405, lng: 115.0920, title: 'Bali, Indonesia', content: '<h3>Bali</h3><p>A tropical paradise known for its beaches, temples, and vibrant culture.</p>'},
         {lat: 1.3521, lng: 103.8198, title: 'Singapore', content: '<h3>Singapore</h3><p>A global financial hub known for its cleanliness, Marina Bay Sands, and the Merlion.</p>'},
         {lat: -33.8688, lng: 151.2093, title: 'Sydney, Australia', content: '<h3>Sydney</h3><p>Famous for the Sydney Opera House, Harbour Bridge, and beautiful beaches.</p>'},
-        {lat: 35.6762, lng: 139.6503, title: 'Tokyo, Japan', content: '<h3>Tokyo</h3><p>A bustling metropolis known for its skyscrapers, shopping, and cherry blossoms.</p>'}
+        {lat: 35.6762, lng: 139.6503, title: 'Tokyo, Japan', content: '<h3>Tokyo</h3><p>A bustling metropolis known for its skyscrapers, shopping, and cherry blossoms.</p>'},
+        {lat: -22.9068, lng: -43.1729, title: 'Rio de Janeiro, Brazil', content: '<h3>Rio de Janeiro</h3><p>Known for its Carnival festival, Christ the Redeemer statue, and beautiful beaches like Copacabana.</p>'},
+        {lat: 41.9028, lng: 12.4964, title: 'Rome, Italy', content: '<h3>Rome</h3><p>Known for its ancient history, landmarks like the Colosseum and Vatican City.</p>'},
+        {lat: 55.7558, lng: 37.6173, title: 'Moscow, Russia', content: '<h3>Moscow</h3><p>Famous for the Red Square, Kremlin, and vibrant cultural scene.</p>'},
+        {lat: -34.6037, lng: -58.3816, title: 'Buenos Aires, Argentina', content: '<h3>Buenos Aires</h3><p>Known for its European-style architecture and tango dancing.</p>'},
+        {lat: 39.9042, lng: 116.4074, title: 'Beijing, China', content: '<h3>Beijing</h3><p>Famous for the Great Wall, Forbidden City, and rich history.</p>'},
+        {lat: 52.5200, lng: 13.4050, title: 'Berlin, Germany', content: '<h3>Berlin</h3><p>Known for its World War II history, art scene, and the Berlin Wall.</p>'},
+        {lat: 37.7749, lng: -122.4194, title: 'San Francisco, USA', content: '<h3>San Francisco</h3><p>Famous for the Golden Gate Bridge, Alcatraz Island, and steep hills.</p>'},
+        {lat: 43.6532, lng: -79.3832, title: 'Toronto, Canada', content: '<h3>Toronto</h3><p>Known for the CN Tower, diverse culture, and vibrant arts scene.</p>'},
+        {lat: 13.7563, lng: 100.5018, title: 'Bangkok, Thailand', content: '<h3>Bangkok</h3><p>Known for its ornate temples, street life, and vibrant markets.</p>'},
+        {lat: 25.2048, lng: 55.2708, title: 'Abu Dhabi, UAE', content: '<h3>Abu Dhabi</h3><p>Famous for its modern skyline, luxurious shopping, and cultural landmarks.</p>'},
     ];
 
     destinations.forEach(function(destination) {
