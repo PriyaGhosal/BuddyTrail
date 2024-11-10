@@ -289,7 +289,7 @@
      left: 0;
      pointer-events: none;
      z-index: 99999999;
-       
+    }  
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -672,10 +672,10 @@
     </section>
     <section id="benefits">
       <header class="benefits-head">
-        <h2>The Perfect travel</h2>
+        <h2>The Perfect Travel</h2>
         <h3>
-          we cover everything from picking the perfect hotel, <br />to flight
-          and destination
+          We cover everything from picking the perfect hotel, <br />to flight
+          and destination!
         </h3>
       </header>
       <!-- Start of Cards Container -->
@@ -734,11 +734,47 @@
     .dark-mode .card{
       background: #0e0e0e;
     }
+
     .dark-mode .card h4{
       color: #f39c12;
     }
+
     .dark-mode .card p{
       color: #fff;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #d7e1fa;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+    }
+
+    @media (max-width: 1200px) {
+        .card {
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            max-width: calc(100% - 20px);
+            margin: 10px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            padding: 15px;
+        }
     }
 </style>
 <script>
@@ -812,7 +848,7 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
+        <h2 style="color: #ffffff; font-size: 3rem;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
         <div class="carousel">
@@ -944,6 +980,7 @@ p {
 
 /* Deal Item Styling */
 .deal-item {
+  min-height: 350px;
   min-width: 300px;
   flex: 0 0 300px;
   box-sizing: border-box;
@@ -993,16 +1030,17 @@ button:hover {
 /* Carousel Button Styles */
 .carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 45px;
+  width: 45px;
+  top: 45%;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  padding: 15px;
+  padding: 10px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .prev {
@@ -1014,8 +1052,7 @@ button:hover {
 }
 
 .carousel-button:hover {
-  background-color: #a4caad;
-  transform: scale(1.1);
+  background-color: #455eb0;
 }
 
 /* Animation for Carousel Slide */
@@ -1050,7 +1087,7 @@ p {
 }
 .btn-book-now {
   position: fixed;
-    top: 84%;
+    top: 80%;
     left: 34%;
 }
 
