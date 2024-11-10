@@ -40,7 +40,7 @@
     <link rel="stylesheet" href= "RatingStyle.css">
     <link rel="stylesheet" href="button-ui.css">
     <link rel="stylesheet" href= "style.css" />
-    <link rel="stylesheet" href= "./styles/popup.css">
+    
     <link rel="stylesheet" href= "cookie-popup.css">
     <link rel="preconnect" href= "https://fonts.googleapis.com" />
     <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin />
@@ -571,32 +571,30 @@
     </header>
 
 <!-- Pop up HTML Starts Here -->
- <!-- Pop-up for BuddyTrail -->
-<div id="popup" class="popup"> 
-  <div id="popup-content">
-    <div class="popup-left">
-          <img if="popupimage" src="./img/popup1.jpg" alt="Travel Image">
+
+<div id="popup-nl" class="popup-nl">
+  <div class="popup-content-nl">
+      <div class="popup-left-nl">
+          <img src="popup.jpg" alt="finance">
       </div>
-      <div class="popup-right">   
-        <button id="cross-btn" class="cross-btn">&times;</button>
+
+      <div class="popup-right-nl">
+          <a href="# " class="close1-btn-nl close-nl">X</a>
+
           <h1>Ready for Your Next Adventure?</h1>
-          <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
-          <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
-          <form id="emailForm" >
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button type="submit" id="signup-btn">Sign Up</button>
+          <h2 class="h2-nl">Join BuddyTrail and Plan Your Dream Vacation Today!</h2>
+          <p class="pop_up-nl">Sign up to receive 20% discount on your first booking!</p>
+          <form id="emailForm-nl">
+              <input type="email" id="email-nl" placeholder="Enter your email" required>
+              <button type="submit" class="signup-btn1-nl">Sign Up</button>
           </form>
-          <a href="#" id="no-thanks">No thanks</a>
-          <p id="terms">By signing up, you agree to our <a id="link" href="terms_of_service.html" style="text-decoration: underline;">Terms of Service</a> and <a id="link" href="privacypolicy.html" style="text-decoration: underline;">Privacy Policy</a></p>
+          <a href="#" class="no-thanks-nl close-nl">No thanks</a>
+          <p class="terms-nl" style="white-space: nowrap;">By subscribing to newsletters, you agree to our <br><a href="terms&cond.html">Terms of Service</a> and <a href="privacynotice.html">Privacy Policy</a>.</p>
       </div>
   </div>
 </div>
-<script>
-  document.getElementById("cross-btn").addEventListener("click", function() {
-    document.getElementById("popup").style.display = "none";
-});
+<script src="script/popup.js"></script>
 
-</script>
 <!-- Pop up HTML ends Here -->
 
 <!-- JS to handle hamburger and close button -->
@@ -3287,7 +3285,7 @@ textarea.form-control {
           box-sizing: border-box;
       }
       button[type="submit"] {
-          width: 100px;
+          
           padding: 6px;
           font-size: 14px;
       }
