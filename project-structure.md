@@ -26,7 +26,8 @@
 │   │   ├── ContactController.js
 │   │   ├── authController.js
 │   │   ├── image.png
-│   │   └── ratingController.js
+│   │   ├── ratingController.js
+│   │   └── subscribeController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
@@ -39,6 +40,7 @@
 │   ├── routes
 │   │   ├── ContactRoutes.js
 │   │   ├── RatingRoutes.js
+│   │   ├── SubscribeRoute.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
@@ -185,7 +187,8 @@
 ├── romantic-gateway.css
 ├── romantic-gateway.html
 ├── script
-│   └── popup.js
+│   ├── popup.js
+│   └── subscribe.js
 ├── script.js
 ├── security.md
 ├── service-worker.js
