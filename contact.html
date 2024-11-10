@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Form</title>
-    
+
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./contact.css">
-    
+
     <!-- Icons and Fonts -->
-    <link rel="icon" href="/icons/airplane.svg" />
     <link rel="icon" href="https://img.icons8.com/?size=100&id=I24lanX6Nq71&format=png&color=000000">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Internal Styles -->
     <style>
-        /* General styling */
         .card {
             width: 80%;
             margin: 30px auto;
@@ -43,21 +41,13 @@
             gap: 20px;
         }
 
-        .form-section {
+        .form-section, .image-section {
             flex: 1;
             min-width: 45%;
-            color: #121111;
-        }
-
-        .image-section img {
-            max-width: 100%;
-            height: auto;
-            max-height: 500px;
         }
 
         .form-group {
             margin-bottom: 20px;
-            color: #121111;
         }
 
         label {
@@ -71,10 +61,6 @@
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
-        }
-
-        textarea {
-            height: 120px;
         }
 
         button[type="submit"] {
@@ -91,13 +77,6 @@
             background-color: black;
         }
 
-        .error-message {
-            color: red;
-            font-size: 0.9em;
-            display: none;
-        }
-
-        /* Tooltip */
         .tooltip {
             visibility: hidden;
             background-color: black;
@@ -131,7 +110,6 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Header Section -->
     <header style="background-color: black; height: 85px">
@@ -172,7 +150,6 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your message" required></textarea>
                         <div class="tooltip">Feel free to describe your message in detail.</div>
-                        <span class="error-message" id="messageError"></span>
                     </div>
                     <button type="submit">Send</button>
                 </div>
@@ -182,59 +159,5 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer Section -->
-    <footer id="footer">
-        <div class="footer-container">
-            <!-- About Us -->
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>Discover and plan affordable trips with BuddyTrail's travel companion tools.</p>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="footer-column newsletter">
-                <h3>Subscribe to Our Newsletter</h3>
-                <form id="newsletter-form">
-                    <input type="email" id="email" placeholder="Enter your email" required />
-                    <button type="submit">Subscribe</button>
-                    <p id="subscription-message"></p>
-                </form>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="servicespage.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="contributor/contributor.html">Our Contributor</a></li>
-                </ul>
-            </div>
-
-            <!-- Legal Links -->
-            <div class="footer-column">
-                <h3>Legal Links</h3>
-                <ul>
-                    <li><a href="terms_of_service.html">Terms of Service</a></li>
-                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    <li><a href="copyright.html">Copyright Notice</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
