@@ -288,9 +288,9 @@
      top: 0;
      left: 0;
      pointer-events: none;
-     z-index: 99999999;
-       
-    }
+      z-index: 99999999
+    } 
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -553,6 +553,24 @@
       <li><a href="./contact.html" class="navhover">Contact</a></li>
       <li><a href="#reviews" class="navhover">Reviews</a></li>
       <li><a href="auth.html" class="navhover">Sign In</a></li>
+       <!-- Profile Icon -->
+       <li class="nav-item no-underline">
+        <a href="./profile.html" class="profile-link" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="https://i.postimg.cc/NFFmtc9K/xnz-Mst5-V-400x400.jpg" alt="Profile Icon" style="width: 50px; height: 50px; border-radius: 50%; margin-top: -1px;">
+       </a>
+   </li>
+
+   <style>
+
+     /* Override the existing hover styles */
+     .navbar-nav .nav-item .profile-link:hover {
+         background-color: transparent !important; /* Remove background color */
+         border-radius: 0 !important; /* Reset border radius */
+         transform: none !important; /* Prevent scaling */
+     }
+
+   </style>
+
 
     </ul>
 
@@ -572,12 +590,13 @@
 
 <!-- Pop up HTML Starts Here -->
  <!-- Pop-up for BuddyTrail -->
-<div id="popup" class="popup">
+<div id="popup" class="popup"> 
   <div id="popup-content">
-      <div class="popup-left">
+    <div class="popup-left">
           <img if="popupimage" src="./img/popup1.jpg" alt="Travel Image">
       </div>
-      <div class="popup-right">
+      <div class="popup-right">   
+        <button id="cross-btn" class="cross-btn">&times;</button>
           <h1>Ready for Your Next Adventure?</h1>
           <p class="h2">Join <strong>BuddyTrail</strong> and Plan Your Dream Vacation Today!</p>
           <p>Sign up to receive <strong> 20% discount </strong> on your first booking!</p>
@@ -590,6 +609,12 @@
       </div>
   </div>
 </div>
+<script>
+  document.getElementById("cross-btn").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+});
+
+</script>
 <!-- Pop up HTML ends Here -->
 
 <!-- JS to handle hamburger and close button -->
@@ -665,10 +690,10 @@
     </section>
     <section id="benefits">
       <header class="benefits-head">
-        <h2>The Perfect travel</h2>
+        <h2>The Perfect Travel</h2>
         <h3>
-          we cover everything from picking the perfect hotel, <br />to flight
-          and destination
+          We cover everything from picking the perfect hotel, <br />to flight
+          and destination!
         </h3>
       </header>
       <!-- Start of Cards Container -->
@@ -727,11 +752,47 @@
     .dark-mode .card{
       background: #0e0e0e;
     }
+
     .dark-mode .card h4{
       color: #f39c12;
     }
+
     .dark-mode .card p{
       color: #fff;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #d7e1fa;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+    }
+
+    @media (max-width: 1200px) {
+        .card {
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            max-width: calc(100% - 20px);
+            margin: 10px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            padding: 15px;
+        }
     }
 </style>
 <script>
@@ -805,7 +866,7 @@
     </section>
     <!-- deals -->
     <section id="deals" class="deals-section">
-        <h2 style="color: #000000;">Exclusive Deals and Offers</h2>
+        <h2 style="color: #ffffff; font-size: 3rem;">Exclusive Deals and Offers</h2>
         <p>Explore our best deals on flights, hotels, and travel packages. Save big on your next adventure!</p>
 
         <div class="carousel">
@@ -937,6 +998,7 @@ p {
 
 /* Deal Item Styling */
 .deal-item {
+  min-height: 350px;
   min-width: 300px;
   flex: 0 0 300px;
   box-sizing: border-box;
@@ -986,16 +1048,17 @@ button:hover {
 /* Carousel Button Styles */
 .carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 45px;
+  width: 45px;
+  top: 45%;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  padding: 15px;
+  padding: 10px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .prev {
@@ -1007,8 +1070,7 @@ button:hover {
 }
 
 .carousel-button:hover {
-  background-color: #a4caad;
-  transform: scale(1.1);
+  background-color: #455eb0;
 }
 
 /* Animation for Carousel Slide */
@@ -1043,7 +1105,7 @@ p {
 }
 .btn-book-now {
   position: fixed;
-    top: 84%;
+    top: 80%;
     left: 34%;
 }
 
@@ -1314,6 +1376,15 @@ p {
             </div></a>
             <a href="guide.html"><h3>Local Guide Connection</h3></a>
             <p>Partner with local guides and tour providers, allowing to book personalized tours or experiences led by locals for an authentic travel experience.</p>
+          </div>
+
+          <!-- Travel Cost Calculator-->
+          <div class="service-card">
+            <a href="Calculator.html"> <div class="icon">
+              <i class="fas fa-calculator"></i>
+            </div></a>
+            <a href="Calculator.html"><h3>Travel Cost Calculator</h3></a>
+            <p>The Travel Cost Calculator estimates journey costs based on distance, fuel, and travel mode, helping users plan and budget trips efficiently.</p>
           </div>
         </div>
 
@@ -1929,8 +2000,8 @@ select {
     <!--Emergency-->
     <section class="service" id="services">
     <div class="sos-container">
-      <h2>Emergency SOS</h2>
-      <p id="emergency-text" style="color: whitesmoke;">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
+      <u><h2>Emergency SOS</h2></u>
+      <p id="emergency-text" style="color: rgb(8, 69, 5);">In case of an emergency, press the button to send your current location to your emergency contacts.</p>
       <button id="sosButton" onclick="sendSOS()">Send SOS</button>
       <div id="sos-status"></div>
     </div>
@@ -2235,41 +2306,55 @@ main.main_blogs {
     <script src="script.js"></script>
     <!--forum Section-->
     <header class="forum_1">
-      <h1 id="h1darkbtn">Travel Discussion Forum</h1>
-      <nav class="hi">
-          <ul>
-              <li class="NAVI">
-                <!-- added favicon for destinations -->
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="destinationform.html">Destinations</a>
-              </li>
-              <li class="NAVI">
-                <!-- added favicon for travel planning -->
-                <i class="fa-solid fa-earth-americas"></i>
-                <a href="traveldisscussionform.html">Travel Planning</a>
-              </li>
-              <li class="NAVI">
-                <!-- added favicon for travel experience -->
-                <i class="fa-regular fa-face-smile"></i>
-                <a href="experience.html">Travel Experiences</a>
-              </li>
-              <li class="NAVI">
-                <i class="fa-solid fa-gear"></i>
-                <!-- added favicon for travel gear -->
-                <a href="gear.html">Travel Gear</a>
-              </li>
-              <li class="NAVI">
-                <!-- added favicon for travel safety -->
-                <i class="fa-solid fa-shield"></i>
-                <a href="travelsafety.html">Travel Safety</a>
-              </li>
-              <li class="NAVI">
-                <!-- added favicon for sustainable travel -->
-                <i class="fa-solid fa-seedling"></i>
-                <a href="sustainabeltravel.html">Sustainable Travel</a>
-              </li>
-          </ul>
-      </nav>
+      <div id="forum_id">
+        <h1 id="h1darkbtn"><u>Travel Discussion Forum</u></h1>
+        <nav class="hi">
+            <ul>
+                <li class="NAVI">
+                  <!-- added favicon for destinations -->
+                  <a href="destinationform.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Destinations
+                  </a>
+                </li>
+                <li class="NAVI">
+                  <!-- added favicon for travel planning -->
+                  <a href="traveldisscussionform.html">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    Travel Planning
+                  </a>
+                </li>
+                <li class="NAVI">
+                  <!-- added favicon for travel experience -->
+                  <a href="experience.html">
+                    <i class="fa-regular fa-face-smile"></i>
+                    Travel Experiences
+                  </a>
+                </li>
+                <li class="NAVI">
+                  <!-- added favicon for travel gear -->
+                  <a href="gear.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Travel Gear
+                  </a>
+                </li>
+                <li class="NAVI">
+                  <!-- added favicon for travel safety -->
+                  <a href="travelsafety.html">
+                    <i class="fa-solid fa-shield"></i>
+                    Travel Safety
+                  </a>
+                </li>
+                <li class="NAVI">
+                  <!-- added favicon for sustainable travel -->
+                  <a href="sustainabeltravel.html">
+                    <i class="fa-solid fa-seedling"></i>
+                    Sustainable Travel
+                  </a>
+                </li>
+            </ul>
+        </nav>
+      </div>
   </header>
   <style>
           /* General Styles */
@@ -2279,19 +2364,16 @@ main.main_blogs {
           background-color: #f4f4f9;
       }
 
-      /* Header Border */
-header.forum_1 {
 
-    border:  10px solid transparent; /* Initial transparent border */
-    border-image:  linear-gradient(to right,#44dfa6 , #a08be6); /* Gradient border */
-    border-image-slice:  1; /* Ensures the full gradient is applied */
-    border-radius:  10px; /* Rounded corners for smooth appearance */
-    transition:  border-color 0.3s ease; /* Smooth transition for hover effect */
-
-}
-
-header.forum_1:hover {
-    border-color: #ffcc00; /* Changes border color on hover */
+header #forum_id{
+  width: 1300px;
+  background: linear-gradient(135deg, #e6f7ff, #5ec1e2);;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
 
 /* Navigation Item Borders */
@@ -2315,28 +2397,26 @@ nav.hi ul li.NAVI i:hover  {
 
       /* Header Section */
       header.forum_1 {
-          background-color: #1e88e5; /* Primary color for the header */
-          color: white;
-          padding: 10px 20px; /* Minimal padding for compact height */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: white; /* Primary colour for Header */
+          /* color: rgb(0, 149, 255); */
+          padding: 20px 20px; /* Minimal padding for compact height */
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
-          min-height: 50px; /* Minimum height of the header bar */
+          min-height: 70px; /* Minimum height of the header bar */
           overflow: hidden;
       }
 
       h1#h1darkbtn {
-        color: white;
-        font-size:xx-large;
+          color:  rgb(4, 70, 111);
           margin: 0;
           letter-spacing: 1.2px;
           transition: color 0.3s ease;
       }
 
       h1#h1darkbtn:hover {
-          color: #ffcc00; /* Changes the color when hovered */
+          color: rgb(36, 155, 224); /* Changes the color when hovered */
       }
       p#darkbtn {
         font-size: large;
@@ -2348,26 +2428,26 @@ nav.hi ul li.NAVI i:hover  {
           margin: 0;
           padding: 0;
           display: flex;
-          gap: 0px;
+          gap: 8px;
       }
 
       nav.hi ul li.NAVI {
           position: relative;
       }
-
       nav.hi ul li.NAVI a {
           color: rgb(162, 37, 37);
           text-decoration: none;
-          font-size: 14px; /* Reduced font size for a more compact design */
+          font-size: 16px; /* Reduced font size for a more compact design */
           padding-right: 5px;
           padding: 8px 12px; /* Reduced padding to fit minimal height */
-          transition: color 0.3s, background-color 0.3s ease;
+          transition: color 0.3s, background-color 0.3s ease, transform 0.3s ease;
           border-radius: 5px; /* Slight rounding for a modern look */
       }
 
       nav.hi ul li.NAVI a:hover {
-          background-color: #ffcc00; /* Background highlight on hover */
-          color: #1e88e5; /* Text color change on hover */
+          background-color: #1f71ff; /* Background highlight on hover */
+          color: #ffffff; /* Text color change on hover */
+          transform: scale(1.1); /* Scale up the element on hover */
       }
 
       nav.hi ul li.NAVI a:hover::after {
@@ -2398,6 +2478,7 @@ nav.hi ul li.NAVI i:hover  {
 
 
   </style>
+
 
   <main>
     <style>
@@ -2558,6 +2639,10 @@ nav.hi ul li.NAVI i:hover  {
           margin: 0 auto;
           padding: 20px;
       }
+      .info-icon:hover{
+        background-color: white;
+      }
+
 </style>
         <section class="contact-section">
             <div class="container">
@@ -3156,13 +3241,6 @@ textarea.form-control {
   </div>
 
   <script src="chatbot.js"></script>
-  <div class="fixed bottom-0 right-2 scroll-container" id="scrollContainer" style="display: none;">
-    <button class="scroll-button group" id="scrollTopBtn">
-      <span class="tooltip-text-scroll">
-        <div class="tooltip-icon"> <i class="fa-solid fa-arrow-up" ></i></div>
-      </span>
-    </button>
-  </div>
 
   <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -3209,20 +3287,10 @@ textarea.form-control {
             });
         });
     </script>
-  <script>
-    window.addEventListener('scroll', function() {
-      const scrollContainer = document.getElementById('scrollContainer');
-      if (window.scrollY > 0) {
-        scrollContainer.style.display = 'block';
-      } else {
-        scrollContainer.style.display = 'none';
-      }
-    });
-  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-<footer id="footer">
+<footer id="footer" style="margin-bottom: -60px; margin-top: 60px;" >
   <div class="footer-container">
     <!-- About Us Section -->
     <div class="footer-column">
@@ -3259,12 +3327,50 @@ textarea.form-control {
     <div class="footer-column newsletter" id="newsletter">
       <h3>Subscribe to Our Newsletter</h3>
       <form id="newsletter-form">
-        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="email" id="email1" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
       </form>
       <p id="subscription-message"></p>
     </div>
     </div>
+    <script>
+      document.getElementById("newsletter-form").addEventListener("submit", async function(event) {
+  event.preventDefault(); // Prevent the form from refreshing the page
+
+  const email = document.getElementById("email1").value;
+  const subscriptionMessage = document.getElementById("subscription-message");
+
+  try {
+    console.log(email)
+    // Call the API to subscribe the user to the newsletter
+    const response = await fetch("http://localhost:5000/api/contact/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      // Show success message
+      subscriptionMessage.textContent = "Thank you for subscribing!";
+      subscriptionMessage.style.color = "green";
+      document.getElementById("email").value = ""; // Clear the email input
+    } else {
+      // Show error message from the server
+      subscriptionMessage.textContent = result.message || "Subscription failed. Please try again.";
+      subscriptionMessage.style.color = "red";
+    }
+  } catch (error) {
+    // Show a generic error message if the API call fails
+    subscriptionMessage.textContent = "An error occurred. Please try again.";
+    subscriptionMessage.style.color = "red";
+  }
+});
+
+    </script>
 
     <!-- Quick Links Section -->
     <div class="footer-column">
@@ -3277,7 +3383,7 @@ textarea.form-control {
         <li><a href="contact.html">Contact</a></li>
         <li><a href="welcome.html">Testimonials</a></li>
         <li><a href="team.html">Team</a></li>
-        <a href="./contributor/Contributors.html" id="ourvisionlink">Our Contributors</a>
+        <a href="./contributorss.html" id="ourvisionlink">Our Contributors</a>
       </ul>
     </div>
 
@@ -3341,70 +3447,6 @@ textarea.form-control {
   <!-- this script is for twitter icon  starts -->
  <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
  <!-- this script is for twitter icon  ends -->
-    <script>
-      // script.js
-
-      // change the color of navbar while  scrolling to make it visible
-
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".main-head");
-        if (window.scrollY > 0) {
-          navbar.classList.add("sticky"); // Add class when scrolled
-        } else {
-          navbar.classList.remove("sticky"); // Remove class when at the top
-        }
-      });
-
-      window.onscroll = function () {
-        toggleScrollTopButton();
-      };
-
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-      function toggleScrollTopButton() {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          scrollTopBtn.style.display = "block"; // Show button after scrolling down
-        } else {
-          scrollTopBtn.style.display = "none"; // Hide button when at the top
-        }
-
-      }
-
-    scrollTopBtn.onclick = function () {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-    };
-  </script>
-  // <script>
-  //   document.getElementById('contactForm').addEventListener('submit', function (e) {
-  //     e.preventDefault();
-
-  //     // Submit the form data using fetch
-  //     fetch(this.action, {
-  //       method: 'POST',
-  //       body: new FormData(this),
-  //       headers: {
-  //         'Accept': 'application/json'
-  //       }
-  //     }).then(response => {
-  //       // Show the confirmation popup
-  //       document.getElementById('confirmationPopup').style.display = 'block';
-  //       // Reset the form
-  //       this.reset();
-  //     }).catch(error => {
-  //       console.error('Error:', error);
-  //       // Still show the confirmation popup even if there's an error
-  //       document.getElementById('confirmationPopup').style.display = 'block';
-  //     });
-  //   });
-
-
-  //   function closePopup() {
-  //     document.getElementById('confirmationPopup').style.display = 'none';
-  //   }
-  // </script>
   <script>
   document.getElementById('reviewForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents form submission
@@ -3448,22 +3490,6 @@ textarea.form-control {
    defer
  ></script>
 <!-- Adding scroll progressBar-->
- <script>
-
-  window.onscroll = function() {
-    updateProgressBar();
-  };
-
-
-  function updateProgressBar() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrollPercent = (scrollTop / scrollHeight) * 100;
-
-      document.getElementById("progressBar").style.width = scrollPercent + "%";
-  }
-
-  </script>
      <style>
       .popup {
         position: fixed;
@@ -3479,6 +3505,7 @@ textarea.form-control {
       }
 
       .popup-content {
+        position: relative;
         background-color: white;
         padding: 20px;
         border-radius: 5px;
@@ -3527,7 +3554,7 @@ textarea.form-control {
   }
     </style>
   </script>
-  <script src="script.js">
+  <!-- <script src="script.js">
 document.getElementById('newsletter-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
 
@@ -3549,7 +3576,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         messageElement.style.color =  'red'; // Change message color to red
     }
 });
-    </script>
+    </script> -->
 
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
@@ -3661,9 +3688,158 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
             </iframe>
         </div>
     </div>
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+      <div class="scroll-top-icon">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+      <svg class="progress-ring" width="60" height="60">
+        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+          cy="30"></circle>
+      </svg>
+    </button>
+    <style>
+      .scroll-top {
+        position: fixed;
+        right: 1.6%;
+        background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+        overflow: visible;
+        z-index: 10;
+        bottom: 75px;
+        /* Ensure button is on top */
+      }
+
+      .scroll-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-top:hover {
+        transform: scale(1.1);
+        /* Subtle scaling instead of expanding */
+        box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+        /* Slightly larger shadow */
+      }
+
+      .scroll-top:active {
+        transform: scale(1.05);
+        /* Minor scale reduction on click */
+      }
+
+      .scroll-top-icon {
+        position: relative;
+        z-index: 2;
+        transition: transform 0.3s ease;
+      }
+
+      .scroll-top:hover .scroll-top-icon {
+        transform: translateY(-3px);
+      }
+
+      /* Progress Ring Styling */
+      .progress-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+        /* To start from the top */
+      }
+
+      .progress-ring__circle {
+        transition: stroke-dashoffset 0.35s;
+        transform-origin: 50% 50%;
+      }
+
+      /* Pulse Animation */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+        }
+
+        50% {
+          box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+        }
+
+        100% {
+          box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+        }
+      }
+
+      .scroll-top:hover {
+        animation: pulse 1.5s infinite;
+      }
+
+      .scroll-top.show {
+        animation: none;
+        /* No animation when showing the button */
+      }
+
+      .scroll-top.show:hover {
+        animation: pulse 1.5s infinite;
+        /* Pulse on hover */
+      }
+    </style>
+    <script>
+      // Get the button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      const progressCircle = document.querySelector(".progress-ring__circle");
+      const radius = progressCircle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      // Set the circle progress properties
+      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+      progressCircle.style.strokeDashoffset = circumference;
+
+      // Function to show or hide the button based on scroll position
+      function toggleScrollButton() {
+        if (window.scrollY > 100) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      }
+
+      // Function to set the scroll progress on the button ring
+      function setProgress(percent) {
+        const offset = circumference - (percent / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+      }
+
+      // Listen for scroll events to update button visibility and progress
+      window.addEventListener("scroll", () => {
+        toggleScrollButton();
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        setProgress(scrollPercent);
+      });
+
+      // Smooth scroll to top when the button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+    </script>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="/script/subscribe.js"></script>
     <script>
         function toggleChatbot() {
             const chatbotContainer = document.getElementById('chatbotContainer');
@@ -3688,6 +3864,259 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       <script src="visi.js"></script>
       <script src="script.js"></script>
       <script src="map autofill.js"></script>
+
+      <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+        }
+    
+        /* Polls Popup Styles */
+        .popups {
+
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            top: 50%; /* Center vertically */
+            left: 0; /* Position to the left */
+            transform: translateY(-50%); /* Adjust to center vertically */
+            width: 200px; /* Set fixed width of 200px */
+            height: 300px; /* Set fixed height of 300px */
+            justify-content: center; /* Center the popup */
+            z-index: 1000; /* Sit on top */
+            padding: 10px; /* Add padding inside the popup */
+
+        }
+    
+        .popups-content {
+
+            background: linear-gradient(#0c5769, #5ac8e4);
+            padding: 10px; /* Adjusted padding for the smaller popup */
+            border-radius: 5px;
+            height: 100%; /* Ensure content fills the height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between elements */
+            text-align: center;
+            
+            margin-top: 75px;
+
+        }
+    
+
+    /* Close Button Styles */
+    .close-btn {
+
+        position: absolute; /* Position it in the top-right corner */
+        top: 83px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 16px; /* Smaller size for the close button */
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0; /* Remove extra padding */
+        line-height: 1;
+        width: 20px; /* Set a fixed width */
+        height: 20px; /* Set a fixed height */
+        text-align: center; /* Ensure the X is centered */
+        transition: color 0.3s ease;
+
+    }
+
+    .close-btn:hover {
+
+        color: #f44336; /* Change color to red on hover */
+
+    }
+
+
+        .uppercase {
+
+            font-size: 12px; /* Reduced font size for compact layout */
+            color: #000000;
+            margin-bottom: 10px; /* Space between title and buttons */
+            line-height: 1.2; /* Adjust line height for better readability */
+
+        }
+    
+        #pollOptions {
+
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+            flex-grow: 1; /* Allow buttons to expand and fill space */
+            justify-content: space-between; /* Evenly space buttons */
+
+        }
+    
+        .poll-button,
+        .vote-button {
+
+            display: block; /* Full width for buttons */
+            margin: 5px 0; /* Vertical margin between buttons */
+            padding: 6px 8px; /* Smaller padding to fit within the box */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width of the container */
+            font-size: 11px; /* Reduced font size */
+            text-align: center;
+
+        }
+    
+        .poll-button {
+
+            background-color: rgba(16, 22, 26, .4); /* Green */
+
+        }
+    
+        .poll-button:hover {
+          
+            background-color: #095493; /* Darker green */
+
+        }
+    
+        .poll-button.selected {
+
+            background-color: #095493; /* Blue for selected */
+
+        }
+    
+        .vote-button {
+
+            background-color: #f44336; /* Red */
+
+        }
+    
+        .vote-button:hover {
+
+            background-color: #d32f2f; /* Darker red */
+
+        }
+    
+        #result {
+
+        margin-top: 10px;
+        color: #000000;
+        font-size: 8px; /* Smaller font size for result */
+        word-wrap: break-word;
+        text-align: center;
+        overflow: visible; /* Ensure result text is not clipped */
+        max-height: none; /* Remove max-height constraint */
+        height: auto; /* Allow the height to adjust based on content */
+        
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+<!-- Poll Pop-up -->
+<div class="popups" id="pollPopup">
+    <div class="popups-content">
+        <!-- Close Button -->
+        <button id="closeButton" class="close-btn">&times;</button>
+        
+        <h2 class="uppercase">What is your main priority when choosing a hotel?</h2>
+        <div id="pollOptions">
+            <button class="poll-button" data-value="Price and discounts">Price and discounts</button>
+            <button class="poll-button" data-value="Location and accessibility">Location and accessibility</button>
+            <button class="poll-button" data-value="Amenities and services offered">Amenities and services offered</button>
+        </div>
+        <button id="voteButton" class="vote-button">Vote</button>
+        <p id="result"></p> <!-- Result display -->
+    </div>
+</div>
+
+
+<script>
+
+    // Check if the user has already voted in this session
+    const hasVoted = sessionStorage.getItem('hasVoted');
+
+    
+    // Show the poll popup after a delay, only if the user hasn't voted
+    function checkAndDisplayPollPopup() {
+        if (!hasVoted) {
+            document.getElementById('pollPopup').style.display = 'flex'; // Show poll
+        }
+    }
+
+
+    // Set timeout for poll display
+    setTimeout(checkAndDisplayPollPopup, 10000);
+
+
+    // Manage user selections and votes
+    const pollButtons = document.querySelectorAll('.poll-button[data-value]');
+    let selectedValue = '';
+
+
+    // Handle clicks on poll buttons
+    pollButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            pollButtons.forEach(btn => btn.classList.remove('selected')); // Clear previous selections
+            button.classList.add('selected'); // Highlight selected button
+            selectedValue = button.getAttribute('data-value'); // Store selected value
+        });
+    });
+
+
+    // Handle voting process
+    document.getElementById('voteButton').addEventListener('click', function() {
+        if (selectedValue) {
+            document.getElementById('result').innerHTML = `You voted for: ${selectedValue}<br>Thank you!`; // Show result
+            sessionStorage.setItem('hasVoted', 'true'); // Save voting status
+            setTimeout(() => {
+                document.getElementById('pollPopup').style.display = 'none'; // Hide poll
+            }, 2000);
+        } else {
+            alert("Please select an option!"); // Alert if no option is selected
+        }
+    });
+
+
+    // Function to manage button focus for accessibility
+    function handleFocus(event) {
+        event.target.style.border = '2px solid #0058ff'; // Optional highlight effect
+    }
+
+    
+    // Attach focus event for accessibility improvement
+    pollButtons.forEach(button => {
+        button.addEventListener('focus', handleFocus);
+    });
+
+
+    // Function to remove focus style
+    function handleBlur(event) {
+        event.target.style.border = ''; // Remove highlight effect
+    }
+
+
+    // Attach blur event for accessibility improvement
+    pollButtons.forEach(button => {
+        button.addEventListener('blur', handleBlur);
+    });
+
+
+    // Log when the script has loaded
+    console.log("Poll script initialized and ready!");
+
+
+    // Close button functionality
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('pollPopup').style.display = 'none'; // Hide poll
+});
+
+</script>
 
 </body>
 
