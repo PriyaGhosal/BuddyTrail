@@ -1,41 +1,194 @@
 body {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 header.dark-mode {
-    background-color: #1f1f1f;
+  background-color: #1f1f1f;
 }
 
 .mode-toggle {
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    outline: none;
-    padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 10px;
 }
 
 .mode-toggle img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .navbar {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
 }
 
 body.dark-mode .navbar {
-    background-color: #333;
+  background-color: #333;
 }
 
 body.dark-mode .navbar a:hover {
-    color: #4C51BF;
-    transform: translateY(-2px);
+  color: #4c51bf;
+  transform: translateY(-2px);
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.blog-excerpt {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 120px;
+}
+
+.read-more:hover {
+  background-color: #1d4ed8;
+}
+
+.read-more:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Loading Spinner */
+.spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+.loading .spinner {
+  display: inline-block;
+}
+
+.button-text {
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
 }

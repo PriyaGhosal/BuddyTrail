@@ -518,6 +518,7 @@
             pointer-events: none;
             z-index: 99999999;
           }
+          
         </style>  
     </head>
 
@@ -710,6 +711,60 @@
             <option value="">All Tags</option>
           </select>
         </div>
+          
+
+        <h1 class="section-title">Travel Adventures</h1>
+        <section class="blog-container">
+          
+          <div class="blog-grid">
+              <article class="blog-card">
+                  <img src="/img/santorini.jpg" width="auto" alt="Santorini sunset" class="blog-image">
+                  <div class="blog-content">
+                      <div class="blog-date">October 15, 2024</div>
+                      <h2 class="blog-title">Hidden Gems of Santorini</h2>
+                      <p class="blog-excerpt">Beyond the famous blue domes and sunsets, discover the secret spots and local favorites that make Santorini truly special. From hidden beaches to family-run tavernas...</p>
+                      <button class="read-more" data-article="santorini">
+                          <span class="button-text">Read More</span>
+                          <span class="spinner"></span>
+                      </button>
+                  </div>
+              </article> <br>
+              
+              <article class="blog-card">
+                  <img src="/img/japanese-temple.jpg" width="auto" alt="Japanese temple in autumn" class="blog-image">
+                  <div class="blog-content">
+                      <div class="blog-date">October 8, 2024</div>
+                      <h2 class="blog-title">Autumn in Kyoto</h2>
+                      <p class="blog-excerpt">Experience the magical transformation of Kyoto as autumn paints the ancient temples and gardens in brilliant shades of red and gold. A guide to the best viewing spots...</p>
+                      <button class="read-more" data-article="kyoto">
+                          <span class="button-text">Read More</span>
+                          <span class="spinner"></span>
+                      </button>
+                  </div>
+              </article> <br>
+              
+              <article class="blog-card">
+                  <img src="/img/mountains.jpg"  width="auto" Peruvian mountains" class="blog-image">
+                  <div class="blog-content">
+                      <div class="blog-date">October 1, 2024</div>
+                      <h2 class="blog-title">Hiking the Inca Trail</h2>
+                      <p class="blog-excerpt">A day-by-day journey through one of the world's most famous treks. From preparation tips to hidden archaeological sites, here's everything you need to know...</p>
+                      <button class="read-more" data-article="inca-trail">
+                          <span class="button-text">Read More</span>
+                          <span class="spinner"></span>
+                      </button>
+                  </div>
+              </article>
+          </div>
+      </section>
+  
+      <!-- Modal -->
+      <div class="modal" id="articleModal">
+          <div class="modal-content">
+              <span class="modal-close">&times;</span>
+              <div id="modalContent"></div>
+          </div>
+      </div>
 
         <div class="blog-container">
           <!-- Blog posts will be dynamically generated here -->
@@ -1181,6 +1236,7 @@
     
           <script src="visi.js"></script>
           <script src="script.js"></script>
+          <script src="blognew.js"></script>
     
     </body>
     
