@@ -32,3 +32,52 @@ body.dark-mode {
 .dark-mode .navhover {
     color: #fff;
 }
+.card-body {
+    display: flex;
+    align-items: stretch; /* Makes form-section and adjacent content equal in height */
+}
+
+.form-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+textarea {
+    flex: 1; /* Allows the textarea to expand and fill available space */
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    box-sizing: border-box;
+    min-height: 100px; /* Optional: minimum height */
+}
+
+.tooltip {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.error-message {
+    margin-top: 5px;
+    color: red;
+    font-size: 12px;
+}
+
+.send-button {
+    margin-top: 10px;
+    align-self: flex-end; /* Ensures the button stays at the bottom of the form-group */
+    padding: 8px 16px;
+    font-size: 14px;
+}

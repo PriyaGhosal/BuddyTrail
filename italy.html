@@ -50,6 +50,15 @@
         padding-top: 120px;
       }
 
+
+      .top-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+      }
+
       .container {
         text-align: center;
         display: flex;
@@ -59,8 +68,17 @@
         width: 100vw;
       }
 
+      .seach-container {
+        margin-right: 40px;
+      }
+
+      .sort-container {
+        margin-left: 40px;
+      }
+
       .card-container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         width: 100vw;
         height: 590px;
@@ -130,6 +148,24 @@
     <br>
     <h1>Top Hotels in Italy</h1>
 
+    <!-- Search Bar -->
+    <div class="top-container">
+      <div class="search-container">
+        <label for="search">Search for hotels:</label>
+        <input type="search" id="search" placeholder="Search for a hotel..." />
+      </div>
+
+      <div class="sort-container">
+        <label for="sort">Sort by Price:</label>
+        <select id="sort" name="sort">
+          <option value="featured">Featured</option>
+          <option value="low-to-high">Low to High</option>
+          <option value="high-to-low">High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Hotels -->
     <div class="container">
         <div class="card-container">
             <div class="hotel-card">
@@ -229,5 +265,108 @@
           </div>
       </div>
     </div>
+
+
+    <!-- Sorting Script -->
+
+    <script>
+      // const hotelCards = document.querySelectorAll('.hotel-card');
+      // const sortSelect = document.getElementById('sort');
+      // const searchInput = document.getElementById('search');
+
+      // // Function to filter hotel cards based on search input
+      // function filterHotels() {
+      //     const searchTerm = searchInput.value.toLowerCase();
+      //     hotelCards.forEach((hotelCard) => {
+      //         const hotelName = hotelCard.querySelector('h2').textContent.toLowerCase();
+      //         if (hotelName.includes(searchTerm)) {
+      //             hotelCard.style.display = 'block';
+      //         } else {
+      //             hotelCard.style.display = 'none';
+      //             // hotelCard.style.visibility = 'hidden';
+      //         }
+      //     });
+      // }
+
+      // // Add event listener to search input
+      // searchInput.addEventListener('input', filterHotels);
+
+      const hotelCards = document.querySelectorAll(".hotel-card");
+      const sortSelect = document.getElementById("sort");
+      const searchInput = document.getElementById("search");
+
+      // Function to filter hotel cards based on search input
+      function filterHotels() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const matchedHotels = []; // Array to store matched hotel cards
+
+        hotelCards.forEach((hotelCard) => {
+          const hotelName = hotelCard
+            .querySelector("h2")
+            .textContent.toLowerCase();
+          if (hotelName.includes(searchTerm)) {
+            matchedHotels.push(hotelCard); // Add matching hotel card to the array
+          }
+        });
+
+        // Clear the card container
+        const cardContainer = document.querySelector(".card-container");
+        cardContainer.innerHTML = "";
+
+        // Append matched hotels to the card container in rows of three
+        matchedHotels.forEach((hotelCard) => {
+          cardContainer.appendChild(hotelCard);
+        });
+      }
+      // Add event listener to search input
+      searchInput.addEventListener("input", filterHotels);
+
+      sortSelect.addEventListener("change", () => {
+        const sortBy = sortSelect.value;
+        let sortedHotels;
+
+        if (sortBy === "featured") {
+          window.location.reload(true);
+          return false;
+        }
+
+        if (sortBy === "low-to-high") {
+          sortedHotels = [...hotelCards].sort((a, b) => {
+            const priceA = parseInt(
+              a
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            const priceB = parseInt(
+              b
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            return priceA - priceB;
+          });
+        } else if (sortBy === "high-to-low") {
+          sortedHotels = [...hotelCards].sort((a, b) => {
+            const priceA = parseInt(
+              a
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            const priceB = parseInt(
+              b
+                .querySelector("p")
+                .textContent.replace("Price per night: ₹", "")
+            );
+            return priceB - priceA;
+          });
+        }
+
+        const cardContainer = document.querySelector(".card-container");
+        cardContainer.innerHTML = "";
+
+        sortedHotels.forEach((hotelCard) => {
+          cardContainer.appendChild(hotelCard);
+        });
+      });
+    </script>
   </body>
 </html>
