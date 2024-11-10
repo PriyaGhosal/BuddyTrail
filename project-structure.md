@@ -2,6 +2,7 @@
 ```
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── Calculator.html
 ├── CheckoutHotel.css
 ├── CheckoutHotel.html
 ├── Code_of_Conduct.md
