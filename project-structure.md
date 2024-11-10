@@ -123,6 +123,7 @@
 │   ├── USA.jpeg
 │   ├── back.png
 │   ├── benefits.jpeg
+│   ├── bungee-jumping.jpg
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
@@ -130,6 +131,7 @@
 │   ├── df2.jpg
 │   ├── download.jpeg
 │   ├── family-vacation.avif
+│   ├── flyingboard.png
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
@@ -139,6 +141,7 @@
 │   ├── hill3.png
 │   ├── hill4.png
 │   ├── hill5.png
+│   ├── hotairbaloon.webp
 │   ├── landing-page.jpg
 │   ├── leaf.png
 │   ├── location.jpg
@@ -164,6 +167,9 @@
 │   ├── safety1.jpg
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
+│   ├── scuba-diving.jpg
+│   ├── serene-beach-scene.jpg
+│   ├── skydiving.jpg
 │   ├── solo-travel.jpg
 │   ├── tree.png
 │   ├── u1.jpg
