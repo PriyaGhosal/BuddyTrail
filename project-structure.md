@@ -26,7 +26,8 @@
 │   │   ├── ContactController.js
 │   │   ├── authController.js
 │   │   ├── image.png
-│   │   └── ratingController.js
+│   │   ├── ratingController.js
+│   │   └── subscribeController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
@@ -39,6 +40,7 @@
 │   ├── routes
 │   │   ├── ContactRoutes.js
 │   │   ├── RatingRoutes.js
+│   │   ├── SubscribeRoute.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
@@ -128,7 +130,13 @@
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
 │   ├── hacktoberfest1.png
+│   ├── hill1.png
+│   ├── hill2.png
+│   ├── hill3.png
+│   ├── hill4.png
+│   ├── hill5.png
 │   ├── landing-page.jpg
+│   ├── leaf.png
 │   ├── location.jpg
 │   ├── logo.png
 │   ├── logo2.png
@@ -142,6 +150,7 @@
 │   ├── plan-1.jpg
 │   ├── plan-2.jpg
 │   ├── plan-3.jpeg
+│   ├── plant.png
 │   ├── popup.jpg
 │   ├── popup1.jpg
 │   ├── popup2.jpg
@@ -152,11 +161,13 @@
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
 │   ├── solo-travel.jpg
+│   ├── tree.png
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
 │   ├── u5.jpg
 │   └── x-logo.png
+├── index.css
 ├── index.html
 ├── italy.html
 ├── kerala.html
@@ -176,7 +187,8 @@
 ├── romantic-gateway.css
 ├── romantic-gateway.html
 ├── script
-│   └── popup.js
+│   ├── popup.js
+│   └── subscribe.js
 ├── script.js
 ├── security.md
 ├── service-worker.js
