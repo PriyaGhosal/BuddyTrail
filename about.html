@@ -27,15 +27,7 @@
           }
        
         </style>  
-    </head>
-
-
-
-
-    <link rel="stylesheet" href= "style.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-</head>
+    </head>   
 
 <body>
     <!-- Preloader -->
@@ -179,7 +171,7 @@
 
     </script>
 
-    <header class="main-head" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <header class="main-head" style="background-color: #181818; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #000000;  border-radius: 8px;    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
   <nav >
     <div class="logo">
       <img src="img/logo.png" id="logo-web">
@@ -188,7 +180,17 @@
 
     <!-- Hamburger button for mobile -->
     <button class="hamburger" id="hamburger">☰</button>
-
+<style>
+    nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
     <ul id="nav-list">
       <!-- Close button for dropdown -->
       <span class="dropdown-close-btn" id="closeBtn">×</span>
@@ -254,7 +256,7 @@
             logo.style.transform = "rotateY(0) scale(1)";
         });
     </script>
-    <section class="about">
+    <section class="about" id="About">
         <div class="container">
             <h1>About BuddyTrail</h1>
 
@@ -333,7 +335,7 @@
             display: flex;
             align-self: flex-end;
             justify-content: center;
-            margin: 56px auto 56px;
+            margin: 35px auto 56px;
 
         }
 
@@ -411,7 +413,7 @@
         /* About Section */
         .about {
             background-color: #fff;
-            padding: 60px 0;
+            padding: 100px 0;
             text-align: center;
             position: relative;
         }
@@ -610,22 +612,19 @@
         }
 
         /* Button Styling (If you use any) */
-        button {
-            padding: 12px 24px;
-            background-color: #007BFF;
-            color: #fff;
-            border: 2px solid transparent;
+                    
+            button {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-        }
+            }
 
-        button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-            border-color: #fff;
-        }
+            button:hover {
+            background: #2c3e50;
+            }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -877,6 +876,8 @@
             });
         });
     </script>
+    
+    <script src="script.js"></script>
 
 <script>
     // Show the button when the user scrolls down 100px from the top

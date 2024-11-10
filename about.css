@@ -112,7 +112,7 @@ nav {
 
 .btn-primary {
     display: inline-block;
-    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    background: linear-gradient(90deg, #121417, #1b2427);
     color: #fff;
     padding: 10px 20px;
     border: 2px solid transparent;
@@ -135,7 +135,7 @@ nav {
 
 .btn-primary:active {
     transform: scale(1) translateY(0);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(11, 12, 12, 0.2);
 }
 
 .btn-primary::after {
@@ -211,6 +211,7 @@ nav {
     overflow: hidden;
     position: relative;
 }
+
 
 .content-container::before {
     content: '';
