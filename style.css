@@ -2194,7 +2194,31 @@ input#rate-5:checked ~ header:before {
   align-items: center;
   z-index: 1;
 }
-
+.cross-btn {
+  position: absolute;
+  top: 142px; 
+  right: 25.3%;
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  z-index: 1; 
+  width: 30px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 25%;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: all 0.4s ease-in;
+}
+.cross-btn button{
+  padding: 1px !important;
+  background-color: red !important;
+}
 .close-btn:hover {
   background-color: #ff0000;
   transform: scale(1.1);
