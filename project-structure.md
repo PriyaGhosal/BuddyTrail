@@ -1,7 +1,9 @@
 <!-- START_STRUCTURE -->
 ```
+├── 404.html
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── Calculator.html
 ├── CheckoutHotel.css
 ├── CheckoutHotel.html
 ├── Code_of_Conduct.md
@@ -64,6 +66,9 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── contributorss.css
+├── contributorss.html
+├── contributorss.js
 ├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
@@ -119,6 +124,7 @@
 │   ├── USA.jpeg
 │   ├── back.png
 │   ├── benefits.jpeg
+│   ├── bungee-jumping.jpg
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
@@ -126,6 +132,7 @@
 │   ├── df2.jpg
 │   ├── download.jpeg
 │   ├── family-vacation.avif
+│   ├── flyingboard.png
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
@@ -135,6 +142,7 @@
 │   ├── hill3.png
 │   ├── hill4.png
 │   ├── hill5.png
+│   ├── hotairbaloon.webp
 │   ├── landing-page.jpg
 │   ├── leaf.png
 │   ├── location.jpg
@@ -160,6 +168,9 @@
 │   ├── safety1.jpg
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
+│   ├── scuba-diving.jpg
+│   ├── serene-beach-scene.jpg
+│   ├── skydiving.jpg
 │   ├── solo-travel.jpg
 │   ├── tree.png
 │   ├── u1.jpg
@@ -178,6 +189,7 @@
 ├── package.json
 ├── paris.html
 ├── privacypolicy.html
+├── profile.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── rajasthan.css
@@ -208,6 +220,8 @@
 ├── terms.css
 ├── terms_of_service.html
 ├── test.html
+├── testp.css
+├── testp.js
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
