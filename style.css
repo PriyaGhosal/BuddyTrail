@@ -1313,7 +1313,19 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #f39c12;
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1.3);
+  }
+  to {
+    transform: rotate(360deg) scale(1.3);
+  }
 }
 
 .footer-bottom {
@@ -1326,42 +1338,50 @@ footer {
 }
 
 /* for facebook */
-.social-icons .fa-discord {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-icons .fa-discord:hover {
+.social-icons a:hover .fa-discord {
   color: #4267b2;
-  transform: scale(1.1);
-  transform: scale(1.2) translateY(-5px);
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 2px solid #4267b2;
+  border-radius: 50%;
+  padding: 4px;
 }
 
 /* for twitter */
-.social-icons .fa-x-twitter {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-icons .fa-x-twitter:hover {
+.social-icons a:hover .fa-x-twitter {
   color: black;
-  transform: scale(1.1);
-  transform: scale(1.2) translateY(-5px);
-}
-/* for instagram */
-.social-icons .fa-github {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-icons .fa-github:hover {
-  color: #c32aa3;
-  transform: scale(1.1);
-  transform: scale(1.2) translateY(-5px);
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 4px;
 }
 
-/* for instagram */
-.social-icons .fa-linkedin-in {
-  transition: color 0.3s ease, transform 0.3s ease;
+
+.social-icons a:hover .fa-github {
+  color: #c32aa3;
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 2px solid #c32aa3;
+  border-radius: 50%;
+  padding: 4px;
 }
-.social-icons .fa-linkedin-in:hover {
+
+.social-icons a:hover .fa-linkedin-in {
   color: #0a66c2;
-  transform: scale(1.1);
-  transform: scale(1.2) translateY(-5px);
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 2px solid #0a66c2;
+  border-radius: 50%;
+  padding: 4px;
 }
 /**** MEDIA QUERY ****/
 
