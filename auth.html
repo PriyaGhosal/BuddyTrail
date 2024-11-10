@@ -28,7 +28,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="sign-in-signup">
-          <form action="#" class="sign-in-form">
+          <form action="#" class="sign-in-form" onsubmit="return validateSignInForm()">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -38,7 +38,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" id="sign-in-password" />
               <i class="fas fa-eye password-toggle" onclick="togglePassword('sign-in-password', this)"></i>
-            </div>
+            </div>           
             <div class="login">
               <input type="submit" value="Login" class="btn solid" />
             </div>
@@ -95,42 +95,65 @@
       </div>
 
       <script>
-      function validateForm() {
-  const password = document.getElementById('signup-password').value;
-  const email = document.getElementById('email').value;
-  const username = document.getElementById('username').value;
+        function validateForm() {
+            const password = document.getElementById('signup-password').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+    
+            // Sign-up validation logic
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+    
+            const hexRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]+$/;
+            if (!hexRegex.test(password)) {
+                alert("Password must contain at least one uppercase letter (A-Z), one number (0-9), and include only letters and numbers.");
+                return false;
+            }
+    
+            if (username.trim() === "") {
+                alert("Please enter a valid username.");
+                return false;
+            }
+    
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+             // Show submission message in a pop-up
+              alert("Sign up successful! Welcome, " + username + "!");
 
-  // Password length validation
-  if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
-    return false;
-  }
-
-  // Password hexadecimal validation
-  const hexRegex = /^[0-9A-Fa-f]+$/;
-  if (!hexRegex.test(password)) {
-    alert("Password must contain only hexadecimal digits (0-9, A-F).");
-    return false;
-  }
-
-  // Validate if username is provided
-  if (username.trim() === "") {
-    alert("Please enter a valid username.");
-    return false;
-  }
-
-  // Validate if email is provided and valid
-  if (!email.includes("@")) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-  // If all validations pass
-  return true;
-}
-
-
-      </script>
+          // clear the form after submission
+            document.querySelector(".sign-up-form").reset();
+        }
+        function validateSignInForm() {
+                const username = document.querySelector('.sign-in-form input[type="text"]').value;
+                const password = document.querySelector('.sign-in-form input[type="password"]').value;
+        
+                // Sign-in validation logic
+                if (username.trim() === "") {
+                    alert("Please enter your username.");
+                    return false;
+                }
+        
+                if (password.trim() === "") {
+                    alert("Please enter your password.");
+                    return false;
+                }
+        
+                // Simulate successful login 
+                alert("You have successfully logged in to the website!");
+        
+                // Redirect to the home screen after a short delay
+                setTimeout(function() {
+                    window.location.href = "index.html"; 
+                }, 2000); // Redirect after 2 seconds
+        
+                // If all validations pass, return true to allow form submission
+                return false; // Prevent form submission since we are handling the redirect
+            };
+    </script>
 
       <div class="panels-container">
         <div class="panel left-panel">
@@ -283,6 +306,20 @@
     
     animateCircles();
   </script>
-
+  <!-- Dash eye icon script -->
+<script>
+  function togglePassword(id, element) {
+  const passwordInput = document.getElementById(id);
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    element.classList.remove('fa-eye');
+    element.classList.add('fa-eye-slash');
+  } else {
+    passwordInput.type = 'password';
+    element.classList.remove('fa-eye-slash');
+    element.classList.add('fa-eye');
+  }
+}
+</script>
 </body>
 </html>
