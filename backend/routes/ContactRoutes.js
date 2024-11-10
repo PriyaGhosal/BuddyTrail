@@ -5,6 +5,7 @@ const {
   userfeedback,
 
   sendEmail,
+  newsletter,
   suggestion,
 } = require("../controllers/ContactController.js");
 
@@ -18,4 +19,5 @@ router.post("/email", sendEmail);
 
 router.post("/suggestion", suggestion);
 
+router.post("/newsletter", newsletter);
 module.exports = router;
