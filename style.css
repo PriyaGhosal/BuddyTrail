@@ -166,6 +166,7 @@ body {
 .cloud.fade-out {
   opacity: 0;
 }
+
 /*SOS*/
 .sos-container {
   width: 100%;
@@ -2948,7 +2949,9 @@ textarea {
 .services {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
+
 }
 
 .services h2 {
