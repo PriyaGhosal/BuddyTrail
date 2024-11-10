@@ -182,6 +182,7 @@
 ├── package.json
 ├── paris.html
 ├── privacypolicy.html
+├── profile.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── rajasthan.css
@@ -212,6 +213,8 @@
 ├── terms.css
 ├── terms_of_service.html
 ├── test.html
+├── testp.css
+├── testp.js
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html
