@@ -128,6 +128,167 @@
       <p>&copy; 2024 Buddy Trail. All rights reserved.</p>
     </div>
   </footer>
+  <style>
+    /* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+#nav-list {
+  display: flex;
+  list-style: none;
+}
+
+#nav-list li {
+  margin: 0 10px;
+}
+
+#nav-list a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#nav-list a:hover {
+  color: #1e90ff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+  }
+
+  #nav-list.active {
+    display: flex;
+  }
+}
+/* Hero Section */
+.contributor-hero {
+  background: linear-gradient(135deg, #6a5acd, #1e90ff);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contributor-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contributor-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contributor-btn {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contributor-btn:hover {
+  background-color: #0066cc;
+}
+/* Contributors Grid */
+.contributor-contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.contributor-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contributor-card:hover {
+  transform: scale(1.05);
+}
+
+.contributor-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.contributor-card h3 {
+  margin-top: 10px;
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1e90ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+/* Button Hover Effect */
+.contributor-btn:hover {
+  transform: scale(1.05);
+  background-color: #0066cc;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+  </style>
 
     <script src="contributor.js"></script>
 </body>
