@@ -3768,6 +3768,259 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       <script src="visi.js"></script>
       <script src="script.js"></script>
 
+      <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+        }
+    
+        /* Polls Popup Styles */
+        .popups {
+
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            top: 50%; /* Center vertically */
+            left: 0; /* Position to the left */
+            transform: translateY(-50%); /* Adjust to center vertically */
+            width: 200px; /* Set fixed width of 200px */
+            height: 300px; /* Set fixed height of 300px */
+            justify-content: center; /* Center the popup */
+            z-index: 1000; /* Sit on top */
+            padding: 10px; /* Add padding inside the popup */
+
+        }
+    
+        .popups-content {
+
+            background: linear-gradient(#0c5769, #5ac8e4);
+            padding: 10px; /* Adjusted padding for the smaller popup */
+            border-radius: 5px;
+            height: 100%; /* Ensure content fills the height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between elements */
+            text-align: center;
+            
+            margin-top: 75px;
+
+        }
+    
+
+    /* Close Button Styles */
+    .close-btn {
+
+        position: absolute; /* Position it in the top-right corner */
+        top: 83px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 16px; /* Smaller size for the close button */
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0; /* Remove extra padding */
+        line-height: 1;
+        width: 20px; /* Set a fixed width */
+        height: 20px; /* Set a fixed height */
+        text-align: center; /* Ensure the X is centered */
+        transition: color 0.3s ease;
+
+    }
+
+    .close-btn:hover {
+
+        color: #f44336; /* Change color to red on hover */
+
+    }
+
+
+        .uppercase {
+
+            font-size: 12px; /* Reduced font size for compact layout */
+            color: #000000;
+            margin-bottom: 10px; /* Space between title and buttons */
+            line-height: 1.2; /* Adjust line height for better readability */
+
+        }
+    
+        #pollOptions {
+
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+            flex-grow: 1; /* Allow buttons to expand and fill space */
+            justify-content: space-between; /* Evenly space buttons */
+
+        }
+    
+        .poll-button,
+        .vote-button {
+
+            display: block; /* Full width for buttons */
+            margin: 5px 0; /* Vertical margin between buttons */
+            padding: 6px 8px; /* Smaller padding to fit within the box */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width of the container */
+            font-size: 11px; /* Reduced font size */
+            text-align: center;
+
+        }
+    
+        .poll-button {
+
+            background-color: rgba(16, 22, 26, .4); /* Green */
+
+        }
+    
+        .poll-button:hover {
+          
+            background-color: #095493; /* Darker green */
+
+        }
+    
+        .poll-button.selected {
+
+            background-color: #095493; /* Blue for selected */
+
+        }
+    
+        .vote-button {
+
+            background-color: #f44336; /* Red */
+
+        }
+    
+        .vote-button:hover {
+
+            background-color: #d32f2f; /* Darker red */
+
+        }
+    
+        #result {
+
+        margin-top: 10px;
+        color: #000000;
+        font-size: 8px; /* Smaller font size for result */
+        word-wrap: break-word;
+        text-align: center;
+        overflow: visible; /* Ensure result text is not clipped */
+        max-height: none; /* Remove max-height constraint */
+        height: auto; /* Allow the height to adjust based on content */
+        
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+<!-- Poll Pop-up -->
+<div class="popups" id="pollPopup">
+    <div class="popups-content">
+        <!-- Close Button -->
+        <button id="closeButton" class="close-btn">&times;</button>
+        
+        <h2 class="uppercase">What is your main priority when choosing a hotel?</h2>
+        <div id="pollOptions">
+            <button class="poll-button" data-value="Price and discounts">Price and discounts</button>
+            <button class="poll-button" data-value="Location and accessibility">Location and accessibility</button>
+            <button class="poll-button" data-value="Amenities and services offered">Amenities and services offered</button>
+        </div>
+        <button id="voteButton" class="vote-button">Vote</button>
+        <p id="result"></p> <!-- Result display -->
+    </div>
+</div>
+
+
+<script>
+
+    // Check if the user has already voted in this session
+    const hasVoted = sessionStorage.getItem('hasVoted');
+
+    
+    // Show the poll popup after a delay, only if the user hasn't voted
+    function checkAndDisplayPollPopup() {
+        if (!hasVoted) {
+            document.getElementById('pollPopup').style.display = 'flex'; // Show poll
+        }
+    }
+
+
+    // Set timeout for poll display
+    setTimeout(checkAndDisplayPollPopup, 10000);
+
+
+    // Manage user selections and votes
+    const pollButtons = document.querySelectorAll('.poll-button[data-value]');
+    let selectedValue = '';
+
+
+    // Handle clicks on poll buttons
+    pollButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            pollButtons.forEach(btn => btn.classList.remove('selected')); // Clear previous selections
+            button.classList.add('selected'); // Highlight selected button
+            selectedValue = button.getAttribute('data-value'); // Store selected value
+        });
+    });
+
+
+    // Handle voting process
+    document.getElementById('voteButton').addEventListener('click', function() {
+        if (selectedValue) {
+            document.getElementById('result').innerHTML = `You voted for: ${selectedValue}<br>Thank you!`; // Show result
+            sessionStorage.setItem('hasVoted', 'true'); // Save voting status
+            setTimeout(() => {
+                document.getElementById('pollPopup').style.display = 'none'; // Hide poll
+            }, 2000);
+        } else {
+            alert("Please select an option!"); // Alert if no option is selected
+        }
+    });
+
+
+    // Function to manage button focus for accessibility
+    function handleFocus(event) {
+        event.target.style.border = '2px solid #0058ff'; // Optional highlight effect
+    }
+
+    
+    // Attach focus event for accessibility improvement
+    pollButtons.forEach(button => {
+        button.addEventListener('focus', handleFocus);
+    });
+
+
+    // Function to remove focus style
+    function handleBlur(event) {
+        event.target.style.border = ''; // Remove highlight effect
+    }
+
+
+    // Attach blur event for accessibility improvement
+    pollButtons.forEach(button => {
+        button.addEventListener('blur', handleBlur);
+    });
+
+
+    // Log when the script has loaded
+    console.log("Poll script initialized and ready!");
+
+
+    // Close button functionality
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('pollPopup').style.display = 'none'; // Hide poll
+});
+
+</script>
+
 </body>
 
 </html>
