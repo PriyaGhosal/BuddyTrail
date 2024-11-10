@@ -1,7 +1,9 @@
 <!-- START_STRUCTURE -->
 ```
+├── 404.html
 ├── Booknow.css
 ├── CONTRIBUTING.md
+├── Calculator.html
 ├── CheckoutHotel.css
 ├── CheckoutHotel.html
 ├── Code_of_Conduct.md
@@ -25,18 +27,22 @@
 │   ├── controllers
 │   │   ├── ContactController.js
 │   │   ├── authController.js
-│   │   └── ratingController.js
+│   │   ├── image.png
+│   │   ├── ratingController.js
+│   │   └── subscribeController.js
 │   ├── index.js
 │   ├── models
 │   │   ├── ContactUs.js
 │   │   ├── Feedback.js
 │   │   ├── Rating.js
-│   │   └── User.js
+│   │   ├── User.js
+│   │   └── suggestion.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
 │   │   ├── ContactRoutes.js
 │   │   ├── RatingRoutes.js
+│   │   ├── SubscribeRoute.js
 │   │   └── authRoutes.js
 │   └── utils
 │       └── authUtils.js
@@ -60,6 +66,9 @@
 │   ├── contributor.css
 │   ├── contributor.html
 │   └── contributor.js
+├── contributorss.css
+├── contributorss.html
+├── contributorss.js
 ├── cookie-popup.css
 ├── cookie.html
 ├── cookie_policy.html
@@ -115,17 +124,27 @@
 │   ├── USA.jpeg
 │   ├── back.png
 │   ├── benefits.jpeg
+│   ├── bungee-jumping.jpg
 │   ├── c3.jpg
 │   ├── cloud.png
 │   ├── contact-mountain.png
 │   ├── df1.jpg
 │   ├── df2.jpg
 │   ├── download.jpeg
+│   ├── family-vacation.avif
+│   ├── flyingboard.png
 │   ├── google.png
 │   ├── googleLogo.png
 │   ├── gssocextd1.jpg
 │   ├── hacktoberfest1.png
+│   ├── hill1.png
+│   ├── hill2.png
+│   ├── hill3.png
+│   ├── hill4.png
+│   ├── hill5.png
+│   ├── hotairbaloon.webp
 │   ├── landing-page.jpg
+│   ├── leaf.png
 │   ├── location.jpg
 │   ├── logo.png
 │   ├── logo2.png
@@ -139,21 +158,30 @@
 │   ├── plan-1.jpg
 │   ├── plan-2.jpg
 │   ├── plan-3.jpeg
+│   ├── plant.png
 │   ├── popup.jpg
 │   ├── popup1.jpg
 │   ├── popup2.jpg
 │   ├── popup3.jpg
+│   ├── romantic-travel3.jpg
 │   ├── safety.jpg
 │   ├── safety1.jpg
 │   ├── safety2.jpg
 │   ├── safety3.jpeg
+│   ├── scuba-diving.jpg
+│   ├── serene-beach-scene.jpg
+│   ├── skydiving.jpg
+│   ├── solo-travel.jpg
+│   ├── tree.png
 │   ├── u1.jpg
 │   ├── u2.jpg
 │   ├── u4.jpg
 │   ├── u5.jpg
 │   └── x-logo.png
+├── index.css
 ├── index.html
 ├── italy.html
+├── kerala.html
 ├── manifest.json
 ├── moon.png
 ├── new_post.html
@@ -161,6 +189,7 @@
 ├── package.json
 ├── paris.html
 ├── privacypolicy.html
+├── profile.html
 ├── project-structure.md
 ├── project_structure.txt
 ├── rajasthan.css
@@ -170,7 +199,8 @@
 ├── romantic-gateway.css
 ├── romantic-gateway.html
 ├── script
-│   └── popup.js
+│   ├── popup.js
+│   └── subscribe.js
 ├── script.js
 ├── security.md
 ├── service-worker.js
@@ -190,6 +220,8 @@
 ├── terms.css
 ├── terms_of_service.html
 ├── test.html
+├── testp.css
+├── testp.js
 ├── travel-itineraries.css
 ├── travel.css
 ├── travel.html

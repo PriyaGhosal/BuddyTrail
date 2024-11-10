@@ -166,6 +166,7 @@ body {
 .cloud.fade-out {
   opacity: 0;
 }
+
 /*SOS*/
 .sos-container {
   width: 100%;
@@ -321,11 +322,11 @@ a {
 .main-head {
   position: fixed;
   width: 98%;
-  top: 20px;
+  top: 5px;
   left: 1%;
   right: 0;
   z-index: 5;
-  padding: 17px;
+  padding: 17px 0;
   background-color: #00000087; /* Initially black */
   color: white;
   display: flex;
@@ -1032,7 +1033,7 @@ body {
   }
 }
 #About {
-  padding: 60px;
+  padding: 100px;
   background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
@@ -1041,6 +1042,7 @@ body {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
 
 #About h1 {
   font-size: 3.5em;
@@ -1098,6 +1100,14 @@ body {
   color: #e0e0e0; /* Light grey text */
 }
 
+.dark-mode .core-values{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+.dark-mode .team{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
 .light-mode #About h1 {
   color: #007bff; /* Blue color for the main heading in light mode */
 }
@@ -1161,16 +1171,13 @@ body {
   color: black;
 }
 
- issue
+
 
 h2 {
-main
-
   font-size:  2.5em;
   font-weight:  700;
   margin:  10px 0; /* Margin adjustment */
-  color:  #007bff;
-
+  color: #007bff;
 }
 
 p {
@@ -1343,7 +1350,7 @@ footer {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons .fa-x-twitter:hover {
-  color: black;
+  color:whitesmoke;
   transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
 }
@@ -1617,7 +1624,7 @@ Light mode styles body.light-mode {
 }
 
 #itineraries {
-  background-color: #f9f9f9; /* Light background */
+  background-color: #e1b7ed; /* Light background */
   border: 1px solid #007bff; /* Blue border */
 }
 
@@ -2188,7 +2195,31 @@ input#rate-5:checked ~ header:before {
   align-items: center;
   z-index: 1;
 }
-
+.cross-btn {
+  position: absolute;
+  top: 142px; 
+  right: 25.3%;
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  z-index: 1; 
+  width: 30px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 25%;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: all 0.4s ease-in;
+}
+.cross-btn button{
+  padding: 1px !important;
+  background-color: red !important;
+}
 .close-btn:hover {
   background-color: #ff0000;
   transform: scale(1.1);
@@ -2438,7 +2469,7 @@ input#rate-5:checked ~ header:before {
 
 .navhover {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 18px;
   display: inline-block;
   padding: 10px 15px; /* Adds padding around the text */
@@ -2450,6 +2481,8 @@ input#rate-5:checked ~ header:before {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
   color: white; /* Changes text color on hover */
+  border-bottom:1px solid wheat;
+
 }
 
 #social-icons {
@@ -2918,7 +2951,9 @@ textarea {
 .services {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
+
 }
 
 .services h2 {
@@ -3056,3 +3091,73 @@ body {
   border-radius: 50%; /* Optional: make it circular */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }
+
+
+
+/* fa form contact-form icon */
+.form-group .form-control{
+  padding-left: 6%;
+}
+.fa-user{
+  position: absolute;
+  left:2.7rem;
+  top:3.50rem;
+  font-size: 14px;
+  color: grey;
+}
+.fa-envelope{
+  position: absolute;
+  left: 2.7rem;
+  top: 3.6rem;
+  font-size: 14px;
+  color: grey;
+}
+.fa-message{
+  position: absolute;
+  left: 2.7rem;
+  top: 3.8rem;
+  font-size: 14px;
+  color: grey;
+}
+.email-padding input[type="email"]{
+  padding-left: 30px; /* get in touch padding for icon*/
+}
+/* fa icon end */
+
+
+.profile-icon {
+
+  border-radius: 50%;
+  position: relative;
+  margin-left: 20px; /* Adjust space between Login button and Profile icon */
+
+}
+
+.dropdown-menu {
+
+  display: none;
+  position: absolute;
+  top: 35px; /* Adjust based on the height of your navbar */
+  right: 0;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1;
+
+}
+
+.dropdown-menu a {
+
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+
+}
+
+.dropdown-menu a:hover {
+
+  background-color: #f1f1f1;
+
+}
+
