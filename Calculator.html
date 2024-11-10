@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Cost Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f4f4f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Cost Calculator</h1>
+        <form id="travelForm">
+            <label for="distance">Distance (km):</label>
+            <input type="number" id="distance" required>
+
+            <label for="fuelEfficiency">Fuel Efficiency (km/l):</label>
+            <input type="number" id="fuelEfficiency" required>
+
+            <label for="fuelCost">Fuel Cost (per liter):</label>
+            <input type="number" id="fuelCost" required>
+
+            <button type="button" onclick="calculateCost()">Calculate Cost</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateCost() {
+            const distance = parseFloat(document.getElementById('distance').value);
+            const fuelEfficiency = parseFloat(document.getElementById('fuelEfficiency').value);
+            const fuelCost = parseFloat(document.getElementById('fuelCost').value);
+            
+            if (isNaN(distance) || isNaN(fuelEfficiency) || isNaN(fuelCost)) {
+                alert("Please fill out all fields correctly.");
+                return;
+            }
+
+            // Calculate the cost
+            const totalCost = (distance / fuelEfficiency) * fuelCost;
+
+            // Display the result
+            document.getElementById('result').innerText = `Total Travel Cost: ₹${totalCost.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
