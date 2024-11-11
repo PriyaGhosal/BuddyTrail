@@ -1579,9 +1579,9 @@ Light mode styles body.light-mode {
 }
 
 .itinerary p {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   text-align: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   color: #003366;
 }
 

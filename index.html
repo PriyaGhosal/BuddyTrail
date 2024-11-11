@@ -1111,10 +1111,9 @@
       });
     </script>
 
-    <!-- travel itineraries -->
-    <section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;">
-      <h2 id="h1darkbtn">TRAVEL ITINERARIES</h2>
-
+<!-- travel itineraries -->
+<section id="itineraries" class="itineraries-section" style="height: 100%;border: 2px solid #FFFFFF;">
+  <h2 id="h1darkbtn"></h2>    
 
 
        <!-- Travel Itineraries Section -->
@@ -1125,7 +1124,7 @@
       Plan your trips effortlessly with our curated travel itineraries tailored for different types of adventures. Whether you're planning a family vacation, a solo adventure, or a romantic getaway, we’ve got you covered!
   </p>
 
-  <div class="itinerary-list" style="height: 1200px;">
+  <div class="itinerary-list" style="height: 400px;">
       <div class="itinerary" id="itinerary1">
           <div class="header1">
               <h3 style="color: white; font-weight: 900; font-size: large;">Family Vacation</h3>
@@ -1172,7 +1171,6 @@
   /* Itinerary Styling */
   .itinerary-list {
       display: flex;
-      flex-direction: column;
       gap: 20px;
       width: 90%;
       
@@ -1184,27 +1182,29 @@
         max-width: 600px;
         padding: 20px;
         border-radius: 8px;
-        overflow: hidden;
+        /*overflow: hidden;*/
         text-align: center;
         margin-bottom: 20px;
         
     }
 
     #itinerary1 {
-      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/family-vacation.avif');
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('img/family-vacation.avif');
         background-size: cover;
         background-position: center;
-
+      height: fit-content;
     }
     #itinerary2 {
-      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/solo-travel.jpg');
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('img/solo-travel.jpg');
         background-size: cover;
         background-position: center;
+        height: fit-content;
     }
     #itinerary3 {
-      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('/img/romantic-travel3.jpg');
+      background-image: linear-gradient(to right, rgb(35, 34, 34), rgba(238, 230, 230, 0)), url('img/romantic-travel3.jpg');
         background-size: cover;
         background-position: center;
+        height: fit-content;
     }
 
   .itinerary button {
