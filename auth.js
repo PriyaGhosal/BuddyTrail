@@ -136,6 +136,20 @@ document.querySelector(".sign-up-form").addEventListener('submit', function(even
     console.error('Signup error:', error);
   }
 });
+document.querySelector('#login-btn').addEventListener('click', (event) => {
+  event.preventDefault();
+  
+  const emailInput = document.getElementById('login-email');
+  const rememberMeCheckbox = document.getElementById('login-remember');
+
+  if (rememberMeCheckbox.checked) {
+    localStorage.setItem('rememberedEmail', emailInput.value);
+  } else {
+    localStorage.removeItem('rememberedEmail');
+  }
+
+  // Continue with your existing login logic...
+});
 
 // Toggle password visibility
 function togglePassword(fieldId, icon) {
