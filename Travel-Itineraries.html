@@ -23,33 +23,53 @@
         </style>  
     </head>
 <body>
+    <header>
+        <h2 class="logo">BuddyTrail</h2>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#itineraries">Travel Itineraries</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="parallax">
+        <img src="img/hill1.png" id="hill1">
+        <img src="img/hill2.png" id="hill2">
+        <img src="img/hill3.png" id="hill3">
+        <img src="img/hill4.png" id="hill4">
+        <img src="img/hill5.png" id="hill5">
+        <img src="img/tree.png" id="tree">
+        <h2 id="text">Family Vacation</h2>
+        <img src="img/leaf.png" id="leaf">
+        <img src="img/plant.png" id="plant">
+    </section>
+    
     <div class="container-fluid py-4">
-        <h1 class="text-center mb-4">Family Vacation Explorer</h1>
-        
         <div class="row">
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Destination Selector</h5>
+                    <div class="card-body" style="background-color:#E7F6FC; border-radius:5px;">
+                        <h5 class="card-title"style="color:#0C1446; font-size:900">Explore Destinations </h5>
                         <select class="form-select mb-3" aria-label="Select destination">
-                            <option selected>Choose your family-friendly destination</option>
+                            <option selected>Where to Go?</option>
                             <option value="1">Orlando, Florida</option>
                             <option value="2">San Diego, California</option>
                             <option value="3">Yellowstone National Park</option>
                         </select>
+                        <button type="submit" class="btn btn-primary">Select</button>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-8 mb-3">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Day-by-Day Guides</h5>
+                    <div class="card-body"style="background-color:#E7F6FC; border-radius:5px;">
+                        <h5 class="card-title" style="color:#0C1446; font-size:x-large">Your Adventure Timeline</h5>
                         <div class="accordion" id="dayGuides">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Day 1: Adventure Begins
+                                    <span>Day 1: Adventure Begins</span> 
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#dayGuides">
@@ -65,7 +85,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Day 2: Exploration Day
+                                    <span> Day 2: Exploration Day</span>
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#dayGuides">
@@ -87,17 +107,17 @@
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Interactive Itinerary</h5>
+                    <div class="card-body"style="background-color:#A5CFE3; border-radius:5px;">
+                        <h5 class="card-title"style="color:#0C1446; font-size:x-large">Activity Guide</h5>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-group" id="itineraryList">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Visit the local zoo
+                                    <li class="list-group-item d-flex justify-content-between align-items-center" style="color: #003329;font-weight: 600;">
+                                        Explore the City Zoo
                                         <button class="btn btn-sm btn-danger delete-btn" aria-label="Remove item"><i class="bi bi-trash"></i></button>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Picnic at Central Park
+                                    <li class="list-group-item d-flex justify-content-between align-items-center" style="color: #003329;font-weight: 600;">
+                                        Lunchtime Picnic in Central Park
                                         <button class="btn btn-sm btn-danger delete-btn" aria-label="Remove item"><i class="bi bi-trash"></i></button>
                                     </li>
                                 </ul>
@@ -105,7 +125,7 @@
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="activityInput" placeholder="Add new activity" aria-label="Add new activity">
-                                    <button class="btn btn-outline-secondary" id="addBtn" type="button">Add</button>
+                                    <button class="btn btn-secondary" id="addBtn" type="button">Add</button>
                                 </div>
                             </div>
                         </div>
@@ -118,9 +138,9 @@
             <div class="col-md-6 mb-3">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Family vacation">
-                    <div class="card-body">
-                        <h5 class="card-title">Share Your Adventure</h5>
-                        <p class="card-text">Spread the joy of your family vacation! Share your itinerary with friends and family.</p>
+                    <div class="card-body"style="background-color:#DDFFE7; border-radius:5px;">
+                        <h5 class="card-title" style="color:#0C1446; font-size:x-large">Make Memories Together</h5>
+                        <p class="card-text"  style="color:#167D7F;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style:italic">Take your loved ones along for the ride—share your itinerary! relive the best moments with family and friends!</p>
                         <div class="d-flex justify-content-around">
                             <button class="btn btn-primary"><i class="bi bi-facebook"></i> Share</button>
                             <button class="btn btn-info"><i class="bi bi-twitter"></i> Tweet</button>
@@ -131,24 +151,46 @@
             </div>
             <div class="col-md-6 mb-3">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Feedback & Tips</h5>
+                    <div class="card-body"style="background-color:#E7F6FC; border-radius:5px;">
+                        <h5 class="card-title" style="color:#0C1446; font-size:x-large">Feedback &  Suggestions</h5>
                         <form>
                             <div class="mb-3">
-                                <label for="ratingInput" class="form-label">Rate your experience</label>
+                                <label for="ratingInput" class="form-label">Rate Your Adventure</label>
                                 <input type="range" class="form-range" min="0" max="5" step="0.5" id="ratingInput">
                             </div>
                             <div class="mb-3">
-                                <label for="feedbackText" class="form-label">Share your tips</label>
-                                <textarea class="form-control" id="feedbackText" rows="3" placeholder="Your valuable feedback helps other families!"></textarea>
+                                <label for="feedbackText" class="form-label">Share Your Best Tips</label>
+                                <textarea class="form-control" id="feedbackText" rows="3" placeholder="Your feedback helps families make the most of their journeys!"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                            <button type="submit" class="btn btn-primary">Share Experience</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+         //parallax effect
+    let text = document.getElementById('text'); 
+    let leaf = document.getElementById('leaf'); 
+    let hill1 = document.getElementById('hill1'); 
+    let hill4 = document.getElementById('hill4'); 
+    let hill5 = document.getElementById('hill5');
+    let plant = document.getElementById('plant');
+    
+    window.addEventListener('scroll', () => {
+        let value = window.scrollY;
+
+        text.style.marginTop = value * 2.5 + 'px';
+        leaf.style.top = value * -1.5 + 'px';
+        leaf.style.left = value * 1.5 + 'px';
+        hill5.style.left = value * 1.5 + 'px';
+        hill4.style.left = value * -1.5 + 'px';
+        hill1.style.top = value * 1 + 'px';
+
+        plant.style.top = value * 0.5 + 'px';
+    });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const addButton = document.getElementById('addBtn');

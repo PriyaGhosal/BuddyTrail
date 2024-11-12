@@ -218,6 +218,7 @@ body {
 .cloud.fade-out {
   opacity: 0;
 }
+
 /*SOS*/
 .sos-container {
   width: 100%;
@@ -1084,7 +1085,7 @@ body {
   }
 }
 #About {
-  padding: 60px;
+  padding: 100px;
   background-color: #f5f5f500; /* Light grey background */
   color: #333; /* Dark grey text */
   font-family: "Helvetica", "Arial", sans-serif;
@@ -1093,6 +1094,7 @@ body {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
 
 #About h1 {
   font-size: 3.5em;
@@ -1150,6 +1152,14 @@ body {
   color: #e0e0e0; /* Light grey text */
 }
 
+.dark-mode .core-values{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
+.dark-mode .team{
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+}
 .light-mode #About h1 {
   color: #007bff; /* Blue color for the main heading in light mode */
 }
@@ -1392,7 +1402,7 @@ footer {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons .fa-x-twitter:hover {
-  color: black;
+  color:whitesmoke;
   transform: scale(1.1);
   transform: scale(1.2) translateY(-5px);
 }
@@ -2237,7 +2247,31 @@ input#rate-5:checked ~ header:before {
   align-items: center;
   z-index: 1;
 }
-
+.cross-btn {
+  position: absolute;
+  top: 142px; 
+  right: 25.3%;
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  z-index: 1; 
+  width: 30px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ee2828; */
+  border-radius: 25%;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: all 0.4s ease-in;
+}
+.cross-btn button{
+  padding: 1px !important;
+  background-color: red !important;
+}
 .close-btn:hover {
   background-color: #ff0000;
   transform: scale(1.1);
@@ -2969,7 +3003,9 @@ textarea {
 .services {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #9aecff 0%, #3b302d 100%);/* Light background for eye comfort */
+
 }
 
 .services h2 {
@@ -3096,6 +3132,7 @@ body {
 }
 
 .chatbot-icon {
+  height: 50px;
   position: fixed;
   bottom: 20px; /* Adjust for positioning */
   right: 20px;  /* Adjust for positioning */
@@ -3139,3 +3176,41 @@ body {
   padding-left: 30px; /* get in touch padding for icon*/
 }
 /* fa icon end */
+
+
+.profile-icon {
+
+  border-radius: 50%;
+  position: relative;
+  margin-left: 20px; /* Adjust space between Login button and Profile icon */
+
+}
+
+.dropdown-menu {
+
+  display: none;
+  position: absolute;
+  top: 35px; /* Adjust based on the height of your navbar */
+  right: 0;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1;
+
+}
+
+.dropdown-menu a {
+
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+
+}
+
+.dropdown-menu a:hover {
+
+  background-color: #f1f1f1;
+
+}
+
