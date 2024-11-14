@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
- main
- main
+ <!-- main main -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copyright Page</title>
@@ -44,7 +43,7 @@
         line-height: 1.6;
       }
 
-
+</style
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copyright Policy - BuddyTrail</title>
@@ -498,45 +497,52 @@
         });
     </script>
  
-<script>
-      modeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        const isDarkMode = document.body.classList.contains("dark-mode");
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modeToggle = document.getElementById("modeToggle"); // Ensure this element exists
+    const sunIcon = document.getElementById("sunIcon");       // Ensure this element exists
+    const moonIcon = document.getElementById("moonIcon");     // Ensure this element exists
 
-        if (isDarkMode) {
-          sunIcon.style.display = "none";
-          moonIcon.style.display = "inline-block";
-          localStorage.setItem("theme", "dark");
-        } else {
-          sunIcon.style.display = "inline-block";
-          moonIcon.style.display = "none";
-          localStorage.setItem("theme", "light");
-        }
-      });
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const isDarkMode = document.body.classList.contains("dark-mode");
 
-      // Scroll animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        {
-          threshold: 0.1
-        }
-      );
-
-      document.querySelectorAll('h2, p, ul').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-        el.style.transition = "all 0.6s ease";
-        observer.observe(el);
-      });
+      if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+      } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+      }
     });
-  </script>
+
+    // Scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    document.querySelectorAll('h2, p, ul').forEach(el => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+      el.style.transition = "all 0.6s ease";
+      observer.observe(el);
+    });
+  });
+</script>
+
+  
 
 </body>
 

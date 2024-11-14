@@ -3813,17 +3813,20 @@ scrollTopBtn.onclick = function () {
 
       document.getElementById("progressBar").style.width = scrollPercent + "%";
     }
+    </script>
   .custom-alert p {
 /*     white color text on black background will look nice */
     color:white;
     margin: 0;
     line-height: 1.5;
   }
-    </style>
+  </style>
+  </script>
   <script src="script.js">
-document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
-
+  </script>
+  <style>
     .popup-content {
       background-color: white;
       padding: 20px;
@@ -3873,10 +3876,12 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       line-height: 1.5;
     }
   </style>
-  </script>
-  <script src="script.js">
+  
+  <script src="script.js"></script>
+  <script>
     document.getElementById('newsletter-form').addEventListener('submit', function (e) {
       e.preventDefault(); // Prevent the default form submission
+  </script>
 
   <div class="gtranslate_wrapper"></div>
   <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
@@ -4044,48 +4049,57 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         /* Pulse on hover */
       }
     </style>
+
+    // changes made in this block
     <script>
-      // Get the button
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      const progressCircle = document.querySelector(".progress-ring__circle");
-      const radius = progressCircle.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius;
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const progressCircle = document.querySelector(".progress-ring__circle");
 
-      // Set the circle progress properties
-      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-      progressCircle.style.strokeDashoffset = circumference;
+    if (!scrollToTopBtn || !progressCircle) {
+      console.error("Required elements not found.");
+      return;
+    }
 
-      // Function to show or hide the button based on scroll position
-      function toggleScrollButton() {
-        if (window.scrollY > 100) {
-          scrollToTopBtn.classList.add("show");
-        } else {
-          scrollToTopBtn.classList.remove("show");
-        }
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    // Set the circle progress properties
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    // Function to show or hide the button based on scroll position
+    function toggleScrollButton() {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
       }
+    }
 
-      // Function to set the scroll progress on the button ring
-      function setProgress(percent) {
-        const offset = circumference - (percent / 100) * circumference;
-        progressCircle.style.strokeDashoffset = offset;
-      }
+    // Function to set the scroll progress on the button ring
+    function setProgress(percent) {
+      const offset = circumference - (percent / 100) * circumference;
+      progressCircle.style.strokeDashoffset = offset;
+    }
 
-      // Listen for scroll events to update button visibility and progress
-      window.addEventListener("scroll", () => {
-        toggleScrollButton();
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        setProgress(scrollPercent);
+    // Listen for scroll events to update button visibility and progress
+    window.addEventListener("scroll", () => {
+      toggleScrollButton();
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setProgress(scrollPercent);
+    });
+
+    // Smooth scroll to top when the button is clicked
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
       });
+    });
+  });
+</script>
 
-      // Smooth scroll to top when the button is clicked
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      });
-
-    </script>
 
     <!-- Scripts -->
     <script src="script.js"></script>
